@@ -380,8 +380,14 @@ function buildMail(data, results, changes, stats) {
 
 async function sendMail(mail, attachmentPath) {
   const { host, port, secure, user, pass, from, to } = CFG.smtp;
-  if (!host || !user || !pass || !to) {
-    log('未配置 SMTP（SMTP_HOST/SMTP_USER/SMTP_PASS/MAIL_TO），跳过发信。JSON 已写入文件。');
+  // 显式列出每项，方便排查（任一空就跳过）
+  const missing = [];
+  if (!host) missing.push('SMTP_HOST');
+  if (!user) missing.push('SMTP_USER');
+  if (!pass) missing.push('SMTP_PASS');
+  if (!to)   missing.push('MAIL_TO');
+  if (missing.length) {
+    log('未配置 SMTP（缺 ' + missing.join('、') + '），跳过发信。JSON 已写入文件。');
     return false;
   }
   const nm = await getMailer();
