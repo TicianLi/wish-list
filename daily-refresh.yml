@@ -1,0 +1,105 @@
+name: 每日凌晨自动刷新并邮件导出
+
+# ---------------------------------------------------------------
+# 问题 #3：每天北京时间 02:00 自动刷新 Steam 愿望单价格/史低，
+#          导出 JSON 并发送到指定邮箱。
+#
+# 时间说明：GitHub Actions 的 cron 使用 UTC。
+#   北京时间 02:00  →  UTC 18:00（前一天）
+#   所以 cron = '0 18 * * *'
+#   ⚠️ 注意：GitHub 的定时任务在高峰期可能延迟几分钟到十几分钟，属正常现象。
+#
+# 首次使用请先在仓库 Settings → Secrets and variables → Actions 添加：
+#   SMTP_HOST    smtp.qq.com
+#   SMTP_PORT    465
+#   SMTP_USER    你的QQ邮箱@qq.com
+#   SMTP_PASS    QQ邮箱「授权码」（不是登录密码！）
+#   MAIL_TO      接收邮件的邮箱（可以就是你自己）
+#   ITAD_API_KEY （可选）ITAD 史低查询用的 Key
+# ---------------------------------------------------------------
+
+on:
+  schedule:
+    - cron: '0 18 * * *'      # 北京时间次日 02:00
+  workflow_dispatch:           # 支持在 Actions 页面手动点一下立即运行
+    inputs:
+      mail_mode:
+        description: '发信模式'
+        required: false
+        default: 'always'
+        type: choice
+        options: [always, changes]
+
+# 允许把刷新后的数据写回仓库
+permissions:
+  contents: write
+
+concurrency:
+  group: daily-refresh
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+
+    steps:
+      - name: 拉取仓库
+        uses: actions/checkout@v4
+
+      - name: 准备 Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: 安装依赖
+        run: npm install --no-audit --no-fund
+
+      - name: 检查数据文件
+        id: check
+        run: |
+          if [ -f data/wishlist.json ]; then
+            echo "found=true" >> "$GITHUB_OUTPUT"
+            echo "✅ 找到 data/wishlist.json"
+            node -e "const d=require('./data/wishlist.json'); console.log('游戏数量:', (d.games||[]).length)"
+          else
+            echo "found=false" >> "$GITHUB_OUTPUT"
+            echo "::warning::data/wishlist.json 不存在，请先在页面点「☁️ 同步到云端」上传数据。本次跳过刷新。"
+          fi
+
+      - name: 执行刷新并发送邮件
+        if: steps.check.outputs.found == 'true'
+        env:
+          SMTP_HOST: ${{ secrets.SMTP_HOST }}
+          SMTP_PORT: ${{ secrets.SMTP_PORT }}
+          SMTP_USER: ${{ secrets.SMTP_USER }}
+          SMTP_PASS: ${{ secrets.SMTP_PASS }}
+          MAIL_FROM: ${{ secrets.MAIL_FROM }}
+          MAIL_TO: ${{ secrets.MAIL_TO }}
+          ITAD_API_KEY: ${{ secrets.ITAD_API_KEY }}
+          STEAM_CC: cn
+          STEAM_LANG: schinese
+          MAIL_MODE: ${{ github.event.inputs.mail_mode || 'always' }}
+        run: node tools/daily-refresh.mjs
+
+      - name: 把刷新后的数据提交回仓库
+        if: steps.check.outputs.found == 'true'
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/ || true
+          if git diff --cached --quiet; then
+            echo "数据无变化，无需提交。"
+          else
+            git commit -m "chore: 每日自动刷新 $(date -u +'%Y-%m-%d %H:%M') UTC"
+            git push
+            echo "✅ 已提交刷新后的数据"
+          fi
+
+      - name: 归档 JSON 快照
+        if: steps.check.outputs.found == 'true'
+        uses: actions/upload-artifact@v4
+        with:
+          name: wishlist-json-${{ github.run_number }}
+          path: data/*.json
+          retention-days: 30
