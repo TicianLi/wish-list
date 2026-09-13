@@ -1,6 +1,6 @@
 {
   "version": 3,
-  "updatedAt": 1789314795257,
+  "updatedAt": 1789315521111,
   "games": [
     {
       "appid": 1325890,
@@ -13,21 +13,21 @@
         "currency": "CNY",
         "isOnSale": true,
         "discountExpiration": null,
-        "updatedAt": 1789290231539
+        "updatedAt": 1789315210858
       },
       "rating": {
         "score": 6.5,
-        "positive": 67,
+        "positive": 68,
+        "total": 124,
         "desc": "Mixed",
-        "total": 123,
-        "updatedAt": 1789290232299
+        "updatedAt": 1789315211242
       },
       "historicalLow": {
         "price": 7.5,
         "count": 4,
         "confidence": "A",
         "source": "ITAD(国区)",
-        "updatedAt": 1789290233157,
+        "updatedAt": 1789315212567,
         "currency": "CNY"
       },
       "targetPrice": null,
@@ -69,13 +69,13 @@
         ],
         "metacritic": null,
         "chineseSupport": true,
-        "reviewTotal": 791,
+        "reviewTotal": 793,
         "description": "你是一名潜水员，独自潜入一个水下深渊进行搜索，揭开被人遗忘已久的奥秘。《Silt》是一款以超现实海洋虚空为背景的探索游戏。探索深海，控制你周围的生物，以解决环境难题并深入黑暗之中。",
         "descriptionOriginal": "你是一名潜水员，独自潜入一个水下深渊进行搜索，揭开被人遗忘已久的奥秘。《Silt》是一款以超现实海洋虚空为背景的探索游戏。探索深海，控制你周围的生物，以解决环境难题并深入黑暗之中。",
         "descriptionTranslated": false
       },
       "createdAt": 1789289423724,
-      "updatedAt": 1789290232299
+      "updatedAt": 1789315211242
     },
     {
       "appid": 1123050,
@@ -88,21 +88,21 @@
         "currency": "CNY",
         "isOnSale": true,
         "discountExpiration": null,
-        "updatedAt": 1789312872018
+        "updatedAt": 1789315213597
       },
       "rating": {
         "score": 7.5,
         "positive": 74,
-        "desc": "Mostly Positive",
         "total": 1462,
-        "updatedAt": 1789312873699
+        "desc": "Mostly Positive",
+        "updatedAt": 1789315215398
       },
       "historicalLow": {
         "price": 24,
         "count": 1,
         "confidence": "A",
         "source": "ITAD(国区)",
-        "updatedAt": 1789312875125,
+        "updatedAt": 1789315216260,
         "currency": "CNY"
       },
       "targetPrice": null,
@@ -118,7 +118,7 @@
           "type": "music",
           "originalDescription": "From veteran UK composer Alex Roe, GRIME (Original Game Soundtrack) features a vast palette of dark fantasy and electronic sounds dressing up powerful melodies that represent the protagonist's incredible force of nature against the world.",
           "translated": false,
-          "updatedAt": 1789312876867
+          "updatedAt": 1789315217864
         },
         {
           "appid": 1778440,
@@ -130,7 +130,7 @@
           "type": "music",
           "originalDescription": "Sean Secca is a French-Irish composer and sound designer with video games and film being a major inspiration to his sonic palette.",
           "translated": false,
-          "updatedAt": 1789312878360
+          "updatedAt": 1789315219414
         }
       ],
       "details": {
@@ -189,7 +189,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789289416953,
-      "updatedAt": 1789312878360
+      "updatedAt": 1789315219414
     },
     {
       "appid": 1167450,
@@ -202,21 +202,21 @@
         "currency": "CNY",
         "isOnSale": true,
         "discountExpiration": null,
-        "updatedAt": 1789312876331
+        "updatedAt": 1789315217336
       },
       "rating": {
         "score": 9.2,
         "positive": 90,
-        "desc": "Very Positive",
         "total": 3255,
-        "updatedAt": 1789312878008
+        "desc": "Very Positive",
+        "updatedAt": 1789315218860
       },
       "historicalLow": {
         "price": 27.6,
         "count": 8,
         "confidence": "A",
         "source": "ITAD(国区)",
-        "updatedAt": 1789312879445,
+        "updatedAt": 1789315219965,
         "currency": "CNY"
       },
       "targetPrice": null,
@@ -232,7 +232,7 @@
           "type": "dlc",
           "originalDescription": "须拥有“DAEMON X MACHINA（机甲战魔）”实体版方可使用此下载项目。",
           "translated": false,
-          "updatedAt": 1789290055989
+          "updatedAt": 1789315220767
         },
         {
           "appid": 1211671,
@@ -244,7 +244,7 @@
           "type": "dlc",
           "originalDescription": "This set contains the following item for use with DAEMON X MACHINA: Arsenal - &quot;Crusader&quot;",
           "translated": false,
-          "updatedAt": 1789290057547
+          "updatedAt": 1789315222793
         },
         {
           "appid": 1211672,
@@ -256,7 +256,7 @@
           "type": "dlc",
           "originalDescription": "This set contains the following item for use with DAEMON X MACHINA: Arsenal - &quot;Muramasa&quot;",
           "translated": false,
-          "updatedAt": 1789290059237
+          "updatedAt": 1789315224038
         },
         {
           "appid": 1211673,
@@ -268,7 +268,7 @@
           "type": "dlc",
           "originalDescription": "This set contains the following item for use with DAEMON X MACHINA: Arsenal - &quot;Rabbit 11&quot;",
           "translated": false,
-          "updatedAt": 1789290061194
+          "updatedAt": 1789315226213
         },
         {
           "appid": 1211674,
@@ -280,7 +280,7 @@
           "type": "dlc",
           "originalDescription": "This set contains the following 5 items for use with DAEMON X MACHINA: Arsenal Pattern - &quot;Pearl&quot;, &quot;Champagne&quot;, &quot;Waves&quot;, &quot;Blossoms&quot;, &quot;Wood Grain&quot;",
           "translated": false,
-          "updatedAt": 1789290062725
+          "updatedAt": 1789315227511
         },
         {
           "appid": 1211675,
@@ -292,7 +292,7 @@
           "type": "dlc",
           "originalDescription": "This set contains the following item for use with DAEMON X MACHINA: Outer Suit - &quot;Camouflage Plugsuit&quot;",
           "translated": false,
-          "updatedAt": 1789290064142
+          "updatedAt": 1789315228810
         },
         {
           "appid": 1211676,
@@ -304,7 +304,7 @@
           "type": "dlc",
           "originalDescription": "This set contains the following item for use with DAEMON X MACHINA: Outer Suit - &quot;Formal Attire&quot;",
           "translated": false,
-          "updatedAt": 1789290065386
+          "updatedAt": 1789315231354
         },
         {
           "appid": 1211677,
@@ -316,7 +316,7 @@
           "type": "dlc",
           "originalDescription": "This set contains the following 6 items for use with DAEMON X MACHINA: Outer Hairstyle - &quot;Punk&quot;, &quot;Tall Mohawk&quot;, &quot;Nemesis Cut&quot;, &quot;Chill Cut&quot;, &quot;Princess Cut&quot;, &quot;Bowl&quot;",
           "translated": false,
-          "updatedAt": 1789290066784
+          "updatedAt": 1789315234486
         },
         {
           "appid": 1211678,
@@ -328,7 +328,7 @@
           "type": "dlc",
           "originalDescription": "This set contains the following 7 items for use with DAEMON X MACHINA: Outer Hairstyle - &quot;Topknot&quot;, &quot;Man Bun&quot;, &quot;Heaven Cut&quot;, &quot;Abyss Cut&quot;, &quot;Falcon Cut&quot;, &quot;Bishop Helmet&quot;, &quot;Empress Cut&quot;",
           "translated": false,
-          "updatedAt": 1789290068040
+          "updatedAt": 1789315237101
         },
         {
           "appid": 1211679,
@@ -340,7 +340,7 @@
           "type": "dlc",
           "originalDescription": "This set contains the following 6 items for use with Daemon X Machina: Outer Facial Feature - &quot;Cross Scar&quot;, &quot;Stitches&quot;, &quot;Demonic&quot;, &quot;Robotic&quot;, &quot;Beastly&quot;, &quot;Closed Eye&quot;",
           "translated": false,
-          "updatedAt": 1789290069361
+          "updatedAt": 1789315238740
         },
         {
           "appid": 1211680,
@@ -352,7 +352,7 @@
           "type": "dlc",
           "originalDescription": "This set contains the following 6 items for use with DAEMON X MACHINA: Outer Facial Feature - &quot;Pointed Ears&quot;, &quot;Goggles A&quot;, &quot;Goggles B&quot;, &quot;Glasses&quot;, &quot;Masked&quot;, &quot;Eyepatch&quot;",
           "translated": false,
-          "updatedAt": 1789290070543
+          "updatedAt": 1789315241296
         },
         {
           "appid": 1211681,
@@ -364,7 +364,7 @@
           "type": "dlc",
           "originalDescription": "This set contains the following 10 items for use with DAEMON X MACHINA: Arsenal Decal - &quot;Nose Art (Shark)&quot;, &quot;Nose Art (Cobra)&quot;, &quot;Nose Art (Bulldog)&quot;, &quot;Eagle&quot;, &quot;Elephant&quot;, &quot;Wolf&quot;, &quot;Gecko&quot;, &quot;Frog&quot;, &quot;Scorpion&quot;, &quot;Flames&quot;",
           "translated": false,
-          "updatedAt": 1789290072254
+          "updatedAt": 1789315242951
         },
         {
           "appid": 1211682,
@@ -376,7 +376,7 @@
           "type": "dlc",
           "originalDescription": "This set contains the following 10 items for use with DAEMON X MACHINA: Outer Emote - &quot;Pump and Point&quot;, &quot;Roar&quot;, &quot;Fist to Fist&quot;, &quot;Seduce&quot;, &quot;Bravado&quot;, &quot;Sulk&quot;, &quot;Outstretched Arms&quot;, &quot;Slash&quot;, &quot;Breakdance&quot;, &quot;Relax&quot;",
           "translated": false,
-          "updatedAt": 1789290073654
+          "updatedAt": 1789315245557
         },
         {
           "appid": 1211683,
@@ -388,7 +388,7 @@
           "type": "dlc",
           "originalDescription": "This set contains the following 8 items for use with DAEMON X MACHINA: Arsenal Decal - &quot;Military Man&quot; Calligraphy, &quot;Rule&quot; Calligraphy, &quot;Sin & Punishment&quot; Calligraphy, &quot;Witch&quot; Calligraphy, &quot;Lineage&quot; Calligraphy, &quot;Knight&quot; Calligraphy, &quot;Purity&quot; Calligraphy, &quot;DAEMO",
           "translated": false,
-          "updatedAt": 1789290074886
+          "updatedAt": 1789315248794
         },
         {
           "appid": 1237630,
@@ -400,7 +400,7 @@
           "type": "dlc",
           "originalDescription": "This set contains the following 2 items for use with Daemon X Machina: Arsenal - &quot;Prototype&quot;, Outer Suit - &quot;Prototype Plugsuit&quot;*",
           "translated": false,
-          "updatedAt": 1789290076111
+          "updatedAt": 1789315251882
         }
       ],
       "details": {
@@ -458,7 +458,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789289393679,
-      "updatedAt": 1789312878008
+      "updatedAt": 1789315251882
     },
     {
       "appid": 1161580,
@@ -471,21 +471,21 @@
         "currency": "CNY",
         "isOnSale": true,
         "discountExpiration": null,
-        "updatedAt": 1789312880924
+        "updatedAt": 1789315221947
       },
       "rating": {
         "score": 8.4,
         "positive": 84,
-        "desc": "Very Positive",
         "total": 897,
-        "updatedAt": 1789312882132
+        "desc": "Very Positive",
+        "updatedAt": 1789315222550
       },
       "historicalLow": {
         "price": 44.7,
         "count": 9,
         "confidence": "A",
         "source": "ITAD(国区)",
-        "updatedAt": 1789312883108,
+        "updatedAt": 1789315223442,
         "currency": "CNY"
       },
       "targetPrice": null,
@@ -501,7 +501,7 @@
           "type": "dlc",
           "originalDescription": "这本 182 页的艺术设定集《 The Art of Hardspace: Shipbreaker》包括从未公开过的概念图、3D 渲染图、开发人员评论等，带你了解这款备受赞誉的游戏的视觉形象发展之路。",
           "translated": false,
-          "updatedAt": 1789312883659
+          "updatedAt": 1789315223829
         },
         {
           "appid": 1474600,
@@ -513,7 +513,7 @@
           "type": "music",
           "originalDescription": "从漫奏的原声民谣，到扫荡般的合成音质感，《迷走深空：碎舰者》原声带将带领您踏上一场音乐之旅，从尘土飞扬的乡村小道前往太空星轨，以及更远更远的彼方。",
           "translated": false,
-          "updatedAt": 1789312884260
+          "updatedAt": 1789315224406
         }
       ],
       "details": {
@@ -561,7 +561,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789289357467,
-      "updatedAt": 1789312884260
+      "updatedAt": 1789315224406
     },
     {
       "appid": 585450,
@@ -574,21 +574,21 @@
         "currency": "CNY",
         "isOnSale": true,
         "discountExpiration": null,
-        "updatedAt": 1789312885135
+        "updatedAt": 1789315225876
       },
       "rating": {
         "score": 6.5,
         "positive": 63,
-        "desc": "Mixed",
         "total": 334,
-        "updatedAt": 1789312886498
+        "desc": "Mixed",
+        "updatedAt": 1789315227159
       },
       "historicalLow": {
         "price": 14.9,
         "count": 2,
         "confidence": "A",
         "source": "ITAD(国区)",
-        "updatedAt": 1789312887507,
+        "updatedAt": 1789315228058,
         "currency": "CNY"
       },
       "targetPrice": null,
@@ -604,7 +604,7 @@
           "type": "dlc",
           "originalDescription": "传奇军武包里有着三把强力武器以及三副神秘护甲，为您英雄的战场表现助力。美术设定集里包含了制作《Shadows: Awakening》过程中使用到的大量精致原画以及设定图。原声大碟更是将游戏里美妙的音乐交由您手，供您随意欣赏。",
           "translated": false,
-          "updatedAt": 1789312887827
+          "updatedAt": 1789315228508
         },
         {
           "appid": 953980,
@@ -616,7 +616,7 @@
           "type": "dlc",
           "originalDescription": "《暗影觉醒——流彩编年史》将带您体验发生在索欧北部奥术馆里的神秘故事——有人曾在此进行过许多可怕的魔法实验。",
           "translated": false,
-          "updatedAt": 1789312888481
+          "updatedAt": 1789315229038
         },
         {
           "appid": 953981,
@@ -628,7 +628,7 @@
           "type": "dlc",
           "originalDescription": "Gear up, pull yourself together and set off to confront the Necrophage – the Eater of the Dead – before it’s too late.",
           "translated": false,
-          "updatedAt": 1789312891391
+          "updatedAt": 1789315232137
         }
       ],
       "details": {
@@ -678,7 +678,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789289347989,
-      "updatedAt": 1789312891391
+      "updatedAt": 1789315232137
     },
     {
       "appid": 1684350,
@@ -691,21 +691,21 @@
         "currency": "CNY",
         "isOnSale": true,
         "discountExpiration": null,
-        "updatedAt": 1789312889109
+        "updatedAt": 1789315229737
       },
       "rating": {
         "score": 7.5,
         "positive": 78,
-        "desc": "Mostly Positive",
         "total": 1073,
-        "updatedAt": 1789312890918
+        "desc": "Mostly Positive",
+        "updatedAt": 1789315231750
       },
       "historicalLow": {
         "price": 36,
         "count": 1,
         "confidence": "A",
         "source": "ITAD(国区)",
-        "updatedAt": 1789289332061,
+        "updatedAt": 1789315233154,
         "currency": "CNY"
       },
       "targetPrice": null,
@@ -721,7 +721,7 @@
           "type": "music",
           "originalDescription": "《奇唤士》的配乐灵感来自多元文化和民族相互交汇的20世纪初的华沙，由阿格涅什卡·弗拉兹维（Agnieszka Wlazły）和塞巴斯蒂安·西钦斯基（Sebastian Syczyński）操刀创作，原声带内收录了25首MP3和WAV格式、氛围感十足的游戏原声。游戏原声还包括壁纸。",
           "translated": false,
-          "updatedAt": 1789289332621
+          "updatedAt": 1789315233954
         }
       ],
       "details": {
@@ -774,7 +774,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789289330600,
-      "updatedAt": 1789312890918
+      "updatedAt": 1789315233954
     },
     {
       "appid": 867210,
@@ -787,21 +787,21 @@
         "currency": "CNY",
         "isOnSale": true,
         "discountExpiration": null,
-        "updatedAt": 1789289321742
+        "updatedAt": 1789315235058
       },
       "rating": {
         "score": 7.5,
         "positive": 79,
+        "total": 854,
         "desc": "Mostly Positive",
-        "total": 853,
-        "updatedAt": 1789289322471
+        "updatedAt": 1789315236771
       },
       "historicalLow": {
         "price": 27.5,
         "count": 6,
         "confidence": "A",
         "source": "ITAD(国区)",
-        "updatedAt": 1789289323936,
+        "updatedAt": 1789315237668,
         "currency": "CNY"
       },
       "targetPrice": null,
@@ -817,7 +817,7 @@
           "type": "dlc",
           "originalDescription": "玉岚沃土承载厚重文史，却已支离破碎。曾三分鼎立的三大家族——李、盛、玄，如今须戮力同心，方能击溃那远古之敌。",
           "translated": false,
-          "updatedAt": 1789289324493
+          "updatedAt": 1789315239053
         },
         {
           "appid": 2977430,
@@ -829,7 +829,7 @@
           "type": "dlc",
           "originalDescription": "Embrace the darkness in your endeavor to crush your enemies. Raise the dead to serve once more. For the scholars of Loth know that death is not the end, it is merely the beginning.",
           "translated": false,
-          "updatedAt": 1789289326771
+          "updatedAt": 1789315241784
         },
         {
           "appid": 3511790,
@@ -841,7 +841,7 @@
           "type": "dlc",
           "originalDescription": "《征服之歌》的第二个全新阵营罗茨，已经从荒芜东部的荒野森林深处散布开来。指挥由植被、真菌以及起死回生的遗骸尸骨，将罗茨的根须散播至艾伯的每个角落！",
           "translated": false,
-          "updatedAt": 1789289327546
+          "updatedAt": 1789315242701
         },
         {
           "appid": 3260210,
@@ -853,7 +853,7 @@
           "type": "dlc",
           "originalDescription": "《征服之歌》的首个新阵营已经从荒芜东部的海岸而来。扮演强大的瓦尼尔劫掠者征服艾伯，见证他们变身为拥有无穷力量的维尔德拉。",
           "translated": false,
-          "updatedAt": 1789289328153
+          "updatedAt": 1789315243918
         },
         {
           "appid": 1979540,
@@ -865,7 +865,7 @@
           "type": "dlc",
           "originalDescription": "Have you fallen in love with our game, or just really want to support the development of Songs of Conquest and wear a badge to prove it? Perhaps you just really like raising the dead and commanding armies of talking frog people?",
           "translated": false,
-          "updatedAt": 1789289330310
+          "updatedAt": 1789315247207
         },
         {
           "appid": 2977420,
@@ -877,7 +877,7 @@
           "type": "dlc",
           "originalDescription": "这份作品将邀请你踏上一段视觉之旅，身临其境体会《征服之歌》从默默无闻的像素游戏到荣获 Unity 大奖“最佳 2D 美术”提名的崛起之旅。",
           "translated": false,
-          "updatedAt": 1789289331157
+          "updatedAt": 1789315249080
         },
         {
           "appid": 1968750,
@@ -889,7 +889,7 @@
           "type": "music",
           "originalDescription": "《征服之歌》原声音乐收录了大量气势磅礴的歌曲供你欣赏。 非常适合在阅读书籍时放松身心，或者为什么不将其用作你游玩角色扮演或棋盘类型游戏时的配乐呢？",
           "translated": false,
-          "updatedAt": 1789289331746
+          "updatedAt": 1789315251362
         }
       ],
       "details": {
@@ -953,13 +953,13 @@
         ],
         "metacritic": null,
         "chineseSupport": true,
-        "reviewTotal": 12121,
+        "reviewTotal": 12122,
         "description": "招兵买马，操纵远古魔法并逐步打造辉煌的帝国。这款回合制策略冒险游戏糅合了战略决策、战术战斗以及王国管理等元素。",
         "descriptionOriginal": "招兵买马，操纵远古魔法并逐步打造辉煌的帝国。这款回合制策略冒险游戏糅合了战略决策、战术战斗以及王国管理等元素。",
         "descriptionTranslated": false
       },
       "createdAt": 1789289322471,
-      "updatedAt": 1789289331746
+      "updatedAt": 1789315251362
     },
     {
       "appid": 1293160,
@@ -972,21 +972,21 @@
         "currency": "CNY",
         "isOnSale": true,
         "discountExpiration": null,
-        "updatedAt": 1789289295283
+        "updatedAt": 1789315239742
       },
       "rating": {
         "score": 8.4,
         "positive": 82,
-        "desc": "Very Positive",
         "total": 858,
-        "updatedAt": 1789289296723
+        "desc": "Very Positive",
+        "updatedAt": 1789315241504
       },
       "historicalLow": {
         "price": 49.5,
         "count": 1,
         "confidence": "A",
         "source": "ITAD(国区)",
-        "updatedAt": 1789289297679,
+        "updatedAt": 1789315242401,
         "currency": "CNY"
       },
       "targetPrice": null,
@@ -1002,7 +1002,7 @@
           "type": "music",
           "originalDescription": "伴随着山岡晃和Arkadiusz Reikowski联袂创作的音乐，沉浸到令人不安且压抑的游戏氛围中。",
           "translated": false,
-          "updatedAt": 1789289298222
+          "updatedAt": 1789315243300
         },
         {
           "appid": 1369030,
@@ -1014,7 +1014,7 @@
           "type": "dlc",
           "originalDescription": "这本官方数字画册将带你进入令人不安的游戏世界。《灵媒》游戏世界的灵感源自波兰画家Zdzisław Beksiński的画作。Beksiński是一位波兰反乌托邦超现实主义画家，以其独特的恐怖暗黑风格而享誉国际。",
           "translated": false,
-          "updatedAt": 1789289299478
+          "updatedAt": 1789315245723
         },
         {
           "appid": 1409690,
@@ -1026,7 +1026,7 @@
           "type": "music",
           "originalDescription": "“The Maw” is a track composed by Akira Yamaoka, a legendary Japanese composer, best known for his work on the Silent Hill series - you can download this track now for free.",
           "translated": false,
-          "updatedAt": 1789289301799
+          "updatedAt": 1789315249297
         }
       ],
       "details": {
@@ -1067,13 +1067,13 @@
         ],
         "metacritic": null,
         "chineseSupport": true,
-        "reviewTotal": 7465,
+        "reviewTotal": 7468,
         "description": "一款第三人称心理恐怖游戏，让你在现实世界与精神世界之间穿梭探索。作为被废弃度假村吸引的灵媒，你将揭开黑暗的秘密，直面创伤的余波，并承受洞悉多重真相的后果。",
         "descriptionOriginal": "一款第三人称心理恐怖游戏，让你在现实世界与精神世界之间穿梭探索。作为被废弃度假村吸引的灵媒，你将揭开黑暗的秘密，直面创伤的余波，并承受洞悉多重真相的后果。",
         "descriptionTranslated": false
       },
       "createdAt": 1789289296723,
-      "updatedAt": 1789289301799
+      "updatedAt": 1789315249297
     },
     {
       "appid": 1579380,
@@ -1086,21 +1086,21 @@
         "currency": "CNY",
         "isOnSale": false,
         "discountExpiration": null,
-        "updatedAt": 1789289278571
+        "updatedAt": 1789315245152
       },
       "rating": {
         "score": 9.6,
         "positive": 94,
-        "desc": "Very Positive",
         "total": 1963,
-        "updatedAt": 1789289279165
+        "desc": "Very Positive",
+        "updatedAt": 1789315247003
       },
       "historicalLow": {
         "price": 20,
         "count": 27,
         "confidence": "A",
         "source": "ITAD(国区)",
-        "updatedAt": 1789289280598,
+        "updatedAt": 1789315247871,
         "currency": "CNY"
       },
       "targetPrice": null,
@@ -1116,7 +1116,7 @@
           "type": "music",
           "originalDescription": "《影子战术：将军之刃 - 爱子的选择》数字原声带！",
           "translated": false,
-          "updatedAt": 1789289281169
+          "updatedAt": 1789315249761
         }
       ],
       "details": {
@@ -1168,7 +1168,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789289279165,
-      "updatedAt": 1789289281169
+      "updatedAt": 1789315249761
     },
     {
       "appid": 473950,
@@ -1181,21 +1181,21 @@
         "currency": "CNY",
         "isOnSale": true,
         "discountExpiration": null,
-        "updatedAt": 1789289271603
+        "updatedAt": 1789315250156
       },
       "rating": {
         "score": 9.8,
         "positive": 96,
-        "desc": "Overwhelmingly Positive",
         "total": 2003,
-        "updatedAt": 1789289272897
+        "desc": "Overwhelmingly Positive",
+        "updatedAt": 1789315252227
       },
       "historicalLow": {
         "price": 19,
         "count": 20,
         "confidence": "A",
         "source": "ITAD(国区)",
-        "updatedAt": 1789289274463,
+        "updatedAt": 1789315253300,
         "currency": "CNY"
       },
       "targetPrice": null,
@@ -1211,7 +1211,7 @@
           "type": "music",
           "originalDescription": "冈田拉瑞莎所创作的《Manifold Garden》原声音轨空灵而缥缈，将引领听众度过一段梦境世界般的时光。",
           "translated": false,
-          "updatedAt": 1789289275017
+          "updatedAt": 1789315253611
         }
       ],
       "details": {
@@ -1261,7 +1261,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789289272898,
-      "updatedAt": 1789289275017
+      "updatedAt": 1789315253611
     },
     {
       "appid": 1150440,
@@ -1274,21 +1274,21 @@
         "currency": "CNY",
         "isOnSale": true,
         "discountExpiration": null,
-        "updatedAt": 1789289230068
+        "updatedAt": 1789315254499
       },
       "rating": {
         "score": 7.5,
         "positive": 76,
-        "desc": "Mostly Positive",
         "total": 1043,
-        "updatedAt": 1789289231546
+        "desc": "Mostly Positive",
+        "updatedAt": 1789315255727
       },
       "historicalLow": {
         "price": 50.7,
         "count": 3,
         "confidence": "A",
         "source": "ITAD(国区)",
-        "updatedAt": 1789289232515,
+        "updatedAt": 1789315256559,
         "currency": "CNY"
       },
       "targetPrice": null,
@@ -1304,7 +1304,7 @@
           "type": "dlc",
           "originalDescription": "获得忘川月侦察礼包，为你的小队获取独家黑色迷彩护甲套装，以及一只独特的猫咪同伴来活跃奥塔哥号的气氛。",
           "translated": false,
-          "updatedAt": 1789289233115
+          "updatedAt": 1789315256879
         }
       ],
       "details": {
@@ -1355,13 +1355,13 @@
         ],
         "metacritic": 75,
         "chineseSupport": true,
-        "reviewTotal": 15292,
+        "reviewTotal": 15294,
         "description": "《异形：坠入黑暗》是一款以小队为单位的单人动作游戏，标志性科幻大作《异形》系列的又一游戏力作，来开启这场扣人心弦的征程吧。实时带领你的士兵阻止忘川月上一种新的可怕异形的大爆发。",
         "descriptionOriginal": "《异形：坠入黑暗》是一款以小队为单位的单人动作游戏，标志性科幻大作《异形》系列的又一游戏力作，来开启这场扣人心弦的征程吧。实时带领你的士兵阻止忘川月上一种新的可怕异形的大爆发。",
         "descriptionTranslated": false
       },
       "createdAt": 1789289231546,
-      "updatedAt": 1789289233115
+      "updatedAt": 1789315256879
     },
     {
       "appid": 1796220,
@@ -1374,21 +1374,21 @@
         "currency": "CNY",
         "isOnSale": true,
         "discountExpiration": null,
-        "updatedAt": 1789289192602
+        "updatedAt": 1789315257720
       },
       "rating": {
         "score": 8.9,
         "positive": 86,
+        "total": 1076,
         "desc": "Very Positive",
-        "total": 1075,
-        "updatedAt": 1789289193248
+        "updatedAt": 1789315258608
       },
       "historicalLow": {
         "price": 19,
         "count": 5,
         "confidence": "A",
         "source": "ITAD(国区)",
-        "updatedAt": 1789289194619,
+        "updatedAt": 1789315259449,
         "currency": "CNY"
       },
       "targetPrice": null,
@@ -1440,7 +1440,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789289193248,
-      "updatedAt": 1789289193248
+      "updatedAt": 1789315258608
     },
     {
       "appid": 1096530,
@@ -1453,21 +1453,21 @@
         "currency": "CNY",
         "isOnSale": true,
         "discountExpiration": null,
-        "updatedAt": 1789290019740
+        "updatedAt": 1789315260610
       },
       "rating": {
         "score": 7.5,
         "positive": 79,
+        "total": 1338,
         "desc": "Mostly Positive",
-        "total": 1337,
-        "updatedAt": 1789290020338
+        "updatedAt": 1789315261227
       },
       "historicalLow": {
         "price": 0,
         "count": 2,
         "confidence": "A",
         "source": "ITAD(国区)",
-        "updatedAt": 1789290021813,
+        "updatedAt": 1789315262124,
         "currency": "CNY"
       },
       "targetPrice": null,
@@ -1483,7 +1483,7 @@
           "type": "dlc",
           "originalDescription": "虽然 Caer Cyflen 的英雄们成功阻止了索莱克重启裂隙，将恶神释放到 Solasta 的企图，但威胁远未结束。Gallivan 王国突然对邻国宣战，冰雪联盟需要你的帮助！",
           "translated": false,
-          "updatedAt": 1789290022386
+          "updatedAt": 1789315262447
         },
         {
           "appid": 1723950,
@@ -1495,7 +1495,7 @@
           "type": "dlc",
           "originalDescription": "在这场全新的 1 到 12 级战役中逃离失落山谷，你将带领新的小队进入被世人遗忘的自治领。这片“桃花源”由暴君奥瑞内提斯铁腕统治，但你的到来将点燃各势力间这根一触即发的导火索",
           "translated": false,
-          "updatedAt": 1789290023018
+          "updatedAt": 1789315263118
         },
         {
           "appid": 2100430,
@@ -1507,7 +1507,7 @@
           "type": "dlc",
           "originalDescription": "使用 Inner Strength DLC，组建全新小队！解锁邪术师、吟游诗人和武僧职业及龙裔血统，重返 Solasta 开启更多冒险！",
           "translated": false,
-          "updatedAt": 1789290023599
+          "updatedAt": 1789315264270
         },
         {
           "appid": 1722280,
@@ -1519,7 +1519,7 @@
           "type": "dlc",
           "originalDescription": "下载《Primal Calling》DLC 重回 Solasta！解锁野蛮人和德鲁伊两大职业，还有半兽人血统和漂泊者背景，以更多自定义选项创建全新角色，开启你的冒险。",
           "translated": false,
-          "updatedAt": 1789290024198
+          "updatedAt": 1789315265484
         },
         {
           "appid": 1438980,
@@ -1531,7 +1531,7 @@
           "type": "dlc",
           "originalDescription": "喜欢《Solasta: Crown of the Magister》吗？这种感觉，是否就像是在某个时刻败了感知豁免检定？好吧，别再琢磨了，这正是为您准备的传说中的支持者大礼包！我们为您准备了一些超值赠礼，以答谢您帮助我们进一步推进游戏的开发。",
           "translated": false,
-          "updatedAt": 1789290024803
+          "updatedAt": 1789315266092
         },
         {
           "appid": 1631840,
@@ -1543,7 +1543,7 @@
           "type": "music",
           "originalDescription": "The Original Solasta Soundtrack composed Maxime Hervé, this DLC contains 23 tracks (MP3/FLAC) from the game.",
           "translated": false,
-          "updatedAt": 1789290026772
+          "updatedAt": 1789315268451
         }
       ],
       "details": {
@@ -1605,13 +1605,13 @@
         ],
         "metacritic": null,
         "chineseSupport": true,
-        "reviewTotal": 19665,
+        "reviewTotal": 19669,
         "description": "《Solasta》是一款基于龙与地下城 SRD 5.1 版本规则手册的回合制战术角色扮演游戏。掷骰检定先攻，抓住进攻机会，组织好角色位置和战场的垂直平面。选择由你，命运由骰。传奇冒险即将开启。",
         "descriptionOriginal": "《Solasta》是一款基于龙与地下城 SRD 5.1 版本规则手册的回合制战术角色扮演游戏。掷骰检定先攻，抓住进攻机会，组织好角色位置和战场的垂直平面。选择由你，命运由骰。传奇冒险即将开启。",
         "descriptionTranslated": false
       },
       "createdAt": 1789289175348,
-      "updatedAt": 1789290026772
+      "updatedAt": 1789315268451
     },
     {
       "appid": 2975950,
@@ -1624,21 +1624,21 @@
         "currency": "CNY",
         "isOnSale": true,
         "discountExpiration": null,
-        "updatedAt": 1789289162350
+        "updatedAt": 1789315263740
       },
       "rating": {
         "score": 6.5,
         "positive": 61,
-        "desc": "Mixed",
         "total": 346,
-        "updatedAt": 1789289162929
+        "desc": "Mixed",
+        "updatedAt": 1789315264901
       },
       "historicalLow": {
         "price": 110.4,
         "count": 3,
         "confidence": "A",
         "source": "ITAD(国区)",
-        "updatedAt": 1789289163786,
+        "updatedAt": 1789315265894,
         "currency": "CNY"
       },
       "targetPrice": null,
@@ -1654,7 +1654,7 @@
           "type": "dlc",
           "originalDescription": "您非常喜欢《索拉斯塔2》，并且希望为Tactical Adventures提供进一步的支持？是不是感觉我们刚才好像悄悄释放了某种惑控法术，而您恰好没通过豁免检定？别担心——这应该不会有什么大问题！",
           "translated": false,
-          "updatedAt": 1789289164355
+          "updatedAt": 1789315266690
         }
       ],
       "details": {
@@ -1714,13 +1714,13 @@
         ],
         "metacritic": null,
         "chineseSupport": true,
-        "reviewTotal": 2882,
+        "reviewTotal": 2883,
         "description": "在这片被魔力浸染的土地上，一股由神秘人莎德温统领的黑暗势力正威胁着尼奥科斯。集结你的冒险小队，准备好在这款基于龙与地下城 SRD 5.2 版本规则的回合制战术角色扮演游戏中征服未知的险境。请记住，选择由你，命运由骰。",
         "descriptionOriginal": "在这片被魔力浸染的土地上，一股由神秘人莎德温统领的黑暗势力正威胁着尼奥科斯。集结你的冒险小队，准备好在这款基于龙与地下城 SRD 5.2 版本规则的回合制战术角色扮演游戏中征服未知的险境。请记住，选择由你，命运由骰。",
         "descriptionTranslated": false
       },
       "createdAt": 1789289162929,
-      "updatedAt": 1789289164355
+      "updatedAt": 1789315266690
     },
     {
       "appid": 1580240,
@@ -1733,21 +1733,21 @@
         "currency": "CNY",
         "isOnSale": true,
         "discountExpiration": null,
-        "updatedAt": 1789309435083
+        "updatedAt": 1789315268150
       },
       "rating": {
         "score": 9.2,
         "positive": 88,
-        "desc": "Very Positive",
         "total": 574,
-        "updatedAt": 1789309438694
+        "desc": "Very Positive",
+        "updatedAt": 1789315270719
       },
       "historicalLow": {
         "price": 57,
         "count": 14,
         "confidence": "A",
         "source": "ITAD(国区)",
-        "updatedAt": 1789309439627,
+        "updatedAt": 1789315272027,
         "currency": "CNY"
       },
       "targetPrice": null,
@@ -1803,7 +1803,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789289157480,
-      "updatedAt": 1789309438694
+      "updatedAt": 1789315270719
     },
     {
       "appid": 2243710,
@@ -1816,21 +1816,21 @@
         "currency": "CNY",
         "isOnSale": true,
         "discountExpiration": null,
-        "updatedAt": 1789289148974
+        "updatedAt": 1789315273152
       },
       "rating": {
         "score": 9.6,
         "positive": 94,
-        "desc": "Very Positive",
         "total": 325,
-        "updatedAt": 1789289149519
+        "desc": "Very Positive",
+        "updatedAt": 1789315273804
       },
       "historicalLow": {
         "price": 56.32,
         "count": 1,
         "confidence": "A",
         "source": "ITAD(国区)",
-        "updatedAt": 1789289150906,
+        "updatedAt": 1789315274678,
         "currency": "CNY"
       },
       "targetPrice": null,
@@ -1846,7 +1846,7 @@
           "type": "dlc",
           "originalDescription": "此内容需要在 Steam 上拥有基础游戏 符文工厂3豪华版 才能畅玩。",
           "translated": false,
-          "updatedAt": 1789289151466
+          "updatedAt": 1789315275088
         },
         {
           "appid": 2244792,
@@ -1858,7 +1858,7 @@
           "type": "dlc",
           "originalDescription": "此内容需要在 Steam 上拥有基础游戏 符文工厂3豪华版 才能畅玩。",
           "translated": false,
-          "updatedAt": 1789289152686
+          "updatedAt": 1789315275656
         },
         {
           "appid": 2244793,
@@ -1870,7 +1870,7 @@
           "type": "dlc",
           "originalDescription": "此内容需要在 Steam 上拥有基础游戏 符文工厂3豪华版 才能畅玩。",
           "translated": false,
-          "updatedAt": 1789289153882
+          "updatedAt": 1789315276815
         },
         {
           "appid": 2244794,
@@ -1882,7 +1882,7 @@
           "type": "dlc",
           "originalDescription": "此内容需要在 Steam 上拥有基础游戏 符文工厂3豪华版 才能畅玩。",
           "translated": false,
-          "updatedAt": 1789289155092
+          "updatedAt": 1789315277419
         },
         {
           "appid": 2244795,
@@ -1894,7 +1894,7 @@
           "type": "dlc",
           "originalDescription": "此内容需要在 Steam 上拥有基础游戏 符文工厂3豪华版 才能畅玩。",
           "translated": false,
-          "updatedAt": 1789289155726
+          "updatedAt": 1789315278625
         },
         {
           "appid": 2244796,
@@ -1906,7 +1906,7 @@
           "type": "dlc",
           "originalDescription": "此内容需要在 Steam 上拥有基础游戏 符文工厂3豪华版 才能畅玩。",
           "translated": false,
-          "updatedAt": 1789289156346
+          "updatedAt": 1789315279223
         }
       ],
       "details": {
@@ -1963,7 +1963,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789289149519,
-      "updatedAt": 1789289156346
+      "updatedAt": 1789315279223
     },
     {
       "appid": 1766740,
@@ -1976,21 +1976,21 @@
         "currency": "CNY",
         "isOnSale": true,
         "discountExpiration": null,
-        "updatedAt": 1789289140818
+        "updatedAt": 1789315276270
       },
       "rating": {
         "score": 8.4,
         "positive": 82,
+        "total": 767,
         "desc": "Very Positive",
-        "total": 764,
-        "updatedAt": 1789289142782
+        "updatedAt": 1789315278039
       },
       "historicalLow": {
         "price": 7.6,
         "count": 2,
         "confidence": "A",
         "source": "ITAD(国区)",
-        "updatedAt": 1789289144261,
+        "updatedAt": 1789315278960,
         "currency": "CNY"
       },
       "targetPrice": null,
@@ -2035,13 +2035,13 @@
         ],
         "metacritic": null,
         "chineseSupport": true,
-        "reviewTotal": 16207,
+        "reviewTotal": 16222,
         "description": "驾驶老式火车环游开放世界岛屿，随游戏进程不断改装升级，同时用它对抗邪恶的蜘蛛火车Charles。",
         "descriptionOriginal": "驾驶老式火车环游开放世界岛屿，随游戏进程不断改装升级，同时用它对抗邪恶的蜘蛛火车Charles。",
         "descriptionTranslated": false
       },
       "createdAt": 1789289142782,
-      "updatedAt": 1789289142782
+      "updatedAt": 1789315278039
     },
     {
       "appid": 493520,
@@ -2054,21 +2054,21 @@
         "currency": "CNY",
         "isOnSale": true,
         "discountExpiration": null,
-        "updatedAt": 1789289136199
+        "updatedAt": 1789315280011
       },
       "rating": {
         "score": 8.4,
         "positive": 81,
+        "total": 11961,
         "desc": "Very Positive",
-        "total": 11959,
-        "updatedAt": 1789289137494
+        "updatedAt": 1789315281214
       },
       "historicalLow": {
         "price": 0,
         "count": 1,
         "confidence": "A",
         "source": "ITAD(国区)",
-        "updatedAt": 1789289139030,
+        "updatedAt": 1789315282142,
         "currency": "CNY"
       },
       "targetPrice": null,
@@ -2113,13 +2113,13 @@
         ],
         "metacritic": 78,
         "chineseSupport": true,
-        "reviewTotal": 46153,
+        "reviewTotal": 46157,
         "description": "《GTFO》是一款极端讲求合作的硬核恐怖射击游戏，能让你前一秒还在提心吊胆，下一秒就激烈开战。唯有靠潜行、策略和团队配合，方可在致命的地下监狱中搏得一线生机。不同心协力，就等着同归于尽吧。",
         "descriptionOriginal": "《GTFO》是一款极端讲求合作的硬核恐怖射击游戏，能让你前一秒还在提心吊胆，下一秒就激烈开战。唯有靠潜行、策略和团队配合，方可在致命的地下监狱中搏得一线生机。不同心协力，就等着同归于尽吧。",
         "descriptionTranslated": false
       },
       "createdAt": 1789289137494,
-      "updatedAt": 1789289137494
+      "updatedAt": 1789315281215
     },
     {
       "appid": 866140,
@@ -2132,21 +2132,21 @@
         "currency": "CNY",
         "isOnSale": true,
         "discountExpiration": null,
-        "updatedAt": 1789289129810
+        "updatedAt": 1789315283260
       },
       "rating": {
         "score": 9.2,
         "positive": 89,
-        "desc": "Very Positive",
         "total": 599,
-        "updatedAt": 1789289131662
+        "desc": "Very Positive",
+        "updatedAt": 1789315284460
       },
       "historicalLow": {
         "price": 15.2,
         "count": 29,
         "confidence": "A",
         "source": "ITAD(国区)",
-        "updatedAt": 1789289132608,
+        "updatedAt": 1789315285353,
         "currency": "CNY"
       },
       "targetPrice": null,
@@ -2162,7 +2162,7 @@
           "type": "music",
           "originalDescription": "Sit back and enjoy the official soundtrack of Arise: A simple story, complete with all 18 original tracks from the game.",
           "translated": false,
-          "updatedAt": 1789289134111
+          "updatedAt": 1789315286915
         },
         {
           "appid": 1946100,
@@ -2174,7 +2174,7 @@
           "type": "dlc",
           "originalDescription": "Receive the main theme of the game for free, available to use on your mobile phone or anywhere you would like! If you enjoy the gift, please consider following our publisher page",
           "translated": false,
-          "updatedAt": 1789289135835
+          "updatedAt": 1789315288577
         },
         {
           "appid": 1946101,
@@ -2186,7 +2186,7 @@
           "type": "dlc",
           "originalDescription": "Receive three wallpapers for free. Use them as backgrounds for your desktop or anywhere you would like! If you enjoy the gift, please consider following our publisher page",
           "translated": false,
-          "updatedAt": 1789289137798
+          "updatedAt": 1789315290104
         },
         {
           "appid": 2018010,
@@ -2198,7 +2198,7 @@
           "type": "dlc",
           "originalDescription": "The Art of Arise A Simple Story is a dedicated digital artbook comprised of 110 pages of artwork from the team at Picollo Studio.",
           "translated": false,
-          "updatedAt": 1789289139257
+          "updatedAt": 1789315291801
         }
       ],
       "details": {
@@ -2254,7 +2254,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789289131662,
-      "updatedAt": 1789289139257
+      "updatedAt": 1789315291801
     },
     {
       "appid": 2633640,
@@ -2267,21 +2267,21 @@
         "currency": "CNY",
         "isOnSale": true,
         "discountExpiration": null,
-        "updatedAt": 1789289122579
+        "updatedAt": 1789315286315
       },
       "rating": {
         "score": 9.6,
         "positive": 93,
-        "desc": "Very Positive",
         "total": 118,
-        "updatedAt": 1789289123766
+        "desc": "Very Positive",
+        "updatedAt": 1789315286916
       },
       "historicalLow": {
         "price": 4.4,
         "count": 10,
         "confidence": "A",
         "source": "ITAD(国区)",
-        "updatedAt": 1789289124666,
+        "updatedAt": 1789315287746,
         "currency": "CNY"
       },
       "targetPrice": null,
@@ -2332,7 +2332,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789289123766,
-      "updatedAt": 1789289123766
+      "updatedAt": 1789315286916
     },
     {
       "appid": 544750,
@@ -2345,21 +2345,21 @@
         "currency": "CNY",
         "isOnSale": true,
         "discountExpiration": null,
-        "updatedAt": 1789289115998
+        "updatedAt": 1789315288690
       },
       "rating": {
         "score": 7.5,
         "positive": 74,
-        "desc": "Mostly Positive",
         "total": 1373,
-        "updatedAt": 1789289117478
+        "desc": "Mostly Positive",
+        "updatedAt": 1789315289965
       },
       "historicalLow": {
         "price": 29.8,
         "count": 29,
         "confidence": "A",
         "source": "ITAD(国区)",
-        "updatedAt": 1789289118953,
+        "updatedAt": 1789315290888,
         "currency": "CNY"
       },
       "targetPrice": null,
@@ -2375,7 +2375,7 @@
           "type": "dlc",
           "originalDescription": "“由最强剑豪奏曲，光与闇的起点” SOULCALIBUR系列20周年的最新作品以及可游玩角色：希尔妲参战！",
           "translated": false,
-          "updatedAt": 1789289119514
+          "updatedAt": 1789315291702
         },
         {
           "appid": 1162201,
@@ -2387,7 +2387,7 @@
           "type": "dlc",
           "originalDescription": "「SOULCALIBUR Ⅵ」本篇中，追加可以使用的创造模式零件之追加内容。",
           "translated": false,
-          "updatedAt": 1789289120702
+          "updatedAt": 1789315293198
         },
         {
           "appid": 1162203,
@@ -2399,7 +2399,7 @@
           "type": "dlc",
           "originalDescription": "「SOULCALIBUR Ⅵ」本篇中，追加可以使用的创造模式零件之追加内容。",
           "translated": false,
-          "updatedAt": 1789289121908
+          "updatedAt": 1789315293783
         },
         {
           "appid": 1162204,
@@ -2411,7 +2411,7 @@
           "type": "dlc",
           "originalDescription": "「SOULCALIBUR Ⅵ」本篇中，能使用可游玩角色「雪华」的追加内容。",
           "translated": false,
-          "updatedAt": 1789289123127
+          "updatedAt": 1789315294404
         },
         {
           "appid": 1162205,
@@ -2423,7 +2423,7 @@
           "type": "dlc",
           "originalDescription": "「SOULCALIBUR Ⅵ」本篇中，追加可以使用的创造模式零件之追加内容。",
           "translated": false,
-          "updatedAt": 1789289124339
+          "updatedAt": 1789315295045
         },
         {
           "appid": 1162206,
@@ -2435,7 +2435,7 @@
           "type": "dlc",
           "originalDescription": "「SOULCALIBUR Ⅵ」本篇中，能使用可游玩角色「黄」的追加内容。",
           "translated": false,
-          "updatedAt": 1789289124965
+          "updatedAt": 1789315296227
         },
         {
           "appid": 1162207,
@@ -2447,7 +2447,7 @@
           "type": "dlc",
           "originalDescription": "「SOULCALIBUR Ⅵ」本篇中，追加可以使用的创造模式零件之追加内容。",
           "translated": false,
-          "updatedAt": 1789289125540
+          "updatedAt": 1789315296882
         },
         {
           "appid": 874342,
@@ -2459,7 +2459,7 @@
           "type": "dlc",
           "originalDescription": "“由最强剑豪奏曲，光与闇的起点” SOULCALIBUR系列20周年的最新作品以及可游玩角色：卡珊卓参战！",
           "translated": false,
-          "updatedAt": 1789289126755
+          "updatedAt": 1789315298231
         },
         {
           "appid": 874343,
@@ -2471,7 +2471,7 @@
           "type": "dlc",
           "originalDescription": "“由最强剑豪奏曲，光与闇的起点” SOULCALIBUR系列20周年的最新作品以及创造模式零件套组隆重登场！",
           "translated": false,
-          "updatedAt": 1789289127962
+          "updatedAt": 1789315299264
         },
         {
           "appid": 874340,
@@ -2483,7 +2483,7 @@
           "type": "dlc",
           "originalDescription": "“由最强剑豪奏曲，光与闇的起点” SOULCALIBUR系列20周年的最新作品以及可游玩角色：艾蜜参战！",
           "translated": false,
-          "updatedAt": 1789289129164
+          "updatedAt": 1789315301365
         },
         {
           "appid": 874341,
@@ -2495,7 +2495,7 @@
           "type": "dlc",
           "originalDescription": "“由最强剑豪奏曲，光与暗的起点” SOULCALIBUR系列20周年的最新作品以及创造模式零件套组隆重登场！",
           "translated": false,
-          "updatedAt": 1789289130384
+          "updatedAt": 1789315301684
         },
         {
           "appid": 874344,
@@ -2507,7 +2507,7 @@
           "type": "dlc",
           "originalDescription": "SQUARE ENIX『NieR:Automata』的纯黑自动步兵人形 「2B（寄叶二号B型）」参战！经由攻击后跳跃或是冲刺之类的特殊移动后，伺机使出快速猛攻或是空中连段！",
           "translated": false,
-          "updatedAt": 1789289130979
+          "updatedAt": 1789315302321
         },
         {
           "appid": 874345,
@@ -2519,7 +2519,7 @@
           "type": "dlc",
           "originalDescription": "“由最强剑豪奏曲，光与暗的起点” SOULCALIBUR系列20周年的最新作品隆重登场！ 可游玩角色：缇拉参战！",
           "translated": false,
-          "updatedAt": 1789289132270
+          "updatedAt": 1789315303515
         }
       ],
       "details": {
@@ -2575,7 +2575,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789289117479,
-      "updatedAt": 1789289132270
+      "updatedAt": 1789315303515
     },
     {
       "appid": 1119980,
@@ -2588,21 +2588,21 @@
         "currency": "CNY",
         "isOnSale": true,
         "discountExpiration": null,
-        "updatedAt": 1789289108627
+        "updatedAt": 1789315292708
       },
       "rating": {
         "score": 9.8,
         "positive": 95,
+        "total": 604,
         "desc": "Very Positive",
-        "total": 603,
-        "updatedAt": 1789289111324
+        "updatedAt": 1789315295654
       },
       "historicalLow": {
         "price": 10.3,
         "count": 23,
         "confidence": "A",
         "source": "ITAD(国区)",
-        "updatedAt": 1789289112344,
+        "updatedAt": 1789315296543,
         "currency": "CNY"
       },
       "targetPrice": null,
@@ -2618,7 +2618,7 @@
           "type": "music",
           "originalDescription": "The Original Soundtrack of In Sound Mind, developed by We Create Stuff and published by Modus Games, is composed and produced by Yoav Landau of best-selling music act The Living Tombstone, with vocal performances by Hayley Nelson, Sam Haft, Guy First, Matan Egozi, Helen Laser and Mick Lauer.",
           "translated": false,
-          "updatedAt": 1789289113938
+          "updatedAt": 1789315298321
         },
         {
           "appid": 1756610,
@@ -2630,7 +2630,7 @@
           "type": "dlc",
           "originalDescription": "The In Sound Mind Deluxe Edition Artbook features character and environment art from the game and is included in the Deluxe Edition of the game.",
           "translated": false,
-          "updatedAt": 1789289115796
+          "updatedAt": 1789315300819
         }
       ],
       "details": {
@@ -2673,13 +2673,13 @@
         ],
         "metacritic": 75,
         "chineseSupport": true,
-        "reviewTotal": 5458,
+        "reviewTotal": 5457,
         "description": "In Sound Mind is an imaginative first-person psychological horror with frenetic puzzles, unique boss fights, and original music by The Living Tombstone. Journey within the inner workings of the one place you can’t seem to escape—your own mind.",
         "descriptionOriginal": "In Sound Mind is an imaginative first-person psychological horror with frenetic puzzles, unique boss fights, and original music by The Living Tombstone. Journey within the inner workings of the one place you can’t seem to escape—your own mind.",
         "descriptionTranslated": false
       },
       "createdAt": 1789289111324,
-      "updatedAt": 1789289115796
+      "updatedAt": 1789315300819
     },
     {
       "appid": 668580,
@@ -2692,21 +2692,21 @@
         "currency": "CNY",
         "isOnSale": true,
         "discountExpiration": null,
-        "updatedAt": 1789288866056
+        "updatedAt": 1789315298681
       },
       "rating": {
         "score": 7.5,
         "positive": 76,
+        "total": 14618,
         "desc": "Mostly Positive",
-        "total": 14612,
-        "updatedAt": 1789288866643
+        "updatedAt": 1789315300520
       },
       "historicalLow": {
         "price": 47.8,
         "count": 1,
         "confidence": "A",
         "source": "ITAD(国区)",
-        "updatedAt": 1789288868059,
+        "updatedAt": 1789315301825,
         "currency": "CNY"
       },
       "targetPrice": null,
@@ -2722,7 +2722,7 @@
           "type": "dlc",
           "originalDescription": "Atomic Pass、Gold Edition和Ultimate Edition内含《血染水晶》DLC 4。需要《原子之心》基础游戏支持运行。 在危机四伏的《血染水晶》DLC 4中，体验《原子之心》高潮迭起的终章。",
           "translated": false,
-          "updatedAt": 1789288868571
+          "updatedAt": 1789315302893
         },
         {
           "appid": 2214823,
@@ -2734,7 +2734,7 @@
           "type": "dlc",
           "originalDescription": "Atomic Pass、Gold Edition和Ultimate Edition内含Enchantment Under the Sea DLC 3。需要《原子之心》基础游戏支持运行。 跟随P-3少校的脚步再度体验精彩玩法，在双生舞伶的陪伴下勇闯3826号设施的新水下综合体，搏命拯救全人类！",
           "translated": false,
-          "updatedAt": 1789288869170
+          "updatedAt": 1789315304913
         },
         {
           "appid": 2214822,
@@ -2746,7 +2746,7 @@
           "type": "dlc",
           "originalDescription": "Atomic Pass 内含 Trapped in Limbo DLC。该 DLC 需要拥有基础游戏《原子之心》才能运行。 重返灵薄域的癫狂世界继续谱写后事！历经酣战和种种灵薄域风格的挑战，体验 P-3 的宿命。",
           "translated": false,
-          "updatedAt": 1789288869785
+          "updatedAt": 1789315306144
         },
         {
           "appid": 2214821,
@@ -2758,7 +2758,7 @@
           "type": "dlc",
           "originalDescription": "“湮灭本能”现已加入季票，豪华版和尊享版用户即刻便能尽情畅游。 踏上奇诡扭曲的未知旅途，揭开诺拉背后隐藏的真相。面对性情凶恶、变化多端的全新类型敌人，想要顺利生存，你就得利用好两把前所未见的武器，同时熟练掌握手套的新能力。",
           "translated": false,
-          "updatedAt": 1789288870402
+          "updatedAt": 1789315307039
         },
         {
           "appid": 2303120,
@@ -2770,7 +2770,7 @@
           "type": "music",
           "originalDescription": "Dance to the tunes of Atomic Heart’s mad world with its official soundtrack! Enjoy a unique blend of classic Soviet-era songs and modern, adrenaline-fueled tracks created by the talented composers responsible for the game’s exceptional atmosphere.",
           "translated": false,
-          "updatedAt": 1789288872161
+          "updatedAt": 1789315308494
         },
         {
           "appid": 2214826,
@@ -2782,7 +2782,7 @@
           "type": "dlc",
           "originalDescription": "畅览数字设定集，领略《原子之心》细节丰富的怪奇世界，探索幕后的种种设计巧思。早期草图、概念图、3D模型、独家动作捕捉现场照等素材首次披露，另有开发者的详细解释，绝对大饱眼福。",
           "translated": false,
-          "updatedAt": 1789288872509
+          "updatedAt": 1789315308807
         },
         {
           "appid": 2214820,
@@ -2794,7 +2794,7 @@
           "type": "dlc",
           "originalDescription": "季票包含“迈达斯”手套外观。 入手季票，即可获得专属“迈达斯”手套外观！让查尔斯披上金线织就的华服，释放冰、电、火的力量。",
           "translated": false,
-          "updatedAt": 1789288873067
+          "updatedAt": 1789315309401
         },
         {
           "appid": 2214825,
@@ -2806,7 +2806,7 @@
           "type": "dlc",
           "originalDescription": "购买《原子之心》尊享（Ultimate）版，立享“黄金时代”外观包。 想要在这个美妙疯狂的世界里活下去，怎能没有AK和星芒锯锤傍身？黄金时代外观包内含两款独家武器金装，刚好搭配金牌武器",
           "translated": false,
-          "updatedAt": 1789288873647
+          "updatedAt": 1789315310619
         },
         {
           "appid": 2214830,
@@ -2818,7 +2818,7 @@
           "type": "dlc",
           "originalDescription": "奇诡扭曲的世界满是杀人不眨眼的机器人和变异体，想要与之抗衡，怎能没有全新制式的斧头和电击武器傍身？购买礼包即可获得专属武器金装。",
           "translated": false,
-          "updatedAt": 1789288874255
+          "updatedAt": 1789315311384
         }
       ],
       "details": {
@@ -2873,13 +2873,13 @@
         ],
         "metacritic": 76,
         "chineseSupport": true,
-        "reviewTotal": 40892,
+        "reviewTotal": 40995,
         "description": "欢迎进入美妙疯狂的乌托邦世界。生死之战，一触即发。针对独特敌人制定最佳战术，升级装备，利用环境条件完成任务。想要揭开真相？那就做好流血的准备吧！",
         "descriptionOriginal": "欢迎进入美妙疯狂的乌托邦世界。生死之战，一触即发。针对独特敌人制定最佳战术，升级装备，利用环境条件完成任务。想要揭开真相？那就做好流血的准备吧！",
         "descriptionTranslated": false
       },
       "createdAt": 1789288866643,
-      "updatedAt": 1789288874255
+      "updatedAt": 1789315311384
     },
     {
       "appid": 1116580,
@@ -2892,21 +2892,21 @@
         "currency": "CNY",
         "isOnSale": true,
         "discountExpiration": null,
-        "updatedAt": 1789288712881
+        "updatedAt": 1789315304335
       },
       "rating": {
         "score": 9.8,
         "positive": 95,
-        "desc": "Very Positive",
         "total": 1206,
-        "updatedAt": 1789288713492
+        "desc": "Very Positive",
+        "updatedAt": 1789315305553
       },
       "historicalLow": {
         "price": 9.6,
         "count": 20,
         "confidence": "A",
         "source": "ITAD(国区)",
-        "updatedAt": 1789288714897,
+        "updatedAt": 1789315306437,
         "currency": "CNY"
       },
       "targetPrice": null,
@@ -2956,7 +2956,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789288713492,
-      "updatedAt": 1789288713492
+      "updatedAt": 1789315305553
     },
     {
       "appid": 590380,
@@ -2969,21 +2969,21 @@
         "currency": "CNY",
         "isOnSale": true,
         "discountExpiration": null,
-        "updatedAt": 1789288697522
+        "updatedAt": 1789315308084
       },
       "rating": {
         "score": 9.8,
         "positive": 95,
+        "total": 2689,
         "desc": "Very Positive",
-        "total": 2688,
-        "updatedAt": 1789288699206
+        "updatedAt": 1789315310101
       },
       "historicalLow": {
         "price": 10,
         "count": 2,
         "confidence": "A",
         "source": "ITAD(国区)",
-        "updatedAt": 1789288700697,
+        "updatedAt": 1789315310998,
         "currency": "CNY"
       },
       "targetPrice": null,
@@ -2999,7 +2999,7 @@
           "type": "music",
           "originalDescription": "The complete soundtrack to Into the Breach",
           "translated": false,
-          "updatedAt": 1789288702551
+          "updatedAt": 1789315313224
         }
       ],
       "details": {
@@ -3051,13 +3051,13 @@
         ],
         "metacritic": 90,
         "chineseSupport": true,
-        "reviewTotal": 18976,
+        "reviewTotal": 18982,
         "description": "控制未来的强大机甲抵御外星威胁。在这个回合制策略游戏中，每次拯救世界的尝试都会随机生成新的挑战。",
         "descriptionOriginal": "控制未来的强大机甲抵御外星威胁。在这个回合制策略游戏中，每次拯救世界的尝试都会随机生成新的挑战。",
         "descriptionTranslated": false
       },
       "createdAt": 1789288699206,
-      "updatedAt": 1789288702551
+      "updatedAt": 1789315313224
     },
     {
       "appid": 815370,
@@ -3070,21 +3070,21 @@
         "currency": "CNY",
         "isOnSale": true,
         "discountExpiration": null,
-        "updatedAt": 1789288687273
+        "updatedAt": 1789315312820
       },
       "rating": {
         "score": 7.5,
         "positive": 79,
+        "total": 19792,
         "desc": "Mostly Positive",
-        "total": 19778,
-        "updatedAt": 1789288687871
+        "updatedAt": 1789315313713
       },
       "historicalLow": {
         "price": 8,
         "count": 8,
         "confidence": "A",
         "source": "ITAD(国区)",
-        "updatedAt": 1789288688871,
+        "updatedAt": 1789315314634,
         "currency": "CNY"
       },
       "targetPrice": null,
@@ -3100,7 +3100,7 @@
           "type": "music",
           "originalDescription": "《绿色地狱》原声音乐是Creepy Jar制作的获奖生存模拟游戏《绿色地狱》的配套音乐。该音乐专辑由亚当·斯科鲁帕（Adam Skorupa）、克日什托夫·维任凯维奇（Krzysztof Wierzynkiewicz）和米哈乌·切莱茨基（Michał Cielecki）共同创作，总时长 78 分钟共计39 首曲目，让你无论走到哪里丛林的气息都会伴你左右。",
           "translated": false,
-          "updatedAt": 1789288689380
+          "updatedAt": 1789315314954
         }
       ],
       "details": {
@@ -3160,13 +3160,13 @@
         ],
         "metacritic": 78,
         "chineseSupport": true,
-        "reviewTotal": 79218,
+        "reviewTotal": 79244,
         "description": "在未知亚马逊丛林的极端环境中，投身到开放世界的生存模拟游戏中。使用现实生活中的生存技能打造工具、狩猎、战斗、收集资源、搭建临时庇护所或建造堡垒。你可以独自生存，也可以跟朋友组队一同挑战丛林。",
         "descriptionOriginal": "在未知亚马逊丛林的极端环境中，投身到开放世界的生存模拟游戏中。使用现实生活中的生存技能打造工具、狩猎、战斗、收集资源、搭建临时庇护所或建造堡垒。你可以独自生存，也可以跟朋友组队一同挑战丛林。",
         "descriptionTranslated": false
       },
       "createdAt": 1789288687871,
-      "updatedAt": 1789288689380
+      "updatedAt": 1789315314954
     },
     {
       "appid": 1066780,
@@ -3179,21 +3179,21 @@
         "currency": "CNY",
         "isOnSale": true,
         "discountExpiration": null,
-        "updatedAt": 1789288669601
+        "updatedAt": 1789315315828
       },
       "rating": {
         "score": 9.2,
-        "positive": 90,
+        "positive": 89,
+        "total": 4252,
         "desc": "Very Positive",
-        "total": 4250,
-        "updatedAt": 1789288670962
+        "updatedAt": 1789315317046
       },
       "historicalLow": {
         "price": 13.6,
         "count": 2,
         "confidence": "A",
         "source": "ITAD(国区)",
-        "updatedAt": 1789288672438,
+        "updatedAt": 1789315317916,
         "currency": "CNY"
       },
       "targetPrice": null,
@@ -3209,7 +3209,7 @@
           "type": "dlc",
           "originalDescription": "为您的运输帝国增添更多风格，为5款车辆提供专属皮肤",
           "translated": false,
-          "updatedAt": 1789288672980
+          "updatedAt": 1789315318685
         },
         {
           "appid": 2195610,
@@ -3221,7 +3221,7 @@
           "type": "dlc",
           "originalDescription": "升级到豪华版，获取以下内容： 对所有地貌适用的3个专属场景，挑战您的技能：6辆新的专属历史车辆供您把玩、3种地貌上令人惊讶的3种新动物、2部前传Train Fever和Transport Fever的两首新游戏配乐",
           "translated": false,
-          "updatedAt": 1789288673543
+          "updatedAt": 1789315319325
         }
       ],
       "details": {
@@ -3270,13 +3270,13 @@
         ],
         "metacritic": 76,
         "chineseSupport": true,
-        "reviewTotal": 26639,
+        "reviewTotal": 26646,
         "description": "《狂热运输 2》为经典的交通模拟类型游戏打造了新的标杆。在指挥地面、水域和空中各类交通线路的过程中，一个全新的世界将在您的面前徐徐展开。长路漫漫，惟愿进步与繁荣相伴！",
         "descriptionOriginal": "《狂热运输 2》为经典的交通模拟类型游戏打造了新的标杆。在指挥地面、水域和空中各类交通线路的过程中，一个全新的世界将在您的面前徐徐展开。长路漫漫，惟愿进步与繁荣相伴！",
         "descriptionTranslated": false
       },
       "createdAt": 1789288670962,
-      "updatedAt": 1789288673543
+      "updatedAt": 1789315319325
     },
     {
       "appid": 899440,
@@ -3289,21 +3289,21 @@
         "currency": "CNY",
         "isOnSale": true,
         "discountExpiration": null,
-        "updatedAt": 1789288649735
+        "updatedAt": 1789315320162
       },
       "rating": {
         "score": 7.5,
         "positive": 74,
-        "desc": "Mostly Positive",
         "total": 3129,
-        "updatedAt": 1789288651138
+        "desc": "Mostly Positive",
+        "updatedAt": 1789315323251
       },
       "historicalLow": {
         "price": 26.8,
         "count": 23,
         "confidence": "A",
         "source": "ITAD(国区)",
-        "updatedAt": 1789288652651,
+        "updatedAt": 1789315324148,
         "currency": "CNY"
       },
       "targetPrice": null,
@@ -3356,13 +3356,13 @@
         ],
         "metacritic": 71,
         "chineseSupport": false,
-        "reviewTotal": 7733,
+        "reviewTotal": 7735,
         "description": "因随时切换打击与射击施展的高速动作、个性鲜明的角色们，以及壮阔的故事而充满魅力的「噬神者」系列最新作，即将带着崭新神机、荒神与进化过的动作登场！",
         "descriptionOriginal": "因随时切换打击与射击施展的高速动作、个性鲜明的角色们，以及壮阔的故事而充满魅力的「噬神者」系列最新作，即将带着崭新神机、荒神与进化过的动作登场！",
         "descriptionTranslated": false
       },
       "createdAt": 1789288651138,
-      "updatedAt": 1789288651138
+      "updatedAt": 1789315323251
     },
     {
       "appid": 438490,
@@ -3375,21 +3375,21 @@
         "currency": "CNY",
         "isOnSale": true,
         "discountExpiration": null,
-        "updatedAt": 1789288631247
+        "updatedAt": 1789315325105
       },
       "rating": {
         "score": 6.5,
         "positive": 60,
-        "desc": "Mixed",
         "total": 965,
-        "updatedAt": 1789288633473
+        "desc": "Mixed",
+        "updatedAt": 1789315327409
       },
       "historicalLow": {
         "price": 26.8,
         "count": 24,
         "confidence": "A",
         "source": "ITAD(国区)",
-        "updatedAt": 1789288634997,
+        "updatedAt": 1789315328324,
         "currency": "CNY"
       },
       "targetPrice": null,
@@ -3446,7 +3446,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789288633473,
-      "updatedAt": 1789288633473
+      "updatedAt": 1789315327409
     },
     {
       "appid": 1318690,
@@ -3459,21 +3459,21 @@
         "currency": "CNY",
         "isOnSale": true,
         "discountExpiration": null,
-        "updatedAt": 1789288621191
+        "updatedAt": 1789315329289
       },
       "rating": {
         "score": 9.8,
         "positive": 95,
+        "total": 2580,
         "desc": "Overwhelmingly Positive",
-        "total": 2578,
-        "updatedAt": 1789288621819
+        "updatedAt": 1789315330015
       },
       "historicalLow": {
         "price": 3.5,
         "count": 11,
         "confidence": "A",
         "source": "ITAD(国区)",
-        "updatedAt": 1789288623219,
+        "updatedAt": 1789315330886,
         "currency": "CNY"
       },
       "targetPrice": null,
@@ -3489,7 +3489,7 @@
           "type": "dlc",
           "originalDescription": "《异形工厂》首个DLC“谜题挑战者”将会给大家带来更烧脑、更自由的全新挑战！ 不再是无限的地图和资源，在有限的空间和设施内，通过限定数量的图形和颜色来创造并解决谜题。 您还可以创造属于自己的谜题，上传游戏并挑战全世界的最强大脑！",
           "translated": false,
-          "updatedAt": 1789288623718
+          "updatedAt": 1789315331790
         },
         {
           "appid": 1573840,
@@ -3501,7 +3501,7 @@
           "type": "music",
           "originalDescription": "The shapez.io original soundtrack consists of over an hour of chill electronic music to lighten up your day. Including new tracks from the Puzzle DLC!",
           "translated": false,
-          "updatedAt": 1789288625709
+          "updatedAt": 1789315335773
         }
       ],
       "details": {
@@ -3557,13 +3557,13 @@
         ],
         "metacritic": null,
         "chineseSupport": true,
-        "reviewTotal": 14227,
+        "reviewTotal": 14231,
         "description": "《异形工厂》是一款轻松自在的简约风工厂建造游戏，积极开采资源、用心搭设产线、努力提升效率，尽情享受自动化生产各种特异形状的奇妙乐趣！在这无限的地图上尽情发挥你的工厂建设才华，创造愈发巧夺天工的奇妙形状！创造力才是你唯一的束缚所在！",
         "descriptionOriginal": "《异形工厂》是一款轻松自在的简约风工厂建造游戏，积极开采资源、用心搭设产线、努力提升效率，尽情享受自动化生产各种特异形状的奇妙乐趣！在这无限的地图上尽情发挥你的工厂建设才华，创造愈发巧夺天工的奇妙形状！创造力才是你唯一的束缚所在！",
         "descriptionTranslated": false
       },
       "createdAt": 1789288621819,
-      "updatedAt": 1789288625709
+      "updatedAt": 1789315335773
     },
     {
       "appid": 2162800,
@@ -3576,21 +3576,21 @@
         "currency": "CNY",
         "isOnSale": true,
         "discountExpiration": null,
-        "updatedAt": 1789288498353
+        "updatedAt": 1789315332376
       },
       "rating": {
         "score": 9.8,
         "positive": 95,
+        "total": 1724,
         "desc": "Overwhelmingly Positive",
-        "total": 1722,
-        "updatedAt": 1789288498969
+        "updatedAt": 1789315333605
       },
       "historicalLow": {
         "price": 37.5,
         "count": 1,
         "confidence": "A",
         "source": "ITAD(国区)",
-        "updatedAt": 1789288500281,
+        "updatedAt": 1789315334427,
         "currency": "CNY"
       },
       "targetPrice": null,
@@ -3606,7 +3606,7 @@
           "type": "dlc",
           "originalDescription": "超维涂装 DLC 现已上线！为你的列车与漩涡换上流线感十足的超未来涂装，尽显科技锋芒！",
           "translated": false,
-          "updatedAt": 1789288500818
+          "updatedAt": 1789315335438
         },
         {
           "appid": 3075620,
@@ -3618,7 +3618,7 @@
           "type": "dlc",
           "originalDescription": "解锁异形工厂2支持者版的额外内容，包括额外的音乐，OST，还有过山车大回旋轨道和旋转轨道的装饰品！",
           "translated": false,
-          "updatedAt": 1789288501398
+          "updatedAt": 1789315336360
         }
       ],
       "details": {
@@ -3678,13 +3678,13 @@
         ],
         "metacritic": 80,
         "chineseSupport": true,
-        "reviewTotal": 13792,
+        "reviewTotal": 13794,
         "description": "深入体验字如其名的“超·大”工厂建造世界！建设规模庞大的多层工厂，用稳健高效的自动化产线尽情兑现您的规划才智！各种升级自动化挑战层出不穷，不过您大可以顺着步子悠着来——反正没有敌人出来捣乱。",
         "descriptionOriginal": "深入体验字如其名的“超·大”工厂建造世界！建设规模庞大的多层工厂，用稳健高效的自动化产线尽情兑现您的规划才智！各种升级自动化挑战层出不穷，不过您大可以顺着步子悠着来——反正没有敌人出来捣乱。",
         "descriptionTranslated": false
       },
       "createdAt": 1789288498969,
-      "updatedAt": 1789288501398
+      "updatedAt": 1789315336360
     },
     {
       "appid": 581320,
@@ -3697,21 +3697,21 @@
         "currency": "CNY",
         "isOnSale": true,
         "discountExpiration": null,
-        "updatedAt": 1789288475461
+        "updatedAt": 1789315335750
       },
       "rating": {
         "score": 8.4,
         "positive": 81,
-        "desc": "Very Positive",
         "total": 17268,
-        "updatedAt": 1789288476867
+        "desc": "Very Positive",
+        "updatedAt": 1789315337909
       },
       "historicalLow": {
         "price": 0,
         "count": 3,
         "confidence": "A",
         "source": "ITAD(国区)",
-        "updatedAt": 1789288478424,
+        "updatedAt": 1789315339059,
         "currency": "CNY"
       },
       "targetPrice": null,
@@ -3727,7 +3727,7 @@
           "type": "dlc",
           "originalDescription": "使用专为 Insurgents 设计的 War Torn 武器皮肤套装，为自己披上战火烙印。此外观适配 6 种不同的武器。",
           "translated": false,
-          "updatedAt": 1789288478860
+          "updatedAt": 1789315339441
         },
         {
           "appid": 4210900,
@@ -3739,7 +3739,7 @@
           "type": "dlc",
           "originalDescription": "使用专为 Security 打造的 Endurance 武器皮肤套装，成为秩序的捍卫者。此外观适配 6 种不同的武器。",
           "translated": false,
-          "updatedAt": 1789288479526
+          "updatedAt": 1789315340153
         },
         {
           "appid": 4210890,
@@ -3751,7 +3751,7 @@
           "type": "dlc",
           "originalDescription": "换上为 Insurgents 设计的 Scavenger 装备套装，改写战力平衡。",
           "translated": false,
-          "updatedAt": 1789288480089
+          "updatedAt": 1789315341293
         },
         {
           "appid": 4210880,
@@ -3763,7 +3763,7 @@
           "type": "dlc",
           "originalDescription": "换上为 Security 设计的 Rapid Assault 装备套装，回应胆敢挑战秩序的对手。",
           "translated": false,
-          "updatedAt": 1789288480719
+          "updatedAt": 1789315342484
         },
         {
           "appid": 3951910,
@@ -3775,7 +3775,7 @@
           "type": "dlc",
           "originalDescription": "换上为 Security 设计的 GRS Operator 装备套装，维持秩序，压制敌方。",
           "translated": false,
-          "updatedAt": 1789288481324
+          "updatedAt": 1789315343408
         },
         {
           "appid": 3951900,
@@ -3787,7 +3787,7 @@
           "type": "dlc",
           "originalDescription": "换上为 Insurgents 设计的 Jackal 装备套装，无情追猎，并从暗处出击将猎物拿下。",
           "translated": false,
-          "updatedAt": 1789288482004
+          "updatedAt": 1789315344489
         },
         {
           "appid": 3951920,
@@ -3799,7 +3799,7 @@
           "type": "dlc",
           "originalDescription": "使用专为 Insurgents 设计的 Jezzail 武器皮肤套装，让每一枪都为你代言。此外观适配 6 种不同的武器。",
           "translated": false,
-          "updatedAt": 1789288482536
+          "updatedAt": 1789315346264
         },
         {
           "appid": 3951930,
@@ -3811,7 +3811,7 @@
           "type": "dlc",
           "originalDescription": "使用专为 Security 打造的 Canyon 武器皮肤套装，掌控地形，火力压制敌人。此外观适配 6 种不同的武器。",
           "translated": false,
-          "updatedAt": 1789288483188
+          "updatedAt": 1789315348089
         },
         {
           "appid": 3801250,
@@ -3823,7 +3823,7 @@
           "type": "dlc",
           "originalDescription": "使用 Wheat 武器皮肤套装，收割敌人，收获胜利。此外观适配 6 种不同的武器。",
           "translated": false,
-          "updatedAt": 1789288483740
+          "updatedAt": 1789315349890
         },
         {
           "appid": 3801240,
@@ -3835,7 +3835,7 @@
           "type": "dlc",
           "originalDescription": "使用 Dragon Skin 武器皮肤套装，释放巨龙烈焰。此外观适配 6 种不同的武器。",
           "translated": false,
-          "updatedAt": 1789288484387
+          "updatedAt": 1789315352342
         },
         {
           "appid": 3801230,
@@ -3847,7 +3847,7 @@
           "type": "dlc",
           "originalDescription": "换上为 Security 设计的 Climber 装备套装，攀上全新高度，彻底打压对手。",
           "translated": false,
-          "updatedAt": 1789288485541
+          "updatedAt": 1789315354727
         },
         {
           "appid": 3801220,
@@ -3859,7 +3859,7 @@
           "type": "dlc",
           "originalDescription": "换上为 Insurgents 设计的 Vandal 装备套装，打破规则，主宰战场。",
           "translated": false,
-          "updatedAt": 1789288486788
+          "updatedAt": 1789315357178
         },
         {
           "appid": 2606110,
@@ -3871,7 +3871,7 @@
           "type": "dlc",
           "originalDescription": "换上为 Insurgents 设计的 Phantom 装备套装，悄无声息跟踪猎物，从暗影中出击将其拿下。",
           "translated": false,
-          "updatedAt": 1789288487983
+          "updatedAt": 1789315360234
         },
         {
           "appid": 2606140,
@@ -3883,7 +3883,7 @@
           "type": "dlc",
           "originalDescription": "使用 Bloodwood 武器外观套装，果断投身最激烈的战斗，让敌人魂飞魄散。此外观适配 6 种不同的武器。",
           "translated": false,
-          "updatedAt": 1789288488566
+          "updatedAt": 1789315363267
         },
         {
           "appid": 2606130,
@@ -3895,7 +3895,7 @@
           "type": "dlc",
           "originalDescription": "使用 Green Recon 武器外观套装，侦察前方情况，抢占先机，枪枪到肉。此外观适配 6 种不同的武器。",
           "translated": false,
-          "updatedAt": 1789288489191
+          "updatedAt": 1789315365426
         }
       ],
       "details": {
@@ -3944,13 +3944,13 @@
         ],
         "metacritic": 78,
         "chineseSupport": true,
-        "reviewTotal": 104145,
+        "reviewTotal": 104148,
         "description": "《Insurgency: Sandstorm》是一款硬核的第一人称战术射击游戏，以致命的近距离作战和残酷的紧张感为核心。每一颗子弹都至关重要，每一步行动都能决定生死，在现代战争的残酷战场上，团队协作是你生存的唯一途径。",
         "descriptionOriginal": "《Insurgency: Sandstorm》是一款硬核的第一人称战术射击游戏，以致命的近距离作战和残酷的紧张感为核心。每一颗子弹都至关重要，每一步行动都能决定生死，在现代战争的残酷战场上，团队协作是你生存的唯一途径。",
         "descriptionTranslated": false
       },
       "createdAt": 1789288476867,
-      "updatedAt": 1789288489191
+      "updatedAt": 1789315365426
     },
     {
       "appid": 392160,
@@ -3963,21 +3963,21 @@
         "currency": "CNY",
         "isOnSale": true,
         "discountExpiration": null,
-        "updatedAt": 1789288431193
+        "updatedAt": 1789315340708
       },
       "rating": {
         "score": 7.5,
         "positive": 78,
-        "desc": "Mostly Positive",
         "total": 3094,
-        "updatedAt": 1789288431803
+        "desc": "Mostly Positive",
+        "updatedAt": 1789315341875
       },
       "historicalLow": {
         "price": 16.8,
         "count": 1,
         "confidence": "A",
         "source": "ITAD(国区)",
-        "updatedAt": 1789288433357,
+        "updatedAt": 1789315342929,
         "currency": "CNY"
       },
       "targetPrice": null,
@@ -3993,7 +3993,7 @@
           "type": "dlc",
           "originalDescription": "无论您是在敌后侦察、在伪装身份下走私，还是以最小的可见度领导精确打击，《X4：特使扩充包》都为您的 X4 开放宇宙开辟了新的战略和叙事可能性。",
           "translated": false,
-          "updatedAt": 1789288433880
+          "updatedAt": 1789315343831
         },
         {
           "appid": 3419300,
@@ -4005,7 +4005,7 @@
           "type": "dlc",
           "originalDescription": "Hyperion 再次回归，重新设计并准备在宇宙中再次留下印记！这艘标志性舰船引入了一个全新的舰船分类：远征舰。它将强大的火力、卓越的机动性以及紧凑而多功能的设计完美融合，前所未有地展现了Paranid的精髓。",
           "translated": false,
-          "updatedAt": 1789288434457
+          "updatedAt": 1789315345681
         },
         {
           "appid": 2700340,
@@ -4017,7 +4017,7 @@
           "type": "dlc",
           "originalDescription": "与 X4 宇宙的最新力作《X4：时间线》一起踏上前所未有的太空冒险之旅。《X4：时间线》采用新颖的方式向新玩家介绍《X4》的核心游戏机制，同时也将为那些有经验的太空冒险者带来乐趣。全新且惊心动魄的故事情节发生在 X4 沙盒之外，您要做好完全准备，迎接巨大的挑战和对 X 系列传说和历史深处意想不到的探索。",
           "translated": false,
-          "updatedAt": 1789288435074
+          "updatedAt": 1789315347450
         },
         {
           "appid": 1990040,
@@ -4029,7 +4029,7 @@
           "type": "dlc",
           "originalDescription": "在《X4：王国末路》中尽享与久违的Boron人重逢，这是《X4：基石》的第四个DLC，此刻《X》宇宙中所有主要派系都已集结完毕。寻找与众不同的Boron飞船，驾驶它们穿越独特的星系，踏上发现之旅。寻访迷人的景点，揭开古老的秘密，结识新的朋友。踏上《X4》系列沉浸式的新篇章吧!",
           "translated": false,
-          "updatedAt": 1789288435675
+          "updatedAt": 1789315348627
         },
         {
           "appid": 1701060,
@@ -4041,7 +4041,7 @@
           "type": "dlc",
           "originalDescription": "X4：贪婪之潮，《X4：基石》的第三个DLC，邀您加入新的探险。同从前不为人知的、无法无天的海盗和拾荒者集团接触将动摇你对X宇宙社会秩序和公道的认知。在新的星区和危险区域，你不仅会发现新的飞船和空间站，还有足以颠覆你的计划和行动的星体现象。",
           "translated": false,
-          "updatedAt": 1789288436266
+          "updatedAt": 1789315351097
         },
         {
           "appid": 1288460,
@@ -4053,7 +4053,7 @@
           "type": "dlc",
           "originalDescription": "X：人类的摇篮,《X4：基石》的第二个大型DLC, 将显著丰富游戏宇宙，开放更多星区，故事任务和不同的开局方式，与此同时，迎接两股地球人势力以及他们各自的经济，舰船，武器和空间站。",
           "translated": false,
-          "updatedAt": 1789288436868
+          "updatedAt": 1789315353533
         },
         {
           "appid": 1133000,
@@ -4065,7 +4065,7 @@
           "type": "dlc",
           "originalDescription": "X4: Split Vendetta是X4基石主线剧情的续章。这是X4首个大型扩展包，大幅拓展X4宇宙并增加了两个全新Split家族及其经济系统，以及新的飞船，武器和空间站模块。随着X4基石更新至3.0版本，X4: Split Vendetta扩展包将为游戏带来激动人心的新任务和冒险。新的游戏开局能在这一片星系最大限度的沙盒模式中获得更丰富的体验。与Split家族“贸易”或与其“战斗”。用新的模块设计“建造”你自己的空间站，通过新的外交任务“思考”你的游戏路线。",
           "translated": false,
-          "updatedAt": 1789288437480
+          "updatedAt": 1789315355397
         },
         {
           "appid": 3781050,
@@ -4077,7 +4077,7 @@
           "type": "music",
           "originalDescription": "此原声带为 X4：特使扩充包扩展内容的配乐，丰富了游戏内体验。通过购买此原声带，您可以在游戏外以高品质的 MP3 和 FLAC 格式欣赏音乐，同时也支持 Egosoft 在 X 系列上的工作。",
           "translated": false,
-          "updatedAt": 1789288438083
+          "updatedAt": 1789315358358
         },
         {
           "appid": 3491170,
@@ -4089,7 +4089,7 @@
           "type": "music",
           "originalDescription": "X4: Hyperion Pack 原声带是著名的 X 系列作曲家 Alexei Zakharov 精心制作的迷人音乐集，让您踏上神秘而宁静的听觉之旅。Alexei 长期以来为 X 系列做出了巨大贡献，他的作品再次完美地捕捉到了《X4》宇宙中探索、神秘和宁静的精髓。",
           "translated": false,
-          "updatedAt": 1789288438656
+          "updatedAt": 1789315360732
         },
         {
           "appid": 3014950,
@@ -4101,7 +4101,7 @@
           "type": "music",
           "originalDescription": "《X4：时间线》原声带是由著名的 X 系列作曲家 Alexei Zakharov 创作的精美音乐集，让您踏上非凡的听觉之旅。该原声带与 2024《X4：时间线》DLC 成一个配套，是 Egosoft 著名的 X4 宇宙的一部分。",
           "translated": false,
-          "updatedAt": 1789288439275
+          "updatedAt": 1789315363723
         },
         {
           "appid": 2288980,
@@ -4113,7 +4113,7 @@
           "type": "music",
           "originalDescription": "著名的X系列作曲家Alexei Zakharov创作了一段壮丽大气的配乐，将陪伴玩家进入爱好和平的Boron一族的星区。官方原声带由16首原创曲目组成，每首曲目都旨在将听众带入X4：王国末路的迷人世界。",
           "translated": false,
-          "updatedAt": 1789288439889
+          "updatedAt": 1789315366783
         },
         {
           "appid": 1788600,
@@ -4125,7 +4125,7 @@
           "type": "music",
           "originalDescription": "Avarice | 贪婪 和 Windfall | 横财 星系回荡着无法无天的海盗同拾荒者的声音。由著名作曲家和X系列游戏配乐制作人Alexei Zakharov创作的《X4：贪婪之潮》原声带邀请你面对未知的世界，以全新的视角畅游X宇宙。",
           "translated": false,
-          "updatedAt": 1789288440470
+          "updatedAt": 1789315368909
         },
         {
           "appid": 1288490,
@@ -4137,7 +4137,7 @@
           "type": "music",
           "originalDescription": "请欣赏我们为2021年扩展版 &quot;X4：人类的摇篮 &quot;制作的新配乐，作者是Alexei Zakharov。",
           "translated": false,
-          "updatedAt": 1789288441113
+          "updatedAt": 1789315370717
         },
         {
           "appid": 1277600,
@@ -4149,7 +4149,7 @@
           "type": "music",
           "originalDescription": "Enjoy our new soundtrack to the 2020 expansion &quot;X4: Split Vendetta&quot; and the 3.0 Update to &quot;X4: Foundations&quot;.",
           "translated": false,
-          "updatedAt": 1789288442718
+          "updatedAt": 1789315373891
         },
         {
           "appid": 1239390,
@@ -4161,7 +4161,7 @@
           "type": "music",
           "originalDescription": "Enjoy Alexei Zakharov's original soundtrack to the 2018 title &quot;X4: Foundations&quot; by EGOSOFT.",
           "translated": false,
-          "updatedAt": 1789288444161
+          "updatedAt": 1789315376208
         }
       ],
       "details": {
@@ -4220,13 +4220,13 @@
         ],
         "metacritic": null,
         "chineseSupport": true,
-        "reviewTotal": 25216,
+        "reviewTotal": 25218,
         "description": "您通往浩瀚太空帝国的征程，将从驾驶第一艘飞船开始。在这片栩栩如生、全模拟的宇宙中，您将：探索星际、贸易货物、参与战斗、建造空间站、购置并改装飞船、指挥舰队——而整个宇宙都会对您的每一个决策做出实时的回应。",
         "descriptionOriginal": "您通往浩瀚太空帝国的征程，将从驾驶第一艘飞船开始。在这片栩栩如生、全模拟的宇宙中，您将：探索星际、贸易货物、参与战斗、建造空间站、购置并改装飞船、指挥舰队——而整个宇宙都会对您的每一个决策做出实时的回应。",
         "descriptionTranslated": false
       },
       "createdAt": 1789288431803,
-      "updatedAt": 1789288444161
+      "updatedAt": 1789315376208
     },
     {
       "appid": 2144740,
@@ -4239,21 +4239,21 @@
         "currency": "CNY",
         "isOnSale": true,
         "discountExpiration": null,
-        "updatedAt": 1789288421843
+        "updatedAt": 1789315345011
       },
       "rating": {
         "score": 7.5,
         "positive": 79,
-        "desc": "Mostly Positive",
         "total": 3943,
-        "updatedAt": 1789288422502
+        "desc": "Mostly Positive",
+        "updatedAt": 1789315346992
       },
       "historicalLow": {
         "price": 33.6,
         "count": 8,
         "confidence": "A",
         "source": "ITAD(国区)",
-        "updatedAt": 1789288423937,
+        "updatedAt": 1789315347923,
         "currency": "CNY"
       },
       "targetPrice": null,
@@ -4269,7 +4269,7 @@
           "type": "dlc",
           "originalDescription": "包含所有《幽灵行者 2》发售后DLC的终极拓展包体验。《幽灵行者 2》季票包含4个造型DLC拓展包和1个令人难忘的新游戏模式。马上购买季票，以优惠的价格解锁全部《幽灵行者 2》发售后DLC拓展包内容！",
           "translated": false,
-          "updatedAt": 1789288424470
+          "updatedAt": 1789315349231
         },
         {
           "appid": 3232490,
@@ -4281,7 +4281,7 @@
           "type": "dlc",
           "originalDescription": "为庆祝《幽灵行者 2》发售一周年，特此发售最终 DLC——周年包！组合包不仅有三款全新长剑皮肤及配套手部皮肤供玩家收藏，还包含一款造型炫酷的全新摩托皮肤，骑上它在网络虚空中享受疾驰与砍杀的快感吧。",
           "translated": false,
-          "updatedAt": 1789288425070
+          "updatedAt": 1789315351734
         },
         {
           "appid": 3092910,
@@ -4293,7 +4293,7 @@
           "type": "dlc",
           "originalDescription": "在《幽灵行者 2》那令人肾上腺素飙升的“无尽摩托赛模式”竞技场中一决胜负。在这里，玩家将突破网络虚空的深度极限，用速度去征服一切。在险象环生的摩托模式中，玩家要尽可能长时间地存活，并挑战速度的极限。",
           "translated": false,
-          "updatedAt": 1789288425679
+          "updatedAt": 1789315354128
         },
         {
           "appid": 2988270,
@@ -4305,7 +4305,7 @@
           "type": "dlc",
           "originalDescription": "入手《幽灵行者 2》第三个外观 DLC 赤焰包，畅享紧张刺激的战斗体验！以三把赤焰主题武士刀和令人热血沸腾的摩托车设计点燃游戏体验，在达摩塔和阳光普照的荒原上一路征战。",
           "translated": false,
-          "updatedAt": 1789288426276
+          "updatedAt": 1789315355909
         },
         {
           "appid": 2769320,
@@ -4317,7 +4317,7 @@
           "type": "dlc",
           "originalDescription": "闪转腾挪庆龙年！现在购买《幽灵行者 2》的第二个 DLC——巨龙包！马上化身为十二生肖中最为威严勇武的存在，在赛博朋克的世界中重温龙年传统文化特色。",
           "translated": false,
-          "updatedAt": 1789288426866
+          "updatedAt": 1789315359032
         },
         {
           "appid": 2691130,
@@ -4329,7 +4329,7 @@
           "type": "dlc",
           "originalDescription": "立即购买《幽灵行者 2》的首个 DLC——冰霜包，马上体验未来赛博生活带来的阵阵寒意！准备好迎接冰冷彻骨的游玩体验，以扭曲的蛛网风格，在遍布霓虹的城市中重新定义你砍杀的方式。。",
           "translated": false,
-          "updatedAt": 1789288427480
+          "updatedAt": 1789315361406
         },
         {
           "appid": 2593890,
@@ -4341,7 +4341,7 @@
           "type": "music",
           "originalDescription": "Immerse yourself in the synthwave beats of Ghostrunner 2 with the Original Soundtrack. Including 23 songs created by Daniel Deluxe, We Are Magonia, Gost, Dan Terminus, and Arkadiusz Reikowski.",
           "translated": false,
-          "updatedAt": 1789288429430
+          "updatedAt": 1789315366292
         }
       ],
       "details": {
@@ -4385,13 +4385,13 @@
         ],
         "metacritic": 81,
         "chineseSupport": true,
-        "reviewTotal": 7971,
+        "reviewTotal": 7972,
         "description": "在赛博朋克末世中冒险，体验这款令人热血贲张的第一人称视角硬核砍杀游戏。成为终极赛博忍者，与BOSS进行史诗般的决战。改进的技能系统、互动性剧情、全新的游戏模式，以及令人着迷的合成波原声配乐。",
         "descriptionOriginal": "在赛博朋克末世中冒险，体验这款令人热血贲张的第一人称视角硬核砍杀游戏。成为终极赛博忍者，与BOSS进行史诗般的决战。改进的技能系统、互动性剧情、全新的游戏模式，以及令人着迷的合成波原声配乐。",
         "descriptionTranslated": false
       },
       "createdAt": 1789288422502,
-      "updatedAt": 1789288429430
+      "updatedAt": 1789315366292
     },
     {
       "appid": 1139900,
@@ -4404,21 +4404,21 @@
         "currency": "CNY",
         "isOnSale": true,
         "discountExpiration": null,
-        "updatedAt": 1789288314713
+        "updatedAt": 1789315350496
       },
       "rating": {
         "score": 9.6,
         "positive": 92,
+        "total": 27199,
         "desc": "Very Positive",
-        "total": 27196,
-        "updatedAt": 1789288315262
+        "updatedAt": 1789315352921
       },
       "historicalLow": {
         "price": 0,
         "count": 1,
         "confidence": "A",
         "source": "ITAD(国区)",
-        "updatedAt": 1789288316691,
+        "updatedAt": 1789315354367,
         "currency": "CNY"
       },
       "targetPrice": null,
@@ -4434,7 +4434,7 @@
           "type": "dlc",
           "originalDescription": "“赫尔计划”是《幽灵行者》即将推出的 DLC 扩展内容。玩家将扮演“赫尔”——《幽灵行者》基础游戏中的头目。",
           "translated": false,
-          "updatedAt": 1789288317221
+          "updatedAt": 1789315356524
         },
         {
           "appid": 1480500,
@@ -4446,7 +4446,7 @@
           "type": "dlc",
           "originalDescription": "Ghostrunner冬季套装将增加您的服装道具库。假期定制的手套和宝刀将给您带来不一样的游戏视角。 购买冬季套装将获得以下物品： -1x寒冰武士刀 -1x冷血手套",
           "translated": false,
-          "updatedAt": 1789288317847
+          "updatedAt": 1789315359639
         },
         {
           "appid": 1542040,
@@ -4458,7 +4458,7 @@
           "type": "dlc",
           "originalDescription": "用金牛礼包进一步扩充你的外观物品栏。受中国&quot;&quot;牛年&quot;&quot;和儒家美德的启发，金牛礼包将带来4套全新的定制武士刀和手套套装，在网络虚空中亮相！[/img]",
           "translated": false,
-          "updatedAt": 1789288318434
+          "updatedAt": 1789315363331
         },
         {
           "appid": 1647450,
@@ -4470,7 +4470,7 @@
           "type": "dlc",
           "originalDescription": "《幽灵行者》是一款硬核FPP（第一人称视角）游戏，在严峻的赛博朋克大环境设置下的闪电般的动作游戏。攀爬达摩塔，世界末日大灾变之后人类最后的避难所。从塔底到塔尖，面对专制的大师，完成复仇。 用霓虹礼包进一步丰富你的外观饰品。",
           "translated": false,
-          "updatedAt": 1789288319053
+          "updatedAt": 1789315365758
         },
         {
           "appid": 1741240,
@@ -4482,7 +4482,7 @@
           "type": "music",
           "originalDescription": "《幽灵行者》是一款硬核FPP（第一人称视角）游戏，闪电般快节奏动作，背景设置在一个恐怖阴沉的赛博朋克巨型建筑中。攀爬达摩塔——世界末日大灾变之后人类最后的避难所。从塔底到塔尖，面对专制的大师，完成复仇。",
           "translated": false,
-          "updatedAt": 1789288319623
+          "updatedAt": 1789315368305
         },
         {
           "appid": 1741380,
@@ -4494,7 +4494,7 @@
           "type": "dlc",
           "originalDescription": "&quot;《幽灵行者》是一款硬核FPP（第一人称视角）游戏，闪电般快节奏动作，背景设置在一个恐怖阴沉的赛博朋克巨型建筑中。攀爬达摩塔——世界末日大灾变之后人类最后的避难所。从塔底到塔尖，面对专制的大师，完成复仇。",
           "translated": false,
-          "updatedAt": 1789288320243
+          "updatedAt": 1789315369543
         },
         {
           "appid": 1760130,
@@ -4506,7 +4506,7 @@
           "type": "dlc",
           "originalDescription": "《幽灵行者》是一款硬核FPP（第一人称视角）游戏，闪电般快节奏动作，背景设置在一个恐怖阴沉的赛博朋克巨型建筑中。 用万圣节礼包进一步扩充你的装饰品。",
           "translated": false,
-          "updatedAt": 1789288320870
+          "updatedAt": 1789315371957
         }
       ],
       "details": {
@@ -4550,13 +4550,13 @@
         ],
         "metacritic": 81,
         "chineseSupport": true,
-        "reviewTotal": 46800,
+        "reviewTotal": 46805,
         "description": "Ghostrunner提供了独特的单玩家游戏体验：快节奏的暴力战斗，以及将科幻故事与世界末日主题相融合的原生环境。它讲述了一个已终结的世界，以及在其中为生存而战的居民的故事。",
         "descriptionOriginal": "Ghostrunner提供了独特的单玩家游戏体验：快节奏的暴力战斗，以及将科幻故事与世界末日主题相融合的原生环境。它讲述了一个已终结的世界，以及在其中为生存而战的居民的故事。",
         "descriptionTranslated": false
       },
       "createdAt": 1789288315262,
-      "updatedAt": 1789288320870
+      "updatedAt": 1789315371958
     },
     {
       "appid": 690640,
@@ -4569,21 +4569,21 @@
         "currency": "CNY",
         "isOnSale": true,
         "discountExpiration": null,
-        "updatedAt": 1789288293214
+        "updatedAt": 1789315357739
       },
       "rating": {
         "score": 8.4,
         "positive": 81,
-        "desc": "Very Positive",
         "total": 5170,
-        "updatedAt": 1789288295688
+        "desc": "Very Positive",
+        "updatedAt": 1789315363399
       },
       "historicalLow": {
         "price": 23.6,
         "count": 16,
         "confidence": "A",
         "source": "ITAD(国区)",
-        "updatedAt": 1789288297294,
+        "updatedAt": 1789315364916,
         "currency": "CNY"
       },
       "targetPrice": null,
@@ -4599,7 +4599,7 @@
           "type": "dlc",
           "originalDescription": "Trouble brews at the Astral Academy (again)! The students are cursed, unable to wake up, while a mysterious spirit is on the loose in their deviously enchanting dreams. Trine 4: Melody of Mystery is a 6-level story for Amadeus, Pontius, and Zoya, with new abilities, puzzles and gameplay elements.",
           "translated": false,
-          "updatedAt": 1789288298636
+          "updatedAt": 1789315368508
         },
         {
           "appid": 1503550,
@@ -4611,7 +4611,7 @@
           "type": "music",
           "originalDescription": "The official Melody of Mystery Soundtrack brings the latest Trine adventure to life! Listen closely and embrace the enchanted tunes as the Heroes of Trine venture through incredible dreamscapes, conjured by a mysterious spirit Melody and an alluring music box.",
           "translated": false,
-          "updatedAt": 1789288299969
+          "updatedAt": 1789315371466
         },
         {
           "appid": 1224800,
@@ -4623,7 +4623,7 @@
           "type": "music",
           "originalDescription": "The original soundtrack to Trine 4: The Nightmare Prince is here! Composed by award-winning Ari Pulkkinen, the soundtrack has been praised across reviews as magical, enchanting and absolutely stellar! Over 100 minutes in 26 tracks, the Trine 4 soundtrack is the longest in the Trine series.",
           "translated": false,
-          "updatedAt": 1789288301421
+          "updatedAt": 1789315374309
         },
         {
           "appid": 1504370,
@@ -4635,7 +4635,7 @@
           "type": "dlc",
           "originalDescription": "The Art of Trine 4: The Nightmare Prince is a 206-page visualization of the art in the game, with descriptive text by the artists who worked on Trine 4!",
           "translated": false,
-          "updatedAt": 1789288302835
+          "updatedAt": 1789315377607
         }
       ],
       "details": {
@@ -4703,7 +4703,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789288295688,
-      "updatedAt": 1789288302835
+      "updatedAt": 1789315377607
     },
     {
       "appid": 312660,
@@ -4716,21 +4716,21 @@
         "currency": "CNY",
         "isOnSale": true,
         "discountExpiration": null,
-        "updatedAt": 1789288265649
+        "updatedAt": 1789315367768
       },
       "rating": {
         "score": 9.2,
         "positive": 90,
-        "desc": "Very Positive",
         "total": 17889,
-        "updatedAt": 1789288267285
+        "desc": "Very Positive",
+        "updatedAt": 1789315371372
       },
       "historicalLow": {
         "price": 15.8,
         "count": 27,
         "confidence": "A",
         "source": "ITAD(国区)",
-        "updatedAt": 1789288268733,
+        "updatedAt": 1789315373025,
         "currency": "CNY"
       },
       "targetPrice": null,
@@ -4746,7 +4746,7 @@
           "type": "dlc",
           "originalDescription": "《狙击精英 4》季票可让玩家以优惠价格访问游戏的所有 DLC 包。",
           "translated": false,
-          "updatedAt": 1789288269165
+          "updatedAt": 1789315374023
         },
         {
           "appid": 474763,
@@ -4758,7 +4758,7 @@
           "type": "dlc",
           "originalDescription": "Destroy the U-boat base and take down Hitler in as many ways as you can in this replayable campaign mission for 1-2 players.",
           "translated": false,
-          "updatedAt": 1789288271019
+          "updatedAt": 1789315377158
         },
         {
           "appid": 474760,
@@ -4770,7 +4770,7 @@
           "type": "dlc",
           "originalDescription": "伪装步枪皮肤包",
           "translated": false,
-          "updatedAt": 1789288271340
+          "updatedAt": 1789315378057
         },
         {
           "appid": 474761,
@@ -4782,7 +4782,7 @@
           "type": "dlc",
           "originalDescription": "为执行潜入任务，可选择三种武器 - 卡宾枪（消音）、HDM 和黄油枪（如果需要发出声响）",
           "translated": false,
-          "updatedAt": 1789288271944
+          "updatedAt": 1789315378413
         },
         {
           "appid": 474762,
@@ -4794,7 +4794,7 @@
           "type": "dlc",
           "originalDescription": "在《狙击精英 4》所有的战役模式、合作模式和对抗模式中，扮演苏联红军的精英狙击手罗莎·彼得罗夫娜、训练有素的突击队员或身穿吉利迷彩服的士兵。",
           "translated": false,
-          "updatedAt": 1789288272534
+          "updatedAt": 1789315379825
         },
         {
           "appid": 513034,
@@ -4806,7 +4806,7 @@
           "type": "dlc",
           "originalDescription": "使用如下盟军武器向法西斯主义者宣战 – M1 伽兰德步枪、M1 卡宾枪和罗斯马克 3 型步枪。",
           "translated": false,
-          "updatedAt": 1789288273138
+          "updatedAt": 1789315381053
         },
         {
           "appid": 474764,
@@ -4818,7 +4818,7 @@
           "type": "dlc",
           "originalDescription": "战火在意大利愈演愈烈，卡尔必须拦截至关重要的敌方武器包。《死亡风暴：初战》是三部曲战役的第一部曲，适合 1-2 名玩家游戏，任务是将卡尔带到纳粹德国海军基地的心脏地带。",
           "translated": false,
-          "updatedAt": 1789288273753
+          "updatedAt": 1789315381691
         },
         {
           "appid": 513032,
@@ -4830,7 +4830,7 @@
           "type": "dlc",
           "originalDescription": "8 个夜间主题的步枪皮肤、男性和女性吉利迷彩服人物*和 3 种新武器：毛瑟枪、OVP M1918 冲锋枪和纳甘无声手枪，让你支配黑暗。 *适用于战役模式、对抗模式和合作模式。",
           "translated": false,
-          "updatedAt": 1789288274356
+          "updatedAt": 1789315382866
         },
         {
           "appid": 474765,
@@ -4842,7 +4842,7 @@
           "type": "dlc",
           "originalDescription": "Thanks to Karl’s efforts, the Allies are one step closer to finding out the nature of ‘Deathstorm’,a top secret atomic project.",
           "translated": false,
-          "updatedAt": 1789288275961
+          "updatedAt": 1789315384632
         },
         {
           "appid": 513031,
@@ -4854,7 +4854,7 @@
           "type": "dlc",
           "originalDescription": "8 个都市主题的步枪皮肤、男性和女性吉利迷彩服人物*和 3 种新武器：温彻斯特步枪、斯登冲锋枪和瓦尔特 PPK 手枪，让你控制城市地图。 *仅适用于多人对抗模式和生存模式。",
           "translated": false,
-          "updatedAt": 1789288276265
+          "updatedAt": 1789315385894
         },
         {
           "appid": 513033,
@@ -4866,7 +4866,7 @@
           "type": "dlc",
           "originalDescription": "8 个冬季主题的步枪皮肤、男性和女性吉利迷彩服人物*和 3 种新武器：ZH29 步枪，PPSH 冲锋枪和托卡列夫手枪，让你统治冬季。 *适用于战役模式、对抗模式和合作模式。",
           "translated": false,
-          "updatedAt": 1789288276877
+          "updatedAt": 1789315387252
         },
         {
           "appid": 474766,
@@ -4878,7 +4878,7 @@
           "type": "dlc",
           "originalDescription": "随着“死亡风暴”计划的真相被公布于众，卡尔被派往德国的 Steigerloch 小镇，阻止该计划的实施。如果卡尔不幸失败，对于盟军以及自由世界的影响将无法想象。《死亡风暴：毁灭战》是惊心动魄的三部曲 DLC 战役的终章，我们的狙击精英需要想尽办法挫败敌人的计划... 适合 1-2 名玩家游戏。",
           "translated": false,
-          "updatedAt": 1789288277477
+          "updatedAt": 1789315387748
         },
         {
           "appid": 513030,
@@ -4890,7 +4890,7 @@
           "type": "dlc",
           "originalDescription": "使用内含三种大威力武器的武器包击溃您的敌人 - SVT、M30 三管复合枪和毛瑟枪 M712。",
           "translated": false,
-          "updatedAt": 1789288278103
+          "updatedAt": 1789315388327
         }
       ],
       "details": {
@@ -4939,13 +4939,13 @@
         ],
         "metacritic": 78,
         "chineseSupport": true,
-        "reviewTotal": 54176,
+        "reviewTotal": 54184,
         "description": "在史上最大也最先进的第二次世界大战射击游戏尽享无与伦比的自由狙击。在波澜壮阔的关卡中体验战术级别的第三人称战斗、游戏方式选择，以及史诗般的远程射击，从法西斯主义的魔掌中解放战争时期的意大利。",
         "descriptionOriginal": "在史上最大也最先进的第二次世界大战射击游戏尽享无与伦比的自由狙击。在波澜壮阔的关卡中体验战术级别的第三人称战斗、游戏方式选择，以及史诗般的远程射击，从法西斯主义的魔掌中解放战争时期的意大利。",
         "descriptionTranslated": false
       },
       "createdAt": 1789288267285,
-      "updatedAt": 1789288278103
+      "updatedAt": 1789315388327
     },
     {
       "appid": 1182900,
@@ -4958,21 +4958,21 @@
         "currency": "CNY",
         "isOnSale": true,
         "discountExpiration": null,
-        "updatedAt": 1789288254323
+        "updatedAt": 1789315374606
       },
       "rating": {
         "score": 8.4,
         "positive": 83,
+        "total": 4462,
         "desc": "Very Positive",
-        "total": 4456,
-        "updatedAt": 1789288255996
+        "updatedAt": 1789315377127
       },
       "historicalLow": {
         "price": 59.7,
         "count": 4,
         "confidence": "A",
         "source": "ITAD(国区)",
-        "updatedAt": 1789288257459,
+        "updatedAt": 1789315378059,
         "currency": "CNY"
       },
       "targetPrice": null,
@@ -4988,7 +4988,7 @@
           "type": "dlc",
           "originalDescription": "获取 Protector Pack，畅享特殊的弩皮肤、阿米西亚专属外观以及额外的制作材料，顺利开启阿米西亚与雨果冒险之旅的下一章节。",
           "translated": false,
-          "updatedAt": 1789288257896
+          "updatedAt": 1789315379039
         }
       ],
       "details": {
@@ -5040,13 +5040,13 @@
         ],
         "metacritic": 82,
         "chineseSupport": true,
-        "reviewTotal": 20713,
+        "reviewTotal": 20725,
         "description": "走进异象四起却令人屏息的残酷世界，踏上凄婉揪心的旅程。不惜一切代价，只为生存，拯救自己所爱的人，感受其中的纠结与痛苦。利用多种兵器、工具和非同寻常的能力，暗中偷袭抑或发动骇人攻势，",
         "descriptionOriginal": "走进异象四起却令人屏息的残酷世界，踏上凄婉揪心的旅程。不惜一切代价，只为生存，拯救自己所爱的人，感受其中的纠结与痛苦。利用多种兵器、工具和非同寻常的能力，暗中偷袭抑或发动骇人攻势，",
         "descriptionTranslated": false
       },
       "createdAt": 1789288255996,
-      "updatedAt": 1789288257896
+      "updatedAt": 1789315379039
     },
     {
       "appid": 1092660,
@@ -5059,21 +5059,21 @@
         "currency": "CNY",
         "isOnSale": true,
         "discountExpiration": null,
-        "updatedAt": 1789288225882
+        "updatedAt": 1789315380484
       },
       "rating": {
         "score": 7.5,
         "positive": 70,
-        "desc": "Mostly Positive",
         "total": 428,
-        "updatedAt": 1789288227339
+        "desc": "Mostly Positive",
+        "updatedAt": 1789315382320
       },
       "historicalLow": {
         "price": 18,
         "count": 30,
         "confidence": "A",
         "source": "ITAD(国区)",
-        "updatedAt": 1789288228889,
+        "updatedAt": 1789315383207,
         "currency": "CNY"
       },
       "targetPrice": null,
@@ -5089,7 +5089,7 @@
           "type": "dlc",
           "originalDescription": "数字版音轨——由Arkadiusz Reikowski创作的《布莱尔女巫》原声音轨，唤起你对森林的深层恐惧。",
           "translated": false,
-          "updatedAt": 1789288229408
+          "updatedAt": 1789315384327
         },
         {
           "appid": 1141711,
@@ -5101,7 +5101,7 @@
           "type": "dlc",
           "originalDescription": "This official digital album will lead you through the haunted woods with ominous concept arts, disturbing sketches and spine-chilling illustrations.",
           "translated": false,
-          "updatedAt": 1789288231023
+          "updatedAt": 1789315386326
         }
       ],
       "details": {
@@ -5151,7 +5151,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789288227339,
-      "updatedAt": 1789288231023
+      "updatedAt": 1789315386326
     },
     {
       "appid": 845880,
@@ -5164,21 +5164,21 @@
         "currency": "CNY",
         "isOnSale": true,
         "discountExpiration": null,
-        "updatedAt": 1789288189787
+        "updatedAt": 1789315384750
       },
       "rating": {
         "score": 9.6,
         "positive": 93,
-        "desc": "Very Positive",
         "total": 742,
-        "updatedAt": 1789288190456
+        "desc": "Very Positive",
+        "updatedAt": 1789315386797
       },
       "historicalLow": {
         "price": 15,
         "count": 19,
         "confidence": "A",
         "source": "ITAD(国区)",
-        "updatedAt": 1789288191930,
+        "updatedAt": 1789315387702,
         "currency": "CNY"
       },
       "targetPrice": null,
@@ -5228,13 +5228,13 @@
         ],
         "metacritic": 65,
         "chineseSupport": true,
-        "reviewTotal": 1216,
+        "reviewTotal": 1218,
         "description": "吸血鬼大小姐蕾米莉亚与她的从者咲夜追寻着巨大怪物的踪迹，在幻想乡中展开了一场大冒险。这是一部使用轻快的动作和丰富的技能打爆敌人的爽快3D弹幕动作RPG。",
         "descriptionOriginal": "吸血鬼大小姐蕾米莉亚与她的从者咲夜追寻着巨大怪物的踪迹，在幻想乡中展开了一场大冒险。这是一部使用轻快的动作和丰富的技能打爆敌人的爽快3D弹幕动作RPG。",
         "descriptionTranslated": false
       },
       "createdAt": 1789288190456,
-      "updatedAt": 1789288190456
+      "updatedAt": 1789315386797
     },
     {
       "appid": 922500,
@@ -5247,21 +5247,21 @@
         "currency": "CNY",
         "isOnSale": true,
         "discountExpiration": null,
-        "updatedAt": 1789287674131
+        "updatedAt": 1789315389156
       },
       "rating": {
         "score": 6.5,
         "positive": 68,
-        "desc": "Mixed",
         "total": 542,
-        "updatedAt": 1789287675940
+        "desc": "Mixed",
+        "updatedAt": 1789315390521
       },
       "historicalLow": {
         "price": 25,
         "count": 28,
         "confidence": "A",
         "source": "ITAD(国区)",
-        "updatedAt": 1789287677300,
+        "updatedAt": 1789315391389,
         "currency": "CNY"
       },
       "targetPrice": null,
@@ -5322,7 +5322,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789287675940,
-      "updatedAt": 1789287675940
+      "updatedAt": 1789315390521
     },
     {
       "appid": 798490,
@@ -5335,14 +5335,14 @@
         "currency": "CNY",
         "isOnSale": true,
         "discountExpiration": null,
-        "updatedAt": 1789272223873
+        "updatedAt": 1789315392429
       },
       "rating": {
         "score": 7.5,
         "positive": 75,
-        "desc": "Mostly Positive",
         "total": 775,
-        "updatedAt": 1789272225869
+        "desc": "Mostly Positive",
+        "updatedAt": 1789315393684
       },
       "historicalLow": {
         "price": 12.9,
@@ -5364,7 +5364,7 @@
           "type": "dlc",
           "originalDescription": "Dressed to Kill - Cosmetics Pack 内含多种服装、眼睛和武器皮肤，可以让你将灵女们的外表妆点得愈加绚丽多姿。先认真设定好每一位灵女的姿容，然后再派她们去对抗痛苦吧。",
           "translated": false,
-          "updatedAt": 1789272226357
+          "updatedAt": 1789315394526
         },
         {
           "appid": 1330380,
@@ -5376,7 +5376,7 @@
           "type": "music",
           "originalDescription": "《彼岸花》OST 共收录14首精雕细琢而成的大师级游戏配乐，堪称典藏之作。",
           "translated": false,
-          "updatedAt": 1789272226971
+          "updatedAt": 1789315395766
         },
         {
           "appid": 1347640,
@@ -5388,7 +5388,7 @@
           "type": "dlc",
           "originalDescription": "128页的《彼岸花》艺术设定集，将十六位才华横溢的艺术家创作的草稿、概念设定图、3D渲染图等众多作品尽数收罗其中，让您在与痛苦作战之余，更能尽情领略游戏世界的全貌。",
           "translated": false,
-          "updatedAt": 1789272228203
+          "updatedAt": 1789315396435
         }
       ],
       "details": {
@@ -5433,13 +5433,13 @@
         ],
         "metacritic": 78,
         "chineseSupport": true,
-        "reviewTotal": 4512,
+        "reviewTotal": 4513,
         "description": "作为人类最后的希望，你将统领军队，踏着华丽动作与反击交织而成的繁复舞步，利用原创的动态时间轴系统，与凶悍可怖的 Boss 们展开史诗般的战斗。",
         "descriptionOriginal": "作为人类最后的希望，你将统领军队，踏着华丽动作与反击交织而成的繁复舞步，利用原创的动态时间轴系统，与凶悍可怖的 Boss 们展开史诗般的战斗。",
         "descriptionTranslated": false
       },
       "createdAt": 1789200620526,
-      "updatedAt": 1789272228203
+      "updatedAt": 1789315396435
     },
     {
       "appid": 1436590,
@@ -5452,21 +5452,21 @@
         "currency": "CNY",
         "isOnSale": false,
         "discountExpiration": null,
-        "updatedAt": 1789290170279
+        "updatedAt": 1789315395168
       },
       "rating": {
         "score": 8.4,
         "positive": 82,
+        "total": 1435,
         "desc": "Very Positive",
-        "total": 1434,
-        "updatedAt": 1789290172268
+        "updatedAt": 1789315397351
       },
       "historicalLow": {
         "price": 19,
         "count": 4,
         "confidence": "A",
         "source": "ITAD(国区)",
-        "updatedAt": 1789290173174,
+        "updatedAt": 1789315398674,
         "currency": "CNY"
       },
       "targetPrice": null,
@@ -5482,7 +5482,7 @@
           "type": "music",
           "originalDescription": "Soundtrack For Phoenotopia Awakening",
           "translated": false,
-          "updatedAt": 1789290174523
+          "updatedAt": 1789315400102
         }
       ],
       "details": {
@@ -5529,13 +5529,13 @@
         ],
         "metacritic": null,
         "chineseSupport": true,
-        "reviewTotal": 2749,
+        "reviewTotal": 2750,
         "description": "异想天开，波澜壮阔的大冒险！ 受经典名作所启发的冒险动作游戏。 在各种各样的城镇和地下城冒险，打倒恶徒，拯救家人与伙伴吧！",
         "descriptionOriginal": "异想天开，波澜壮阔的大冒险！ 受经典名作所启发的冒险动作游戏。 在各种各样的城镇和地下城冒险，打倒恶徒，拯救家人与伙伴吧！",
         "descriptionTranslated": false
       },
       "createdAt": 1789200615859,
-      "updatedAt": 1789290174523
+      "updatedAt": 1789315400102
     },
     {
       "appid": 764790,
@@ -5548,21 +5548,21 @@
         "currency": "CNY",
         "isOnSale": false,
         "discountExpiration": null,
-        "updatedAt": 1789290171652
+        "updatedAt": 1789315399603
       },
       "rating": {
         "score": 8.4,
         "positive": 84,
-        "desc": "Very Positive",
         "total": 1750,
-        "updatedAt": 1789290172867
+        "desc": "Very Positive",
+        "updatedAt": 1789315400590
       },
       "historicalLow": {
         "price": 15.2,
         "count": 19,
         "confidence": "A",
         "source": "ITAD(国区)",
-        "updatedAt": 1789290173867,
+        "updatedAt": 1789315401503,
         "currency": "CNY"
       },
       "targetPrice": null,
@@ -5578,7 +5578,7 @@
           "type": "music",
           "originalDescription": "The Messenger Soundtrack - Disc I: The Past [8-Bit] by Rainbowdragoneyes",
           "translated": false,
-          "updatedAt": 1789290175102
+          "updatedAt": 1789315402925
         },
         {
           "appid": 924331,
@@ -5590,7 +5590,7 @@
           "type": "music",
           "originalDescription": "The Messenger Soundtrack - Disc II: The Future [16-Bit] by Rainbowdragoneyes",
           "translated": false,
-          "updatedAt": 1789290176704
+          "updatedAt": 1789315405444
         },
         {
           "appid": 924332,
@@ -5602,7 +5602,7 @@
           "type": "music",
           "originalDescription": "The Messenger EP by Keiji Yamagishi contains two original track by Ninja Gaiden composer Keiji Yamagishi.",
           "translated": false,
-          "updatedAt": 1789290178047
+          "updatedAt": 1789315406859
         },
         {
           "appid": 1107180,
@@ -5614,7 +5614,7 @@
           "type": "dlc",
           "originalDescription": "The Messenger's epic story continues on in a summer vacation DLC full of tropical action!",
           "translated": false,
-          "updatedAt": 1789290179964
+          "updatedAt": 1789315409647
         },
         {
           "appid": 1108260,
@@ -5626,7 +5626,7 @@
           "type": "music",
           "originalDescription": "The Messenger: Picnic Panic Soundtrack by Rainbowdragoneyes",
           "translated": false,
-          "updatedAt": 1789290181554
+          "updatedAt": 1789315412109
         }
       ],
       "details": {
@@ -5676,7 +5676,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789200611013,
-      "updatedAt": 1789290181554
+      "updatedAt": 1789315412109
     },
     {
       "appid": 1931770,
@@ -5689,14 +5689,14 @@
         "currency": "CNY",
         "isOnSale": true,
         "discountExpiration": null,
-        "updatedAt": 1789272234216
+        "updatedAt": 1789315402631
       },
       "rating": {
         "score": 9.9,
         "positive": 98,
+        "total": 11938,
         "desc": "Overwhelmingly Positive",
-        "total": 11916,
-        "updatedAt": 1789272234805
+        "updatedAt": 1789315403077
       },
       "historicalLow": {
         "price": 40,
@@ -5718,7 +5718,7 @@
           "type": "music",
           "originalDescription": "15首原创曲子由天才作曲家 Thomas Brunet 创作、法国 Studio Du Bassin 的杰出音乐人录制，动人旋律带你领略《巴别塔圣歌》的迷人世界。",
           "translated": false,
-          "updatedAt": 1789272236501
+          "updatedAt": 1789315404539
         }
       ],
       "details": {
@@ -5770,13 +5770,13 @@
         ],
         "metacritic": 86,
         "chineseSupport": true,
-        "reviewTotal": 30289,
+        "reviewTotal": 30319,
         "description": "走进这款获奖解谜冒险游戏，化身旅人，破除隔阂，令高塔上的民族团结起来。走进这座别样而又迷人的巴别塔，仔细观察、聆听，才能破译古代文字。",
         "descriptionOriginal": "走进这款获奖解谜冒险游戏，化身旅人，破除隔阂，令高塔上的民族团结起来。走进这座别样而又迷人的巴别塔，仔细观察、聆听，才能破译古代文字。",
         "descriptionTranslated": false
       },
       "createdAt": 1789200607370,
-      "updatedAt": 1789272236501
+      "updatedAt": 1789315404539
     },
     {
       "appid": 374320,
@@ -5789,14 +5789,14 @@
         "currency": "CNY",
         "isOnSale": false,
         "discountExpiration": null,
-        "updatedAt": 1789272237512
+        "updatedAt": 1789315405392
       },
       "rating": {
         "score": 9.6,
         "positive": 94,
+        "total": 105339,
         "desc": "Very Positive",
-        "total": 105336,
-        "updatedAt": 1789272239518
+        "updatedAt": 1789315406759
       },
       "historicalLow": {
         "price": 67,
@@ -5818,7 +5818,7 @@
           "type": "dlc",
           "originalDescription": "使用Season Pass不仅能获得两份史诗级DLC包折扣，还能拓展您的DARK SOULS™ 3游戏体验──挑战新地图、头目、敌人，以及取得额外武器及防具套装。",
           "translated": false,
-          "updatedAt": 1789232423262
+          "updatedAt": 1789315408063
         },
         {
           "appid": 506970,
@@ -5830,7 +5830,7 @@
           "type": "dlc",
           "originalDescription": "Dark Souls™ III Season Pass内容之一。取得DLC包“艾雷德尔之烬，”拓展您的游戏体验。",
           "translated": false,
-          "updatedAt": 1789232425043
+          "updatedAt": 1789315409314
         },
         {
           "appid": 506971,
@@ -5842,7 +5842,7 @@
           "type": "dlc",
           "originalDescription": "DARK SOULS III的最后一段旅程──环印城，前往探索末世所在，发掘新区域、新头目、新装备、法术，以及道具。",
           "translated": false,
-          "updatedAt": 1789232426267
+          "updatedAt": 1789315409943
         }
       ],
       "details": {
@@ -5895,13 +5895,13 @@
         ],
         "metacritic": 89,
         "chineseSupport": true,
-        "reviewTotal": 277979,
+        "reviewTotal": 277988,
         "description": "Dark Souls即将推出极具话题性及代表性的系列新作。 作好准备，再次拥抱黑暗！",
         "descriptionOriginal": "Dark Souls即将推出极具话题性及代表性的系列新作。 作好准备，再次拥抱黑暗！",
         "descriptionTranslated": false
       },
       "createdAt": 1789200602339,
-      "updatedAt": 1789272239518
+      "updatedAt": 1789315409943
     },
     {
       "appid": 782330,
@@ -5914,14 +5914,14 @@
         "currency": "CNY",
         "isOnSale": false,
         "discountExpiration": null,
-        "updatedAt": 1789232424474
+        "updatedAt": 1789315408839
       },
       "rating": {
         "score": 9.2,
         "positive": 88,
+        "total": 16325,
         "desc": "Very Positive",
-        "total": 16324,
-        "updatedAt": 1789232426928
+        "updatedAt": 1789315411482
       },
       "historicalLow": {
         "price": 16.5,
@@ -5943,7 +5943,7 @@
           "type": "game",
           "originalDescription": "你的胜利将把人类从灭绝的边缘救回，但是胜利是有代价的。权力失衡危及所有造物。现在你得站出来，到《DOOM Eternal: The Ancient Gods》中扭转乾坤。",
           "translated": false,
-          "updatedAt": 1789232427462
+          "updatedAt": 1789315412107
         },
         {
           "appid": 1098292,
@@ -5955,7 +5955,7 @@
           "type": "game",
           "originalDescription": "The Ancient Gods，第1章是备受赞誉的《DOOM Eternal》首个战役扩展包。",
           "translated": false,
-          "updatedAt": 1789232428080
+          "updatedAt": 1789315413609
         },
         {
           "appid": 1098293,
@@ -5967,7 +5967,7 @@
           "type": "game",
           "originalDescription": "《DOOM Eternal: The Ancient Gods》第2章是毁灭战士故事的史诗级终结篇，也是备受赞誉的《DOOM Eternal》第二个战役扩展包。",
           "translated": false,
-          "updatedAt": 1789232429281
+          "updatedAt": 1789315414293
         },
         {
           "appid": 4764470,
@@ -5979,7 +5979,7 @@
           "type": "dlc",
           "originalDescription": "不管是在单机战役中屠戮恶魔，还是在战斗模式中与其他玩家交锋，完整装饰包都能为你带来丰富多样的风格与个性。完整装饰包将全部装饰包与大师收藏一次打包，收录超过100种物品！",
           "translated": false,
-          "updatedAt": 1789232429839
+          "updatedAt": 1789315416114
         }
       ],
       "details": {
@@ -6032,13 +6032,13 @@
         ],
         "metacritic": 88,
         "chineseSupport": true,
-        "reviewTotal": 189955,
+        "reviewTotal": 189973,
         "description": "地狱军团入侵了人世间，在恢弘的单人剧情模式中扮演毁灭战士，在各个次元歼灭恶魔，制止人类最终的毁灭。 它们唯一所惧怕的……就是你。",
         "descriptionOriginal": "地狱军团入侵了人世间，在恢弘的单人剧情模式中扮演毁灭战士，在各个次元歼灭恶魔，制止人类最终的毁灭。 它们唯一所惧怕的……就是你。",
         "descriptionTranslated": false
       },
       "createdAt": 1789200598138,
-      "updatedAt": 1789232429839
+      "updatedAt": 1789315416114
     },
     {
       "appid": 1649240,
@@ -6051,14 +6051,14 @@
         "currency": "CNY",
         "isOnSale": false,
         "discountExpiration": null,
-        "updatedAt": 1789232428671
+        "updatedAt": 1789315413059
       },
       "rating": {
         "score": 6.5,
         "positive": 66,
-        "desc": "Mixed",
         "total": 352,
-        "updatedAt": 1789232430516
+        "desc": "Mixed",
+        "updatedAt": 1789315414988
       },
       "historicalLow": {
         "price": 136.6,
@@ -6130,7 +6130,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789200593716,
-      "updatedAt": 1789232430516
+      "updatedAt": 1789315414988
     },
     {
       "appid": 953490,
@@ -6143,14 +6143,14 @@
         "currency": "CNY",
         "isOnSale": false,
         "discountExpiration": null,
-        "updatedAt": 1789272270525
+        "updatedAt": 1789315416856
       },
       "rating": {
         "score": 9.6,
         "positive": 93,
+        "total": 4976,
         "desc": "Very Positive",
-        "total": 4974,
-        "updatedAt": 1789272271524
+        "updatedAt": 1789315417805
       },
       "historicalLow": {
         "price": 7.6,
@@ -6167,12 +6167,12 @@
           "name": "CARRION Deluxe Edition Content",
           "price": 42,
           "shortDescription": "Includes CARRION Digital Comic Book, The Art of CARRION Art Book, and an exclusive set of CARRION wallpapers. Featuring an exclusive track The Worm Turns by Cris Velasco.",
-          "description": "包括 CARRION 数字漫画书、CARRION 艺术书和一套独家 CARRION 壁纸。收录了 Cris Velasco 的独家曲目 The Worm Turns。",
+          "description": "Includes CARRION Digital Comic Book, The Art of CARRION Art Book, and an exclusive set of CARRION wallpapers. Featuring an exclusive track The Worm Turns by Cri…",
           "kind": "美术设定集",
           "type": "dlc",
           "originalDescription": "Includes CARRION Digital Comic Book, The Art of CARRION Art Book, and an exclusive set of CARRION wallpapers. Featuring an exclusive track The Worm Turns by Cris Velasco.",
-          "translated": true,
-          "updatedAt": 1789272272026
+          "translated": false,
+          "updatedAt": 1789315420360
         },
         {
           "appid": 1377100,
@@ -6184,7 +6184,7 @@
           "type": "music",
           "originalDescription": "Soundtrack to the game Carrion.",
           "translated": false,
-          "updatedAt": 1789272273997
+          "updatedAt": 1789315422323
         }
       ],
       "details": {
@@ -6236,13 +6236,13 @@
         ],
         "metacritic": 75,
         "chineseSupport": true,
-        "reviewTotal": 33230,
+        "reviewTotal": 33235,
         "description": "《红怪》是一款逆转恐怖游戏，玩家将一反常态，扮演一只无固定形态、不明来源的触手生物。",
         "descriptionOriginal": "《红怪》是一款逆转恐怖游戏，玩家将一反常态，扮演一只无固定形态、不明来源的触手生物。",
         "descriptionTranslated": false
       },
       "createdAt": 1789200589512,
-      "updatedAt": 1789272273997
+      "updatedAt": 1789315422323
     },
     {
       "appid": 1966720,
@@ -6255,21 +6255,22 @@
         "currency": "CNY",
         "isOnSale": false,
         "discountExpiration": null,
-        "updatedAt": 1789272273259
+        "updatedAt": 1789315419543
       },
       "rating": {
         "score": 9.6,
         "positive": 93,
+        "total": 17726,
         "desc": "Very Positive",
-        "total": 17727,
-        "updatedAt": 1789272275852
+        "updatedAt": 1789315423948
       },
       "historicalLow": {
-        "price": null,
-        "count": null,
-        "confidence": "pending",
-        "source": null,
-        "updatedAt": 0
+        "price": 27.3,
+        "count": 3,
+        "confidence": "A",
+        "source": "ITAD(国区)",
+        "updatedAt": 1789315425319,
+        "currency": "CNY"
       },
       "targetPrice": null,
       "note": "",
@@ -6319,13 +6320,13 @@
         ],
         "metacritic": null,
         "chineseSupport": false,
-        "reviewTotal": 411499,
+        "reviewTotal": 411505,
         "description": "A co-op horror about scavenging at abandoned moons to sell scrap to the Company.",
         "descriptionOriginal": "A co-op horror about scavenging at abandoned moons to sell scrap to the Company.",
         "descriptionTranslated": false
       },
       "createdAt": 1789200421989,
-      "updatedAt": 1789272275852
+      "updatedAt": 1789315423948
     },
     {
       "appid": 1952620,
@@ -6338,14 +6339,14 @@
         "currency": "CNY",
         "isOnSale": false,
         "discountExpiration": null,
-        "updatedAt": 1789290210129
+        "updatedAt": 1789315426300
       },
       "rating": {
         "score": null,
         "positive": null,
-        "desc": "No user reviews",
         "total": null,
-        "updatedAt": 1789290211904
+        "desc": "No user reviews",
+        "updatedAt": 1789315427928
       },
       "historicalLow": {
         "price": null,
@@ -6399,7 +6400,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789200412254,
-      "updatedAt": 1789290211904
+      "updatedAt": 1789315427928
     },
     {
       "appid": 2446620,
@@ -6412,14 +6413,14 @@
         "currency": "CNY",
         "isOnSale": false,
         "discountExpiration": null,
-        "updatedAt": 1789272281047
+        "updatedAt": 1789315429871
       },
       "rating": {
         "score": null,
         "positive": null,
-        "desc": "No user reviews",
+        "desc": null,
         "total": null,
-        "updatedAt": 1789272283622
+        "updatedAt": 0
       },
       "historicalLow": {
         "price": null,
@@ -6482,7 +6483,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789200411045,
-      "updatedAt": 1789272283622
+      "updatedAt": 1789315432286
     },
     {
       "appid": 2617700,
