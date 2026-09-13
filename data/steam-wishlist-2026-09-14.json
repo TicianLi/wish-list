@@ -1,7 +1,7 @@
 {
   "version": 3,
-  "updatedAt": 1789318363860,
-  "refreshedAt": 1789318363860,
+  "updatedAt": 1789330162586,
+  "refreshedAt": 1789330162586,
   "games": [
     {
       "appid": 1325890,
@@ -14,14 +14,14 @@
         "currency": "CNY",
         "isOnSale": true,
         "discountExpiration": null,
-        "updatedAt": 1789318172738
+        "updatedAt": 1789329971677
       },
       "rating": {
         "score": 6.5,
         "positive": 68,
         "total": 124,
         "desc": "Mixed",
-        "updatedAt": 1789318173330
+        "updatedAt": 1789329972224
       },
       "historicalLow": {
         "price": 7.5,
@@ -76,7 +76,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789289423724,
-      "updatedAt": 1789318173331
+      "updatedAt": 1789329972224
     },
     {
       "appid": 1123050,
@@ -89,14 +89,14 @@
         "currency": "CNY",
         "isOnSale": true,
         "discountExpiration": null,
-        "updatedAt": 1789318174055
+        "updatedAt": 1789329972902
       },
       "rating": {
         "score": 7.5,
         "positive": 74,
         "total": 1462,
         "desc": "Mostly Positive",
-        "updatedAt": 1789318174687
+        "updatedAt": 1789329973636
       },
       "historicalLow": {
         "price": 24,
@@ -190,7 +190,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789289416953,
-      "updatedAt": 1789318174687
+      "updatedAt": 1789329973636
     },
     {
       "appid": 1167450,
@@ -203,14 +203,14 @@
         "currency": "CNY",
         "isOnSale": true,
         "discountExpiration": null,
-        "updatedAt": 1789318175493
+        "updatedAt": 1789329974369
       },
       "rating": {
         "score": 9.2,
         "positive": 90,
         "total": 3255,
         "desc": "Very Positive",
-        "updatedAt": 1789318176340
+        "updatedAt": 1789329975027
       },
       "historicalLow": {
         "price": 27.6,
@@ -459,7 +459,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789289393679,
-      "updatedAt": 1789318176340
+      "updatedAt": 1789329975027
     },
     {
       "appid": 1161580,
@@ -472,14 +472,14 @@
         "currency": "CNY",
         "isOnSale": true,
         "discountExpiration": null,
-        "updatedAt": 1789318176937
+        "updatedAt": 1789329975713
       },
       "rating": {
         "score": 8.4,
         "positive": 84,
         "total": 897,
         "desc": "Very Positive",
-        "updatedAt": 1789318177579
+        "updatedAt": 1789329976416
       },
       "historicalLow": {
         "price": 44.7,
@@ -562,7 +562,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789289357467,
-      "updatedAt": 1789318177579
+      "updatedAt": 1789329976416
     },
     {
       "appid": 585450,
@@ -575,14 +575,14 @@
         "currency": "CNY",
         "isOnSale": true,
         "discountExpiration": null,
-        "updatedAt": 1789318178279
+        "updatedAt": 1789329977166
       },
       "rating": {
         "score": 6.5,
         "positive": 63,
         "total": 334,
         "desc": "Mixed",
-        "updatedAt": 1789318178890
+        "updatedAt": 1789329977855
       },
       "historicalLow": {
         "price": 14.9,
@@ -679,7 +679,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789289347989,
-      "updatedAt": 1789318178890
+      "updatedAt": 1789329977855
     },
     {
       "appid": 1684350,
@@ -692,14 +692,14 @@
         "currency": "CNY",
         "isOnSale": true,
         "discountExpiration": null,
-        "updatedAt": 1789318179608
+        "updatedAt": 1789329978545
       },
       "rating": {
         "score": 7.5,
         "positive": 78,
-        "total": 1073,
+        "total": 1074,
         "desc": "Mostly Positive",
-        "updatedAt": 1789318180324
+        "updatedAt": 1789329979243
       },
       "historicalLow": {
         "price": 36,
@@ -775,7 +775,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789289330600,
-      "updatedAt": 1789318180324
+      "updatedAt": 1789329979243
     },
     {
       "appid": 867210,
@@ -788,14 +788,14 @@
         "currency": "CNY",
         "isOnSale": true,
         "discountExpiration": null,
-        "updatedAt": 1789318181098
+        "updatedAt": 1789329979907
       },
       "rating": {
         "score": 7.5,
         "positive": 79,
         "total": 854,
         "desc": "Mostly Positive",
-        "updatedAt": 1789318181739
+        "updatedAt": 1789329980613
       },
       "historicalLow": {
         "price": 27.5,
@@ -960,7 +960,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789289322471,
-      "updatedAt": 1789318181739
+      "updatedAt": 1789329980613
     },
     {
       "appid": 1293160,
@@ -973,14 +973,14 @@
         "currency": "CNY",
         "isOnSale": true,
         "discountExpiration": null,
-        "updatedAt": 1789318182459
+        "updatedAt": 1789329981329
       },
       "rating": {
         "score": 8.4,
         "positive": 82,
         "total": 858,
         "desc": "Very Positive",
-        "updatedAt": 1789318183589
+        "updatedAt": 1789329982045
       },
       "historicalLow": {
         "price": 49.5,
@@ -1074,7 +1074,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789289296723,
-      "updatedAt": 1789318183589
+      "updatedAt": 1789329982045
     },
     {
       "appid": 1579380,
@@ -1087,14 +1087,14 @@
         "currency": "CNY",
         "isOnSale": false,
         "discountExpiration": null,
-        "updatedAt": 1789318183854
+        "updatedAt": 1789329982718
       },
       "rating": {
         "score": 9.6,
         "positive": 94,
         "total": 1964,
         "desc": "Very Positive",
-        "updatedAt": 1789318184524
+        "updatedAt": 1789329983436
       },
       "historicalLow": {
         "price": 20,
@@ -1169,7 +1169,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789289279165,
-      "updatedAt": 1789318184524
+      "updatedAt": 1789329983436
     },
     {
       "appid": 473950,
@@ -1182,14 +1182,14 @@
         "currency": "CNY",
         "isOnSale": true,
         "discountExpiration": null,
-        "updatedAt": 1789318185198
+        "updatedAt": 1789329984097
       },
       "rating": {
         "score": 9.8,
         "positive": 96,
         "total": 2003,
         "desc": "Overwhelmingly Positive",
-        "updatedAt": 1789318185934
+        "updatedAt": 1789329984827
       },
       "historicalLow": {
         "price": 19,
@@ -1262,7 +1262,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789289272898,
-      "updatedAt": 1789318185934
+      "updatedAt": 1789329984827
     },
     {
       "appid": 1150440,
@@ -1275,14 +1275,14 @@
         "currency": "CNY",
         "isOnSale": true,
         "discountExpiration": null,
-        "updatedAt": 1789318186573
+        "updatedAt": 1789329985511
       },
       "rating": {
         "score": 7.5,
         "positive": 76,
         "total": 1043,
         "desc": "Mostly Positive",
-        "updatedAt": 1789318187343
+        "updatedAt": 1789329986239
       },
       "historicalLow": {
         "price": 50.7,
@@ -1362,7 +1362,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789289231546,
-      "updatedAt": 1789318187343
+      "updatedAt": 1789329986239
     },
     {
       "appid": 1796220,
@@ -1375,14 +1375,14 @@
         "currency": "CNY",
         "isOnSale": true,
         "discountExpiration": null,
-        "updatedAt": 1789318187995
+        "updatedAt": 1789329986892
       },
       "rating": {
         "score": 8.9,
         "positive": 86,
         "total": 1076,
         "desc": "Very Positive",
-        "updatedAt": 1789318188713
+        "updatedAt": 1789329987614
       },
       "historicalLow": {
         "price": 19,
@@ -1441,7 +1441,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789289193248,
-      "updatedAt": 1789318188713
+      "updatedAt": 1789329987614
     },
     {
       "appid": 1096530,
@@ -1454,14 +1454,14 @@
         "currency": "CNY",
         "isOnSale": true,
         "discountExpiration": null,
-        "updatedAt": 1789318189430
+        "updatedAt": 1789329988323
       },
       "rating": {
         "score": 7.5,
         "positive": 79,
         "total": 1338,
         "desc": "Mostly Positive",
-        "updatedAt": 1789318190097
+        "updatedAt": 1789329989035
       },
       "historicalLow": {
         "price": 0,
@@ -1612,7 +1612,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789289175348,
-      "updatedAt": 1789318190097
+      "updatedAt": 1789329989035
     },
     {
       "appid": 2975950,
@@ -1625,14 +1625,14 @@
         "currency": "CNY",
         "isOnSale": true,
         "discountExpiration": null,
-        "updatedAt": 1789318190772
+        "updatedAt": 1789329989703
       },
       "rating": {
         "score": 6.5,
         "positive": 61,
-        "total": 346,
+        "total": 347,
         "desc": "Mixed",
-        "updatedAt": 1789318191539
+        "updatedAt": 1789329990412
       },
       "historicalLow": {
         "price": 110.4,
@@ -1721,7 +1721,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789289162929,
-      "updatedAt": 1789318191539
+      "updatedAt": 1789329990412
     },
     {
       "appid": 1580240,
@@ -1734,14 +1734,14 @@
         "currency": "CNY",
         "isOnSale": true,
         "discountExpiration": null,
-        "updatedAt": 1789318192191
+        "updatedAt": 1789329991223
       },
       "rating": {
         "score": 9.2,
         "positive": 88,
-        "total": 574,
+        "total": 575,
         "desc": "Very Positive",
-        "updatedAt": 1789318192886
+        "updatedAt": 1789329991852
       },
       "historicalLow": {
         "price": 57,
@@ -1804,7 +1804,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789289157480,
-      "updatedAt": 1789318192886
+      "updatedAt": 1789329991852
     },
     {
       "appid": 2243710,
@@ -1817,14 +1817,14 @@
         "currency": "CNY",
         "isOnSale": true,
         "discountExpiration": null,
-        "updatedAt": 1789318193608
+        "updatedAt": 1789329992503
       },
       "rating": {
         "score": 9.6,
         "positive": 94,
-        "total": 325,
+        "total": 326,
         "desc": "Very Positive",
-        "updatedAt": 1789318194360
+        "updatedAt": 1789329993218
       },
       "historicalLow": {
         "price": 56.32,
@@ -1964,7 +1964,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789289149519,
-      "updatedAt": 1789318194360
+      "updatedAt": 1789329993218
     },
     {
       "appid": 1766740,
@@ -1977,14 +1977,14 @@
         "currency": "CNY",
         "isOnSale": true,
         "discountExpiration": null,
-        "updatedAt": 1789318195082
+        "updatedAt": 1789329993920
       },
       "rating": {
         "score": 8.4,
         "positive": 82,
         "total": 767,
         "desc": "Very Positive",
-        "updatedAt": 1789318195701
+        "updatedAt": 1789329994604
       },
       "historicalLow": {
         "price": 7.6,
@@ -2042,7 +2042,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789289142782,
-      "updatedAt": 1789318195701
+      "updatedAt": 1789329994604
     },
     {
       "appid": 493520,
@@ -2055,14 +2055,14 @@
         "currency": "CNY",
         "isOnSale": true,
         "discountExpiration": null,
-        "updatedAt": 1789318196386
+        "updatedAt": 1789329995289
       },
       "rating": {
         "score": 8.4,
         "positive": 81,
-        "total": 11961,
+        "total": 11962,
         "desc": "Very Positive",
-        "updatedAt": 1789318197150
+        "updatedAt": 1789329996025
       },
       "historicalLow": {
         "price": 0,
@@ -2120,7 +2120,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789289137494,
-      "updatedAt": 1789318197150
+      "updatedAt": 1789329996025
     },
     {
       "appid": 866140,
@@ -2133,14 +2133,14 @@
         "currency": "CNY",
         "isOnSale": true,
         "discountExpiration": null,
-        "updatedAt": 1789318197778
+        "updatedAt": 1789329996705
       },
       "rating": {
         "score": 9.2,
         "positive": 89,
         "total": 599,
         "desc": "Very Positive",
-        "updatedAt": 1789318198505
+        "updatedAt": 1789329997416
       },
       "historicalLow": {
         "price": 15.2,
@@ -2255,7 +2255,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789289131662,
-      "updatedAt": 1789318198505
+      "updatedAt": 1789329997416
     },
     {
       "appid": 2633640,
@@ -2268,14 +2268,14 @@
         "currency": "CNY",
         "isOnSale": true,
         "discountExpiration": null,
-        "updatedAt": 1789318199190
+        "updatedAt": 1789329998136
       },
       "rating": {
         "score": 9.6,
         "positive": 93,
         "total": 118,
         "desc": "Very Positive",
-        "updatedAt": 1789318199920
+        "updatedAt": 1789329998820
       },
       "historicalLow": {
         "price": 4.4,
@@ -2333,7 +2333,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789289123766,
-      "updatedAt": 1789318199920
+      "updatedAt": 1789329998820
     },
     {
       "appid": 544750,
@@ -2346,14 +2346,14 @@
         "currency": "CNY",
         "isOnSale": true,
         "discountExpiration": null,
-        "updatedAt": 1789318200636
+        "updatedAt": 1789329999560
       },
       "rating": {
         "score": 7.5,
         "positive": 74,
         "total": 1373,
         "desc": "Mostly Positive",
-        "updatedAt": 1789318201349
+        "updatedAt": 1789330000220
       },
       "historicalLow": {
         "price": 29.8,
@@ -2576,7 +2576,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789289117479,
-      "updatedAt": 1789318201349
+      "updatedAt": 1789330000220
     },
     {
       "appid": 1119980,
@@ -2589,14 +2589,14 @@
         "currency": "CNY",
         "isOnSale": true,
         "discountExpiration": null,
-        "updatedAt": 1789318201997
+        "updatedAt": 1789330000913
       },
       "rating": {
         "score": 9.8,
         "positive": 95,
         "total": 604,
         "desc": "Very Positive",
-        "updatedAt": 1789318202698
+        "updatedAt": 1789330001620
       },
       "historicalLow": {
         "price": 10.3,
@@ -2680,7 +2680,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789289111324,
-      "updatedAt": 1789318202698
+      "updatedAt": 1789330001620
     },
     {
       "appid": 668580,
@@ -2693,14 +2693,14 @@
         "currency": "CNY",
         "isOnSale": true,
         "discountExpiration": null,
-        "updatedAt": 1789318203421
+        "updatedAt": 1789330002310
       },
       "rating": {
         "score": 7.5,
-        "positive": 76,
-        "total": 14619,
+        "positive": 75,
+        "total": 14623,
         "desc": "Mostly Positive",
-        "updatedAt": 1789318204189
+        "updatedAt": 1789330003028
       },
       "historicalLow": {
         "price": 47.8,
@@ -2880,7 +2880,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789288866643,
-      "updatedAt": 1789318204189
+      "updatedAt": 1789330003028
     },
     {
       "appid": 1116580,
@@ -2893,14 +2893,14 @@
         "currency": "CNY",
         "isOnSale": true,
         "discountExpiration": null,
-        "updatedAt": 1789318204771
+        "updatedAt": 1789330003696
       },
       "rating": {
         "score": 9.8,
         "positive": 95,
         "total": 1206,
         "desc": "Very Positive",
-        "updatedAt": 1789318205508
+        "updatedAt": 1789330004430
       },
       "historicalLow": {
         "price": 9.6,
@@ -2957,7 +2957,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789288713492,
-      "updatedAt": 1789318205508
+      "updatedAt": 1789330004430
     },
     {
       "appid": 590380,
@@ -2970,14 +2970,14 @@
         "currency": "CNY",
         "isOnSale": true,
         "discountExpiration": null,
-        "updatedAt": 1789318206189
+        "updatedAt": 1789330005101
       },
       "rating": {
         "score": 9.8,
         "positive": 95,
-        "total": 2689,
+        "total": 2690,
         "desc": "Very Positive",
-        "updatedAt": 1789318206889
+        "updatedAt": 1789330005822
       },
       "historicalLow": {
         "price": 10,
@@ -3058,7 +3058,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789288699206,
-      "updatedAt": 1789318206889
+      "updatedAt": 1789330005822
     },
     {
       "appid": 815370,
@@ -3071,14 +3071,14 @@
         "currency": "CNY",
         "isOnSale": true,
         "discountExpiration": null,
-        "updatedAt": 1789318207592
+        "updatedAt": 1789330006506
       },
       "rating": {
         "score": 7.5,
         "positive": 79,
-        "total": 19792,
+        "total": 19793,
         "desc": "Mostly Positive",
-        "updatedAt": 1789318208298
+        "updatedAt": 1789330007221
       },
       "historicalLow": {
         "price": 8,
@@ -3167,7 +3167,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789288687871,
-      "updatedAt": 1789318208298
+      "updatedAt": 1789330007221
     },
     {
       "appid": 1066780,
@@ -3180,14 +3180,14 @@
         "currency": "CNY",
         "isOnSale": true,
         "discountExpiration": null,
-        "updatedAt": 1789318208985
+        "updatedAt": 1789330007902
       },
       "rating": {
         "score": 9.2,
         "positive": 89,
         "total": 4252,
         "desc": "Very Positive",
-        "updatedAt": 1789318209703
+        "updatedAt": 1789330008620
       },
       "historicalLow": {
         "price": 13.6,
@@ -3277,7 +3277,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789288670962,
-      "updatedAt": 1789318209703
+      "updatedAt": 1789330008620
     },
     {
       "appid": 899440,
@@ -3290,14 +3290,14 @@
         "currency": "CNY",
         "isOnSale": true,
         "discountExpiration": null,
-        "updatedAt": 1789318210402
+        "updatedAt": 1789330009305
       },
       "rating": {
         "score": 7.5,
         "positive": 74,
         "total": 3129,
         "desc": "Mostly Positive",
-        "updatedAt": 1789318211111
+        "updatedAt": 1789330010112
       },
       "historicalLow": {
         "price": 26.8,
@@ -3363,7 +3363,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789288651138,
-      "updatedAt": 1789318211111
+      "updatedAt": 1789330010112
     },
     {
       "appid": 438490,
@@ -3376,14 +3376,14 @@
         "currency": "CNY",
         "isOnSale": true,
         "discountExpiration": null,
-        "updatedAt": 1789318211793
+        "updatedAt": 1789330010689
       },
       "rating": {
         "score": 6.5,
         "positive": 60,
         "total": 965,
         "desc": "Mixed",
-        "updatedAt": 1789318212483
+        "updatedAt": 1789330011418
       },
       "historicalLow": {
         "price": 26.8,
@@ -3447,7 +3447,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789288633473,
-      "updatedAt": 1789318212483
+      "updatedAt": 1789330011418
     },
     {
       "appid": 1318690,
@@ -3460,14 +3460,14 @@
         "currency": "CNY",
         "isOnSale": true,
         "discountExpiration": null,
-        "updatedAt": 1789318213260
+        "updatedAt": 1789330012117
       },
       "rating": {
         "score": 9.8,
         "positive": 95,
         "total": 2580,
         "desc": "Overwhelmingly Positive",
-        "updatedAt": 1789318213895
+        "updatedAt": 1789330012818
       },
       "historicalLow": {
         "price": 3.5,
@@ -3564,7 +3564,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789288621819,
-      "updatedAt": 1789318213895
+      "updatedAt": 1789330012818
     },
     {
       "appid": 2162800,
@@ -3577,14 +3577,14 @@
         "currency": "CNY",
         "isOnSale": true,
         "discountExpiration": null,
-        "updatedAt": 1789318214589
+        "updatedAt": 1789330013532
       },
       "rating": {
         "score": 9.8,
         "positive": 95,
         "total": 1724,
         "desc": "Overwhelmingly Positive",
-        "updatedAt": 1789318215310
+        "updatedAt": 1789330014218
       },
       "historicalLow": {
         "price": 37.5,
@@ -3685,7 +3685,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789288498969,
-      "updatedAt": 1789318215310
+      "updatedAt": 1789330014218
     },
     {
       "appid": 581320,
@@ -3698,14 +3698,14 @@
         "currency": "CNY",
         "isOnSale": true,
         "discountExpiration": null,
-        "updatedAt": 1789318216056
+        "updatedAt": 1789330014961
       },
       "rating": {
         "score": 8.4,
         "positive": 81,
         "total": 17268,
         "desc": "Very Positive",
-        "updatedAt": 1789318216715
+        "updatedAt": 1789330015613
       },
       "historicalLow": {
         "price": 0,
@@ -3951,7 +3951,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789288476867,
-      "updatedAt": 1789318216715
+      "updatedAt": 1789330015613
     },
     {
       "appid": 392160,
@@ -3964,14 +3964,14 @@
         "currency": "CNY",
         "isOnSale": true,
         "discountExpiration": null,
-        "updatedAt": 1789318217378
+        "updatedAt": 1789330016311
       },
       "rating": {
         "score": 7.5,
         "positive": 78,
         "total": 3094,
         "desc": "Mostly Positive",
-        "updatedAt": 1789318218155
+        "updatedAt": 1789330017016
       },
       "historicalLow": {
         "price": 16.8,
@@ -4227,7 +4227,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789288431803,
-      "updatedAt": 1789318218155
+      "updatedAt": 1789330017016
     },
     {
       "appid": 2144740,
@@ -4240,14 +4240,14 @@
         "currency": "CNY",
         "isOnSale": true,
         "discountExpiration": null,
-        "updatedAt": 1789318218806
+        "updatedAt": 1789330017727
       },
       "rating": {
         "score": 7.5,
         "positive": 79,
         "total": 3943,
         "desc": "Mostly Positive",
-        "updatedAt": 1789318219601
+        "updatedAt": 1789330018417
       },
       "historicalLow": {
         "price": 33.6,
@@ -4392,7 +4392,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789288422502,
-      "updatedAt": 1789318219601
+      "updatedAt": 1789330018417
     },
     {
       "appid": 1139900,
@@ -4405,14 +4405,14 @@
         "currency": "CNY",
         "isOnSale": true,
         "discountExpiration": null,
-        "updatedAt": 1789318220181
+        "updatedAt": 1789330019119
       },
       "rating": {
         "score": 9.6,
         "positive": 92,
         "total": 27199,
         "desc": "Very Positive",
-        "updatedAt": 1789318220912
+        "updatedAt": 1789330019814
       },
       "historicalLow": {
         "price": 0,
@@ -4557,7 +4557,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789288315262,
-      "updatedAt": 1789318220912
+      "updatedAt": 1789330019814
     },
     {
       "appid": 690640,
@@ -4570,14 +4570,14 @@
         "currency": "CNY",
         "isOnSale": true,
         "discountExpiration": null,
-        "updatedAt": 1789318221583
+        "updatedAt": 1789330020521
       },
       "rating": {
         "score": 8.4,
         "positive": 81,
         "total": 5170,
         "desc": "Very Positive",
-        "updatedAt": 1789318222296
+        "updatedAt": 1789330021253
       },
       "historicalLow": {
         "price": 23.6,
@@ -4704,7 +4704,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789288295688,
-      "updatedAt": 1789318222296
+      "updatedAt": 1789330021253
     },
     {
       "appid": 312660,
@@ -4717,14 +4717,14 @@
         "currency": "CNY",
         "isOnSale": true,
         "discountExpiration": null,
-        "updatedAt": 1789318223006
+        "updatedAt": 1789330021907
       },
       "rating": {
         "score": 9.2,
         "positive": 90,
         "total": 17889,
         "desc": "Very Positive",
-        "updatedAt": 1789318223722
+        "updatedAt": 1789330022633
       },
       "historicalLow": {
         "price": 15.8,
@@ -4946,7 +4946,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789288267285,
-      "updatedAt": 1789318223722
+      "updatedAt": 1789330022633
     },
     {
       "appid": 1182900,
@@ -4959,14 +4959,14 @@
         "currency": "CNY",
         "isOnSale": true,
         "discountExpiration": null,
-        "updatedAt": 1789318224369
+        "updatedAt": 1789330023303
       },
       "rating": {
         "score": 8.4,
         "positive": 83,
-        "total": 4462,
+        "total": 4464,
         "desc": "Very Positive",
-        "updatedAt": 1789318225098
+        "updatedAt": 1789330024016
       },
       "historicalLow": {
         "price": 59.7,
@@ -5047,7 +5047,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789288255996,
-      "updatedAt": 1789318225098
+      "updatedAt": 1789330024016
     },
     {
       "appid": 1092660,
@@ -5060,14 +5060,14 @@
         "currency": "CNY",
         "isOnSale": true,
         "discountExpiration": null,
-        "updatedAt": 1789318225784
+        "updatedAt": 1789330024707
       },
       "rating": {
         "score": 7.5,
         "positive": 70,
         "total": 428,
         "desc": "Mostly Positive",
-        "updatedAt": 1789318226490
+        "updatedAt": 1789330025414
       },
       "historicalLow": {
         "price": 18,
@@ -5152,7 +5152,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789288227339,
-      "updatedAt": 1789318226490
+      "updatedAt": 1789330025414
     },
     {
       "appid": 845880,
@@ -5165,14 +5165,14 @@
         "currency": "CNY",
         "isOnSale": true,
         "discountExpiration": null,
-        "updatedAt": 1789318227166
+        "updatedAt": 1789330026098
       },
       "rating": {
         "score": 9.6,
         "positive": 93,
         "total": 742,
         "desc": "Very Positive",
-        "updatedAt": 1789318227917
+        "updatedAt": 1789330026828
       },
       "historicalLow": {
         "price": 15,
@@ -5235,7 +5235,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789288190456,
-      "updatedAt": 1789318227917
+      "updatedAt": 1789330026828
     },
     {
       "appid": 922500,
@@ -5248,14 +5248,14 @@
         "currency": "CNY",
         "isOnSale": true,
         "discountExpiration": null,
-        "updatedAt": 1789318228583
+        "updatedAt": 1789330027503
       },
       "rating": {
         "score": 6.5,
         "positive": 68,
         "total": 542,
         "desc": "Mixed",
-        "updatedAt": 1789318229295
+        "updatedAt": 1789330028261
       },
       "historicalLow": {
         "price": 25,
@@ -5323,7 +5323,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789287675940,
-      "updatedAt": 1789318229295
+      "updatedAt": 1789330028261
     },
     {
       "appid": 798490,
@@ -5336,14 +5336,14 @@
         "currency": "CNY",
         "isOnSale": true,
         "discountExpiration": null,
-        "updatedAt": 1789318230023
+        "updatedAt": 1789330028897
       },
       "rating": {
         "score": 7.5,
         "positive": 75,
         "total": 775,
         "desc": "Mostly Positive",
-        "updatedAt": 1789318230705
+        "updatedAt": 1789330029621
       },
       "historicalLow": {
         "price": 12.9,
@@ -5440,7 +5440,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789200620526,
-      "updatedAt": 1789318230705
+      "updatedAt": 1789330029621
     },
     {
       "appid": 1436590,
@@ -5453,14 +5453,14 @@
         "currency": "CNY",
         "isOnSale": false,
         "discountExpiration": null,
-        "updatedAt": 1789318231400
+        "updatedAt": 1789330030293
       },
       "rating": {
         "score": 8.4,
         "positive": 82,
         "total": 1435,
         "desc": "Very Positive",
-        "updatedAt": 1789318232090
+        "updatedAt": 1789330031044
       },
       "historicalLow": {
         "price": 19,
@@ -5536,7 +5536,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789200615859,
-      "updatedAt": 1789318232090
+      "updatedAt": 1789330031044
     },
     {
       "appid": 764790,
@@ -5549,14 +5549,14 @@
         "currency": "CNY",
         "isOnSale": false,
         "discountExpiration": null,
-        "updatedAt": 1789318232805
+        "updatedAt": 1789330031749
       },
       "rating": {
         "score": 8.4,
         "positive": 84,
         "total": 1750,
         "desc": "Very Positive",
-        "updatedAt": 1789318233543
+        "updatedAt": 1789330032417
       },
       "historicalLow": {
         "price": 15.2,
@@ -5677,7 +5677,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789200611013,
-      "updatedAt": 1789318233543
+      "updatedAt": 1789330032417
     },
     {
       "appid": 1931770,
@@ -5690,14 +5690,14 @@
         "currency": "CNY",
         "isOnSale": true,
         "discountExpiration": null,
-        "updatedAt": 1789318234173
+        "updatedAt": 1789330033095
       },
       "rating": {
         "score": 9.9,
         "positive": 98,
-        "total": 11942,
+        "total": 11944,
         "desc": "Overwhelmingly Positive",
-        "updatedAt": 1789318234884
+        "updatedAt": 1789330033817
       },
       "historicalLow": {
         "price": 40,
@@ -5777,7 +5777,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789200607370,
-      "updatedAt": 1789318234884
+      "updatedAt": 1789330033817
     },
     {
       "appid": 374320,
@@ -5790,14 +5790,14 @@
         "currency": "CNY",
         "isOnSale": false,
         "discountExpiration": null,
-        "updatedAt": 1789318235595
+        "updatedAt": 1789330034489
       },
       "rating": {
         "score": 9.6,
         "positive": 94,
-        "total": 105339,
+        "total": 105340,
         "desc": "Very Positive",
-        "updatedAt": 1789318236344
+        "updatedAt": 1789330035237
       },
       "historicalLow": {
         "price": 67,
@@ -5902,7 +5902,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789200602339,
-      "updatedAt": 1789318236344
+      "updatedAt": 1789330035237
     },
     {
       "appid": 782330,
@@ -5915,14 +5915,14 @@
         "currency": "CNY",
         "isOnSale": false,
         "discountExpiration": null,
-        "updatedAt": 1789318236992
+        "updatedAt": 1789330035899
       },
       "rating": {
         "score": 9.2,
         "positive": 88,
-        "total": 16325,
+        "total": 16326,
         "desc": "Very Positive",
-        "updatedAt": 1789318237693
+        "updatedAt": 1789330036636
       },
       "historicalLow": {
         "price": 16.5,
@@ -6039,7 +6039,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789200598138,
-      "updatedAt": 1789318237693
+      "updatedAt": 1789330036636
     },
     {
       "appid": 1649240,
@@ -6052,14 +6052,14 @@
         "currency": "CNY",
         "isOnSale": false,
         "discountExpiration": null,
-        "updatedAt": 1789318238375
+        "updatedAt": 1789330037292
       },
       "rating": {
         "score": 6.5,
         "positive": 66,
         "total": 352,
         "desc": "Mixed",
-        "updatedAt": 1789318239100
+        "updatedAt": 1789330038063
       },
       "historicalLow": {
         "price": 136.6,
@@ -6131,7 +6131,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789200593716,
-      "updatedAt": 1789318239100
+      "updatedAt": 1789330038063
     },
     {
       "appid": 953490,
@@ -6144,14 +6144,14 @@
         "currency": "CNY",
         "isOnSale": false,
         "discountExpiration": null,
-        "updatedAt": 1789318239784
+        "updatedAt": 1789330038713
       },
       "rating": {
         "score": 9.6,
         "positive": 93,
         "total": 4976,
         "desc": "Very Positive",
-        "updatedAt": 1789318240479
+        "updatedAt": 1789330039449
       },
       "historicalLow": {
         "price": 7.6,
@@ -6243,7 +6243,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789200589512,
-      "updatedAt": 1789318240479
+      "updatedAt": 1789330039449
     },
     {
       "appid": 1966720,
@@ -6256,14 +6256,14 @@
         "currency": "CNY",
         "isOnSale": false,
         "discountExpiration": null,
-        "updatedAt": 1789318241191
+        "updatedAt": 1789330040077
       },
       "rating": {
         "score": 9.6,
         "positive": 93,
         "total": 17726,
         "desc": "Very Positive",
-        "updatedAt": 1789318241883
+        "updatedAt": 1789330040851
       },
       "historicalLow": {
         "price": 27.3,
@@ -6327,7 +6327,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789200421989,
-      "updatedAt": 1789318241883
+      "updatedAt": 1789330040851
     },
     {
       "appid": 1952620,
@@ -6340,7 +6340,7 @@
         "currency": "CNY",
         "isOnSale": false,
         "discountExpiration": null,
-        "updatedAt": 1789318242559
+        "updatedAt": 1789330041480
       },
       "rating": {
         "score": null,
@@ -6401,7 +6401,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789200412254,
-      "updatedAt": 1789318243264
+      "updatedAt": 1789330042183
     },
     {
       "appid": 2446620,
@@ -6414,7 +6414,7 @@
         "currency": "CNY",
         "isOnSale": false,
         "discountExpiration": null,
-        "updatedAt": 1789318244001
+        "updatedAt": 1789330042870
       },
       "rating": {
         "score": null,
@@ -6484,7 +6484,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789200411045,
-      "updatedAt": 1789318244675
+      "updatedAt": 1789330043584
     },
     {
       "appid": 2617700,
@@ -6497,14 +6497,14 @@
         "currency": "CNY",
         "isOnSale": false,
         "discountExpiration": null,
-        "updatedAt": 1789318245387
+        "updatedAt": 1789330044311
       },
       "rating": {
         "score": 6.5,
         "positive": 68,
         "total": 726,
         "desc": "Mixed",
-        "updatedAt": 1789318246088
+        "updatedAt": 1789330045011
       },
       "historicalLow": {
         "price": 36.4,
@@ -6608,7 +6608,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789200409294,
-      "updatedAt": 1789318246088
+      "updatedAt": 1789330045011
     },
     {
       "appid": 2058190,
@@ -6621,14 +6621,14 @@
         "currency": "CNY",
         "isOnSale": false,
         "discountExpiration": null,
-        "updatedAt": 1789318246786
+        "updatedAt": 1789330045681
       },
       "rating": {
         "score": 9.2,
         "positive": 90,
         "total": 2707,
         "desc": "Very Positive",
-        "updatedAt": 1789318247498
+        "updatedAt": 1789330046404
       },
       "historicalLow": {
         "price": 59.4,
@@ -6705,7 +6705,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789200407468,
-      "updatedAt": 1789318247498
+      "updatedAt": 1789330046404
     },
     {
       "appid": 2072450,
@@ -6718,14 +6718,14 @@
         "currency": "CNY",
         "isOnSale": false,
         "discountExpiration": null,
-        "updatedAt": 1789318248210
+        "updatedAt": 1789330047132
       },
       "rating": {
         "score": 8.9,
         "positive": 87,
-        "total": 6807,
+        "total": 6808,
         "desc": "Very Positive",
-        "updatedAt": 1789318248889
+        "updatedAt": 1789330047815
       },
       "historicalLow": {
         "price": 74.5,
@@ -6970,7 +6970,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789200405077,
-      "updatedAt": 1789318248889
+      "updatedAt": 1789330047815
     },
     {
       "appid": 2185060,
@@ -6983,14 +6983,14 @@
         "currency": "CNY",
         "isOnSale": false,
         "discountExpiration": null,
-        "updatedAt": 1789318249591
+        "updatedAt": 1789330048489
       },
       "rating": {
         "score": 9.8,
         "positive": 95,
         "total": 3860,
         "desc": "Very Positive",
-        "updatedAt": 1789318250287
+        "updatedAt": 1789330049201
       },
       "historicalLow": {
         "price": null,
@@ -7129,7 +7129,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789200402590,
-      "updatedAt": 1789318250287
+      "updatedAt": 1789330049201
     },
     {
       "appid": 2215430,
@@ -7142,14 +7142,14 @@
         "currency": "CNY",
         "isOnSale": false,
         "discountExpiration": null,
-        "updatedAt": 1789318250972
+        "updatedAt": 1789330049886
       },
       "rating": {
         "score": 9.2,
         "positive": 88,
         "total": 9491,
         "desc": "Very Positive",
-        "updatedAt": 1789318251774
+        "updatedAt": 1789330050593
       },
       "historicalLow": {
         "price": 238.8,
@@ -7245,7 +7245,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789200398979,
-      "updatedAt": 1789318251774
+      "updatedAt": 1789330050593
     },
     {
       "appid": 2291850,
@@ -7258,14 +7258,14 @@
         "currency": "CNY",
         "isOnSale": false,
         "discountExpiration": null,
-        "updatedAt": 1789318252502
+        "updatedAt": 1789330051283
       },
       "rating": {
         "score": 9.9,
         "positive": 99,
         "total": 3609,
         "desc": "Overwhelmingly Positive",
-        "updatedAt": 1789318253090
+        "updatedAt": 1789330051988
       },
       "historicalLow": {
         "price": 7.5,
@@ -7334,7 +7334,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789200396557,
-      "updatedAt": 1789318253090
+      "updatedAt": 1789330051988
     },
     {
       "appid": 2531310,
@@ -7347,14 +7347,14 @@
         "currency": "CNY",
         "isOnSale": false,
         "discountExpiration": null,
-        "updatedAt": 1789318253764
+        "updatedAt": 1789330052667
       },
       "rating": {
         "score": 8.4,
         "positive": 80,
-        "total": 7309,
+        "total": 7308,
         "desc": "Mostly Positive",
-        "updatedAt": 1789318254507
+        "updatedAt": 1789330053398
       },
       "historicalLow": {
         "price": 276,
@@ -7428,7 +7428,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789200394758,
-      "updatedAt": 1789318254507
+      "updatedAt": 1789330053398
     },
     {
       "appid": 2721890,
@@ -7441,14 +7441,14 @@
         "currency": "CNY",
         "isOnSale": false,
         "discountExpiration": null,
-        "updatedAt": 1789318255263
+        "updatedAt": 1789330054077
       },
       "rating": {
         "score": 9.9,
         "positive": 100,
-        "total": 2959,
+        "total": 2960,
         "desc": "Overwhelmingly Positive",
-        "updatedAt": 1789318255904
+        "updatedAt": 1789330054807
       },
       "historicalLow": {
         "price": 29.4,
@@ -7523,7 +7523,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789200389919,
-      "updatedAt": 1789318255904
+      "updatedAt": 1789330054807
     },
     {
       "appid": 2868840,
@@ -7536,14 +7536,14 @@
         "currency": "CNY",
         "isOnSale": false,
         "discountExpiration": null,
-        "updatedAt": 1789318256556
+        "updatedAt": 1789330055471
       },
       "rating": {
         "score": 4,
         "positive": 32,
-        "total": 98959,
+        "total": 98964,
         "desc": "Mostly Negative",
-        "updatedAt": 1789318257292
+        "updatedAt": 1789330056211
       },
       "historicalLow": {
         "price": 88,
@@ -7615,7 +7615,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789200385710,
-      "updatedAt": 1789318257292
+      "updatedAt": 1789330056211
     },
     {
       "appid": 1332010,
@@ -7628,14 +7628,14 @@
         "currency": "CNY",
         "isOnSale": false,
         "discountExpiration": null,
-        "updatedAt": 1789318257997
+        "updatedAt": 1789330056870
       },
       "rating": {
         "score": 9.6,
         "positive": 93,
         "total": 15271,
         "desc": "Very Positive",
-        "updatedAt": 1789318258683
+        "updatedAt": 1789330057584
       },
       "historicalLow": {
         "price": 49,
@@ -7708,7 +7708,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789200382652,
-      "updatedAt": 1789318258683
+      "updatedAt": 1789330057584
     },
     {
       "appid": 1336490,
@@ -7721,14 +7721,14 @@
         "currency": "CNY",
         "isOnSale": false,
         "discountExpiration": null,
-        "updatedAt": 1789318259418
+        "updatedAt": 1789330058281
       },
       "rating": {
         "score": 9.6,
         "positive": 92,
-        "total": 5806,
+        "total": 5807,
         "desc": "Very Positive",
-        "updatedAt": 1789318260094
+        "updatedAt": 1789330058990
       },
       "historicalLow": {
         "price": 29.7,
@@ -7817,7 +7817,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789200377845,
-      "updatedAt": 1789318260094
+      "updatedAt": 1789330058990
     },
     {
       "appid": 1366540,
@@ -7830,14 +7830,14 @@
         "currency": "CNY",
         "isOnSale": false,
         "discountExpiration": null,
-        "updatedAt": 1789318260775
+        "updatedAt": 1789330059672
       },
       "rating": {
         "score": 9.9,
         "positive": 98,
-        "total": 56370,
+        "total": 56371,
         "desc": "Overwhelmingly Positive",
-        "updatedAt": 1789318261495
+        "updatedAt": 1789330060400
       },
       "historicalLow": {
         "price": 56,
@@ -7919,7 +7919,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789200373586,
-      "updatedAt": 1789318261495
+      "updatedAt": 1789330060400
     },
     {
       "appid": 1369630,
@@ -7932,14 +7932,14 @@
         "currency": "CNY",
         "isOnSale": false,
         "discountExpiration": null,
-        "updatedAt": 1789318262178
+        "updatedAt": 1789330061225
       },
       "rating": {
         "score": 9.6,
         "positive": 92,
         "total": 17132,
         "desc": "Very Positive",
-        "updatedAt": 1789318262942
+        "updatedAt": 1789330061792
       },
       "historicalLow": {
         "price": 39.2,
@@ -8017,7 +8017,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789200371171,
-      "updatedAt": 1789318262942
+      "updatedAt": 1789330061792
     },
     {
       "appid": 1687950,
@@ -8030,14 +8030,14 @@
         "currency": "CNY",
         "isOnSale": false,
         "discountExpiration": null,
-        "updatedAt": 1789318263567
+        "updatedAt": 1789330062472
       },
       "rating": {
         "score": 9.8,
         "positive": 96,
-        "total": 66922,
+        "total": 66923,
         "desc": "Overwhelmingly Positive",
-        "updatedAt": 1789318264313
+        "updatedAt": 1789330063185
       },
       "historicalLow": {
         "price": 53.6,
@@ -8093,7 +8093,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789200367552,
-      "updatedAt": 1789318264313
+      "updatedAt": 1789330063185
     },
     {
       "appid": 1888930,
@@ -8106,14 +8106,14 @@
         "currency": "CNY",
         "isOnSale": false,
         "discountExpiration": null,
-        "updatedAt": 1789318264972
+        "updatedAt": 1789330063918
       },
       "rating": {
         "score": 8.4,
         "positive": 80,
         "total": 14409,
         "desc": "Very Positive",
-        "updatedAt": 1789318265696
+        "updatedAt": 1789330064585
       },
       "historicalLow": {
         "price": 207,
@@ -8189,7 +8189,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789200363318,
-      "updatedAt": 1789318265696
+      "updatedAt": 1789330064585
     },
     {
       "appid": 847370,
@@ -8202,14 +8202,14 @@
         "currency": "CNY",
         "isOnSale": false,
         "discountExpiration": null,
-        "updatedAt": 1789318266374
+        "updatedAt": 1789330065283
       },
       "rating": {
         "score": 7.5,
         "positive": 77,
         "total": 425,
         "desc": "Mostly Positive",
-        "updatedAt": 1789318267113
+        "updatedAt": 1789330065995
       },
       "historicalLow": {
         "price": null,
@@ -8269,7 +8269,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789200357301,
-      "updatedAt": 1789318267113
+      "updatedAt": 1789330065995
     },
     {
       "appid": 933110,
@@ -8282,14 +8282,14 @@
         "currency": "CNY",
         "isOnSale": false,
         "discountExpiration": null,
-        "updatedAt": 1789318267806
+        "updatedAt": 1789330066686
       },
       "rating": {
         "score": 7.5,
         "positive": 79,
-        "total": 9164,
+        "total": 9165,
         "desc": "Mostly Positive",
-        "updatedAt": 1789318268492
+        "updatedAt": 1789330067390
       },
       "historicalLow": {
         "price": null,
@@ -8474,7 +8474,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789200354279,
-      "updatedAt": 1789318268492
+      "updatedAt": 1789330067390
     },
     {
       "appid": 1086940,
@@ -8487,14 +8487,14 @@
         "currency": "CNY",
         "isOnSale": false,
         "discountExpiration": null,
-        "updatedAt": 1789318269178
+        "updatedAt": 1789330068093
       },
       "rating": {
         "score": 9.8,
         "positive": 96,
-        "total": 101211,
+        "total": 101212,
         "desc": "Overwhelmingly Positive",
-        "updatedAt": 1789318269900
+        "updatedAt": 1789330068794
       },
       "historicalLow": {
         "price": 208.6,
@@ -8603,7 +8603,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789200350053,
-      "updatedAt": 1789318269900
+      "updatedAt": 1789330068794
     },
     {
       "appid": 1938010,
@@ -8616,14 +8616,14 @@
         "currency": "CNY",
         "isOnSale": false,
         "discountExpiration": null,
-        "updatedAt": 1789318270584
+        "updatedAt": 1789330069506
       },
       "rating": {
         "score": 4,
         "positive": 32,
         "total": 3717,
         "desc": "Mostly Negative",
-        "updatedAt": 1789318271311
+        "updatedAt": 1789330070185
       },
       "historicalLow": {
         "price": 20.9,
@@ -8707,7 +8707,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789200345183,
-      "updatedAt": 1789318271311
+      "updatedAt": 1789330070185
     },
     {
       "appid": 1145350,
@@ -8720,14 +8720,14 @@
         "currency": "CNY",
         "isOnSale": false,
         "discountExpiration": null,
-        "updatedAt": 1789318271967
+        "updatedAt": 1789330070869
       },
       "rating": {
         "score": 9.2,
         "positive": 89,
-        "total": 16076,
+        "total": 16077,
         "desc": "Very Positive",
-        "updatedAt": 1789318272711
+        "updatedAt": 1789330071605
       },
       "historicalLow": {
         "price": 75.6,
@@ -8806,7 +8806,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789200336641,
-      "updatedAt": 1789318272711
+      "updatedAt": 1789330071605
     },
     {
       "appid": 1158310,
@@ -8819,14 +8819,14 @@
         "currency": "CNY",
         "isOnSale": false,
         "discountExpiration": null,
-        "updatedAt": 1789318273426
+        "updatedAt": 1789330072361
       },
       "rating": {
         "score": 9.2,
         "positive": 89,
         "total": 22838,
         "desc": "Very Positive",
-        "updatedAt": 1789318274106
+        "updatedAt": 1789330073080
       },
       "historicalLow": {
         "price": 59.4,
@@ -9084,7 +9084,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789200309480,
-      "updatedAt": 1789318274106
+      "updatedAt": 1789330073080
     },
     {
       "appid": 1260520,
@@ -9097,14 +9097,14 @@
         "currency": "CNY",
         "isOnSale": false,
         "discountExpiration": null,
-        "updatedAt": 1789318274782
+        "updatedAt": 1789330073662
       },
       "rating": {
         "score": 9.9,
         "positive": 100,
         "total": 2080,
         "desc": "Overwhelmingly Positive",
-        "updatedAt": 1789318275494
+        "updatedAt": 1789330074382
       },
       "historicalLow": {
         "price": 38,
@@ -9184,7 +9184,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789200306373,
-      "updatedAt": 1789318275494
+      "updatedAt": 1789330074382
     },
     {
       "appid": 1267910,
@@ -9197,14 +9197,14 @@
         "currency": "CNY",
         "isOnSale": false,
         "discountExpiration": null,
-        "updatedAt": 1789318276175
+        "updatedAt": 1789330075076
       },
       "rating": {
         "score": 8.9,
         "positive": 85,
         "total": 3893,
         "desc": "Very Positive",
-        "updatedAt": 1789318276898
+        "updatedAt": 1789330075804
       },
       "historicalLow": {
         "price": 16.8,
@@ -9302,7 +9302,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789200303362,
-      "updatedAt": 1789318276898
+      "updatedAt": 1789330075804
     },
     {
       "appid": 1292940,
@@ -9315,14 +9315,14 @@
         "currency": "CNY",
         "isOnSale": false,
         "discountExpiration": null,
-        "updatedAt": 1789318277612
+        "updatedAt": 1789330076464
       },
       "rating": {
         "score": 9.9,
         "positive": 98,
         "total": 3228,
         "desc": "Overwhelmingly Positive",
-        "updatedAt": 1789318278301
+        "updatedAt": 1789330077192
       },
       "historicalLow": {
         "price": 6.6,
@@ -9372,7 +9372,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789200296684,
-      "updatedAt": 1789318278301
+      "updatedAt": 1789330077192
     },
     {
       "appid": 594570,
@@ -9385,14 +9385,14 @@
         "currency": "CNY",
         "isOnSale": false,
         "discountExpiration": null,
-        "updatedAt": 1789318279030
+        "updatedAt": 1789330077914
       },
       "rating": {
         "score": 9.2,
         "positive": 91,
         "total": 18276,
         "desc": "Very Positive",
-        "updatedAt": 1789318279708
+        "updatedAt": 1789330078585
       },
       "historicalLow": {
         "price": 67,
@@ -9655,7 +9655,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789200291860,
-      "updatedAt": 1789318279708
+      "updatedAt": 1789330078585
     },
     {
       "appid": 610370,
@@ -9668,14 +9668,14 @@
         "currency": "CNY",
         "isOnSale": false,
         "discountExpiration": null,
-        "updatedAt": 1789318280420
+        "updatedAt": 1789330079289
       },
       "rating": {
         "score": 9.9,
         "positive": 98,
         "total": 4388,
         "desc": "Overwhelmingly Positive",
-        "updatedAt": 1789318281110
+        "updatedAt": 1789330080012
       },
       "historicalLow": {
         "price": 13.6,
@@ -9796,7 +9796,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789200286347,
-      "updatedAt": 1789318281110
+      "updatedAt": 1789330080012
     },
     {
       "appid": 632360,
@@ -9809,14 +9809,14 @@
         "currency": "CNY",
         "isOnSale": false,
         "discountExpiration": null,
-        "updatedAt": 1789318281845
+        "updatedAt": 1789330080728
       },
       "rating": {
         "score": 9.2,
         "positive": 89,
         "total": 37775,
         "desc": "Very Positive",
-        "updatedAt": 1789318282490
+        "updatedAt": 1789330081384
       },
       "historicalLow": {
         "price": 26.4,
@@ -9976,7 +9976,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789200283975,
-      "updatedAt": 1789318282490
+      "updatedAt": 1789330081384
     },
     {
       "appid": 694280,
@@ -9989,14 +9989,14 @@
         "currency": "CNY",
         "isOnSale": false,
         "discountExpiration": null,
-        "updatedAt": 1789318283409
+        "updatedAt": 1789330082267
       },
       "rating": {
         "score": 8.4,
         "positive": 82,
         "total": 3278,
         "desc": "Very Positive",
-        "updatedAt": 1789318283886
+        "updatedAt": 1789330082792
       },
       "historicalLow": {
         "price": 8.4,
@@ -10242,7 +10242,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789200280943,
-      "updatedAt": 1789318283886
+      "updatedAt": 1789330082792
     },
     {
       "appid": 703080,
@@ -10255,14 +10255,14 @@
         "currency": "CNY",
         "isOnSale": false,
         "discountExpiration": null,
-        "updatedAt": 1789318284651
+        "updatedAt": 1789330083485
       },
       "rating": {
         "score": 8.9,
         "positive": 87,
         "total": 13110,
         "desc": "Very Positive",
-        "updatedAt": 1789318285298
+        "updatedAt": 1789330084199
       },
       "historicalLow": {
         "price": 9,
@@ -10505,7 +10505,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789200275496,
-      "updatedAt": 1789318285298
+      "updatedAt": 1789330084199
     },
     {
       "appid": 753640,
@@ -10518,14 +10518,14 @@
         "currency": "CNY",
         "isOnSale": false,
         "discountExpiration": null,
-        "updatedAt": 1789318285991
+        "updatedAt": 1789330084951
       },
       "rating": {
         "score": 9.9,
         "positive": 97,
         "total": 17326,
         "desc": "Overwhelmingly Positive",
-        "updatedAt": 1789318286718
+        "updatedAt": 1789330085608
       },
       "historicalLow": {
         "price": 47.5,
@@ -10625,7 +10625,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789200270711,
-      "updatedAt": 1789318286718
+      "updatedAt": 1789330085608
     },
     {
       "appid": 813630,
@@ -10638,14 +10638,14 @@
         "currency": "CNY",
         "isOnSale": false,
         "discountExpiration": null,
-        "updatedAt": 1789318287374
+        "updatedAt": 1789330086281
       },
       "rating": {
         "score": 9.6,
         "positive": 94,
         "total": 1497,
         "desc": "Very Positive",
-        "updatedAt": 1789318288088
+        "updatedAt": 1789330086983
       },
       "historicalLow": {
         "price": 14,
@@ -10720,7 +10720,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789200267638,
-      "updatedAt": 1789318288088
+      "updatedAt": 1789330086983
     },
     {
       "appid": 813780,
@@ -10733,14 +10733,14 @@
         "currency": "CNY",
         "isOnSale": false,
         "discountExpiration": null,
-        "updatedAt": 1789318288828
+        "updatedAt": 1789330087770
       },
       "rating": {
         "score": 9.6,
         "positive": 92,
         "total": 23735,
         "desc": "Very Positive",
-        "updatedAt": 1789318289479
+        "updatedAt": 1789330088399
       },
       "historicalLow": {
         "price": 24.8,
@@ -11004,7 +11004,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789200254926,
-      "updatedAt": 1789318289479
+      "updatedAt": 1789330088399
     },
     {
       "appid": 814380,
@@ -11017,14 +11017,14 @@
         "currency": "CNY",
         "isOnSale": false,
         "discountExpiration": null,
-        "updatedAt": 1789318290177
+        "updatedAt": 1789330089071
       },
       "rating": {
         "score": 9.8,
         "positive": 96,
-        "total": 170916,
+        "total": 170917,
         "desc": "Overwhelmingly Positive",
-        "updatedAt": 1789318290945
+        "updatedAt": 1789330089788
       },
       "historicalLow": {
         "price": 134,
@@ -11086,7 +11086,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789200248257,
-      "updatedAt": 1789318290945
+      "updatedAt": 1789330089788
     },
     {
       "appid": 392110,
@@ -11099,14 +11099,14 @@
         "currency": "CNY",
         "isOnSale": false,
         "discountExpiration": null,
-        "updatedAt": 1789318291665
+        "updatedAt": 1789330090535
       },
       "rating": {
         "score": 8.4,
         "positive": 84,
         "total": 3555,
         "desc": "Very Positive",
-        "updatedAt": 1789318292297
+        "updatedAt": 1789330091183
       },
       "historicalLow": {
         "price": 25.8,
@@ -11352,7 +11352,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789200245276,
-      "updatedAt": 1789318292297
+      "updatedAt": 1789330091183
     },
     {
       "appid": 414700,
@@ -11365,14 +11365,14 @@
         "currency": "CNY",
         "isOnSale": false,
         "discountExpiration": null,
-        "updatedAt": 1789318292968
+        "updatedAt": 1789330091893
       },
       "rating": {
         "score": 9.8,
         "positive": 96,
         "total": 16784,
         "desc": "Overwhelmingly Positive",
-        "updatedAt": 1789318293688
+        "updatedAt": 1789330092615
       },
       "historicalLow": {
         "price": 7.6,
@@ -11433,7 +11433,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789200242244,
-      "updatedAt": 1789318293688
+      "updatedAt": 1789330092615
     },
     {
       "appid": 463530,
@@ -11446,14 +11446,14 @@
         "currency": "CNY",
         "isOnSale": false,
         "discountExpiration": null,
-        "updatedAt": 1789318294368
+        "updatedAt": 1789330093278
       },
       "rating": {
         "score": 9.6,
         "positive": 92,
-        "total": 3432,
+        "total": 3433,
         "desc": "Very Positive",
-        "updatedAt": 1789318295091
+        "updatedAt": 1789330093986
       },
       "historicalLow": {
         "price": 29.7,
@@ -11538,7 +11538,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789200239151,
-      "updatedAt": 1789318295091
+      "updatedAt": 1789330093986
     },
     {
       "appid": 532110,
@@ -11551,14 +11551,14 @@
         "currency": "CNY",
         "isOnSale": false,
         "discountExpiration": null,
-        "updatedAt": 1789318295768
+        "updatedAt": 1789330094700
       },
       "rating": {
         "score": 9.9,
         "positive": 98,
         "total": 4410,
         "desc": "Overwhelmingly Positive",
-        "updatedAt": 1789318296484
+        "updatedAt": 1789330095392
       },
       "historicalLow": {
         "price": 6.1,
@@ -11614,7 +11614,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789200235552,
-      "updatedAt": 1789318296484
+      "updatedAt": 1789330095392
     },
     {
       "appid": 546560,
@@ -11627,14 +11627,14 @@
         "currency": "CNY",
         "isOnSale": false,
         "discountExpiration": null,
-        "updatedAt": 1789318297167
+        "updatedAt": 1789330096083
       },
       "rating": {
         "score": 9.9,
         "positive": 99,
         "total": 7327,
         "desc": "Overwhelmingly Positive",
-        "updatedAt": 1789318297889
+        "updatedAt": 1789330096785
       },
       "historicalLow": {
         "price": 49.5,
@@ -11715,7 +11715,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789200231926,
-      "updatedAt": 1789318297889
+      "updatedAt": 1789330096785
     },
     {
       "appid": 548430,
@@ -11728,14 +11728,14 @@
         "currency": "CNY",
         "isOnSale": true,
         "discountExpiration": null,
-        "updatedAt": 1789318298617
+        "updatedAt": 1789330097488
       },
       "rating": {
         "score": 9.6,
         "positive": 94,
-        "total": 36604,
+        "total": 36605,
         "desc": "Very Positive",
-        "updatedAt": 1789318299297
+        "updatedAt": 1789330098182
       },
       "historicalLow": {
         "price": 27,
@@ -11975,7 +11975,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789200209151,
-      "updatedAt": 1789318299297
+      "updatedAt": 1789330098182
     },
     {
       "appid": 557600,
@@ -11988,14 +11988,14 @@
         "currency": "CNY",
         "isOnSale": false,
         "discountExpiration": null,
-        "updatedAt": 1789318299967
+        "updatedAt": 1789330098888
       },
       "rating": {
         "score": 9.9,
         "positive": 98,
         "total": 10912,
         "desc": "Overwhelmingly Positive",
-        "updatedAt": 1789318300712
+        "updatedAt": 1789330099583
       },
       "historicalLow": {
         "price": 15,
@@ -12068,7 +12068,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789200194326,
-      "updatedAt": 1789318300712
+      "updatedAt": 1789330099583
     },
     {
       "appid": 570940,
@@ -12081,14 +12081,14 @@
         "currency": "CNY",
         "isOnSale": false,
         "discountExpiration": null,
-        "updatedAt": 1789318301370
+        "updatedAt": 1789330100265
       },
       "rating": {
         "score": 9.2,
         "positive": 89,
         "total": 20564,
         "desc": "Very Positive",
-        "updatedAt": 1789318302112
+        "updatedAt": 1789330100985
       },
       "historicalLow": {
         "price": 99,
@@ -12147,7 +12147,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789199792368,
-      "updatedAt": 1789318302112
+      "updatedAt": 1789330100985
     },
     {
       "appid": 588650,
@@ -12160,14 +12160,14 @@
         "currency": "CNY",
         "isOnSale": true,
         "discountExpiration": null,
-        "updatedAt": 1789318302778
+        "updatedAt": 1789330101685
       },
       "rating": {
         "score": 9.9,
         "positive": 97,
-        "total": 65802,
+        "total": 65803,
         "desc": "Overwhelmingly Positive",
-        "updatedAt": 1789318303550
+        "updatedAt": 1789330102389
       },
       "historicalLow": {
         "price": 32,
@@ -12331,7 +12331,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789199783608,
-      "updatedAt": 1789318303550
+      "updatedAt": 1789330102389
     },
     {
       "appid": 220240,
@@ -12344,14 +12344,14 @@
         "currency": "CNY",
         "isOnSale": false,
         "discountExpiration": null,
-        "updatedAt": 1789318304180
+        "updatedAt": 1789330103059
       },
       "rating": {
         "score": 7.5,
         "positive": 77,
         "total": 7174,
         "desc": "Mostly Positive",
-        "updatedAt": 1789318304939
+        "updatedAt": 1789330103784
       },
       "historicalLow": {
         "price": 14,
@@ -12407,7 +12407,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789199777249,
-      "updatedAt": 1789318304939
+      "updatedAt": 1789330103784
     },
     {
       "appid": 1677280,
@@ -12420,14 +12420,14 @@
         "currency": "CNY",
         "isOnSale": false,
         "discountExpiration": null,
-        "updatedAt": 1789318305589
+        "updatedAt": 1789330104476
       },
       "rating": {
         "score": 4,
         "positive": 46,
         "total": 5626,
         "desc": "Mixed",
-        "updatedAt": 1789318306292
+        "updatedAt": 1789330105180
       },
       "historicalLow": {
         "price": 79.2,
@@ -12554,7 +12554,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789199750962,
-      "updatedAt": 1789318306292
+      "updatedAt": 1789330105180
     },
     {
       "appid": 335300,
@@ -12567,14 +12567,14 @@
         "currency": "CNY",
         "isOnSale": false,
         "discountExpiration": null,
-        "updatedAt": 1789318306971
+        "updatedAt": 1789330105854
       },
       "rating": {
         "score": 7.5,
         "positive": 79,
-        "total": 18760,
+        "total": 18761,
         "desc": "Mostly Positive",
-        "updatedAt": 1789318307703
+        "updatedAt": 1789330106584
       },
       "historicalLow": {
         "price": 39,
@@ -12636,7 +12636,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789199716591,
-      "updatedAt": 1789318307703
+      "updatedAt": 1789330106584
     },
     {
       "appid": 236430,
@@ -12649,14 +12649,14 @@
         "currency": "CNY",
         "isOnSale": false,
         "discountExpiration": null,
-        "updatedAt": 1789318308373
+        "updatedAt": 1789330107263
       },
       "rating": {
         "score": 8.9,
         "positive": 85,
         "total": 1701,
         "desc": "Very Positive",
-        "updatedAt": 1789318309119
+        "updatedAt": 1789330108035
       },
       "historicalLow": {
         "price": 62,
@@ -12767,7 +12767,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789199704429,
-      "updatedAt": 1789318309119
+      "updatedAt": 1789330108035
     },
     {
       "appid": 949230,
@@ -12780,14 +12780,14 @@
         "currency": "CNY",
         "isOnSale": false,
         "discountExpiration": null,
-        "updatedAt": 1789318309878
+        "updatedAt": 1789330108934
       },
       "rating": {
         "score": 4,
         "positive": 48,
-        "total": 13963,
+        "total": 13964,
         "desc": "Mixed",
-        "updatedAt": 1789318310486
+        "updatedAt": 1789330109396
       },
       "historicalLow": {
         "price": 138.6,
@@ -13024,7 +13024,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789199688864,
-      "updatedAt": 1789318310486
+      "updatedAt": 1789330109396
     },
     {
       "appid": 255710,
@@ -13037,14 +13037,14 @@
         "currency": "CNY",
         "isOnSale": false,
         "discountExpiration": null,
-        "updatedAt": 1789318311965
+        "updatedAt": 1789330110354
       },
       "rating": {
         "score": 9.2,
         "positive": 91,
         "total": 60733,
         "desc": "Very Positive",
-        "updatedAt": 1789318312076
+        "updatedAt": 1789330110814
       },
       "historicalLow": {
         "price": 13.8,
@@ -13289,7 +13289,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789199682401,
-      "updatedAt": 1789318312076
+      "updatedAt": 1789330110814
     },
     {
       "appid": 260230,
@@ -13302,14 +13302,14 @@
         "currency": "CNY",
         "isOnSale": false,
         "discountExpiration": null,
-        "updatedAt": 1789318312726
+        "updatedAt": 1789330111466
       },
       "rating": {
         "score": 9.8,
         "positive": 96,
         "total": 4925,
         "desc": "Overwhelmingly Positive",
-        "updatedAt": 1789318313445
+        "updatedAt": 1789330112184
       },
       "historicalLow": {
         "price": 18,
@@ -13360,7 +13360,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789199671365,
-      "updatedAt": 1789318313445
+      "updatedAt": 1789330112184
     },
     {
       "appid": 848450,
@@ -13373,14 +13373,14 @@
         "currency": "CNY",
         "isOnSale": false,
         "discountExpiration": null,
-        "updatedAt": 1789318314179
+        "updatedAt": 1789330112864
       },
       "rating": {
         "score": 8.9,
         "positive": 87,
         "total": 8556,
         "desc": "Very Positive",
-        "updatedAt": 1789318314857
+        "updatedAt": 1789330113588
       },
       "historicalLow": {
         "price": 32.7,
@@ -13454,7 +13454,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789199656265,
-      "updatedAt": 1789318314857
+      "updatedAt": 1789330113588
     },
     {
       "appid": 264710,
@@ -13467,14 +13467,14 @@
         "currency": "CNY",
         "isOnSale": false,
         "discountExpiration": null,
-        "updatedAt": 1789318315604
+        "updatedAt": 1789330114264
       },
       "rating": {
         "score": 9.9,
         "positive": 97,
         "total": 34363,
         "desc": "Overwhelmingly Positive",
-        "updatedAt": 1789318316309
+        "updatedAt": 1789330114993
       },
       "historicalLow": {
         "price": 32.7,
@@ -13551,7 +13551,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789199650264,
-      "updatedAt": 1789318316309
+      "updatedAt": 1789330114993
     },
     {
       "appid": 1962700,
@@ -13564,14 +13564,14 @@
         "currency": "CNY",
         "isOnSale": false,
         "discountExpiration": null,
-        "updatedAt": 1789318316976
+        "updatedAt": 1789330115654
       },
       "rating": {
         "score": 7.5,
         "positive": 70,
         "total": 8730,
         "desc": "Mostly Positive",
-        "updatedAt": 1789318317661
+        "updatedAt": 1789330116372
       },
       "historicalLow": {
         "price": null,
@@ -13657,7 +13657,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789199644423,
-      "updatedAt": 1789318317661
+      "updatedAt": 1789330116372
     },
     {
       "appid": 268500,
@@ -13670,14 +13670,14 @@
         "currency": "CNY",
         "isOnSale": false,
         "discountExpiration": null,
-        "updatedAt": 1789318318356
+        "updatedAt": 1789330117077
       },
       "rating": {
         "score": 7.5,
         "positive": 77,
         "total": 12977,
         "desc": "Mostly Positive",
-        "updatedAt": 1789318319094
+        "updatedAt": 1789330117798
       },
       "historicalLow": {
         "price": 9.5,
@@ -13814,7 +13814,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789199632217,
-      "updatedAt": 1789318319094
+      "updatedAt": 1789330117798
     },
     {
       "appid": 275850,
@@ -13827,14 +13827,14 @@
         "currency": "CNY",
         "isOnSale": true,
         "discountExpiration": null,
-        "updatedAt": 1789318319774
+        "updatedAt": 1789330118483
       },
       "rating": {
         "score": 9.2,
         "positive": 88,
-        "total": 66929,
+        "total": 66933,
         "desc": "Very Positive",
-        "updatedAt": 1789318320448
+        "updatedAt": 1789330119206
       },
       "historicalLow": {
         "price": 69,
@@ -13937,7 +13937,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789199623232,
-      "updatedAt": 1789318320448
+      "updatedAt": 1789330119206
     },
     {
       "appid": 314650,
@@ -13950,14 +13950,14 @@
         "currency": "CNY",
         "isOnSale": false,
         "discountExpiration": null,
-        "updatedAt": 1789318321211
+        "updatedAt": 1789330119902
       },
       "rating": {
         "score": 9.9,
         "positive": 97,
         "total": 2516,
         "desc": "Overwhelmingly Positive",
-        "updatedAt": 1789318321884
+        "updatedAt": 1789330120577
       },
       "historicalLow": {
         "price": 60,
@@ -14164,7 +14164,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789199605783,
-      "updatedAt": 1789318321884
+      "updatedAt": 1789330120577
     },
     {
       "appid": 1449690,
@@ -14177,14 +14177,14 @@
         "currency": "CNY",
         "isOnSale": false,
         "discountExpiration": null,
-        "updatedAt": 1789318322575
+        "updatedAt": 1789330121264
       },
       "rating": {
         "score": 9.6,
         "positive": 93,
         "total": 8785,
         "desc": "Very Positive",
-        "updatedAt": 1789318323302
+        "updatedAt": 1789330122017
       },
       "historicalLow": {
         "price": 16.8,
@@ -14236,7 +14236,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789199580443,
-      "updatedAt": 1789318323302
+      "updatedAt": 1789330122017
     },
     {
       "appid": 235460,
@@ -14249,14 +14249,14 @@
         "currency": "CNY",
         "isOnSale": false,
         "discountExpiration": null,
-        "updatedAt": 1789318323966
+        "updatedAt": 1789330122678
       },
       "rating": {
         "score": 9.2,
         "positive": 91,
         "total": 1259,
         "desc": "Very Positive",
-        "updatedAt": 1789318324740
+        "updatedAt": 1789330123378
       },
       "historicalLow": {
         "price": 67.2,
@@ -14311,7 +14311,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789199571448,
-      "updatedAt": 1789318324740
+      "updatedAt": 1789330123378
     },
     {
       "appid": 8870,
@@ -14324,14 +14324,14 @@
         "currency": "CNY",
         "isOnSale": false,
         "discountExpiration": null,
-        "updatedAt": 1789318325431
+        "updatedAt": 1789330124090
       },
       "rating": {
         "score": 9.6,
         "positive": 93,
         "total": 19787,
         "desc": "Very Positive",
-        "updatedAt": 1789318326109
+        "updatedAt": 1789330124780
       },
       "historicalLow": {
         "price": 23,
@@ -14453,7 +14453,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789199564670,
-      "updatedAt": 1789318326109
+      "updatedAt": 1789330124780
     },
     {
       "appid": 12150,
@@ -14466,14 +14466,14 @@
         "currency": "CNY",
         "isOnSale": false,
         "discountExpiration": null,
-        "updatedAt": 1789318326773
+        "updatedAt": 1789330125462
       },
       "rating": {
         "score": 9.6,
         "positive": 92,
         "total": 330,
         "desc": "Very Positive",
-        "updatedAt": 1789318327569
+        "updatedAt": 1789330126264
       },
       "historicalLow": {
         "price": 15.8,
@@ -14522,7 +14522,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789199555039,
-      "updatedAt": 1789318327569
+      "updatedAt": 1789330126264
     },
     {
       "appid": 48700,
@@ -14535,14 +14535,14 @@
         "currency": "CNY",
         "isOnSale": false,
         "discountExpiration": null,
-        "updatedAt": 1789318328150
+        "updatedAt": 1789330126905
       },
       "rating": {
         "score": 9.9,
         "positive": 98,
         "total": 24613,
         "desc": "Overwhelmingly Positive",
-        "updatedAt": 1789318328887
+        "updatedAt": 1789330127638
       },
       "historicalLow": {
         "price": 9.9,
@@ -14628,7 +14628,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789199542539,
-      "updatedAt": 1789318328887
+      "updatedAt": 1789330127638
     },
     {
       "appid": 489830,
@@ -14641,14 +14641,14 @@
         "currency": "CNY",
         "isOnSale": false,
         "discountExpiration": null,
-        "updatedAt": 1789318329559
+        "updatedAt": 1789330128276
       },
       "rating": {
         "score": 9.2,
         "positive": 88,
         "total": 26574,
         "desc": "Very Positive",
-        "updatedAt": 1789318330261
+        "updatedAt": 1789330128987
       },
       "historicalLow": {
         "price": 16.5,
@@ -14733,7 +14733,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789199532499,
-      "updatedAt": 1789318330261
+      "updatedAt": 1789330128987
     },
     {
       "appid": 204100,
@@ -14746,14 +14746,14 @@
         "currency": "CNY",
         "isOnSale": false,
         "discountExpiration": null,
-        "updatedAt": 1789318330965
+        "updatedAt": 1789330129691
       },
       "rating": {
         "score": 8.4,
         "positive": 82,
         "total": 2185,
         "desc": "Very Positive",
-        "updatedAt": 1789318331691
+        "updatedAt": 1789330130437
       },
       "historicalLow": {
         "price": 29,
@@ -14805,7 +14805,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789199524386,
-      "updatedAt": 1789318331691
+      "updatedAt": 1789330130437
     },
     {
       "appid": 207610,
@@ -14818,14 +14818,14 @@
         "currency": "CNY",
         "isOnSale": false,
         "discountExpiration": null,
-        "updatedAt": 1789318332353
+        "updatedAt": 1789330131070
       },
       "rating": {
         "score": 9.8,
         "positive": 95,
         "total": 2803,
         "desc": "Overwhelmingly Positive",
-        "updatedAt": 1789318333065
+        "updatedAt": 1789330131780
       },
       "historicalLow": {
         "price": 5,
@@ -14893,7 +14893,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789199516272,
-      "updatedAt": 1789318333065
+      "updatedAt": 1789330131780
     },
     {
       "appid": 3081120,
@@ -14906,14 +14906,14 @@
         "currency": "CNY",
         "isOnSale": false,
         "discountExpiration": null,
-        "updatedAt": 1789318333779
+        "updatedAt": 1789330132502
       },
       "rating": {
         "score": 6.5,
         "positive": 64,
         "total": 11,
         "desc": "Mixed",
-        "updatedAt": 1789318334487
+        "updatedAt": 1789330133200
       },
       "historicalLow": {
         "price": null,
@@ -14970,7 +14970,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789199506479,
-      "updatedAt": 1789318334487
+      "updatedAt": 1789330133200
     },
     {
       "appid": 3762550,
@@ -14983,14 +14983,14 @@
         "currency": "CNY",
         "isOnSale": false,
         "discountExpiration": null,
-        "updatedAt": 1789318335225
+        "updatedAt": 1789330133873
       },
       "rating": {
         "score": 5.5,
         "positive": 59,
         "total": 34,
         "desc": "Mixed",
-        "updatedAt": 1789318335919
+        "updatedAt": 1789330134594
       },
       "historicalLow": {
         "price": null,
@@ -15077,7 +15077,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789199455916,
-      "updatedAt": 1789318335919
+      "updatedAt": 1789330134594
     },
     {
       "appid": 3312020,
@@ -15090,14 +15090,14 @@
         "currency": "CNY",
         "isOnSale": false,
         "discountExpiration": null,
-        "updatedAt": 1789318336550
+        "updatedAt": 1789330135291
       },
       "rating": {
         "score": 6.5,
         "positive": 64,
         "total": 77,
         "desc": "Mixed",
-        "updatedAt": 1789318337277
+        "updatedAt": 1789330136000
       },
       "historicalLow": {
         "price": null,
@@ -15151,7 +15151,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789199334456,
-      "updatedAt": 1789318337277
+      "updatedAt": 1789330136000
     },
     {
       "appid": 1659040,
@@ -15164,14 +15164,14 @@
         "currency": "CNY",
         "isOnSale": true,
         "discountExpiration": null,
-        "updatedAt": 1789318338014
+        "updatedAt": 1789330136756
       },
       "rating": {
         "score": 8.4,
         "positive": 83,
         "total": 7947,
         "desc": "Very Positive",
-        "updatedAt": 1789318338682
+        "updatedAt": 1789330137382
       },
       "historicalLow": {
         "price": 10.8,
@@ -15398,7 +15398,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789199221077,
-      "updatedAt": 1789318338682
+      "updatedAt": 1789330137382
     },
     {
       "appid": 1771300,
@@ -15411,14 +15411,14 @@
         "currency": "CNY",
         "isOnSale": false,
         "discountExpiration": null,
-        "updatedAt": 1789318339397
+        "updatedAt": 1789330138118
       },
       "rating": {
         "score": 9.6,
         "positive": 93,
-        "total": 40994,
+        "total": 40996,
         "desc": "Very Positive",
-        "updatedAt": 1789318340063
+        "updatedAt": 1789330138784
       },
       "historicalLow": {
         "price": 91.2,
@@ -15606,7 +15606,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789199208155,
-      "updatedAt": 1789318340063
+      "updatedAt": 1789330138784
     },
     {
       "appid": 1794680,
@@ -15619,14 +15619,14 @@
         "currency": "CNY",
         "isOnSale": false,
         "discountExpiration": null,
-        "updatedAt": 1789318340786
+        "updatedAt": 1789330139469
       },
       "rating": {
         "score": 9.9,
         "positive": 97,
         "total": 26588,
         "desc": "Overwhelmingly Positive",
-        "updatedAt": 1789318341451
+        "updatedAt": 1789330140177
       },
       "historicalLow": {
         "price": null,
@@ -15804,7 +15804,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789199195781,
-      "updatedAt": 1789318341451
+      "updatedAt": 1789330140177
     },
     {
       "appid": 3332600,
@@ -15817,14 +15817,14 @@
         "currency": "CNY",
         "isOnSale": false,
         "discountExpiration": null,
-        "updatedAt": 1789318342165
+        "updatedAt": 1789330140880
       },
       "rating": {
         "score": 9.6,
         "positive": 92,
         "total": 677,
         "desc": "Very Positive",
-        "updatedAt": 1789318342908
+        "updatedAt": 1789330141609
       },
       "historicalLow": {
         "price": 36.4,
@@ -15883,7 +15883,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789199164496,
-      "updatedAt": 1789318342908
+      "updatedAt": 1789330141609
     },
     {
       "appid": 1601570,
@@ -15896,14 +15896,14 @@
         "currency": "CNY",
         "isOnSale": true,
         "discountExpiration": null,
-        "updatedAt": 1789318343584
+        "updatedAt": 1789330142279
       },
       "rating": {
         "score": 9.2,
         "positive": 88,
         "total": 3623,
         "desc": "Very Positive",
-        "updatedAt": 1789318344245
+        "updatedAt": 1789330143012
       },
       "historicalLow": {
         "price": 54.5,
@@ -15993,7 +15993,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789194107390,
-      "updatedAt": 1789318344245
+      "updatedAt": 1789330143012
     },
     {
       "appid": 346010,
@@ -16006,14 +16006,14 @@
         "currency": "CNY",
         "isOnSale": false,
         "discountExpiration": null,
-        "updatedAt": 1789318344978
+        "updatedAt": 1789330143682
       },
       "rating": {
         "score": 9.9,
         "positive": 97,
         "total": 10923,
         "desc": "Overwhelmingly Positive",
-        "updatedAt": 1789318345649
+        "updatedAt": 1789330144411
       },
       "historicalLow": {
         "price": 5.8,
@@ -16133,7 +16133,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789194100122,
-      "updatedAt": 1789318345649
+      "updatedAt": 1789330144411
     },
     {
       "appid": 684410,
@@ -16146,14 +16146,14 @@
         "currency": "CNY",
         "isOnSale": false,
         "discountExpiration": null,
-        "updatedAt": 1789318346376
+        "updatedAt": 1789330145089
       },
       "rating": {
         "score": 9.6,
         "positive": 92,
         "total": 1233,
         "desc": "Very Positive",
-        "updatedAt": 1789318347106
+        "updatedAt": 1789330145809
       },
       "historicalLow": {
         "price": 3.4,
@@ -16231,7 +16231,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789194090965,
-      "updatedAt": 1789318347106
+      "updatedAt": 1789330145809
     },
     {
       "appid": 108710,
@@ -16244,14 +16244,14 @@
         "currency": "CNY",
         "isOnSale": false,
         "discountExpiration": null,
-        "updatedAt": 1789318347736
+        "updatedAt": 1789330146476
       },
       "rating": {
         "score": 9.2,
         "positive": 88,
         "total": 5375,
         "desc": "Very Positive",
-        "updatedAt": 1789318348433
+        "updatedAt": 1789330147181
       },
       "historicalLow": {
         "price": 5,
@@ -16335,7 +16335,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789194075102,
-      "updatedAt": 1789318348433
+      "updatedAt": 1789330147181
     },
     {
       "appid": 301640,
@@ -16348,14 +16348,14 @@
         "currency": "CNY",
         "isOnSale": false,
         "discountExpiration": null,
-        "updatedAt": 1789318349145
+        "updatedAt": 1789330147877
       },
       "rating": {
         "score": 8.4,
         "positive": 83,
         "total": 3962,
         "desc": "Very Positive",
-        "updatedAt": 1789318349886
+        "updatedAt": 1789330148580
       },
       "historicalLow": {
         "price": 12.2,
@@ -16417,7 +16417,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789193285256,
-      "updatedAt": 1789318349886
+      "updatedAt": 1789330148580
     },
     {
       "appid": 966670,
@@ -16430,14 +16430,14 @@
         "currency": "CNY",
         "isOnSale": false,
         "discountExpiration": null,
-        "updatedAt": 1789318350517
+        "updatedAt": 1789330149272
       },
       "rating": {
         "score": 8.9,
         "positive": 85,
         "total": 107,
         "desc": "Very Positive",
-        "updatedAt": 1789318351245
+        "updatedAt": 1789330150043
       },
       "historicalLow": {
         "price": 5.4,
@@ -16492,7 +16492,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789193256380,
-      "updatedAt": 1789318351245
+      "updatedAt": 1789330150043
     },
     {
       "appid": 1623730,
@@ -16505,14 +16505,14 @@
         "currency": "CNY",
         "isOnSale": false,
         "discountExpiration": null,
-        "updatedAt": 1789318351934
+        "updatedAt": 1789330150669
       },
       "rating": {
         "score": 9.6,
         "positive": 92,
-        "total": 140566,
+        "total": 140568,
         "desc": "Very Positive",
-        "updatedAt": 1789318352690
+        "updatedAt": 1789330151391
       },
       "historicalLow": {
         "price": 75.6,
@@ -16599,7 +16599,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789193138200,
-      "updatedAt": 1789318352690
+      "updatedAt": 1789330151391
     },
     {
       "appid": 1545560,
@@ -16612,14 +16612,14 @@
         "currency": "CNY",
         "isOnSale": false,
         "discountExpiration": null,
-        "updatedAt": 1789318353340
+        "updatedAt": 1789330152107
       },
       "rating": {
         "score": 9.6,
         "positive": 92,
         "total": 2018,
         "desc": "Very Positive",
-        "updatedAt": 1789318354046
+        "updatedAt": 1789330152802
       },
       "historicalLow": {
         "price": 37.3,
@@ -16713,7 +16713,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789193126410,
-      "updatedAt": 1789318354046
+      "updatedAt": 1789330152802
     },
     {
       "appid": 3117820,
@@ -16726,14 +16726,14 @@
         "currency": "CNY",
         "isOnSale": false,
         "discountExpiration": null,
-        "updatedAt": 1789318354745
+        "updatedAt": 1789330153470
       },
       "rating": {
         "score": 9.6,
         "positive": 94,
         "total": 31563,
         "desc": "Very Positive",
-        "updatedAt": 1789318355454
+        "updatedAt": 1789330154186
       },
       "historicalLow": {
         "price": 64,
@@ -16831,7 +16831,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789193117365,
-      "updatedAt": 1789318355454
+      "updatedAt": 1789330154186
     },
     {
       "appid": 3636770,
@@ -16844,14 +16844,14 @@
         "currency": "CNY",
         "isOnSale": false,
         "discountExpiration": null,
-        "updatedAt": 1789318356132
+        "updatedAt": 1789330154856
       },
       "rating": {
         "score": 9.9,
         "positive": 98,
         "total": 3988,
         "desc": "Overwhelmingly Positive",
-        "updatedAt": 1789318356891
+        "updatedAt": 1789330155576
       },
       "historicalLow": {
         "price": 24.8,
@@ -16902,7 +16902,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789193108997,
-      "updatedAt": 1789318356891
+      "updatedAt": 1789330155576
     },
     {
       "appid": 3755860,
@@ -16915,14 +16915,14 @@
         "currency": "CNY",
         "isOnSale": false,
         "discountExpiration": null,
-        "updatedAt": 1789318357550
+        "updatedAt": 1789330156260
       },
       "rating": {
         "score": 9.9,
         "positive": 97,
-        "total": 3166,
+        "total": 3167,
         "desc": "Overwhelmingly Positive",
-        "updatedAt": 1789318358243
+        "updatedAt": 1789330156969
       },
       "historicalLow": {
         "price": 39.2,
@@ -16975,7 +16975,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789193099884,
-      "updatedAt": 1789318358243
+      "updatedAt": 1789330156969
     },
     {
       "appid": 3855540,
@@ -16988,14 +16988,14 @@
         "currency": "CNY",
         "isOnSale": false,
         "discountExpiration": null,
-        "updatedAt": 1789318358939
+        "updatedAt": 1789330157655
       },
       "rating": {
         "score": 9.9,
         "positive": 98,
         "total": 2788,
         "desc": "Overwhelmingly Positive",
-        "updatedAt": 1789318359673
+        "updatedAt": 1789330158377
       },
       "historicalLow": {
         "price": 39.2,
@@ -17048,7 +17048,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789193087637,
-      "updatedAt": 1789318359673
+      "updatedAt": 1789330158377
     },
     {
       "appid": 2510710,
@@ -17061,14 +17061,14 @@
         "currency": "CNY",
         "isOnSale": false,
         "discountExpiration": null,
-        "updatedAt": 1789318360413
+        "updatedAt": 1789330159080
       },
       "rating": {
         "score": 8.4,
         "positive": 82,
         "total": 470,
         "desc": "Very Positive",
-        "updatedAt": 1789318361098
+        "updatedAt": 1789330159834
       },
       "historicalLow": {
         "price": 148.5,
@@ -17136,7 +17136,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789192967910,
-      "updatedAt": 1789318361098
+      "updatedAt": 1789330159834
     },
     {
       "appid": 780310,
@@ -17149,14 +17149,14 @@
         "currency": "CNY",
         "isOnSale": false,
         "discountExpiration": null,
-        "updatedAt": 1789318361748
+        "updatedAt": 1789330160513
       },
       "rating": {
         "score": 9.2,
         "positive": 89,
         "total": 7488,
         "desc": "Very Positive",
-        "updatedAt": 1789318362459
+        "updatedAt": 1789330161173
       },
       "historicalLow": {
         "price": 26.7,
@@ -17284,7 +17284,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789192956054,
-      "updatedAt": 1789318362459
+      "updatedAt": 1789330161173
     },
     {
       "appid": 2442460,
@@ -17297,14 +17297,14 @@
         "currency": "CNY",
         "isOnSale": false,
         "discountExpiration": null,
-        "updatedAt": 1789318363179
+        "updatedAt": 1789330161859
       },
       "rating": {
         "score": 8.4,
         "positive": 84,
         "total": 280,
         "desc": "Very Positive",
-        "updatedAt": 1789318363860
+        "updatedAt": 1789330162585
       },
       "historicalLow": {
         "price": 46,
@@ -17408,7 +17408,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789192947581,
-      "updatedAt": 1789318363860
+      "updatedAt": 1789330162585
     }
   ]
 }
