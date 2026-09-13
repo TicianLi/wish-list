@@ -50,7 +50,7 @@ jobs:
       - name: 准备 Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: '24'
 
       - name: 安装依赖
         run: npm install --no-audit --no-fund
@@ -103,3 +103,4 @@ jobs:
           name: wishlist-json-${{ github.run_number }}
           path: data/*.json
           retention-days: 30
+          if-no-files-found: warn
