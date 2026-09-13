@@ -12,6 +12,7 @@
     "test:gate": "node tools/_test_gate.cjs",
     "test:gate-sec": "node tools/_test_gate_sec.cjs",
     "test:gate-open": "node tools/_test_gate_open.cjs",
+    "test:cloud": "node tools/_test_cloud.cjs",
     "test:v2": "node tools/_test_v2.cjs",
     "test:vp": "node tools/_test_vp.cjs",
     "genhash": "node tools/_genhash.cjs"

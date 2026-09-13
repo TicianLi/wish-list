@@ -248,11 +248,23 @@ GitHub Actions 的 cron 用 **UTC**：
 
 ### 关于「☁️ 同步到云端」需要 Token
 
-首次点击会提示你填一个 GitHub **Personal Access Token**（细粒度）：
+首次点击会**自动打开设置面板的「云端同步」区块**，在那里填写 GitHub Token：
 
-- 权限只需 **Contents: Read and write**
-- 仓库范围只勾你这一个仓库
+- 去 <https://github.com/settings/personal-access-tokens/new> 建一个 **Fine-grained token**
+- **Repository access**：勾选你这一个仓库（**必须勾**，否则 403）
+- **Permissions → Contents**：选 **Read and write**（只给 Read 也会 403）
 - Token 存在你本机浏览器，不会外传
+
+设置面板里还能：
+- **测试连接**：只读探测，明确告诉你 Token 能不能读到仓库、有没有写权限、分支对不对
+- **保存并同步一次**：存配置 + 立刻同步，马上验证 Token 对不对
+- **清除 Token**：一键清掉
+- 随时改仓库所有者 / 仓库名 / 分支 / 文件路径
+
+> 早期版本 Token 是弹窗一次性输入的，**填错了没地方改**。现在改成设置里的常驻表单项，随时可改。
+>
+> 遇到 `HTTP 403: Resource not accessible by personal access token` 请看
+> [部署指南里的 403 排查](./部署指南-自动刷新与QQ邮件.md#-遇到-http-403-resource-not-accessible-by-personal-access-token)。
 
 ### 哪些数据会被保护
 
@@ -398,6 +410,7 @@ node tools/_test_v2.cjs          # 列表行数 / 统计卡折叠 / 筛选计数
 node tools/_test_gate.cjs        # 密钥门全流程（锁定/解锁/改密/过期），27 条
 node tools/_test_gate_open.cjs   # 全新访客开箱即锁 + 默认密钥可进，19 条
 node tools/_test_gate_sec.cjs    # ★ 站主豁免不可白拿（安全回归），25 条
+node tools/_test_cloud.cjs       # ★ 云端同步设置 UI + 403 排查提示，36 条
 node tools/_test_ui.cjs          # 整体 UI 冒烟，35 条
 node tools/_test_vp.cjs          # 6 种视口下的行数保证，6 条
 ```

@@ -267,6 +267,11 @@ button,.btn,.td-low,.td-count,.td-target,.gname{touch-action:manipulation;-webki
 .form-row label{display:block;font-size:13px;color:var(--muted);margin-bottom:4px;}
 .form-row input[type=text],.form-row input[type=password],.form-row input[type=number],.form-row select{width:100%;}
 .form-row .hint{font-size:12px;color:#5f7b95;margin-top:3px;}
+/* 云端同步：仓库/分支/路径 四宫格 */
+.cloud-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px 10px;margin-top:10px;}
+.cloud-grid > div{min-width:0;}
+.cloud-grid input{width:100%;box-sizing:border-box;}
+@media (max-width:520px){ .cloud-grid{grid-template-columns:1fr;} }
 /* 输入框增强容器：装载 input + 一键清空/显隐切换按钮 */
 .input-wrap{position:relative;display:flex;align-items:center;}
 .input-wrap > input[type=text],.input-wrap > input[type=password]{flex:1;padding-right:64px;}
@@ -704,13 +709,54 @@ body.gate-locked .modal{visibility:hidden !important;}
     </div>
     <div class="check-row" data-page-node-id="iIf2o6nyrVobMnjBrSILCN"><input type="checkbox" id="setOcr" data-page-node-id="cEkfJEntTV4nfHqQHhauGP"><label for="setOcr" style="margin:0;" data-page-node-id="p0bXpjqEAEpMrrzrHUXDE5">启用截图 OCR 识别（Tesseract.js，联网加载）</label></div>
     <div class="form-row" style="border-top:1px solid var(--border);padding-top:12px;">
-      <label>🔒 访问密码（问题 #4：防止他人随意访问本站）</label>
+      <label>☁️ 云端同步（供每天凌晨自动刷新使用）</label>
+      <div class="hint" id="cloudStateHint" style="margin-bottom:8px;">正在检测…</div>
+      <label style="font-weight:600;font-size:12.5px;margin-top:4px;">GitHub Token</label>
+      <div class="input-wrap">
+        <input type="password" id="setGhToken" placeholder="github_pat_… 或 ghp_…" autocomplete="off" spellcheck="false">
+        <span class="input-acts">
+          <button type="button" class="input-act" data-act="toggle-pwd" data-target="setGhToken" title="显示 / 隐藏 Token" aria-label="显示或隐藏">👁</button>
+          <button type="button" class="input-act danger-act" data-act="clear-input" data-target="setGhToken" title="一键清空" aria-label="清空">✕</button>
+        </span>
+      </div>
+      <div class="hint">
+        Fine-grained token 需要 <b>Contents: Read and write</b> 权限，并勾选本仓库。<br>
+        生成：<a href="https://github.com/settings/personal-access-tokens/new" target="_blank" rel="noopener" style="color:var(--accent);">github.com/settings/personal-access-tokens/new</a>
+        · 只存在本机浏览器
+      </div>
+      <div class="cloud-grid">
+        <div>
+          <label style="font-weight:600;font-size:12.5px;">仓库所有者</label>
+          <input type="text" id="setGhOwner" placeholder="TicianLi">
+        </div>
+        <div>
+          <label style="font-weight:600;font-size:12.5px;">仓库名</label>
+          <input type="text" id="setGhRepo" placeholder="wishlist">
+        </div>
+        <div>
+          <label style="font-weight:600;font-size:12.5px;">分支</label>
+          <input type="text" id="setGhBranch" placeholder="main">
+        </div>
+        <div>
+          <label style="font-weight:600;font-size:12.5px;">数据文件路径</label>
+          <input type="text" id="setGhPath" placeholder="data/wishlist.json">
+        </div>
+      </div>
+      <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:10px;">
+        <button type="button" class="btn" id="btnCloudTest">测试连接</button>
+        <button type="button" class="btn primary" id="btnCloudSave">保存并同步一次</button>
+        <button type="button" class="btn danger" id="btnCloudClear">清除 Token</button>
+      </div>
+      <div class="hint" id="cloudTestMsg"></div>
+    </div>
+    <div class="form-row" style="border-top:1px solid var(--border);padding-top:12px;">
+      <label>🔒 访问密钥（防止他人随意访问本站）</label>
       <div class="hint" id="gateStateHint" style="margin-bottom:8px;">正在检测…</div>
       <div style="display:flex;gap:8px;flex-wrap:wrap;">
-        <button type="button" class="btn" id="btnGateSet">设置 / 修改密码</button>
-        <button type="button" class="btn danger" id="btnGateClear">取消密码</button>
+        <button type="button" class="btn" id="btnGateSet">设置 / 修改密钥</button>
+        <button type="button" class="btn danger" id="btnGateClear">取消密钥</button>
       </div>
-      <div class="hint">密码以加盐 SHA-256 保存在本机浏览器，明文不会上传。设置后需刷新页面生效；勾选门锁上的「记住我」可 7 天免输入。</div>
+      <div class="hint">密钥以加盐 SHA-256 保存在本机浏览器，明文不会上传。「本机免密钥」是特权，需在锁屏验证一次密钥后才会发放。</div>
     </div>
   </div>
   <div class="modal-foot" data-page-node-id="uuacgMzncP3T6OK0L7ABHE">
@@ -3717,8 +3763,12 @@ function exportJSON() {
  *   token 只保存在你自己浏览器 localStorage，不会被上传到别处。
  * ============================================================ */
 const CLOUD_KEY = 'sw_cloud_cfg_v1';
+const CLOUD_DEFAULTS = { owner: 'TicianLi', repo: 'wishlist', branch: 'main', path: 'data/wishlist.json' };
 function loadCloudCfg() {
-  try { return JSON.parse(localStorage.getItem(CLOUD_KEY) || '{}') || {}; } catch (e) { return {}; }
+  let c;
+  try { c = JSON.parse(localStorage.getItem(CLOUD_KEY) || '{}') || {}; } catch (e) { c = {}; }
+  // 缺字段用默认值补齐，避免旧配置缺 owner/repo 时同步到错地方
+  return Object.assign({}, CLOUD_DEFAULTS, c);
 }
 function saveCloudCfg(cfg) {
   try { localStorage.setItem(CLOUD_KEY, JSON.stringify(cfg)); } catch (e) {}
@@ -3730,48 +3780,112 @@ function utf8ToBase64(str) {
   bytes.forEach(b => { bin += String.fromCharCode(b); });
   return btoa(bin);
 }
-async function cloudSync() {
+
+/* 把 GitHub 的响应体翻成人话：403 往往是权限/范围问题，不是"网断了" */
+function describeGhError(status, err, cfg) {
+  const api = String((err && (err.message || err.documentation_url)) || '');
+  const repoFull = cfg.owner + '/' + cfg.repo;
+  if (status === 401) {
+    return 'Token 无效或已过期（HTTP 401）。请到「设置 → 云端同步」重新生成并粘贴一个新的 Token。';
+  }
+  if (status === 403) {
+    const rate = /rate limit|secondary rate/i.test(api);
+    if (rate) return '触发了 GitHub 速率限制（HTTP 403），请等几分钟再试。';
+    return 'Token 没有写入权限（HTTP 403：' + (api || 'Resource not accessible by personal access token') + '）。\n' +
+      '请检查这个 Token 是否满足下面全部条件：\n' +
+      '  ① 仓库访问范围勾选了 ' + repoFull + '（或 All repositories）；\n' +
+      '  ② 权限里 Contents = Read and write（不是只读）；\n' +
+      '  ③ 如果仓库属于组织，Token 还需要组织管理员批准（Pending request）。\n' +
+      '改完权限后，同一个 Token 会立即生效；如果当初权限选错了，建议重新生成一个。';
+  }
+  if (status === 404) {
+    return '找不到仓库或文件路径（HTTP 404）。请检查「仓库所有者 / 仓库名」是否填对，' +
+      '以及 Token 是否授权访问 ' + repoFull + '。';
+  }
+  if (status === 409) return '远端文件冲突（HTTP 409），请稍后重试。';
+  if (status === 422) return '提交被拒绝（HTTP 422）：' + (api || '参数不合法，常见于分支名写错。') +
+    ' 请检查分支名是否为 ' + cfg.branch + '。';
+  return 'HTTP ' + status + (api ? '：' + api : '');
+}
+
+/* 统一的请求入口：带 Token，把状态码转成业务错误 */
+async function ghFetch(url, token, opts) {
+  const headers = Object.assign({
+    'Authorization': 'Bearer ' + token,
+    'Accept': 'application/vnd.github+json',
+    'X-GitHub-Api-Version': '2022-11-28'
+  }, (opts && opts.headers) || {});
+  const resp = await fetch(url, Object.assign({}, opts, { headers }));
+  if (!resp.ok) {
+    const err = await resp.json().catch(() => ({}));
+    const e = new Error(describeGhError(resp.status, err, (opts && opts.__cfg) || {}));
+    e.status = resp.status;
+    throw e;
+  }
+  return resp;
+}
+
+/* 只做权限探测，不写任何东西。用于「测试连接」按钮。 */
+async function cloudTest(cfg, token) {
+  const repoFull = cfg.owner + '/' + cfg.repo;
+  // 1) 能不能看到这个仓库？
+  const r1 = await fetch('https://api.github.com/repos/' + repoFull, {
+    headers: { 'Authorization': 'Bearer ' + token, 'Accept': 'application/vnd.github+json', 'X-GitHub-Api-Version': '2022-11-28' }
+  });
+  if (r1.status === 401) throw new Error('Token 无效或已过期（HTTP 401）。请重新生成一个。');
+  if (r1.status === 403) {
+    const err = await r1.json().catch(() => ({}));
+    throw new Error(describeGhError(403, err, cfg));
+  }
+  if (r1.status === 404) throw new Error('Token 看不到仓库 ' + repoFull + '（HTTP 404）。请确认仓库名正确，且 Token 的仓库范围勾选了它。');
+  if (!r1.ok) throw new Error('读取仓库信息失败 HTTP ' + r1.status);
+  const info = await r1.json();
+
+  // 2) 能不能写？细粒度 Token 的权限位在 token 元数据里查不到，
+  //    所以直接对目标文件发一次"只读"请求，看它是否至少可读；
+  //    再用 permissions 字段判断 push 权限（粗粒度 Token 会返回）。
+  const canPush = info.permissions ? !!info.permissions.push : null;
+  const branchOk = !!info.default_branch;
+  return {
+    repoFull: info.full_name,
+    private: !!info.private,
+    defaultBranch: info.default_branch,
+    canPush,
+    branchOk,
+    branchMatch: info.default_branch === cfg.branch
+  };
+}
+async function cloudSync(opts) {
+  opts = opts || {};
   const cfg = loadCloudCfg();
-  const owner = cfg.owner || 'TicianLi';
-  const repo = cfg.repo || 'wishlist';
-  const branch = cfg.branch || 'main';
-  const filePath = cfg.path || 'data/wishlist.json';
-  let token = cfg.token || '';
+  const { owner, repo, branch, filePath } = cfg;
+  let token = (opts.token != null ? opts.token : cfg.token) || '';
 
   if (!token) {
-    token = prompt(
-      '把清单同步到云端（供每日自动刷新使用）\n\n' +
-      '需要一个 GitHub Token（只存在你本机）：\n' +
-      '1) 打开 github.com/settings/tokens?type=beta\n' +
-      '2) Fine-grained token → 只勾选本仓库的 Contents: Read and write\n' +
-      '3) 复制生成的 token 粘贴到这里\n\n' +
-      '仓库：' + owner + '/' + repo + '\n文件：' + filePath, '') || '';
-    token = token.trim();
-    if (!token) { toast('未提供 Token，已取消同步。', 'info'); return; }
-    cfg.token = token; saveCloudCfg(cfg);
+    // 兜底：老用户没配过 Token 时，也引导去设置面板，而不是只弹个 prompt
+    toast('还没有配置 GitHub Token。请在「设置 → 云端同步」里填写。', 'warn', 8000);
+    openSettings();
+    return { ok: false, reason: 'no-token' };
   }
 
   const payload = { version: CONFIG.SCHEMA_VERSION, updatedAt: nowMs(), games: STATE.games };
   const content = utf8ToBase64(JSON.stringify(payload, null, 2));
   const api = 'https://api.github.com/repos/' + owner + '/' + repo + '/contents/' + filePath;
-  const headers = {
-    'Authorization': 'Bearer ' + token,
-    'Accept': 'application/vnd.github+json',
-    'X-GitHub-Api-Version': '2022-11-28'
-  };
+  const repoFull = owner + '/' + repo;
 
   holdProgress();
   try {
     setProgress('正在同步到云端…', null);
-    // 先取当前 sha（文件已存在时必须提供，才允许更新）
+    // 先取当前 sha（文件已存在时必须提供，才允许更新）。
+    // 注意：文件不存在时 GitHub 返回 404 —— 这是"首次同步"的正常场景，
+    // 要静默忽略（当做新建），不能当成错误抛出去。
     let sha = null;
     try {
-      const r = await fetch(api + '?ref=' + encodeURIComponent(branch), { headers });
+      const r = await ghFetch(api + '?ref=' + encodeURIComponent(branch), token, { __cfg: cfg });
       if (r.ok) { const j = await r.json(); sha = j.sha || null; }
-      else if (r.status !== 404) { throw new Error('读取远端失败 HTTP ' + r.status); }
     } catch (e) {
-      if (/读取远端失败/.test(e.message)) throw e;
-      // 网络问题：继续尝试直接 PUT（新文件）
+      if (e.status === 404) { sha = null; }        // 远端还没有这个文件 → 新建
+      else throw e;
     }
     const body = {
       message: 'chore: 从页面同步愿望单数据 ' + todayStr(),
@@ -3779,30 +3893,108 @@ async function cloudSync() {
       branch: branch,
       ...(sha ? { sha } : {})
     };
-    const resp = await fetch(api, { method: 'PUT', headers, body: JSON.stringify(body) });
-    if (!resp.ok) {
-      const err = await resp.json().catch(() => ({}));
-      throw new Error('HTTP ' + resp.status + (err.message ? '：' + err.message : ''));
-    }
-    toast('✅ 已同步到云端（' + owner + '/' + repo + '/' + filePath + '）。每天凌晨 2 点会自动刷新并发邮件。', 'success', 8000);
+    await ghFetch(api, token, { method: 'PUT', body: JSON.stringify(body), __cfg: cfg });
+    toast('✅ 已同步到云端（' + repoFull + '/' + filePath + '）。每天凌晨 2 点会自动刷新并发邮件。', 'success', 9000);
     dbgPush({ ok: true, via: 'cloud-sync', url: shortUrl(api), ms: 0, size: content.length });
+    updateCloudHint();
+    return { ok: true };
   } catch (e) {
-    toast('云端同步失败：' + e.message + '（可在设置里重新配置 Token）', 'error', 9000);
+    toast('云端同步失败：' + e.message + '\n（可到「设置 → 云端同步」里检查 Token 和仓库配置）', 'error', 12000);
     dbgPush({ ok: false, via: 'cloud-sync', url: shortUrl(api), err: String(e.message) });
+    return { ok: false, reason: 'http', error: e };
   } finally {
     releaseProgress();
   }
 }
 $('#btnCloudSync').addEventListener('click', () => {
   const cfg = loadCloudCfg();
-  const remember = cfg.token ? '（已保存 Token，将直接同步）' : '（首次使用需要 Token）';
+  if (!cfg.token) {
+    toast('还没有配置 GitHub Token，请在「设置 → 云端同步」里填写。', 'warn', 6000);
+    openSettings();
+    return;
+  }
   showConfirm(
-    '把当前 ' + STATE.games.length + ' 款游戏同步到云端 ' + (cfg.owner || 'TicianLi') + '/' + (cfg.repo || 'wishlist') + '？\n\n' +
+    '把当前 ' + STATE.games.length + ' 款游戏同步到云端 ' + cfg.owner + '/' + cfg.repo + '？\n\n' +
     '· 云端副本仅供 GitHub Actions 每日自动刷新使用\n' +
     '· 你本机的数据不会被改动\n' +
-    '· 你的备注/目标价/手动史低都会一并上传' + remember,
+    '· 你的备注/目标价/手动史低都会一并上传\n' +
+    '· 目标文件：' + cfg.path + '（分支 ' + cfg.branch + '）',
     () => cloudSync()
   );
+});
+
+/* ---- 设置面板里的「云端同步」区块 ---- */
+function updateCloudHint() {
+  const hint = $('#cloudStateHint');
+  if (!hint) return;
+  const cfg = loadCloudCfg();
+  const has = !!cfg.token;
+  const masked = has ? (cfg.token.slice(0, 11) + '…' + cfg.token.slice(-4)) : '';
+  hint.innerHTML = has
+    ? '当前：<b style="color:#6fd88f;">已配置</b> · ' + esc(cfg.owner + '/' + cfg.repo) +
+      ' · 分支 ' + esc(cfg.branch) + ' · Token ' + esc(masked)
+    : '<b style="color:#e0c34a;">未配置</b>：还没有 Token，无法同步到云端。';
+}
+function fillCloudForm() {
+  const cfg = loadCloudCfg();
+  const t = $('#setGhToken'); if (t) t.value = cfg.token || '';
+  const o = $('#setGhOwner'); if (o) o.value = cfg.owner || '';
+  const r = $('#setGhRepo'); if (r) r.value = cfg.repo || '';
+  const b = $('#setGhBranch'); if (b) b.value = cfg.branch || '';
+  const p = $('#setGhPath'); if (p) p.value = cfg.path || '';
+}
+/* 把表单读成配置对象（空值回落默认，避免把仓库名清空） */
+function readCloudForm() {
+  const g = sel => { const el = $(sel); return el ? el.value.trim() : ''; };
+  return {
+    token: g('#setGhToken'),
+    owner: g('#setGhOwner') || CLOUD_DEFAULTS.owner,
+    repo: g('#setGhRepo') || CLOUD_DEFAULTS.repo,
+    branch: g('#setGhBranch') || CLOUD_DEFAULTS.branch,
+    path: g('#setGhPath') || CLOUD_DEFAULTS.path
+  };
+}
+/* 测试连接：只读，不写仓库 */
+async function cloudTestConnection() {
+  const cfg = readCloudForm();
+  const msg = $('#cloudTestMsg');
+  const say = (text, color) => { if (msg) { msg.style.color = color || ''; msg.textContent = text; } };
+  if (!cfg.token) { say('请先填写 GitHub Token。', '#e0c34a'); return; }
+  say('正在测试…', '');
+  try {
+    const info = await cloudTest(cfg, cfg.token);
+    const bits = ['✅ 连接成功'];
+    bits.push('仓库：' + info.repoFull + (info.private ? '（私有）' : '（公开）'));
+    bits.push('默认分支：' + info.defaultBranch);
+    if (info.canPush === false) bits.push('⚠️ 但 Token 没有写入权限，同步会失败');
+    if (!info.branchMatch) bits.push('⚠️ 你填的分支「' + cfg.branch + '」不是默认分支，请确认它存在');
+    say(bits.join('\n'), '#6fd88f');
+  } catch (e) {
+    say('❌ ' + e.message, '#ff8a8a');
+  }
+}
+$('#btnCloudTest').addEventListener('click', cloudTestConnection);
+$('#btnCloudClear').addEventListener('click', () => {
+  showConfirm('清除本机保存的 GitHub Token？\n\n清除后无法再同步到云端，需要重新填写。', () => {
+    const cfg = readCloudForm();
+    cfg.token = '';
+    saveCloudCfg(cfg);
+    fillCloudForm();
+    updateCloudHint();
+    const msg = $('#cloudTestMsg');
+    if (msg) msg.textContent = '';
+    toast('已清除 Token。', 'success');
+  }, { danger: true });
+});
+$('#btnCloudSave').addEventListener('click', async () => {
+  const cfg = readCloudForm();
+  if (!cfg.token) { toast('请先填写 GitHub Token。', 'warn'); return; }
+  saveCloudCfg(cfg);
+  updateCloudHint();
+  closeModal('modalSettings');
+  // 立即同步一次，让用户马上知道 Token 对不对
+  const r = await cloudSync({ token: cfg.token });
+  if (r && r.ok) toast('Token 已验证并完成首次同步 ✅', 'success', 6000);
 });
 
 async function importJSONFile(file) {
@@ -3912,6 +4104,10 @@ function openSettings() {
   $('#setTimeout').value = s.timeoutMs;
   $('#setCacheH').value = s.cacheHours;
   $('#setOcr').checked = s.ocrEnabled;
+  // 云端同步区块：填充表单 + 刷新状态提示
+  fillCloudForm();
+  updateCloudHint();
+  const _cm = $('#cloudTestMsg'); if (_cm) _cm.textContent = '';
   // 问题 #4 / #1：同步访问密钥状态提示
   updateGateHint();
   openModal('modalSettings');
