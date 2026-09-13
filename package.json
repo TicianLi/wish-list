@@ -15,6 +15,7 @@
     "test:cloud": "node tools/_test_cloud.cjs",
     "test:v2": "node tools/_test_v2.cjs",
     "test:vp": "node tools/_test_vp.cjs",
+    "test:prov": "node tools/_test_prov.cjs",
     "genhash": "node tools/_genhash.cjs"
   },
   "dependencies": {
