@@ -16,6 +16,7 @@
     "test:v2": "node tools/_test_v2.cjs",
     "test:vp": "node tools/_test_vp.cjs",
     "test:prov": "node tools/_test_prov.cjs",
+    "test:smtp": "node tools/_test_smtp_msg.mjs",
     "genhash": "node tools/_genhash.cjs"
   },
   "dependencies": {
