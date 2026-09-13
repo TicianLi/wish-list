@@ -3834,6 +3834,67 @@ function isNetworkError(e) {
   return /Failed to fetch|NetworkError|Load failed|连不上 GitHub/i.test(msg);
 }
 
+/* ===== 数据来源追溯（provenance） =====
+   目的：让仓库里的 data/wishlist.json 能自证"这份数据是哪次点击产生的"。
+   每次点「同步到云端」，都把当次的来源信息写进文件头部字段，
+   这样任何人都能判断它是不是用户手动同步的产物，而不是脚本/测试灌进去的。 */
+
+/* 轻量校验和：把游戏列表摘要成一个短字符串，用于事后核对内容有没有被换过 */
+function gamesFingerprint(games) {
+  const parts = (games || []).map(g =>
+    (g.appid || '') + ':' + (g.name || '') + ':' + ((g.price && g.price.current) || 0)
+  );
+  const s = parts.join('|');
+  let h1 = 0x811c9dc5, h2 = 0x01000193;
+  for (let i = 0; i < s.length; i++) {
+    const c = s.charCodeAt(i);
+    h1 = ((h1 ^ c) * 16777619) >>> 0;
+    h2 = ((h2 + c) * 2654435761) >>> 0;
+  }
+  return (h1.toString(16).padStart(8, '0') + h2.toString(16).padStart(8, '0'));
+}
+
+/* 给上传的 payload 加上来源标记 */
+function withProvenance(payload) {
+  const games = payload.games || [];
+  return Object.assign({}, payload, {
+    source: 'manual-sync',            // 只可能是用户点按钮产生
+    syncedAt: nowMs(),                // 本次同步时刻
+    gameCount: games.length,
+    fingerprint: gamesFingerprint(games),
+    syncedFrom: (typeof location !== 'undefined') ? location.origin : ''
+  });
+}
+
+/* 检测"看起来不像人工逐条录入"的数据，返回问题描述数组（空数组 = 正常） */
+function detectSuspiciousData(games) {
+  const issues = [];
+  if (!games || !games.length) return issues;
+
+  // 特征 1：所有游戏的 createdAt 完全相同 → 批量脚本导入的典型特征
+  const created = games.map(g => g.createdAt).filter(Boolean);
+  if (created.length > 1 && created.every(c => c === created[0])) {
+    issues.push('全部 ' + created.length + ' 款游戏的创建时间完全相同（' +
+      new Date(created[0]).toLocaleString() + '），像是被脚本一次性批量写入的，不像逐条手动添加。');
+  }
+
+  // 特征 2：AppID 明显是占位值
+  const bogus = games.filter(g => !g.appid || g.appid <= 0 || g.appid > 5000000);
+  if (bogus.length) {
+    issues.push('有 ' + bogus.length + ' 款游戏的 AppID 是无效值：' +
+      bogus.map(g => (g.name || '?') + '(' + g.appid + ')').join('、') + '。');
+  }
+
+  // 特征 3：名字里带"测试/不存在/示例"这类字样
+  const fakeNames = games.filter(g => /测试|不存在|示例|demo|test|sample|ghost/i.test(g.name || ''));
+  if (fakeNames.length) {
+    issues.push('有 ' + fakeNames.length + ' 款游戏名字像测试数据：' +
+      fakeNames.map(g => g.name).join('、') + '。');
+  }
+
+  return issues;
+}
+
 /* 统一的请求入口：带 Token，把状态码转成业务错误 */
 async function ghFetch(url, token, opts) {
   const headers = Object.assign({
@@ -3909,7 +3970,7 @@ async function cloudSync(opts) {
     return { ok: false, reason: 'no-token' };
   }
 
-  const payload = { version: CONFIG.SCHEMA_VERSION, updatedAt: nowMs(), games: STATE.games };
+  const payload = withProvenance({ version: CONFIG.SCHEMA_VERSION, updatedAt: nowMs(), games: STATE.games });
   const content = utf8ToBase64(JSON.stringify(payload, null, 2));
   const api = 'https://api.github.com/repos/' + owner + '/' + repo + '/contents/' + filePath;
   const repoFull = owner + '/' + repo;
@@ -3935,8 +3996,13 @@ async function cloudSync(opts) {
       ...(sha ? { sha } : {})
     };
     await ghFetch(api, token, { method: 'PUT', body: JSON.stringify(body), __cfg: cfg });
-    toast('✅ 已同步到云端（' + repoFull + '/' + filePath + '）。每天凌晨 2 点会自动刷新并发邮件。', 'success', 9000);
-    dbgPush({ ok: true, via: 'cloud-sync', url: shortUrl(api), ms: 0, size: content.length });
+    // 把"本次到底传了什么"明确回显出来，让用户能自己核对，而不是只能相信提示
+    toast('✅ 已同步到云端（' + repoFull + '/' + filePath + '）\n' +
+      '本次上传 ' + STATE.games.length + ' 款 · 时间 ' + new Date(payload.syncedAt).toLocaleString() + '\n' +
+      '数据指纹 ' + payload.fingerprint + '\n' +
+      '每天凌晨 2 点会自动刷新并发邮件。', 'success', 11000);
+    dbgPush({ ok: true, via: 'cloud-sync', url: shortUrl(api), ms: 0, size: content.length,
+              games: STATE.games.length, fp: payload.fingerprint });
     updateCloudHint();
     return { ok: true };
   } catch (e) {
@@ -4888,6 +4954,18 @@ function boot() {
   try { localStorage.getItem('sw_probe'); } catch (envErr) {
     toast('⚠️ 当前处于受限预览环境（存储不可用），数据无法保存、网络可能被拦截。请把链接/文件用手机浏览器（Chrome/Safari）打开。', 'warn', 12000);
   }
+  // 数据自检：如果本机清单看起来像被批量写入的（例如测试数据残留），
+  // 明确提示用户，避免把脏数据同步到云端。
+  try {
+    const issues = detectSuspiciousData(STATE.games);
+    if (issues.length) {
+      setTimeout(() => {
+        toast('⚠️ 检测到清单里有可疑数据\n' + issues.join('\n') +
+          '\n\n如果你没手动添加过这些游戏，建议先用「清理本机数据.html」清空，' +
+          '再录入真实清单——否则会把它们同步到云端。', 'warn', 20000);
+      }, 600);
+    }
+  } catch (e) {}
 }
 
 function showFatalError(e) {
