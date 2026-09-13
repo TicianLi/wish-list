@@ -1,6 +1,6 @@
 {
   "version": 3,
-  "updatedAt": 1789315521111,
+  "updatedAt": 1789316876382,
   "games": [
     {
       "appid": 1325890,
@@ -18,8 +18,8 @@
       "rating": {
         "score": 6.5,
         "positive": 68,
-        "total": 124,
         "desc": "Mixed",
+        "total": 124,
         "updatedAt": 1789315211242
       },
       "historicalLow": {
@@ -93,8 +93,8 @@
       "rating": {
         "score": 7.5,
         "positive": 74,
-        "total": 1462,
         "desc": "Mostly Positive",
+        "total": 1462,
         "updatedAt": 1789315215398
       },
       "historicalLow": {
@@ -207,8 +207,8 @@
       "rating": {
         "score": 9.2,
         "positive": 90,
-        "total": 3255,
         "desc": "Very Positive",
+        "total": 3255,
         "updatedAt": 1789315218860
       },
       "historicalLow": {
@@ -476,8 +476,8 @@
       "rating": {
         "score": 8.4,
         "positive": 84,
-        "total": 897,
         "desc": "Very Positive",
+        "total": 897,
         "updatedAt": 1789315222550
       },
       "historicalLow": {
@@ -579,8 +579,8 @@
       "rating": {
         "score": 6.5,
         "positive": 63,
-        "total": 334,
         "desc": "Mixed",
+        "total": 334,
         "updatedAt": 1789315227159
       },
       "historicalLow": {
@@ -696,8 +696,8 @@
       "rating": {
         "score": 7.5,
         "positive": 78,
-        "total": 1073,
         "desc": "Mostly Positive",
+        "total": 1073,
         "updatedAt": 1789315231750
       },
       "historicalLow": {
@@ -792,8 +792,8 @@
       "rating": {
         "score": 7.5,
         "positive": 79,
-        "total": 854,
         "desc": "Mostly Positive",
+        "total": 854,
         "updatedAt": 1789315236771
       },
       "historicalLow": {
@@ -977,8 +977,8 @@
       "rating": {
         "score": 8.4,
         "positive": 82,
-        "total": 858,
         "desc": "Very Positive",
+        "total": 858,
         "updatedAt": 1789315241504
       },
       "historicalLow": {
@@ -1091,8 +1091,8 @@
       "rating": {
         "score": 9.6,
         "positive": 94,
-        "total": 1963,
         "desc": "Very Positive",
+        "total": 1963,
         "updatedAt": 1789315247003
       },
       "historicalLow": {
@@ -1186,8 +1186,8 @@
       "rating": {
         "score": 9.8,
         "positive": 96,
-        "total": 2003,
         "desc": "Overwhelmingly Positive",
+        "total": 2003,
         "updatedAt": 1789315252227
       },
       "historicalLow": {
@@ -1279,8 +1279,8 @@
       "rating": {
         "score": 7.5,
         "positive": 76,
-        "total": 1043,
         "desc": "Mostly Positive",
+        "total": 1043,
         "updatedAt": 1789315255727
       },
       "historicalLow": {
@@ -1379,8 +1379,8 @@
       "rating": {
         "score": 8.9,
         "positive": 86,
-        "total": 1076,
         "desc": "Very Positive",
+        "total": 1076,
         "updatedAt": 1789315258608
       },
       "historicalLow": {
@@ -1458,8 +1458,8 @@
       "rating": {
         "score": 7.5,
         "positive": 79,
-        "total": 1338,
         "desc": "Mostly Positive",
+        "total": 1338,
         "updatedAt": 1789315261227
       },
       "historicalLow": {
@@ -1629,8 +1629,8 @@
       "rating": {
         "score": 6.5,
         "positive": 61,
-        "total": 346,
         "desc": "Mixed",
+        "total": 346,
         "updatedAt": 1789315264901
       },
       "historicalLow": {
@@ -1738,8 +1738,8 @@
       "rating": {
         "score": 9.2,
         "positive": 88,
-        "total": 574,
         "desc": "Very Positive",
+        "total": 574,
         "updatedAt": 1789315270719
       },
       "historicalLow": {
@@ -1821,8 +1821,8 @@
       "rating": {
         "score": 9.6,
         "positive": 94,
-        "total": 325,
         "desc": "Very Positive",
+        "total": 325,
         "updatedAt": 1789315273804
       },
       "historicalLow": {
@@ -1981,8 +1981,8 @@
       "rating": {
         "score": 8.4,
         "positive": 82,
-        "total": 767,
         "desc": "Very Positive",
+        "total": 767,
         "updatedAt": 1789315278039
       },
       "historicalLow": {
@@ -2059,8 +2059,8 @@
       "rating": {
         "score": 8.4,
         "positive": 81,
-        "total": 11961,
         "desc": "Very Positive",
+        "total": 11961,
         "updatedAt": 1789315281214
       },
       "historicalLow": {
@@ -2137,8 +2137,8 @@
       "rating": {
         "score": 9.2,
         "positive": 89,
-        "total": 599,
         "desc": "Very Positive",
+        "total": 599,
         "updatedAt": 1789315284460
       },
       "historicalLow": {
@@ -2272,8 +2272,8 @@
       "rating": {
         "score": 9.6,
         "positive": 93,
-        "total": 118,
         "desc": "Very Positive",
+        "total": 118,
         "updatedAt": 1789315286916
       },
       "historicalLow": {
@@ -2350,8 +2350,8 @@
       "rating": {
         "score": 7.5,
         "positive": 74,
-        "total": 1373,
         "desc": "Mostly Positive",
+        "total": 1373,
         "updatedAt": 1789315289965
       },
       "historicalLow": {
@@ -2593,8 +2593,8 @@
       "rating": {
         "score": 9.8,
         "positive": 95,
-        "total": 604,
         "desc": "Very Positive",
+        "total": 604,
         "updatedAt": 1789315295654
       },
       "historicalLow": {
@@ -2697,8 +2697,8 @@
       "rating": {
         "score": 7.5,
         "positive": 76,
-        "total": 14618,
         "desc": "Mostly Positive",
+        "total": 14618,
         "updatedAt": 1789315300520
       },
       "historicalLow": {
@@ -2897,8 +2897,8 @@
       "rating": {
         "score": 9.8,
         "positive": 95,
-        "total": 1206,
         "desc": "Very Positive",
+        "total": 1206,
         "updatedAt": 1789315305553
       },
       "historicalLow": {
@@ -2974,8 +2974,8 @@
       "rating": {
         "score": 9.8,
         "positive": 95,
-        "total": 2689,
         "desc": "Very Positive",
+        "total": 2689,
         "updatedAt": 1789315310101
       },
       "historicalLow": {
@@ -3075,8 +3075,8 @@
       "rating": {
         "score": 7.5,
         "positive": 79,
-        "total": 19792,
         "desc": "Mostly Positive",
+        "total": 19792,
         "updatedAt": 1789315313713
       },
       "historicalLow": {
@@ -3184,8 +3184,8 @@
       "rating": {
         "score": 9.2,
         "positive": 89,
-        "total": 4252,
         "desc": "Very Positive",
+        "total": 4252,
         "updatedAt": 1789315317046
       },
       "historicalLow": {
@@ -3294,8 +3294,8 @@
       "rating": {
         "score": 7.5,
         "positive": 74,
-        "total": 3129,
         "desc": "Mostly Positive",
+        "total": 3129,
         "updatedAt": 1789315323251
       },
       "historicalLow": {
@@ -3380,8 +3380,8 @@
       "rating": {
         "score": 6.5,
         "positive": 60,
-        "total": 965,
         "desc": "Mixed",
+        "total": 965,
         "updatedAt": 1789315327409
       },
       "historicalLow": {
@@ -3464,8 +3464,8 @@
       "rating": {
         "score": 9.8,
         "positive": 95,
-        "total": 2580,
         "desc": "Overwhelmingly Positive",
+        "total": 2580,
         "updatedAt": 1789315330015
       },
       "historicalLow": {
@@ -3581,8 +3581,8 @@
       "rating": {
         "score": 9.8,
         "positive": 95,
-        "total": 1724,
         "desc": "Overwhelmingly Positive",
+        "total": 1724,
         "updatedAt": 1789315333605
       },
       "historicalLow": {
@@ -3702,8 +3702,8 @@
       "rating": {
         "score": 8.4,
         "positive": 81,
-        "total": 17268,
         "desc": "Very Positive",
+        "total": 17268,
         "updatedAt": 1789315337909
       },
       "historicalLow": {
@@ -3968,8 +3968,8 @@
       "rating": {
         "score": 7.5,
         "positive": 78,
-        "total": 3094,
         "desc": "Mostly Positive",
+        "total": 3094,
         "updatedAt": 1789315341875
       },
       "historicalLow": {
@@ -4244,8 +4244,8 @@
       "rating": {
         "score": 7.5,
         "positive": 79,
-        "total": 3943,
         "desc": "Mostly Positive",
+        "total": 3943,
         "updatedAt": 1789315346992
       },
       "historicalLow": {
@@ -4409,8 +4409,8 @@
       "rating": {
         "score": 9.6,
         "positive": 92,
-        "total": 27199,
         "desc": "Very Positive",
+        "total": 27199,
         "updatedAt": 1789315352921
       },
       "historicalLow": {
@@ -4574,8 +4574,8 @@
       "rating": {
         "score": 8.4,
         "positive": 81,
-        "total": 5170,
         "desc": "Very Positive",
+        "total": 5170,
         "updatedAt": 1789315363399
       },
       "historicalLow": {
@@ -4721,8 +4721,8 @@
       "rating": {
         "score": 9.2,
         "positive": 90,
-        "total": 17889,
         "desc": "Very Positive",
+        "total": 17889,
         "updatedAt": 1789315371372
       },
       "historicalLow": {
@@ -4963,8 +4963,8 @@
       "rating": {
         "score": 8.4,
         "positive": 83,
-        "total": 4462,
         "desc": "Very Positive",
+        "total": 4462,
         "updatedAt": 1789315377127
       },
       "historicalLow": {
@@ -5064,8 +5064,8 @@
       "rating": {
         "score": 7.5,
         "positive": 70,
-        "total": 428,
         "desc": "Mostly Positive",
+        "total": 428,
         "updatedAt": 1789315382320
       },
       "historicalLow": {
@@ -5169,8 +5169,8 @@
       "rating": {
         "score": 9.6,
         "positive": 93,
-        "total": 742,
         "desc": "Very Positive",
+        "total": 742,
         "updatedAt": 1789315386797
       },
       "historicalLow": {
@@ -5252,8 +5252,8 @@
       "rating": {
         "score": 6.5,
         "positive": 68,
-        "total": 542,
         "desc": "Mixed",
+        "total": 542,
         "updatedAt": 1789315390521
       },
       "historicalLow": {
@@ -5340,8 +5340,8 @@
       "rating": {
         "score": 7.5,
         "positive": 75,
-        "total": 775,
         "desc": "Mostly Positive",
+        "total": 775,
         "updatedAt": 1789315393684
       },
       "historicalLow": {
@@ -5457,8 +5457,8 @@
       "rating": {
         "score": 8.4,
         "positive": 82,
-        "total": 1435,
         "desc": "Very Positive",
+        "total": 1435,
         "updatedAt": 1789315397351
       },
       "historicalLow": {
@@ -5553,8 +5553,8 @@
       "rating": {
         "score": 8.4,
         "positive": 84,
-        "total": 1750,
         "desc": "Very Positive",
+        "total": 1750,
         "updatedAt": 1789315400590
       },
       "historicalLow": {
@@ -5694,8 +5694,8 @@
       "rating": {
         "score": 9.9,
         "positive": 98,
-        "total": 11938,
         "desc": "Overwhelmingly Positive",
+        "total": 11938,
         "updatedAt": 1789315403077
       },
       "historicalLow": {
@@ -5794,8 +5794,8 @@
       "rating": {
         "score": 9.6,
         "positive": 94,
-        "total": 105339,
         "desc": "Very Positive",
+        "total": 105339,
         "updatedAt": 1789315406759
       },
       "historicalLow": {
@@ -5919,8 +5919,8 @@
       "rating": {
         "score": 9.2,
         "positive": 88,
-        "total": 16325,
         "desc": "Very Positive",
+        "total": 16325,
         "updatedAt": 1789315411482
       },
       "historicalLow": {
@@ -6056,8 +6056,8 @@
       "rating": {
         "score": 6.5,
         "positive": 66,
-        "total": 352,
         "desc": "Mixed",
+        "total": 352,
         "updatedAt": 1789315414988
       },
       "historicalLow": {
@@ -6148,8 +6148,8 @@
       "rating": {
         "score": 9.6,
         "positive": 93,
-        "total": 4976,
         "desc": "Very Positive",
+        "total": 4976,
         "updatedAt": 1789315417805
       },
       "historicalLow": {
@@ -6260,8 +6260,8 @@
       "rating": {
         "score": 9.6,
         "positive": 93,
-        "total": 17726,
         "desc": "Very Positive",
+        "total": 17726,
         "updatedAt": 1789315423948
       },
       "historicalLow": {
@@ -6344,8 +6344,8 @@
       "rating": {
         "score": null,
         "positive": null,
-        "total": null,
         "desc": "No user reviews",
+        "total": null,
         "updatedAt": 1789315427928
       },
       "historicalLow": {
@@ -17411,8 +17411,8 @@
     }
   ],
   "source": "manual-sync",
-  "syncedAt": 1789315778364,
-  "fingerprint": "82e246ef-repaired",
-  "repairedAt": 1789315778377,
-  "repairNote": "Moved from path \"undefined\" which was caused by a filePath bug; original data came from manual sync."
+  "syncedAt": 1789316876382,
+  "gameCount": 137,
+  "fingerprint": "e7561bb87401e000",
+  "syncedFrom": "https://ticianli.github.io"
 }
