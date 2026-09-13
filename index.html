@@ -3763,7 +3763,7 @@ function exportJSON() {
  *   token 只保存在你自己浏览器 localStorage，不会被上传到别处。
  * ============================================================ */
 const CLOUD_KEY = 'sw_cloud_cfg_v1';
-const CLOUD_DEFAULTS = { owner: 'TicianLi', repo: 'wishlist', branch: 'main', path: 'data/wishlist.json' };
+const CLOUD_DEFAULTS = { owner: 'TicianLi', repo: 'wish-list', branch: 'main', path: 'data/wishlist.json' };
 function loadCloudCfg() {
   let c;
   try { c = JSON.parse(localStorage.getItem(CLOUD_KEY) || '{}') || {}; } catch (e) { c = {}; }
@@ -3960,7 +3960,7 @@ async function cloudTest(cfg, token) {
 async function cloudSync(opts) {
   opts = opts || {};
   const cfg = loadCloudCfg();
-  const { owner, repo, branch, filePath } = cfg;
+  const { owner, repo, branch, path: filePath } = cfg;
   let token = (opts.token != null ? opts.token : cfg.token) || '';
 
   if (!token) {
