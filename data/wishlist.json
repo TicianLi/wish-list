@@ -1,0 +1,109 @@
+{
+  "version": 3,
+  "updatedAt": 1789304814967,
+  "refreshedAt": 1789304814967,
+  "games": [
+    {
+      "appid": 1245620,
+      "name": "艾尔登法环",
+      "originalName": "ELDEN RING",
+      "price": {
+        "current": 178,
+        "original": 298,
+        "discountPercent": 40,
+        "currency": "CNY",
+        "isOnSale": true,
+        "discountExpiration": 1789348014000,
+        "updatedAt": 1789304814907
+      },
+      "rating": {
+        "score": 9.6,
+        "positive": 92,
+        "total": 500000,
+        "desc": "Very Positive",
+        "updatedAt": 1789304814909
+      },
+      "historicalLow": {
+        "price": 178,
+        "count": 5,
+        "confidence": "A",
+        "source": "ITAD(国区)",
+        "updatedAt": 0
+      },
+      "targetPrice": 200,
+      "note": "等大促",
+      "dlcList": [],
+      "details": {},
+      "createdAt": 1789304814871,
+      "updatedAt": 1789304814909
+    },
+    {
+      "appid": 292030,
+      "name": "巫师3",
+      "originalName": "The Witcher 3: Wild Hunt",
+      "price": {
+        "current": 0,
+        "original": 0,
+        "discountPercent": 0,
+        "currency": "CNY",
+        "isOnSale": false,
+        "discountExpiration": null,
+        "updatedAt": 1789304814934
+      },
+      "rating": {
+        "score": 9.8,
+        "positive": 96,
+        "total": 700000,
+        "desc": "Overwhelmingly Positive",
+        "updatedAt": 1789304814950
+      },
+      "historicalLow": {
+        "price": 30,
+        "count": 8,
+        "confidence": "A",
+        "source": "手动确认",
+        "updatedAt": 0
+      },
+      "targetPrice": 20,
+      "note": "",
+      "dlcList": [],
+      "details": {},
+      "createdAt": 1789304814871,
+      "updatedAt": 1789304814950
+    },
+    {
+      "appid": 9999999,
+      "name": "不存在的游戏",
+      "originalName": "Ghost",
+      "price": {
+        "current": 100,
+        "original": 100,
+        "discountPercent": 0,
+        "currency": "CNY",
+        "isOnSale": false,
+        "discountExpiration": null,
+        "updatedAt": 0
+      },
+      "rating": {
+        "score": null,
+        "positive": null,
+        "total": null,
+        "desc": null,
+        "updatedAt": 0
+      },
+      "historicalLow": {
+        "price": null,
+        "count": null,
+        "confidence": "pending",
+        "source": null,
+        "updatedAt": 0
+      },
+      "targetPrice": null,
+      "note": "",
+      "dlcList": [],
+      "details": {},
+      "createdAt": 1789304814871,
+      "updatedAt": 1789304814871
+    }
+  ]
+}
