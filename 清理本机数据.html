@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>清单数据清理 · 一次性工具</title>
+<style>
+  :root{--bg:#0e1622;--bg2:#16202e;--text:#dfe8f1;--muted:#8fa3b5;
+        --border:#24354a;--accent:#66c0f4;--green:#3ba55d;--red:#e05a5a;--yellow:#e0c34a;}
+  *{box-sizing:border-box;}
+  body{margin:0;padding:24px;background:var(--bg);color:var(--text);
+       font:14px/1.65 -apple-system,"Segoe UI","Microsoft YaHei",sans-serif;}
+  .wrap{max-width:780px;margin:0 auto;}
+  h1{font-size:20px;margin:0 0 6px;color:#eaf4ff;}
+  .sub{color:var(--muted);font-size:13px;margin-bottom:20px;}
+  .card{background:var(--bg2);border:1px solid var(--border);border-radius:12px;
+        padding:16px 18px;margin-bottom:14px;}
+  .card h2{font-size:15px;margin:0 0 10px;color:#cfe4f7;}
+  pre{background:#0a121c;border:1px solid var(--border);border-radius:8px;padding:11px 13px;
+      font-size:12px;line-height:1.55;overflow:auto;max-height:260px;margin:8px 0 0;
+      white-space:pre-wrap;word-break:break-all;color:#c4d6e6;}
+  button{background:linear-gradient(180deg,#2b7fbd,#1d5c8d);border:1px solid rgba(140,210,255,.4);
+         color:#f0f9ff;border-radius:9px;padding:10px 18px;font-size:14px;cursor:pointer;
+         font-family:inherit;font-weight:600;margin-right:8px;}
+  button:hover{filter:brightness(1.12);}
+  button.danger{background:linear-gradient(180deg,#b84040,#8d2626);border-color:rgba(255,140,140,.45);}
+  button:disabled{opacity:.5;cursor:not-allowed;}
+  .row{padding:7px 0;border-bottom:1px solid rgba(36,53,74,.55);font-size:13px;
+       display:flex;gap:10px;}
+  .row:last-child{border-bottom:0;}
+  .k{flex:0 0 240px;color:var(--muted);}
+  .v{flex:1;min-width:0;word-break:break-all;}
+  .ok{color:#6fd88f;} .bad{color:#ff8a8a;} .warn{color:var(--yellow);}
+  .note{background:rgba(224,195,74,.1);border:1px solid rgba(224,195,74,.35);
+        border-radius:9px;padding:11px 14px;font-size:13px;margin:10px 0;}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>🧹 清单数据清理</h1>
+  <div class="sub">把这个文件放在和 index.html 同一个目录，用<strong>同样的方式</strong>打开它，
+    它会列出你浏览器里存的所有清单相关数据，并允许你一键清空。</div>
+
+  <div class="note">
+    ⚠️ <strong>先读完再操作。</strong>清空是只清<strong>本机浏览器</strong>里的数据，不动仓库。
+    清完你需要在主页重新录入游戏，再点「☁️ 同步到云端」把真实清单传上去。
+  </div>
+
+  <div class="card">
+    <h2>① 当前本机存了什么</h2>
+    <div id="list"><div class="row"><span class="v">正在读取…</span></div></div>
+    <button id="refresh">重新读取</button>
+  </div>
+
+  <div class="card">
+    <h2>② 清空清单数据</h2>
+    <div style="font-size:13px;color:var(--muted);margin-bottom:10px;">
+      会删掉：游戏清单、筛选条件、云端同步配置（Token 等）。<br>
+      不会删：访问密钥、你的设置偏好。
+    </div>
+    <button id="clearGames" class="danger">只清空游戏清单</button>
+    <button id="clearAll" class="danger">清空全部（含筛选与云端配置）</button>
+  </div>
+
+  <div class="card">
+    <h2>③ 操作结果</h2>
+    <pre id="out">（等待操作）</pre>
+  </div>
+</div>
+
+<script>
+/* 这些 key 与 index.html 里保持一致 */
+const KEYS = {
+  'sw_data_v3': '游戏清单',
+  'sw_filters_v3': '筛选条件',
+  'sw_settings_v3': '设置偏好',
+  'sw_cloud_cfg_v1': '云端同步配置',
+  'sw_gate_hash': '访问密钥哈希',
+  'sw_gate_salt': '密钥盐值',
+  'sw_gate_pass_v1': '记住我的凭证',
+  'sw_gate_tries_v1': '错误次数',
+  'sw_gate_owner_v1': '站主豁免标记'
+};
+
+const $ = s => document.querySelector(s);
+const out = m => { $('#out').textContent = m; };
+
+function summarize(key, raw) {
+  if (raw === null || raw === undefined) return { state: 'empty', text: '（不存在）' };
+  if (key === 'sw_data_v3') {
+    try {
+      const j = JSON.parse(raw);
+      const n = (j.games || []).length;
+      const names = (j.games || []).map(g => g.name).join('、');
+      const created = (j.games || []).map(g => g.createdAt).filter(Boolean);
+      const sameCreated = created.length > 1 && created.every(c => c === created[0]);
+      return {
+        state: n > 0 ? 'warn' : 'ok',
+        text: n + ' 款游戏' + (names ? '：' + names : '') +
+              (sameCreated ? '  ⚠️ 所有 createdAt 相同（像是批量导入的测试数据）' : '') +
+              '  · ' + raw.length + ' 字节'
+      };
+    } catch (e) { return { state: 'bad', text: '解析失败：' + e.message }; }
+  }
+  if (key === 'sw_cloud_cfg_v1') {
+    try {
+      const c = JSON.parse(raw);
+      return { state: 'ok', text: '仓库 ' + (c.owner || '?') + '/' + (c.repo || '?') +
+        ' · 分支 ' + (c.branch || '?') + ' · Token ' + (c.token ? '已配置' : '未配置') };
+    } catch (e) { return { state: 'bad', text: '解析失败' }; }
+  }
+  return { state: 'ok', text: raw.length + ' 字符' };
+}
+
+function render() {
+  const rows = [];
+  for (const [k, label] of Object.entries(KEYS)) {
+    const raw = localStorage.getItem(k);
+    const s = summarize(k, raw);
+    rows.push('<div class="row"><span class="k">' + label + '<br><span style="font-size:11px;opacity:.6">' + k + '</span></span>' +
+      '<span class="v ' + s.state + '">' + s.text + '</span></div>');
+  }
+  $('#list').innerHTML = rows.join('');
+}
+
+$('#refresh').addEventListener('click', () => { render(); out('已重新读取。'); });
+
+$('#clearGames').addEventListener('click', () => {
+  // 用空清单覆盖，而不是直接删 key —— 避免页面把"无数据"当成首次使用又弹欢迎提示
+  const empty = { version: 3, updatedAt: Date.now(), refreshedAt: Date.now(), games: [] };
+  localStorage.setItem('sw_data_v3', JSON.stringify(empty));
+  render();
+  out('✅ 已清空本机游戏清单（sw_data_v3 现在是 0 款）。\n\n' +
+      '接下来：\n1. 打开 index.html，用密钥进入；\n2. 录入你真正想追的游戏；\n' +
+      '3. 设置 → ☁️ 云端同步 → 保存并同步一次。');
+});
+
+$('#clearAll').addEventListener('click', () => {
+  if (!confirm('确定要清空全部本地数据吗？\n包括游戏清单、筛选条件、云端同步配置（Token 也会被清掉）。\n\n访问密钥不会被删。')) return;
+  ['sw_data_v3', 'sw_filters_v3', 'sw_settings_v3', 'sw_cloud_cfg_v1',
+   'sw_gate_pass_v1', 'sw_gate_tries_v1', 'sw_gate_owner_v1'].forEach(k => {
+    localStorage.removeItem(k);
+  });
+  render();
+  out('✅ 已清空全部本地数据。\n\n访问密钥保留着，可以直接用 579200 登录。\n' +
+      '重新进入页面后，需要重新配置云端同步（填 Token 和仓库名 wish-list）。');
+});
+
+render();
+</script>
+</body>
+</html>
