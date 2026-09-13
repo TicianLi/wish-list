@@ -3808,6 +3808,32 @@ function describeGhError(status, err, cfg) {
   return 'HTTP ' + status + (api ? '：' + api : '');
 }
 
+/* 网络层错误翻译：fetch 抛出的 TypeError: Failed to fetch 完全没信息量，
+   必须附上"到底是断网、被墙、还是被拦截"的判断，否则用户只能猜。 */
+function describeNetworkError(e, url) {
+  const msg = String((e && e.message) || e || '');
+  if (/abort/i.test(msg)) return '请求被中断（超时或手动取消）。若经常超时，请看下面关于网络的说明。';
+  if (!/Failed to fetch|NetworkError|Load failed/i.test(msg)) return msg || '未知错误';
+  const online = (typeof navigator !== 'undefined' && 'onLine' in navigator) ? navigator.onLine : null;
+  const isFile = (typeof location !== 'undefined') && location.protocol === 'file:';
+  const hint = [];
+  if (online === false) hint.push('系统报告当前处于离线状态，请检查网络连接。');
+  if (isFile) hint.push('当前是以 file:// 直接打开页面的，浏览器会拦住跨域请求——' +
+    '请通过 https 网址访问（例如你的 GitHub Pages 地址）。');
+  hint.push('无法访问 api.github.com，常见原因：');
+  hint.push('  ① 网络/代理拦截了 api.github.com（国内直连经常失败）；');
+  hint.push('  ② 浏览器扩展（广告拦截、隐私防护）挡住了请求；');
+  hint.push('  ③ 公司/校园网限制。');
+  hint.push('可以试试：换个网络、关掉拦截类扩展，或用手机热点。');
+  return '连不上 GitHub（' + (url || 'api.github.com') + '）。\n' + hint.join('\n');
+}
+
+/* 判断一次同步失败是不是"网络层"的问题（而不是权限问题） */
+function isNetworkError(e) {
+  const msg = String((e && e.message) || e || '');
+  return /Failed to fetch|NetworkError|Load failed|连不上 GitHub/i.test(msg);
+}
+
 /* 统一的请求入口：带 Token，把状态码转成业务错误 */
 async function ghFetch(url, token, opts) {
   const headers = Object.assign({
@@ -3815,7 +3841,16 @@ async function ghFetch(url, token, opts) {
     'Accept': 'application/vnd.github+json',
     'X-GitHub-Api-Version': '2022-11-28'
   }, (opts && opts.headers) || {});
-  const resp = await fetch(url, Object.assign({}, opts, { headers }));
+  let resp;
+  try {
+    resp = await fetch(url, Object.assign({}, opts, { headers }));
+  } catch (e) {
+    // fetch 在"网络层"失败（断网 / 被墙 / 被扩展拦截）时抛 TypeError，
+    // 这里必须翻译成人话再往上抛，否则用户只看到 "Failed to fetch"。
+    const e2 = new Error(describeNetworkError(e, url));
+    e2.network = true;
+    throw e2;
+  }
   if (!resp.ok) {
     const err = await resp.json().catch(() => ({}));
     const e = new Error(describeGhError(resp.status, err, (opts && opts.__cfg) || {}));
@@ -3829,9 +3864,15 @@ async function ghFetch(url, token, opts) {
 async function cloudTest(cfg, token) {
   const repoFull = cfg.owner + '/' + cfg.repo;
   // 1) 能不能看到这个仓库？
-  const r1 = await fetch('https://api.github.com/repos/' + repoFull, {
-    headers: { 'Authorization': 'Bearer ' + token, 'Accept': 'application/vnd.github+json', 'X-GitHub-Api-Version': '2022-11-28' }
-  });
+  let r1;
+  const url1 = 'https://api.github.com/repos/' + repoFull;
+  try {
+    r1 = await fetch(url1, {
+      headers: { 'Authorization': 'Bearer ' + token, 'Accept': 'application/vnd.github+json', 'X-GitHub-Api-Version': '2022-11-28' }
+    });
+  } catch (e) {
+    throw new Error(describeNetworkError(e, 'api.github.com'));
+  }
   if (r1.status === 401) throw new Error('Token 无效或已过期（HTTP 401）。请重新生成一个。');
   if (r1.status === 403) {
     const err = await r1.json().catch(() => ({}));
@@ -3899,9 +3940,14 @@ async function cloudSync(opts) {
     updateCloudHint();
     return { ok: true };
   } catch (e) {
-    toast('云端同步失败：' + e.message + '\n（可到「设置 → 云端同步」里检查 Token 和仓库配置）', 'error', 12000);
+    // 网络层失败和权限失败，给的建议完全不同，提示必须分开
+    const netFail = e.network || isNetworkError(e);
+    const tail = netFail
+      ? '\n（这是网络问题，不是 Token 权限问题。Token 已保存，换网络后可直接重试。）'
+      : '\n（可到「设置 → 云端同步」点「测试连接」定位问题。）';
+    toast('云端同步失败：' + e.message + tail, 'error', 15000);
     dbgPush({ ok: false, via: 'cloud-sync', url: shortUrl(api), err: String(e.message) });
-    return { ok: false, reason: 'http', error: e };
+    return { ok: false, reason: netFail ? 'network' : 'http', error: e };
   } finally {
     releaseProgress();
   }

@@ -405,7 +405,7 @@ npm run refresh
 改完 `index.html` 后，建议跑一遍这几套真实浏览器（Chrome via puppeteer-core）测试：
 
 ```bash
-node tools/_test_sha.cjs         # 纯 JS SHA-256 回退实现，7 条向量
+node tools/_test_sha.cjs         # 纯 JS SHA-256 回退实现，7 条
 node tools/_test_v2.cjs          # 列表行数 / 统计卡折叠 / 筛选计数，27 条
 node tools/_test_gate.cjs        # 密钥门全流程（锁定/解锁/改密/过期），27 条
 node tools/_test_gate_open.cjs   # 全新访客开箱即锁 + 默认密钥可进，19 条
@@ -413,8 +413,25 @@ node tools/_test_gate_sec.cjs    # ★ 站主豁免不可白拿（安全回归�
 node tools/_test_cloud.cjs       # ★ 云端同步设置 UI + 403 排查提示，36 条
 node tools/_test_ui.cjs          # 整体 UI 冒烟，35 条
 node tools/_test_vp.cjs          # 6 种视口下的行数保证，6 条
+node tools/_test_index.cjs       # 关键 id / 函数静态存在性（需在项目根目录跑），20 项
 ```
 
-全部应当 `FAIL 0`。
+全部应当 `FAIL 0`。合计 **202 条**。
+
+> ⚠️ `_test_index.cjs` 和 `_chk.cjs` 读的是相对路径 `index.html`，
+> **必须在 `wishlist/` 目录下运行**，否则会 `ENOENT`。
 
 > 测试跑在真实 Chrome 上，需要本机能找到 Chrome/Edge。重新算密钥 hash 用 `node tools/_genhash.cjs`。
+
+### 连通性自检页
+
+`连通性自检.html` 是给用户排查 `Failed to fetch` 用的**独立只读诊断页**，
+不依赖 `index.html`，但要靠 `index.html` 同目录部署才能同源访问：
+
+```
+https://ticianli.github.io/wishlist/连通性自检.html
+```
+
+它逐跳测：页面协议 → `navigator.onLine` → `api.github.com/rate_limit` →
+`githubstatus.com` → 匿名配额 → 带 Token 读仓库，最后给出三方结论之一：
+「网络层被拦」「网络可达但 Token/仓库配置有问题」「一切正常」。
