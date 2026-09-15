@@ -1,7 +1,5158 @@
 {
   "version": 3,
-  "updatedAt": 1789448692864,
+  "updatedAt": 1789449786064,
   "games": [
+    {
+      "appid": 2417610,
+      "name": "METAL GEAR SOLID Δ: SNAKE EATER",
+      "originalName": "METAL GEAR SOLID Δ: SNAKE EATER",
+      "price": {
+        "current": 187.2,
+        "original": 288,
+        "discountPercent": 35,
+        "currency": "CNY",
+        "isOnSale": true,
+        "discountExpiration": null,
+        "updatedAt": 1789449627852
+      },
+      "rating": {
+        "score": 6.5,
+        "positive": 63,
+        "total": 1020,
+        "desc": "Mixed",
+        "updatedAt": 1789449629221
+      },
+      "historicalLow": {
+        "price": 87.2,
+        "count": 1,
+        "confidence": "A",
+        "source": "ITAD(国区)",
+        "updatedAt": 1789449630709,
+        "currency": "CNY"
+      },
+      "targetPrice": null,
+      "note": "",
+      "dlcList": [
+        {
+          "appid": 3364840,
+          "name": "METAL GEAR SOLID Δ: SNAKE EATER - Sneaking DLC Pack",
+          "price": 110,
+          "shortDescription": "可以搭配『METAL GEAR SOLID Δ: SNAKE EATER』使用，Snake的制服和脸部、装备品等等，让潜行体验更有趣的套装礼包。",
+          "description": "可以搭配『METAL GEAR SOLID Δ: SNAKE EATER』使用，Snake的制服和脸部、装备品等等，让潜行体验更有趣的套装礼包。",
+          "kind": "其他",
+          "type": "dlc",
+          "originalDescription": "可以搭配『METAL GEAR SOLID Δ: SNAKE EATER』使用，Snake的制服和脸部、装备品等等，让潜行体验更有趣的套装礼包。",
+          "translated": false,
+          "updatedAt": 1789449631333
+        }
+      ],
+      "details": {
+        "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2417610/05c97cbcd0cfc27c8ed6c7fc6d81e0995aa2a7d4/header.jpg?t=1762249119",
+        "isFree": false,
+        "type": "game",
+        "releaseDate": "2025 年 8 月 28 日",
+        "releaseTs": null,
+        "developers": [
+          "KONAMI"
+        ],
+        "publishers": [
+          "KONAMI"
+        ],
+        "platforms": [
+          "Windows"
+        ],
+        "categories": [
+          "单人",
+          "多人",
+          "玩家对战",
+          "线上玩家对战",
+          "Steam 成就",
+          "完全支持控制器",
+          "Steam 集换式卡牌",
+          "可调整文字大小",
+          "视角舒适度",
+          "可选颜色",
+          "自定义音量控制",
+          "可调整难度",
+          "推荐使用手柄",
+          "无需应对快速反应事件",
+          "DUALSHOCK 控制器支持",
+          "DualSense 控制器支持",
+          "立体声",
+          "字幕选项",
+          "环绕声",
+          "Steam 云",
+          "可用 HDR",
+          "家庭共享"
+        ],
+        "genres": [
+          "动作",
+          "冒险"
+        ],
+        "tags": [
+          "动作",
+          "冒险"
+        ],
+        "featureTags": [
+          "单人",
+          "多人",
+          "在线对战",
+          "成就",
+          "集换式卡牌",
+          "云存档",
+          "手柄支持",
+          "家庭共享"
+        ],
+        "metacritic": null,
+        "chineseSupport": true,
+        "reviewTotal": 13537,
+        "description": "全部故事的起点。 以2004年推出的「METAL GEAR SOLID 3 SNAKE EATER」为范本的重制版作品。 在维持原作剧情与世界观的同时，透过最新的画面与富立体感的音效表现，享受在丛林中的极致求生匿踪动作体验。",
+        "descriptionOriginal": "全部故事的起点。 以2004年推出的「METAL GEAR SOLID 3 SNAKE EATER」为范本的重制版作品。 在维持原作剧情与世界观的同时，透过最新的画面与富立体感的音效表现，享受在丛林中的极致求生匿踪动作体验。",
+        "descriptionTranslated": false
+      },
+      "createdAt": 1789449629221,
+      "updatedAt": 1789449631333
+    },
+    {
+      "appid": 678960,
+      "name": "CODE VEIN",
+      "originalName": "CODE VEIN",
+      "price": {
+        "current": 268,
+        "original": 268,
+        "discountPercent": 0,
+        "currency": "CNY",
+        "isOnSale": false,
+        "discountExpiration": null,
+        "updatedAt": 1789449607120
+      },
+      "rating": {
+        "score": 7.5,
+        "positive": 79,
+        "total": 16848,
+        "desc": "Mostly Positive",
+        "updatedAt": 1789449608499
+      },
+      "historicalLow": {
+        "price": 26.8,
+        "count": 4,
+        "confidence": "A",
+        "source": "ITAD(国区)",
+        "updatedAt": 1789449610160,
+        "currency": "CNY"
+      },
+      "targetPrice": null,
+      "note": "",
+      "dlcList": [
+        {
+          "appid": 773991,
+          "name": "CODE VEIN - Season Pass",
+          "price": 148,
+          "shortDescription": "《CODE VEIN 噬血代码》DLC Season Pass，包含第一波至第三波的DLC── 内容有全新强敌，以及能够取得武器、吸血牙装的新深层。",
+          "description": "《CODE VEIN 噬血代码》DLC Season Pass，包含第一波至第三波的DLC── 内容有全新强敌，以及能够取得武器、吸血牙装的新深层。",
+          "kind": "季票",
+          "type": "dlc",
+          "originalDescription": "《CODE VEIN 噬血代码》DLC Season Pass，包含第一波至第三波的DLC── 内容有全新强敌，以及能够取得武器、吸血牙装的新深层。",
+          "translated": false,
+          "updatedAt": 1789449610820
+        },
+        {
+          "appid": 774011,
+          "name": "CODE VEIN: Hellfire Knight",
+          "price": 58,
+          "shortDescription": "《CODE VEIN 噬血代码》第一波DLC── 内容有全新强敌、武器、吸血牙装、血码、新深层，以及同行搭档的相异造型角色等等。",
+          "description": "《CODE VEIN 噬血代码》第一波DLC── 内容有全新强敌、武器、吸血牙装、血码、新深层，以及同行搭档的相异造型角色等等。",
+          "kind": "其他",
+          "type": "dlc",
+          "originalDescription": "《CODE VEIN 噬血代码》第一波DLC── 内容有全新强敌、武器、吸血牙装、血码、新深层，以及同行搭档的相异造型角色等等。",
+          "translated": false,
+          "updatedAt": 1789449612027
+        },
+        {
+          "appid": 875950,
+          "name": "CODE VEIN: Frozen Empress",
+          "price": 58,
+          "shortDescription": "《CODE VEIN 噬血代码》第二波DLC── 内容有全新强敌、武器、吸血牙装、血码、新深层，以及同行搭档的相异造型角色等等。",
+          "description": "《CODE VEIN 噬血代码》第二波DLC── 内容有全新强敌、武器、吸血牙装、血码、新深层，以及同行搭档的相异造型角色等等。",
+          "kind": "其他",
+          "type": "dlc",
+          "originalDescription": "《CODE VEIN 噬血代码》第二波DLC── 内容有全新强敌、武器、吸血牙装、血码、新深层，以及同行搭档的相异造型角色等等。",
+          "translated": false,
+          "updatedAt": 1789449613226
+        },
+        {
+          "appid": 875960,
+          "name": "CODE VEIN: Lord of Thunder",
+          "price": 58,
+          "shortDescription": "《CODE VEIN 噬血代码》第三波DLC── 内容有全新强敌、武器、吸血牙装、血码、新深层，以及同行搭档的相异造型角色等等。",
+          "description": "《CODE VEIN 噬血代码》第三波DLC── 内容有全新强敌、武器、吸血牙装、血码、新深层，以及同行搭档的相异造型角色等等。",
+          "kind": "其他",
+          "type": "dlc",
+          "originalDescription": "《CODE VEIN 噬血代码》第三波DLC── 内容有全新强敌、武器、吸血牙装、血码、新深层，以及同行搭档的相异造型角色等等。",
+          "translated": false,
+          "updatedAt": 1789449614449
+        }
+      ],
+      "details": {
+        "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/678960/header.jpg?t=1766015412",
+        "isFree": false,
+        "type": "game",
+        "releaseDate": "2019 年 9 月 26 日",
+        "releaseTs": null,
+        "developers": [
+          "Bandai Namco Studios"
+        ],
+        "publishers": [
+          "Bandai Namco Entertainment"
+        ],
+        "platforms": [
+          "Windows"
+        ],
+        "categories": [
+          "单人",
+          "多人",
+          "合作",
+          "在线合作",
+          "Steam 成就",
+          "Steam 集换式卡牌",
+          "DUALSHOCK 控制器支持",
+          "部分支持控制器",
+          "Steam 云",
+          "家庭共享"
+        ],
+        "genres": [
+          "动作",
+          "角色扮演"
+        ],
+        "tags": [
+          "动作",
+          "角色扮演"
+        ],
+        "featureTags": [
+          "单人",
+          "多人",
+          "联机合作",
+          "成就",
+          "集换式卡牌",
+          "云存档",
+          "家庭共享"
+        ],
+        "metacritic": 72,
+        "chineseSupport": false,
+        "reviewTotal": 46312,
+        "description": "时间在近未来，因为“审判荆棘”的出现，世界步向毁灭，名为“VEIN”的封闭土地相应而生。",
+        "descriptionOriginal": "时间在近未来，因为“审判荆棘”的出现，世界步向毁灭，名为“VEIN”的封闭土地相应而生。",
+        "descriptionTranslated": false
+      },
+      "createdAt": 1789449608499,
+      "updatedAt": 1789449614449
+    },
+    {
+      "appid": 812140,
+      "name": "Assassin's Creed® Odyssey",
+      "originalName": "Assassin's Creed® Odyssey",
+      "price": {
+        "current": 248,
+        "original": 248,
+        "discountPercent": 0,
+        "currency": "CNY",
+        "isOnSale": false,
+        "discountExpiration": null,
+        "updatedAt": 1789449571161
+      },
+      "rating": {
+        "score": 8.9,
+        "positive": 86,
+        "total": 62578,
+        "desc": "Very Positive",
+        "updatedAt": 1789449572950
+      },
+      "historicalLow": {
+        "price": 0,
+        "count": 1,
+        "confidence": "A",
+        "source": "ITAD(国区)",
+        "updatedAt": 1789449574942,
+        "currency": "CNY"
+      },
+      "targetPrice": null,
+      "note": "",
+      "dlcList": [
+        {
+          "appid": 937890,
+          "name": "Assassin's Creed® Odyssey - Season Pass",
+          "price": 198,
+          "shortDescription": "通过 Season Pass 里面两个全新的故事单元继续你的奥德赛史诗之旅，每个故事单元都有三个精彩事件。 购买 Season Pass 的玩家也会得到《Assassin's Creed III REMASTERED》和《Assassin's Creed Liberation REMASTERED》主游戏。",
+          "description": "通过 Season Pass 里面两个全新的故事单元继续你的奥德赛史诗之旅，每个故事单元都有三个精彩事件。 购买 Season Pass 的玩家也会得到《Assassin's Creed III REMASTERED》和《Assassin's Creed Liberation REMASTERED》主游戏。",
+          "kind": "季票",
+          "type": "dlc",
+          "originalDescription": "通过 Season Pass 里面两个全新的故事单元继续你的奥德赛史诗之旅，每个故事单元都有三个精彩事件。 购买 Season Pass 的玩家也会得到《Assassin's Creed III REMASTERED》和《Assassin's Creed Liberation REMASTERED》主游戏。",
+          "translated": false,
+          "updatedAt": 1789449575553
+        },
+        {
+          "appid": 937891,
+          "name": "Assassin’s CreedⓇ Odyssey – Legacy of the First Blade",
+          "price": 125,
+          "shortDescription": "与最先挥舞袖剑、改变历史轨迹的传奇人物并肩作战，同时深入了解刺客选择在阴影里战斗的原因。",
+          "description": "与最先挥舞袖剑、改变历史轨迹的传奇人物并肩作战，同时深入了解刺客选择在阴影里战斗的原因。",
+          "kind": "其他",
+          "type": "dlc",
+          "originalDescription": "与最先挥舞袖剑、改变历史轨迹的传奇人物并肩作战，同时深入了解刺客选择在阴影里战斗的原因。",
+          "translated": false,
+          "updatedAt": 1789449576314
+        },
+        {
+          "appid": 937892,
+          "name": "Assassin’s CreedⓇ Odyssey - The Fate of Atlantis",
+          "price": 125,
+          "shortDescription": "在第二部 DLC“亚特兰提斯之命运”当中，冒险进入希腊神话中的传说境地，探索你的英雄的真实力量，并揭露第一文明的秘密。",
+          "description": "在第二部 DLC“亚特兰提斯之命运”当中，冒险进入希腊神话中的传说境地，探索你的英雄的真实力量，并揭露第一文明的秘密。",
+          "kind": "其他",
+          "type": "dlc",
+          "originalDescription": "在第二部 DLC“亚特兰提斯之命运”当中，冒险进入希腊神话中的传说境地，探索你的英雄的真实力量，并揭露第一文明的秘密。",
+          "translated": false,
+          "updatedAt": 1789449576837
+        }
+      ],
+      "details": {
+        "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/812140/header_schinese.jpg?t=1786633104",
+        "isFree": false,
+        "type": "game",
+        "releaseDate": "2018 年 10 月 5 日",
+        "releaseTs": null,
+        "developers": [
+          "Ubisoft Quebec",
+          "Ubisoft Montreal",
+          "Ubisoft Bucharest",
+          "Ubisoft Singapore",
+          "Ubisoft Montpellier",
+          "Ubisoft Kiev",
+          "Ubisoft Shanghai"
+        ],
+        "publishers": [
+          "Ubisoft"
+        ],
+        "platforms": [
+          "Windows"
+        ],
+        "categories": [
+          "单人",
+          "Steam 成就",
+          "Steam 集换式卡牌",
+          "支持字幕",
+          "应用内购买",
+          "视角舒适度",
+          "自定义音量控制",
+          "可调整难度",
+          "可以仅用键盘",
+          "可以仅用鼠标",
+          "无需应对快速反应事件",
+          "随时保存",
+          "立体声",
+          "环绕声",
+          "部分支持控制器",
+          "在手机上远程畅玩",
+          "在平板上远程畅玩",
+          "可用 HDR"
+        ],
+        "genres": [
+          "动作",
+          "冒险",
+          "角色扮演"
+        ],
+        "tags": [
+          "动作",
+          "冒险",
+          "角色扮演"
+        ],
+        "featureTags": [
+          "单人",
+          "成就",
+          "集换式卡牌"
+        ],
+        "metacritic": null,
+        "chineseSupport": true,
+        "reviewTotal": 172104,
+        "description": "在这款动作冒险游戏中，扬帆驶向古希腊，改变这个国度的命运。陆海激战，从流浪者蜕变成传奇人物，找出自己过往的秘密。",
+        "descriptionOriginal": "在这款动作冒险游戏中，扬帆驶向古希腊，改变这个国度的命运。陆海激战，从流浪者蜕变成传奇人物，找出自己过往的秘密。",
+        "descriptionTranslated": false
+      },
+      "createdAt": 1789449572950,
+      "updatedAt": 1789449576837
+    },
+    {
+      "appid": 3321460,
+      "name": "红色沙漠：增强版",
+      "originalName": "红色沙漠：增强版",
+      "price": {
+        "current": 268,
+        "original": 268,
+        "discountPercent": 0,
+        "currency": "CNY",
+        "isOnSale": false,
+        "discountExpiration": null,
+        "updatedAt": 1789449564191
+      },
+      "rating": {
+        "score": 7.5,
+        "positive": 70,
+        "total": 24857,
+        "desc": "Mostly Positive",
+        "updatedAt": 1789449564829
+      },
+      "historicalLow": {
+        "price": 214.4,
+        "count": 1,
+        "confidence": "A",
+        "source": "ITAD(国区)",
+        "updatedAt": 1789449566305,
+        "currency": "CNY"
+      },
+      "targetPrice": null,
+      "note": "",
+      "dlcList": [
+        {
+          "appid": 5001840,
+          "name": "红色沙漠：增强版 - 未知征途",
+          "price": 108,
+          "shortDescription": "开放世界动作冒险游戏红色沙漠首个DLC——《未知征途》。 探索帕卫尔的大陆与大洋，体验全新冒险。寻找机遇，再次写下新篇章。",
+          "description": "开放世界动作冒险游戏红色沙漠首个DLC——《未知征途》。 探索帕卫尔的大陆与大洋，体验全新冒险。寻找机遇，再次写下新篇章。",
+          "kind": "其他",
+          "type": "dlc",
+          "originalDescription": "开放世界动作冒险游戏红色沙漠首个DLC——《未知征途》。 探索帕卫尔的大陆与大洋，体验全新冒险。寻找机遇，再次写下新篇章。",
+          "translated": false,
+          "updatedAt": 1789449566980
+        },
+        {
+          "appid": 4024620,
+          "name": "Crimson Desert - Deluxe Pack",
+          "price": 81,
+          "shortDescription": "使用豪华组合包，让冒险变得更加丰富精彩！ 通过克里夫的防具、盾牌和马具，体验多彩的冒险之旅吧！",
+          "description": "使用豪华组合包，让冒险变得更加丰富精彩！ 通过克里夫的防具、盾牌和马具，体验多彩的冒险之旅吧！",
+          "kind": "版本升级包",
+          "type": "dlc",
+          "originalDescription": "使用豪华组合包，让冒险变得更加丰富精彩！ 通过克里夫的防具、盾牌和马具，体验多彩的冒险之旅吧！",
+          "translated": false,
+          "updatedAt": 1789449568234
+        },
+        {
+          "appid": 4572870,
+          "name": "红色沙漠原声带 Vol. 1",
+          "price": 0,
+          "shortDescription": "帕卫尔的宏大史诗：执着打磨的声音设计与磅礴旋律的和谐交融",
+          "description": "帕卫尔的宏大史诗：执着打磨的声音设计与磅礴旋律的和谐交融",
+          "kind": "原声",
+          "type": "music",
+          "originalDescription": "帕卫尔的宏大史诗：执着打磨的声音设计与磅礴旋律的和谐交融",
+          "translated": false,
+          "updatedAt": 1789449569438
+        }
+      ],
+      "details": {
+        "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3321460/72caf7e120e63fcf25b92e3b4b6477b76baffa45/header_schinese.jpg?t=1789020763",
+        "isFree": false,
+        "type": "game",
+        "releaseDate": "2026 年 3 月 19 日",
+        "releaseTs": null,
+        "developers": [
+          "Pearl Abyss"
+        ],
+        "publishers": [
+          "Pearl Abyss"
+        ],
+        "platforms": [
+          "Windows",
+          "macOS"
+        ],
+        "categories": [
+          "单人",
+          "Steam 成就",
+          "完全支持控制器",
+          "自定义音量控制",
+          "推荐使用手柄",
+          "DualSense 控制器支持",
+          "随时保存",
+          "立体声",
+          "字幕选项",
+          "环绕声",
+          "Steam 云",
+          "可用 HDR",
+          "家庭共享"
+        ],
+        "genres": [
+          "动作",
+          "冒险"
+        ],
+        "tags": [
+          "动作",
+          "冒险"
+        ],
+        "featureTags": [
+          "单人",
+          "成就",
+          "云存档",
+          "手柄支持",
+          "家庭共享"
+        ],
+        "metacritic": null,
+        "chineseSupport": true,
+        "reviewTotal": 114823,
+        "description": "以帕卫尔大陆为背景展开的开放世界动作冒险游戏——《红色沙漠》。 你将化身灰鬃的克里夫，踏上夺回失去的一切、从迫近的威胁中拯救世界的旅程。 驰骋广袤的野生大陆、深入隐藏的古代遗迹、行走于神秘的阿比斯领域，在战斗、探险与发现中开辟只属于你的道路。",
+        "descriptionOriginal": "以帕卫尔大陆为背景展开的开放世界动作冒险游戏——《红色沙漠》。 你将化身灰鬃的克里夫，踏上夺回失去的一切、从迫近的威胁中拯救世界的旅程。 驰骋广袤的野生大陆、深入隐藏的古代遗迹、行走于神秘的阿比斯领域，在战斗、探险与发现中开辟只属于你的道路。",
+        "descriptionTranslated": false
+      },
+      "createdAt": 1789449564829,
+      "updatedAt": 1789449569438
+    },
+    {
+      "appid": 3489700,
+      "name": "剑星",
+      "originalName": "剑星",
+      "price": {
+        "current": 268,
+        "original": 268,
+        "discountPercent": 0,
+        "currency": "CNY",
+        "isOnSale": false,
+        "discountExpiration": null,
+        "updatedAt": 1789449552672
+      },
+      "rating": {
+        "score": 9.6,
+        "positive": 92,
+        "total": 43865,
+        "desc": "Very Positive",
+        "updatedAt": 1789449553098
+      },
+      "historicalLow": {
+        "price": 179.56,
+        "count": 1,
+        "confidence": "A",
+        "source": "ITAD(国区)",
+        "updatedAt": 1789449554444,
+        "currency": "CNY"
+      },
+      "targetPrice": null,
+      "note": "",
+      "dlcList": [],
+      "details": {
+        "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3489700/header.jpg?t=1776466244",
+        "isFree": false,
+        "type": "game",
+        "releaseDate": "2025 年 6 月 11 日",
+        "releaseTs": null,
+        "developers": [
+          "SHIFT UP Corporation"
+        ],
+        "publishers": [
+          "PlayStation Publishing LLC (excluding China)"
+        ],
+        "platforms": [
+          "Windows"
+        ],
+        "categories": [
+          "单人",
+          "Steam 成就",
+          "完全支持控制器",
+          "Steam 集换式卡牌",
+          "可调整文字大小",
+          "视角舒适度",
+          "可选颜色",
+          "自定义音量控制",
+          "可调整难度",
+          "无需应对快速反应事件",
+          "DUALSHOCK 控制器支持",
+          "DUALSHOCK 控制器支持",
+          "DualSense 控制器支持",
+          "DualSense 控制器支持",
+          "Steam 输入 API 支持",
+          "立体声",
+          "字幕选项",
+          "环绕声",
+          "Steam 云",
+          "统计数据",
+          "可用 HDR",
+          "家庭共享"
+        ],
+        "genres": [
+          "动作",
+          "冒险",
+          "角色扮演"
+        ],
+        "tags": [
+          "动作",
+          "冒险",
+          "角色扮演"
+        ],
+        "featureTags": [
+          "单人",
+          "成就",
+          "集换式卡牌",
+          "云存档",
+          "家庭共享"
+        ],
+        "metacritic": null,
+        "chineseSupport": true,
+        "reviewTotal": 61244,
+        "description": "在后末日动作冒险游戏《剑星》中拯救濒临灭绝的人类。揭开地球衰败之谜，体验激烈战斗与曲折剧情。",
+        "descriptionOriginal": "在后末日动作冒险游戏《剑星》中拯救濒临灭绝的人类。揭开地球衰败之谜，体验激烈战斗与曲折剧情。",
+        "descriptionTranslated": false
+      },
+      "createdAt": 1789449553098,
+      "updatedAt": 1789449553098
+    },
+    {
+      "appid": 1627720,
+      "name": "Lies of P",
+      "originalName": "Lies of P",
+      "price": {
+        "current": 149,
+        "original": 298,
+        "discountPercent": 50,
+        "currency": "CNY",
+        "isOnSale": true,
+        "discountExpiration": null,
+        "updatedAt": 1789449495987
+      },
+      "rating": {
+        "score": 8.4,
+        "positive": 84,
+        "total": 14109,
+        "desc": "Very Positive",
+        "updatedAt": 1789449497299
+      },
+      "historicalLow": {
+        "price": 149,
+        "count": 16,
+        "confidence": "A",
+        "source": "ITAD(国区)",
+        "updatedAt": 1789449498803,
+        "currency": "CNY"
+      },
+      "targetPrice": null,
+      "note": "",
+      "dlcList": [
+        {
+          "appid": 2848330,
+          "name": "Lies of P: Overture",
+          "price": 129,
+          "shortDescription": "在《Lies of P: Overture》中，跨越时间的界限，回到濒临毁灭的克拉特市，见证这座城市昔日不为人知的辉煌。跟随传奇追迹者的脚步，揭露那些被掩埋的真相。在一系列史诗级战斗中击败强敌，改写《Lies of P》的过去与未来。",
+          "description": "在《Lies of P: Overture》中，跨越时间的界限，回到濒临毁灭的克拉特市，见证这座城市昔日不为人知的辉煌。跟随传奇追迹者的脚步，揭露那些被掩埋的真相。在一系列史诗级战斗中击败强敌，改写《Lies of P》的过去与未来。",
+          "kind": "其他",
+          "type": "dlc",
+          "originalDescription": "在《Lies of P: Overture》中，跨越时间的界限，回到濒临毁灭的克拉特市，见证这座城市昔日不为人知的辉煌。跟随传奇追迹者的脚步，揭露那些被掩埋的真相。在一系列史诗级战斗中击败强敌，改写《Lies of P》的过去与未来。",
+          "translated": false,
+          "updatedAt": 1789449499459
+        },
+        {
+          "appid": 2325281,
+          "name": "Lies of P: Prince of Krat Cosmetics Pack",
+          "price": 50,
+          "shortDescription": "• 伟大维尼尼的标志性外套 • 伟大维尼尼的眼镜 • 为节日做准备的人们佩戴的面具",
+          "description": "• 伟大维尼尼的标志性外套 • 伟大维尼尼的眼镜 • 为节日做准备的人们佩戴的面具",
+          "kind": "外观道具",
+          "type": "dlc",
+          "originalDescription": "• 伟大维尼尼的标志性外套 • 伟大维尼尼的眼镜 • 为节日做准备的人们佩戴的面具",
+          "translated": false,
+          "updatedAt": 1789449500035
+        },
+        {
+          "appid": 1938420,
+          "name": "Lies of P : Soundtrack",
+          "price": 63,
+          "shortDescription": "共70首的《Lies of P》插曲",
+          "description": "共70首的《Lies of P》插曲",
+          "kind": "原声",
+          "type": "music",
+          "originalDescription": "共70首的《Lies of P》插曲",
+          "translated": false,
+          "updatedAt": 1789449500661
+        }
+      ],
+      "details": {
+        "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1627720/header.jpg?t=1764565054",
+        "isFree": false,
+        "type": "game",
+        "releaseDate": "2023 年 9 月 18 日",
+        "releaseTs": null,
+        "developers": [
+          "NEOWIZ"
+        ],
+        "publishers": [
+          "NEOWIZ"
+        ],
+        "platforms": [
+          "Windows",
+          "macOS"
+        ],
+        "categories": [
+          "单人",
+          "Steam 成就",
+          "完全支持控制器",
+          "视角舒适度",
+          "可选颜色",
+          "自定义音量控制",
+          "可调整难度",
+          "推荐使用手柄",
+          "DUALSHOCK 控制器支持",
+          "DUALSHOCK 控制器支持",
+          "DualSense 控制器支持",
+          "DualSense 控制器支持",
+          "随时保存",
+          "立体声",
+          "环绕声",
+          "Steam 云",
+          "家庭共享"
+        ],
+        "genres": [
+          "动作",
+          "冒险",
+          "角色扮演"
+        ],
+        "tags": [
+          "动作",
+          "冒险",
+          "角色扮演"
+        ],
+        "featureTags": [
+          "单人",
+          "成就",
+          "云存档",
+          "手柄支持",
+          "家庭共享"
+        ],
+        "metacritic": null,
+        "chineseSupport": true,
+        "reviewTotal": 58340,
+        "description": "《Lies of P》是一款精彩刺激的魂类游戏，灵感源于《匹诺曹》的故事，风格颠覆原作，游戏设定在“美好时代”的暗黑优雅背景之下。",
+        "descriptionOriginal": "《Lies of P》是一款精彩刺激的魂类游戏，灵感源于《匹诺曹》的故事，风格颠覆原作，游戏设定在“美好时代”的暗黑优雅背景之下。",
+        "descriptionTranslated": false
+      },
+      "createdAt": 1789449497299,
+      "updatedAt": 1789449500661
+    },
+    {
+      "appid": 2582320,
+      "name": "Mixtape",
+      "originalName": "Mixtape",
+      "price": {
+        "current": 68,
+        "original": 68,
+        "discountPercent": 0,
+        "currency": "CNY",
+        "isOnSale": false,
+        "discountExpiration": null,
+        "updatedAt": 1789449489004
+      },
+      "rating": {
+        "score": 9.2,
+        "positive": 89,
+        "total": 1333,
+        "desc": "Very Positive",
+        "updatedAt": 1789449490176
+      },
+      "historicalLow": {
+        "price": 61.2,
+        "count": 3,
+        "confidence": "A",
+        "source": "ITAD(国区)",
+        "updatedAt": 1789449491551,
+        "currency": "CNY"
+      },
+      "targetPrice": null,
+      "note": "",
+      "dlcList": [],
+      "details": {
+        "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2582320/95bbf1097b6f66f39b56f6388250c97a2f43b59e/header.jpg?t=1785424305",
+        "isFree": false,
+        "type": "game",
+        "releaseDate": "2026 年 5 月 7 日",
+        "releaseTs": null,
+        "developers": [
+          "Beethoven and Dinosaur"
+        ],
+        "publishers": [
+          "Annapurna Interactive"
+        ],
+        "platforms": [
+          "Windows"
+        ],
+        "categories": [
+          "单人",
+          "Steam 成就",
+          "完全支持控制器",
+          "Steam 集换式卡牌",
+          "可调整文字大小",
+          "可选颜色",
+          "自定义音量控制",
+          "推荐使用手柄",
+          "无需应对快速反应事件",
+          "DUALSHOCK 控制器支持",
+          "DUALSHOCK 控制器支持",
+          "DualSense 控制器支持",
+          "DualSense 控制器支持",
+          "立体声",
+          "字幕选项",
+          "Steam 云",
+          "家庭共享"
+        ],
+        "genres": [
+          "冒险",
+          "独立"
+        ],
+        "tags": [
+          "冒险",
+          "独立"
+        ],
+        "featureTags": [
+          "单人",
+          "成就",
+          "集换式卡牌",
+          "云存档",
+          "手柄支持",
+          "家庭共享"
+        ],
+        "metacritic": 87,
+        "chineseSupport": true,
+        "reviewTotal": 7353,
+        "description": "在齐聚的最后一晚，三位好友踏上了最后一次冒险之旅。伴着混音带走过青春记忆，陶醉在属于一代人的经典旋律中。",
+        "descriptionOriginal": "在齐聚的最后一晚，三位好友踏上了最后一次冒险之旅。伴着混音带走过青春记忆，陶醉在属于一代人的经典旋律中。",
+        "descriptionTranslated": false
+      },
+      "createdAt": 1789449490176,
+      "updatedAt": 1789449490176
+    },
+    {
+      "appid": 2447680,
+      "name": "孤岛笔记",
+      "originalName": "孤岛笔记",
+      "price": {
+        "current": 49.9,
+        "original": 49.9,
+        "discountPercent": 0,
+        "currency": "CNY",
+        "isOnSale": false,
+        "discountExpiration": null,
+        "updatedAt": 1789449482006
+      },
+      "rating": {
+        "score": 8.4,
+        "positive": 84,
+        "total": 592,
+        "desc": "Very Positive",
+        "updatedAt": 1789449482564
+      },
+      "historicalLow": {
+        "price": 32.43,
+        "count": 1,
+        "confidence": "A",
+        "source": "ITAD(国区)",
+        "updatedAt": 1789449484048,
+        "currency": "CNY"
+      },
+      "targetPrice": null,
+      "note": "",
+      "dlcList": [],
+      "details": {
+        "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2447680/ccc372402da02d4580f1db075f129076dae0f43a/header_schinese.jpg?t=1784540589",
+        "isFree": false,
+        "type": "game",
+        "releaseDate": "2025 年 8 月 21 日",
+        "releaseTs": null,
+        "developers": [
+          "KangBaoGame"
+        ],
+        "publishers": [
+          "KangBaoGame"
+        ],
+        "platforms": [
+          "Windows"
+        ],
+        "categories": [
+          "单人",
+          "Steam 成就",
+          "自定义音量控制",
+          "可调整难度",
+          "无需应对快速反应事件",
+          "随时保存",
+          "立体声",
+          "Steam 云",
+          "家庭共享"
+        ],
+        "genres": [
+          "动作",
+          "冒险",
+          "独立",
+          "角色扮演"
+        ],
+        "tags": [
+          "动作",
+          "冒险",
+          "独立",
+          "角色扮演"
+        ],
+        "featureTags": [
+          "单人",
+          "成就",
+          "云存档",
+          "家庭共享"
+        ],
+        "metacritic": null,
+        "chineseSupport": true,
+        "reviewTotal": 881,
+        "description": "在神秘的岛屿上遭遇海难，选择自我保护或结盟。在这个充满道德的生存模拟器中掌握基地建设、耕种、捕鱼、浪漫和驯服宠物，将策略与人类戏剧融为一体。建立纽带，征服自然，进化你的人性。",
+        "descriptionOriginal": "在神秘的岛屿上遭遇海难，选择自我保护或结盟。在这个充满道德的生存模拟器中掌握基地建设、耕种、捕鱼、浪漫和驯服宠物，将策略与人类戏剧融为一体。建立纽带，征服自然，进化你的人性。",
+        "descriptionTranslated": false
+      },
+      "createdAt": 1789449482564,
+      "updatedAt": 1789449482564
+    },
+    {
+      "appid": 1533420,
+      "name": "Neon White",
+      "originalName": "Neon White",
+      "price": {
+        "current": 88,
+        "original": 88,
+        "discountPercent": 0,
+        "currency": "CNY",
+        "isOnSale": false,
+        "discountExpiration": null,
+        "updatedAt": 1789449468291
+      },
+      "rating": {
+        "score": 9.6,
+        "positive": 94,
+        "total": 912,
+        "desc": "Very Positive",
+        "updatedAt": 1789449469765
+      },
+      "historicalLow": {
+        "price": 35.2,
+        "count": 6,
+        "confidence": "A",
+        "source": "ITAD(国区)",
+        "updatedAt": 1789449470807,
+        "currency": "CNY"
+      },
+      "targetPrice": null,
+      "note": "",
+      "dlcList": [
+        {
+          "appid": 2054540,
+          "name": "Neon White - Original Soundtrack",
+          "price": 42,
+          "shortDescription": "Original Soundtrack for Neon White by Angel Matrix. Music by Machine Girl.",
+          "description": "Original Soundtrack for Neon White by Angel Matrix. Music by Machine Girl.",
+          "kind": "原声",
+          "type": "music",
+          "originalDescription": "Original Soundtrack for Neon White by Angel Matrix. Music by Machine Girl.",
+          "translated": false,
+          "updatedAt": 1789449472263
+        }
+      ],
+      "details": {
+        "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1533420/header.jpg?t=1785424399",
+        "isFree": false,
+        "type": "game",
+        "releaseDate": "2022 年 6 月 16 日",
+        "releaseTs": null,
+        "developers": [
+          "Angel Matrix"
+        ],
+        "publishers": [
+          "Annapurna Interactive"
+        ],
+        "platforms": [
+          "Windows"
+        ],
+        "categories": [
+          "单人",
+          "Steam 成就",
+          "完全支持控制器",
+          "Steam 云",
+          "Steam 排行榜",
+          "家庭共享"
+        ],
+        "genres": [
+          "动作",
+          "冒险",
+          "独立"
+        ],
+        "tags": [
+          "动作",
+          "冒险",
+          "独立"
+        ],
+        "featureTags": [
+          "单人",
+          "成就",
+          "云存档",
+          "家庭共享"
+        ],
+        "metacritic": 89,
+        "chineseSupport": true,
+        "reviewTotal": 17250,
+        "description": "Neon White 是一款快若闪电的第一人称动作平台游戏，游戏背景设定在天堂的珍珠之门内。",
+        "descriptionOriginal": "Neon White 是一款快若闪电的第一人称动作平台游戏，游戏背景设定在天堂的珍珠之门内。",
+        "descriptionTranslated": false
+      },
+      "createdAt": 1789449469765,
+      "updatedAt": 1789449472263
+    },
+    {
+      "appid": 1624540,
+      "name": "Storyteller",
+      "originalName": "Storyteller",
+      "price": {
+        "current": 60,
+        "original": 60,
+        "discountPercent": 0,
+        "currency": "CNY",
+        "isOnSale": false,
+        "discountExpiration": null,
+        "updatedAt": 1789449460733
+      },
+      "rating": {
+        "score": 9.2,
+        "positive": 88,
+        "total": 1194,
+        "desc": "Very Positive",
+        "updatedAt": 1789449462518
+      },
+      "historicalLow": {
+        "price": 30,
+        "count": 5,
+        "confidence": "A",
+        "source": "ITAD(国区)",
+        "updatedAt": 1789449463933,
+        "currency": "CNY"
+      },
+      "targetPrice": null,
+      "note": "",
+      "dlcList": [
+        {
+          "appid": 2362450,
+          "name": "Storyteller - Original Soundtrack",
+          "price": 34,
+          "shortDescription": "Original Soundtrack for Storyteller.",
+          "description": "Original Soundtrack for Storyteller.",
+          "kind": "原声",
+          "type": "music",
+          "originalDescription": "Original Soundtrack for Storyteller.",
+          "translated": false,
+          "updatedAt": 1789449465872
+        }
+      ],
+      "details": {
+        "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1624540/header.jpg?t=1729098997",
+        "isFree": false,
+        "type": "game",
+        "releaseDate": "2023 年 3 月 23 日",
+        "releaseTs": null,
+        "developers": [
+          "Daniel Benmergui"
+        ],
+        "publishers": [
+          "Annapurna Interactive"
+        ],
+        "platforms": [
+          "Windows",
+          "macOS"
+        ],
+        "categories": [
+          "单人",
+          "Steam 成就",
+          "完全支持控制器",
+          "Steam 云",
+          "家庭共享"
+        ],
+        "genres": [
+          "冒险"
+        ],
+        "tags": [
+          "冒险"
+        ],
+        "featureTags": [
+          "单人",
+          "成就",
+          "云存档",
+          "家庭共享"
+        ],
+        "metacritic": null,
+        "chineseSupport": true,
+        "reviewTotal": 8168,
+        "description": "《Storyteller》是一款斩获大奖的益智游戏，游戏主题是编造各种各样的故事。你将根据一个标题、几种场景和若干角色，编造出任何切题的故事。快来编造你的有关爱情、阴谋、犯罪、怪物、背叛等的故事吧！",
+        "descriptionOriginal": "《Storyteller》是一款斩获大奖的益智游戏，游戏主题是编造各种各样的故事。你将根据一个标题、几种场景和若干角色，编造出任何切题的故事。快来编造你的有关爱情、阴谋、犯罪、怪物、背叛等的故事吧！",
+        "descriptionTranslated": false
+      },
+      "createdAt": 1789449462518,
+      "updatedAt": 1789449465872
+    },
+    {
+      "appid": 346110,
+      "name": "ARK: Survival Evolved",
+      "originalName": "ARK: Survival Evolved",
+      "price": {
+        "current": 58,
+        "original": 58,
+        "discountPercent": 0,
+        "currency": "CNY",
+        "isOnSale": false,
+        "discountExpiration": null,
+        "updatedAt": 1789449448197
+      },
+      "rating": {
+        "score": 8.4,
+        "positive": 83,
+        "total": 95619,
+        "desc": "Very Positive",
+        "updatedAt": 1789449449836
+      },
+      "historicalLow": {
+        "price": 0,
+        "count": 1,
+        "confidence": "A",
+        "source": "ITAD(国区)",
+        "updatedAt": 1789449451422,
+        "currency": "CNY"
+      },
+      "targetPrice": null,
+      "note": "",
+      "dlcList": [
+        {
+          "appid": 3537070,
+          "name": "方舟：夏日海洋",
+          "price": 58,
+          "shortDescription": "在《夏日海洋》中，生存者将揭示元素的潜在源头，窥见那些勇者末日之后的未来。它是首个官方非正史神话故事 DLC，将《方舟》宇宙扩展至生存的新维度。",
+          "description": "在《夏日海洋》中，生存者将揭示元素的潜在源头，窥见那些勇者末日之后的未来。它是首个官方非正史神话故事 DLC，将《方舟》宇宙扩展至生存的新维度。",
+          "kind": "其他",
+          "type": "dlc",
+          "originalDescription": "在《夏日海洋》中，生存者将揭示元素的潜在源头，窥见那些勇者末日之后的未来。它是首个官方非正史神话故事 DLC，将《方舟》宇宙扩展至生存的新维度。",
+          "translated": false,
+          "updatedAt": 1789449452041
+        },
+        {
+          "appid": 3820060,
+          "name": "ARK: Aquatica Original Soundtrack",
+          "price": 0,
+          "shortDescription": "The soundtrack for ARK: Aquatica, composed by Gareth Coker.",
+          "description": "The soundtrack for ARK: Aquatica, composed by Gareth Coker.",
+          "kind": "原声",
+          "type": "music",
+          "originalDescription": "The soundtrack for ARK: Aquatica, composed by Gareth Coker.",
+          "translated": false,
+          "updatedAt": 1789449454248
+        },
+        {
+          "appid": 3761020,
+          "name": "ARK: Aquatica - Luminati Suns Song",
+          "price": 0,
+          "shortDescription": "The soundtrack for ARK: Aquatica created by Luminati Suns!",
+          "description": "The soundtrack for ARK: Aquatica created by Luminati Suns!",
+          "kind": "原声",
+          "type": "music",
+          "originalDescription": "The soundtrack for ARK: Aquatica created by Luminati Suns!",
+          "translated": false,
+          "updatedAt": 1789449456123
+        },
+        {
+          "appid": 1887560,
+          "name": "Fjordur - ARK Expansion Map",
+          "price": 0,
+          "shortDescription": "一起来方舟探索这寒冷又严峻的北欧群岛吧！此次还共有四种全新的生物供你收集！这次的新地图菲尤尔包含超过140平方公里的新生物群落，新的挑战，以及不可错过的景致与探险!",
+          "description": "一起来方舟探索这寒冷又严峻的北欧群岛吧！此次还共有四种全新的生物供你收集！这次的新地图菲尤尔包含超过140平方公里的新生物群落，新的挑战，以及不可错过的景致与探险!",
+          "kind": "资料片",
+          "type": "dlc",
+          "originalDescription": "一起来方舟探索这寒冷又严峻的北欧群岛吧！此次还共有四种全新的生物供你收集！这次的新地图菲尤尔包含超过140平方公里的新生物群落，新的挑战，以及不可错过的景致与探险!",
+          "translated": false,
+          "updatedAt": 1789449456458
+        },
+        {
+          "appid": 1691800,
+          "name": "Lost Island - ARK Expansion Map",
+          "price": 0,
+          "shortDescription": "一起来《方舟》最新的官方多人地图上领略霄汉的高空以及深邃的低谷吧！此次更有着三种全新的生物供你驯服！",
+          "description": "一起来《方舟》最新的官方多人地图上领略霄汉的高空以及深邃的低谷吧！此次更有着三种全新的生物供你驯服！",
+          "kind": "资料片",
+          "type": "dlc",
+          "originalDescription": "一起来《方舟》最新的官方多人地图上领略霄汉的高空以及深邃的低谷吧！此次更有着三种全新的生物供你驯服！",
+          "translated": false,
+          "updatedAt": 1789449457052
+        },
+        {
+          "appid": 1113410,
+          "name": "ARK: Genesis Season Pass",
+          "price": 58,
+          "shortDescription": "在方舟：创世纪中，通过全新的基于任务的游戏玩法，在充满异国情调的新世界中冒险的同时完成方舟传奇。 发现、利用和掌握新的生物、物品、武器和结构，这与您所见过的不同！",
+          "description": "在方舟：创世纪中，通过全新的基于任务的游戏玩法，在充满异国情调的新世界中冒险的同时完成方舟传奇。 发现、利用和掌握新的生物、物品、武器和结构，这与您所见过的不同！",
+          "kind": "季票",
+          "type": "dlc",
+          "originalDescription": "在方舟：创世纪中，通过全新的基于任务的游戏玩法，在充满异国情调的新世界中冒险的同时完成方舟传奇。 发现、利用和掌握新的生物、物品、武器和结构，这与您所见过的不同！",
+          "translated": false,
+          "updatedAt": 1789449458334
+        },
+        {
+          "appid": 1100810,
+          "name": "Valguero - ARK Expansion Map",
+          "price": 0,
+          "shortDescription": "探索新的高度和隐藏的深度； 无论是在白色的悬崖上建立你的基地还是从畸变沟壑中挖掘出任何秘密， 瓦尔盖罗都为方舟宇宙提供了一种全新的体验。伴随着新的生物群落， 具有挑战性的地牢Boss和神秘的废墟， 瓦尔盖罗总是存在令人兴奋和危险的东西。",
+          "description": "探索新的高度和隐藏的深度； 无论是在白色的悬崖上建立你的基地还是从畸变沟壑中挖掘出任何秘密， 瓦尔盖罗都为方舟宇宙提供了一种全新的体验。伴随着新的生物群落， 具有挑战性的地牢Boss和神秘的废墟， 瓦尔盖罗总是存在令人兴奋和危险的东西。",
+          "kind": "资料片",
+          "type": "dlc",
+          "originalDescription": "探索新的高度和隐藏的深度； 无论是在白色的悬崖上建立你的基地还是从畸变沟壑中挖掘出任何秘密， 瓦尔盖罗都为方舟宇宙提供了一种全新的体验。伴随着新的生物群落， 具有挑战性的地牢Boss和神秘的废墟， 瓦尔盖罗总是存在令人兴奋和危险的东西。",
+          "translated": false,
+          "updatedAt": 1789449458883
+        },
+        {
+          "appid": 642250,
+          "name": "Ragnarok - ARK Expansion Map",
+          "price": 0,
+          "shortDescription": "Journey through an expansive 144 sq. kilometer environment where elements from The Island, Scorched Earth, and all new biomes are combined to bring the ultimate survivor experience. Whether tackling the extreme cold atop the highest mountains, harvesting resources from an active volcano, or just searching for that perfect base location,...",
+          "description": "Journey through an expansive 144 sq. kilometer environment where elements from The Island, Scorched Earth, and all new biomes are combined to bring the ultimate…",
+          "kind": "资料片",
+          "type": "dlc",
+          "originalDescription": "Journey through an expansive 144 sq. kilometer environment where elements from The Island, Scorched Earth, and all new biomes are combined to bring the ultimate survivor experience. Whether tackling the extreme cold atop the highest mountains, harvesting resources from an active volcano, or just searching for that perfect base location,...",
+          "translated": false,
+          "updatedAt": 1789449460803
+        },
+        {
+          "appid": 887380,
+          "name": "ARK: Extinction - Expansion Pack",
+          "price": null,
+          "shortDescription": "地球，现在是一颗元素泛滥、饱受蹂躏、遍布科技生物和奇异有机体的星球。你们是否有能力击败肆虐地球的巨型泰坦，完成方舟循环，最终拯救地球的未来？",
+          "description": "地球，现在是一颗元素泛滥、饱受蹂躏、遍布科技生物和奇异有机体的星球。你们是否有能力击败肆虐地球的巨型泰坦，完成方舟循环，最终拯救地球的未来？",
+          "kind": "资料片",
+          "type": "dlc",
+          "originalDescription": "地球，现在是一颗元素泛滥、饱受蹂躏、遍布科技生物和奇异有机体的星球。你们是否有能力击败肆虐地球的巨型泰坦，完成方舟循环，最终拯救地球的未来？",
+          "translated": false,
+          "updatedAt": 1789449461314
+        },
+        {
+          "appid": 708770,
+          "name": "ARK: Aberration - Expansion Pack",
+          "price": null,
+          "shortDescription": "Waking up on ‘Aberration’, a derelict, malfunctioning ARK with an elaborate underground biome system, survivors face exotic new challenges unlike anything before: extreme radioactive sunlight and environmental hazards, ziplines, wingsuits, climbing gear, cave dwellings, charge-batteries, and far more, along with a stable of extraordinary",
+          "description": "Waking up on ‘Aberration’, a derelict, malfunctioning ARK with an elaborate underground biome system, survivors face exotic new challenges unlike anything befor…",
+          "kind": "资料片",
+          "type": "dlc",
+          "originalDescription": "Waking up on ‘Aberration’, a derelict, malfunctioning ARK with an elaborate underground biome system, survivors face exotic new challenges unlike anything before: extreme radioactive sunlight and environmental hazards, ziplines, wingsuits, climbing gear, cave dwellings, charge-batteries, and far more, along with a stable of extraordinary",
+          "translated": false,
+          "updatedAt": 1789449463113
+        },
+        {
+          "appid": 512540,
+          "name": "ARK: Scorched Earth - Expansion Pack",
+          "price": null,
+          "shortDescription": "赤身裸体地被困在一片广袤的沙漠中，又饥又渴，即便是最老练的方舟生存者，想要存活下来也必须迅速找到水源，寻找食物，采集资源，制作道具并且搭建栖身之处。用从遥远的孤岛(the Island)上磨炼出的技能来击杀，驯养，繁育和骑乘这些在沙漠超严苛条件下进化求存的神秘新生物，其中包括...双足翼龙！在孤岛(the Island)和荒漠(the Desert)中穿梭，和两个世界中数以百计的玩家组队，或者坚守一地畅玩！",
+          "description": "赤身裸体地被困在一片广袤的沙漠中，又饥又渴，即便是最老练的方舟生存者，想要存活下来也必须迅速找到水源，寻找食物，采集资源，制作道具并且搭建栖身之处。用从遥远的孤岛(the Island)上磨炼出的技能来击杀，驯养，繁育和骑乘这些在沙漠超严苛条件下进化求存的神秘新生物，其中包括...双足翼龙！在孤岛(the Island…",
+          "kind": "资料片",
+          "type": "dlc",
+          "originalDescription": "赤身裸体地被困在一片广袤的沙漠中，又饥又渴，即便是最老练的方舟生存者，想要存活下来也必须迅速找到水源，寻找食物，采集资源，制作道具并且搭建栖身之处。用从遥远的孤岛(the Island)上磨炼出的技能来击杀，驯养，繁育和骑乘这些在沙漠超严苛条件下进化求存的神秘新生物，其中包括...双足翼龙！在孤岛(the Island)和荒漠(the Desert)中穿梭，和两个世界中数以百计的玩家组队，或者坚守一地畅玩！",
+          "translated": false,
+          "updatedAt": 1789449463460
+        },
+        {
+          "appid": 508150,
+          "name": "Primitive+ ARK Total Conversion",
+          "price": 0,
+          "shortDescription": "Primitive Plus is a free add-on for ARK: Survival Evolved that alters the available tools, weapons and structures in the game to reflect what humans could realistically create using primitive technology and resources.",
+          "description": "Primitive Plus is a free add-on for ARK: Survival Evolved that alters the available tools, weapons and structures in the game to reflect what humans could reali…",
+          "kind": "道具包",
+          "type": "dlc",
+          "originalDescription": "Primitive Plus is a free add-on for ARK: Survival Evolved that alters the available tools, weapons and structures in the game to reflect what humans could realistically create using primitive technology and resources.",
+          "translated": false,
+          "updatedAt": 1789449465616
+        },
+        {
+          "appid": 473850,
+          "name": "The Center - ARK Expansion Map",
+          "price": 0,
+          "shortDescription": "核心岛是方舟 ︰ 生存进化的一个免费扩展，其中包括一张广袤的新地图可供生存者们探索，使方舟岛面积翻倍，可玩场景达到大约 70平方公里。核心岛以其丰富的、纯手绘的托尔金式美学与现有的方舟生物群系相辅相成。核心岛处处可见令人惊叹的灯光效果，熔岩河流，风景如画的巨型山脉，雾气弥漫的漂浮岛、 地下古代冰洞，以及更多，核心岛免费向任何已经拥有方舟 ︰ 生存进化的玩家开放。",
+          "description": "核心岛是方舟 ︰ 生存进化的一个免费扩展，其中包括一张广袤的新地图可供生存者们探索，使方舟岛面积翻倍，可玩场景达到大约 70平方公里。核心岛以其丰富的、纯手绘的托尔金式美学与现有的方舟生物群系相辅相成。核心岛处处可见令人惊叹的灯光效果，熔岩河流，风景如画的巨型山脉，雾气弥漫的漂浮岛、 地下古代冰洞，以及更多，核心岛免费…",
+          "kind": "资料片",
+          "type": "dlc",
+          "originalDescription": "核心岛是方舟 ︰ 生存进化的一个免费扩展，其中包括一张广袤的新地图可供生存者们探索，使方舟岛面积翻倍，可玩场景达到大约 70平方公里。核心岛以其丰富的、纯手绘的托尔金式美学与现有的方舟生物群系相辅相成。核心岛处处可见令人惊叹的灯光效果，熔岩河流，风景如画的巨型山脉，雾气弥漫的漂浮岛、 地下古代冰洞，以及更多，核心岛免费向任何已经拥有方舟 ︰ 生存进化的玩家开放。",
+          "translated": false,
+          "updatedAt": 1789449466477
+        },
+        {
+          "appid": 1270830,
+          "name": "Crystal Isles - ARK Expansion Map",
+          "price": 0,
+          "shortDescription": "A community classic ARK map returns, now updated for the Official Server networks! Crystal Isles is 150 square kilometers of awe-inspiring biomes… Build bases high in forest canopy and floating islands, and tame your own Tropeognathus—ARK’s newest pterosaur—to ride into aerial combat!",
+          "description": "A community classic ARK map returns, now updated for the Official Server networks! Crystal Isles is 150 square kilometers of awe-inspiring biomes… Build bases h…",
+          "kind": "资料片",
+          "type": "dlc",
+          "originalDescription": "A community classic ARK map returns, now updated for the Official Server networks! Crystal Isles is 150 square kilometers of awe-inspiring biomes… Build bases high in forest canopy and floating islands, and tame your own Tropeognathus—ARK’s newest pterosaur—to ride into aerial combat!",
+          "translated": false,
+          "updatedAt": 1789449468744
+        },
+        {
+          "appid": 1646550,
+          "name": "ARK: Survival Evolved Original Soundtrack",
+          "price": null,
+          "shortDescription": "The soundtrack composed by Gareth Coker for the game ARK : Survival Evolved, recorded by the 93-piece Philharmonia Orchestra at Abbey Road Studios.",
+          "description": "The soundtrack composed by Gareth Coker for the game ARK : Survival Evolved, recorded by the 93-piece Philharmonia Orchestra at Abbey Road Studios.",
+          "kind": "原声",
+          "type": "music",
+          "originalDescription": "The soundtrack composed by Gareth Coker for the game ARK : Survival Evolved, recorded by the 93-piece Philharmonia Orchestra at Abbey Road Studios.",
+          "translated": false,
+          "updatedAt": 1789449470133
+        }
+      ],
+      "details": {
+        "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/346110/header.jpg?t=1765677889",
+        "isFree": false,
+        "type": "game",
+        "releaseDate": "2017 年 8 月 27 日",
+        "releaseTs": null,
+        "developers": [
+          "Studio Wildcard",
+          "Instinct Games",
+          "Efecto Studios",
+          "Virtual Basement LLC"
+        ],
+        "publishers": [
+          "Studio Wildcard",
+          "Snail Games USA"
+        ],
+        "platforms": [
+          "Windows",
+          "macOS"
+        ],
+        "categories": [
+          "单人",
+          "多人",
+          "大型多人在线",
+          "合作",
+          "Steam 成就",
+          "完全支持控制器",
+          "Steam 创意工坊",
+          "Steam 云",
+          "已启用 Valve 反作弊保护",
+          "包含关卡编辑器",
+          "在平板上远程畅玩",
+          "家庭共享"
+        ],
+        "genres": [
+          "动作",
+          "冒险",
+          "独立",
+          "大型多人在线",
+          "角色扮演"
+        ],
+        "tags": [
+          "动作",
+          "冒险",
+          "独立",
+          "大型多人在线",
+          "角色扮演"
+        ],
+        "featureTags": [
+          "单人",
+          "多人",
+          "联机合作",
+          "成就",
+          "云存档",
+          "创意工坊",
+          "关卡编辑",
+          "家庭共享"
+        ],
+        "metacritic": 70,
+        "chineseSupport": true,
+        "reviewTotal": 586703,
+        "description": "由虚幻4引擎打造的一款多人在线生存竞技网游，在一个超高自由度的开放世界里，可以体验采集、制造、打猎、收获、建造、研究以及驯服恐龙等超多自由内容，感受酷热白昼、冰冷夜晚的动态天气系统以及饥饿口渴等现实中的生存挑战，还要面对其它生存者的威胁，合作生存还是竞技厮杀，由你决定！",
+        "descriptionOriginal": "由虚幻4引擎打造的一款多人在线生存竞技网游，在一个超高自由度的开放世界里，可以体验采集、制造、打猎、收获、建造、研究以及驯服恐龙等超多自由内容，感受酷热白昼、冰冷夜晚的动态天气系统以及饥饿口渴等现实中的生存挑战，还要面对其它生存者的威胁，合作生存还是竞技厮杀，由你决定！",
+        "descriptionTranslated": false
+      },
+      "createdAt": 1789449449836,
+      "updatedAt": 1789449470133
+    },
+    {
+      "appid": 3017860,
+      "name": "DOOM: The Dark Ages",
+      "originalName": "DOOM: The Dark Ages",
+      "price": {
+        "current": 259,
+        "original": 259,
+        "discountPercent": 0,
+        "currency": "CNY",
+        "isOnSale": false,
+        "discountExpiration": null,
+        "updatedAt": 1789449438458
+      },
+      "rating": {
+        "score": 9.2,
+        "positive": 91,
+        "total": 4473,
+        "desc": "Very Positive",
+        "updatedAt": 1789449439707
+      },
+      "historicalLow": {
+        "price": 115.17,
+        "count": 5,
+        "confidence": "A",
+        "source": "ITAD(国区)",
+        "updatedAt": 1789449441075,
+        "currency": "CNY"
+      },
+      "targetPrice": null,
+      "note": "",
+      "dlcList": [
+        {
+          "appid": 3469450,
+          "name": "DOOM: The Dark Ages | Revelations",
+          "price": 109,
+          "shortDescription": "就连地狱也会冻结，精彩尽在《DOOM: The Dark Ages | Revelations》。毁灭战士进入了残酷的炼狱，只有打造全新的神兵利器才能逃离这里。该扩展包包含新关卡、新恶魔以及致命的锁链长矛，而且可以在备受期待的撕裂馆 3.0 中体验这些内容。《Revelations》引入了全新战斗维度。",
+          "description": "就连地狱也会冻结，精彩尽在《DOOM: The Dark Ages | Revelations》。毁灭战士进入了残酷的炼狱，只有打造全新的神兵利器才能逃离这里。该扩展包包含新关卡、新恶魔以及致命的锁链长矛，而且可以在备受期待的撕裂馆 3.0 中体验这些内容。《Revelations》引入了全新战斗维度。",
+          "kind": "资料片",
+          "type": "dlc",
+          "originalDescription": "就连地狱也会冻结，精彩尽在《DOOM: The Dark Ages | Revelations》。毁灭战士进入了残酷的炼狱，只有打造全新的神兵利器才能逃离这里。该扩展包包含新关卡、新恶魔以及致命的锁链长矛，而且可以在备受期待的撕裂馆 3.0 中体验这些内容。《Revelations》引入了全新战斗维度。",
+          "translated": false,
+          "updatedAt": 1789449441691
+        },
+        {
+          "appid": 3363940,
+          "name": "DOOM: The Dark Ages - Premium Content",
+          "price": 359,
+          "shortDescription": "",
+          "description": "",
+          "kind": "其他",
+          "type": "dlc",
+          "originalDescription": "",
+          "translated": false,
+          "updatedAt": 1789449442908
+        },
+        {
+          "appid": 3698350,
+          "name": "DOOM: The Dark Ages - Premium Upgrade",
+          "price": 134,
+          "shortDescription": "《DOOM: The Dark Ages》是大受好评的《DOOM》(2016) 及《DOOM Eternal》前传，描写毁灭战士之怒的壮阔电影级起源故事。玩家将化身为脚踏鲜血的毁灭战士，在这场前所未见、凶险万分的中世纪战争中对抗地狱大军。",
+          "description": "《DOOM: The Dark Ages》是大受好评的《DOOM》(2016) 及《DOOM Eternal》前传，描写毁灭战士之怒的壮阔电影级起源故事。玩家将化身为脚踏鲜血的毁灭战士，在这场前所未见、凶险万分的中世纪战争中对抗地狱大军。",
+          "kind": "版本升级包",
+          "type": "dlc",
+          "originalDescription": "《DOOM: The Dark Ages》是大受好评的《DOOM》(2016) 及《DOOM Eternal》前传，描写毁灭战士之怒的壮阔电影级起源故事。玩家将化身为脚踏鲜血的毁灭战士，在这场前所未见、凶险万分的中世纪战争中对抗地狱大军。",
+          "translated": false,
+          "updatedAt": 1789449444238
+        }
+      ],
+      "details": {
+        "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3017860/header.jpg?t=1789406231",
+        "isFree": false,
+        "type": "game",
+        "releaseDate": "2025 年 5 月 14 日",
+        "releaseTs": null,
+        "developers": [
+          "id Software"
+        ],
+        "publishers": [
+          "Bethesda Softworks"
+        ],
+        "platforms": [
+          "Windows"
+        ],
+        "categories": [
+          "单人",
+          "Steam 成就",
+          "完全支持控制器",
+          "Steam 集换式卡牌",
+          "可选颜色",
+          "#category_contrast_controls",
+          "可调整难度",
+          "无需应对快速反应事件",
+          "DUALSHOCK 控制器支持",
+          "DUALSHOCK 控制器支持",
+          "DualSense 控制器支持",
+          "DualSense 控制器支持",
+          "字幕选项",
+          "环绕声",
+          "Steam 云",
+          "可用 HDR",
+          "家庭共享"
+        ],
+        "genres": [
+          "动作"
+        ],
+        "tags": [
+          "动作"
+        ],
+        "featureTags": [
+          "单人",
+          "成就",
+          "集换式卡牌",
+          "云存档",
+          "家庭共享"
+        ],
+        "metacritic": null,
+        "chineseSupport": true,
+        "reviewTotal": 32189,
+        "description": "《DOOM: The Dark Ages》是大受好评的《DOOM》(2016) 及《DOOM Eternal》前传，描写毁灭战士之怒的壮阔电影级起源故事。玩家将化身为脚踏鲜血的毁灭战士，在这场前所未见、凶险万分的中世纪战争中对抗地狱大军。",
+        "descriptionOriginal": "《DOOM: The Dark Ages》是大受好评的《DOOM》(2016) 及《DOOM Eternal》前传，描写毁灭战士之怒的壮阔电影级起源故事。玩家将化身为脚踏鲜血的毁灭战士，在这场前所未见、凶险万分的中世纪战争中对抗地狱大军。",
+        "descriptionTranslated": false
+      },
+      "createdAt": 1789449439707,
+      "updatedAt": 1789449444238
+    },
+    {
+      "appid": 1216710,
+      "name": "全网公敌",
+      "originalName": "全网公敌",
+      "price": {
+        "current": 58,
+        "original": 58,
+        "discountPercent": 0,
+        "currency": "CNY",
+        "isOnSale": false,
+        "discountExpiration": null,
+        "updatedAt": 1789449428964
+      },
+      "rating": {
+        "score": 9.6,
+        "positive": 93,
+        "total": 14272,
+        "desc": "Very Positive",
+        "updatedAt": 1789449429594
+      },
+      "historicalLow": {
+        "price": 20.3,
+        "count": 2,
+        "confidence": "A",
+        "source": "ITAD(国区)",
+        "updatedAt": 1789449430729,
+        "currency": "CNY"
+      },
+      "targetPrice": null,
+      "note": "",
+      "dlcList": [
+        {
+          "appid": 1840550,
+          "name": "全网公敌 - Hello World",
+          "price": 18,
+          "shortDescription": "一场离奇的车祸，让泰坦公司的高级研究员Lucrezia Borgia博士当场死亡，同行的Benjamin Engle死里逃生，并带走了博士携带的重要材料。就在Benjamin准备开始调查Lucrezia博士死亡真相的时候，他却没有意识到自己即将卷入一场巨大的阴谋之中……",
+          "description": "一场离奇的车祸，让泰坦公司的高级研究员Lucrezia Borgia博士当场死亡，同行的Benjamin Engle死里逃生，并带走了博士携带的重要材料。就在Benjamin准备开始调查Lucrezia博士死亡真相的时候，他却没有意识到自己即将卷入一场巨大的阴谋之中……",
+          "kind": "其他",
+          "type": "dlc",
+          "originalDescription": "一场离奇的车祸，让泰坦公司的高级研究员Lucrezia Borgia博士当场死亡，同行的Benjamin Engle死里逃生，并带走了博士携带的重要材料。就在Benjamin准备开始调查Lucrezia博士死亡真相的时候，他却没有意识到自己即将卷入一场巨大的阴谋之中……",
+          "translated": false,
+          "updatedAt": 1789449431339
+        },
+        {
+          "appid": 1682230,
+          "name": "全网公敌 - 甜蜜之家",
+          "price": 18,
+          "shortDescription": "一个看似甜蜜而美满的家庭背后，每个人都有各自的秘密，隐藏在背后的真相到底是什么？！",
+          "description": "一个看似甜蜜而美满的家庭背后，每个人都有各自的秘密，隐藏在背后的真相到底是什么？！",
+          "kind": "其他",
+          "type": "dlc",
+          "originalDescription": "一个看似甜蜜而美满的家庭背后，每个人都有各自的秘密，隐藏在背后的真相到底是什么？！",
+          "translated": false,
+          "updatedAt": 1789449432515
+        },
+        {
+          "appid": 2078100,
+          "name": "全网公敌 - 我是泰坦打工人",
+          "price": 0,
+          "shortDescription": "汇集了《全网公敌》过往各个章节中出现的各种小游戏玩法。让我们暂时从剧情中错综复杂的人物命运中抽离出来，一起体验下过关的快乐，本DLC中还支持排行榜功能，让我们一起努力，看谁能成为最强泰坦打工人！",
+          "description": "汇集了《全网公敌》过往各个章节中出现的各种小游戏玩法。让我们暂时从剧情中错综复杂的人物命运中抽离出来，一起体验下过关的快乐，本DLC中还支持排行榜功能，让我们一起努力，看谁能成为最强泰坦打工人！",
+          "kind": "章节",
+          "type": "dlc",
+          "originalDescription": "汇集了《全网公敌》过往各个章节中出现的各种小游戏玩法。让我们暂时从剧情中错综复杂的人物命运中抽离出来，一起体验下过关的快乐，本DLC中还支持排行榜功能，让我们一起努力，看谁能成为最强泰坦打工人！",
+          "translated": false,
+          "updatedAt": 1789449433729
+        }
+      ],
+      "details": {
+        "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1216710/c039dd5597cd04ebdc5d00c240018f378f63d8d5/header_schinese.jpg?t=1786026107",
+        "isFree": false,
+        "type": "game",
+        "releaseDate": "2021 年 2 月 2 日",
+        "releaseTs": null,
+        "developers": [
+          "Aluba Van+"
+        ],
+        "publishers": [
+          "摸鱼游戏",
+          "Aluba Van+"
+        ],
+        "platforms": [
+          "Windows",
+          "macOS"
+        ],
+        "categories": [
+          "单人",
+          "Steam 成就",
+          "Steam 集换式卡牌",
+          "Steam 云",
+          "Steam 排行榜",
+          "家庭共享"
+        ],
+        "genres": [
+          "独立",
+          "角色扮演",
+          "模拟"
+        ],
+        "tags": [
+          "独立",
+          "角色扮演",
+          "模拟"
+        ],
+        "featureTags": [
+          "单人",
+          "成就",
+          "集换式卡牌",
+          "云存档",
+          "家庭共享"
+        ],
+        "metacritic": null,
+        "chineseSupport": true,
+        "reviewTotal": 14518,
+        "description": "《全网公敌》是一款结合了网络安全、大数据、隐私泄露等社会问题的剧情向解谜游戏。作为一名顶尖黑客，你将接受一系列任务，使用各种社工技巧，完成目标，找出事件真相。",
+        "descriptionOriginal": "《全网公敌》是一款结合了网络安全、大数据、隐私泄露等社会问题的剧情向解谜游戏。作为一名顶尖黑客，你将接受一系列任务，使用各种社工技巧，完成目标，找出事件真相。",
+        "descriptionTranslated": false
+      },
+      "createdAt": 1789449429594,
+      "updatedAt": 1789449433729
+    },
+    {
+      "appid": 2084000,
+      "name": "将军 对决",
+      "originalName": "将军 对决",
+      "price": {
+        "current": 58,
+        "original": 58,
+        "discountPercent": 0,
+        "currency": "CNY",
+        "isOnSale": false,
+        "discountExpiration": null,
+        "updatedAt": 1789449417881
+      },
+      "rating": {
+        "score": 9.2,
+        "positive": 90,
+        "total": 1444,
+        "desc": "Very Positive",
+        "updatedAt": 1789449418480
+      },
+      "historicalLow": {
+        "price": 29,
+        "count": 15,
+        "confidence": "A",
+        "source": "ITAD(国区)",
+        "updatedAt": 1789449419882,
+        "currency": "CNY"
+      },
+      "targetPrice": null,
+      "note": "",
+      "dlcList": [
+        {
+          "appid": 3132940,
+          "name": "Shogun Showdown Soundtrack",
+          "price": 22,
+          "shortDescription": "The official soundtrack for Shogun Showdown by composer Oscar di Mondogemello. Features 20 tracks.",
+          "description": "The official soundtrack for Shogun Showdown by composer Oscar di Mondogemello. Features 20 tracks.",
+          "kind": "原声",
+          "type": "music",
+          "originalDescription": "The official soundtrack for Shogun Showdown by composer Oscar di Mondogemello. Features 20 tracks.",
+          "translated": false,
+          "updatedAt": 1789449421518
+        }
+      ],
+      "details": {
+        "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2084000/header_schinese.jpg?t=1763395118",
+        "isFree": false,
+        "type": "game",
+        "releaseDate": "2024 年 9 月 5 日",
+        "releaseTs": null,
+        "developers": [
+          "Roboatino"
+        ],
+        "publishers": [
+          "Goblinz Publishing",
+          "Gamirror Games"
+        ],
+        "platforms": [
+          "Windows",
+          "macOS",
+          "Linux"
+        ],
+        "categories": [
+          "单人",
+          "Steam 成就",
+          "完全支持控制器",
+          "Steam 云",
+          "家庭共享"
+        ],
+        "genres": [
+          "独立",
+          "角色扮演",
+          "策略"
+        ],
+        "tags": [
+          "独立",
+          "角色扮演",
+          "策略"
+        ],
+        "featureTags": [
+          "单人",
+          "成就",
+          "云存档",
+          "家庭共享"
+        ],
+        "metacritic": null,
+        "chineseSupport": true,
+        "reviewTotal": 6195,
+        "description": "《将军 对决》是一款带有肉鸽和卡组构筑元素的回合制战斗游戏，在正确的时间进行移动和攻击，升级你的行动和卡组，准备好迎击将军吧！",
+        "descriptionOriginal": "《将军 对决》是一款带有肉鸽和卡组构筑元素的回合制战斗游戏，在正确的时间进行移动和攻击，升级你的行动和卡组，准备好迎击将军吧！",
+        "descriptionTranslated": false
+      },
+      "createdAt": 1789449418480,
+      "updatedAt": 1789449421518
+    },
+    {
+      "appid": 1164940,
+      "name": "海参2",
+      "originalName": "海参2",
+      "price": {
+        "current": 44,
+        "original": 176,
+        "discountPercent": 75,
+        "currency": "CNY",
+        "isOnSale": true,
+        "discountExpiration": null,
+        "updatedAt": 1789449410273
+      },
+      "rating": {
+        "score": 8.4,
+        "positive": 84,
+        "total": 1204,
+        "desc": "Very Positive",
+        "updatedAt": 1789449410717
+      },
+      "historicalLow": {
+        "price": 0,
+        "count": 1,
+        "confidence": "A",
+        "source": "ITAD(国区)",
+        "updatedAt": 1789449412204,
+        "currency": "CNY"
+      },
+      "targetPrice": null,
+      "note": "",
+      "dlcList": [
+        {
+          "appid": 2656880,
+          "name": "Trepang2 - Season Pass",
+          "price": 41.99,
+          "shortDescription": "Trepang2 季票",
+          "description": "Trepang2 季票",
+          "kind": "季票",
+          "type": "dlc",
+          "originalDescription": "Trepang2 季票",
+          "translated": false,
+          "updatedAt": 1789449412815
+        },
+        {
+          "appid": 2615910,
+          "name": "Trepang2 - Survival Mode DLC",
+          "price": 15,
+          "shortDescription": "利用《Trepang2》的生存模式可下载内容考验您这个顶尖狠角色的杀敌技术。",
+          "description": "利用《Trepang2》的生存模式可下载内容考验您这个顶尖狠角色的杀敌技术。",
+          "kind": "其他",
+          "type": "dlc",
+          "originalDescription": "利用《Trepang2》的生存模式可下载内容考验您这个顶尖狠角色的杀敌技术。",
+          "translated": false,
+          "updatedAt": 1789449414014
+        },
+        {
+          "appid": 1842620,
+          "name": "Trepang2 - Soundtrack",
+          "price": 36,
+          "shortDescription": "Feel like the ultimate badass while listening to the techno-rock/metal soundtrack from Trepang2! Composed by Brandon McKagan, it features 58 tracks with almost two hours of original music.",
+          "description": "Feel like the ultimate badass while listening to the techno-rock/metal soundtrack from Trepang2! Composed by Brandon McKagan, it features 58 tracks with almost …",
+          "kind": "原声",
+          "type": "music",
+          "originalDescription": "Feel like the ultimate badass while listening to the techno-rock/metal soundtrack from Trepang2! Composed by Brandon McKagan, it features 58 tracks with almost two hours of original music.",
+          "translated": false,
+          "updatedAt": 1789449416279
+        },
+        {
+          "appid": 2615920,
+          "name": "Trepang2 - Bladekisser DLC",
+          "price": 36,
+          "shortDescription": "全新支线任务和武器，还有更多精彩内容。宝剑配英雄，你会是我们的英雄吗？",
+          "description": "全新支线任务和武器，还有更多精彩内容。宝剑配英雄，你会是我们的英雄吗？",
+          "kind": "其他",
+          "type": "dlc",
+          "originalDescription": "全新支线任务和武器，还有更多精彩内容。宝剑配英雄，你会是我们的英雄吗？",
+          "translated": false,
+          "updatedAt": 1789449416616
+        }
+      ],
+      "details": {
+        "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1164940/header_schinese.jpg?t=1765814715",
+        "isFree": false,
+        "type": "game",
+        "releaseDate": "2023 年 6 月 21 日",
+        "releaseTs": null,
+        "developers": [
+          "Trepang Studios"
+        ],
+        "publishers": [
+          "Team17"
+        ],
+        "platforms": [
+          "Windows"
+        ],
+        "categories": [
+          "单人",
+          "Steam 成就",
+          "完全支持控制器",
+          "DUALSHOCK 控制器支持",
+          "DualSense 控制器支持",
+          "Steam 云",
+          "家庭共享"
+        ],
+        "genres": [
+          "动作",
+          "独立"
+        ],
+        "tags": [
+          "动作",
+          "独立"
+        ],
+        "featureTags": [
+          "单人",
+          "成就",
+          "云存档",
+          "家庭共享"
+        ],
+        "metacritic": 79,
+        "chineseSupport": true,
+        "reviewTotal": 15762,
+        "description": "《海参2》是一款背景设置在遥远未来、动作性十足的血腥第一人称射击游戏。在这款硬核的疯狂射击游戏中，对敌人释放猛烈炮火、躲避子弹并留下毁灭的痕迹，成为一名顶尖狠角色。",
+        "descriptionOriginal": "《海参2》是一款背景设置在遥远未来、动作性十足的血腥第一人称射击游戏。在这款硬核的疯狂射击游戏中，对敌人释放猛烈炮火、躲避子弹并留下毁灭的痕迹，成为一名顶尖狠角色。",
+        "descriptionTranslated": false
+      },
+      "createdAt": 1789449410717,
+      "updatedAt": 1789449416616
+    },
+    {
+      "appid": 384190,
+      "name": "ABZU",
+      "originalName": "ABZU",
+      "price": {
+        "current": 68,
+        "original": 68,
+        "discountPercent": 0,
+        "currency": "CNY",
+        "isOnSale": false,
+        "discountExpiration": null,
+        "updatedAt": 1789449402573
+      },
+      "rating": {
+        "score": 9.6,
+        "positive": 92,
+        "total": 6416,
+        "desc": "Very Positive",
+        "updatedAt": 1789449403972
+      },
+      "historicalLow": {
+        "price": 17,
+        "count": 32,
+        "confidence": "A",
+        "source": "ITAD(国区)",
+        "updatedAt": 1789449405775,
+        "currency": "CNY"
+      },
+      "targetPrice": null,
+      "note": "",
+      "dlcList": [],
+      "details": {
+        "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/384190/header.jpg?t=1786125758",
+        "isFree": false,
+        "type": "game",
+        "releaseDate": "2016 年 8 月 2 日",
+        "releaseTs": null,
+        "developers": [
+          "Giant Squid"
+        ],
+        "publishers": [
+          "505 Games"
+        ],
+        "platforms": [
+          "Windows"
+        ],
+        "categories": [
+          "单人",
+          "Steam 成就",
+          "完全支持控制器",
+          "Steam 集换式卡牌",
+          "推荐使用手柄",
+          "家庭共享"
+        ],
+        "genres": [
+          "冒险",
+          "休闲",
+          "独立",
+          "模拟"
+        ],
+        "tags": [
+          "冒险",
+          "休闲",
+          "独立",
+          "模拟"
+        ],
+        "featureTags": [
+          "单人",
+          "成就",
+          "集换式卡牌",
+          "手柄支持",
+          "家庭共享"
+        ],
+        "metacritic": 83,
+        "chineseSupport": true,
+        "reviewTotal": 21992,
+        "description": "沿袭 Journey® 蕴含的艺术思想，ABZÛ 是一款能唤起潜水梦想的唯美海底冒险游戏。深入海洋中心，将自己沉浸在生机勃勃的隐秘世界中，这里色彩缤纷，生物繁多。但要注意，当你不断深入，危险就潜伏在深处。",
+        "descriptionOriginal": "沿袭 Journey® 蕴含的艺术思想，ABZÛ 是一款能唤起潜水梦想的唯美海底冒险游戏。深入海洋中心，将自己沉浸在生机勃勃的隐秘世界中，这里色彩缤纷，生物繁多。但要注意，当你不断深入，危险就潜伏在深处。",
+        "descriptionTranslated": false
+      },
+      "createdAt": 1789449403972,
+      "updatedAt": 1789449403972
+    },
+    {
+      "appid": 1161170,
+      "name": "山海旅人",
+      "originalName": "山海旅人",
+      "price": {
+        "current": 52,
+        "original": 52,
+        "discountPercent": 0,
+        "currency": "CNY",
+        "isOnSale": false,
+        "discountExpiration": null,
+        "updatedAt": 1789449396509
+      },
+      "rating": {
+        "score": 9.8,
+        "positive": 96,
+        "total": 6568,
+        "desc": "Overwhelmingly Positive",
+        "updatedAt": 1789449397087
+      },
+      "historicalLow": {
+        "price": 20.8,
+        "count": 10,
+        "confidence": "A",
+        "source": "ITAD(国区)",
+        "updatedAt": 1789449398602,
+        "currency": "CNY"
+      },
+      "targetPrice": null,
+      "note": "",
+      "dlcList": [
+        {
+          "appid": 1717040,
+          "name": "山海旅人-原声集",
+          "price": 0,
+          "shortDescription": "《山海旅人-原声集》由-MoonCake Audio-为您呈现，总计包含31首原创曲目，其中5首为包含真人演唱的歌曲。文件采用192kbps码率的MP3以及WAV文件格式。",
+          "description": "《山海旅人-原声集》由-MoonCake Audio-为您呈现，总计包含31首原创曲目，其中5首为包含真人演唱的歌曲。文件采用192kbps码率的MP3以及WAV文件格式。",
+          "kind": "原声",
+          "type": "music",
+          "originalDescription": "《山海旅人-原声集》由-MoonCake Audio-为您呈现，总计包含31首原创曲目，其中5首为包含真人演唱的歌曲。文件采用192kbps码率的MP3以及WAV文件格式。",
+          "translated": false,
+          "updatedAt": 1789449399185
+        },
+        {
+          "appid": 1889430,
+          "name": "山海旅人-夜行柳渡",
+          "price": 6,
+          "shortDescription": "《山海旅人—夜行柳渡》是一款2D志怪风格冒险解密游戏，延续了《山海旅人》的世界观，玩家将扮演七云的父亲——周隐山，亲历当年夜行柳渡发生的故事。",
+          "description": "《山海旅人—夜行柳渡》是一款2D志怪风格冒险解密游戏，延续了《山海旅人》的世界观，玩家将扮演七云的父亲——周隐山，亲历当年夜行柳渡发生的故事。",
+          "kind": "其他",
+          "type": "dlc",
+          "originalDescription": "《山海旅人—夜行柳渡》是一款2D志怪风格冒险解密游戏，延续了《山海旅人》的世界观，玩家将扮演七云的父亲——周隐山，亲历当年夜行柳渡发生的故事。",
+          "translated": false,
+          "updatedAt": 1789449400400
+        }
+      ],
+      "details": {
+        "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1161170/header_schinese.jpg?t=1744993074",
+        "isFree": false,
+        "type": "game",
+        "releaseDate": "2021 年 9 月 9 日",
+        "releaseTs": null,
+        "developers": [
+          "MistyMountainStudio"
+        ],
+        "publishers": [
+          "Gamirror Games"
+        ],
+        "platforms": [
+          "Windows",
+          "macOS"
+        ],
+        "categories": [
+          "单人",
+          "Steam 成就",
+          "完全支持控制器",
+          "Steam 云",
+          "家庭共享"
+        ],
+        "genres": [
+          "冒险",
+          "休闲",
+          "独立"
+        ],
+        "tags": [
+          "冒险",
+          "休闲",
+          "独立"
+        ],
+        "featureTags": [
+          "单人",
+          "成就",
+          "云存档",
+          "家庭共享"
+        ],
+        "metacritic": null,
+        "chineseSupport": true,
+        "reviewTotal": 6843,
+        "description": "《山海旅人》是一款2D志怪风格冒险解谜游戏。玩家将扮演七云，最后一位“逆梦师”，通过探索他人残留的记忆，穿梭时间、扭转历史，帮助受困灵魂重入轮回。",
+        "descriptionOriginal": "《山海旅人》是一款2D志怪风格冒险解谜游戏。玩家将扮演七云，最后一位“逆梦师”，通过探索他人残留的记忆，穿梭时间、扭转历史，帮助受困灵魂重入轮回。",
+        "descriptionTranslated": false
+      },
+      "createdAt": 1789449397087,
+      "updatedAt": 1789449400400
+    },
+    {
+      "appid": 1282100,
+      "name": "遗迹2",
+      "originalName": "遗迹2",
+      "price": {
+        "current": 245,
+        "original": 245,
+        "discountPercent": 0,
+        "currency": "CNY",
+        "isOnSale": false,
+        "discountExpiration": null,
+        "updatedAt": 1789449385090
+      },
+      "rating": {
+        "score": 7.5,
+        "positive": 73,
+        "total": 11612,
+        "desc": "Mostly Positive",
+        "updatedAt": 1789449385735
+      },
+      "historicalLow": {
+        "price": 61.25,
+        "count": 4,
+        "confidence": "A",
+        "source": "ITAD(国区)",
+        "updatedAt": 1789449387187,
+        "currency": "CNY"
+      },
+      "targetPrice": null,
+      "note": "",
+      "dlcList": [
+        {
+          "appid": 2384075,
+          "name": "Remnant II® - The Dark Horizon",
+          "price": 49,
+          "shortDescription": "重返涅鲁德，揭开被时间冻结的神秘之地。在这里，外星的农田由机器人细心照料着，因为曾经的居民早已消逝。",
+          "description": "重返涅鲁德，揭开被时间冻结的神秘之地。在这里，外星的农田由机器人细心照料着，因为曾经的居民早已消逝。",
+          "kind": "其他",
+          "type": "dlc",
+          "originalDescription": "重返涅鲁德，揭开被时间冻结的神秘之地。在这里，外星的农田由机器人细心照料着，因为曾经的居民早已消逝。",
+          "translated": false,
+          "updatedAt": 1789449387750
+        },
+        {
+          "appid": 2384074,
+          "name": "Remnant II® - The Forgotten Kingdom",
+          "price": 49,
+          "shortDescription": "莉杜莎，一个被囚禁已久的上古石之灵，将不惜一切代价重获自由，向背叛她的凡人发起复仇。",
+          "description": "莉杜莎，一个被囚禁已久的上古石之灵，将不惜一切代价重获自由，向背叛她的凡人发起复仇。",
+          "kind": "其他",
+          "type": "dlc",
+          "originalDescription": "莉杜莎，一个被囚禁已久的上古石之灵，将不惜一切代价重获自由，向背叛她的凡人发起复仇。",
+          "translated": false,
+          "updatedAt": 1789449389030
+        },
+        {
+          "appid": 2384073,
+          "name": "Remnant II® - The Awakened King",
+          "price": 49,
+          "shortDescription": "独一真皇已经醒来，准备报仇雪恨。在他接近死亡的沉睡中，根蔓腐化了他。现在，疯王感觉自己众叛亲离，正在肆意报复。自从他的城堡首次抵达德兰沿海小镇以来，潮水怒号，天气混乱，深渊中涌现出诸多生物，留下各种谜团。",
+          "description": "独一真皇已经醒来，准备报仇雪恨。在他接近死亡的沉睡中，根蔓腐化了他。现在，疯王感觉自己众叛亲离，正在肆意报复。自从他的城堡首次抵达德兰沿海小镇以来，潮水怒号，天气混乱，深渊中涌现出诸多生物，留下各种谜团。",
+          "kind": "其他",
+          "type": "dlc",
+          "originalDescription": "独一真皇已经醒来，准备报仇雪恨。在他接近死亡的沉睡中，根蔓腐化了他。现在，疯王感觉自己众叛亲离，正在肆意报复。自从他的城堡首次抵达德兰沿海小镇以来，潮水怒号，天气混乱，深渊中涌现出诸多生物，留下各种谜团。",
+          "translated": false,
+          "updatedAt": 1789449390180
+        }
+      ],
+      "details": {
+        "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1282100/header.jpg?t=1764659459",
+        "isFree": false,
+        "type": "game",
+        "releaseDate": "2023 年 7 月 25 日",
+        "releaseTs": null,
+        "developers": [
+          "Gunfire Games"
+        ],
+        "publishers": [
+          "Arc Games",
+          "THQ Nordic"
+        ],
+        "platforms": [
+          "Windows"
+        ],
+        "categories": [
+          "单人",
+          "多人",
+          "合作",
+          "在线合作",
+          "Steam 成就",
+          "完全支持控制器",
+          "DUALSHOCK 控制器支持",
+          "DUALSHOCK 控制器支持",
+          "DualSense 控制器支持",
+          "DualSense 控制器支持",
+          "Steam 云",
+          "家庭共享"
+        ],
+        "genres": [
+          "动作",
+          "冒险",
+          "角色扮演"
+        ],
+        "tags": [
+          "动作",
+          "冒险",
+          "角色扮演"
+        ],
+        "featureTags": [
+          "单人",
+          "多人",
+          "联机合作",
+          "成就",
+          "云存档",
+          "家庭共享"
+        ],
+        "metacritic": null,
+        "chineseSupport": true,
+        "reviewTotal": 46211,
+        "description": "《Remnant II®》是畅销游戏《Remnant: From the Ashes》的续作。在本作中，人类幸存者将再次深陷可怕的世界，对抗新的邪恶怪物和神一般的敌人头目。",
+        "descriptionOriginal": "《Remnant II®》是畅销游戏《Remnant: From the Ashes》的续作。在本作中，人类幸存者将再次深陷可怕的世界，对抗新的邪恶怪物和神一般的敌人头目。",
+        "descriptionTranslated": false
+      },
+      "createdAt": 1789449385735,
+      "updatedAt": 1789449390180
+    },
+    {
+      "appid": 1966900,
+      "name": "黎明前20分钟",
+      "originalName": "黎明前20分钟",
+      "price": {
+        "current": 11,
+        "original": 22,
+        "discountPercent": 50,
+        "currency": "CNY",
+        "isOnSale": true,
+        "discountExpiration": null,
+        "updatedAt": 1789449378893
+      },
+      "rating": {
+        "score": 8.9,
+        "positive": 85,
+        "total": 8376,
+        "desc": "Very Positive",
+        "updatedAt": 1789449379519
+      },
+      "historicalLow": {
+        "price": 11,
+        "count": 2,
+        "confidence": "A",
+        "source": "ITAD(国区)",
+        "updatedAt": 1789449380984,
+        "currency": "CNY"
+      },
+      "targetPrice": null,
+      "note": "",
+      "dlcList": [],
+      "details": {
+        "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1966900/header.jpg?t=1785102761",
+        "isFree": false,
+        "type": "game",
+        "releaseDate": "2023 年 6 月 8 日",
+        "releaseTs": null,
+        "developers": [
+          "flanne"
+        ],
+        "publishers": [
+          "flanne"
+        ],
+        "platforms": [
+          "Windows",
+          "macOS"
+        ],
+        "categories": [
+          "单人",
+          "Steam 成就",
+          "部分支持控制器",
+          "Steam 云",
+          "家庭共享"
+        ],
+        "genres": [
+          "动作",
+          "冒险",
+          "休闲",
+          "独立",
+          "策略"
+        ],
+        "tags": [
+          "动作",
+          "冒险",
+          "休闲",
+          "独立",
+          "策略"
+        ],
+        "featureTags": [
+          "单人",
+          "成就",
+          "云存档",
+          "家庭共享"
+        ],
+        "metacritic": null,
+        "chineseSupport": true,
+        "reviewTotal": 27867,
+        "description": "快围剿巢穴里不断增生的克苏鲁魔物！策略选择你的角色、武器和符文开局，局中选择你的升级、进化和秘籍构筑你专属的强大流派，战至黎明！一局20分钟，解锁极致解压的肉鸽割草体验！！你还可以选择10分钟模式！",
+        "descriptionOriginal": "快围剿巢穴里不断增生的克苏鲁魔物！策略选择你的角色、武器和符文开局，局中选择你的升级、进化和秘籍构筑你专属的强大流派，战至黎明！一局20分钟，解锁极致解压的肉鸽割草体验！！你还可以选择10分钟模式！",
+        "descriptionTranslated": false
+      },
+      "createdAt": 1789449379519,
+      "updatedAt": 1789449379519
+    },
+    {
+      "appid": 3228590,
+      "name": "死域 Rogue",
+      "originalName": "死域 Rogue",
+      "price": {
+        "current": 85,
+        "original": 85,
+        "discountPercent": 0,
+        "currency": "CNY",
+        "isOnSale": false,
+        "discountExpiration": null,
+        "updatedAt": 1789449369805
+      },
+      "rating": {
+        "score": 5.5,
+        "positive": 54,
+        "total": 1964,
+        "desc": "Mixed",
+        "updatedAt": 1789449370423
+      },
+      "historicalLow": {
+        "price": 42.5,
+        "count": 2,
+        "confidence": "A",
+        "source": "ITAD(国区)",
+        "updatedAt": 1789449371848,
+        "currency": "CNY"
+      },
+      "targetPrice": null,
+      "note": "",
+      "dlcList": [
+        {
+          "appid": 3897660,
+          "name": "Deadzone: Rogue - Operative Pack",
+          "price": 45,
+          "shortDescription": "《死域：Rogue》是一款以太空为背景的类Rogue第一人称射击游戏。冲破成群的敌对机器，组合强力增幅和元素打造你的专属构筑，并在每一局中不断变强——无论是单人还是合作模式。",
+          "description": "《死域：Rogue》是一款以太空为背景的类Rogue第一人称射击游戏。冲破成群的敌对机器，组合强力增幅和元素打造你的专属构筑，并在每一局中不断变强——无论是单人还是合作模式。",
+          "kind": "其他",
+          "type": "dlc",
+          "originalDescription": "《死域：Rogue》是一款以太空为背景的类Rogue第一人称射击游戏。冲破成群的敌对机器，组合强力增幅和元素打造你的专属构筑，并在每一局中不断变强——无论是单人还是合作模式。",
+          "translated": false,
+          "updatedAt": 1789449372470
+        },
+        {
+          "appid": 4208730,
+          "name": "Deadzone: Rogue - MARK II Pack",
+          "price": 45,
+          "shortDescription": "《死域 Rogue》是一款以太空为背景的类Rogue第一人称射击游戏。冲破成群的敌对机器，组合强力增幅和元素打造你的专属构筑，并在每一局中不断变强——无论是单人还是合作模式。",
+          "description": "《死域 Rogue》是一款以太空为背景的类Rogue第一人称射击游戏。冲破成群的敌对机器，组合强力增幅和元素打造你的专属构筑，并在每一局中不断变强——无论是单人还是合作模式。",
+          "kind": "其他",
+          "type": "dlc",
+          "originalDescription": "《死域 Rogue》是一款以太空为背景的类Rogue第一人称射击游戏。冲破成群的敌对机器，组合强力增幅和元素打造你的专属构筑，并在每一局中不断变强——无论是单人还是合作模式。",
+          "translated": false,
+          "updatedAt": 1789449373633
+        },
+        {
+          "appid": 3883890,
+          "name": "Deadzone: Rogue - Original Soundtrack",
+          "price": 20,
+          "shortDescription": "《死域：Rogue》是一款以太空为背景的类Rogue第一人称射击游戏。冲破成群的敌对机器，组合强力增幅和元素打造你的专属构筑，并在每一局中不断变强——无论是单人还是合作模式。",
+          "description": "《死域：Rogue》是一款以太空为背景的类Rogue第一人称射击游戏。冲破成群的敌对机器，组合强力增幅和元素打造你的专属构筑，并在每一局中不断变强——无论是单人还是合作模式。",
+          "kind": "原声",
+          "type": "music",
+          "originalDescription": "《死域：Rogue》是一款以太空为背景的类Rogue第一人称射击游戏。冲破成群的敌对机器，组合强力增幅和元素打造你的专属构筑，并在每一局中不断变强——无论是单人还是合作模式。",
+          "translated": false,
+          "updatedAt": 1789449374857
+        }
+      ],
+      "details": {
+        "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3228590/8c9760d98ac7e10b369c7d0e3f04d0cd65187477/header_schinese.jpg?t=1784756793",
+        "isFree": false,
+        "type": "game",
+        "releaseDate": "2025 年 8 月 11 日",
+        "releaseTs": null,
+        "developers": [
+          "Prophecy Games"
+        ],
+        "publishers": [
+          "Prophecy Games"
+        ],
+        "platforms": [
+          "Windows"
+        ],
+        "categories": [
+          "单人",
+          "多人",
+          "合作",
+          "在线合作",
+          "跨平台多人",
+          "Steam 成就",
+          "完全支持控制器",
+          "自定义音量控制",
+          "可调整难度",
+          "无需应对快速反应事件",
+          "DUALSHOCK 控制器支持",
+          "DualSense 控制器支持",
+          "立体声",
+          "Steam 云",
+          "家庭共享"
+        ],
+        "genres": [
+          "动作"
+        ],
+        "tags": [
+          "动作"
+        ],
+        "featureTags": [
+          "单人",
+          "多人",
+          "联机合作",
+          "成就",
+          "云存档",
+          "家庭共享"
+        ],
+        "metacritic": null,
+        "chineseSupport": true,
+        "reviewTotal": 15033,
+        "description": "《死域 Rogue》是一款以太空为背景的类Rogue第一人称射击游戏。冲破成群的敌对机器，组合强力增幅和元素打造你的专属构筑，并在每一局中不断变强——无论是单人还是合作模式。",
+        "descriptionOriginal": "《死域 Rogue》是一款以太空为背景的类Rogue第一人称射击游戏。冲破成群的敌对机器，组合强力增幅和元素打造你的专属构筑，并在每一局中不断变强——无论是单人还是合作模式。",
+        "descriptionTranslated": false
+      },
+      "createdAt": 1789449370423,
+      "updatedAt": 1789449374857
+    },
+    {
+      "appid": 775500,
+      "name": "绯红结系",
+      "originalName": "绯红结系",
+      "price": {
+        "current": 328,
+        "original": 328,
+        "discountPercent": 0,
+        "currency": "CNY",
+        "isOnSale": false,
+        "discountExpiration": null,
+        "updatedAt": 1789449339116
+      },
+      "rating": {
+        "score": 7.5,
+        "positive": 74,
+        "total": 6133,
+        "desc": "Mostly Positive",
+        "updatedAt": 1789449339704
+      },
+      "historicalLow": {
+        "price": 0,
+        "count": 1,
+        "confidence": "A",
+        "source": "ITAD(国区)",
+        "updatedAt": 1789449341211,
+        "currency": "CNY"
+      },
+      "targetPrice": null,
+      "note": "",
+      "dlcList": [
+        {
+          "appid": 1790540,
+          "name": "SCARLET NEXUS Ultimate Upgrade Pack",
+          "price": 238,
+          "shortDescription": "此为可以一并购得『绯红结系 终极版』附赠商品的套组。 如果您已拥有游戏本篇『绯红结系』，可以购买此商品升级至『绯红结系 终极版』。",
+          "description": "此为可以一并购得『绯红结系 终极版』附赠商品的套组。 如果您已拥有游戏本篇『绯红结系』，可以购买此商品升级至『绯红结系 终极版』。",
+          "kind": "版本升级包",
+          "type": "dlc",
+          "originalDescription": "此为可以一并购得『绯红结系 终极版』附赠商品的套组。 如果您已拥有游戏本篇『绯红结系』，可以购买此商品升级至『绯红结系 终极版』。",
+          "translated": false,
+          "updatedAt": 1789449341767
+        },
+        {
+          "appid": 1767240,
+          "name": "SCARLET NEXUS Season Pass",
+          "price": 118,
+          "shortDescription": "此为『绯红结系』的追加DLC季票。能以套组价格购得第1波DLC～第3波DLC，除了新设计的所有角色追加服装与武器套组之外，您还可以体验全新追加剧情来进一步享受与伙伴之间的羁绊，以及游玩「羁绊等级扩充」等等追加要素。 ※第3波DLC与前2波DLC的套组内容不同，请您于购买时多加留意。",
+          "description": "此为『绯红结系』的追加DLC季票。能以套组价格购得第1波DLC～第3波DLC，除了新设计的所有角色追加服装与武器套组之外，您还可以体验全新追加剧情来进一步享受与伙伴之间的羁绊，以及游玩「羁绊等级扩充」等等追加要素。 ※第3波DLC与前2波DLC的套组内容不同，请您于购买时多加留意。",
+          "kind": "季票",
+          "type": "dlc",
+          "originalDescription": "此为『绯红结系』的追加DLC季票。能以套组价格购得第1波DLC～第3波DLC，除了新设计的所有角色追加服装与武器套组之外，您还可以体验全新追加剧情来进一步享受与伙伴之间的羁绊，以及游玩「羁绊等级扩充」等等追加要素。 ※第3波DLC与前2波DLC的套组内容不同，请您于购买时多加留意。",
+          "translated": false,
+          "updatedAt": 1789449343038
+        },
+        {
+          "appid": 1590563,
+          "name": "SCARLET NEXUS Bond Enhancement Pack 1",
+          "price": 58,
+          "shortDescription": "此为『绯红结系』的第1波追加DLC。 追加出自外部开发人员之手，新设计的所有角色追加服装与武器套组。除了全新羁绊章节之外，您还可以透过「羁绊等级扩充」（羁绊等级EX）获得新SAS脑力，享受伙伴在本篇中无缘展露的全新一面。",
+          "description": "此为『绯红结系』的第1波追加DLC。 追加出自外部开发人员之手，新设计的所有角色追加服装与武器套组。除了全新羁绊章节之外，您还可以透过「羁绊等级扩充」（羁绊等级EX）获得新SAS脑力，享受伙伴在本篇中无缘展露的全新一面。",
+          "kind": "章节",
+          "type": "dlc",
+          "originalDescription": "此为『绯红结系』的第1波追加DLC。 追加出自外部开发人员之手，新设计的所有角色追加服装与武器套组。除了全新羁绊章节之外，您还可以透过「羁绊等级扩充」（羁绊等级EX）获得新SAS脑力，享受伙伴在本篇中无缘展露的全新一面。",
+          "translated": false,
+          "updatedAt": 1789449344230
+        },
+        {
+          "appid": 1590566,
+          "name": "SCARLET NEXUS Bond Enhancement Pack 2",
+          "price": 59,
+          "shortDescription": "此为『绯红结系』的第2波追加DLC。 追加出自外部开发人员之手，新设计的所有角色追加服装与武器套组。除了全新羁绊章节之外，您还可以透过「羁绊等级扩充」（羁绊等级EX）获得新SAS脑力，享受伙伴在本篇中无缘展露的全新一面。",
+          "description": "此为『绯红结系』的第2波追加DLC。 追加出自外部开发人员之手，新设计的所有角色追加服装与武器套组。除了全新羁绊章节之外，您还可以透过「羁绊等级扩充」（羁绊等级EX）获得新SAS脑力，享受伙伴在本篇中无缘展露的全新一面。",
+          "kind": "章节",
+          "type": "dlc",
+          "originalDescription": "此为『绯红结系』的第2波追加DLC。 追加出自外部开发人员之手，新设计的所有角色追加服装与武器套组。除了全新羁绊章节之外，您还可以透过「羁绊等级扩充」（羁绊等级EX）获得新SAS脑力，享受伙伴在本篇中无缘展露的全新一面。",
+          "translated": false,
+          "updatedAt": 1789449345419
+        },
+        {
+          "appid": 1590567,
+          "name": "SCARLET NEXUS Brain Eater Pack",
+          "price": 48,
+          "shortDescription": "此为『绯红结系』的第3波追加付费DLC。 除了新增2种全角色追加服装之外，您还可以观赏追加章节得悉本作登场角色「卡连崔佛斯」全新一面、游玩视觉影像仿真装置的全新任务与强敌较劲、以及享受全新挑战与奖赏等等内容。",
+          "description": "此为『绯红结系』的第3波追加付费DLC。 除了新增2种全角色追加服装之外，您还可以观赏追加章节得悉本作登场角色「卡连崔佛斯」全新一面、游玩视觉影像仿真装置的全新任务与强敌较劲、以及享受全新挑战与奖赏等等内容。",
+          "kind": "章节",
+          "type": "dlc",
+          "originalDescription": "此为『绯红结系』的第3波追加付费DLC。 除了新增2种全角色追加服装之外，您还可以观赏追加章节得悉本作登场角色「卡连崔佛斯」全新一面、游玩视觉影像仿真装置的全新任务与强敌较劲、以及享受全新挑战与奖赏等等内容。",
+          "translated": false,
+          "updatedAt": 1789449346037
+        },
+        {
+          "appid": 1590565,
+          "name": "SCARLET NEXUS Brain Punk Bundle",
+          "price": 118,
+          "shortDescription": "此为可购买『绯红结系 豪华版』内附赠下列商品的套组。 ■套组内容 ・绯红结系 数位美术集＆数位原声带 ・追加服装「红色服装」全角色套组",
+          "description": "此为可购买『绯红结系 豪华版』内附赠下列商品的套组。 ■套组内容 ・绯红结系 数位美术集＆数位原声带 ・追加服装「红色服装」全角色套组",
+          "kind": "原声",
+          "type": "dlc",
+          "originalDescription": "此为可购买『绯红结系 豪华版』内附赠下列商品的套组。 ■套组内容 ・绯红结系 数位美术集＆数位原声带 ・追加服装「红色服装」全角色套组",
+          "translated": false,
+          "updatedAt": 1789449347234
+        },
+        {
+          "appid": 1590561,
+          "name": "SCARLET NEXUS Pre-Order Bundle",
+          "price": 38,
+          "shortDescription": "此为游戏内可以使用的追加内容套组。 ・追加附属品「肩上的吐吐神」11种套组 ・追加服装「特殊服装 -音-」全角色套组 ・追加附属品「脸部视觉影像 刻印」 ・追加附属品「捕梦网」 ※下载后即可在游戏内商店领取特典。 ※须更新至最新版本方能使用特典。",
+          "description": "此为游戏内可以使用的追加内容套组。 ・追加附属品「肩上的吐吐神」11种套组 ・追加服装「特殊服装 -音-」全角色套组 ・追加附属品「脸部视觉影像 刻印」 ・追加附属品「捕梦网」 ※下载后即可在游戏内商店领取特典。 ※须更新至最新版本方能使用特典。",
+          "kind": "其他",
+          "type": "dlc",
+          "originalDescription": "此为游戏内可以使用的追加内容套组。 ・追加附属品「肩上的吐吐神」11种套组 ・追加服装「特殊服装 -音-」全角色套组 ・追加附属品「脸部视觉影像 刻印」 ・追加附属品「捕梦网」 ※下载后即可在游戏内商店领取特典。 ※须更新至最新版本方能使用特典。",
+          "translated": false,
+          "updatedAt": 1789449347865
+        }
+      ],
+      "details": {
+        "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/775500/header.jpg?t=1703662938",
+        "isFree": false,
+        "type": "game",
+        "releaseDate": "2021 年 6 月 24 日",
+        "releaseTs": null,
+        "developers": [
+          "BANDAI NAMCO Studios Inc."
+        ],
+        "publishers": [
+          "BANDAI NAMCO Entertainment"
+        ],
+        "platforms": [
+          "Windows"
+        ],
+        "categories": [
+          "单人",
+          "Steam 成就",
+          "完全支持控制器",
+          "DUALSHOCK 控制器支持",
+          "DUALSHOCK 控制器支持",
+          "DualSense 控制器支持",
+          "DualSense 控制器支持",
+          "Steam 云",
+          "家庭共享"
+        ],
+        "genres": [
+          "动作",
+          "冒险",
+          "角色扮演"
+        ],
+        "tags": [
+          "动作",
+          "冒险",
+          "角色扮演"
+        ],
+        "featureTags": [
+          "单人",
+          "成就",
+          "云存档",
+          "家庭共享"
+        ],
+        "metacritic": 78,
+        "chineseSupport": true,
+        "reviewTotal": 13748,
+        "description": "此为以脑部与科技蓬勃发展的世界为舞台，可以置身体验运用自身「念力」与伙伴们的形形色色力量战斗的超脑力动作，以及采用双主角视角描写的扎实故事剧情的「超脑力动作RPG」",
+        "descriptionOriginal": "此为以脑部与科技蓬勃发展的世界为舞台，可以置身体验运用自身「念力」与伙伴们的形形色色力量战斗的超脑力动作，以及采用双主角视角描写的扎实故事剧情的「超脑力动作RPG」",
+        "descriptionTranslated": false
+      },
+      "createdAt": 1789449339704,
+      "updatedAt": 1789449347865
+    },
+    {
+      "appid": 1622910,
+      "name": "Still Wakes the Deep",
+      "originalName": "Still Wakes the Deep",
+      "price": {
+        "current": 128,
+        "original": 128,
+        "discountPercent": 0,
+        "currency": "CNY",
+        "isOnSale": false,
+        "discountExpiration": null,
+        "updatedAt": 1789449330703
+      },
+      "rating": {
+        "score": 8.9,
+        "positive": 85,
+        "total": 590,
+        "desc": "Very Positive",
+        "updatedAt": 1789449331976
+      },
+      "historicalLow": {
+        "price": 32,
+        "count": 7,
+        "confidence": "A",
+        "source": "ITAD(国区)",
+        "updatedAt": 1789449333465,
+        "currency": "CNY"
+      },
+      "targetPrice": null,
+      "note": "",
+      "dlcList": [
+        {
+          "appid": 3465690,
+          "name": "Still Wakes the Deep: Siren’s Rest",
+          "price": 52,
+          "shortDescription": "1986年。自贝拉D号事件已经过去十余年。一支专业潜水队前往北海，试图揭开事件的真相。",
+          "description": "1986年。自贝拉D号事件已经过去十余年。一支专业潜水队前往北海，试图揭开事件的真相。",
+          "kind": "其他",
+          "type": "dlc",
+          "originalDescription": "1986年。自贝拉D号事件已经过去十余年。一支专业潜水队前往北海，试图揭开事件的真相。",
+          "translated": false,
+          "updatedAt": 1789449334034
+        },
+        {
+          "appid": 3049220,
+          "name": "Still Wakes the Deep Soundtrack",
+          "price": 33,
+          "shortDescription": "World-class, haunting soundtrack by Jason Graves",
+          "description": "World-class, haunting soundtrack by Jason Graves",
+          "kind": "原声",
+          "type": "music",
+          "originalDescription": "World-class, haunting soundtrack by Jason Graves",
+          "translated": false,
+          "updatedAt": 1789449336127
+        }
+      ],
+      "details": {
+        "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1622910/4922a49a07bf4f8eb23c33571e723d69de5dc5fb/header.jpg?t=1786719937",
+        "isFree": false,
+        "type": "game",
+        "releaseDate": "2024 年 6 月 18 日",
+        "releaseTs": null,
+        "developers": [
+          "The Chinese Room"
+        ],
+        "publishers": [
+          "Secret Mode"
+        ],
+        "platforms": [
+          "Windows"
+        ],
+        "categories": [
+          "单人",
+          "Steam 成就",
+          "完全支持控制器",
+          "支持字幕",
+          "DUALSHOCK 控制器支持",
+          "DUALSHOCK 控制器支持",
+          "DualSense 控制器支持",
+          "DualSense 控制器支持",
+          "Steam 云",
+          "可用 HDR",
+          "家庭共享"
+        ],
+        "genres": [
+          "动作",
+          "冒险",
+          "独立"
+        ],
+        "tags": [
+          "动作",
+          "冒险",
+          "独立"
+        ],
+        "featureTags": [
+          "单人",
+          "成就",
+          "云存档",
+          "家庭共享"
+        ],
+        "metacritic": 77,
+        "chineseSupport": true,
+        "reviewTotal": 11200,
+        "description": "1975年。苏格兰海岸附近的贝拉德石油钻井平台突发灾难。你必须前往摇摇欲坠的钻井平台，从完全不合逻辑但又现实存在的异界恐怖之中，拯救被困的船员。",
+        "descriptionOriginal": "1975年。苏格兰海岸附近的贝拉德石油钻井平台突发灾难。你必须前往摇摇欲坠的钻井平台，从完全不合逻辑但又现实存在的异界恐怖之中，拯救被困的船员。",
+        "descriptionTranslated": false
+      },
+      "createdAt": 1789449331976,
+      "updatedAt": 1789449336127
+    },
+    {
+      "appid": 1334040,
+      "name": "Paper Dolls 2 纸人贰",
+      "originalName": "Paper Dolls 2 纸人贰",
+      "price": {
+        "current": 68,
+        "original": 68,
+        "discountPercent": 0,
+        "currency": "CNY",
+        "isOnSale": false,
+        "discountExpiration": null,
+        "updatedAt": 1789449324168
+      },
+      "rating": {
+        "score": 8.4,
+        "positive": 83,
+        "total": 2781,
+        "desc": "Very Positive",
+        "updatedAt": 1789449324781
+      },
+      "historicalLow": {
+        "price": 47,
+        "count": 1,
+        "confidence": "A",
+        "source": "ITAD(国区)",
+        "updatedAt": 1789449325697,
+        "currency": "CNY"
+      },
+      "targetPrice": null,
+      "note": "",
+      "dlcList": [
+        {
+          "appid": 1376680,
+          "name": "Paper Dolls Soundtrack",
+          "price": 18,
+          "shortDescription": "《纸人》系列原创音乐集，共包含18首原声音轨。 音乐风格融合了中国民族、流行、摇滚以及富有神秘文化色彩的佛教元素。 这座百年古宅幽森诡谲的环境与音乐巧妙融合，更能令人身临其境的感受《纸人》游戏的独特之处。 感受灵魂深处的纯真本意。",
+          "description": "《纸人》系列原创音乐集，共包含18首原声音轨。 音乐风格融合了中国民族、流行、摇滚以及富有神秘文化色彩的佛教元素。 这座百年古宅幽森诡谲的环境与音乐巧妙融合，更能令人身临其境的感受《纸人》游戏的独特之处。 感受灵魂深处的纯真本意。",
+          "kind": "原声",
+          "type": "music",
+          "originalDescription": "《纸人》系列原创音乐集，共包含18首原声音轨。 音乐风格融合了中国民族、流行、摇滚以及富有神秘文化色彩的佛教元素。 这座百年古宅幽森诡谲的环境与音乐巧妙融合，更能令人身临其境的感受《纸人》游戏的独特之处。 感受灵魂深处的纯真本意。",
+          "translated": false,
+          "updatedAt": 1789449326142
+        },
+        {
+          "appid": 1453650,
+          "name": "Paper Dolls 2 Escape 逃出生天",
+          "price": 0,
+          "shortDescription": "新的危机！殷府中群魔乱舞！你将在新游玩模式中，成为驱魔者，杀个痛快。玩家可以设置酒桶轰炸敌人。 无需通关《纸人贰》主体游戏即可体验新游戏模式。",
+          "description": "新的危机！殷府中群魔乱舞！你将在新游玩模式中，成为驱魔者，杀个痛快。玩家可以设置酒桶轰炸敌人。 无需通关《纸人贰》主体游戏即可体验新游戏模式。",
+          "kind": "其他",
+          "type": "dlc",
+          "originalDescription": "新的危机！殷府中群魔乱舞！你将在新游玩模式中，成为驱魔者，杀个痛快。玩家可以设置酒桶轰炸敌人。 无需通关《纸人贰》主体游戏即可体验新游戏模式。",
+          "translated": false,
+          "updatedAt": 1789449326747
+        }
+      ],
+      "details": {
+        "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1334040/header.jpg?t=1667556590",
+        "isFree": false,
+        "type": "game",
+        "releaseDate": "2020 年 7 月 2 日",
+        "releaseTs": null,
+        "developers": [
+          "Beijing Litchi Culture Media Co., Ltd."
+        ],
+        "publishers": [
+          "Beijing Litchi Culture Media Co., Ltd."
+        ],
+        "platforms": [
+          "Windows"
+        ],
+        "categories": [
+          "单人",
+          "Steam 成就",
+          "完全支持控制器",
+          "Steam 云",
+          "家庭共享"
+        ],
+        "genres": [
+          "动作",
+          "冒险",
+          "独立"
+        ],
+        "tags": [
+          "动作",
+          "冒险",
+          "独立"
+        ],
+        "featureTags": [
+          "单人",
+          "成就",
+          "云存档",
+          "家庭共享"
+        ],
+        "metacritic": null,
+        "chineseSupport": true,
+        "reviewTotal": 2636,
+        "description": "《纸人贰》是一款第一人称恐怖冒险解谜游戏。这座清末时期的幽森古宅为何充满了怨气？曾经声名显赫的殷府到底发生过什么？寻找女儿的踪迹，杨明远终于登上了殷府的二楼，面对无处不在的亡魂他该如何抉择？ 埋藏了百年的故事真相，等你亲自揭露。",
+        "descriptionOriginal": "《纸人贰》是一款第一人称恐怖冒险解谜游戏。这座清末时期的幽森古宅为何充满了怨气？曾经声名显赫的殷府到底发生过什么？寻找女儿的踪迹，杨明远终于登上了殷府的二楼，面对无处不在的亡魂他该如何抉择？ 埋藏了百年的故事真相，等你亲自揭露。",
+        "descriptionTranslated": false
+      },
+      "createdAt": 1789449324781,
+      "updatedAt": 1789449326747
+    },
+    {
+      "appid": 1507190,
+      "name": "Machinika: Museum",
+      "originalName": "Machinika: Museum",
+      "price": {
+        "current": 32,
+        "original": 32,
+        "discountPercent": 0,
+        "currency": "CNY",
+        "isOnSale": false,
+        "discountExpiration": null,
+        "updatedAt": 1789449318978
+      },
+      "rating": {
+        "score": 9.6,
+        "positive": 94,
+        "total": 1309,
+        "desc": "Very Positive",
+        "updatedAt": 1789449320427
+      },
+      "historicalLow": {
+        "price": 0,
+        "count": 1,
+        "confidence": "A",
+        "source": "ITAD(国区)",
+        "updatedAt": 1789449321888,
+        "currency": "CNY"
+      },
+      "targetPrice": null,
+      "note": "",
+      "dlcList": [],
+      "details": {
+        "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1507190/header.jpg?t=1744988304",
+        "isFree": false,
+        "type": "game",
+        "releaseDate": "2021 年 3 月 23 日",
+        "releaseTs": null,
+        "developers": [
+          "Littlefield Studio"
+        ],
+        "publishers": [
+          "Dear Villagers"
+        ],
+        "platforms": [
+          "Windows",
+          "macOS"
+        ],
+        "categories": [
+          "单人",
+          "完全支持控制器",
+          "DUALSHOCK 控制器支持",
+          "DUALSHOCK 控制器支持",
+          "DualSense 控制器支持",
+          "DualSense 控制器支持",
+          "家庭共享"
+        ],
+        "genres": [
+          "冒险",
+          "休闲",
+          "独立"
+        ],
+        "tags": [
+          "冒险",
+          "休闲",
+          "独立"
+        ],
+        "featureTags": [
+          "单人",
+          "家庭共享"
+        ],
+        "metacritic": null,
+        "chineseSupport": true,
+        "reviewTotal": 1184,
+        "description": "欢迎来到异星装置博物馆！走进这个氛围浓厚的解谜游戏，跨越整个星系，探索美妙而又神秘的地外装置，利用自己的逻辑思维和观察能力将它们修复。你有能力挖出这些装置背后的故事吗？有希望了解它们主人的过去吗？",
+        "descriptionOriginal": "欢迎来到异星装置博物馆！走进这个氛围浓厚的解谜游戏，跨越整个星系，探索美妙而又神秘的地外装置，利用自己的逻辑思维和观察能力将它们修复。你有能力挖出这些装置背后的故事吗？有希望了解它们主人的过去吗？",
+        "descriptionTranslated": false
+      },
+      "createdAt": 1789449320427,
+      "updatedAt": 1789449320427
+    },
+    {
+      "appid": 2362060,
+      "name": "CODE VEIN 噬血代码 II",
+      "originalName": "CODE VEIN 噬血代码 II",
+      "price": {
+        "current": 150.08,
+        "original": 268,
+        "discountPercent": 44,
+        "currency": "CNY",
+        "isOnSale": true,
+        "discountExpiration": null,
+        "updatedAt": 1789449313357
+      },
+      "rating": {
+        "score": 6.5,
+        "positive": 62,
+        "total": 1502,
+        "desc": "Mixed",
+        "updatedAt": 1789449313978
+      },
+      "historicalLow": {
+        "price": 150.08,
+        "count": 2,
+        "confidence": "A",
+        "source": "ITAD(国区)",
+        "updatedAt": 1789449315355,
+        "currency": "CNY"
+      },
+      "targetPrice": null,
+      "note": "",
+      "dlcList": [
+        {
+          "appid": 3559250,
+          "name": "CODE VEIN 噬血代码 II 数字豪华版套组",
+          "price": 168,
+          "shortDescription": "本内容为《CODE VEIN 噬血代码 II》的追加内容。 ・数字豪华版套组",
+          "description": "本内容为《CODE VEIN 噬血代码 II》的追加内容。 ・数字豪华版套组",
+          "kind": "版本升级包",
+          "type": "dlc",
+          "originalDescription": "本内容为《CODE VEIN 噬血代码 II》的追加内容。 ・数字豪华版套组",
+          "translated": false,
+          "updatedAt": 1789449315949
+        },
+        {
+          "appid": 3559260,
+          "name": "CODE VEIN 噬血代码 II 数字终极版套组",
+          "price": 68.6,
+          "shortDescription": "本内容为《CODE VEIN 噬血代码 II》的追加内容。 ・数字终极版套组",
+          "description": "本内容为《CODE VEIN 噬血代码 II》的追加内容。 ・数字终极版套组",
+          "kind": "其他",
+          "type": "dlc",
+          "originalDescription": "本内容为《CODE VEIN 噬血代码 II》的追加内容。 ・数字终极版套组",
+          "translated": false,
+          "updatedAt": 1789449317153
+        },
+        {
+          "appid": 3559240,
+          "name": "CODE VEIN 噬血代码 II - 术式刻印套组",
+          "price": 13.5,
+          "shortDescription": "收录内容 -术式刻印的面部彩绘 -武器“孤狼双剑”",
+          "description": "收录内容 -术式刻印的面部彩绘 -武器“孤狼双剑”",
+          "kind": "其他",
+          "type": "dlc",
+          "originalDescription": "收录内容 -术式刻印的面部彩绘 -武器“孤狼双剑”",
+          "translated": false,
+          "updatedAt": 1789449318367
+        }
+      ],
+      "details": {
+        "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2362060/3a5c0e387fe2494515e9f7534a8dcecdf5df8f00/header_alt_assets_0_schinese.jpg?t=1789004237",
+        "isFree": false,
+        "type": "game",
+        "releaseDate": "2026 年 1 月 29 日",
+        "releaseTs": null,
+        "developers": [
+          "Bandai Namco Studios Inc."
+        ],
+        "publishers": [
+          "Bandai Namco Entertainment Inc."
+        ],
+        "platforms": [
+          "Windows"
+        ],
+        "categories": [
+          "单人",
+          "Steam 成就",
+          "完全支持控制器",
+          "Steam 集换式卡牌",
+          "推荐使用手柄",
+          "DUALSHOCK 控制器支持",
+          "DualSense 控制器支持",
+          "DualSense 控制器支持",
+          "Steam 云",
+          "家庭共享"
+        ],
+        "genres": [
+          "动作",
+          "角色扮演"
+        ],
+        "tags": [
+          "动作",
+          "角色扮演"
+        ],
+        "featureTags": [
+          "单人",
+          "成就",
+          "集换式卡牌",
+          "云存档",
+          "手柄支持",
+          "家庭共享"
+        ],
+        "metacritic": null,
+        "chineseSupport": true,
+        "reviewTotal": 5165,
+        "description": "与搭档一同探索末日后幻想世界，对上强大的吸血鬼展开死战，跨越时空等级的壮阔故事──交织而成的“戏剧性探索动作RPG”。",
+        "descriptionOriginal": "与搭档一同探索末日后幻想世界，对上强大的吸血鬼展开死战，跨越时空等级的壮阔故事──交织而成的“戏剧性探索动作RPG”。",
+        "descriptionTranslated": false
+      },
+      "createdAt": 1789449313978,
+      "updatedAt": 1789449318367
+    },
+    {
+      "appid": 2567870,
+      "name": "Chained Together",
+      "originalName": "Chained Together",
+      "price": {
+        "current": 22,
+        "original": 22,
+        "discountPercent": 0,
+        "currency": "CNY",
+        "isOnSale": false,
+        "discountExpiration": null,
+        "updatedAt": 1789449303604
+      },
+      "rating": {
+        "score": 9.2,
+        "positive": 89,
+        "total": 12296,
+        "desc": "Very Positive",
+        "updatedAt": 1789449305158
+      },
+      "historicalLow": {
+        "price": 17.6,
+        "count": 4,
+        "confidence": "A",
+        "source": "ITAD(国区)",
+        "updatedAt": 1789449306632,
+        "currency": "CNY"
+      },
+      "targetPrice": null,
+      "note": "",
+      "dlcList": [
+        {
+          "appid": 4948760,
+          "name": "Chained Together Supporter Pack",
+          "price": 10,
+          "shortDescription": "Climb out of hell... in style! Unleash the gleaming golden chain and matching gold belt, exclusive to the Chained Together Supporter Pack.",
+          "description": "Climb out of hell... in style! Unleash the gleaming golden chain and matching gold belt, exclusive to the Chained Together Supporter Pack.",
+          "kind": "版本升级包",
+          "type": "dlc",
+          "originalDescription": "Climb out of hell... in style! Unleash the gleaming golden chain and matching gold belt, exclusive to the Chained Together Supporter Pack.",
+          "translated": false,
+          "updatedAt": 1789449308147
+        }
+      ],
+      "details": {
+        "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2567870/72749624a8611d50c47383638a21b5f6bb82f8f5/header_alt_assets_0.jpg?t=1788434455",
+        "isFree": false,
+        "type": "game",
+        "releaseDate": "2024 年 6 月 19 日",
+        "releaseTs": null,
+        "developers": [
+          "Anegar Games",
+          "Lab42"
+        ],
+        "publishers": [
+          "Secret Mode"
+        ],
+        "platforms": [
+          "Windows"
+        ],
+        "categories": [
+          "单人",
+          "多人",
+          "合作",
+          "在线合作",
+          "同屏/分屏合作",
+          "同屏/分屏",
+          "部分支持控制器",
+          "远程同乐",
+          "家庭共享"
+        ],
+        "genres": [
+          "冒险",
+          "休闲",
+          "独立",
+          "模拟"
+        ],
+        "tags": [
+          "冒险",
+          "休闲",
+          "独立",
+          "模拟"
+        ],
+        "featureTags": [
+          "单人",
+          "多人",
+          "联机合作",
+          "家庭共享"
+        ],
+        "metacritic": null,
+        "chineseSupport": false,
+        "reviewTotal": 54717,
+        "description": "从地狱的深渊，与你的朋友们一起被链锁攀登穿过多样的世界。无论是单打独斗还是合作，努力到达顶峰，并发现那里等待着你的是什么...",
+        "descriptionOriginal": "从地狱的深渊，与你的朋友们一起被链锁攀登穿过多样的世界。无论是单打独斗还是合作，努力到达顶峰，并发现那里等待着你的是什么...",
+        "descriptionTranslated": false
+      },
+      "createdAt": 1789449305158,
+      "updatedAt": 1789449308147
+    },
+    {
+      "appid": 1620730,
+      "name": "Hell is Us 地狱即我们 ",
+      "originalName": "Hell is Us 地狱即我们 ",
+      "price": {
+        "current": 168,
+        "original": 168,
+        "discountPercent": 0,
+        "currency": "CNY",
+        "isOnSale": false,
+        "discountExpiration": null,
+        "updatedAt": 1789449294965
+      },
+      "rating": {
+        "score": 6.5,
+        "positive": 68,
+        "total": 287,
+        "desc": "Mixed",
+        "updatedAt": 1789449295581
+      },
+      "historicalLow": {
+        "price": 67.2,
+        "count": 3,
+        "confidence": "A",
+        "source": "ITAD(国区)",
+        "updatedAt": 1789449296948,
+        "currency": "CNY"
+      },
+      "targetPrice": null,
+      "note": "",
+      "dlcList": [
+        {
+          "appid": 3494380,
+          "name": "Hell is Us 地狱即我们 – Soundtrack",
+          "price": 33,
+          "shortDescription": "Original Soundtrack DLC收录了专为《Hell is Us》创作的精选曲目，带你沉浸在本游戏独有的动听音乐中。",
+          "description": "Original Soundtrack DLC收录了专为《Hell is Us》创作的精选曲目，带你沉浸在本游戏独有的动听音乐中。",
+          "kind": "原声",
+          "type": "music",
+          "originalDescription": "Original Soundtrack DLC收录了专为《Hell is Us》创作的精选曲目，带你沉浸在本游戏独有的动听音乐中。",
+          "translated": false,
+          "updatedAt": 1789449297553
+        },
+        {
+          "appid": 3494390,
+          "name": "Hell is Us 地狱即我们 - Artbook",
+          "price": 22,
+          "shortDescription": "Digital Artbook DLC提供了一本数字画册，其中收录了大量插图和概念艺术，带你深入了解《Hell is Us》的游戏世界。",
+          "description": "Digital Artbook DLC提供了一本数字画册，其中收录了大量插图和概念艺术，带你深入了解《Hell is Us》的游戏世界。",
+          "kind": "美术设定集",
+          "type": "dlc",
+          "originalDescription": "Digital Artbook DLC提供了一本数字画册，其中收录了大量插图和概念艺术，带你深入了解《Hell is Us》的游戏世界。",
+          "translated": false,
+          "updatedAt": 1789449298744
+        },
+        {
+          "appid": 3494370,
+          "name": "Hell is Us 地狱即我们 - Military Pack",
+          "price": 11,
+          "shortDescription": "预购《Hell is Us》即可获得Military Pack，其中包括雷米和他的无人机KAPI的限定皮肤。",
+          "description": "预购《Hell is Us》即可获得Military Pack，其中包括雷米和他的无人机KAPI的限定皮肤。",
+          "kind": "其他",
+          "type": "dlc",
+          "originalDescription": "预购《Hell is Us》即可获得Military Pack，其中包括雷米和他的无人机KAPI的限定皮肤。",
+          "translated": false,
+          "updatedAt": 1789449299988
+        },
+        {
+          "appid": 3494340,
+          "name": "Hell is Us 地狱即我们 - Hollow Walker Pack",
+          "price": 11,
+          "shortDescription": "选择《Hell is Us》的Deluxe Edition即可获得Hollow Walker Pack和其他奖励。Hollow Walker Pack包含了雷米和他的无人机KAPI的限定皮肤。",
+          "description": "选择《Hell is Us》的Deluxe Edition即可获得Hollow Walker Pack和其他奖励。Hollow Walker Pack包含了雷米和他的无人机KAPI的限定皮肤。",
+          "kind": "版本升级包",
+          "type": "dlc",
+          "originalDescription": "选择《Hell is Us》的Deluxe Edition即可获得Hollow Walker Pack和其他奖励。Hollow Walker Pack包含了雷米和他的无人机KAPI的限定皮肤。",
+          "translated": false,
+          "updatedAt": 1789449301170
+        },
+        {
+          "appid": 2912150,
+          "name": "Hell is Us 地狱即我们 - Phol Guard Pack",
+          "price": 11,
+          "shortDescription": "选择《Hell is Us》的Deluxe Edition即可获得Phol Guard Pack和其他奖励。Phol Guard Pack包含了雷米和他的无人机KAPI的限定皮肤。",
+          "description": "选择《Hell is Us》的Deluxe Edition即可获得Phol Guard Pack和其他奖励。Phol Guard Pack包含了雷米和他的无人机KAPI的限定皮肤。",
+          "kind": "版本升级包",
+          "type": "dlc",
+          "originalDescription": "选择《Hell is Us》的Deluxe Edition即可获得Phol Guard Pack和其他奖励。Phol Guard Pack包含了雷米和他的无人机KAPI的限定皮肤。",
+          "translated": false,
+          "updatedAt": 1789449301812
+        },
+        {
+          "appid": 3494350,
+          "name": "Hell is Us 地狱即我们 - Secret Code",
+          "price": 15,
+          "shortDescription": "选择《Hell is Us》的Deluxe Edition即可获得Secret Code DLC和其他奖励。有了Secret Code DLC，你就可以用口袋里的神秘钥匙开始冒险。它能打开什么呢？",
+          "description": "选择《Hell is Us》的Deluxe Edition即可获得Secret Code DLC和其他奖励。有了Secret Code DLC，你就可以用口袋里的神秘钥匙开始冒险。它能打开什么呢？",
+          "kind": "版本升级包",
+          "type": "dlc",
+          "originalDescription": "选择《Hell is Us》的Deluxe Edition即可获得Secret Code DLC和其他奖励。有了Secret Code DLC，你就可以用口袋里的神秘钥匙开始冒险。它能打开什么呢？",
+          "translated": false,
+          "updatedAt": 1789449303043
+        }
+      ],
+      "details": {
+        "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1620730/ae9f83f50c8ed623e844bc57c896c82918598767/header_schinese.jpg?t=1779953272",
+        "isFree": false,
+        "type": "game",
+        "releaseDate": "2025 年 9 月 4 日",
+        "releaseTs": null,
+        "developers": [
+          "Rogue Factor"
+        ],
+        "publishers": [
+          "Nacon"
+        ],
+        "platforms": [
+          "Windows"
+        ],
+        "categories": [
+          "单人",
+          "Steam 成就",
+          "完全支持控制器",
+          "视角舒适度",
+          "可选颜色",
+          "自定义音量控制",
+          "可调整难度",
+          "无需应对快速反应事件",
+          "DUALSHOCK 控制器支持",
+          "DualSense 控制器支持",
+          "DualSense 控制器支持",
+          "立体声",
+          "字幕选项",
+          "环绕声",
+          "Steam 云",
+          "可用 HDR",
+          "家庭共享"
+        ],
+        "genres": [
+          "动作",
+          "冒险"
+        ],
+        "tags": [
+          "动作",
+          "冒险"
+        ],
+        "featureTags": [
+          "单人",
+          "成就",
+          "云存档",
+          "家庭共享"
+        ],
+        "metacritic": null,
+        "chineseSupport": true,
+        "reviewTotal": 4275,
+        "description": "如果战争是我们最所接近的人间地狱，那会因为这世界上藏着最可怕的恶魔——人类。在一个被内乱摧残与世隔绝的国家，发现你过去的秘密，应对一场神秘灾难的后果。",
+        "descriptionOriginal": "如果战争是我们最所接近的人间地狱，那会因为这世界上藏着最可怕的恶魔——人类。在一个被内乱摧残与世隔绝的国家，发现你过去的秘密，应对一场神秘灾难的后果。",
+        "descriptionTranslated": false
+      },
+      "createdAt": 1789449295581,
+      "updatedAt": 1789449303043
+    },
+    {
+      "appid": 3265700,
+      "name": "吸血鬼爬行者: 屠戮地牢的吸血鬼幸存者",
+      "originalName": "吸血鬼爬行者: 屠戮地牢的吸血鬼幸存者",
+      "price": {
+        "current": 39,
+        "original": 39,
+        "discountPercent": 0,
+        "currency": "CNY",
+        "isOnSale": false,
+        "discountExpiration": null,
+        "updatedAt": 1789449276449
+      },
+      "rating": {
+        "score": 9.9,
+        "positive": 98,
+        "total": 5745,
+        "desc": "Overwhelmingly Positive",
+        "updatedAt": 1789449277706
+      },
+      "historicalLow": {
+        "price": 31.2,
+        "count": 1,
+        "confidence": "A",
+        "source": "ITAD(国区)",
+        "updatedAt": 1789449279083,
+        "currency": "CNY"
+      },
+      "targetPrice": null,
+      "note": "",
+      "dlcList": [
+        {
+          "appid": 4564300,
+          "name": "Vampire Crawlers Soundtrack",
+          "price": 14.99,
+          "shortDescription": "The Vampire Crawlers Soundtrack contains 31 songs from the main game, with over 1hr of MP3/FLAC files.",
+          "description": "The Vampire Crawlers Soundtrack contains 31 songs from the main game, with over 1hr of MP3/FLAC files.",
+          "kind": "原声",
+          "type": "music",
+          "originalDescription": "The Vampire Crawlers Soundtrack contains 31 songs from the main game, with over 1hr of MP3/FLAC files.",
+          "translated": false,
+          "updatedAt": 1789449280736
+        }
+      ],
+      "details": {
+        "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3265700/5590e42cab09dacabee973dd2c3e27ef12ed4950/header.jpg?t=1776925935",
+        "isFree": false,
+        "type": "game",
+        "releaseDate": "2026 年 4 月 21 日",
+        "releaseTs": null,
+        "developers": [
+          "poncle",
+          "Nosebleed Interactive"
+        ],
+        "publishers": [
+          "poncle"
+        ],
+        "platforms": [
+          "Windows",
+          "macOS"
+        ],
+        "categories": [
+          "单人",
+          "Steam 成就",
+          "完全支持控制器",
+          "DUALSHOCK 控制器支持",
+          "DUALSHOCK 控制器支持",
+          "DualSense 控制器支持",
+          "DualSense 控制器支持",
+          "Steam 云",
+          "家庭共享"
+        ],
+        "genres": [
+          "动作",
+          "独立",
+          "策略"
+        ],
+        "tags": [
+          "动作",
+          "独立",
+          "策略"
+        ],
+        "featureTags": [
+          "单人",
+          "成就",
+          "云存档",
+          "家庭共享"
+        ],
+        "metacritic": null,
+        "chineseSupport": true,
+        "reviewTotal": 18566,
+        "description": "用毁天灭地的连击，杀穿群魔乱舞的地下城！《Vampire Crawlers: The Turbo Wildcard from Vampire Survivors》是一款含有轻度Rogue元素的回合制休闲牌组构筑游戏。亲手掌握卡组，让你的回合玩出花来​​！",
+        "descriptionOriginal": "用毁天灭地的连击，杀穿群魔乱舞的地下城！《Vampire Crawlers: The Turbo Wildcard from Vampire Survivors》是一款含有轻度Rogue元素的回合制休闲牌组构筑游戏。亲手掌握卡组，让你的回合玩出花来​​！",
+        "descriptionTranslated": false
+      },
+      "createdAt": 1789449277706,
+      "updatedAt": 1789449280736
+    },
+    {
+      "appid": 1999170,
+      "name": "虫潮",
+      "originalName": "虫潮",
+      "price": {
+        "current": 28,
+        "original": 28,
+        "discountPercent": 0,
+        "currency": "CNY",
+        "isOnSale": false,
+        "discountExpiration": null,
+        "updatedAt": 1789449267985
+      },
+      "rating": {
+        "score": 8.4,
+        "positive": 84,
+        "total": 2092,
+        "desc": "Very Positive",
+        "updatedAt": 1789449268597
+      },
+      "historicalLow": {
+        "price": 9.8,
+        "count": 11,
+        "confidence": "A",
+        "source": "ITAD(国区)",
+        "updatedAt": 1789449269610,
+        "currency": "CNY"
+      },
+      "targetPrice": null,
+      "note": "",
+      "dlcList": [],
+      "details": {
+        "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1999170/header_schinese.jpg?t=1781083480",
+        "isFree": false,
+        "type": "game",
+        "releaseDate": "2024 年 9 月 11 日",
+        "releaseTs": null,
+        "developers": [
+          "Parallel Portal"
+        ],
+        "publishers": [
+          "Parallel Portal"
+        ],
+        "platforms": [
+          "Windows"
+        ],
+        "categories": [
+          "单人",
+          "Steam 成就",
+          "完全支持控制器",
+          "Steam 云",
+          "家庭共享"
+        ],
+        "genres": [
+          "动作",
+          "冒险",
+          "休闲",
+          "独立",
+          "角色扮演"
+        ],
+        "tags": [
+          "动作",
+          "冒险",
+          "休闲",
+          "独立",
+          "角色扮演"
+        ],
+        "featureTags": [
+          "单人",
+          "成就",
+          "云存档",
+          "家庭共享"
+        ],
+        "metacritic": null,
+        "chineseSupport": true,
+        "reviewTotal": 2491,
+        "description": "射爆一切！《虫潮》是一款为爽而生的俯视角射击游戏。你是这颗废土星球的唯一幸存者，拿起武器，登上战机，钻进装甲，杀爆成千上万只异星虫族组成的虫潮！用它们的血晶升级武器，挑战虫王。浴血奋战吧，祝你好运！",
+        "descriptionOriginal": "射爆一切！《虫潮》是一款为爽而生的俯视角射击游戏。你是这颗废土星球的唯一幸存者，拿起武器，登上战机，钻进装甲，杀爆成千上万只异星虫族组成的虫潮！用它们的血晶升级武器，挑战虫王。浴血奋战吧，祝你好运！",
+        "descriptionTranslated": false
+      },
+      "createdAt": 1789449268597,
+      "updatedAt": 1789449268597
+    },
+    {
+      "appid": 1296830,
+      "name": "暖雪 Warm Snow",
+      "originalName": "暖雪 Warm Snow",
+      "price": {
+        "current": 58,
+        "original": 58,
+        "discountPercent": 0,
+        "currency": "CNY",
+        "isOnSale": false,
+        "discountExpiration": null,
+        "updatedAt": 1789449260484
+      },
+      "rating": {
+        "score": 9.6,
+        "positive": 93,
+        "total": 36465,
+        "desc": "Very Positive",
+        "updatedAt": 1789449261106
+      },
+      "historicalLow": {
+        "price": 40.6,
+        "count": 26,
+        "confidence": "A",
+        "source": "ITAD(国区)",
+        "updatedAt": 1789449262563,
+        "currency": "CNY"
+      },
+      "targetPrice": null,
+      "note": "",
+      "dlcList": [
+        {
+          "appid": 2612950,
+          "name": "暖雪 Warm Snow - 终业",
+          "price": 28,
+          "shortDescription": "狴犴于烬梦中昏睡的十年间，何罗邪神被彻底释放，人世间一篇狼藉。在玲珑和众人的苦苦支撑下何罗反抗军曾一度看到希望，但在疯狂与绝望面前，一切都是那么脆弱…… 而今狴犴终于从无尽噩梦中苏醒，回到现实世界，他将再次踏上旅途，展开最终之战。",
+          "description": "狴犴于烬梦中昏睡的十年间，何罗邪神被彻底释放，人世间一篇狼藉。在玲珑和众人的苦苦支撑下何罗反抗军曾一度看到希望，但在疯狂与绝望面前，一切都是那么脆弱…… 而今狴犴终于从无尽噩梦中苏醒，回到现实世界，他将再次踏上旅途，展开最终之战。",
+          "kind": "其他",
+          "type": "dlc",
+          "originalDescription": "狴犴于烬梦中昏睡的十年间，何罗邪神被彻底释放，人世间一篇狼藉。在玲珑和众人的苦苦支撑下何罗反抗军曾一度看到希望，但在疯狂与绝望面前，一切都是那么脆弱…… 而今狴犴终于从无尽噩梦中苏醒，回到现实世界，他将再次踏上旅途，展开最终之战。",
+          "translated": false,
+          "updatedAt": 1789449263124
+        },
+        {
+          "appid": 2147220,
+          "name": "暖雪 Warm Snow - 烬梦",
+          "price": 0,
+          "shortDescription": "《暖雪》是一款暗黑国风动作roguelite游戏。游戏以诡异的“暖雪”为核心打造了一个完全架空的黑暗奇幻世界，你将扮演代号“狴犴“的侠士去讨伐五大家族，拯救这个摇摇欲坠的世界！",
+          "description": "《暖雪》是一款暗黑国风动作roguelite游戏。游戏以诡异的“暖雪”为核心打造了一个完全架空的黑暗奇幻世界，你将扮演代号“狴犴“的侠士去讨伐五大家族，拯救这个摇摇欲坠的世界！",
+          "kind": "其他",
+          "type": "dlc",
+          "originalDescription": "《暖雪》是一款暗黑国风动作roguelite游戏。游戏以诡异的“暖雪”为核心打造了一个完全架空的黑暗奇幻世界，你将扮演代号“狴犴“的侠士去讨伐五大家族，拯救这个摇摇欲坠的世界！",
+          "translated": false,
+          "updatedAt": 1789449264323
+        },
+        {
+          "appid": 2936000,
+          "name": "暖雪 Warm Snow - 官方美术设定集",
+          "price": 0,
+          "shortDescription": "《暖雪》是一款暗黑国风动作roguelite游戏。游戏以诡异的“暖雪”为核心打造了一个完全架空的黑暗奇幻世界，你将扮演代号“狴犴“的侠士去讨伐五大家族，拯救这个摇摇欲坠的世界！",
+          "description": "《暖雪》是一款暗黑国风动作roguelite游戏。游戏以诡异的“暖雪”为核心打造了一个完全架空的黑暗奇幻世界，你将扮演代号“狴犴“的侠士去讨伐五大家族，拯救这个摇摇欲坠的世界！",
+          "kind": "美术设定集",
+          "type": "dlc",
+          "originalDescription": "《暖雪》是一款暗黑国风动作roguelite游戏。游戏以诡异的“暖雪”为核心打造了一个完全架空的黑暗奇幻世界，你将扮演代号“狴犴“的侠士去讨伐五大家族，拯救这个摇摇欲坠的世界！",
+          "translated": false,
+          "updatedAt": 1789449265534
+        },
+        {
+          "appid": 3103920,
+          "name": "暖雪 Warm Snow Soundtrack",
+          "price": 0,
+          "shortDescription": "《暖雪》是一款暗黑国风动作roguelite游戏。游戏以诡异的“暖雪”为核心打造了一个完全架空的黑暗奇幻世界，你将扮演代号“狴犴“的侠士去讨伐五大家族，拯救这个摇摇欲坠的世界！",
+          "description": "《暖雪》是一款暗黑国风动作roguelite游戏。游戏以诡异的“暖雪”为核心打造了一个完全架空的黑暗奇幻世界，你将扮演代号“狴犴“的侠士去讨伐五大家族，拯救这个摇摇欲坠的世界！",
+          "kind": "原声",
+          "type": "music",
+          "originalDescription": "《暖雪》是一款暗黑国风动作roguelite游戏。游戏以诡异的“暖雪”为核心打造了一个完全架空的黑暗奇幻世界，你将扮演代号“狴犴“的侠士去讨伐五大家族，拯救这个摇摇欲坠的世界！",
+          "translated": false,
+          "updatedAt": 1789449266761
+        }
+      ],
+      "details": {
+        "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1296830/header_schinese.jpg?t=1789107220",
+        "isFree": false,
+        "type": "game",
+        "releaseDate": "2022 年 1 月 18 日",
+        "releaseTs": null,
+        "developers": [
+          "BadMudStudio"
+        ],
+        "publishers": [
+          "bilibili"
+        ],
+        "platforms": [
+          "Windows"
+        ],
+        "categories": [
+          "单人",
+          "Steam 成就",
+          "完全支持控制器",
+          "Steam 云",
+          "家庭共享"
+        ],
+        "genres": [
+          "动作",
+          "冒险",
+          "独立",
+          "角色扮演"
+        ],
+        "tags": [
+          "动作",
+          "冒险",
+          "独立",
+          "角色扮演"
+        ],
+        "featureTags": [
+          "单人",
+          "成就",
+          "云存档",
+          "家庭共享"
+        ],
+        "metacritic": null,
+        "chineseSupport": true,
+        "reviewTotal": 35266,
+        "description": "《暖雪》是一款暗黑国风动作roguelite游戏。游戏以诡异的“暖雪”为核心打造了一个完全架空的黑暗奇幻世界，你将扮演代号“狴犴“的侠士去讨伐五大家族，拯救这个摇摇欲坠的世界！",
+        "descriptionOriginal": "《暖雪》是一款暗黑国风动作roguelite游戏。游戏以诡异的“暖雪”为核心打造了一个完全架空的黑暗奇幻世界，你将扮演代号“狴犴“的侠士去讨伐五大家族，拯救这个摇摇欲坠的世界！",
+        "descriptionTranslated": false
+      },
+      "createdAt": 1789449261106,
+      "updatedAt": 1789449266761
+    },
+    {
+      "appid": 1850740,
+      "name": "Ghost Watchers",
+      "originalName": "Ghost Watchers",
+      "price": {
+        "current": 50,
+        "original": 50,
+        "discountPercent": 0,
+        "currency": "CNY",
+        "isOnSale": false,
+        "discountExpiration": null,
+        "updatedAt": 1789449247458
+      },
+      "rating": {
+        "score": 7.5,
+        "positive": 77,
+        "total": 771,
+        "desc": "Mostly Positive",
+        "updatedAt": 1789449248704
+      },
+      "historicalLow": {
+        "price": 25,
+        "count": 1,
+        "confidence": "A",
+        "source": "ITAD(国区)",
+        "updatedAt": 1789449249694,
+        "currency": "CNY"
+      },
+      "targetPrice": null,
+      "note": "",
+      "dlcList": [
+        {
+          "appid": 3876090,
+          "name": "Ghost Watchers - Supporter Pack",
+          "price": 22,
+          "shortDescription": "这是《幽灵守望者》的附加内容。需要 Steam 版游戏才能运行",
+          "description": "这是《幽灵守望者》的附加内容。需要 Steam 版游戏才能运行",
+          "kind": "原声",
+          "type": "dlc",
+          "originalDescription": "这是《幽灵守望者》的附加内容。需要 Steam 版游戏才能运行",
+          "translated": false,
+          "updatedAt": 1789449250243
+        }
+      ],
+      "details": {
+        "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1850740/header_schinese.jpg?t=1789123571",
+        "isFree": false,
+        "type": "game",
+        "releaseDate": "2025 年 7 月 24 日",
+        "releaseTs": null,
+        "developers": [
+          "Renderise"
+        ],
+        "publishers": [
+          "Renderise"
+        ],
+        "platforms": [
+          "Windows"
+        ],
+        "categories": [
+          "单人",
+          "多人",
+          "合作",
+          "在线合作",
+          "Steam 成就",
+          "Steam 集换式卡牌",
+          "Steam 云",
+          "家庭共享"
+        ],
+        "genres": [
+          "冒险"
+        ],
+        "tags": [
+          "冒险"
+        ],
+        "featureTags": [
+          "单人",
+          "多人",
+          "联机合作",
+          "成就",
+          "集换式卡牌",
+          "云存档",
+          "家庭共享"
+        ],
+        "metacritic": null,
+        "chineseSupport": true,
+        "reviewTotal": 12726,
+        "description": "幽灵观察者，线上恐怖。你需要在废弃的房子里探索并且捕捉鬼魂",
+        "descriptionOriginal": "幽灵观察者，线上恐怖。你需要在废弃的房子里探索并且捕捉鬼魂",
+        "descriptionTranslated": false
+      },
+      "createdAt": 1789449248704,
+      "updatedAt": 1789449250243
+    },
+    {
+      "appid": 1967630,
+      "name": "求生岛：不老泉传说",
+      "originalName": "求生岛：不老泉传说",
+      "price": {
+        "current": 98,
+        "original": 98,
+        "discountPercent": 0,
+        "currency": "CNY",
+        "isOnSale": false,
+        "discountExpiration": null,
+        "updatedAt": 1789449240984
+      },
+      "rating": {
+        "score": 8.4,
+        "positive": 83,
+        "total": 641,
+        "desc": "Very Positive",
+        "updatedAt": 1789449241621
+      },
+      "historicalLow": {
+        "price": 34.3,
+        "count": 5,
+        "confidence": "A",
+        "source": "ITAD(国区)",
+        "updatedAt": 1789449243090,
+        "currency": "CNY"
+      },
+      "targetPrice": null,
+      "note": "",
+      "dlcList": [
+        {
+          "appid": 2722240,
+          "name": "Survival: Fountain of Youth Supporter Pack",
+          "price": 36,
+          "shortDescription": "来自一位16世纪冒险家的播放清单，供你放松/学习/工作/求生。 用心聆听十一首空灵音轨，无论身处何处，你都能够在动人心弦的音乐之中寻觅永恒的青春。",
+          "description": "来自一位16世纪冒险家的播放清单，供你放松/学习/工作/求生。 用心聆听十一首空灵音轨，无论身处何处，你都能够在动人心弦的音乐之中寻觅永恒的青春。",
+          "kind": "支持者包",
+          "type": "music",
+          "originalDescription": "来自一位16世纪冒险家的播放清单，供你放松/学习/工作/求生。 用心聆听十一首空灵音轨，无论身处何处，你都能够在动人心弦的音乐之中寻觅永恒的青春。",
+          "translated": false,
+          "updatedAt": 1789449243649
+        },
+        {
+          "appid": 2866210,
+          "name": "Survival: Fountain of Youth Sea Wolf Pack",
+          "price": 22,
+          "shortDescription": "使用一整套航海风格的装饰品定制你的家园",
+          "description": "使用一整套航海风格的装饰品定制你的家园",
+          "kind": "其他",
+          "type": "dlc",
+          "originalDescription": "使用一整套航海风格的装饰品定制你的家园",
+          "translated": false,
+          "updatedAt": 1789449244888
+        },
+        {
+          "appid": 3098350,
+          "name": "Survival: Fountain of Youth - Echoes of the Isles",
+          "price": 0,
+          "shortDescription": "In this new item pack, you’ll discover relics of the past to decorate your base with. These ancient trinkets come from the lost inhabitants of the isles, a last echo of their presence here. All items are usable both on land and in the Ark ship’s haul!",
+          "description": "In this new item pack, you’ll discover relics of the past to decorate your base with. These ancient trinkets come from the lost inhabitants of the isles, a last…",
+          "kind": "原声",
+          "type": "dlc",
+          "originalDescription": "In this new item pack, you’ll discover relics of the past to decorate your base with. These ancient trinkets come from the lost inhabitants of the isles, a last echo of their presence here. All items are usable both on land and in the Ark ship’s haul!",
+          "translated": false,
+          "updatedAt": 1789449246974
+        }
+      ],
+      "details": {
+        "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1967630/header_schinese.jpg?t=1785163134",
+        "isFree": false,
+        "type": "game",
+        "releaseDate": "2024 年 5 月 21 日",
+        "releaseTs": null,
+        "developers": [
+          "Odinsoft Inc."
+        ],
+        "publishers": [
+          "Twin Sails Interactive",
+          "CE-Asia"
+        ],
+        "platforms": [
+          "Windows"
+        ],
+        "categories": [
+          "单人",
+          "Steam 成就",
+          "完全支持控制器",
+          "DUALSHOCK 控制器支持",
+          "DUALSHOCK 控制器支持",
+          "DualSense 控制器支持",
+          "DualSense 控制器支持",
+          "家庭共享"
+        ],
+        "genres": [
+          "动作",
+          "冒险",
+          "独立",
+          "模拟"
+        ],
+        "tags": [
+          "动作",
+          "冒险",
+          "独立",
+          "模拟"
+        ],
+        "featureTags": [
+          "单人",
+          "成就",
+          "家庭共享"
+        ],
+        "metacritic": null,
+        "chineseSupport": true,
+        "reviewTotal": 4091,
+        "description": "《Survival: Fountain of Youth》是一款富有挑战性的单人开放世界冒险游戏，背景设定在加勒比群岛。扮演一位遭遇船难的16世纪探险家，在陌生的岛屿上努力求生，打造各类工具与庇护所，并设法解开有关远古文明以及你的命运的秘密。",
+        "descriptionOriginal": "《Survival: Fountain of Youth》是一款富有挑战性的单人开放世界冒险游戏，背景设定在加勒比群岛。扮演一位遭遇船难的16世纪探险家，在陌生的岛屿上努力求生，打造各类工具与庇护所，并设法解开有关远古文明以及你的命运的秘密。",
+        "descriptionTranslated": false
+      },
+      "createdAt": 1789449241621,
+      "updatedAt": 1789449246974
+    },
+    {
+      "appid": 2239710,
+      "name": "勇闯死人谷：暗黑之日",
+      "originalName": "勇闯死人谷：暗黑之日",
+      "price": {
+        "current": 86,
+        "original": 86,
+        "discountPercent": 0,
+        "currency": "CNY",
+        "isOnSale": false,
+        "discountExpiration": null,
+        "updatedAt": 1789449175011
+      },
+      "rating": {
+        "score": 7.5,
+        "positive": 77,
+        "total": 2315,
+        "desc": "Mostly Positive",
+        "updatedAt": 1789449175682
+      },
+      "historicalLow": {
+        "price": 68.8,
+        "count": 11,
+        "confidence": "A",
+        "source": "ITAD(国区)",
+        "updatedAt": 1789449176603,
+        "currency": "CNY"
+      },
+      "targetPrice": null,
+      "note": "",
+      "dlcList": [],
+      "details": {
+        "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2239710/a9cd9d4229cf93ffd513a8d9f7d25cf47c66cf90/header_schinese.jpg?t=1787804719",
+        "isFree": false,
+        "type": "game",
+        "releaseDate": "2025 年 4 月 9 日",
+        "releaseTs": null,
+        "developers": [
+          "PikPok"
+        ],
+        "publishers": [
+          "Boltray Games (China)",
+          "PikPok (worldwide)"
+        ],
+        "platforms": [
+          "Windows",
+          "macOS"
+        ],
+        "categories": [
+          "单人",
+          "完全支持控制器",
+          "DUALSHOCK 控制器支持",
+          "DUALSHOCK 控制器支持",
+          "DualSense 控制器支持",
+          "DualSense 控制器支持",
+          "家庭共享"
+        ],
+        "genres": [
+          "动作",
+          "模拟",
+          "策略",
+          "抢先体验"
+        ],
+        "tags": [
+          "动作",
+          "模拟",
+          "策略",
+          "抢先体验"
+        ],
+        "featureTags": [
+          "单人",
+          "家庭共享"
+        ],
+        "metacritic": null,
+        "chineseSupport": true,
+        "reviewTotal": 9024,
+        "description": "1980年，德克萨斯州。沃尔顿市陷入了丧尸大爆发之中。玩家要带领一群绝望的幸存者从一个避难所迁往另一个避难所，通过搜刮、制作和战斗，在这场残酷无情的争斗中力求存活下来。你必须做出明智计划，团结一致，而最重要的是，如果你想活下来，就必须不断前行。",
+        "descriptionOriginal": "1980年，德克萨斯州。沃尔顿市陷入了丧尸大爆发之中。玩家要带领一群绝望的幸存者从一个避难所迁往另一个避难所，通过搜刮、制作和战斗，在这场残酷无情的争斗中力求存活下来。你必须做出明智计划，团结一致，而最重要的是，如果你想活下来，就必须不断前行。",
+        "descriptionTranslated": false
+      },
+      "createdAt": 1789449175682,
+      "updatedAt": 1789449175682
+    },
+    {
+      "appid": 3751260,
+      "name": "The Blood of Dawnwalker 黎明行者之血",
+      "originalName": "The Blood of Dawnwalker 黎明行者之血",
+      "price": {
+        "current": 298,
+        "original": 298,
+        "discountPercent": 0,
+        "currency": "CNY",
+        "isOnSale": false,
+        "discountExpiration": null,
+        "updatedAt": 1789449171101
+      },
+      "rating": {
+        "score": 8.4,
+        "positive": 80,
+        "total": 1349,
+        "desc": "Very Positive",
+        "updatedAt": 1789449171748
+      },
+      "historicalLow": {
+        "price": 298,
+        "count": 1,
+        "confidence": "A",
+        "source": "ITAD(国区)",
+        "updatedAt": 1789449172655,
+        "currency": "CNY"
+      },
+      "targetPrice": null,
+      "note": "",
+      "dlcList": [
+        {
+          "appid": 4417550,
+          "name": "The Blood of Dawnwalker 黎明行者之血 - 日蚀版组合包",
+          "price": 98,
+          "shortDescription": "此组合包内容包含有《The Blood of Dawnwalker 黎明行者之血 日蚀版》中游戏本体外的所有元素：数字世界图鉴、数字原声带以及数字漫画书。",
+          "description": "此组合包内容包含有《The Blood of Dawnwalker 黎明行者之血 日蚀版》中游戏本体外的所有元素：数字世界图鉴、数字原声带以及数字漫画书。",
+          "kind": "原声",
+          "type": "dlc",
+          "originalDescription": "此组合包内容包含有《The Blood of Dawnwalker 黎明行者之血 日蚀版》中游戏本体外的所有元素：数字世界图鉴、数字原声带以及数字漫画书。",
+          "translated": false,
+          "updatedAt": 1789449173193
+        }
+      ],
+      "details": {
+        "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3751260/7b0c1860c7c2fca069ae53c049b737176dbfb8d4/header_schinese.jpg?t=1789144593",
+        "isFree": false,
+        "type": "game",
+        "releaseDate": "2026 年 9 月 2 日",
+        "releaseTs": null,
+        "developers": [
+          "Rebel Wolves"
+        ],
+        "publishers": [
+          "Bandai Namco Entertainment"
+        ],
+        "platforms": [
+          "Windows"
+        ],
+        "categories": [
+          "单人",
+          "Steam 成就",
+          "完全支持控制器",
+          "Steam 集换式卡牌",
+          "自定义音量控制",
+          "可调整难度",
+          "推荐使用手柄",
+          "DualSense 控制器支持",
+          "DualSense 控制器支持",
+          "随时保存",
+          "Steam 输入 API 支持",
+          "Steam 云",
+          "家庭共享"
+        ],
+        "genres": [
+          "动作",
+          "冒险",
+          "角色扮演"
+        ],
+        "tags": [
+          "动作",
+          "冒险",
+          "角色扮演"
+        ],
+        "featureTags": [
+          "单人",
+          "成就",
+          "集换式卡牌",
+          "云存档",
+          "手柄支持",
+          "家庭共享"
+        ],
+        "metacritic": null,
+        "chineseSupport": true,
+        "reviewTotal": 15030,
+        "description": "《The Blood of Dawnwalker》为开放世界的黑暗奇幻动作RPG。 故事背景在14世纪的欧洲，你将扮演科恩，一名白昼时为人类，黑夜时为吸血鬼的年轻人。在为了拯救家人的奋斗之中，所做出的各种抉择与揭露的秘密，将塑造成属于你的故事。",
+        "descriptionOriginal": "《The Blood of Dawnwalker》为开放世界的黑暗奇幻动作RPG。 故事背景在14世纪的欧洲，你将扮演科恩，一名白昼时为人类，黑夜时为吸血鬼的年轻人。在为了拯救家人的奋斗之中，所做出的各种抉择与揭露的秘密，将塑造成属于你的故事。",
+        "descriptionTranslated": false
+      },
+      "createdAt": 1789449171748,
+      "updatedAt": 1789449173193
+    },
+    {
+      "appid": 1967430,
+      "name": "Ghost Trick: Phantom Detective",
+      "originalName": "Ghost Trick: Phantom Detective",
+      "price": {
+        "current": 48.84,
+        "original": 148,
+        "discountPercent": 67,
+        "currency": "CNY",
+        "isOnSale": true,
+        "discountExpiration": null,
+        "updatedAt": 1789449164036
+      },
+      "rating": {
+        "score": 9.9,
+        "positive": 98,
+        "total": 4543,
+        "desc": "Overwhelmingly Positive",
+        "updatedAt": 1789449165319
+      },
+      "historicalLow": {
+        "price": 48.84,
+        "count": 8,
+        "confidence": "A",
+        "source": "ITAD(国区)",
+        "updatedAt": 1789449166694,
+        "currency": "CNY"
+      },
+      "targetPrice": null,
+      "note": "",
+      "dlcList": [
+        {
+          "appid": 1971250,
+          "name": "《Ghost Trick: Phantom Detective》 - DLC",
+          "price": 10,
+          "shortDescription": "[游玩时的背景：共4款]・导弹・佳诺和导弹・西塞尔和凛音・黑猫和库纽利[可在BGM集中收听的BGM：共2首]・导弹～英勇的小动物・烤鸡乐园",
+          "description": "[游玩时的背景：共4款]・导弹・佳诺和导弹・西塞尔和凛音・黑猫和库纽利[可在BGM集中收听的BGM：共2首]・导弹～英勇的小动物・烤鸡乐园",
+          "kind": "原声",
+          "type": "dlc",
+          "originalDescription": "[游玩时的背景：共4款]・导弹・佳诺和导弹・西塞尔和凛音・黑猫和库纽利[可在BGM集中收听的BGM：共2首]・导弹～英勇的小动物・烤鸡乐园",
+          "translated": false,
+          "updatedAt": 1789449167295
+        },
+        {
+          "appid": 2565670,
+          "name": "Ghost Trick: Phantom Detective Original Soundtrack 2023",
+          "price": 83,
+          "shortDescription": "The newly arranged Ghost Trick: Phantom Detective Original Soundtrack takes possession of Steam!",
+          "description": "The newly arranged Ghost Trick: Phantom Detective Original Soundtrack takes possession of Steam!",
+          "kind": "原声",
+          "type": "music",
+          "originalDescription": "The newly arranged Ghost Trick: Phantom Detective Original Soundtrack takes possession of Steam!",
+          "translated": false,
+          "updatedAt": 1789449169458
+        }
+      ],
+      "details": {
+        "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1967430/header.jpg?t=1787717141",
+        "isFree": false,
+        "type": "game",
+        "releaseDate": "2023 年 6 月 29 日",
+        "releaseTs": null,
+        "developers": [
+          "CAPCOM Co., Ltd."
+        ],
+        "publishers": [
+          "CAPCOM Co., Ltd."
+        ],
+        "platforms": [
+          "Windows"
+        ],
+        "categories": [
+          "单人",
+          "Steam 成就",
+          "完全支持控制器",
+          "Steam 集换式卡牌",
+          "Steam 云",
+          "家庭共享"
+        ],
+        "genres": [
+          "动作",
+          "冒险"
+        ],
+        "tags": [
+          "动作",
+          "冒险"
+        ],
+        "featureTags": [
+          "单人",
+          "成就",
+          "集换式卡牌",
+          "云存档",
+          "家庭共享"
+        ],
+        "metacritic": 90,
+        "chineseSupport": true,
+        "reviewTotal": 6424,
+        "description": "经典的解谜神秘冒险名作回来了！ 《逆转裁判》系列作者巧 舟所制作的《Ghost Trick: Phantom Detective》，将推出期待已久的高清重制版。 由负责《大逆转裁判》BGM的人气作曲家北川保昌对原版乐曲进行的同期编曲外，还有插画集和BGM集等新追加内容！",
+        "descriptionOriginal": "经典的解谜神秘冒险名作回来了！ 《逆转裁判》系列作者巧 舟所制作的《Ghost Trick: Phantom Detective》，将推出期待已久的高清重制版。 由负责《大逆转裁判》BGM的人气作曲家北川保昌对原版乐曲进行的同期编曲外，还有插画集和BGM集等新追加内容！",
+        "descriptionTranslated": false
+      },
+      "createdAt": 1789449165319,
+      "updatedAt": 1789449169458
+    },
+    {
+      "appid": 1266840,
+      "name": "The Last Stand: Aftermath",
+      "originalName": "The Last Stand: Aftermath",
+      "price": {
+        "current": 25.76,
+        "original": 92,
+        "discountPercent": 72,
+        "currency": "CNY",
+        "isOnSale": true,
+        "discountExpiration": null,
+        "updatedAt": 1789449156786
+      },
+      "rating": {
+        "score": 7.5,
+        "positive": 75,
+        "total": 1655,
+        "desc": "Mostly Positive",
+        "updatedAt": 1789449158223
+      },
+      "historicalLow": {
+        "price": 25.76,
+        "count": 3,
+        "confidence": "A",
+        "source": "ITAD(国区)",
+        "updatedAt": 1789449159617,
+        "currency": "CNY"
+      },
+      "targetPrice": null,
+      "note": "",
+      "dlcList": [],
+      "details": {
+        "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1266840/header.jpg?t=1745855903",
+        "isFree": false,
+        "type": "game",
+        "releaseDate": "2021 年 11 月 16 日",
+        "releaseTs": null,
+        "developers": [
+          "Con Artist Games"
+        ],
+        "publishers": [
+          "Armor Games Studios"
+        ],
+        "platforms": [
+          "Windows"
+        ],
+        "categories": [
+          "单人",
+          "Steam 成就",
+          "完全支持控制器",
+          "支持字幕",
+          "DUALSHOCK 控制器支持",
+          "Steam 云",
+          "家庭共享"
+        ],
+        "genres": [
+          "动作",
+          "冒险",
+          "独立"
+        ],
+        "tags": [
+          "动作",
+          "冒险",
+          "独立"
+        ],
+        "featureTags": [
+          "单人",
+          "成就",
+          "云存档",
+          "家庭共享"
+        ],
+        "metacritic": null,
+        "chineseSupport": true,
+        "reviewTotal": 6090,
+        "description": "一款全新的单人rogue-lite动作冒险游戏，由《最后的战役：联合之城》和《死亡区》的创作者倾力打造。被丧尸病毒感染之后，你开始探索末日世界，为幸存者同伴们寻找希望。你依然可以有所作为，不要轻易放弃。",
+        "descriptionOriginal": "一款全新的单人rogue-lite动作冒险游戏，由《最后的战役：联合之城》和《死亡区》的创作者倾力打造。被丧尸病毒感染之后，你开始探索末日世界，为幸存者同伴们寻找希望。你依然可以有所作为，不要轻易放弃。",
+        "descriptionTranslated": false
+      },
+      "createdAt": 1789449158223,
+      "updatedAt": 1789449158223
+    },
+    {
+      "appid": 1045720,
+      "name": "The Coma 2: Vicious Sisters",
+      "originalName": "The Coma 2: Vicious Sisters",
+      "price": {
+        "current": 5.8,
+        "original": 58,
+        "discountPercent": 90,
+        "currency": "CNY",
+        "isOnSale": true,
+        "discountExpiration": null,
+        "updatedAt": 1789449146624
+      },
+      "rating": {
+        "score": 9.8,
+        "positive": 95,
+        "total": 1269,
+        "desc": "Overwhelmingly Positive",
+        "updatedAt": 1789449148047
+      },
+      "historicalLow": {
+        "price": 5.22,
+        "count": 1,
+        "confidence": "A",
+        "source": "ITAD(国区)",
+        "updatedAt": 1789449149735,
+        "currency": "CNY"
+      },
+      "targetPrice": null,
+      "note": "",
+      "dlcList": [
+        {
+          "appid": 1222920,
+          "name": "The Coma 2: Vicious Sisters DLC - Artbook",
+          "price": 9,
+          "shortDescription": "This art book contains 60 pages of hand-illustrated art and lore from The Coma 2: Vicious Sisters.",
+          "description": "This art book contains 60 pages of hand-illustrated art and lore from The Coma 2: Vicious Sisters.",
+          "kind": "美术设定集",
+          "type": "dlc",
+          "originalDescription": "This art book contains 60 pages of hand-illustrated art and lore from The Coma 2: Vicious Sisters.",
+          "translated": false,
+          "updatedAt": 1789449151297
+        },
+        {
+          "appid": 1226460,
+          "name": "The Coma 2: Vicious Sisters DLC - Mina - Winter Princess Skin",
+          "price": 5.5,
+          "shortDescription": "A skin featuring Mina Park's Sehwa High winter uniform.",
+          "description": "A skin featuring Mina Park's Sehwa High winter uniform.",
+          "kind": "外观道具",
+          "type": "dlc",
+          "originalDescription": "A skin featuring Mina Park's Sehwa High winter uniform.",
+          "translated": false,
+          "updatedAt": 1789449153436
+        },
+        {
+          "appid": 1183520,
+          "name": "The Coma 2: Vicious Sisters DLC - Mina - Locks of Love Skin",
+          "price": 5.5,
+          "shortDescription": "A skin featuring Mina Park with a new hairstyle.",
+          "description": "A skin featuring Mina Park with a new hairstyle.",
+          "kind": "外观道具",
+          "type": "dlc",
+          "originalDescription": "A skin featuring Mina Park with a new hairstyle.",
+          "translated": false,
+          "updatedAt": 1789449154702
+        },
+        {
+          "appid": 1234270,
+          "name": "The Coma 2: Vicious Sisters DLC - Soundtrack",
+          "price": 9,
+          "shortDescription": "This is the bone-chilling soundtrack to The Coma 2: Vicious Sisters, a Korean survival horror game featuring hand-illustrated graphics and a relentless psycho slasher.",
+          "description": "This is the bone-chilling soundtrack to The Coma 2: Vicious Sisters, a Korean survival horror game featuring hand-illustrated graphics and a relentless psycho s…",
+          "kind": "原声",
+          "type": "music",
+          "originalDescription": "This is the bone-chilling soundtrack to The Coma 2: Vicious Sisters, a Korean survival horror game featuring hand-illustrated graphics and a relentless psycho slasher.",
+          "translated": false,
+          "updatedAt": 1789449156531
+        },
+        {
+          "appid": 1240930,
+          "name": "The Coma 2: Vicious Sisters DLC - Mina - School Bully Skin",
+          "price": 5.5,
+          "shortDescription": "You really don't want to get on this girl's bad side!",
+          "description": "You really don't want to get on this girl's bad side!",
+          "kind": "外观道具",
+          "type": "dlc",
+          "originalDescription": "You really don't want to get on this girl's bad side!",
+          "translated": false,
+          "updatedAt": 1789449158381
+        },
+        {
+          "appid": 1240950,
+          "name": "The Coma 2: Vicious Sisters DLC - Mina - Summer Child Skin",
+          "price": 5.5,
+          "shortDescription": "Summer is approaching and Mina is getting ready to hit the streets of Seoul after school!",
+          "description": "Summer is approaching and Mina is getting ready to hit the streets of Seoul after school!",
+          "kind": "外观道具",
+          "type": "dlc",
+          "originalDescription": "Summer is approaching and Mina is getting ready to hit the streets of Seoul after school!",
+          "translated": false,
+          "updatedAt": 1789449159866
+        },
+        {
+          "appid": 1240960,
+          "name": "The Coma 2: Vicious Sisters DLC - Mina - Model Student Skin",
+          "price": 5.5,
+          "shortDescription": "This girl will do whatever it takes to make top marks!",
+          "description": "This girl will do whatever it takes to make top marks!",
+          "kind": "外观道具",
+          "type": "dlc",
+          "originalDescription": "This girl will do whatever it takes to make top marks!",
+          "translated": false,
+          "updatedAt": 1789449162067
+        },
+        {
+          "appid": 1240970,
+          "name": "The Coma 2: Vicious Sisters DLC - Mina - Local Celeb Skin",
+          "price": 5.5,
+          "shortDescription": "This DLC pack includes an all-new skin and portraits featuring Mina's Local Celeb look.",
+          "description": "This DLC pack includes an all-new skin and portraits featuring Mina's Local Celeb look.",
+          "kind": "外观道具",
+          "type": "dlc",
+          "originalDescription": "This DLC pack includes an all-new skin and portraits featuring Mina's Local Celeb look.",
+          "translated": false,
+          "updatedAt": 1789449163436
+        },
+        {
+          "appid": 1240980,
+          "name": "The Coma 2: Vicious Sisters DLC - Mina - Beach Bum Skin",
+          "price": 5.5,
+          "shortDescription": "This DLC pack includes an all-new skin and portraits featuring Mina's Beach Bum outfit.",
+          "description": "This DLC pack includes an all-new skin and portraits featuring Mina's Beach Bum outfit.",
+          "kind": "外观道具",
+          "type": "dlc",
+          "originalDescription": "This DLC pack includes an all-new skin and portraits featuring Mina's Beach Bum outfit.",
+          "translated": false,
+          "updatedAt": 1789449165541
+        },
+        {
+          "appid": 1240990,
+          "name": "The Coma 2: Vicious Sisters DLC - Mina - Gamer Girl Skin",
+          "price": 5.5,
+          "shortDescription": "This DLC pack includes an all-new skin and portraits featuring Mina's Gamer Girl look.",
+          "description": "This DLC pack includes an all-new skin and portraits featuring Mina's Gamer Girl look.",
+          "kind": "外观道具",
+          "type": "dlc",
+          "originalDescription": "This DLC pack includes an all-new skin and portraits featuring Mina's Gamer Girl look.",
+          "translated": false,
+          "updatedAt": 1789449167066
+        }
+      ],
+      "details": {
+        "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1045720/header.jpg?t=1783989609",
+        "isFree": false,
+        "type": "game",
+        "releaseDate": "2020 年 1 月 28 日",
+        "releaseTs": null,
+        "developers": [
+          "Dvora Studio Co., Ltd."
+        ],
+        "publishers": [
+          "Headup"
+        ],
+        "platforms": [
+          "Windows",
+          "macOS",
+          "Linux"
+        ],
+        "categories": [
+          "单人",
+          "Steam 成就",
+          "Steam 集换式卡牌",
+          "部分支持控制器",
+          "家庭共享"
+        ],
+        "genres": [
+          "动作",
+          "冒险",
+          "独立"
+        ],
+        "tags": [
+          "动作",
+          "冒险",
+          "独立"
+        ],
+        "featureTags": [
+          "单人",
+          "成就",
+          "集换式卡牌",
+          "家庭共享"
+        ],
+        "metacritic": 77,
+        "chineseSupport": true,
+        "reviewTotal": 2810,
+        "description": "《昏迷2：恶毒姐妹（The Coma 2: Vicious Sisters）》是一款设定在韩国的恐怖生存游戏。探索荒废的校园，在黑夜魔物的围猎中求得生存。搜寻世华高中及其附近区域并找出这个黑暗世界的真相。利用好一切能找到的资源和工具，千万不要落入女魔头的手中！",
+        "descriptionOriginal": "《昏迷2：恶毒姐妹（The Coma 2: Vicious Sisters）》是一款设定在韩国的恐怖生存游戏。探索荒废的校园，在黑夜魔物的围猎中求得生存。搜寻世华高中及其附近区域并找出这个黑暗世界的真相。利用好一切能找到的资源和工具，千万不要落入女魔头的手中！",
+        "descriptionTranslated": false
+      },
+      "createdAt": 1789449148047,
+      "updatedAt": 1789449167066
+    },
+    {
+      "appid": 1746030,
+      "name": "山河旅探 - Murders on the Yangtze River",
+      "originalName": "山河旅探 - Murders on the Yangtze River",
+      "price": {
+        "current": 34.8,
+        "original": 58,
+        "discountPercent": 40,
+        "currency": "CNY",
+        "isOnSale": true,
+        "discountExpiration": null,
+        "updatedAt": 1789449138739
+      },
+      "rating": {
+        "score": 9.9,
+        "positive": 97,
+        "total": 19608,
+        "desc": "Overwhelmingly Positive",
+        "updatedAt": 1789449139281
+      },
+      "historicalLow": {
+        "price": 34.8,
+        "count": 4,
+        "confidence": "A",
+        "source": "ITAD(国区)",
+        "updatedAt": 1789449140757,
+        "currency": "CNY"
+      },
+      "targetPrice": null,
+      "note": "",
+      "dlcList": [
+        {
+          "appid": 2808420,
+          "name": "山河旅探游戏原声音乐OST",
+          "price": 18,
+          "shortDescription": "《山河旅探》游戏原声音乐，包括了游戏中出现的大部分曲目。",
+          "description": "《山河旅探》游戏原声音乐，包括了游戏中出现的大部分曲目。",
+          "kind": "原声",
+          "type": "music",
+          "originalDescription": "《山河旅探》游戏原声音乐，包括了游戏中出现的大部分曲目。",
+          "translated": false,
+          "updatedAt": 1789449141305
+        }
+      ],
+      "details": {
+        "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1746030/8e58007208080ba132e32026dd316496ee3ff949/header_schinese.jpg?t=1785321441",
+        "isFree": false,
+        "type": "game",
+        "releaseDate": "2024 年 1 月 30 日",
+        "releaseTs": null,
+        "developers": [
+          "OMEGAMES STUDIO"
+        ],
+        "publishers": [
+          "OMEGAMES STUDIO",
+          "NPC Entertainment"
+        ],
+        "platforms": [
+          "Windows",
+          "macOS"
+        ],
+        "categories": [
+          "单人",
+          "Steam 成就",
+          "完全支持控制器",
+          "Steam 云",
+          "家庭共享"
+        ],
+        "genres": [
+          "冒险",
+          "独立",
+          "角色扮演"
+        ],
+        "tags": [
+          "冒险",
+          "独立",
+          "角色扮演"
+        ],
+        "featureTags": [
+          "单人",
+          "成就",
+          "云存档",
+          "家庭共享"
+        ],
+        "metacritic": null,
+        "chineseSupport": true,
+        "reviewTotal": 15825,
+        "description": "《山河旅探》是奥秘之家开发的一款国风横轴本格推理探案游戏。玩家将化身为国民侦探沈仲平，通过调查推理一桩桩匪夷所思的离奇案件，最终探寻终极大案的隐秘真相。",
+        "descriptionOriginal": "《山河旅探》是奥秘之家开发的一款国风横轴本格推理探案游戏。玩家将化身为国民侦探沈仲平，通过调查推理一桩桩匪夷所思的离奇案件，最终探寻终极大案的隐秘真相。",
+        "descriptionTranslated": false
+      },
+      "createdAt": 1789449139281,
+      "updatedAt": 1789449141305
+    },
+    {
+      "appid": 1903340,
+      "name": "光与影：33号远征队",
+      "originalName": "光与影：33号远征队",
+      "price": {
+        "current": 174.4,
+        "original": 218,
+        "discountPercent": 20,
+        "currency": "CNY",
+        "isOnSale": true,
+        "discountExpiration": null,
+        "updatedAt": 1789449122974
+      },
+      "rating": {
+        "score": 8.9,
+        "positive": 87,
+        "total": 39226,
+        "desc": "Very Positive",
+        "updatedAt": 1789449123598
+      },
+      "historicalLow": {
+        "price": 174.4,
+        "count": 8,
+        "confidence": "A",
+        "source": "ITAD(国区)",
+        "updatedAt": 1789449124961,
+        "currency": "CNY"
+      },
+      "targetPrice": null,
+      "note": "",
+      "dlcList": [
+        {
+          "appid": 3228520,
+          "name": "光与影：33号远征队 豪华升级版",
+          "price": 38.4,
+          "shortDescription": "升级豪华版，潇洒远征。",
+          "description": "升级豪华版，潇洒远征。",
+          "kind": "版本升级包",
+          "type": "dlc",
+          "originalDescription": "升级豪华版，潇洒远征。",
+          "translated": false,
+          "updatedAt": 1789449125528
+        },
+        {
+          "appid": 3405480,
+          "name": "光与影：33号远征队 - 原声音乐",
+          "price": 76,
+          "shortDescription": "原声音乐由Lorien Testard担纲创作，可以带你在《光与影：33号远征队》之外继续感受冒险的跌宕起伏。154首歌曲，开启超过8小时的原创听觉盛宴！",
+          "description": "原声音乐由Lorien Testard担纲创作，可以带你在《光与影：33号远征队》之外继续感受冒险的跌宕起伏。154首歌曲，开启超过8小时的原创听觉盛宴！",
+          "kind": "原声",
+          "type": "music",
+          "originalDescription": "原声音乐由Lorien Testard担纲创作，可以带你在《光与影：33号远征队》之外继续感受冒险的跌宕起伏。154首歌曲，开启超过8小时的原创听觉盛宴！",
+          "translated": false,
+          "updatedAt": 1789449126692
+        },
+        {
+          "appid": 3873750,
+          "name": "《光与影：33号远征队》– 卢明浮生（典藏版）",
+          "price": 0,
+          "shortDescription": "我们为了回馈《光与影：33号远征队》众多玩家的厚爱，特别推出“卢明浮生”典藏版专辑。",
+          "description": "我们为了回馈《光与影：33号远征队》众多玩家的厚爱，特别推出“卢明浮生”典藏版专辑。",
+          "kind": "其他",
+          "type": "music",
+          "originalDescription": "我们为了回馈《光与影：33号远征队》众多玩家的厚爱，特别推出“卢明浮生”典藏版专辑。",
+          "translated": false,
+          "updatedAt": 1789449127909
+        },
+        {
+          "appid": 4227900,
+          "name": "光与影：33号远征队 - 维尔索的草稿（原声带）",
+          "price": 0,
+          "shortDescription": "重新踏上远征之旅，探索维尔索小时候的私密世界。 想象力在这片土地恣意奔涌，欢乐与纯真在这里洋溢，只是黑暗也同样会悄然浮现。",
+          "description": "重新踏上远征之旅，探索维尔索小时候的私密世界。 想象力在这片土地恣意奔涌，欢乐与纯真在这里洋溢，只是黑暗也同样会悄然浮现。",
+          "kind": "原声",
+          "type": "music",
+          "originalDescription": "重新踏上远征之旅，探索维尔索小时候的私密世界。 想象力在这片土地恣意奔涌，欢乐与纯真在这里洋溢，只是黑暗也同样会悄然浮现。",
+          "translated": false,
+          "updatedAt": 1789449129085
+        }
+      ],
+      "details": {
+        "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1903340/b3cb63bf5aa3ffd7790310e4361050c368569314/header_schinese.jpg?t=1782830877",
+        "isFree": false,
+        "type": "game",
+        "releaseDate": "2025 年 4 月 24 日",
+        "releaseTs": null,
+        "developers": [
+          "Sandfall Interactive"
+        ],
+        "publishers": [
+          "Kepler Interactive"
+        ],
+        "platforms": [
+          "Windows"
+        ],
+        "categories": [
+          "单人",
+          "Steam 成就",
+          "完全支持控制器",
+          "可调整文字大小",
+          "自定义音量控制",
+          "可调整难度",
+          "推荐使用手柄",
+          "DualSense 控制器支持",
+          "DualSense 控制器支持",
+          "立体声",
+          "字幕选项",
+          "环绕声",
+          "Steam 云",
+          "家庭共享"
+        ],
+        "genres": [
+          "动作",
+          "角色扮演"
+        ],
+        "tags": [
+          "动作",
+          "角色扮演"
+        ],
+        "featureTags": [
+          "单人",
+          "成就",
+          "云存档",
+          "手柄支持",
+          "家庭共享"
+        ],
+        "metacritic": 91,
+        "chineseSupport": true,
+        "reviewTotal": 181567,
+        "description": "率领第33号远征队踏上消灭绘母的征途，竭尽全力夺下她绘就死亡的画刷。置身这款采用即时机制的回合制角色扮演游戏，探索奇妙世界，感受法兰西19世纪末“美好年代”时期的风采，对抗超乎想象的敌人。",
+        "descriptionOriginal": "率领第33号远征队踏上消灭绘母的征途，竭尽全力夺下她绘就死亡的画刷。置身这款采用即时机制的回合制角色扮演游戏，探索奇妙世界，感受法兰西19世纪末“美好年代”时期的风采，对抗超乎想象的敌人。",
+        "descriptionTranslated": false
+      },
+      "createdAt": 1789449123598,
+      "updatedAt": 1789449129085
+    },
+    {
+      "appid": 2001120,
+      "name": "双影奇境",
+      "originalName": "双影奇境",
+      "price": {
+        "current": 128.7,
+        "original": 198,
+        "discountPercent": 35,
+        "currency": "CNY",
+        "isOnSale": true,
+        "discountExpiration": null,
+        "updatedAt": 1789449116035
+      },
+      "rating": {
+        "score": 9.9,
+        "positive": 98,
+        "total": 60099,
+        "desc": "Overwhelmingly Positive",
+        "updatedAt": 1789449116702
+      },
+      "historicalLow": {
+        "price": 128.7,
+        "count": 3,
+        "confidence": "A",
+        "source": "ITAD(国区)",
+        "updatedAt": 1789449118177,
+        "currency": "CNY"
+      },
+      "targetPrice": null,
+      "note": "",
+      "dlcList": [
+        {
+          "appid": 4110950,
+          "name": "《双影奇境》- 原声音乐",
+          "price": 28,
+          "shortDescription": "这份包含 45 首曲目的原声音乐合集由 Gustaf Grefberg 与 Jonatan Järpehag 共同创作，以丰富而绮丽的声音、情绪与风格，为《双影奇境》构筑鲜活的听觉世界。",
+          "description": "这份包含 45 首曲目的原声音乐合集由 Gustaf Grefberg 与 Jonatan Järpehag 共同创作，以丰富而绮丽的声音、情绪与风格，为《双影奇境》构筑鲜活的听觉世界。",
+          "kind": "原声",
+          "type": "music",
+          "originalDescription": "这份包含 45 首曲目的原声音乐合集由 Gustaf Grefberg 与 Jonatan Järpehag 共同创作，以丰富而绮丽的声音、情绪与风格，为《双影奇境》构筑鲜活的听觉世界。",
+          "translated": false,
+          "updatedAt": 1789449118728
+        }
+      ],
+      "details": {
+        "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2001120/header.jpg?t=1763484567",
+        "isFree": false,
+        "type": "game",
+        "releaseDate": "2025 年 3 月 6 日",
+        "releaseTs": null,
+        "developers": [
+          "Hazelight Studios"
+        ],
+        "publishers": [
+          "Electronic Arts"
+        ],
+        "platforms": [
+          "Windows"
+        ],
+        "categories": [
+          "多人",
+          "合作",
+          "在线合作",
+          "同屏/分屏合作",
+          "同屏/分屏",
+          "跨平台多人",
+          "Steam 成就",
+          "完全支持控制器",
+          "Steam 集换式卡牌",
+          "支持字幕",
+          "视角舒适度",
+          "可选颜色",
+          "DUALSHOCK 控制器支持",
+          "DualSense 控制器支持",
+          "DualSense 控制器支持",
+          "立体声",
+          "环绕声",
+          "Steam 云",
+          "远程同乐",
+          "可用 HDR",
+          "家庭共享"
+        ],
+        "genres": [
+          "动作",
+          "冒险"
+        ],
+        "tags": [
+          "动作",
+          "冒险"
+        ],
+        "featureTags": [
+          "多人",
+          "联机合作",
+          "成就",
+          "集换式卡牌",
+          "云存档",
+          "家庭共享"
+        ],
+        "metacritic": null,
+        "chineseSupport": true,
+        "reviewTotal": 78353,
+        "description": "深入《双影奇境》的多重世界，体验惊心动魄的时刻，完成突破边界的合作冒险。",
+        "descriptionOriginal": "深入《双影奇境》的多重世界，体验惊心动魄的时刻，完成突破边界的合作冒险。",
+        "descriptionTranslated": false
+      },
+      "createdAt": 1789449116702,
+      "updatedAt": 1789449118728
+    },
+    {
+      "appid": 2384580,
+      "name": "真・三国无双 起源",
+      "originalName": "真・三国无双 起源",
+      "price": {
+        "current": 244.3,
+        "original": 349,
+        "discountPercent": 30,
+        "currency": "CNY",
+        "isOnSale": true,
+        "discountExpiration": null,
+        "updatedAt": 1789449075487
+      },
+      "rating": {
+        "score": 9.6,
+        "positive": 94,
+        "total": 19003,
+        "desc": "Very Positive",
+        "updatedAt": 1789449076133
+      },
+      "historicalLow": {
+        "price": 244.3,
+        "count": 7,
+        "confidence": "A",
+        "source": "ITAD(国区)",
+        "updatedAt": 1789449077528,
+        "currency": "CNY"
+      },
+      "targetPrice": null,
+      "note": "",
+      "dlcList": [
+        {
+          "appid": 4038930,
+          "name": "真・三国无双 起源 梦幻四英杰",
+          "price": 130.5,
+          "shortDescription": "《真・三国无双 起源》大型DLC正式上线！与张角、董卓、袁绍、吕布四位英杰一同见证未竟之梦的终途吧！",
+          "description": "《真・三国无双 起源》大型DLC正式上线！与张角、董卓、袁绍、吕布四位英杰一同见证未竟之梦的终途吧！",
+          "kind": "其他",
+          "type": "dlc",
+          "originalDescription": "《真・三国无双 起源》大型DLC正式上线！与张角、董卓、袁绍、吕布四位英杰一同见证未竟之梦的终途吧！",
+          "translated": false,
+          "updatedAt": 1789449078126
+        },
+        {
+          "appid": 3319880,
+          "name": "真・三国无双 起源 - 官方资料集＆音乐精选辑（数字版）",
+          "price": 87.5,
+          "shortDescription": "收录《真・三国无双 起源》的官方资料集（日语）以及音乐精选辑的数字版艺术集锦。",
+          "description": "收录《真・三国无双 起源》的官方资料集（日语）以及音乐精选辑的数字版艺术集锦。",
+          "kind": "其他",
+          "type": "dlc",
+          "originalDescription": "收录《真・三国无双 起源》的官方资料集（日语）以及音乐精选辑的数字版艺术集锦。",
+          "translated": false,
+          "updatedAt": 1789449079301
+        },
+        {
+          "appid": 3319940,
+          "name": "真・三国无双 起源 - 一兰面",
+          "price": 0,
+          "shortDescription": "可在战斗中恢复体力的携带品“一兰面”，将作为追加内容在杂货店提供购买。",
+          "description": "可在战斗中恢复体力的携带品“一兰面”，将作为追加内容在杂货店提供购买。",
+          "kind": "其他",
+          "type": "dlc",
+          "originalDescription": "可在战斗中恢复体力的携带品“一兰面”，将作为追加内容在杂货店提供购买。",
+          "translated": false,
+          "updatedAt": 1789449080485
+        }
+      ],
+      "details": {
+        "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2384580/header_schinese.jpg?t=1775536473",
+        "isFree": false,
+        "type": "game",
+        "releaseDate": "2025 年 1 月 16 日",
+        "releaseTs": null,
+        "developers": [
+          "KOEI TECMO GAMES CO., LTD."
+        ],
+        "publishers": [
+          "KOEI TECMO GAMES CO., LTD."
+        ],
+        "platforms": [
+          "Windows"
+        ],
+        "categories": [
+          "单人",
+          "Steam 成就",
+          "完全支持控制器",
+          "Steam 集换式卡牌",
+          "可选颜色",
+          "自定义音量控制",
+          "可调整难度",
+          "立体声",
+          "环绕声",
+          "Steam 云",
+          "可用 HDR",
+          "家庭共享"
+        ],
+        "genres": [
+          "动作",
+          "角色扮演",
+          "策略"
+        ],
+        "tags": [
+          "动作",
+          "角色扮演",
+          "策略"
+        ],
+        "featureTags": [
+          "单人",
+          "成就",
+          "集换式卡牌",
+          "云存档",
+          "家庭共享"
+        ],
+        "metacritic": 84,
+        "chineseSupport": true,
+        "reviewTotal": 19567,
+        "description": "如临真实战场，畅享爽快的一骑当千动作！无名英雄闯荡三国乱世的“真・三国无双”系列新作。",
+        "descriptionOriginal": "如临真实战场，畅享爽快的一骑当千动作！无名英雄闯荡三国乱世的“真・三国无双”系列新作。",
+        "descriptionTranslated": false
+      },
+      "createdAt": 1789449076133,
+      "updatedAt": 1789449080485
+    },
+    {
+      "appid": 3681010,
+      "name": "仁王３",
+      "originalName": "仁王３",
+      "price": {
+        "current": 198.36,
+        "original": 348,
+        "discountPercent": 43,
+        "currency": "CNY",
+        "isOnSale": true,
+        "discountExpiration": null,
+        "updatedAt": 1789449064363
+      },
+      "rating": {
+        "score": 7.5,
+        "positive": 75,
+        "total": 8714,
+        "desc": "Mostly Positive",
+        "updatedAt": 1789449065652
+      },
+      "historicalLow": {
+        "price": 198.36,
+        "count": 1,
+        "confidence": "A",
+        "source": "ITAD(国区)",
+        "updatedAt": 1789449067051,
+        "currency": "CNY"
+      },
+      "targetPrice": null,
+      "note": "",
+      "dlcList": [
+        {
+          "appid": 4003930,
+          "name": "仁王３ 季票",
+          "price": 158.4,
+          "shortDescription": "季票包含《庆安地狱变》、《天草大乱》追加DLC两部以及季票特典“千千古吊饰”。",
+          "description": "季票包含《庆安地狱变》、《天草大乱》追加DLC两部以及季票特典“千千古吊饰”。",
+          "kind": "季票",
+          "type": "dlc",
+          "originalDescription": "季票包含《庆安地狱变》、《天草大乱》追加DLC两部以及季票特典“千千古吊饰”。",
+          "translated": false,
+          "updatedAt": 1789449068210
+        },
+        {
+          "appid": 4003950,
+          "name": "仁王３ 庆安地狱变",
+          "price": 98,
+          "shortDescription": "新地图“江户庆安” & 新武器种类登场！ 《仁王３》迈向全新境界！",
+          "description": "新地图“江户庆安” & 新武器种类登场！ 《仁王３》迈向全新境界！",
+          "kind": "其他",
+          "type": "dlc",
+          "originalDescription": "新地图“江户庆安” & 新武器种类登场！ 《仁王３》迈向全新境界！",
+          "translated": false,
+          "updatedAt": 1789449070020
+        }
+      ],
+      "details": {
+        "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3681010/a21264e9fd476dcb2901c2432b598107d024c5a8/header.jpg?t=1772090941",
+        "isFree": false,
+        "type": "game",
+        "releaseDate": "2026 年 2 月 5 日",
+        "releaseTs": null,
+        "developers": [
+          "KOEI TECMO GAMES CO., LTD."
+        ],
+        "publishers": [
+          "KOEI TECMO GAMES CO., LTD."
+        ],
+        "platforms": [
+          "Windows"
+        ],
+        "categories": [
+          "单人",
+          "多人",
+          "合作",
+          "在线合作",
+          "Steam 成就",
+          "Steam 集换式卡牌",
+          "可调整文字大小",
+          "视角舒适度",
+          "可选颜色",
+          "自定义音量控制",
+          "可以仅用键盘",
+          "无需应对快速反应事件",
+          "DUALSHOCK 控制器支持",
+          "DualSense 控制器支持",
+          "DualSense 控制器支持",
+          "立体声",
+          "字幕选项",
+          "环绕声",
+          "部分支持控制器",
+          "Steam 云",
+          "统计数据",
+          "Steam 排行榜",
+          "家庭共享"
+        ],
+        "genres": [
+          "动作",
+          "角色扮演"
+        ],
+        "tags": [
+          "动作",
+          "角色扮演"
+        ],
+        "featureTags": [
+          "单人",
+          "多人",
+          "联机合作",
+          "成就",
+          "集换式卡牌",
+          "云存档",
+          "家庭共享"
+        ],
+        "metacritic": 85,
+        "chineseSupport": true,
+        "reviewTotal": 11767,
+        "description": "黑暗战国动作RPG“仁王”系列第三部力作。本作舞台是兼具自由度与紧张感的开放地图，还可自由切换“武士”与“忍者”两种战斗风格挑战各路强敌妖怪。",
+        "descriptionOriginal": "黑暗战国动作RPG“仁王”系列第三部力作。本作舞台是兼具自由度与紧张感的开放地图，还可自由切换“武士”与“忍者”两种战斗风格挑战各路强敌妖怪。",
+        "descriptionTranslated": false
+      },
+      "createdAt": 1789449065652,
+      "updatedAt": 1789449070020
+    },
+    {
+      "appid": 281990,
+      "name": "Stellaris",
+      "originalName": "Stellaris",
+      "price": {
+        "current": 198,
+        "original": 198,
+        "discountPercent": 0,
+        "currency": "CNY",
+        "isOnSale": false,
+        "discountExpiration": null,
+        "updatedAt": 1789449053618
+      },
+      "rating": {
+        "score": 8.4,
+        "positive": 84,
+        "total": 47044,
+        "desc": "Very Positive",
+        "updatedAt": 1789449054846
+      },
+      "historicalLow": {
+        "price": 0,
+        "count": 6,
+        "confidence": "A",
+        "source": "ITAD(国区)",
+        "updatedAt": 1789449056503,
+        "currency": "CNY"
+      },
+      "targetPrice": null,
+      "note": "",
+      "dlcList": [
+        {
+          "appid": 4241400,
+          "name": "Stellaris: Season 10",
+          "price": null,
+          "shortDescription": "《Stellaris: Season 10 Expansion pass》是一段贯穿韧性与运动的旅程。无论你是伴随《Stellaris: Nomads》漫步星河，还是借《Stellaris: Willpower》的不屈精神扎根帝国于寰宇，今年都将重新定义帝国的生存、适应与征服之道。",
+          "description": "《Stellaris: Season 10 Expansion pass》是一段贯穿韧性与运动的旅程。无论你是伴随《Stellaris: Nomads》漫步星河，还是借《Stellaris: Willpower》的不屈精神扎根帝国于寰宇，今年都将重新定义帝国的生存、适应与征服之道。",
+          "kind": "资料片",
+          "type": "dlc",
+          "originalDescription": "《Stellaris: Season 10 Expansion pass》是一段贯穿韧性与运动的旅程。无论你是伴随《Stellaris: Nomads》漫步星河，还是借《Stellaris: Willpower》的不屈精神扎根帝国于寰宇，今年都将重新定义帝国的生存、适应与征服之道。",
+          "translated": false,
+          "updatedAt": 1789449057083
+        },
+        {
+          "appid": 4241420,
+          "name": "Stellaris: Nomads",
+          "price": 108,
+          "shortDescription": "在《Nomads》中，你将繁荣于庞大的方舟内，载着你的子民、你的工业、你的雄心，跨越群星。在星系中自由移动，承接来自定居帝国的契约，并借由建造驿站留下你的印记。游牧者并不拥有星图——他们是在星图上开辟道路的人。",
+          "description": "在《Nomads》中，你将繁荣于庞大的方舟内，载着你的子民、你的工业、你的雄心，跨越群星。在星系中自由移动，承接来自定居帝国的契约，并借由建造驿站留下你的印记。游牧者并不拥有星图——他们是在星图上开辟道路的人。",
+          "kind": "其他",
+          "type": "dlc",
+          "originalDescription": "在《Nomads》中，你将繁荣于庞大的方舟内，载着你的子民、你的工业、你的雄心，跨越群星。在星系中自由移动，承接来自定居帝国的契约，并借由建造驿站留下你的印记。游牧者并不拥有星图——他们是在星图上开辟道路的人。",
+          "translated": false,
+          "updatedAt": 1789449058307
+        },
+        {
+          "appid": 3417840,
+          "name": "Stellaris: BioGenesis",
+          "price": 108,
+          "shortDescription": "在Stellaris: BioGenesis中驾驭生命本身的力量。编辑活体舰船、改造星球生态系统、使用先进的基因武器重塑帝国的命运。创造适应和增长的乌托邦还是用生物武器主宰群星，这都将由您来决定。",
+          "description": "在Stellaris: BioGenesis中驾驭生命本身的力量。编辑活体舰船、改造星球生态系统、使用先进的基因武器重塑帝国的命运。创造适应和增长的乌托邦还是用生物武器主宰群星，这都将由您来决定。",
+          "kind": "其他",
+          "type": "dlc",
+          "originalDescription": "在Stellaris: BioGenesis中驾驭生命本身的力量。编辑活体舰船、改造星球生态系统、使用先进的基因武器重塑帝国的命运。创造适应和增长的乌托邦还是用生物武器主宰群星，这都将由您来决定。",
+          "translated": false,
+          "updatedAt": 1789449059478
+        },
+        {
+          "appid": 3417850,
+          "name": "Stellaris: Shadows of the Shroud",
+          "price": 88,
+          "shortDescription": "灵能的位面蕴含着未知的力量——但代价是什么？Shadows of the Shroud是对灵能飞升路径的完全重制，引入了新的道德困境、恩主联盟、和永远高悬着的道德终极毁灭诱惑之剑。",
+          "description": "灵能的位面蕴含着未知的力量——但代价是什么？Shadows of the Shroud是对灵能飞升路径的完全重制，引入了新的道德困境、恩主联盟、和永远高悬着的道德终极毁灭诱惑之剑。",
+          "kind": "其他",
+          "type": "dlc",
+          "originalDescription": "灵能的位面蕴含着未知的力量——但代价是什么？Shadows of the Shroud是对灵能飞升路径的完全重制，引入了新的道德困境、恩主联盟、和永远高悬着的道德终极毁灭诱惑之剑。",
+          "translated": false,
+          "updatedAt": 1789449060723
+        },
+        {
+          "appid": 2729490,
+          "name": "Stellaris: Expansion Subscription",
+          "price": 52,
+          "shortDescription": "银河系从未如此广阔无垠、充满谜团！《Stellaris》Expansion Subscription 是以无限存取所有额外内容的方式体验终极太空大型战略游戏的最佳选择。",
+          "description": "银河系从未如此广阔无垠、充满谜团！《Stellaris》Expansion Subscription 是以无限存取所有额外内容的方式体验终极太空大型战略游戏的最佳选择。",
+          "kind": "资料片",
+          "type": "dlc",
+          "originalDescription": "银河系从未如此广阔无垠、充满谜团！《Stellaris》Expansion Subscription 是以无限存取所有额外内容的方式体验终极太空大型战略游戏的最佳选择。",
+          "translated": false,
+          "updatedAt": 1789449061365
+        },
+        {
+          "appid": 716670,
+          "name": "Stellaris: Apocalypse",
+          "price": 88,
+          "shortDescription": "《Stellaris - Apocalypse》是一个完整的扩展包，它为所有玩家重新勾画了星际战争，采用一系列新的进攻和防御选项。用恐怖的新型行星杀手武器毁灭整个世界，与凶悍的太空海盗对战（或并肩作战），同时也可能会发现一些非暴力游戏特点。",
+          "description": "《Stellaris - Apocalypse》是一个完整的扩展包，它为所有玩家重新勾画了星际战争，采用一系列新的进攻和防御选项。用恐怖的新型行星杀手武器毁灭整个世界，与凶悍的太空海盗对战（或并肩作战），同时也可能会发现一些非暴力游戏特点。",
+          "kind": "资料片",
+          "type": "dlc",
+          "originalDescription": "《Stellaris - Apocalypse》是一个完整的扩展包，它为所有玩家重新勾画了星际战争，采用一系列新的进攻和防御选项。用恐怖的新型行星杀手武器毁灭整个世界，与凶悍的太空海盗对战（或并肩作战），同时也可能会发现一些非暴力游戏特点。",
+          "translated": false,
+          "updatedAt": 1789449062550
+        },
+        {
+          "appid": 944290,
+          "name": "Stellaris: MegaCorp",
+          "price": 88,
+          "shortDescription": "《Stellaris: MegaCorp》是 Paradox Development Studio 标志性大型科幻战略游戏的最新完整扩展包。这款游戏让玩家引领星系进入繁荣和获利的新时代。在这款以经济为中心的扩展包中，玩家可成为一个实力强大的企业帝国的首席执行官，在群星之间大展宏图。",
+          "description": "《Stellaris: MegaCorp》是 Paradox Development Studio 标志性大型科幻战略游戏的最新完整扩展包。这款游戏让玩家引领星系进入繁荣和获利的新时代。在这款以经济为中心的扩展包中，玩家可成为一个实力强大的企业帝国的首席执行官，在群星之间大展宏图。",
+          "kind": "资料片",
+          "type": "dlc",
+          "originalDescription": "《Stellaris: MegaCorp》是 Paradox Development Studio 标志性大型科幻战略游戏的最新完整扩展包。这款游戏让玩家引领星系进入繁荣和获利的新时代。在这款以经济为中心的扩展包中，玩家可成为一个实力强大的企业帝国的首席执行官，在群星之间大展宏图。",
+          "translated": false,
+          "updatedAt": 1789449063766
+        },
+        {
+          "appid": 1140001,
+          "name": "Stellaris: Federations",
+          "price": 88,
+          "shortDescription": "战争中的最高境界是不战而屈人之兵。有了这个《Stellaris: Federations》扩展包，玩家能以前所未有的方式将自己的外交势力延伸至整个银河系。运用所有可能的办法来取得优势，使用一系列的新选项，在不兵刃交锋的情况下影响、操纵并支配对手。",
+          "description": "战争中的最高境界是不战而屈人之兵。有了这个《Stellaris: Federations》扩展包，玩家能以前所未有的方式将自己的外交势力延伸至整个银河系。运用所有可能的办法来取得优势，使用一系列的新选项，在不兵刃交锋的情况下影响、操纵并支配对手。",
+          "kind": "资料片",
+          "type": "dlc",
+          "originalDescription": "战争中的最高境界是不战而屈人之兵。有了这个《Stellaris: Federations》扩展包，玩家能以前所未有的方式将自己的外交势力延伸至整个银河系。运用所有可能的办法来取得优势，使用一系列的新选项，在不兵刃交锋的情况下影响、操纵并支配对手。",
+          "translated": false,
+          "updatedAt": 1789449064976
+        },
+        {
+          "appid": 1522090,
+          "name": "Stellaris: Nemesis",
+          "price": 88,
+          "shortDescription": "Nemesis 是《Stellaris》的扩展包，玩家将可决定动荡不安银河的未来命运。添加谍报工具，这是星海监管人强力的作战手段，或利用“威胁”选项让自身成为威胁。Nemesis 提供了《Stellaris》至今最强而有力的作战利器。",
+          "description": "Nemesis 是《Stellaris》的扩展包，玩家将可决定动荡不安银河的未来命运。添加谍报工具，这是星海监管人强力的作战手段，或利用“威胁”选项让自身成为威胁。Nemesis 提供了《Stellaris》至今最强而有力的作战利器。",
+          "kind": "资料片",
+          "type": "dlc",
+          "originalDescription": "Nemesis 是《Stellaris》的扩展包，玩家将可决定动荡不安银河的未来命运。添加谍报工具，这是星海监管人强力的作战手段，或利用“威胁”选项让自身成为威胁。Nemesis 提供了《Stellaris》至今最强而有力的作战利器。",
+          "translated": false,
+          "updatedAt": 1789449066167
+        },
+        {
+          "appid": 1889490,
+          "name": "Stellaris: Overlord",
+          "price": 88,
+          "shortDescription": "实现您的伟大设计 《Stellaris》的全新完整扩展包 Overlord，能取得全新功能，将帝国解锁至崭新层次。新机制让您专攻帝国内的附庸角色，还有全新的巨构建筑以更快速度进一步保护您的权力。",
+          "description": "实现您的伟大设计 《Stellaris》的全新完整扩展包 Overlord，能取得全新功能，将帝国解锁至崭新层次。新机制让您专攻帝国内的附庸角色，还有全新的巨构建筑以更快速度进一步保护您的权力。",
+          "kind": "资料片",
+          "type": "dlc",
+          "originalDescription": "实现您的伟大设计 《Stellaris》的全新完整扩展包 Overlord，能取得全新功能，将帝国解锁至崭新层次。新机制让您专攻帝国内的附庸角色，还有全新的巨构建筑以更快速度进一步保护您的权力。",
+          "translated": false,
+          "updatedAt": 1789449066819
+        },
+        {
+          "appid": 2380030,
+          "name": "Stellaris: Galactic Paragons",
+          "price": 68,
+          "shortDescription": "将 Galactic Paragons 加入您的帝国，体验全新层次的角色和故事，这些伟大领袖将遵从您的领导探索群星。还有独家加入的全新理事会机制、可自行形塑来强化帝国愿景的领袖、全新的国民理念，以及更多丰富内容。",
+          "description": "将 Galactic Paragons 加入您的帝国，体验全新层次的角色和故事，这些伟大领袖将遵从您的领导探索群星。还有独家加入的全新理事会机制、可自行形塑来强化帝国愿景的领袖、全新的国民理念，以及更多丰富内容。",
+          "kind": "其他",
+          "type": "dlc",
+          "originalDescription": "将 Galactic Paragons 加入您的帝国，体验全新层次的角色和故事，这些伟大领袖将遵从您的领导探索群星。还有独家加入的全新理事会机制、可自行形塑来强化帝国愿景的领袖、全新的国民理念，以及更多丰富内容。",
+          "translated": false,
+          "updatedAt": 1789449067681
+        },
+        {
+          "appid": 2534090,
+          "name": "Stellaris: Astral Planes",
+          "price": 88,
+          "shortDescription": "全新核心系统和科技。 探索新的次元。 全新分支叙事。",
+          "description": "全新核心系统和科技。 探索新的次元。 全新分支叙事。",
+          "kind": "其他",
+          "type": "dlc",
+          "originalDescription": "全新核心系统和科技。 探索新的次元。 全新分支叙事。",
+          "translated": false,
+          "updatedAt": 1789449069403
+        },
+        {
+          "appid": 2840100,
+          "name": "Stellaris: The Machine Age",
+          "price": 108,
+          "shortDescription": "这是一个科技辉煌、社会快速变迁、野心无尽奔放的时代... 但在太空深处，一个前所未见的危险即将崛起，迫在眉睫的威胁将引发对生命意义的深刻质疑。欢迎来到《The Machine Age》！",
+          "description": "这是一个科技辉煌、社会快速变迁、野心无尽奔放的时代... 但在太空深处，一个前所未见的危险即将崛起，迫在眉睫的威胁将引发对生命意义的深刻质疑。欢迎来到《The Machine Age》！",
+          "kind": "其他",
+          "type": "dlc",
+          "originalDescription": "这是一个科技辉煌、社会快速变迁、野心无尽奔放的时代... 但在太空深处，一个前所未见的危险即将崛起，迫在眉睫的威胁将引发对生命意义的深刻质疑。欢迎来到《The Machine Age》！",
+          "translated": false,
+          "updatedAt": 1789449071227
+        },
+        {
+          "appid": 2863060,
+          "name": "Stellaris: Cosmic Storms",
+          "price": 62,
+          "shortDescription": "银河系周围观察到一种新的现象，一种风暴正在席卷整个星系。让您的帝国做好准备，面对即将到来的新威胁，并在您的敌人因为风暴而被削弱时善用机会。",
+          "description": "银河系周围观察到一种新的现象，一种风暴正在席卷整个星系。让您的帝国做好准备，面对即将到来的新威胁，并在您的敌人因为风暴而被削弱时善用机会。",
+          "kind": "其他",
+          "type": "dlc",
+          "originalDescription": "银河系周围观察到一种新的现象，一种风暴正在席卷整个星系。让您的帝国做好准备，面对即将到来的新威胁，并在您的敌人因为风暴而被削弱时善用机会。",
+          "translated": false,
+          "updatedAt": 1789449072476
+        },
+        {
+          "appid": 518910,
+          "name": "Stellaris: Leviathans Story Pack",
+          "price": 48,
+          "shortDescription": "Space is lovely, dark and deep, but it has secrets it wants to keep. Rich systems defended by fierce creatures, hostile pockets of resistance to your civilization, and the sleeping giants of the universe – the Fallen Empires who may yet be stirred from their centuries long indolence.",
+          "description": "Space is lovely, dark and deep, but it has secrets it wants to keep. Rich systems defended by fierce creatures, hostile pockets of resistance to your civilizati…",
+          "kind": "原声",
+          "type": "dlc",
+          "originalDescription": "Space is lovely, dark and deep, but it has secrets it wants to keep. Rich systems defended by fierce creatures, hostile pockets of resistance to your civilization, and the sleeping giants of the universe – the Fallen Empires who may yet be stirred from their centuries long indolence.",
+          "translated": false,
+          "updatedAt": 1789449074650
+        }
+      ],
+      "details": {
+        "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/281990/header.jpg?t=1782139685",
+        "isFree": false,
+        "type": "game",
+        "releaseDate": "2016 年 5 月 9 日",
+        "releaseTs": null,
+        "developers": [
+          "Paradox Development Studio"
+        ],
+        "publishers": [
+          "Paradox Interactive"
+        ],
+        "platforms": [
+          "Windows",
+          "macOS",
+          "Linux"
+        ],
+        "categories": [
+          "单人",
+          "多人",
+          "跨平台多人",
+          "Steam 成就",
+          "Steam 集换式卡牌",
+          "Steam 创意工坊",
+          "Steam 云",
+          "家庭共享"
+        ],
+        "genres": [
+          "模拟",
+          "策略"
+        ],
+        "tags": [
+          "模拟",
+          "策略"
+        ],
+        "featureTags": [
+          "单人",
+          "多人",
+          "成就",
+          "集换式卡牌",
+          "云存档",
+          "创意工坊",
+          "家庭共享"
+        ],
+        "metacritic": 78,
+        "chineseSupport": true,
+        "reviewTotal": 142873,
+        "description": "在这款由Paradox Development Studio精心打造的科幻大型战略游戏中，探索充满奇迹的浩瀚银河。与千奇百怪的外星种族互动、发现奇异新世界并体验其中令人意想不到的事件，同时扩大您帝国的影响力。每一场新的冒险皆拥有几乎无穷无尽的可能性。",
+        "descriptionOriginal": "在这款由Paradox Development Studio精心打造的科幻大型战略游戏中，探索充满奇迹的浩瀚银河。与千奇百怪的外星种族互动、发现奇异新世界并体验其中令人意想不到的事件，同时扩大您帝国的影响力。每一场新的冒险皆拥有几乎无穷无尽的可能性。",
+        "descriptionTranslated": false
+      },
+      "createdAt": 1789449054846,
+      "updatedAt": 1789449074650
+    },
     {
       "appid": 2421410,
       "name": "全网公敌2 新世界",
@@ -19473,8 +24624,8 @@
     }
   ],
   "source": "manual-sync",
-  "syncedAt": 1789448692864,
-  "gameCount": 154,
-  "fingerprint": "e3de13d0562fb800",
+  "syncedAt": 1789449786064,
+  "gameCount": 197,
+  "fingerprint": "e81bb32ad0aa3d00",
   "syncedFrom": "https://ticianli.github.io"
 }
