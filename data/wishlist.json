@@ -1,8 +1,2069 @@
 {
   "version": 3,
-  "updatedAt": 1789420784062,
-  "refreshedAt": 1789420784062,
+  "updatedAt": 1789448692864,
   "games": [
+    {
+      "appid": 2421410,
+      "name": "全网公敌2 新世界",
+      "originalName": "全网公敌2 新世界",
+      "price": {
+        "current": 40.8,
+        "original": 68,
+        "discountPercent": 40,
+        "currency": "CNY",
+        "isOnSale": true,
+        "discountExpiration": null,
+        "updatedAt": 1789393236515
+      },
+      "rating": {
+        "score": 9.6,
+        "positive": 93,
+        "desc": "Very Positive",
+        "total": 5100,
+        "updatedAt": 1789393237087
+      },
+      "historicalLow": {
+        "price": 40.8,
+        "count": 3,
+        "confidence": "A",
+        "source": "ITAD(国区)",
+        "updatedAt": 1789393238662,
+        "currency": "CNY"
+      },
+      "targetPrice": null,
+      "note": "",
+      "dlcList": [
+        {
+          "appid": 3885430,
+          "name": "全网公敌2 新世界 - 原声音乐辑",
+          "price": 0,
+          "shortDescription": "《全网公敌2 新世界》是一款由Aluba Van+开发，SpiralUp Games发行的结合大数据、网络安全、人工智能等现实共鸣题材的剧情向解谜游戏，原创配乐由章方博制作。",
+          "description": "《全网公敌2 新世界》是一款由Aluba Van+开发，SpiralUp Games发行的结合大数据、网络安全、人工智能等现实共鸣题材的剧情向解谜游戏，原创配乐由章方博制作。",
+          "kind": "原声",
+          "type": "music",
+          "originalDescription": "《全网公敌2 新世界》是一款由Aluba Van+开发，SpiralUp Games发行的结合大数据、网络安全、人工智能等现实共鸣题材的剧情向解谜游戏，原创配乐由章方博制作。",
+          "translated": false,
+          "updatedAt": 1789393240090
+        }
+      ],
+      "details": {
+        "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2421410/header_schinese.jpg?t=1784709901",
+        "isFree": false,
+        "type": "game",
+        "releaseDate": "2025 年 1 月 20 日",
+        "releaseTs": null,
+        "developers": [
+          "Aluba Van+"
+        ],
+        "publishers": [
+          "Spiral Up Games"
+        ],
+        "platforms": [
+          "Windows",
+          "macOS"
+        ],
+        "categories": [
+          "单人",
+          "Steam 成就",
+          "自定义音量控制",
+          "可调整难度",
+          "随时保存",
+          "Steam 云"
+        ],
+        "genres": [
+          "独立",
+          "角色扮演",
+          "模拟"
+        ],
+        "tags": [
+          "独立",
+          "角色扮演",
+          "模拟"
+        ],
+        "featureTags": [
+          "单人",
+          "成就",
+          "云存档"
+        ],
+        "metacritic": null,
+        "chineseSupport": true,
+        "reviewTotal": 5186,
+        "description": "《全网公敌2 新世界》是一款结合大数据、网络安全、人工智能等现实共鸣题材的剧情向解谜游戏，你将扮演一名隶属于泰坦公司的人工智能助手，通过社工手段破解目标人物信息，获取他们的爱好、生活习惯与人际关系，挖掘出他们想要极力隐藏的秘密，找出最终的真相。",
+        "descriptionOriginal": "《全网公敌2 新世界》是一款结合大数据、网络安全、人工智能等现实共鸣题材的剧情向解谜游戏，你将扮演一名隶属于泰坦公司的人工智能助手，通过社工手段破解目标人物信息，获取他们的爱好、生活习惯与人际关系，挖掘出他们想要极力隐藏的秘密，找出最终的真相。",
+        "descriptionTranslated": false
+      },
+      "createdAt": 1789393237087,
+      "updatedAt": 1789393240090
+    },
+    {
+      "appid": 2997230,
+      "name": "Planet of Lana II",
+      "originalName": "Planet of Lana II",
+      "price": {
+        "current": 41.3,
+        "original": 59,
+        "discountPercent": 30,
+        "currency": "CNY",
+        "isOnSale": true,
+        "discountExpiration": null,
+        "updatedAt": 1789393213356
+      },
+      "rating": {
+        "score": 7.5,
+        "positive": 79,
+        "desc": "Mostly Positive",
+        "total": 85,
+        "updatedAt": 1789393214949
+      },
+      "historicalLow": {
+        "price": 41.3,
+        "count": 1,
+        "confidence": "A",
+        "source": "ITAD(国区)",
+        "updatedAt": 1789393216745,
+        "currency": "CNY"
+      },
+      "targetPrice": null,
+      "note": "",
+      "dlcList": [
+        {
+          "appid": 4349060,
+          "name": "Planet of Lana II - Supporter Pack ",
+          "price": 20.3,
+          "shortDescription": "《Planet of Lana》支持者礼包将带你更深入地走进Lana和Mui的世界。畅享数字画集、精美壁纸以及Novo语言伴侣指南（一本关于游戏语言的导览手册）。",
+          "description": "《Planet of Lana》支持者礼包将带你更深入地走进Lana和Mui的世界。畅享数字画集、精美壁纸以及Novo语言伴侣指南（一本关于游戏语言的导览手册）。",
+          "kind": "支持者包",
+          "type": "dlc",
+          "originalDescription": "《Planet of Lana》支持者礼包将带你更深入地走进Lana和Mui的世界。畅享数字画集、精美壁纸以及Novo语言伴侣指南（一本关于游戏语言的导览手册）。",
+          "translated": false,
+          "updatedAt": 1789393218104
+        }
+      ],
+      "details": {
+        "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2997230/4c1269c8e8a39cf2066205d1b90d471f254b71b4/header_schinese.jpg?t=1776154869",
+        "isFree": false,
+        "type": "game",
+        "releaseDate": "2026 年 3 月 5 日",
+        "releaseTs": null,
+        "developers": [
+          "Wishfully"
+        ],
+        "publishers": [
+          "Thunderful Publishing"
+        ],
+        "platforms": [
+          "Windows"
+        ],
+        "categories": [
+          "单人",
+          "Steam 成就",
+          "完全支持控制器",
+          "推荐使用手柄",
+          "DualSense 控制器支持",
+          "DualSense 控制器支持",
+          "Steam 云",
+          "家庭共享"
+        ],
+        "genres": [
+          "动作",
+          "冒险",
+          "独立"
+        ],
+        "tags": [
+          "动作",
+          "冒险",
+          "独立"
+        ],
+        "featureTags": [
+          "单人",
+          "成就",
+          "云存档",
+          "手柄支持",
+          "家庭共享"
+        ],
+        "metacritic": 79,
+        "chineseSupport": true,
+        "reviewTotal": 868,
+        "description": "人性的贪婪分裂了部族，动荡随之而生。Lana与小伙伴Mui携手相伴，面对这场席卷世界的巨变——不只是为了活下去，也为了守护家园最后的温度。",
+        "descriptionOriginal": "人性的贪婪分裂了部族，动荡随之而生。Lana与小伙伴Mui携手相伴，面对这场席卷世界的巨变——不只是为了活下去，也为了守护家园最后的温度。",
+        "descriptionTranslated": false
+      },
+      "createdAt": 1789393214949,
+      "updatedAt": 1789393218104
+    },
+    {
+      "appid": 35720,
+      "name": "Trine 2: Complete Story",
+      "originalName": "Trine 2: Complete Story",
+      "price": {
+        "current": 13.6,
+        "original": 68,
+        "discountPercent": 80,
+        "currency": "CNY",
+        "isOnSale": true,
+        "discountExpiration": null,
+        "updatedAt": 1789393171456
+      },
+      "rating": {
+        "score": 9.6,
+        "positive": 92,
+        "desc": "Very Positive",
+        "total": 2615,
+        "updatedAt": 1789393174094
+      },
+      "historicalLow": {
+        "price": 5,
+        "count": 1,
+        "confidence": "A",
+        "source": "ITAD(国区)",
+        "updatedAt": 1789393176103,
+        "currency": "CNY"
+      },
+      "targetPrice": null,
+      "note": "",
+      "dlcList": [
+        {
+          "appid": 1228580,
+          "name": "Trine 2 Soundtrack",
+          "price": 7.4,
+          "shortDescription": "Original Soundtrack for Trine 2 and Trine 2: The Goblin Menace, composed by award-winning Ari Pulkkinen.",
+          "description": "Original Soundtrack for Trine 2 and Trine 2: The Goblin Menace, composed by award-winning Ari Pulkkinen.",
+          "kind": "原声",
+          "type": "music",
+          "originalDescription": "Original Soundtrack for Trine 2 and Trine 2: The Goblin Menace, composed by award-winning Ari Pulkkinen.",
+          "translated": false,
+          "updatedAt": 1789393178382
+        }
+      ],
+      "details": {
+        "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/35720/header.jpg?t=1789373310",
+        "isFree": false,
+        "type": "game",
+        "releaseDate": "2013 年 6 月 6 日",
+        "releaseTs": null,
+        "developers": [
+          "Frozenbyte"
+        ],
+        "publishers": [
+          "Frozenbyte"
+        ],
+        "platforms": [
+          "Windows",
+          "macOS",
+          "Linux"
+        ],
+        "categories": [
+          "单人",
+          "多人",
+          "合作",
+          "在线合作",
+          "同屏/分屏合作",
+          "同屏/分屏",
+          "跨平台多人",
+          "Steam 成就",
+          "完全支持控制器",
+          "Steam 集换式卡牌",
+          "Steam 创意工坊",
+          "自定义音量控制",
+          "可调整难度",
+          "立体声",
+          "Steam 云",
+          "包含关卡编辑器",
+          "在手机上远程畅玩",
+          "在平板上远程畅玩",
+          "在电视上远程畅玩",
+          "远程同乐",
+          "家庭共享"
+        ],
+        "genres": [
+          "动作",
+          "冒险",
+          "休闲",
+          "独立",
+          "角色扮演"
+        ],
+        "tags": [
+          "动作",
+          "冒险",
+          "休闲",
+          "独立",
+          "角色扮演"
+        ],
+        "featureTags": [
+          "单人",
+          "多人",
+          "联机合作",
+          "成就",
+          "集换式卡牌",
+          "云存档",
+          "创意工坊",
+          "关卡编辑",
+          "家庭共享"
+        ],
+        "metacritic": 84,
+        "chineseSupport": false,
+        "reviewTotal": 15270,
+        "description": "Three heroes make their way through a fairytale world of forgotten ruins, scheming goblins and impossible contraptions. Play alone and switch between wizard, knight and thief at will, or bring up to two friends, in online or local co-op. Includes the full Goblin Menace campaign.",
+        "descriptionOriginal": "Three heroes make their way through a fairytale world of forgotten ruins, scheming goblins and impossible contraptions. Play alone and switch between wizard, knight and thief at will, or bring up to two friends, in online or local co-op. Includes the full Goblin Menace campaign.",
+        "descriptionTranslated": false
+      },
+      "createdAt": 1789393174094,
+      "updatedAt": 1789393178382
+    },
+    {
+      "appid": 1608230,
+      "name": "Planet of Lana",
+      "originalName": "Planet of Lana",
+      "price": {
+        "current": 11.8,
+        "original": 59,
+        "discountPercent": 80,
+        "currency": "CNY",
+        "isOnSale": true,
+        "discountExpiration": null,
+        "updatedAt": 1789393164049
+      },
+      "rating": {
+        "score": 9.2,
+        "positive": 88,
+        "desc": "Very Positive",
+        "total": 1595,
+        "updatedAt": 1789393166062
+      },
+      "historicalLow": {
+        "price": 5.9,
+        "count": 1,
+        "confidence": "A",
+        "source": "ITAD(国区)",
+        "updatedAt": 1789393167806,
+        "currency": "CNY"
+      },
+      "targetPrice": null,
+      "note": "",
+      "dlcList": [
+        {
+          "appid": 4464580,
+          "name": "Planet of Lana - Supporter Pack",
+          "price": 27.3,
+          "shortDescription": "深入探索《Planet of Lana》，在官方支持者礼包中领略艺术、生物、机械与风景之美，感受Novo世界的勃勃生机。",
+          "description": "深入探索《Planet of Lana》，在官方支持者礼包中领略艺术、生物、机械与风景之美，感受Novo世界的勃勃生机。",
+          "kind": "支持者包",
+          "type": "dlc",
+          "originalDescription": "深入探索《Planet of Lana》，在官方支持者礼包中领略艺术、生物、机械与风景之美，感受Novo世界的勃勃生机。",
+          "translated": false,
+          "updatedAt": 1789393169170
+        }
+      ],
+      "details": {
+        "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1608230/afc987687f2f80c5c4a93293f2f0f53a62032212/header.jpg?t=1772728759",
+        "isFree": false,
+        "type": "game",
+        "releaseDate": "2023 年 5 月 23 日",
+        "releaseTs": null,
+        "developers": [
+          "Wishfully"
+        ],
+        "publishers": [
+          "Thunderful Publishing"
+        ],
+        "platforms": [
+          "Windows"
+        ],
+        "categories": [
+          "单人",
+          "Steam 成就",
+          "完全支持控制器",
+          "Steam 集换式卡牌",
+          "推荐使用手柄",
+          "DUALSHOCK 控制器支持",
+          "DUALSHOCK 控制器支持",
+          "DualSense 控制器支持",
+          "DualSense 控制器支持",
+          "Steam 云",
+          "家庭共享"
+        ],
+        "genres": [
+          "动作",
+          "冒险",
+          "独立"
+        ],
+        "tags": [
+          "动作",
+          "冒险",
+          "独立"
+        ],
+        "featureTags": [
+          "单人",
+          "成就",
+          "集换式卡牌",
+          "云存档",
+          "手柄支持",
+          "家庭共享"
+        ],
+        "metacritic": 80,
+        "chineseSupport": true,
+        "reviewTotal": 9595,
+        "description": "冰冷的机械入侵了星球，曾经绿意盎然的世界如今满目疮痍。女孩与她的伙伴并肩求生，在废墟中守护他们珍视的一切。一段关于爱、牺牲与信念的动人故事，在落幕后依然会铭刻于心，久久回荡。",
+        "descriptionOriginal": "冰冷的机械入侵了星球，曾经绿意盎然的世界如今满目疮痍。女孩与她的伙伴并肩求生，在废墟中守护他们珍视的一切。一段关于爱、牺牲与信念的动人故事，在落幕后依然会铭刻于心，久久回荡。",
+        "descriptionTranslated": false
+      },
+      "createdAt": 1789393166062,
+      "updatedAt": 1789393169170
+    },
+    {
+      "appid": 2678640,
+      "name": "朝露：境界旅程",
+      "originalName": "朝露：境界旅程",
+      "price": {
+        "current": 33.75,
+        "original": 45,
+        "discountPercent": 25,
+        "currency": "CNY",
+        "isOnSale": true,
+        "discountExpiration": null,
+        "updatedAt": 1789393151019
+      },
+      "rating": {
+        "score": 9.9,
+        "positive": 98,
+        "desc": "Overwhelmingly Positive",
+        "total": 2109,
+        "updatedAt": 1789393151629
+      },
+      "historicalLow": {
+        "price": 33.75,
+        "count": 3,
+        "confidence": "A",
+        "source": "ITAD(国区)",
+        "updatedAt": 1789393153385,
+        "currency": "CNY"
+      },
+      "targetPrice": null,
+      "note": "",
+      "dlcList": [
+        {
+          "appid": 4214830,
+          "name": "朝露：境界旅程 - 境界之心 内容扩展包",
+          "price": 19.8,
+          "shortDescription": "境中之境，它向不同的人展示千百面貌。虚构与真实在此处交织，境界之心于其中静待聚合。在这里展开心的旅程，知晓新生的灵魂将去往何方。",
+          "description": "境中之境，它向不同的人展示千百面貌。虚构与真实在此处交织，境界之心于其中静待聚合。在这里展开心的旅程，知晓新生的灵魂将去往何方。",
+          "kind": "资料片",
+          "type": "dlc",
+          "originalDescription": "境中之境，它向不同的人展示千百面貌。虚构与真实在此处交织，境界之心于其中静待聚合。在这里展开心的旅程，知晓新生的灵魂将去往何方。",
+          "translated": false,
+          "updatedAt": 1789393155322
+        }
+      ],
+      "details": {
+        "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2678640/c3affbc545027548747dc8024eb49146be28d686/header_schinese.jpg?t=1789037831",
+        "isFree": false,
+        "type": "game",
+        "releaseDate": "2025 年 8 月 13 日",
+        "releaseTs": null,
+        "developers": [
+          "葱色兔兔/Scallion Rabbit"
+        ],
+        "publishers": [
+          "Anotherindie"
+        ],
+        "platforms": [
+          "Windows"
+        ],
+        "categories": [
+          "单人",
+          "Steam 成就",
+          "Steam 集换式卡牌",
+          "部分支持控制器",
+          "Steam 云",
+          "家庭共享"
+        ],
+        "genres": [
+          "独立",
+          "角色扮演",
+          "策略"
+        ],
+        "tags": [
+          "独立",
+          "角色扮演",
+          "策略"
+        ],
+        "featureTags": [
+          "单人",
+          "成就",
+          "集换式卡牌",
+          "云存档",
+          "家庭共享"
+        ],
+        "metacritic": null,
+        "chineseSupport": true,
+        "reviewTotal": 2214,
+        "description": "《朝露：境界旅程》是一款拥有箱庭式地图的2D回合制游戏。在游戏中，扮演少女「露」展开冒险。冒险途中，收集并自由选择你的战斗方式，击败机制各异的敌人。随着探索推进，逐渐了解境界的历史、阻遏黑兽潮的威胁，最终击败蛰伏的滔天恶意。",
+        "descriptionOriginal": "《朝露：境界旅程》是一款拥有箱庭式地图的2D回合制游戏。在游戏中，扮演少女「露」展开冒险。冒险途中，收集并自由选择你的战斗方式，击败机制各异的敌人。随着探索推进，逐渐了解境界的历史、阻遏黑兽潮的威胁，最终击败蛰伏的滔天恶意。",
+        "descriptionTranslated": false
+      },
+      "createdAt": 1789393151629,
+      "updatedAt": 1789393155322
+    },
+    {
+      "appid": 2153350,
+      "name": "兄弟：双子传说 重制版（Brothers: A Tale of Two Sons Remake）",
+      "originalName": "兄弟：双子传说 重制版（Brothers: A Tale of Two Sons Remake）",
+      "price": {
+        "current": 35.2,
+        "original": 88,
+        "discountPercent": 60,
+        "currency": "CNY",
+        "isOnSale": true,
+        "discountExpiration": null,
+        "updatedAt": 1789393143879
+      },
+      "rating": {
+        "score": 6.5,
+        "positive": 65,
+        "desc": "Mixed",
+        "total": 359,
+        "updatedAt": 1789393144482
+      },
+      "historicalLow": {
+        "price": 35.2,
+        "count": 10,
+        "confidence": "A",
+        "source": "ITAD(国区)",
+        "updatedAt": 1789393146194,
+        "currency": "CNY"
+      },
+      "targetPrice": null,
+      "note": "",
+      "dlcList": [
+        {
+          "appid": 2692240,
+          "name": "Brothers: A Tale of Two Sons Remake - Soundtrack",
+          "price": 22,
+          "shortDescription": "体验《兄弟 - 双子传说重置版》的动人世界，享受全新的游戏原声音乐。在 Gustaf Grefberg 原版配乐的基础上，该令人惊叹的原声带收录了 Daniele Carmosino 和 Christof Unterberger 编创的 25 首曲目。",
+          "description": "体验《兄弟 - 双子传说重置版》的动人世界，享受全新的游戏原声音乐。在 Gustaf Grefberg 原版配乐的基础上，该令人惊叹的原声带收录了 Daniele Carmosino 和 Christof Unterberger 编创的 25 首曲目。",
+          "kind": "原声",
+          "type": "music",
+          "originalDescription": "体验《兄弟 - 双子传说重置版》的动人世界，享受全新的游戏原声音乐。在 Gustaf Grefberg 原版配乐的基础上，该令人惊叹的原声带收录了 Daniele Carmosino 和 Christof Unterberger 编创的 25 首曲目。",
+          "translated": false,
+          "updatedAt": 1789393147540
+        }
+      ],
+      "details": {
+        "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2153350/header.jpg?t=1727773982",
+        "isFree": false,
+        "type": "game",
+        "releaseDate": "2024 年 2 月 28 日",
+        "releaseTs": null,
+        "developers": [
+          "Avantgarden SRL"
+        ],
+        "publishers": [
+          "505 Games"
+        ],
+        "platforms": [
+          "Windows"
+        ],
+        "categories": [
+          "单人",
+          "多人",
+          "合作",
+          "同屏/分屏合作",
+          "同屏/分屏",
+          "Steam 成就",
+          "完全支持控制器",
+          "推荐使用手柄",
+          "Steam 云",
+          "远程同乐",
+          "家庭共享"
+        ],
+        "genres": [
+          "冒险",
+          "休闲"
+        ],
+        "tags": [
+          "冒险",
+          "休闲"
+        ],
+        "featureTags": [
+          "单人",
+          "多人",
+          "联机合作",
+          "成就",
+          "云存档",
+          "手柄支持",
+          "家庭共享"
+        ],
+        "metacritic": 79,
+        "chineseSupport": true,
+        "reviewTotal": 994,
+        "description": "引领两兄弟展开史诗般的奇幻之旅，去探索，去冒险，并享受全方位升级的最新图形技术、性能表现和游戏玩法。 可单人游玩，也可以与朋友本地合作。 一次冒险，一生难忘。",
+        "descriptionOriginal": "引领两兄弟展开史诗般的奇幻之旅，去探索，去冒险，并享受全方位升级的最新图形技术、性能表现和游戏玩法。 可单人游玩，也可以与朋友本地合作。 一次冒险，一生难忘。",
+        "descriptionTranslated": false
+      },
+      "createdAt": 1789393144482,
+      "updatedAt": 1789393147540
+    },
+    {
+      "appid": 3528450,
+      "name": "纸房子",
+      "originalName": "纸房子",
+      "price": {
+        "current": 18.2,
+        "original": 26,
+        "discountPercent": 30,
+        "currency": "CNY",
+        "isOnSale": true,
+        "discountExpiration": null,
+        "updatedAt": 1789393041513
+      },
+      "rating": {
+        "score": 9.8,
+        "positive": 95,
+        "desc": "Very Positive",
+        "total": 10250,
+        "updatedAt": 1789393042115
+      },
+      "historicalLow": {
+        "price": 18.2,
+        "count": 5,
+        "confidence": "A",
+        "source": "ITAD(国区)",
+        "updatedAt": 1789393043822,
+        "currency": "CNY"
+      },
+      "targetPrice": null,
+      "note": "",
+      "dlcList": [],
+      "details": {
+        "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3528450/d93ac49d7bf82d6d95b6f16a3fc2872da91a1438/header_schinese.jpg?t=1788832631",
+        "isFree": false,
+        "type": "game",
+        "releaseDate": "2025 年 8 月 18 日",
+        "releaseTs": null,
+        "developers": [
+          "开心茶房"
+        ],
+        "publishers": [
+          "Tailtone Games",
+          "开心茶房"
+        ],
+        "platforms": [
+          "Windows",
+          "macOS"
+        ],
+        "categories": [
+          "单人",
+          "Steam 成就",
+          "家庭共享"
+        ],
+        "genres": [
+          "休闲",
+          "独立",
+          "角色扮演",
+          "模拟"
+        ],
+        "tags": [
+          "休闲",
+          "独立",
+          "角色扮演",
+          "模拟"
+        ],
+        "featureTags": [
+          "单人",
+          "成就",
+          "家庭共享"
+        ],
+        "metacritic": null,
+        "chineseSupport": true,
+        "reviewTotal": 9873,
+        "description": "这是一部以中式校园为背景的视觉小说。离开的好友、模糊的恋情、纷乱的人际关系，以及不那么美满的家庭，是青春期的忧郁还是令人难以承受的痛苦？您将以主角赵颖的视角去体验她的高中生活，帮她做出选择，看见所有可能。",
+        "descriptionOriginal": "这是一部以中式校园为背景的视觉小说。离开的好友、模糊的恋情、纷乱的人际关系，以及不那么美满的家庭，是青春期的忧郁还是令人难以承受的痛苦？您将以主角赵颖的视角去体验她的高中生活，帮她做出选择，看见所有可能。",
+        "descriptionTranslated": false
+      },
+      "createdAt": 1789393042116,
+      "updatedAt": 1789393042116
+    },
+    {
+      "appid": 1029690,
+      "name": "狙击精英5",
+      "originalName": "狙击精英5",
+      "price": {
+        "current": 13.8,
+        "original": 138,
+        "discountPercent": 90,
+        "currency": "CNY",
+        "isOnSale": true,
+        "discountExpiration": null,
+        "updatedAt": 1789393017665
+      },
+      "rating": {
+        "score": 7.5,
+        "positive": 72,
+        "desc": "Mostly Positive",
+        "total": 4165,
+        "updatedAt": 1789393018475
+      },
+      "historicalLow": {
+        "price": 13.8,
+        "count": 5,
+        "confidence": "A",
+        "source": "ITAD(国区)",
+        "updatedAt": 1789393020191,
+        "currency": "CNY"
+      },
+      "targetPrice": null,
+      "note": "",
+      "dlcList": [
+        {
+          "appid": 2273730,
+          "name": "Sniper Elite 5 Season Pass Two",
+          "price": 21.6,
+          "shortDescription": "Season Pass Two contains: 2 Campaign Missions 6 Weapon Packs 2 Weapon Skin Packs 4 Character Skins",
+          "description": "Season Pass Two contains: 2 Campaign Missions 6 Weapon Packs 2 Weapon Skin Packs 4 Character Skins",
+          "kind": "季票",
+          "type": "dlc",
+          "originalDescription": "Season Pass Two contains: 2 Campaign Missions 6 Weapon Packs 2 Weapon Skin Packs 4 Character Skins",
+          "translated": false,
+          "updatedAt": 1789393022588
+        },
+        {
+          "appid": 1875170,
+          "name": "Sniper Elite 5 Season Pass One",
+          "price": 20.6,
+          "shortDescription": "Continue the fight with Sniper Elite 5 Season Pass One! Return to the frontline in a new expansive two mission campaign, arm yourself with a bolstered cache of authentic World War II weapons and outfit your sniper with new character and weapon skins.",
+          "description": "Continue the fight with Sniper Elite 5 Season Pass One! Return to the frontline in a new expansive two mission campaign, arm yourself with a bolstered cache of …",
+          "kind": "季票",
+          "type": "dlc",
+          "originalDescription": "Continue the fight with Sniper Elite 5 Season Pass One! Return to the frontline in a new expansive two mission campaign, arm yourself with a bolstered cache of authentic World War II weapons and outfit your sniper with new character and weapon skins.",
+          "translated": false,
+          "updatedAt": 1789393024490
+        },
+        {
+          "appid": 2167703,
+          "name": "Sniper Elite 5: Kraken Awakes Mission, Weapon and Skin Pack",
+          "price": 9.2,
+          "shortDescription": "The final content drop for Season Pass Two delivers an incredible new mission called Kraken Awakes that brings the story of Sniper Elite 5 to a close.",
+          "description": "The final content drop for Season Pass Two delivers an incredible new mission called Kraken Awakes that brings the story of Sniper Elite 5 to a close.",
+          "kind": "季票",
+          "type": "dlc",
+          "originalDescription": "The final content drop for Season Pass Two delivers an incredible new mission called Kraken Awakes that brings the story of Sniper Elite 5 to a close.",
+          "translated": false,
+          "updatedAt": 1789393025914
+        },
+        {
+          "appid": 2167702,
+          "name": "Sniper Elite 5: Saboteur Weapon and Skin Pack",
+          "price": 8.4,
+          "shortDescription": "Two new weapons and a Liberator character skin for Karl await in the latest content drop from Season Pass Two.",
+          "description": "Two new weapons and a Liberator character skin for Karl await in the latest content drop from Season Pass Two.",
+          "kind": "季票",
+          "type": "dlc",
+          "originalDescription": "Two new weapons and a Liberator character skin for Karl await in the latest content drop from Season Pass Two.",
+          "translated": false,
+          "updatedAt": 1789393027617
+        },
+        {
+          "appid": 2167701,
+          "name": "Sniper Elite 5: Death From Above Weapon and Skin Pack",
+          "price": 8.4,
+          "shortDescription": "Death From Above is the second content pack in Season Pass Two bringing a new rifle in the shape of the Pedersen, a weapon skin and two character skins.",
+          "description": "Death From Above is the second content pack in Season Pass Two bringing a new rifle in the shape of the Pedersen, a weapon skin and two character skins.",
+          "kind": "季票",
+          "type": "dlc",
+          "originalDescription": "Death From Above is the second content pack in Season Pass Two bringing a new rifle in the shape of the Pedersen, a weapon skin and two character skins.",
+          "translated": false,
+          "updatedAt": 1789393029058
+        },
+        {
+          "appid": 1724941,
+          "name": "Sniper Elite 5: Rough Landing Mission and Weapon Pack",
+          "price": 11.6,
+          "shortDescription": "Included in this pack: • Rough Landing Mission • Mosin Nagant rifle • Sjogren shotgun",
+          "description": "Included in this pack: • Rough Landing Mission • Mosin Nagant rifle • Sjogren shotgun",
+          "kind": "道具包",
+          "type": "dlc",
+          "originalDescription": "Included in this pack: • Rough Landing Mission • Mosin Nagant rifle • Sjogren shotgun",
+          "translated": false,
+          "updatedAt": 1789393030677
+        },
+        {
+          "appid": 2167700,
+          "name": "Sniper Elite 5: Trench Warfare Weapon Pack",
+          "price": 0,
+          "shortDescription": "IIncluded in this pack: • Carl Gustav M/1945 SMG • Trench Gun shotgun • Double 1866 pistol",
+          "description": "IIncluded in this pack: • Carl Gustav M/1945 SMG • Trench Gun shotgun • Double 1866 pistol",
+          "kind": "道具包",
+          "type": "dlc",
+          "originalDescription": "IIncluded in this pack: • Carl Gustav M/1945 SMG • Trench Gun shotgun • Double 1866 pistol",
+          "translated": false,
+          "updatedAt": 1789393032159
+        },
+        {
+          "appid": 2228230,
+          "name": "Sniper Elite 5: Valentine's Weapon Skin Pack",
+          "price": 0,
+          "shortDescription": "Celebrate Valentine’s Day by giving your M1911 the look of love with this free Cherry Hunter Weapon Skin. Download now for FREE to share the love.",
+          "description": "Celebrate Valentine’s Day by giving your M1911 the look of love with this free Cherry Hunter Weapon Skin. Download now for FREE to share the love.",
+          "kind": "外观道具",
+          "type": "dlc",
+          "originalDescription": "Celebrate Valentine’s Day by giving your M1911 the look of love with this free Cherry Hunter Weapon Skin. Download now for FREE to share the love.",
+          "translated": false,
+          "updatedAt": 1789393033655
+        },
+        {
+          "appid": 2161920,
+          "name": "Sniper Elite 5: Winter Weapons Skin Pack",
+          "price": 0,
+          "shortDescription": "Go frosty with the new FREE Winter Weapons Skin Pack for Sniper Elite 5.",
+          "description": "Go frosty with the new FREE Winter Weapons Skin Pack for Sniper Elite 5.",
+          "kind": "原声",
+          "type": "dlc",
+          "originalDescription": "Go frosty with the new FREE Winter Weapons Skin Pack for Sniper Elite 5.",
+          "translated": false,
+          "updatedAt": 1789393035413
+        },
+        {
+          "appid": 1724942,
+          "name": "Sniper Elite 5: Conqueror Mission, Weapon and Skin Pack",
+          "price": 8.4,
+          "shortDescription": "Conqueror, the thrilling new mission for Sniper Elite 5, takes you to the town of Falaise as the retreating Nazi forces have dug in to make their last stand at the iconic castle, once occupied by William the Conqueror.",
+          "description": "Conqueror, the thrilling new mission for Sniper Elite 5, takes you to the town of Falaise as the retreating Nazi forces have dug in to make their last stand at …",
+          "kind": "外观道具",
+          "type": "dlc",
+          "originalDescription": "Conqueror, the thrilling new mission for Sniper Elite 5, takes you to the town of Falaise as the retreating Nazi forces have dug in to make their last stand at the iconic castle, once occupied by William the Conqueror.",
+          "translated": false,
+          "updatedAt": 1789393037515
+        },
+        {
+          "appid": 2053022,
+          "name": "Sniper Elite 5: Airborne Elite Weapon and Skin Pack",
+          "price": 0,
+          "shortDescription": "Rebellion is celebrating it’s 30th birthday and to celebrate we are giving you the Airborne Elite Pack for free.",
+          "description": "Rebellion is celebrating it’s 30th birthday and to celebrate we are giving you the Airborne Elite Pack for free.",
+          "kind": "外观道具",
+          "type": "dlc",
+          "originalDescription": "Rebellion is celebrating it’s 30th birthday and to celebrate we are giving you the Airborne Elite Pack for free.",
+          "translated": false,
+          "updatedAt": 1789393039077
+        },
+        {
+          "appid": 2053021,
+          "name": "Sniper Elite 5: Up Close and Personal Weapon and Skin Pack",
+          "price": 7.8,
+          "shortDescription": "Prepare for close confrontation with a new character look and bolstered artillery of heavy fire weapons.",
+          "description": "Prepare for close confrontation with a new character look and bolstered artillery of heavy fire weapons.",
+          "kind": "外观道具",
+          "type": "dlc",
+          "originalDescription": "Prepare for close confrontation with a new character look and bolstered artillery of heavy fire weapons.",
+          "translated": false,
+          "updatedAt": 1789393040446
+        },
+        {
+          "appid": 2053020,
+          "name": "Sniper Elite 5 : Concealed Target Weapon and Skin Pack",
+          "price": 7.4,
+          "shortDescription": "Hunt the enemy and strike from the shadows with an expanded cache of camouflage gear and a stealthy pistol at your side.",
+          "description": "Hunt the enemy and strike from the shadows with an expanded cache of camouflage gear and a stealthy pistol at your side.",
+          "kind": "外观道具",
+          "type": "dlc",
+          "originalDescription": "Hunt the enemy and strike from the shadows with an expanded cache of camouflage gear and a stealthy pistol at your side.",
+          "translated": false,
+          "updatedAt": 1789393042802
+        },
+        {
+          "appid": 1724940,
+          "name": "Sniper Elite 5 : Landing Force Mission and Weapon Pack",
+          "price": 10,
+          "shortDescription": "Deploy to the South of France where enemy forces have commandeered an island off the coast of Marseille to house a gargantuan gun battery.",
+          "description": "Deploy to the South of France where enemy forces have commandeered an island off the coast of Marseille to house a gargantuan gun battery.",
+          "kind": "道具包",
+          "type": "dlc",
+          "originalDescription": "Deploy to the South of France where enemy forces have commandeered an island off the coast of Marseille to house a gargantuan gun battery.",
+          "translated": false,
+          "updatedAt": 1789393044971
+        },
+        {
+          "appid": 1872750,
+          "name": "Sniper Elite 5: Target Führer - Wolf Mountain",
+          "price": 5.6,
+          "shortDescription": "Eliminate “Herr Wolf” by infiltrating the Berghof, Hitler’s private mountain retreat in the Bavarian Alps. Enlisted as part of the British assassination plot Operation Foxley, it is down to you to put an end to the Nazi leader’s reign of terror… by any means necessary.",
+          "description": "Eliminate “Herr Wolf” by infiltrating the Berghof, Hitler’s private mountain retreat in the Bavarian Alps. Enlisted as part of the British assassination plot Op…",
+          "kind": "其他",
+          "type": "dlc",
+          "originalDescription": "Eliminate “Herr Wolf” by infiltrating the Berghof, Hitler’s private mountain retreat in the Bavarian Alps. Enlisted as part of the British assassination plot Operation Foxley, it is down to you to put an end to the Nazi leader’s reign of terror… by any means necessary.",
+          "translated": false,
+          "updatedAt": 1789393047087
+        }
+      ],
+      "details": {
+        "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1029690/header_schinese.jpg?t=1770633150",
+        "isFree": false,
+        "type": "game",
+        "releaseDate": "2022 年 5 月 25 日",
+        "releaseTs": null,
+        "developers": [
+          "Rebellion"
+        ],
+        "publishers": [
+          "Rebellion"
+        ],
+        "platforms": [
+          "Windows"
+        ],
+        "categories": [
+          "单人",
+          "多人",
+          "玩家对战",
+          "线上玩家对战",
+          "合作",
+          "在线合作",
+          "跨平台多人",
+          "Steam 成就",
+          "Steam 集换式卡牌",
+          "应用内购买",
+          "可调整文字大小",
+          "视角舒适度",
+          "可选颜色",
+          "可调整难度",
+          "可以仅用键盘",
+          "无需应对快速反应事件",
+          "DUALSHOCK 控制器支持",
+          "DUALSHOCK 控制器支持",
+          "DualSense 控制器支持",
+          "DualSense 控制器支持",
+          "随时保存",
+          "字幕选项",
+          "部分支持控制器",
+          "Steam 云",
+          "家庭共享"
+        ],
+        "genres": [
+          "动作",
+          "冒险"
+        ],
+        "tags": [
+          "动作",
+          "冒险"
+        ],
+        "featureTags": [
+          "单人",
+          "多人",
+          "联机合作",
+          "在线对战",
+          "成就",
+          "集换式卡牌",
+          "云存档",
+          "家庭共享"
+        ],
+        "metacritic": 79,
+        "chineseSupport": true,
+        "reviewTotal": 24722,
+        "description": "屡获殊荣的《狙击精英》系列游戏再度回归，这一次故事发生在1944年的法国，卡尔·费尔伯恩正在努力揭露克拉肯计划。转战于多张沉浸感十足的地图，奋力阻遏纳粹战争机器，逼真的狙击场景和效果增强的击杀镜头独具一格，将让你体验到前所未有的出色观感。",
+        "descriptionOriginal": "屡获殊荣的《狙击精英》系列游戏再度回归，这一次故事发生在1944年的法国，卡尔·费尔伯恩正在努力揭露克拉肯计划。转战于多张沉浸感十足的地图，奋力阻遏纳粹战争机器，逼真的狙击场景和效果增强的击杀镜头独具一格，将让你体验到前所未有的出色观感。",
+        "descriptionTranslated": false
+      },
+      "createdAt": 1789393018475,
+      "updatedAt": 1789393047087
+    },
+    {
+      "appid": 1178830,
+      "name": "光明记忆：无限",
+      "originalName": "光明记忆：无限",
+      "price": {
+        "current": 24,
+        "original": 48,
+        "discountPercent": 50,
+        "currency": "CNY",
+        "isOnSale": true,
+        "discountExpiration": null,
+        "updatedAt": 1789393001687
+      },
+      "rating": {
+        "score": 9.6,
+        "positive": 93,
+        "desc": "Very Positive",
+        "total": 29611,
+        "updatedAt": 1789393002188
+      },
+      "historicalLow": {
+        "price": 24,
+        "count": 18,
+        "confidence": "A",
+        "source": "ITAD(国区)",
+        "updatedAt": 1789393004014,
+        "currency": "CNY"
+      },
+      "targetPrice": null,
+      "note": "",
+      "dlcList": [
+        {
+          "appid": 2218530,
+          "name": "《光明记忆：无限》DLC - 赛博兔",
+          "price": 4.32,
+          "shortDescription": "《光明记忆：无限》DLC - 赛博兔",
+          "description": "《光明记忆：无限》DLC - 赛博兔",
+          "kind": "其他",
+          "type": "dlc",
+          "originalDescription": "《光明记忆：无限》DLC - 赛博兔",
+          "translated": false,
+          "updatedAt": 1789393005942
+        },
+        {
+          "appid": 2218531,
+          "name": "《光明记忆：无限》DLC - 学院兔",
+          "price": 4.32,
+          "shortDescription": "《光明记忆：无限》DLC - 学院兔",
+          "description": "《光明记忆：无限》DLC - 学院兔",
+          "kind": "其他",
+          "type": "dlc",
+          "originalDescription": "《光明记忆：无限》DLC - 学院兔",
+          "translated": false,
+          "updatedAt": 1789393007074
+        },
+        {
+          "appid": 1870120,
+          "name": "《光明记忆：无限》DLC - 新年旗袍套装",
+          "price": 5.6,
+          "shortDescription": "《光明记忆：无限》新年旗袍皮肤套装",
+          "description": "《光明记忆：无限》新年旗袍皮肤套装",
+          "kind": "其他",
+          "type": "dlc",
+          "originalDescription": "《光明记忆：无限》新年旗袍皮肤套装",
+          "translated": false,
+          "updatedAt": 1789393008437
+        },
+        {
+          "appid": 1870121,
+          "name": "《光明记忆：无限》DLC - 青花旗袍套装",
+          "price": 5.6,
+          "shortDescription": "《光明记忆：无限》青花旗袍皮肤套装",
+          "description": "《光明记忆：无限》青花旗袍皮肤套装",
+          "kind": "其他",
+          "type": "dlc",
+          "originalDescription": "《光明记忆：无限》青花旗袍皮肤套装",
+          "translated": false,
+          "updatedAt": 1789393009818
+        },
+        {
+          "appid": 1554690,
+          "name": "《光明记忆：无限》DLC - 紧身牛仔裤套装",
+          "price": 4.1,
+          "shortDescription": "《光明记忆：无限》紧身牛仔裤套装",
+          "description": "《光明记忆：无限》紧身牛仔裤套装",
+          "kind": "其他",
+          "type": "dlc",
+          "originalDescription": "《光明记忆：无限》紧身牛仔裤套装",
+          "translated": false,
+          "updatedAt": 1789393010837
+        },
+        {
+          "appid": 1780970,
+          "name": "《光明记忆：无限》DLC - 活力四射套装",
+          "price": 4.1,
+          "shortDescription": "《光明记忆：无限》活力四射套装",
+          "description": "《光明记忆：无限》活力四射套装",
+          "kind": "其他",
+          "type": "dlc",
+          "originalDescription": "《光明记忆：无限》活力四射套装",
+          "translated": false,
+          "updatedAt": 1789393012040
+        },
+        {
+          "appid": 1781000,
+          "name": "《光明记忆：无限》DLC - 青春魅力套装",
+          "price": 5.6,
+          "shortDescription": "《光明记忆：无限》DLC - 青春魅力套装",
+          "description": "《光明记忆：无限》DLC - 青春魅力套装",
+          "kind": "其他",
+          "type": "dlc",
+          "originalDescription": "《光明记忆：无限》DLC - 青春魅力套装",
+          "translated": false,
+          "updatedAt": 1789393013252
+        },
+        {
+          "appid": 1781070,
+          "name": "《光明记忆：无限》DLC - 黑丝猫咪套装",
+          "price": 5.6,
+          "shortDescription": "《光明记忆：无限》DLC - 黑丝猫咪套装",
+          "description": "《光明记忆：无限》DLC - 黑丝猫咪套装",
+          "kind": "其他",
+          "type": "dlc",
+          "originalDescription": "《光明记忆：无限》DLC - 黑丝猫咪套装",
+          "translated": false,
+          "updatedAt": 1789393013855
+        },
+        {
+          "appid": 1781100,
+          "name": "《光明记忆：无限》DLC - 假日泳装套装",
+          "price": 5.6,
+          "shortDescription": "《光明记忆：无限》DLC - 假日泳装",
+          "description": "《光明记忆：无限》DLC - 假日泳装",
+          "kind": "其他",
+          "type": "dlc",
+          "originalDescription": "《光明记忆：无限》DLC - 假日泳装",
+          "translated": false,
+          "updatedAt": 1789393015057
+        },
+        {
+          "appid": 1781130,
+          "name": "《光明记忆：无限》原声大碟",
+          "price": 14,
+          "shortDescription": "由《战神3》作曲家 Jeff Rona 巨献《光明记忆：无限》原生音乐大碟",
+          "description": "由《战神3》作曲家 Jeff Rona 巨献《光明记忆：无限》原生音乐大碟",
+          "kind": "原声",
+          "type": "music",
+          "originalDescription": "由《战神3》作曲家 Jeff Rona 巨献《光明记忆：无限》原生音乐大碟",
+          "translated": false,
+          "updatedAt": 1789393015702
+        }
+      ],
+      "details": {
+        "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1178830/header_schinese.jpg?t=1734415707",
+        "isFree": false,
+        "type": "game",
+        "releaseDate": "2021 年 11 月 11 日",
+        "releaseTs": null,
+        "developers": [
+          "FYQD-Studio"
+        ],
+        "publishers": [
+          "FYQD-Studio",
+          "PLAYISM"
+        ],
+        "platforms": [
+          "Windows"
+        ],
+        "categories": [
+          "单人",
+          "Steam 成就",
+          "部分支持控制器",
+          "Steam 云",
+          "家庭共享"
+        ],
+        "genres": [
+          "动作",
+          "独立"
+        ],
+        "tags": [
+          "动作",
+          "独立"
+        ],
+        "featureTags": [
+          "单人",
+          "成就",
+          "云存档",
+          "家庭共享"
+        ],
+        "metacritic": null,
+        "chineseSupport": true,
+        "reviewTotal": 36223,
+        "description": "《光明记忆：无限》国内游戏开发者&quot;飞燕群岛&quot;最新作品。2036年世界各地的天空上突然出现了异象，一个巨型的黑洞出现天空中吞噬着山脉和古建筑，科学家们无法解释这些现象，事件背后牵连着世界的存亡。",
+        "descriptionOriginal": "《光明记忆：无限》国内游戏开发者&quot;飞燕群岛&quot;最新作品。2036年世界各地的天空上突然出现了异象，一个巨型的黑洞出现天空中吞噬着山脉和古建筑，科学家们无法解释这些现象，事件背后牵连着世界的存亡。",
+        "descriptionTranslated": false
+      },
+      "createdAt": 1789393002188,
+      "updatedAt": 1789393015702
+    },
+    {
+      "appid": 319910,
+      "name": "Trine 3: The Artifacts of Power",
+      "originalName": "Trine 3: The Artifacts of Power",
+      "price": {
+        "current": 16.19,
+        "original": 80.96,
+        "discountPercent": 80,
+        "currency": "CNY",
+        "isOnSale": true,
+        "discountExpiration": null,
+        "updatedAt": 1789392989540
+      },
+      "rating": {
+        "score": 6.5,
+        "positive": 69,
+        "desc": "Mixed",
+        "total": 1667,
+        "updatedAt": 1789392991099
+      },
+      "historicalLow": {
+        "price": 16.19,
+        "count": 14,
+        "confidence": "A",
+        "source": "ITAD(国区)",
+        "updatedAt": 1789392993071,
+        "currency": "CNY"
+      },
+      "targetPrice": null,
+      "note": "",
+      "dlcList": [
+        {
+          "appid": 1227410,
+          "name": "Trine 3: The Artifacts of Power Soundtrack",
+          "price": 8.4,
+          "shortDescription": "Original Soundtrack for Trine 3: The Artifacts of Power, composed by award-winning Ari Pulkkinen.",
+          "description": "Original Soundtrack for Trine 3: The Artifacts of Power, composed by award-winning Ari Pulkkinen.",
+          "kind": "原声",
+          "type": "music",
+          "originalDescription": "Original Soundtrack for Trine 3: The Artifacts of Power, composed by award-winning Ari Pulkkinen.",
+          "translated": false,
+          "updatedAt": 1789392995654
+        }
+      ],
+      "details": {
+        "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/319910/header.jpg?t=1789391033",
+        "isFree": false,
+        "type": "game",
+        "releaseDate": "2015 年 8 月 20 日",
+        "releaseTs": null,
+        "developers": [
+          "Frozenbyte"
+        ],
+        "publishers": [
+          "Frozenbyte"
+        ],
+        "platforms": [
+          "Windows",
+          "macOS",
+          "Linux"
+        ],
+        "categories": [
+          "单人",
+          "多人",
+          "合作",
+          "在线合作",
+          "同屏/分屏合作",
+          "同屏/分屏",
+          "Steam 成就",
+          "完全支持控制器",
+          "Steam 集换式卡牌",
+          "Steam 创意工坊",
+          "自定义音量控制",
+          "可调整难度",
+          "立体声",
+          "Steam 云",
+          "包含关卡编辑器",
+          "在电视上远程畅玩",
+          "远程同乐",
+          "家庭共享"
+        ],
+        "genres": [
+          "动作",
+          "冒险",
+          "独立",
+          "角色扮演"
+        ],
+        "tags": [
+          "动作",
+          "冒险",
+          "独立",
+          "角色扮演"
+        ],
+        "featureTags": [
+          "单人",
+          "多人",
+          "联机合作",
+          "成就",
+          "集换式卡牌",
+          "云存档",
+          "创意工坊",
+          "关卡编辑",
+          "家庭共享"
+        ],
+        "metacritic": null,
+        "chineseSupport": true,
+        "reviewTotal": 7300,
+        "description": "《三位一体 3: 权力圣器》是一款集动作、谜题和探险于一身的平台游戏，是获奖无数的《三位一体》和《三位一体 2》的续集。在全新探险中，和三位英雄重新团聚，并体验首次应用全 3D 的游戏模式！",
+        "descriptionOriginal": "《三位一体 3: 权力圣器》是一款集动作、谜题和探险于一身的平台游戏，是获奖无数的《三位一体》和《三位一体 2》的续集。在全新探险中，和三位英雄重新团聚，并体验首次应用全 3D 的游戏模式！",
+        "descriptionTranslated": false
+      },
+      "createdAt": 1789392991099,
+      "updatedAt": 1789392995654
+    },
+    {
+      "appid": 2947440,
+      "name": "SILENT HILL f",
+      "originalName": "SILENT HILL f",
+      "price": {
+        "current": 149,
+        "original": 298,
+        "discountPercent": 50,
+        "currency": "CNY",
+        "isOnSale": true,
+        "discountExpiration": null,
+        "updatedAt": 1789392971994
+      },
+      "rating": {
+        "score": 7.5,
+        "positive": 77,
+        "desc": "Mostly Positive",
+        "total": 3230,
+        "updatedAt": 1789392974172
+      },
+      "historicalLow": {
+        "price": 149,
+        "count": 1,
+        "confidence": "A",
+        "source": "ITAD(国区)",
+        "updatedAt": 1789392975870,
+        "currency": "CNY"
+      },
+      "targetPrice": null,
+      "note": "",
+      "dlcList": [
+        {
+          "appid": 3516200,
+          "name": "SILENT HILL f - Digital Deluxe Upgrade",
+          "price": 84,
+          "shortDescription": "本商品为《SILENT HILL f》的Deluxe Upgrade。",
+          "description": "本商品为《SILENT HILL f》的Deluxe Upgrade。",
+          "kind": "版本升级包",
+          "type": "dlc",
+          "originalDescription": "本商品为《SILENT HILL f》的Deluxe Upgrade。",
+          "translated": false,
+          "updatedAt": 1789392977106
+        }
+      ],
+      "details": {
+        "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2947440/7e5d923ac622bd1775ebc9b5d4b5b0a24bf5ed40/header.jpg?t=1770169624",
+        "isFree": false,
+        "type": "game",
+        "releaseDate": "2025 年 9 月 24 日",
+        "releaseTs": null,
+        "developers": [
+          "NeoBards Entertainment Ltd."
+        ],
+        "publishers": [
+          "KONAMI"
+        ],
+        "platforms": [
+          "Windows"
+        ],
+        "categories": [
+          "单人",
+          "Steam 成就",
+          "完全支持控制器",
+          "可选颜色",
+          "自定义音量控制",
+          "推荐使用手柄",
+          "无需应对快速反应事件",
+          "DUALSHOCK 控制器支持",
+          "DualSense 控制器支持",
+          "DualSense 控制器支持",
+          "立体声",
+          "字幕选项",
+          "环绕声",
+          "Steam 云",
+          "家庭共享"
+        ],
+        "genres": [
+          "动作",
+          "冒险"
+        ],
+        "tags": [
+          "动作",
+          "冒险"
+        ],
+        "featureTags": [
+          "单人",
+          "成就",
+          "云存档",
+          "手柄支持",
+          "家庭共享"
+        ],
+        "metacritic": null,
+        "chineseSupport": true,
+        "reviewTotal": 19015,
+        "description": "主人公是居住在群山环绕的日本乡村小镇·戎之丘的高中生·深水雏子。 她的日常生活因为神秘白色“怪物”的出现突然崩塌。 她一边在面目全非的熟悉小镇中探索、战斗、解谜，一边迎来属于她的“结局”。",
+        "descriptionOriginal": "主人公是居住在群山环绕的日本乡村小镇·戎之丘的高中生·深水雏子。 她的日常生活因为神秘白色“怪物”的出现突然崩塌。 她一边在面目全非的熟悉小镇中探索、战斗、解谜，一边迎来属于她的“结局”。",
+        "descriptionTranslated": false
+      },
+      "createdAt": 1789392974172,
+      "updatedAt": 1789392977106
+    },
+    {
+      "appid": 2124490,
+      "name": "SILENT HILL 2",
+      "originalName": "SILENT HILL 2",
+      "price": {
+        "current": 119.2,
+        "original": 298,
+        "discountPercent": 60,
+        "currency": "CNY",
+        "isOnSale": true,
+        "discountExpiration": null,
+        "updatedAt": 1789392913440
+      },
+      "rating": {
+        "score": 9.6,
+        "positive": 93,
+        "desc": "Very Positive",
+        "total": 4528,
+        "updatedAt": 1789392915340
+      },
+      "historicalLow": {
+        "price": 119.2,
+        "count": 1,
+        "confidence": "A",
+        "source": "ITAD(国区)",
+        "updatedAt": 1789392916771,
+        "currency": "CNY"
+      },
+      "targetPrice": null,
+      "note": "",
+      "dlcList": [],
+      "details": {
+        "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2124490/header.jpg?t=1744248682",
+        "isFree": false,
+        "type": "game",
+        "releaseDate": "2024 年 10 月 7 日",
+        "releaseTs": null,
+        "developers": [
+          "Bloober Team SA"
+        ],
+        "publishers": [
+          "KONAMI"
+        ],
+        "platforms": [
+          "Windows"
+        ],
+        "categories": [
+          "单人",
+          "Steam 成就",
+          "完全支持控制器",
+          "推荐使用手柄",
+          "DUALSHOCK 控制器支持",
+          "DualSense 控制器支持",
+          "DualSense 控制器支持",
+          "Steam 云",
+          "家庭共享"
+        ],
+        "genres": [
+          "动作",
+          "冒险"
+        ],
+        "tags": [
+          "动作",
+          "冒险"
+        ],
+        "featureTags": [
+          "单人",
+          "成就",
+          "云存档",
+          "手柄支持",
+          "家庭共享"
+        ],
+        "metacritic": null,
+        "chineseSupport": true,
+        "reviewTotal": 43270,
+        "description": "收到已过世的妻子玛丽寄来的信，詹姆斯借机来到充满回忆的城镇「寂静岭」。 但是市街却深锁于浓雾之中，变成诡异生物徘徊的鬼城。 和怪物战斗并解谜的同时，在城镇中探索妻子蛛丝马迹的『SILENT HILL 2』重制版作品。",
+        "descriptionOriginal": "收到已过世的妻子玛丽寄来的信，詹姆斯借机来到充满回忆的城镇「寂静岭」。 但是市街却深锁于浓雾之中，变成诡异生物徘徊的鬼城。 和怪物战斗并解谜的同时，在城镇中探索妻子蛛丝马迹的『SILENT HILL 2』重制版作品。",
+        "descriptionTranslated": false
+      },
+      "createdAt": 1789392915340,
+      "updatedAt": 1789392915340
+    },
+    {
+      "appid": 3105440,
+      "name": "魔法门之英雄无敌：上古纪元 Heroes of Might and Magic: Olden Era",
+      "originalName": "魔法门之英雄无敌：上古纪元 Heroes of Might and Magic: Olden Era",
+      "price": {
+        "current": 111.75,
+        "original": 149,
+        "discountPercent": 25,
+        "currency": "CNY",
+        "isOnSale": true,
+        "discountExpiration": null,
+        "updatedAt": 1789392905248
+      },
+      "rating": {
+        "score": 8.4,
+        "positive": 84,
+        "desc": "Very Positive",
+        "total": 3234,
+        "updatedAt": 1789392905832
+      },
+      "historicalLow": {
+        "price": 111.75,
+        "count": 4,
+        "confidence": "A",
+        "source": "ITAD(国区)",
+        "updatedAt": 1789392907533,
+        "currency": "CNY"
+      },
+      "targetPrice": null,
+      "note": "",
+      "dlcList": [],
+      "details": {
+        "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3105440/42c1117d97f61cb09b856bd1f7db362a160cd0d2/header_schinese.jpg?t=1788579886",
+        "isFree": false,
+        "type": "game",
+        "releaseDate": "2026 年 4 月 30 日",
+        "releaseTs": null,
+        "developers": [
+          "Unfrozen"
+        ],
+        "publishers": [
+          "Hooded Horse"
+        ],
+        "platforms": [
+          "Windows"
+        ],
+        "categories": [
+          "单人",
+          "多人",
+          "玩家对战",
+          "线上玩家对战",
+          "同屏/分屏玩家对战",
+          "同屏/分屏",
+          "Steam 成就",
+          "Steam 集换式卡牌",
+          "可选颜色",
+          "#category_contrast_controls",
+          "自定义音量控制",
+          "可调整难度",
+          "可以仅用鼠标",
+          "#category_playable_at_your_own_pace",
+          "无需应对快速反应事件",
+          "随时保存",
+          "环绕声",
+          "Steam 云",
+          "远程同乐",
+          "家庭共享"
+        ],
+        "genres": [
+          "角色扮演",
+          "策略",
+          "抢先体验"
+        ],
+        "tags": [
+          "角色扮演",
+          "策略",
+          "抢先体验"
+        ],
+        "featureTags": [
+          "单人",
+          "多人",
+          "在线对战",
+          "成就",
+          "集换式卡牌",
+          "云存档",
+          "家庭共享"
+        ],
+        "metacritic": null,
+        "chineseSupport": true,
+        "reviewTotal": 19196,
+        "description": "《魔法门之英雄无敌：上古纪元》是誉满全球的回合制策略经典《英雄无敌》系列的正统前传。集结浩荡大军，施展撼天动地的法术，在单人战役与多人对战中荡平群敌。",
+        "descriptionOriginal": "《魔法门之英雄无敌：上古纪元》是誉满全球的回合制策略经典《英雄无敌》系列的正统前传。集结浩荡大军，施展撼天动地的法术，在单人战役与多人对战中荡平群敌。",
+        "descriptionTranslated": false
+      },
+      "createdAt": 1789392905832,
+      "updatedAt": 1789392905832
+    },
+    {
+      "appid": 3768760,
+      "name": "007 初露锋芒",
+      "originalName": "007 初露锋芒",
+      "price": {
+        "current": 238.4,
+        "original": 298,
+        "discountPercent": 20,
+        "currency": "CNY",
+        "isOnSale": true,
+        "discountExpiration": null,
+        "updatedAt": 1789392896862
+      },
+      "rating": {
+        "score": 9.2,
+        "positive": 90,
+        "desc": "Very Positive",
+        "total": 7589,
+        "updatedAt": 1789392897440
+      },
+      "historicalLow": {
+        "price": 238.4,
+        "count": 1,
+        "confidence": "A",
+        "source": "ITAD(国区)",
+        "updatedAt": 1789392899137,
+        "currency": "CNY"
+      },
+      "targetPrice": null,
+      "note": "",
+      "dlcList": [
+        {
+          "appid": 3986520,
+          "name": "007 初露锋芒 - 豪华版升级",
+          "price": 64,
+          "shortDescription": "4 款全新服装搭配 4 款全新道具皮肤和一款全新武器皮肤，助你优雅完成任务，赢得名震全球的编号。",
+          "description": "4 款全新服装搭配 4 款全新道具皮肤和一款全新武器皮肤，助你优雅完成任务，赢得名震全球的编号。",
+          "kind": "版本升级包",
+          "type": "dlc",
+          "originalDescription": "4 款全新服装搭配 4 款全新道具皮肤和一款全新武器皮肤，助你优雅完成任务，赢得名震全球的编号。",
+          "translated": false,
+          "updatedAt": 1789392900567
+        }
+      ],
+      "details": {
+        "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3768760/6646220d04fce26fc441f589e8f98d66c9e33b9c/header_alt_assets_2.jpg?t=1788855872",
+        "isFree": false,
+        "type": "game",
+        "releaseDate": "2026 年 5 月 26 日",
+        "releaseTs": null,
+        "developers": [
+          "IO Interactive A/S"
+        ],
+        "publishers": [
+          "IO Interactive A/S"
+        ],
+        "platforms": [
+          "Windows"
+        ],
+        "categories": [
+          "单人",
+          "Steam 成就",
+          "完全支持控制器",
+          "视角舒适度",
+          "自定义音量控制",
+          "可调整难度",
+          "DualSense 控制器支持",
+          "DualSense 控制器支持",
+          "字幕选项",
+          "Steam 云",
+          "家庭共享"
+        ],
+        "genres": [
+          "动作",
+          "冒险"
+        ],
+        "tags": [
+          "动作",
+          "冒险"
+        ],
+        "featureTags": [
+          "单人",
+          "成就",
+          "云存档",
+          "家庭共享"
+        ],
+        "metacritic": 84,
+        "chineseSupport": true,
+        "reviewTotal": 32252,
+        "description": "赢得编号。007 初露锋芒 是IO Interactive出品的惊险刺激的间谍动作冒险游戏。跟随年轻、机智但偶尔鲁莽的詹姆斯·邦德的脚步，他是军情六处训练项目中的新兵，一起探索这位世界最著名间谍的起源故事。",
+        "descriptionOriginal": "赢得编号。007 初露锋芒 是IO Interactive出品的惊险刺激的间谍动作冒险游戏。跟随年轻、机智但偶尔鲁莽的詹姆斯·邦德的脚步，他是军情六处训练项目中的新兵，一起探索这位世界最著名间谍的起源故事。",
+        "descriptionTranslated": false
+      },
+      "createdAt": 1789392897440,
+      "updatedAt": 1789392900567
+    },
+    {
+      "appid": 378540,
+      "name": "The Surge",
+      "originalName": "The Surge",
+      "price": {
+        "current": 8.32,
+        "original": 64,
+        "discountPercent": 87,
+        "currency": "CNY",
+        "isOnSale": true,
+        "discountExpiration": null,
+        "updatedAt": 1789392885445
+      },
+      "rating": {
+        "score": 6.5,
+        "positive": 64,
+        "desc": "Mixed",
+        "total": 1434,
+        "updatedAt": 1789392887672
+      },
+      "historicalLow": {
+        "price": 8.32,
+        "count": 30,
+        "confidence": "A",
+        "source": "ITAD(国区)",
+        "updatedAt": 1789392889683,
+        "currency": "CNY"
+      },
+      "targetPrice": null,
+      "note": "",
+      "dlcList": [
+        {
+          "appid": 841250,
+          "name": "The Surge - The Good, the Bad and the Augmented Expansion",
+          "price": 13.4,
+          "shortDescription": "需要《The Surge》游戏才能运行。 进入 CREO 内部，从疯狂博士瑞奇波特（Rischboter）的致命实验室杀出一条血路，这怎么感觉像是某个变态狂野西部电视剧的桥段！组合最多 4 种疯狂的修改器（共提供 16 种）来修改每个挑战，从而获得更多奖励。勇敢面对强大的挑战者来取得 30 种独特的新装备部件，包括装甲、武器和植体！",
+          "description": "需要《The Surge》游戏才能运行。 进入 CREO 内部，从疯狂博士瑞奇波特（Rischboter）的致命实验室杀出一条血路，这怎么感觉像是某个变态狂野西部电视剧的桥段！组合最多 4 种疯狂的修改器（共提供 16 种）来修改每个挑战，从而获得更多奖励。勇敢面对强大的挑战者来取得 30 种独特的新装备部件，包括装甲…",
+          "kind": "资料片",
+          "type": "dlc",
+          "originalDescription": "需要《The Surge》游戏才能运行。 进入 CREO 内部，从疯狂博士瑞奇波特（Rischboter）的致命实验室杀出一条血路，这怎么感觉像是某个变态狂野西部电视剧的桥段！组合最多 4 种疯狂的修改器（共提供 16 种）来修改每个挑战，从而获得更多奖励。勇敢面对强大的挑战者来取得 30 种独特的新装备部件，包括装甲、武器和植体！",
+          "translated": false,
+          "updatedAt": 1789392890884
+        },
+        {
+          "appid": 702990,
+          "name": "The Surge - A Walk in the Park DLC",
+          "price": 13.4,
+          "shortDescription": "欢迎来到 CREO World ——为CREO员工和家庭建造的游乐园。在CREO发生灾难后，莫名癫狂的救援队伍和狂暴的机器人偶等待着新访客落入致命陷阱……面对新的威胁，对付可怕的boss，通过改造分切和掠夺16种新增武器、装甲和插件来升级你的装备！",
+          "description": "欢迎来到 CREO World ——为CREO员工和家庭建造的游乐园。在CREO发生灾难后，莫名癫狂的救援队伍和狂暴的机器人偶等待着新访客落入致命陷阱……面对新的威胁，对付可怕的boss，通过改造分切和掠夺16种新增武器、装甲和插件来升级你的装备！",
+          "kind": "版本升级包",
+          "type": "dlc",
+          "originalDescription": "欢迎来到 CREO World ——为CREO员工和家庭建造的游乐园。在CREO发生灾难后，莫名癫狂的救援队伍和狂暴的机器人偶等待着新访客落入致命陷阱……面对新的威胁，对付可怕的boss，通过改造分切和掠夺16种新增武器、装甲和插件来升级你的装备！",
+          "translated": false,
+          "updatedAt": 1789392892093
+        },
+        {
+          "appid": 555300,
+          "name": "The Surge - CREO Special Employee Kit",
+          "price": 4.02,
+          "shortDescription": "利用DLC“CREO特别雇员工具包”加深你的游戏体验",
+          "description": "利用DLC“CREO特别雇员工具包”加深你的游戏体验",
+          "kind": "其他",
+          "type": "dlc",
+          "originalDescription": "利用DLC“CREO特别雇员工具包”加深你的游戏体验",
+          "translated": false,
+          "updatedAt": 1789392893370
+        },
+        {
+          "appid": 702980,
+          "name": "The Surge - Fire & Ice Weapon Pack",
+          "price": 0,
+          "shortDescription": "找出10件在CREO营地内丢失的全新高科技武器。",
+          "description": "找出10件在CREO营地内丢失的全新高科技武器。",
+          "kind": "道具包",
+          "type": "dlc",
+          "originalDescription": "找出10件在CREO营地内丢失的全新高科技武器。",
+          "translated": false,
+          "updatedAt": 1789392894555
+        },
+        {
+          "appid": 797280,
+          "name": "The Surge - Cutting Edge Pack",
+          "price": 0,
+          "shortDescription": "从CREO最精锐的研发项目中找到3套新的盔甲以及配套的杀伤力强大的新武器。在‘那次事故’之后，你那些疯狂的前同事们留在实验室的这些尖端的医疗、太空和纳米技术都泄露出去了。跟随踪迹，当你在CREO营地中拼杀时，把其从敌人那里夺回，装备技术获得独特加成！",
+          "description": "从CREO最精锐的研发项目中找到3套新的盔甲以及配套的杀伤力强大的新武器。在‘那次事故’之后，你那些疯狂的前同事们留在实验室的这些尖端的医疗、太空和纳米技术都泄露出去了。跟随踪迹，当你在CREO营地中拼杀时，把其从敌人那里夺回，装备技术获得独特加成！",
+          "kind": "其他",
+          "type": "dlc",
+          "originalDescription": "从CREO最精锐的研发项目中找到3套新的盔甲以及配套的杀伤力强大的新武器。在‘那次事故’之后，你那些疯狂的前同事们留在实验室的这些尖端的医疗、太空和纳米技术都泄露出去了。跟随踪迹，当你在CREO营地中拼杀时，把其从敌人那里夺回，装备技术获得独特加成！",
+          "translated": false,
+          "updatedAt": 1789392895145
+        }
+      ],
+      "details": {
+        "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/378540/header.jpg?t=1727864911",
+        "isFree": false,
+        "type": "game",
+        "releaseDate": "2017 年 5 月 15 日",
+        "releaseTs": null,
+        "developers": [
+          "Deck13"
+        ],
+        "publishers": [
+          "Focus Entertainment"
+        ],
+        "platforms": [
+          "Windows"
+        ],
+        "categories": [
+          "单人",
+          "Steam 成就",
+          "完全支持控制器",
+          "Steam 集换式卡牌",
+          "DUALSHOCK 控制器支持",
+          "Steam 云",
+          "在电视上远程畅玩",
+          "家庭共享"
+        ],
+        "genres": [
+          "动作",
+          "角色扮演"
+        ],
+        "tags": [
+          "动作",
+          "角色扮演"
+        ],
+        "featureTags": [
+          "单人",
+          "成就",
+          "集换式卡牌",
+          "云存档",
+          "家庭共享"
+        ],
+        "metacritic": 72,
+        "chineseSupport": true,
+        "reviewTotal": 9153,
+        "description": "欢迎来到CREO。巨大组织拯救了世界！工作的第一天，一场突发性事故让你晕了过去。醒来时，你发现身处一个被毁的区域里，身上还装备着一具重型外骨骼机甲。失控的机器人，近乎疯癫的同事和无良AI——一切都想至你与死地。",
+        "descriptionOriginal": "欢迎来到CREO。巨大组织拯救了世界！工作的第一天，一场突发性事故让你晕了过去。醒来时，你发现身处一个被毁的区域里，身上还装备着一具重型外骨骼机甲。失控的机器人，近乎疯癫的同事和无良AI——一切都想至你与死地。",
+        "descriptionTranslated": false
+      },
+      "createdAt": 1789392887672,
+      "updatedAt": 1789392895145
+    },
+    {
+      "appid": 644830,
+      "name": "The Surge 2",
+      "originalName": "The Surge 2",
+      "price": {
+        "current": 12.9,
+        "original": 129,
+        "discountPercent": 90,
+        "currency": "CNY",
+        "isOnSale": true,
+        "discountExpiration": null,
+        "updatedAt": 1789392874529
+      },
+      "rating": {
+        "score": 6.5,
+        "positive": 66,
+        "desc": "Mixed",
+        "total": 1960,
+        "updatedAt": 1789392876650
+      },
+      "historicalLow": {
+        "price": 12.9,
+        "count": 9,
+        "confidence": "A",
+        "source": "ITAD(国区)",
+        "updatedAt": 1789392878685,
+        "currency": "CNY"
+      },
+      "targetPrice": null,
+      "note": "",
+      "dlcList": [
+        {
+          "appid": 1162230,
+          "name": "The Surge 2 - Season Pass",
+          "price": 19.5,
+          "shortDescription": "购买季票，以优惠价格享受精彩游戏内容。 购买《The Surge 2》季票，即可获取共4款DLC，包括一款全新故事线DLC。",
+          "description": "购买季票，以优惠价格享受精彩游戏内容。 购买《The Surge 2》季票，即可获取共4款DLC，包括一款全新故事线DLC。",
+          "kind": "季票",
+          "type": "dlc",
+          "originalDescription": "购买季票，以优惠价格享受精彩游戏内容。 购买《The Surge 2》季票，即可获取共4款DLC，包括一款全新故事线DLC。",
+          "translated": false,
+          "updatedAt": 1789392879947
+        },
+        {
+          "appid": 1137641,
+          "name": "The Surge 2 - The Kraken Expansion",
+          "price": 13.4,
+          "shortDescription": "入手“The Kraken”拓展包，探索全新故事线，增强您的《The Surge 2》游戏体验！ 欢迎来到VBS克拉科夫号。这是一架已经退役的巨型航空母舰，经过翻新，成了权贵名人们的度假村。在这艘荒废军舰的复古风郊区环境中一路战斗，与其中的海盗和安保系统展开角逐，揭开VBS克拉科夫号背后的真相！",
+          "description": "入手“The Kraken”拓展包，探索全新故事线，增强您的《The Surge 2》游戏体验！ 欢迎来到VBS克拉科夫号。这是一架已经退役的巨型航空母舰，经过翻新，成了权贵名人们的度假村。在这艘荒废军舰的复古风郊区环境中一路战斗，与其中的海盗和安保系统展开角逐，揭开VBS克拉科夫号背后的真相！",
+          "kind": "资料片",
+          "type": "dlc",
+          "originalDescription": "入手“The Kraken”拓展包，探索全新故事线，增强您的《The Surge 2》游戏体验！ 欢迎来到VBS克拉科夫号。这是一架已经退役的巨型航空母舰，经过翻新，成了权贵名人们的度假村。在这艘荒废军舰的复古风郊区环境中一路战斗，与其中的海盗和安保系统展开角逐，揭开VBS克拉科夫号背后的真相！",
+          "translated": false,
+          "updatedAt": 1789392881160
+        },
+        {
+          "appid": 1068260,
+          "name": "The Surge 2 - URBN Gear Pack",
+          "price": 8.04,
+          "shortDescription": "通过URBN装备包进一步定制你的《The Surge 2》体验之旅！ 该装备包内含《The Surge》中沃伦的耐用切割机、独一无二的全身URBN装甲套装、URBN审判之斧、URBN Skimmer无人机及其Lootscan.exe雷达模块，更有独特线上信息图标。",
+          "description": "通过URBN装备包进一步定制你的《The Surge 2》体验之旅！ 该装备包内含《The Surge》中沃伦的耐用切割机、独一无二的全身URBN装甲套装、URBN审判之斧、URBN Skimmer无人机及其Lootscan.exe雷达模块，更有独特线上信息图标。",
+          "kind": "其他",
+          "type": "dlc",
+          "originalDescription": "通过URBN装备包进一步定制你的《The Surge 2》体验之旅！ 该装备包内含《The Surge》中沃伦的耐用切割机、独一无二的全身URBN装甲套装、URBN审判之斧、URBN Skimmer无人机及其Lootscan.exe雷达模块，更有独特线上信息图标。",
+          "translated": false,
+          "updatedAt": 1789392882385
+        },
+        {
+          "appid": 1135970,
+          "name": "The Surge 2 - Public Enemy Weapon Pack",
+          "price": 8.04,
+          "shortDescription": "用Public Enemy Weapon Pack丰富您的《The Surge 2》游戏体验，获取13款全新武器。掠夺而来的CREO设备、被纳米机器人感染的棍杖、回收利用的转子叶片，寻找装备有这些武器的敌人，将它们割下并装备到自己身上，迎接残酷的耶利哥市之战吧！Public Enemy Weapon Pack包含在《The Surge 2》季票内。",
+          "description": "用Public Enemy Weapon Pack丰富您的《The Surge 2》游戏体验，获取13款全新武器。掠夺而来的CREO设备、被纳米机器人感染的棍杖、回收利用的转子叶片，寻找装备有这些武器的敌人，将它们割下并装备到自己身上，迎接残酷的耶利哥市之战吧！Public Enemy Weapon Pack包含在《T…",
+          "kind": "季票",
+          "type": "dlc",
+          "originalDescription": "用Public Enemy Weapon Pack丰富您的《The Surge 2》游戏体验，获取13款全新武器。掠夺而来的CREO设备、被纳米机器人感染的棍杖、回收利用的转子叶片，寻找装备有这些武器的敌人，将它们割下并装备到自己身上，迎接残酷的耶利哥市之战吧！Public Enemy Weapon Pack包含在《The Surge 2》季票内。",
+          "translated": false,
+          "updatedAt": 1789392883595
+        },
+        {
+          "appid": 1135971,
+          "name": "The Surge 2 - Future Shock Weapon Pack",
+          "price": 0,
+          "shortDescription": "用Future Shock Weapon Pack丰富您的《The Surge 2》游戏体验，从耶利哥市最阴暗的角落获取4款全新破坏性武器！隔离行动使黑市活动激增，之前的多个秘密计划也随之被揭露。在穿越耶利哥市时找到它们，从敌人身上割下，然后装备到自己身上吧！",
+          "description": "用Future Shock Weapon Pack丰富您的《The Surge 2》游戏体验，从耶利哥市最阴暗的角落获取4款全新破坏性武器！隔离行动使黑市活动激增，之前的多个秘密计划也随之被揭露。在穿越耶利哥市时找到它们，从敌人身上割下，然后装备到自己身上吧！",
+          "kind": "道具包",
+          "type": "dlc",
+          "originalDescription": "用Future Shock Weapon Pack丰富您的《The Surge 2》游戏体验，从耶利哥市最阴暗的角落获取4款全新破坏性武器！隔离行动使黑市活动激增，之前的多个秘密计划也随之被揭露。在穿越耶利哥市时找到它们，从敌人身上割下，然后装备到自己身上吧！",
+          "translated": false,
+          "updatedAt": 1789392884188
+        },
+        {
+          "appid": 1135972,
+          "name": "The Surge 2 - JCPD Gear Pack",
+          "price": 0,
+          "shortDescription": "JCPD Gear Pack来啦！获取一组全新的装甲套装和四款独特植入体，拓展您的《THE SURGE 2》游戏体验。穿上官方JCPD Team Zola装甲，享受耐力为主的套装奖励，向敌人施放您的怒火吧！找到装备有套装的敌人，砍下装备不同部分为己所用，为耶利哥城去战斗吧！",
+          "description": "JCPD Gear Pack来啦！获取一组全新的装甲套装和四款独特植入体，拓展您的《THE SURGE 2》游戏体验。穿上官方JCPD Team Zola装甲，享受耐力为主的套装奖励，向敌人施放您的怒火吧！找到装备有套装的敌人，砍下装备不同部分为己所用，为耶利哥城去战斗吧！",
+          "kind": "其他",
+          "type": "dlc",
+          "originalDescription": "JCPD Gear Pack来啦！获取一组全新的装甲套装和四款独特植入体，拓展您的《THE SURGE 2》游戏体验。穿上官方JCPD Team Zola装甲，享受耐力为主的套装奖励，向敌人施放您的怒火吧！找到装备有套装的敌人，砍下装备不同部分为己所用，为耶利哥城去战斗吧！",
+          "translated": false,
+          "updatedAt": 1789392884806
+        },
+        {
+          "appid": 1137640,
+          "name": "The Surge 2 - Jericho's Legacy Gear Pack",
+          "price": 8.04,
+          "shortDescription": "获取Jericho's Legacy Gear Pack，将3个全新装甲套装纳入囊中，拓展《The Surge 2》游戏体验。用残暴霸气的野兽反坦克装备、流畅光滑的京子骇客服和官方耶利哥火尾吉祥物，一路杀出耶利哥市！找到穿戴这些装备的敌人，把装备切下来为己所用！ 《The Surge 2》季票中包含Jericho's Legacy Gear Pack。",
+          "description": "获取Jericho's Legacy Gear Pack，将3个全新装甲套装纳入囊中，拓展《The Surge 2》游戏体验。用残暴霸气的野兽反坦克装备、流畅光滑的京子骇客服和官方耶利哥火尾吉祥物，一路杀出耶利哥市！找到穿戴这些装备的敌人，把装备切下来为己所用！ 《The Surge 2》季票中包含Jericho's …",
+          "kind": "季票",
+          "type": "dlc",
+          "originalDescription": "获取Jericho's Legacy Gear Pack，将3个全新装甲套装纳入囊中，拓展《The Surge 2》游戏体验。用残暴霸气的野兽反坦克装备、流畅光滑的京子骇客服和官方耶利哥火尾吉祥物，一路杀出耶利哥市！找到穿戴这些装备的敌人，把装备切下来为己所用！ 《The Surge 2》季票中包含Jericho's Legacy Gear Pack。",
+          "translated": false,
+          "updatedAt": 1789392886050
+        }
+      ],
+      "details": {
+        "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/644830/header_schinese.jpg?t=1727794351",
+        "isFree": false,
+        "type": "game",
+        "releaseDate": "2019 年 9 月 23 日",
+        "releaseTs": null,
+        "developers": [
+          "Deck13"
+        ],
+        "publishers": [
+          "Focus Entertainment"
+        ],
+        "platforms": [
+          "Windows"
+        ],
+        "categories": [
+          "单人",
+          "Steam 成就",
+          "完全支持控制器",
+          "Steam 集换式卡牌",
+          "DUALSHOCK 控制器支持",
+          "Steam 云",
+          "在手机上远程畅玩",
+          "在平板上远程畅玩",
+          "在电视上远程畅玩",
+          "家庭共享"
+        ],
+        "genres": [
+          "动作",
+          "角色扮演"
+        ],
+        "tags": [
+          "动作",
+          "角色扮演"
+        ],
+        "featureTags": [
+          "单人",
+          "成就",
+          "集换式卡牌",
+          "云存档",
+          "家庭共享"
+        ],
+        "metacritic": 76,
+        "chineseSupport": true,
+        "reviewTotal": 7471,
+        "description": "探索杂乱无章、满目疮痍的耶利哥市，只为寻求一线生机。在残酷无情的战斗中对抗凶猛敌人，砍断撕裂对手的四肢来夺取他们的装备。",
+        "descriptionOriginal": "探索杂乱无章、满目疮痍的耶利哥市，只为寻求一线生机。在残酷无情的战斗中对抗凶猛敌人，砍断撕裂对手的四肢来夺取他们的装备。",
+        "descriptionTranslated": false
+      },
+      "createdAt": 1789392876650,
+      "updatedAt": 1789392886050
+    },
+    {
+      "appid": 3357650,
+      "name": "PRAGMATA",
+      "originalName": "PRAGMATA",
+      "price": {
+        "current": 214.4,
+        "original": 268,
+        "discountPercent": 20,
+        "currency": "CNY",
+        "isOnSale": true,
+        "discountExpiration": null,
+        "updatedAt": 1789391934478
+      },
+      "rating": {
+        "score": 9.6,
+        "positive": 94,
+        "desc": "Very Positive",
+        "total": 9619,
+        "updatedAt": 1789391936262
+      },
+      "historicalLow": {
+        "price": 214.4,
+        "count": 1,
+        "confidence": "A",
+        "source": "ITAD(国区)",
+        "updatedAt": 1789391937769,
+        "currency": "CNY"
+      },
+      "targetPrice": null,
+      "note": "",
+      "dlcList": [
+        {
+          "appid": 3859930,
+          "name": "PRAGMATA 防护站综合包",
+          "price": 78,
+          "shortDescription": "此组合包充满能够为休和戴安娜在月球研究站上的休憩场所“防护站”添色的丰富内容。当中包括休的帅气太空服和武器，以及展现可爱的戴安娜另一面的服装和动作，让您更加享受《Pragmata》。",
+          "description": "此组合包充满能够为休和戴安娜在月球研究站上的休憩场所“防护站”添色的丰富内容。当中包括休的帅气太空服和武器，以及展现可爱的戴安娜另一面的服装和动作，让您更加享受《Pragmata》。",
+          "kind": "其他",
+          "type": "dlc",
+          "originalDescription": "此组合包充满能够为休和戴安娜在月球研究站上的休憩场所“防护站”添色的丰富内容。当中包括休的帅气太空服和武器，以及展现可爱的戴安娜另一面的服装和动作，让您更加享受《Pragmata》。",
+          "translated": false,
+          "updatedAt": 1789391938900
+        }
+      ],
+      "details": {
+        "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3357650/e32e168b25ed68a0cf6264c220c07e96c2abfb56/header.jpg?t=1777351016",
+        "isFree": false,
+        "type": "game",
+        "releaseDate": "2026 年 4 月 16 日",
+        "releaseTs": null,
+        "developers": [
+          "CAPCOM Co., Ltd."
+        ],
+        "publishers": [
+          "CAPCOM Co., Ltd."
+        ],
+        "platforms": [
+          "Windows"
+        ],
+        "categories": [
+          "单人",
+          "Steam 成就",
+          "完全支持控制器",
+          "Steam 集换式卡牌",
+          "支持字幕",
+          "推荐使用手柄",
+          "DUALSHOCK 控制器支持",
+          "DUALSHOCK 控制器支持",
+          "DualSense 控制器支持",
+          "DualSense 控制器支持",
+          "Steam 云",
+          "可用 HDR",
+          "家庭共享"
+        ],
+        "genres": [
+          "动作",
+          "冒险"
+        ],
+        "tags": [
+          "动作",
+          "冒险"
+        ],
+        "featureTags": [
+          "单人",
+          "成就",
+          "集换式卡牌",
+          "云存档",
+          "手柄支持",
+          "家庭共享"
+        ],
+        "metacritic": null,
+        "chineseSupport": true,
+        "reviewTotal": 32749,
+        "description": "《Pragmata》是卡普空推出的一款独特的科幻动作冒险游戏。 玩家将跟随命运多舛的调查队队员“休”和机器人小女孩“戴安娜”，在被失控AI掌管的月球设施内寻找返回地球的方法。",
+        "descriptionOriginal": "《Pragmata》是卡普空推出的一款独特的科幻动作冒险游戏。 玩家将跟随命运多舛的调查队队员“休”和机器人小女孩“戴安娜”，在被失控AI掌管的月球设施内寻找返回地球的方法。",
+        "descriptionTranslated": false
+      },
+      "createdAt": 1789391936262,
+      "updatedAt": 1789391938901
+    },
     {
       "appid": 1325890,
       "name": "SILT - 黯海",
@@ -14,14 +2075,14 @@
         "currency": "CNY",
         "isOnSale": true,
         "discountExpiration": null,
-        "updatedAt": 1789420590340
+        "updatedAt": 1789315210858
       },
       "rating": {
         "score": 6.5,
         "positive": 68,
-        "total": 124,
         "desc": "Mixed",
-        "updatedAt": 1789420590944
+        "total": 124,
+        "updatedAt": 1789315211242
       },
       "historicalLow": {
         "price": 7.5,
@@ -76,7 +2137,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789289423724,
-      "updatedAt": 1789420590944
+      "updatedAt": 1789315211242
     },
     {
       "appid": 1123050,
@@ -89,14 +2150,14 @@
         "currency": "CNY",
         "isOnSale": true,
         "discountExpiration": null,
-        "updatedAt": 1789420591598
+        "updatedAt": 1789315213597
       },
       "rating": {
         "score": 7.5,
         "positive": 74,
-        "total": 1462,
         "desc": "Mostly Positive",
-        "updatedAt": 1789420592314
+        "total": 1462,
+        "updatedAt": 1789315215398
       },
       "historicalLow": {
         "price": 24,
@@ -190,27 +2251,27 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789289416953,
-      "updatedAt": 1789420592314
+      "updatedAt": 1789315219414
     },
     {
       "appid": 1167450,
       "name": "DAEMON X MACHINA",
       "originalName": "DAEMON X MACHINA",
       "price": {
-        "current": 138,
+        "current": 27.6,
         "original": 138,
-        "discountPercent": 0,
+        "discountPercent": 80,
         "currency": "CNY",
-        "isOnSale": false,
+        "isOnSale": true,
         "discountExpiration": null,
-        "updatedAt": 1789420593095
+        "updatedAt": 1789315217336
       },
       "rating": {
         "score": 9.2,
         "positive": 90,
-        "total": 3254,
         "desc": "Very Positive",
-        "updatedAt": 1789420593709
+        "total": 3255,
+        "updatedAt": 1789315218860
       },
       "historicalLow": {
         "price": 27.6,
@@ -459,27 +2520,27 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789289393679,
-      "updatedAt": 1789420593709
+      "updatedAt": 1789315251882
     },
     {
       "appid": 1161580,
       "name": "迷走深空：碎舰师",
       "originalName": "迷走深空：碎舰师",
       "price": {
-        "current": 149,
+        "current": 44.7,
         "original": 149,
-        "discountPercent": 0,
+        "discountPercent": 70,
         "currency": "CNY",
-        "isOnSale": false,
+        "isOnSale": true,
         "discountExpiration": null,
-        "updatedAt": 1789420594399
+        "updatedAt": 1789315221947
       },
       "rating": {
         "score": 8.4,
         "positive": 84,
-        "total": 897,
         "desc": "Very Positive",
-        "updatedAt": 1789420595115
+        "total": 897,
+        "updatedAt": 1789315222550
       },
       "historicalLow": {
         "price": 44.7,
@@ -562,27 +2623,27 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789289357467,
-      "updatedAt": 1789420595115
+      "updatedAt": 1789315224406
     },
     {
       "appid": 585450,
       "name": "Shadows: Awakening",
       "originalName": "Shadows: Awakening",
       "price": {
-        "current": 149,
+        "current": 14.9,
         "original": 149,
-        "discountPercent": 0,
+        "discountPercent": 90,
         "currency": "CNY",
-        "isOnSale": false,
+        "isOnSale": true,
         "discountExpiration": null,
-        "updatedAt": 1789420595801
+        "updatedAt": 1789315225876
       },
       "rating": {
         "score": 6.5,
         "positive": 63,
-        "total": 334,
         "desc": "Mixed",
-        "updatedAt": 1789420596513
+        "total": 334,
+        "updatedAt": 1789315227159
       },
       "historicalLow": {
         "price": 14.9,
@@ -679,7 +2740,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789289347989,
-      "updatedAt": 1789420596513
+      "updatedAt": 1789315232137
     },
     {
       "appid": 1684350,
@@ -692,14 +2753,14 @@
         "currency": "CNY",
         "isOnSale": true,
         "discountExpiration": null,
-        "updatedAt": 1789420597219
+        "updatedAt": 1789315229737
       },
       "rating": {
         "score": 7.5,
         "positive": 78,
-        "total": 1075,
         "desc": "Mostly Positive",
-        "updatedAt": 1789420597926
+        "total": 1073,
+        "updatedAt": 1789315231750
       },
       "historicalLow": {
         "price": 36,
@@ -775,27 +2836,27 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789289330600,
-      "updatedAt": 1789420597926
+      "updatedAt": 1789315233954
     },
     {
       "appid": 867210,
       "name": "征服之歌",
       "originalName": "征服之歌",
       "price": {
-        "current": 110,
+        "current": 27.5,
         "original": 110,
-        "discountPercent": 0,
+        "discountPercent": 75,
         "currency": "CNY",
-        "isOnSale": false,
+        "isOnSale": true,
         "discountExpiration": null,
-        "updatedAt": 1789420598611
+        "updatedAt": 1789315235058
       },
       "rating": {
         "score": 7.5,
         "positive": 79,
-        "total": 854,
         "desc": "Mostly Positive",
-        "updatedAt": 1789420599322
+        "total": 854,
+        "updatedAt": 1789315236771
       },
       "historicalLow": {
         "price": 27.5,
@@ -960,7 +3021,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789289322471,
-      "updatedAt": 1789420599322
+      "updatedAt": 1789315251362
     },
     {
       "appid": 1293160,
@@ -973,14 +3034,14 @@
         "currency": "CNY",
         "isOnSale": true,
         "discountExpiration": null,
-        "updatedAt": 1789420600002
+        "updatedAt": 1789315239742
       },
       "rating": {
         "score": 8.4,
         "positive": 82,
-        "total": 860,
         "desc": "Very Positive",
-        "updatedAt": 1789420600723
+        "total": 858,
+        "updatedAt": 1789315241504
       },
       "historicalLow": {
         "price": 49.5,
@@ -1074,7 +3135,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789289296723,
-      "updatedAt": 1789420600723
+      "updatedAt": 1789315249297
     },
     {
       "appid": 1579380,
@@ -1087,14 +3148,14 @@
         "currency": "CNY",
         "isOnSale": false,
         "discountExpiration": null,
-        "updatedAt": 1789420601444
+        "updatedAt": 1789315245152
       },
       "rating": {
         "score": 9.6,
         "positive": 94,
-        "total": 1964,
         "desc": "Very Positive",
-        "updatedAt": 1789420602126
+        "total": 1963,
+        "updatedAt": 1789315247003
       },
       "historicalLow": {
         "price": 20,
@@ -1169,7 +3230,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789289279165,
-      "updatedAt": 1789420602126
+      "updatedAt": 1789315249761
     },
     {
       "appid": 473950,
@@ -1182,14 +3243,14 @@
         "currency": "CNY",
         "isOnSale": true,
         "discountExpiration": null,
-        "updatedAt": 1789420602804
+        "updatedAt": 1789315250156
       },
       "rating": {
         "score": 9.8,
         "positive": 96,
-        "total": 2003,
         "desc": "Overwhelmingly Positive",
-        "updatedAt": 1789420603615
+        "total": 2003,
+        "updatedAt": 1789315252227
       },
       "historicalLow": {
         "price": 19,
@@ -1262,27 +3323,27 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789289272898,
-      "updatedAt": 1789420603615
+      "updatedAt": 1789315253611
     },
     {
       "appid": 1150440,
       "name": "Aliens: Dark Descent",
       "originalName": "Aliens: Dark Descent",
       "price": {
-        "current": 169,
+        "current": 50.7,
         "original": 169,
-        "discountPercent": 0,
+        "discountPercent": 70,
         "currency": "CNY",
-        "isOnSale": false,
+        "isOnSale": true,
         "discountExpiration": null,
-        "updatedAt": 1789420604226
+        "updatedAt": 1789315254499
       },
       "rating": {
         "score": 7.5,
         "positive": 76,
-        "total": 1043,
         "desc": "Mostly Positive",
-        "updatedAt": 1789420604940
+        "total": 1043,
+        "updatedAt": 1789315255727
       },
       "historicalLow": {
         "price": 50.7,
@@ -1362,7 +3423,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789289231546,
-      "updatedAt": 1789420604940
+      "updatedAt": 1789315256879
     },
     {
       "appid": 1796220,
@@ -1375,14 +3436,14 @@
         "currency": "CNY",
         "isOnSale": true,
         "discountExpiration": null,
-        "updatedAt": 1789420605619
+        "updatedAt": 1789315257720
       },
       "rating": {
         "score": 8.9,
         "positive": 86,
-        "total": 1076,
         "desc": "Very Positive",
-        "updatedAt": 1789420606313
+        "total": 1076,
+        "updatedAt": 1789315258608
       },
       "historicalLow": {
         "price": 19,
@@ -1441,7 +3502,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789289193248,
-      "updatedAt": 1789420606313
+      "updatedAt": 1789315258608
     },
     {
       "appid": 1096530,
@@ -1454,14 +3515,14 @@
         "currency": "CNY",
         "isOnSale": true,
         "discountExpiration": null,
-        "updatedAt": 1789420607021
+        "updatedAt": 1789315260610
       },
       "rating": {
         "score": 7.5,
         "positive": 79,
-        "total": 1338,
         "desc": "Mostly Positive",
-        "updatedAt": 1789420607718
+        "total": 1338,
+        "updatedAt": 1789315261227
       },
       "historicalLow": {
         "price": 0,
@@ -1612,7 +3673,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789289175348,
-      "updatedAt": 1789420607718
+      "updatedAt": 1789315268451
     },
     {
       "appid": 2975950,
@@ -1625,14 +3686,14 @@
         "currency": "CNY",
         "isOnSale": true,
         "discountExpiration": null,
-        "updatedAt": 1789420608387
+        "updatedAt": 1789315263740
       },
       "rating": {
         "score": 6.5,
         "positive": 61,
-        "total": 347,
         "desc": "Mixed",
-        "updatedAt": 1789420609102
+        "total": 346,
+        "updatedAt": 1789315264901
       },
       "historicalLow": {
         "price": 110.4,
@@ -1721,27 +3782,27 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789289162929,
-      "updatedAt": 1789420609102
+      "updatedAt": 1789315266690
     },
     {
       "appid": 1580240,
       "name": "Rune Factory 4 Special",
       "originalName": "Rune Factory 4 Special",
       "price": {
-        "current": 190,
+        "current": 57,
         "original": 190,
-        "discountPercent": 0,
+        "discountPercent": 70,
         "currency": "CNY",
-        "isOnSale": false,
+        "isOnSale": true,
         "discountExpiration": null,
-        "updatedAt": 1789420609788
+        "updatedAt": 1789315268150
       },
       "rating": {
         "score": 9.2,
         "positive": 88,
-        "total": 575,
         "desc": "Very Positive",
-        "updatedAt": 1789420610510
+        "total": 574,
+        "updatedAt": 1789315270719
       },
       "historicalLow": {
         "price": 57,
@@ -1804,27 +3865,27 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789289157480,
-      "updatedAt": 1789420610510
+      "updatedAt": 1789315270719
     },
     {
       "appid": 2243710,
       "name": "符文工厂3豪华版",
       "originalName": "符文工厂3豪华版",
       "price": {
-        "current": 256,
+        "current": 56.32,
         "original": 256,
-        "discountPercent": 0,
+        "discountPercent": 78,
         "currency": "CNY",
-        "isOnSale": false,
+        "isOnSale": true,
         "discountExpiration": null,
-        "updatedAt": 1789420611226
+        "updatedAt": 1789315273152
       },
       "rating": {
         "score": 9.6,
         "positive": 94,
-        "total": 326,
         "desc": "Very Positive",
-        "updatedAt": 1789420611911
+        "total": 325,
+        "updatedAt": 1789315273804
       },
       "historicalLow": {
         "price": 56.32,
@@ -1964,7 +4025,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789289149519,
-      "updatedAt": 1789420611911
+      "updatedAt": 1789315279223
     },
     {
       "appid": 1766740,
@@ -1977,14 +4038,14 @@
         "currency": "CNY",
         "isOnSale": true,
         "discountExpiration": null,
-        "updatedAt": 1789420612585
+        "updatedAt": 1789315276270
       },
       "rating": {
         "score": 8.4,
         "positive": 82,
-        "total": 771,
         "desc": "Very Positive",
-        "updatedAt": 1789420613328
+        "total": 767,
+        "updatedAt": 1789315278039
       },
       "historicalLow": {
         "price": 7.6,
@@ -2042,7 +4103,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789289142782,
-      "updatedAt": 1789420613328
+      "updatedAt": 1789315278039
     },
     {
       "appid": 493520,
@@ -2055,14 +4116,14 @@
         "currency": "CNY",
         "isOnSale": true,
         "discountExpiration": null,
-        "updatedAt": 1789420614001
+        "updatedAt": 1789315280011
       },
       "rating": {
         "score": 8.4,
         "positive": 81,
-        "total": 11962,
         "desc": "Very Positive",
-        "updatedAt": 1789420614708
+        "total": 11961,
+        "updatedAt": 1789315281214
       },
       "historicalLow": {
         "price": 0,
@@ -2120,7 +4181,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789289137494,
-      "updatedAt": 1789420614708
+      "updatedAt": 1789315281215
     },
     {
       "appid": 866140,
@@ -2133,14 +4194,14 @@
         "currency": "CNY",
         "isOnSale": true,
         "discountExpiration": null,
-        "updatedAt": 1789420615416
+        "updatedAt": 1789315283260
       },
       "rating": {
         "score": 9.2,
         "positive": 89,
-        "total": 600,
         "desc": "Very Positive",
-        "updatedAt": 1789420616102
+        "total": 599,
+        "updatedAt": 1789315284460
       },
       "historicalLow": {
         "price": 15.2,
@@ -2255,7 +4316,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789289131662,
-      "updatedAt": 1789420616102
+      "updatedAt": 1789315291801
     },
     {
       "appid": 2633640,
@@ -2268,14 +4329,14 @@
         "currency": "CNY",
         "isOnSale": true,
         "discountExpiration": null,
-        "updatedAt": 1789420616792
+        "updatedAt": 1789315286315
       },
       "rating": {
         "score": 9.6,
         "positive": 93,
-        "total": 118,
         "desc": "Very Positive",
-        "updatedAt": 1789420617512
+        "total": 118,
+        "updatedAt": 1789315286916
       },
       "historicalLow": {
         "price": 4.4,
@@ -2333,7 +4394,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789289123766,
-      "updatedAt": 1789420617512
+      "updatedAt": 1789315286916
     },
     {
       "appid": 544750,
@@ -2346,14 +4407,14 @@
         "currency": "CNY",
         "isOnSale": true,
         "discountExpiration": null,
-        "updatedAt": 1789420618245
+        "updatedAt": 1789315288690
       },
       "rating": {
         "score": 7.5,
         "positive": 74,
-        "total": 1372,
         "desc": "Mostly Positive",
-        "updatedAt": 1789420618913
+        "total": 1373,
+        "updatedAt": 1789315289965
       },
       "historicalLow": {
         "price": 29.8,
@@ -2576,7 +4637,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789289117479,
-      "updatedAt": 1789420618913
+      "updatedAt": 1789315303515
     },
     {
       "appid": 1119980,
@@ -2589,14 +4650,14 @@
         "currency": "CNY",
         "isOnSale": true,
         "discountExpiration": null,
-        "updatedAt": 1789420619583
+        "updatedAt": 1789315292708
       },
       "rating": {
         "score": 9.8,
         "positive": 95,
-        "total": 604,
         "desc": "Very Positive",
-        "updatedAt": 1789420620329
+        "total": 604,
+        "updatedAt": 1789315295654
       },
       "historicalLow": {
         "price": 10.3,
@@ -2680,27 +4741,27 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789289111324,
-      "updatedAt": 1789420620329
+      "updatedAt": 1789315300819
     },
     {
       "appid": 668580,
       "name": "原子之心",
       "originalName": "原子之心",
       "price": {
-        "current": 239,
+        "current": 47.8,
         "original": 239,
-        "discountPercent": 0,
+        "discountPercent": 80,
         "currency": "CNY",
-        "isOnSale": false,
+        "isOnSale": true,
         "discountExpiration": null,
-        "updatedAt": 1789420621034
+        "updatedAt": 1789315298681
       },
       "rating": {
         "score": 7.5,
-        "positive": 75,
-        "total": 14629,
+        "positive": 76,
         "desc": "Mostly Positive",
-        "updatedAt": 1789420621790
+        "total": 14618,
+        "updatedAt": 1789315300520
       },
       "historicalLow": {
         "price": 47.8,
@@ -2880,27 +4941,27 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789288866643,
-      "updatedAt": 1789420621790
+      "updatedAt": 1789315311384
     },
     {
       "appid": 1116580,
       "name": "我的阴暗面",
       "originalName": "我的阴暗面",
       "price": {
-        "current": 64,
+        "current": 9.6,
         "original": 64,
-        "discountPercent": 0,
+        "discountPercent": 85,
         "currency": "CNY",
-        "isOnSale": false,
+        "isOnSale": true,
         "discountExpiration": null,
-        "updatedAt": 1789420622415
+        "updatedAt": 1789315304335
       },
       "rating": {
         "score": 9.8,
         "positive": 95,
-        "total": 1207,
         "desc": "Very Positive",
-        "updatedAt": 1789420623142
+        "total": 1206,
+        "updatedAt": 1789315305553
       },
       "historicalLow": {
         "price": 9.6,
@@ -2957,7 +5018,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789288713492,
-      "updatedAt": 1789420623142
+      "updatedAt": 1789315305553
     },
     {
       "appid": 590380,
@@ -2970,14 +5031,14 @@
         "currency": "CNY",
         "isOnSale": true,
         "discountExpiration": null,
-        "updatedAt": 1789420623791
+        "updatedAt": 1789315308084
       },
       "rating": {
         "score": 9.8,
         "positive": 95,
-        "total": 2691,
         "desc": "Very Positive",
-        "updatedAt": 1789420624522
+        "total": 2689,
+        "updatedAt": 1789315310101
       },
       "historicalLow": {
         "price": 10,
@@ -3058,7 +5119,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789288699206,
-      "updatedAt": 1789420624522
+      "updatedAt": 1789315313224
     },
     {
       "appid": 815370,
@@ -3071,14 +5132,14 @@
         "currency": "CNY",
         "isOnSale": true,
         "discountExpiration": null,
-        "updatedAt": 1789420625181
+        "updatedAt": 1789315312820
       },
       "rating": {
         "score": 7.5,
         "positive": 79,
-        "total": 19809,
         "desc": "Mostly Positive",
-        "updatedAt": 1789420625913
+        "total": 19792,
+        "updatedAt": 1789315313713
       },
       "historicalLow": {
         "price": 8,
@@ -3167,7 +5228,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789288687871,
-      "updatedAt": 1789420625913
+      "updatedAt": 1789315314954
     },
     {
       "appid": 1066780,
@@ -3180,14 +5241,14 @@
         "currency": "CNY",
         "isOnSale": true,
         "discountExpiration": null,
-        "updatedAt": 1789420626613
+        "updatedAt": 1789315315828
       },
       "rating": {
         "score": 9.2,
         "positive": 89,
-        "total": 4255,
         "desc": "Very Positive",
-        "updatedAt": 1789420627342
+        "total": 4252,
+        "updatedAt": 1789315317046
       },
       "historicalLow": {
         "price": 13.6,
@@ -3277,7 +5338,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789288670962,
-      "updatedAt": 1789420627342
+      "updatedAt": 1789315319325
     },
     {
       "appid": 899440,
@@ -3290,14 +5351,14 @@
         "currency": "CNY",
         "isOnSale": true,
         "discountExpiration": null,
-        "updatedAt": 1789420627997
+        "updatedAt": 1789315320162
       },
       "rating": {
         "score": 7.5,
         "positive": 74,
-        "total": 3129,
         "desc": "Mostly Positive",
-        "updatedAt": 1789420628716
+        "total": 3129,
+        "updatedAt": 1789315323251
       },
       "historicalLow": {
         "price": 26.8,
@@ -3363,7 +5424,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789288651138,
-      "updatedAt": 1789420628716
+      "updatedAt": 1789315323251
     },
     {
       "appid": 438490,
@@ -3376,14 +5437,14 @@
         "currency": "CNY",
         "isOnSale": true,
         "discountExpiration": null,
-        "updatedAt": 1789420629380
+        "updatedAt": 1789315325105
       },
       "rating": {
         "score": 6.5,
         "positive": 60,
-        "total": 965,
         "desc": "Mixed",
-        "updatedAt": 1789420630270
+        "total": 965,
+        "updatedAt": 1789315327409
       },
       "historicalLow": {
         "price": 26.8,
@@ -3447,7 +5508,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789288633473,
-      "updatedAt": 1789420630270
+      "updatedAt": 1789315327409
     },
     {
       "appid": 1318690,
@@ -3460,14 +5521,14 @@
         "currency": "CNY",
         "isOnSale": true,
         "discountExpiration": null,
-        "updatedAt": 1789420630784
+        "updatedAt": 1789315329289
       },
       "rating": {
         "score": 9.8,
         "positive": 95,
-        "total": 2580,
         "desc": "Overwhelmingly Positive",
-        "updatedAt": 1789420631495
+        "total": 2580,
+        "updatedAt": 1789315330015
       },
       "historicalLow": {
         "price": 3.5,
@@ -3564,7 +5625,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789288621819,
-      "updatedAt": 1789420631495
+      "updatedAt": 1789315335773
     },
     {
       "appid": 2162800,
@@ -3577,14 +5638,14 @@
         "currency": "CNY",
         "isOnSale": true,
         "discountExpiration": null,
-        "updatedAt": 1789420632202
+        "updatedAt": 1789315332376
       },
       "rating": {
         "score": 9.8,
         "positive": 95,
-        "total": 1727,
         "desc": "Overwhelmingly Positive",
-        "updatedAt": 1789420632923
+        "total": 1724,
+        "updatedAt": 1789315333605
       },
       "historicalLow": {
         "price": 37.5,
@@ -3685,27 +5746,27 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789288498969,
-      "updatedAt": 1789420632923
+      "updatedAt": 1789315336360
     },
     {
       "appid": 581320,
       "name": "Insurgency: Sandstorm",
       "originalName": "Insurgency: Sandstorm",
       "price": {
-        "current": 129,
+        "current": 25.8,
         "original": 129,
-        "discountPercent": 0,
+        "discountPercent": 80,
         "currency": "CNY",
-        "isOnSale": false,
+        "isOnSale": true,
         "discountExpiration": null,
-        "updatedAt": 1789420633784
+        "updatedAt": 1789315335750
       },
       "rating": {
         "score": 8.4,
         "positive": 81,
-        "total": 17270,
         "desc": "Very Positive",
-        "updatedAt": 1789420634305
+        "total": 17268,
+        "updatedAt": 1789315337909
       },
       "historicalLow": {
         "price": 0,
@@ -3951,7 +6012,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789288476867,
-      "updatedAt": 1789420634305
+      "updatedAt": 1789315365426
     },
     {
       "appid": 392160,
@@ -3964,14 +6025,14 @@
         "currency": "CNY",
         "isOnSale": true,
         "discountExpiration": null,
-        "updatedAt": 1789420635037
+        "updatedAt": 1789315340708
       },
       "rating": {
         "score": 7.5,
         "positive": 78,
-        "total": 3094,
         "desc": "Mostly Positive",
-        "updatedAt": 1789420635696
+        "total": 3094,
+        "updatedAt": 1789315341875
       },
       "historicalLow": {
         "price": 16.8,
@@ -4227,7 +6288,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789288431803,
-      "updatedAt": 1789420635696
+      "updatedAt": 1789315376208
     },
     {
       "appid": 2144740,
@@ -4240,14 +6301,14 @@
         "currency": "CNY",
         "isOnSale": true,
         "discountExpiration": null,
-        "updatedAt": 1789420636421
+        "updatedAt": 1789315345011
       },
       "rating": {
         "score": 7.5,
         "positive": 79,
-        "total": 3944,
         "desc": "Mostly Positive",
-        "updatedAt": 1789420637106
+        "total": 3943,
+        "updatedAt": 1789315346992
       },
       "historicalLow": {
         "price": 33.6,
@@ -4392,7 +6453,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789288422502,
-      "updatedAt": 1789420637106
+      "updatedAt": 1789315366292
     },
     {
       "appid": 1139900,
@@ -4405,14 +6466,14 @@
         "currency": "CNY",
         "isOnSale": true,
         "discountExpiration": null,
-        "updatedAt": 1789420637837
+        "updatedAt": 1789315350496
       },
       "rating": {
         "score": 9.6,
         "positive": 92,
-        "total": 27207,
         "desc": "Very Positive",
-        "updatedAt": 1789420638492
+        "total": 27199,
+        "updatedAt": 1789315352921
       },
       "historicalLow": {
         "price": 0,
@@ -4557,7 +6618,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789288315262,
-      "updatedAt": 1789420638492
+      "updatedAt": 1789315371958
     },
     {
       "appid": 690640,
@@ -4570,14 +6631,14 @@
         "currency": "CNY",
         "isOnSale": true,
         "discountExpiration": null,
-        "updatedAt": 1789420639203
+        "updatedAt": 1789315357739
       },
       "rating": {
         "score": 8.4,
         "positive": 81,
-        "total": 5170,
         "desc": "Very Positive",
-        "updatedAt": 1789420639900
+        "total": 5170,
+        "updatedAt": 1789315363399
       },
       "historicalLow": {
         "price": 23.6,
@@ -4704,7 +6765,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789288295688,
-      "updatedAt": 1789420639900
+      "updatedAt": 1789315377607
     },
     {
       "appid": 312660,
@@ -4717,14 +6778,14 @@
         "currency": "CNY",
         "isOnSale": true,
         "discountExpiration": null,
-        "updatedAt": 1789420640633
+        "updatedAt": 1789315367768
       },
       "rating": {
         "score": 9.2,
         "positive": 90,
-        "total": 17895,
         "desc": "Very Positive",
-        "updatedAt": 1789420641308
+        "total": 17889,
+        "updatedAt": 1789315371372
       },
       "historicalLow": {
         "price": 15.8,
@@ -4946,27 +7007,27 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789288267285,
-      "updatedAt": 1789420641308
+      "updatedAt": 1789315388327
     },
     {
       "appid": 1182900,
       "name": "A Plague Tale: Requiem",
       "originalName": "A Plague Tale: Requiem",
       "price": {
-        "current": 199,
+        "current": 59.7,
         "original": 199,
-        "discountPercent": 0,
+        "discountPercent": 70,
         "currency": "CNY",
-        "isOnSale": false,
+        "isOnSale": true,
         "discountExpiration": null,
-        "updatedAt": 1789420641982
+        "updatedAt": 1789315374606
       },
       "rating": {
         "score": 8.4,
         "positive": 83,
-        "total": 4467,
         "desc": "Very Positive",
-        "updatedAt": 1789420642698
+        "total": 4462,
+        "updatedAt": 1789315377127
       },
       "historicalLow": {
         "price": 59.7,
@@ -5047,7 +7108,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789288255996,
-      "updatedAt": 1789420642698
+      "updatedAt": 1789315379039
     },
     {
       "appid": 1092660,
@@ -5060,14 +7121,14 @@
         "currency": "CNY",
         "isOnSale": true,
         "discountExpiration": null,
-        "updatedAt": 1789420643385
+        "updatedAt": 1789315380484
       },
       "rating": {
         "score": 7.5,
         "positive": 70,
-        "total": 428,
         "desc": "Mostly Positive",
-        "updatedAt": 1789420644107
+        "total": 428,
+        "updatedAt": 1789315382320
       },
       "historicalLow": {
         "price": 18,
@@ -5152,27 +7213,27 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789288227339,
-      "updatedAt": 1789420644107
+      "updatedAt": 1789315386326
     },
     {
       "appid": 845880,
       "name": "東方紅輝心",
       "originalName": "東方紅輝心",
       "price": {
-        "current": 50,
+        "current": 15,
         "original": 50,
-        "discountPercent": 0,
+        "discountPercent": 70,
         "currency": "CNY",
-        "isOnSale": false,
+        "isOnSale": true,
         "discountExpiration": null,
-        "updatedAt": 1789420644797
+        "updatedAt": 1789315384750
       },
       "rating": {
         "score": 9.6,
         "positive": 93,
-        "total": 742,
         "desc": "Very Positive",
-        "updatedAt": 1789420645515
+        "total": 742,
+        "updatedAt": 1789315386797
       },
       "historicalLow": {
         "price": 15,
@@ -5235,7 +7296,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789288190456,
-      "updatedAt": 1789420645515
+      "updatedAt": 1789315386797
     },
     {
       "appid": 922500,
@@ -5248,14 +7309,14 @@
         "currency": "CNY",
         "isOnSale": true,
         "discountExpiration": null,
-        "updatedAt": 1789420646177
+        "updatedAt": 1789315389156
       },
       "rating": {
         "score": 6.5,
-        "positive": 67,
-        "total": 543,
+        "positive": 68,
         "desc": "Mixed",
-        "updatedAt": 1789420646923
+        "total": 542,
+        "updatedAt": 1789315390521
       },
       "historicalLow": {
         "price": 25,
@@ -5323,27 +7384,27 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789287675940,
-      "updatedAt": 1789420646923
+      "updatedAt": 1789315390521
     },
     {
       "appid": 798490,
       "name": "Othercide",
       "originalName": "Othercide",
       "price": {
-        "current": 129,
+        "current": 12.9,
         "original": 129,
-        "discountPercent": 0,
+        "discountPercent": 90,
         "currency": "CNY",
-        "isOnSale": false,
+        "isOnSale": true,
         "discountExpiration": null,
-        "updatedAt": 1789420647626
+        "updatedAt": 1789315392429
       },
       "rating": {
         "score": 7.5,
         "positive": 75,
-        "total": 775,
         "desc": "Mostly Positive",
-        "updatedAt": 1789420648302
+        "total": 775,
+        "updatedAt": 1789315393684
       },
       "historicalLow": {
         "price": 12.9,
@@ -5440,7 +7501,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789200620526,
-      "updatedAt": 1789420648302
+      "updatedAt": 1789315396435
     },
     {
       "appid": 1436590,
@@ -5453,14 +7514,14 @@
         "currency": "CNY",
         "isOnSale": false,
         "discountExpiration": null,
-        "updatedAt": 1789420649003
+        "updatedAt": 1789315395168
       },
       "rating": {
         "score": 8.4,
         "positive": 82,
-        "total": 1437,
         "desc": "Very Positive",
-        "updatedAt": 1789420649725
+        "total": 1435,
+        "updatedAt": 1789315397351
       },
       "historicalLow": {
         "price": 19,
@@ -5536,7 +7597,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789200615859,
-      "updatedAt": 1789420649725
+      "updatedAt": 1789315400102
     },
     {
       "appid": 764790,
@@ -5549,14 +7610,14 @@
         "currency": "CNY",
         "isOnSale": false,
         "discountExpiration": null,
-        "updatedAt": 1789420650390
+        "updatedAt": 1789315399603
       },
       "rating": {
         "score": 8.4,
         "positive": 84,
-        "total": 1750,
         "desc": "Very Positive",
-        "updatedAt": 1789420651134
+        "total": 1750,
+        "updatedAt": 1789315400590
       },
       "historicalLow": {
         "price": 15.2,
@@ -5677,27 +7738,27 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789200611013,
-      "updatedAt": 1789420651134
+      "updatedAt": 1789315412109
     },
     {
       "appid": 1931770,
       "name": "巴别塔圣歌",
       "originalName": "巴别塔圣歌",
       "price": {
-        "current": 80,
+        "current": 40,
         "original": 80,
-        "discountPercent": 0,
+        "discountPercent": 50,
         "currency": "CNY",
-        "isOnSale": false,
+        "isOnSale": true,
         "discountExpiration": null,
-        "updatedAt": 1789420651791
+        "updatedAt": 1789315402631
       },
       "rating": {
         "score": 9.9,
         "positive": 98,
-        "total": 11958,
         "desc": "Overwhelmingly Positive",
-        "updatedAt": 1789420652498
+        "total": 11938,
+        "updatedAt": 1789315403077
       },
       "historicalLow": {
         "price": 40,
@@ -5777,7 +7838,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789200607370,
-      "updatedAt": 1789420652498
+      "updatedAt": 1789315404539
     },
     {
       "appid": 374320,
@@ -5790,14 +7851,14 @@
         "currency": "CNY",
         "isOnSale": false,
         "discountExpiration": null,
-        "updatedAt": 1789420653186
+        "updatedAt": 1789315405392
       },
       "rating": {
         "score": 9.6,
         "positive": 94,
-        "total": 105348,
         "desc": "Very Positive",
-        "updatedAt": 1789420655883
+        "total": 105339,
+        "updatedAt": 1789315406759
       },
       "historicalLow": {
         "price": 67,
@@ -5902,7 +7963,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789200602339,
-      "updatedAt": 1789420655883
+      "updatedAt": 1789315409943
     },
     {
       "appid": 782330,
@@ -5915,14 +7976,14 @@
         "currency": "CNY",
         "isOnSale": false,
         "discountExpiration": null,
-        "updatedAt": 1789420656030
+        "updatedAt": 1789315408839
       },
       "rating": {
         "score": 9.2,
         "positive": 88,
-        "total": 16326,
         "desc": "Very Positive",
-        "updatedAt": 1789420656717
+        "total": 16325,
+        "updatedAt": 1789315411482
       },
       "historicalLow": {
         "price": 16.5,
@@ -6039,7 +8100,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789200598138,
-      "updatedAt": 1789420656717
+      "updatedAt": 1789315416114
     },
     {
       "appid": 1649240,
@@ -6052,14 +8113,14 @@
         "currency": "CNY",
         "isOnSale": false,
         "discountExpiration": null,
-        "updatedAt": 1789420657368
+        "updatedAt": 1789315413059
       },
       "rating": {
         "score": 6.5,
         "positive": 66,
-        "total": 352,
         "desc": "Mixed",
-        "updatedAt": 1789420658183
+        "total": 352,
+        "updatedAt": 1789315414988
       },
       "historicalLow": {
         "price": 136.6,
@@ -6131,7 +8192,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789200593716,
-      "updatedAt": 1789420658183
+      "updatedAt": 1789315414988
     },
     {
       "appid": 953490,
@@ -6144,14 +8205,14 @@
         "currency": "CNY",
         "isOnSale": false,
         "discountExpiration": null,
-        "updatedAt": 1789420658774
+        "updatedAt": 1789315416856
       },
       "rating": {
         "score": 9.6,
         "positive": 93,
-        "total": 4981,
         "desc": "Very Positive",
-        "updatedAt": 1789420659486
+        "total": 4976,
+        "updatedAt": 1789315417805
       },
       "historicalLow": {
         "price": 7.6,
@@ -6243,7 +8304,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789200589512,
-      "updatedAt": 1789420659486
+      "updatedAt": 1789315422323
     },
     {
       "appid": 1966720,
@@ -6256,14 +8317,14 @@
         "currency": "CNY",
         "isOnSale": false,
         "discountExpiration": null,
-        "updatedAt": 1789420660168
+        "updatedAt": 1789315419543
       },
       "rating": {
         "score": 9.6,
         "positive": 93,
-        "total": 17727,
         "desc": "Very Positive",
-        "updatedAt": 1789420661002
+        "total": 17726,
+        "updatedAt": 1789315423948
       },
       "historicalLow": {
         "price": 27.3,
@@ -6327,7 +8388,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789200421989,
-      "updatedAt": 1789420661002
+      "updatedAt": 1789315423948
     },
     {
       "appid": 1952620,
@@ -6340,7 +8401,7 @@
         "currency": "CNY",
         "isOnSale": false,
         "discountExpiration": null,
-        "updatedAt": 1789420661563
+        "updatedAt": 1789315426300
       },
       "rating": {
         "score": null,
@@ -6401,7 +8462,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789200412254,
-      "updatedAt": 1789420662263
+      "updatedAt": 1789315427928
     },
     {
       "appid": 2446620,
@@ -6414,7 +8475,7 @@
         "currency": "CNY",
         "isOnSale": false,
         "discountExpiration": null,
-        "updatedAt": 1789420662952
+        "updatedAt": 1789315429871
       },
       "rating": {
         "score": null,
@@ -6484,7 +8545,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789200411045,
-      "updatedAt": 1789420663681
+      "updatedAt": 1789315432286
     },
     {
       "appid": 2617700,
@@ -6497,14 +8558,14 @@
         "currency": "CNY",
         "isOnSale": false,
         "discountExpiration": null,
-        "updatedAt": 1789420664399
+        "updatedAt": 1789290215801
       },
       "rating": {
         "score": 6.5,
         "positive": 68,
-        "total": 726,
         "desc": "Mixed",
-        "updatedAt": 1789420665140
+        "total": 726,
+        "updatedAt": 1789290216363
       },
       "historicalLow": {
         "price": 36.4,
@@ -6608,7 +8669,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789200409294,
-      "updatedAt": 1789420665140
+      "updatedAt": 1789290218078
     },
     {
       "appid": 2058190,
@@ -6621,14 +8682,14 @@
         "currency": "CNY",
         "isOnSale": false,
         "discountExpiration": null,
-        "updatedAt": 1789420665778
+        "updatedAt": 1789272288492
       },
       "rating": {
         "score": 9.2,
         "positive": 90,
-        "total": 2708,
         "desc": "Very Positive",
-        "updatedAt": 1789420666501
+        "total": 2703,
+        "updatedAt": 1789272289152
       },
       "historicalLow": {
         "price": 59.4,
@@ -6705,7 +8766,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789200407468,
-      "updatedAt": 1789420666501
+      "updatedAt": 1789272289687
     },
     {
       "appid": 2072450,
@@ -6718,14 +8779,14 @@
         "currency": "CNY",
         "isOnSale": false,
         "discountExpiration": null,
-        "updatedAt": 1789420667252
+        "updatedAt": 1789272290333
       },
       "rating": {
         "score": 8.9,
         "positive": 87,
-        "total": 6813,
         "desc": "Very Positive",
-        "updatedAt": 1789420667962
+        "total": 6805,
+        "updatedAt": 1789272290969
       },
       "historicalLow": {
         "price": 74.5,
@@ -6970,7 +9031,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789200405077,
-      "updatedAt": 1789420667962
+      "updatedAt": 1789272309178
     },
     {
       "appid": 2185060,
@@ -6983,14 +9044,14 @@
         "currency": "CNY",
         "isOnSale": false,
         "discountExpiration": null,
-        "updatedAt": 1789420668608
+        "updatedAt": 1789272292789
       },
       "rating": {
         "score": 9.8,
         "positive": 95,
-        "total": 3862,
         "desc": "Very Positive",
-        "updatedAt": 1789420669273
+        "total": 3857,
+        "updatedAt": 1789272294003
       },
       "historicalLow": {
         "price": null,
@@ -7129,7 +9190,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789200402590,
-      "updatedAt": 1789420669273
+      "updatedAt": 1789272303657
     },
     {
       "appid": 2215430,
@@ -7142,14 +9203,14 @@
         "currency": "CNY",
         "isOnSale": false,
         "discountExpiration": null,
-        "updatedAt": 1789420669978
+        "updatedAt": 1789272297600
       },
       "rating": {
         "score": 9.2,
         "positive": 88,
-        "total": 9500,
         "desc": "Very Positive",
-        "updatedAt": 1789420670711
+        "total": 9490,
+        "updatedAt": 1789272300067
       },
       "historicalLow": {
         "price": 238.8,
@@ -7245,7 +9306,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789200398979,
-      "updatedAt": 1789420670711
+      "updatedAt": 1789272301862
     },
     {
       "appid": 2291850,
@@ -7258,14 +9319,14 @@
         "currency": "CNY",
         "isOnSale": false,
         "discountExpiration": null,
-        "updatedAt": 1789420671385
+        "updatedAt": 1789272303130
       },
       "rating": {
         "score": 9.9,
         "positive": 99,
-        "total": 3610,
         "desc": "Overwhelmingly Positive",
-        "updatedAt": 1789420672111
+        "total": 3609,
+        "updatedAt": 1789272304896
       },
       "historicalLow": {
         "price": 7.5,
@@ -7334,7 +9395,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789200396557,
-      "updatedAt": 1789420672111
+      "updatedAt": 1789272306919
     },
     {
       "appid": 2531310,
@@ -7347,14 +9408,14 @@
         "currency": "CNY",
         "isOnSale": false,
         "discountExpiration": null,
-        "updatedAt": 1789420672766
+        "updatedAt": 1789272306756
       },
       "rating": {
         "score": 8.4,
         "positive": 80,
-        "total": 7311,
         "desc": "Mostly Positive",
-        "updatedAt": 1789420673489
+        "total": 7302,
+        "updatedAt": 1789272308641
       },
       "historicalLow": {
         "price": 276,
@@ -7428,7 +9489,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789200394758,
-      "updatedAt": 1789420673489
+      "updatedAt": 1789272308641
     },
     {
       "appid": 2721890,
@@ -7441,14 +9502,14 @@
         "currency": "CNY",
         "isOnSale": false,
         "discountExpiration": null,
-        "updatedAt": 1789420674190
+        "updatedAt": 1789272309798
       },
       "rating": {
         "score": 9.9,
         "positive": 100,
-        "total": 2961,
         "desc": "Overwhelmingly Positive",
-        "updatedAt": 1789420674901
+        "total": 2957,
+        "updatedAt": 1789272311209
       },
       "historicalLow": {
         "price": 29.4,
@@ -7523,7 +9584,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789200389919,
-      "updatedAt": 1789420674901
+      "updatedAt": 1789272312768
     },
     {
       "appid": 2868840,
@@ -7536,14 +9597,14 @@
         "currency": "CNY",
         "isOnSale": false,
         "discountExpiration": null,
-        "updatedAt": 1789420675561
+        "updatedAt": 1789272312443
       },
       "rating": {
         "score": 4,
         "positive": 32,
-        "total": 99006,
         "desc": "Mostly Negative",
-        "updatedAt": 1789420676280
+        "total": 98911,
+        "updatedAt": 1789272313833
       },
       "historicalLow": {
         "price": 88,
@@ -7615,7 +9676,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789200385710,
-      "updatedAt": 1789420676280
+      "updatedAt": 1789272313833
     },
     {
       "appid": 1332010,
@@ -7628,14 +9689,14 @@
         "currency": "CNY",
         "isOnSale": false,
         "discountExpiration": null,
-        "updatedAt": 1789420676966
+        "updatedAt": 1789272314788
       },
       "rating": {
         "score": 9.6,
         "positive": 93,
-        "total": 15270,
         "desc": "Very Positive",
-        "updatedAt": 1789420677863
+        "total": 15268,
+        "updatedAt": 1789272316199
       },
       "historicalLow": {
         "price": 49,
@@ -7708,7 +9769,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789200382652,
-      "updatedAt": 1789420677863
+      "updatedAt": 1789272317640
     },
     {
       "appid": 1336490,
@@ -7721,14 +9782,14 @@
         "currency": "CNY",
         "isOnSale": false,
         "discountExpiration": null,
-        "updatedAt": 1789420678405
+        "updatedAt": 1789281995499
       },
       "rating": {
         "score": 9.6,
         "positive": 92,
-        "total": 5809,
         "desc": "Very Positive",
-        "updatedAt": 1789420679084
+        "total": 5806,
+        "updatedAt": 1789281996502
       },
       "historicalLow": {
         "price": 29.7,
@@ -7817,7 +9878,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789200377845,
-      "updatedAt": 1789420679084
+      "updatedAt": 1789282001390
     },
     {
       "appid": 1366540,
@@ -7830,14 +9891,14 @@
         "currency": "CNY",
         "isOnSale": false,
         "discountExpiration": null,
-        "updatedAt": 1789420679779
+        "updatedAt": 1789281998485
       },
       "rating": {
         "score": 9.9,
         "positive": 98,
-        "total": 56374,
         "desc": "Overwhelmingly Positive",
-        "updatedAt": 1789420680629
+        "total": 56366,
+        "updatedAt": 1789282000614
       },
       "historicalLow": {
         "price": 56,
@@ -7919,7 +9980,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789200373586,
-      "updatedAt": 1789420680629
+      "updatedAt": 1789282000614
     },
     {
       "appid": 1369630,
@@ -7932,14 +9993,14 @@
         "currency": "CNY",
         "isOnSale": false,
         "discountExpiration": null,
-        "updatedAt": 1789420681192
+        "updatedAt": 1789272322946
       },
       "rating": {
         "score": 9.6,
         "positive": 92,
-        "total": 17135,
         "desc": "Very Positive",
-        "updatedAt": 1789420681918
+        "total": 17130,
+        "updatedAt": 1789272324338
       },
       "historicalLow": {
         "price": 39.2,
@@ -8017,7 +10078,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789200371171,
-      "updatedAt": 1789420681918
+      "updatedAt": 1789272325968
     },
     {
       "appid": 1687950,
@@ -8030,14 +10091,14 @@
         "currency": "CNY",
         "isOnSale": false,
         "discountExpiration": null,
-        "updatedAt": 1789420682561
+        "updatedAt": 1789272325566
       },
       "rating": {
         "score": 9.8,
         "positive": 96,
-        "total": 66947,
         "desc": "Overwhelmingly Positive",
-        "updatedAt": 1789420683301
+        "total": 66903,
+        "updatedAt": 1789272326166
       },
       "historicalLow": {
         "price": 53.6,
@@ -8093,7 +10154,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789200367552,
-      "updatedAt": 1789420683301
+      "updatedAt": 1789272326166
     },
     {
       "appid": 1888930,
@@ -8106,14 +10167,14 @@
         "currency": "CNY",
         "isOnSale": false,
         "discountExpiration": null,
-        "updatedAt": 1789420684054
+        "updatedAt": 1789272327159
       },
       "rating": {
         "score": 8.4,
         "positive": 80,
-        "total": 14415,
         "desc": "Very Positive",
-        "updatedAt": 1789420686658
+        "total": 14405,
+        "updatedAt": 1789272328611
       },
       "historicalLow": {
         "price": 207,
@@ -8189,7 +10250,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789200363318,
-      "updatedAt": 1789420686658
+      "updatedAt": 1789272328611
     },
     {
       "appid": 847370,
@@ -8202,14 +10263,14 @@
         "currency": "CNY",
         "isOnSale": false,
         "discountExpiration": null,
-        "updatedAt": 1789420686747
+        "updatedAt": 1789272329546
       },
       "rating": {
         "score": 7.5,
         "positive": 77,
-        "total": 425,
         "desc": "Mostly Positive",
-        "updatedAt": 1789420687484
+        "total": 425,
+        "updatedAt": 1789272331747
       },
       "historicalLow": {
         "price": null,
@@ -8269,7 +10330,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789200357301,
-      "updatedAt": 1789420687484
+      "updatedAt": 1789272331747
     },
     {
       "appid": 933110,
@@ -8282,14 +10343,14 @@
         "currency": "CNY",
         "isOnSale": false,
         "discountExpiration": null,
-        "updatedAt": 1789420688179
+        "updatedAt": 1789282007678
       },
       "rating": {
         "score": 7.5,
         "positive": 79,
-        "total": 9169,
         "desc": "Mostly Positive",
-        "updatedAt": 1789420688863
+        "total": 9163,
+        "updatedAt": 1789282009510
       },
       "historicalLow": {
         "price": null,
@@ -8474,27 +10535,27 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789200354279,
-      "updatedAt": 1789420688863
+      "updatedAt": 1789282021438
     },
     {
       "appid": 1086940,
       "name": "博德之门3",
       "originalName": "博德之门3",
       "price": {
-        "current": 208.6,
+        "current": 298,
         "original": 298,
-        "discountPercent": 30,
+        "discountPercent": 0,
         "currency": "CNY",
-        "isOnSale": true,
+        "isOnSale": false,
         "discountExpiration": null,
-        "updatedAt": 1789420689547
+        "updatedAt": 1789282012342
       },
       "rating": {
         "score": 9.8,
         "positive": 96,
-        "total": 101224,
         "desc": "Overwhelmingly Positive",
-        "updatedAt": 1789420690346
+        "total": 101198,
+        "updatedAt": 1789282013585
       },
       "historicalLow": {
         "price": 208.6,
@@ -8603,27 +10664,27 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789200350053,
-      "updatedAt": 1789420690346
+      "updatedAt": 1789282018253
     },
     {
       "appid": 1938010,
       "name": "《WILD HEARTS™》",
       "originalName": "《WILD HEARTS™》",
       "price": {
-        "current": 59.6,
+        "current": 298,
         "original": 298,
-        "discountPercent": 80,
+        "discountPercent": 0,
         "currency": "CNY",
-        "isOnSale": true,
+        "isOnSale": false,
         "discountExpiration": null,
-        "updatedAt": 1789420690952
+        "updatedAt": 1789282015391
       },
       "rating": {
         "score": 4,
         "positive": 32,
-        "total": 3717,
         "desc": "Mostly Negative",
-        "updatedAt": 1789420691654
+        "total": 3717,
+        "updatedAt": 1789282018487
       },
       "historicalLow": {
         "price": 20.9,
@@ -8707,7 +10768,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789200345183,
-      "updatedAt": 1789420691654
+      "updatedAt": 1789282019634
     },
     {
       "appid": 1145350,
@@ -8720,14 +10781,14 @@
         "currency": "CNY",
         "isOnSale": false,
         "discountExpiration": null,
-        "updatedAt": 1789420692354
+        "updatedAt": 1789282020852
       },
       "rating": {
         "score": 9.2,
         "positive": 89,
-        "total": 16080,
         "desc": "Very Positive",
-        "updatedAt": 1789420693062
+        "total": 16071,
+        "updatedAt": 1789282022758
       },
       "historicalLow": {
         "price": 75.6,
@@ -8806,7 +10867,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789200336641,
-      "updatedAt": 1789420693062
+      "updatedAt": 1789282024172
     },
     {
       "appid": 1158310,
@@ -8819,14 +10880,14 @@
         "currency": "CNY",
         "isOnSale": false,
         "discountExpiration": null,
-        "updatedAt": 1789420693829
+        "updatedAt": 1789282023957
       },
       "rating": {
         "score": 9.2,
         "positive": 89,
-        "total": 22839,
         "desc": "Very Positive",
-        "updatedAt": 1789420694464
+        "total": 22831,
+        "updatedAt": 1789282025276
       },
       "historicalLow": {
         "price": 59.4,
@@ -9084,7 +11145,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789200309480,
-      "updatedAt": 1789420694464
+      "updatedAt": 1789282045812
     },
     {
       "appid": 1260520,
@@ -9097,14 +11158,14 @@
         "currency": "CNY",
         "isOnSale": false,
         "discountExpiration": null,
-        "updatedAt": 1789420695136
+        "updatedAt": 1789282027066
       },
       "rating": {
         "score": 9.9,
         "positive": 100,
-        "total": 2080,
         "desc": "Overwhelmingly Positive",
-        "updatedAt": 1789420695968
+        "total": 2078,
+        "updatedAt": 1789282028916
       },
       "historicalLow": {
         "price": 38,
@@ -9184,7 +11245,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789200306373,
-      "updatedAt": 1789420695968
+      "updatedAt": 1789282030121
     },
     {
       "appid": 1267910,
@@ -9197,14 +11258,14 @@
         "currency": "CNY",
         "isOnSale": false,
         "discountExpiration": null,
-        "updatedAt": 1789420696544
+        "updatedAt": 1789282031918
       },
       "rating": {
         "score": 8.9,
         "positive": 85,
-        "total": 3896,
         "desc": "Very Positive",
-        "updatedAt": 1789420697292
+        "total": 3891,
+        "updatedAt": 1789282033755
       },
       "historicalLow": {
         "price": 16.8,
@@ -9302,7 +11363,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789200303362,
-      "updatedAt": 1789420697292
+      "updatedAt": 1789282039745
     },
     {
       "appid": 1292940,
@@ -9315,14 +11376,14 @@
         "currency": "CNY",
         "isOnSale": false,
         "discountExpiration": null,
-        "updatedAt": 1789420697935
+        "updatedAt": 1789282036134
       },
       "rating": {
         "score": 9.9,
         "positive": 98,
-        "total": 3230,
         "desc": "Overwhelmingly Positive",
-        "updatedAt": 1789420698675
+        "total": 3225,
+        "updatedAt": 1789282039194
       },
       "historicalLow": {
         "price": 6.6,
@@ -9372,7 +11433,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789200296684,
-      "updatedAt": 1789420698675
+      "updatedAt": 1789282039194
     },
     {
       "appid": 594570,
@@ -9385,14 +11446,14 @@
         "currency": "CNY",
         "isOnSale": false,
         "discountExpiration": null,
-        "updatedAt": 1789420699397
+        "updatedAt": 1789282041002
       },
       "rating": {
         "score": 9.2,
         "positive": 91,
-        "total": 18276,
         "desc": "Very Positive",
-        "updatedAt": 1789420700086
+        "total": 18276,
+        "updatedAt": 1789282042228
       },
       "historicalLow": {
         "price": 67,
@@ -9655,7 +11716,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789200291860,
-      "updatedAt": 1789420700086
+      "updatedAt": 1789282090476
     },
     {
       "appid": 610370,
@@ -9668,14 +11729,14 @@
         "currency": "CNY",
         "isOnSale": false,
         "discountExpiration": null,
-        "updatedAt": 1789420700765
+        "updatedAt": 1789282044626
       },
       "rating": {
         "score": 9.9,
         "positive": 98,
-        "total": 4388,
         "desc": "Overwhelmingly Positive",
-        "updatedAt": 1789420701487
+        "total": 4387,
+        "updatedAt": 1789282046457
       },
       "historicalLow": {
         "price": 13.6,
@@ -9796,7 +11857,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789200286347,
-      "updatedAt": 1789420701487
+      "updatedAt": 1789282056995
     },
     {
       "appid": 632360,
@@ -9809,14 +11870,14 @@
         "currency": "CNY",
         "isOnSale": false,
         "discountExpiration": null,
-        "updatedAt": 1789420702165
+        "updatedAt": 1789282048946
       },
       "rating": {
         "score": 9.2,
         "positive": 89,
-        "total": 37777,
         "desc": "Very Positive",
-        "updatedAt": 1789420702861
+        "total": 37775,
+        "updatedAt": 1789282050719
       },
       "historicalLow": {
         "price": 26.4,
@@ -9976,7 +12037,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789200283975,
-      "updatedAt": 1789420702861
+      "updatedAt": 1789282068444
     },
     {
       "appid": 694280,
@@ -9989,14 +12050,14 @@
         "currency": "CNY",
         "isOnSale": false,
         "discountExpiration": null,
-        "updatedAt": 1789420703765
+        "updatedAt": 1789282053710
       },
       "rating": {
         "score": 8.4,
         "positive": 82,
-        "total": 3279,
         "desc": "Very Positive",
-        "updatedAt": 1789420704259
+        "total": 3278,
+        "updatedAt": 1789282057608
       },
       "historicalLow": {
         "price": 8.4,
@@ -10242,7 +12303,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789200280943,
-      "updatedAt": 1789420704259
+      "updatedAt": 1789282244078
     },
     {
       "appid": 703080,
@@ -10255,14 +12316,14 @@
         "currency": "CNY",
         "isOnSale": false,
         "discountExpiration": null,
-        "updatedAt": 1789420704956
+        "updatedAt": 1789282062467
       },
       "rating": {
         "score": 8.9,
         "positive": 87,
-        "total": 13111,
         "desc": "Very Positive",
-        "updatedAt": 1789420705664
+        "total": 13108,
+        "updatedAt": 1789282066456
       },
       "historicalLow": {
         "price": 9,
@@ -10505,7 +12566,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789200275496,
-      "updatedAt": 1789420705664
+      "updatedAt": 1789282241293
     },
     {
       "appid": 753640,
@@ -10518,14 +12579,14 @@
         "currency": "CNY",
         "isOnSale": false,
         "discountExpiration": null,
-        "updatedAt": 1789420706338
+        "updatedAt": 1789282071461
       },
       "rating": {
         "score": 9.9,
         "positive": 97,
-        "total": 17338,
         "desc": "Overwhelmingly Positive",
-        "updatedAt": 1789420707053
+        "total": 17320,
+        "updatedAt": 1789282075465
       },
       "historicalLow": {
         "price": 47.5,
@@ -10625,7 +12686,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789200270711,
-      "updatedAt": 1789420707053
+      "updatedAt": 1789282084435
     },
     {
       "appid": 813630,
@@ -10638,14 +12699,14 @@
         "currency": "CNY",
         "isOnSale": false,
         "discountExpiration": null,
-        "updatedAt": 1789420707781
+        "updatedAt": 1789282080475
       },
       "rating": {
         "score": 9.6,
         "positive": 94,
-        "total": 1497,
         "desc": "Very Positive",
-        "updatedAt": 1789420708445
+        "total": 1497,
+        "updatedAt": 1789282085492
       },
       "historicalLow": {
         "price": 14,
@@ -10720,7 +12781,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789200267638,
-      "updatedAt": 1789420708445
+      "updatedAt": 1789282089442
     },
     {
       "appid": 813780,
@@ -10733,14 +12794,14 @@
         "currency": "CNY",
         "isOnSale": false,
         "discountExpiration": null,
-        "updatedAt": 1789420709202
+        "updatedAt": 1789282091472
       },
       "rating": {
         "score": 9.6,
         "positive": 92,
-        "total": 23739,
         "desc": "Very Positive",
-        "updatedAt": 1789420709851
+        "total": 23736,
+        "updatedAt": 1789282095456
       },
       "historicalLow": {
         "price": 24.8,
@@ -11004,7 +13065,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789200254926,
-      "updatedAt": 1789420709851
+      "updatedAt": 1789282254378
     },
     {
       "appid": 814380,
@@ -11017,14 +13078,14 @@
         "currency": "CNY",
         "isOnSale": false,
         "discountExpiration": null,
-        "updatedAt": 1789420710532
+        "updatedAt": 1789282099475
       },
       "rating": {
         "score": 9.8,
         "positive": 96,
-        "total": 170932,
         "desc": "Overwhelmingly Positive",
-        "updatedAt": 1789420711253
+        "total": 170903,
+        "updatedAt": 1789282104475
       },
       "historicalLow": {
         "price": 134,
@@ -11086,7 +13147,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789200248257,
-      "updatedAt": 1789420711253
+      "updatedAt": 1789282104475
     },
     {
       "appid": 392110,
@@ -11099,14 +13160,14 @@
         "currency": "CNY",
         "isOnSale": false,
         "discountExpiration": null,
-        "updatedAt": 1789420712017
+        "updatedAt": 1789282108498
       },
       "rating": {
         "score": 8.4,
         "positive": 84,
-        "total": 3555,
         "desc": "Very Positive",
-        "updatedAt": 1789420712672
+        "total": 3555,
+        "updatedAt": 1789282113538
       },
       "historicalLow": {
         "price": 25.8,
@@ -11352,7 +13413,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789200245276,
-      "updatedAt": 1789420712672
+      "updatedAt": 1789282265433
     },
     {
       "appid": 414700,
@@ -11365,14 +13426,14 @@
         "currency": "CNY",
         "isOnSale": false,
         "discountExpiration": null,
-        "updatedAt": 1789420713330
+        "updatedAt": 1789282209466
       },
       "rating": {
         "score": 9.8,
         "positive": 96,
-        "total": 16787,
         "desc": "Overwhelmingly Positive",
-        "updatedAt": 1789420714058
+        "total": 16783,
+        "updatedAt": 1789282242048
       },
       "historicalLow": {
         "price": 7.6,
@@ -11433,7 +13494,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789200242244,
-      "updatedAt": 1789420714058
+      "updatedAt": 1789282242048
     },
     {
       "appid": 463530,
@@ -11446,14 +13507,14 @@
         "currency": "CNY",
         "isOnSale": false,
         "discountExpiration": null,
-        "updatedAt": 1789420714749
+        "updatedAt": 1789282246030
       },
       "rating": {
         "score": 9.6,
         "positive": 92,
-        "total": 3433,
         "desc": "Very Positive",
-        "updatedAt": 1789420715477
+        "total": 3431,
+        "updatedAt": 1789282246804
       },
       "historicalLow": {
         "price": 29.7,
@@ -11538,7 +13599,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789200239151,
-      "updatedAt": 1789420715477
+      "updatedAt": 1789282250378
     },
     {
       "appid": 532110,
@@ -11551,14 +13612,14 @@
         "currency": "CNY",
         "isOnSale": false,
         "discountExpiration": null,
-        "updatedAt": 1789420716137
+        "updatedAt": 1789282249143
       },
       "rating": {
         "score": 9.9,
         "positive": 98,
-        "total": 4411,
         "desc": "Overwhelmingly Positive",
-        "updatedAt": 1789420716843
+        "total": 4409,
+        "updatedAt": 1789282252172
       },
       "historicalLow": {
         "price": 6.1,
@@ -11614,27 +13675,27 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789200235552,
-      "updatedAt": 1789420716843
+      "updatedAt": 1789282252172
     },
     {
       "appid": 546560,
       "name": "Half-Life: Alyx",
       "originalName": "Half-Life: Alyx",
       "price": {
-        "current": 49.5,
+        "current": 198,
         "original": 198,
-        "discountPercent": 75,
+        "discountPercent": 0,
         "currency": "CNY",
-        "isOnSale": true,
+        "isOnSale": false,
         "discountExpiration": null,
-        "updatedAt": 1789420717582
+        "updatedAt": 1789282254677
       },
       "rating": {
         "score": 9.9,
         "positive": 99,
-        "total": 7327,
         "desc": "Overwhelmingly Positive",
-        "updatedAt": 1789420718266
+        "total": 7326,
+        "updatedAt": 1789282257059
       },
       "historicalLow": {
         "price": 49.5,
@@ -11715,7 +13776,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789200231926,
-      "updatedAt": 1789420718266
+      "updatedAt": 1789282258221
     },
     {
       "appid": 548430,
@@ -11728,14 +13789,14 @@
         "currency": "CNY",
         "isOnSale": true,
         "discountExpiration": null,
-        "updatedAt": 1789420718966
+        "updatedAt": 1789282258865
       },
       "rating": {
         "score": 9.6,
         "positive": 94,
-        "total": 36610,
         "desc": "Very Positive",
-        "updatedAt": 1789420719658
+        "total": 36602,
+        "updatedAt": 1789282260382
       },
       "historicalLow": {
         "price": 27,
@@ -11975,7 +14036,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789200209151,
-      "updatedAt": 1789420719658
+      "updatedAt": 1789282287593
     },
     {
       "appid": 557600,
@@ -11988,14 +14049,14 @@
         "currency": "CNY",
         "isOnSale": false,
         "discountExpiration": null,
-        "updatedAt": 1789420720340
+        "updatedAt": 1789282262446
       },
       "rating": {
         "score": 9.9,
         "positive": 98,
-        "total": 10920,
         "desc": "Overwhelmingly Positive",
-        "updatedAt": 1789420721067
+        "total": 10910,
+        "updatedAt": 1789282266490
       },
       "historicalLow": {
         "price": 15,
@@ -12068,7 +14129,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789200194326,
-      "updatedAt": 1789420721067
+      "updatedAt": 1789282269402
     },
     {
       "appid": 570940,
@@ -12081,14 +14142,14 @@
         "currency": "CNY",
         "isOnSale": false,
         "discountExpiration": null,
-        "updatedAt": 1789420721737
+        "updatedAt": 1789282270528
       },
       "rating": {
         "score": 9.2,
         "positive": 89,
-        "total": 20566,
         "desc": "Very Positive",
-        "updatedAt": 1789420722456
+        "total": 20560,
+        "updatedAt": 1789282272725
       },
       "historicalLow": {
         "price": 99,
@@ -12147,7 +14208,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789199792368,
-      "updatedAt": 1789420722456
+      "updatedAt": 1789282272725
     },
     {
       "appid": 588650,
@@ -12160,14 +14221,14 @@
         "currency": "CNY",
         "isOnSale": true,
         "discountExpiration": null,
-        "updatedAt": 1789420723191
+        "updatedAt": 1789282275553
       },
       "rating": {
         "score": 9.9,
         "positive": 97,
-        "total": 65814,
         "desc": "Overwhelmingly Positive",
-        "updatedAt": 1789420723867
+        "total": 65791,
+        "updatedAt": 1789282278669
       },
       "historicalLow": {
         "price": 32,
@@ -12331,7 +14392,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789199783608,
-      "updatedAt": 1789420723867
+      "updatedAt": 1789282299698
     },
     {
       "appid": 220240,
@@ -12344,14 +14405,14 @@
         "currency": "CNY",
         "isOnSale": false,
         "discountExpiration": null,
-        "updatedAt": 1789420724543
+        "updatedAt": 1789282282480
       },
       "rating": {
         "score": 7.5,
         "positive": 77,
-        "total": 7174,
         "desc": "Mostly Positive",
-        "updatedAt": 1789420725261
+        "total": 7174,
+        "updatedAt": 1789282286532
       },
       "historicalLow": {
         "price": 14,
@@ -12407,7 +14468,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789199777249,
-      "updatedAt": 1789420725261
+      "updatedAt": 1789282286532
     },
     {
       "appid": 1677280,
@@ -12420,14 +14481,14 @@
         "currency": "CNY",
         "isOnSale": false,
         "discountExpiration": null,
-        "updatedAt": 1789420725965
+        "updatedAt": 1789282289562
       },
       "rating": {
         "score": 4,
         "positive": 46,
-        "total": 5626,
         "desc": "Mixed",
-        "updatedAt": 1789420726660
+        "total": 5625,
+        "updatedAt": 1789282291549
       },
       "historicalLow": {
         "price": 79.2,
@@ -12554,7 +14615,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789199750962,
-      "updatedAt": 1789420726660
+      "updatedAt": 1789282302478
     },
     {
       "appid": 335300,
@@ -12567,14 +14628,14 @@
         "currency": "CNY",
         "isOnSale": false,
         "discountExpiration": null,
-        "updatedAt": 1789420727336
+        "updatedAt": 1789282294452
       },
       "rating": {
         "score": 7.5,
         "positive": 79,
-        "total": 18763,
         "desc": "Mostly Positive",
-        "updatedAt": 1789420728055
+        "total": 18757,
+        "updatedAt": 1789282299632
       },
       "historicalLow": {
         "price": 39,
@@ -12636,7 +14697,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789199716591,
-      "updatedAt": 1789420728055
+      "updatedAt": 1789282299632
     },
     {
       "appid": 236430,
@@ -12649,14 +14710,14 @@
         "currency": "CNY",
         "isOnSale": false,
         "discountExpiration": null,
-        "updatedAt": 1789420728745
+        "updatedAt": 1789282301491
       },
       "rating": {
         "score": 8.9,
         "positive": 85,
-        "total": 1701,
         "desc": "Very Positive",
-        "updatedAt": 1789420729451
+        "total": 1701,
+        "updatedAt": 1789282303515
       },
       "historicalLow": {
         "price": 62,
@@ -12767,7 +14828,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789199704429,
-      "updatedAt": 1789420729451
+      "updatedAt": 1789282311464
     },
     {
       "appid": 949230,
@@ -12780,14 +14841,14 @@
         "currency": "CNY",
         "isOnSale": false,
         "discountExpiration": null,
-        "updatedAt": 1789420730701
+        "updatedAt": 1789290200710
       },
       "rating": {
         "score": 4,
         "positive": 48,
-        "total": 13970,
         "desc": "Mixed",
-        "updatedAt": 1789420730856
+        "total": 13960,
+        "updatedAt": 1789290201100
       },
       "historicalLow": {
         "price": 138.6,
@@ -13024,7 +15085,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789199688864,
-      "updatedAt": 1789420730856
+      "updatedAt": 1789290211325
     },
     {
       "appid": 255710,
@@ -13037,14 +15098,14 @@
         "currency": "CNY",
         "isOnSale": false,
         "discountExpiration": null,
-        "updatedAt": 1789420731892
+        "updatedAt": 1789282312844
       },
       "rating": {
         "score": 9.2,
         "positive": 91,
-        "total": 60735,
         "desc": "Very Positive",
-        "updatedAt": 1789420732267
+        "total": 60730,
+        "updatedAt": 1789282316541
       },
       "historicalLow": {
         "price": 13.8,
@@ -13289,7 +15350,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789199682401,
-      "updatedAt": 1789420732267
+      "updatedAt": 1789282410538
     },
     {
       "appid": 260230,
@@ -13302,14 +15363,14 @@
         "currency": "CNY",
         "isOnSale": false,
         "discountExpiration": null,
-        "updatedAt": 1789420732934
+        "updatedAt": 1789282320470
       },
       "rating": {
         "score": 9.8,
         "positive": 96,
-        "total": 4926,
         "desc": "Overwhelmingly Positive",
-        "updatedAt": 1789420733667
+        "total": 4925,
+        "updatedAt": 1789282329501
       },
       "historicalLow": {
         "price": 18,
@@ -13360,7 +15421,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789199671365,
-      "updatedAt": 1789420733667
+      "updatedAt": 1789282329501
     },
     {
       "appid": 848450,
@@ -13373,14 +15434,14 @@
         "currency": "CNY",
         "isOnSale": false,
         "discountExpiration": null,
-        "updatedAt": 1789420734343
+        "updatedAt": 1789282384749
       },
       "rating": {
         "score": 8.9,
         "positive": 87,
-        "total": 8557,
         "desc": "Very Positive",
-        "updatedAt": 1789420735074
+        "total": 8556,
+        "updatedAt": 1789282386653
       },
       "historicalLow": {
         "price": 32.7,
@@ -13454,7 +15515,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789199656265,
-      "updatedAt": 1789420735074
+      "updatedAt": 1789282390757
     },
     {
       "appid": 264710,
@@ -13467,14 +15528,14 @@
         "currency": "CNY",
         "isOnSale": false,
         "discountExpiration": null,
-        "updatedAt": 1789420735763
+        "updatedAt": 1789282391546
       },
       "rating": {
         "score": 9.9,
         "positive": 97,
-        "total": 34372,
         "desc": "Overwhelmingly Positive",
-        "updatedAt": 1789420736478
+        "total": 34355,
+        "updatedAt": 1789282395510
       },
       "historicalLow": {
         "price": 32.7,
@@ -13551,7 +15612,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789199650264,
-      "updatedAt": 1789420736478
+      "updatedAt": 1789282398433
     },
     {
       "appid": 1962700,
@@ -13564,14 +15625,14 @@
         "currency": "CNY",
         "isOnSale": false,
         "discountExpiration": null,
-        "updatedAt": 1789420737129
+        "updatedAt": 1789282399470
       },
       "rating": {
         "score": 7.5,
         "positive": 70,
-        "total": 8733,
         "desc": "Mostly Positive",
-        "updatedAt": 1789420737858
+        "total": 8728,
+        "updatedAt": 1789282402484
       },
       "historicalLow": {
         "price": null,
@@ -13657,7 +15718,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789199644423,
-      "updatedAt": 1789420737858
+      "updatedAt": 1789282404480
     },
     {
       "appid": 268500,
@@ -13670,14 +15731,14 @@
         "currency": "CNY",
         "isOnSale": false,
         "discountExpiration": null,
-        "updatedAt": 1789420738563
+        "updatedAt": 1789282406563
       },
       "rating": {
         "score": 7.5,
         "positive": 77,
-        "total": 12979,
         "desc": "Mostly Positive",
-        "updatedAt": 1789420739261
+        "total": 12976,
+        "updatedAt": 1789282409493
       },
       "historicalLow": {
         "price": 9.5,
@@ -13814,7 +15875,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789199632217,
-      "updatedAt": 1789420739261
+      "updatedAt": 1789282423516
     },
     {
       "appid": 275850,
@@ -13827,14 +15888,14 @@
         "currency": "CNY",
         "isOnSale": true,
         "discountExpiration": null,
-        "updatedAt": 1789420739941
+        "updatedAt": 1789282412552
       },
       "rating": {
         "score": 9.2,
         "positive": 88,
-        "total": 66957,
         "desc": "Very Positive",
-        "updatedAt": 1789420740659
+        "total": 66905,
+        "updatedAt": 1789282413529
       },
       "historicalLow": {
         "price": 69,
@@ -13937,7 +15998,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789199623232,
-      "updatedAt": 1789420740659
+      "updatedAt": 1789282415465
     },
     {
       "appid": 314650,
@@ -13950,14 +16011,14 @@
         "currency": "CNY",
         "isOnSale": false,
         "discountExpiration": null,
-        "updatedAt": 1789420741381
+        "updatedAt": 1789282416485
       },
       "rating": {
         "score": 9.9,
         "positive": 97,
-        "total": 2516,
         "desc": "Overwhelmingly Positive",
-        "updatedAt": 1789420742076
+        "total": 2514,
+        "updatedAt": 1789282418491
       },
       "historicalLow": {
         "price": 60,
@@ -14164,7 +16225,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789199605783,
-      "updatedAt": 1789420742076
+      "updatedAt": 1789282438469
     },
     {
       "appid": 1449690,
@@ -14177,14 +16238,14 @@
         "currency": "CNY",
         "isOnSale": false,
         "discountExpiration": null,
-        "updatedAt": 1789420742741
+        "updatedAt": 1789282421651
       },
       "rating": {
         "score": 9.6,
         "positive": 93,
-        "total": 8786,
         "desc": "Very Positive",
-        "updatedAt": 1789420743460
+        "total": 8782,
+        "updatedAt": 1789282424227
       },
       "historicalLow": {
         "price": 16.8,
@@ -14236,7 +16297,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789199580443,
-      "updatedAt": 1789420743460
+      "updatedAt": 1789282424227
     },
     {
       "appid": 235460,
@@ -14249,14 +16310,14 @@
         "currency": "CNY",
         "isOnSale": false,
         "discountExpiration": null,
-        "updatedAt": 1789420744130
+        "updatedAt": 1789282425329
       },
       "rating": {
         "score": 9.2,
         "positive": 91,
-        "total": 1260,
         "desc": "Very Positive",
-        "updatedAt": 1789420744868
+        "total": 1259,
+        "updatedAt": 1789282428167
       },
       "historicalLow": {
         "price": 67.2,
@@ -14311,7 +16372,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789199571448,
-      "updatedAt": 1789420744868
+      "updatedAt": 1789282428167
     },
     {
       "appid": 8870,
@@ -14324,14 +16385,14 @@
         "currency": "CNY",
         "isOnSale": false,
         "discountExpiration": null,
-        "updatedAt": 1789420745538
+        "updatedAt": 1789282429395
       },
       "rating": {
         "score": 9.6,
         "positive": 93,
-        "total": 19787,
         "desc": "Very Positive",
-        "updatedAt": 1789420746314
+        "total": 19785,
+        "updatedAt": 1789282430829
       },
       "historicalLow": {
         "price": 23,
@@ -14453,7 +16514,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789199564670,
-      "updatedAt": 1789420746314
+      "updatedAt": 1789282439588
     },
     {
       "appid": 12150,
@@ -14466,14 +16527,14 @@
         "currency": "CNY",
         "isOnSale": false,
         "discountExpiration": null,
-        "updatedAt": 1789420746939
+        "updatedAt": 1789282432541
       },
       "rating": {
         "score": 9.6,
         "positive": 92,
-        "total": 330,
         "desc": "Very Positive",
-        "updatedAt": 1789420747639
+        "total": 330,
+        "updatedAt": 1789282434453
       },
       "historicalLow": {
         "price": 15.8,
@@ -14522,7 +16583,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789199555039,
-      "updatedAt": 1789420747639
+      "updatedAt": 1789282434453
     },
     {
       "appid": 48700,
@@ -14535,14 +16596,14 @@
         "currency": "CNY",
         "isOnSale": false,
         "discountExpiration": null,
-        "updatedAt": 1789420748368
+        "updatedAt": 1789282436216
       },
       "rating": {
         "score": 9.9,
         "positive": 98,
-        "total": 24615,
         "desc": "Overwhelmingly Positive",
-        "updatedAt": 1789420749051
+        "total": 24611,
+        "updatedAt": 1789282438026
       },
       "historicalLow": {
         "price": 9.9,
@@ -14628,7 +16689,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789199542539,
-      "updatedAt": 1789420749051
+      "updatedAt": 1789282440779
     },
     {
       "appid": 489830,
@@ -14641,14 +16702,14 @@
         "currency": "CNY",
         "isOnSale": false,
         "discountExpiration": null,
-        "updatedAt": 1789420749734
+        "updatedAt": 1789282439861
       },
       "rating": {
         "score": 9.2,
         "positive": 88,
-        "total": 26576,
         "desc": "Very Positive",
-        "updatedAt": 1789420750489
+        "total": 26569,
+        "updatedAt": 1789282441392
       },
       "historicalLow": {
         "price": 16.5,
@@ -14733,7 +16794,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789199532499,
-      "updatedAt": 1789420750489
+      "updatedAt": 1789282443196
     },
     {
       "appid": 204100,
@@ -14746,14 +16807,14 @@
         "currency": "CNY",
         "isOnSale": false,
         "discountExpiration": null,
-        "updatedAt": 1789420751246
+        "updatedAt": 1789282442632
       },
       "rating": {
         "score": 8.4,
         "positive": 82,
-        "total": 2185,
         "desc": "Very Positive",
-        "updatedAt": 1789420751851
+        "total": 2185,
+        "updatedAt": 1789282444236
       },
       "historicalLow": {
         "price": 29,
@@ -14805,7 +16866,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789199524386,
-      "updatedAt": 1789420751851
+      "updatedAt": 1789282444236
     },
     {
       "appid": 207610,
@@ -14818,14 +16879,14 @@
         "currency": "CNY",
         "isOnSale": false,
         "discountExpiration": null,
-        "updatedAt": 1789420752536
+        "updatedAt": 1789282445163
       },
       "rating": {
         "score": 9.8,
         "positive": 95,
-        "total": 2803,
         "desc": "Overwhelmingly Positive",
-        "updatedAt": 1789420753254
+        "total": 2803,
+        "updatedAt": 1789282447452
       },
       "historicalLow": {
         "price": 5,
@@ -14893,7 +16954,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789199516272,
-      "updatedAt": 1789420753254
+      "updatedAt": 1789282448966
     },
     {
       "appid": 3081120,
@@ -14906,14 +16967,14 @@
         "currency": "CNY",
         "isOnSale": false,
         "discountExpiration": null,
-        "updatedAt": 1789420753928
+        "updatedAt": 1789282448668
       },
       "rating": {
         "score": 6.5,
         "positive": 64,
-        "total": 11,
         "desc": "Mixed",
-        "updatedAt": 1789420754655
+        "total": 11,
+        "updatedAt": 1789282450077
       },
       "historicalLow": {
         "price": null,
@@ -14970,7 +17031,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789199506479,
-      "updatedAt": 1789420754655
+      "updatedAt": 1789282450077
     },
     {
       "appid": 3762550,
@@ -14983,14 +17044,14 @@
         "currency": "CNY",
         "isOnSale": false,
         "discountExpiration": null,
-        "updatedAt": 1789420755357
+        "updatedAt": 1789282452319
       },
       "rating": {
         "score": 5.5,
         "positive": 59,
-        "total": 34,
         "desc": "Mixed",
-        "updatedAt": 1789420756051
+        "total": 34,
+        "updatedAt": 1789282452939
       },
       "historicalLow": {
         "price": null,
@@ -15077,7 +17138,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789199455916,
-      "updatedAt": 1789420756051
+      "updatedAt": 1789282456481
     },
     {
       "appid": 3312020,
@@ -15090,14 +17151,14 @@
         "currency": "CNY",
         "isOnSale": false,
         "discountExpiration": null,
-        "updatedAt": 1789420756747
+        "updatedAt": 1789282454686
       },
       "rating": {
         "score": 6.5,
         "positive": 64,
-        "total": 77,
         "desc": "Mixed",
-        "updatedAt": 1789420757444
+        "total": 77,
+        "updatedAt": 1789282456175
       },
       "historicalLow": {
         "price": null,
@@ -15151,27 +17212,27 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789199334456,
-      "updatedAt": 1789420757444
+      "updatedAt": 1789282456175
     },
     {
       "appid": 1659040,
       "name": "HITMAN World of Assassination",
       "originalName": "HITMAN World of Assassination",
       "price": {
-        "current": 108,
+        "current": 10.8,
         "original": 108,
-        "discountPercent": 0,
+        "discountPercent": 90,
         "currency": "CNY",
-        "isOnSale": false,
+        "isOnSale": true,
         "discountExpiration": null,
-        "updatedAt": 1789420758170
+        "updatedAt": 1789282458043
       },
       "rating": {
         "score": 8.4,
         "positive": 83,
-        "total": 7948,
         "desc": "Very Positive",
-        "updatedAt": 1789420759286
+        "total": 7940,
+        "updatedAt": 1789282459326
       },
       "historicalLow": {
         "price": 10.8,
@@ -15398,7 +17459,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789199221077,
-      "updatedAt": 1789420759286
+      "updatedAt": 1789282492449
     },
     {
       "appid": 1771300,
@@ -15411,14 +17472,14 @@
         "currency": "CNY",
         "isOnSale": false,
         "discountExpiration": null,
-        "updatedAt": 1789420759553
+        "updatedAt": 1789282461092
       },
       "rating": {
         "score": 9.6,
         "positive": 93,
-        "total": 41013,
         "desc": "Very Positive",
-        "updatedAt": 1789420760271
+        "total": 40984,
+        "updatedAt": 1789282462451
       },
       "historicalLow": {
         "price": 91.2,
@@ -15606,7 +17667,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789199208155,
-      "updatedAt": 1789420760271
+      "updatedAt": 1789282493458
     },
     {
       "appid": 1794680,
@@ -15619,14 +17680,14 @@
         "currency": "CNY",
         "isOnSale": false,
         "discountExpiration": null,
-        "updatedAt": 1789420760936
+        "updatedAt": 1789282464758
       },
       "rating": {
         "score": 9.9,
         "positive": 97,
-        "total": 26590,
         "desc": "Overwhelmingly Positive",
-        "updatedAt": 1789420761643
+        "total": 26587,
+        "updatedAt": 1789282466548
       },
       "historicalLow": {
         "price": null,
@@ -15804,7 +17865,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789199195781,
-      "updatedAt": 1789420761643
+      "updatedAt": 1789282502416
     },
     {
       "appid": 3332600,
@@ -15817,14 +17878,14 @@
         "currency": "CNY",
         "isOnSale": false,
         "discountExpiration": null,
-        "updatedAt": 1789420762344
+        "updatedAt": 1789282472471
       },
       "rating": {
         "score": 9.6,
         "positive": 92,
-        "total": 677,
         "desc": "Very Positive",
-        "updatedAt": 1789420763069
+        "total": 677,
+        "updatedAt": 1789282476584
       },
       "historicalLow": {
         "price": 36.4,
@@ -15883,27 +17944,27 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789199164496,
-      "updatedAt": 1789420763069
+      "updatedAt": 1789282476584
     },
     {
       "appid": 1601570,
       "name": "多重人生",
       "originalName": "多重人生",
       "price": {
-        "current": 109,
+        "current": 54.5,
         "original": 109,
-        "discountPercent": 0,
+        "discountPercent": 50,
         "currency": "CNY",
-        "isOnSale": false,
+        "isOnSale": true,
         "discountExpiration": null,
-        "updatedAt": 1789420763767
+        "updatedAt": 1789282481474
       },
       "rating": {
         "score": 9.2,
         "positive": 88,
-        "total": 3630,
         "desc": "Very Positive",
-        "updatedAt": 1789420764487
+        "total": 3620,
+        "updatedAt": 1789282485521
       },
       "historicalLow": {
         "price": 54.5,
@@ -15993,7 +18054,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789194107390,
-      "updatedAt": 1789420764487
+      "updatedAt": 1789282494446
     },
     {
       "appid": 346010,
@@ -16006,14 +18067,14 @@
         "currency": "CNY",
         "isOnSale": false,
         "discountExpiration": null,
-        "updatedAt": 1789420765141
+        "updatedAt": 1789282490529
       },
       "rating": {
         "score": 9.9,
         "positive": 97,
-        "total": 10923,
         "desc": "Overwhelmingly Positive",
-        "updatedAt": 1789420765867
+        "total": 10924,
+        "updatedAt": 1789282495517
       },
       "historicalLow": {
         "price": 5.8,
@@ -16133,7 +18194,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789194100122,
-      "updatedAt": 1789420765867
+      "updatedAt": 1789282505465
     },
     {
       "appid": 684410,
@@ -16146,14 +18207,14 @@
         "currency": "CNY",
         "isOnSale": false,
         "discountExpiration": null,
-        "updatedAt": 1789420766543
+        "updatedAt": 1789282498528
       },
       "rating": {
         "score": 9.6,
         "positive": 92,
-        "total": 1233,
         "desc": "Very Positive",
-        "updatedAt": 1789420767247
+        "total": 1233,
+        "updatedAt": 1789282502554
       },
       "historicalLow": {
         "price": 3.4,
@@ -16231,7 +18292,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789194090965,
-      "updatedAt": 1789420767247
+      "updatedAt": 1789282504459
     },
     {
       "appid": 108710,
@@ -16244,14 +18305,14 @@
         "currency": "CNY",
         "isOnSale": false,
         "discountExpiration": null,
-        "updatedAt": 1789420768065
+        "updatedAt": 1789282506505
       },
       "rating": {
         "score": 9.2,
         "positive": 88,
-        "total": 5375,
         "desc": "Very Positive",
-        "updatedAt": 1789420768720
+        "total": 5374,
+        "updatedAt": 1789282507839
       },
       "historicalLow": {
         "price": 5,
@@ -16335,7 +18396,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789194075102,
-      "updatedAt": 1789420768720
+      "updatedAt": 1789282510788
     },
     {
       "appid": 301640,
@@ -16348,14 +18409,14 @@
         "currency": "CNY",
         "isOnSale": false,
         "discountExpiration": null,
-        "updatedAt": 1789420769345
+        "updatedAt": 1789282509071
       },
       "rating": {
         "score": 8.4,
         "positive": 83,
-        "total": 3962,
         "desc": "Very Positive",
-        "updatedAt": 1789420770060
+        "total": 3962,
+        "updatedAt": 1789282511358
       },
       "historicalLow": {
         "price": 12.2,
@@ -16417,7 +18478,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789193285256,
-      "updatedAt": 1789420770060
+      "updatedAt": 1789282511358
     },
     {
       "appid": 966670,
@@ -16430,14 +18491,14 @@
         "currency": "CNY",
         "isOnSale": false,
         "discountExpiration": null,
-        "updatedAt": 1789420770761
+        "updatedAt": 1789282512351
       },
       "rating": {
         "score": 8.9,
         "positive": 85,
-        "total": 107,
         "desc": "Very Positive",
-        "updatedAt": 1789420771496
+        "total": 107,
+        "updatedAt": 1789282514981
       },
       "historicalLow": {
         "price": 5.4,
@@ -16492,7 +18553,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789193256380,
-      "updatedAt": 1789420771496
+      "updatedAt": 1789282514981
     },
     {
       "appid": 1623730,
@@ -16505,14 +18566,14 @@
         "currency": "CNY",
         "isOnSale": false,
         "discountExpiration": null,
-        "updatedAt": 1789420772147
+        "updatedAt": 1789282516176
       },
       "rating": {
         "score": 9.6,
         "positive": 92,
-        "total": 140602,
         "desc": "Very Positive",
-        "updatedAt": 1789420772846
+        "total": 140539,
+        "updatedAt": 1789282516666
       },
       "historicalLow": {
         "price": 75.6,
@@ -16599,7 +18660,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789193138200,
-      "updatedAt": 1789420772846
+      "updatedAt": 1789282518091
     },
     {
       "appid": 1545560,
@@ -16612,14 +18673,14 @@
         "currency": "CNY",
         "isOnSale": false,
         "discountExpiration": null,
-        "updatedAt": 1789420773554
+        "updatedAt": 1789282519526
       },
       "rating": {
         "score": 9.6,
         "positive": 92,
-        "total": 2017,
         "desc": "Very Positive",
-        "updatedAt": 1789420774276
+        "total": 2017,
+        "updatedAt": 1789282520538
       },
       "historicalLow": {
         "price": 37.3,
@@ -16713,7 +18774,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789193126410,
-      "updatedAt": 1789420774276
+      "updatedAt": 1789282525034
     },
     {
       "appid": 3117820,
@@ -16726,14 +18787,14 @@
         "currency": "CNY",
         "isOnSale": false,
         "discountExpiration": null,
-        "updatedAt": 1789420774952
+        "updatedAt": 1789282522092
       },
       "rating": {
         "score": 9.6,
         "positive": 94,
-        "total": 31574,
         "desc": "Very Positive",
-        "updatedAt": 1789420775660
+        "total": 31555,
+        "updatedAt": 1789282523277
       },
       "historicalLow": {
         "price": 64,
@@ -16831,7 +18892,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789193117365,
-      "updatedAt": 1789420775660
+      "updatedAt": 1789282523277
     },
     {
       "appid": 3636770,
@@ -16844,14 +18905,14 @@
         "currency": "CNY",
         "isOnSale": false,
         "discountExpiration": null,
-        "updatedAt": 1789420776337
+        "updatedAt": 1789193108041
       },
       "rating": {
         "score": 9.9,
         "positive": 98,
-        "total": 3999,
         "desc": "Overwhelmingly Positive",
-        "updatedAt": 1789420777055
+        "total": null,
+        "updatedAt": 1789193108997
       },
       "historicalLow": {
         "price": 24.8,
@@ -16902,7 +18963,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789193108997,
-      "updatedAt": 1789420777055
+      "updatedAt": 1789232346860
     },
     {
       "appid": 3755860,
@@ -16915,14 +18976,14 @@
         "currency": "CNY",
         "isOnSale": false,
         "discountExpiration": null,
-        "updatedAt": 1789420777739
+        "updatedAt": 1789193098988
       },
       "rating": {
         "score": 9.9,
         "positive": 97,
-        "total": 3172,
         "desc": "Overwhelmingly Positive",
-        "updatedAt": 1789420778445
+        "total": null,
+        "updatedAt": 1789193099884
       },
       "historicalLow": {
         "price": 39.2,
@@ -16975,7 +19036,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789193099884,
-      "updatedAt": 1789420778445
+      "updatedAt": 1789232346860
     },
     {
       "appid": 3855540,
@@ -16988,14 +19049,14 @@
         "currency": "CNY",
         "isOnSale": false,
         "discountExpiration": null,
-        "updatedAt": 1789420779127
+        "updatedAt": 1789193086526
       },
       "rating": {
         "score": 9.9,
         "positive": 98,
-        "total": 2793,
         "desc": "Overwhelmingly Positive",
-        "updatedAt": 1789420779866
+        "total": null,
+        "updatedAt": 1789193087637
       },
       "historicalLow": {
         "price": 39.2,
@@ -17048,7 +19109,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789193087637,
-      "updatedAt": 1789420779866
+      "updatedAt": 1789232346860
     },
     {
       "appid": 2510710,
@@ -17061,14 +19122,14 @@
         "currency": "CNY",
         "isOnSale": false,
         "discountExpiration": null,
-        "updatedAt": 1789420780560
+        "updatedAt": 1789192966769
       },
       "rating": {
         "score": 8.4,
-        "positive": 82,
-        "total": 471,
+        "positive": 83,
         "desc": "Very Positive",
-        "updatedAt": 1789420781240
+        "total": null,
+        "updatedAt": 1789192967910
       },
       "historicalLow": {
         "price": 148.5,
@@ -17136,7 +19197,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789192967910,
-      "updatedAt": 1789420781240
+      "updatedAt": 1789232346860
     },
     {
       "appid": 780310,
@@ -17149,14 +19210,14 @@
         "currency": "CNY",
         "isOnSale": false,
         "discountExpiration": null,
-        "updatedAt": 1789420781982
+        "updatedAt": 1789192955434
       },
       "rating": {
         "score": 9.2,
         "positive": 89,
-        "total": 7490,
         "desc": "Very Positive",
-        "updatedAt": 1789420782728
+        "total": null,
+        "updatedAt": 1789192956054
       },
       "historicalLow": {
         "price": 26.7,
@@ -17284,7 +19345,7 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789192956054,
-      "updatedAt": 1789420782728
+      "updatedAt": 1789232346860
     },
     {
       "appid": 2442460,
@@ -17297,14 +19358,14 @@
         "currency": "CNY",
         "isOnSale": false,
         "discountExpiration": null,
-        "updatedAt": 1789420783370
+        "updatedAt": 1789192946966
       },
       "rating": {
         "score": 8.4,
         "positive": 84,
-        "total": 281,
         "desc": "Very Positive",
-        "updatedAt": 1789420784061
+        "total": null,
+        "updatedAt": 1789192947581
       },
       "historicalLow": {
         "price": 46,
@@ -17408,7 +19469,12 @@
         "descriptionTranslated": false
       },
       "createdAt": 1789192947581,
-      "updatedAt": 1789420784061
+      "updatedAt": 1789232346860
     }
-  ]
+  ],
+  "source": "manual-sync",
+  "syncedAt": 1789448692864,
+  "gameCount": 154,
+  "fingerprint": "e3de13d0562fb800",
+  "syncedFrom": "https://ticianli.github.io"
 }
