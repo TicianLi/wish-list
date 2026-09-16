@@ -21,7 +21,26 @@
  *   · 单个游戏失败不影响整体；全程退出码保持 0（除非数据文件损坏）
  *
  * 运行：node tools/daily-refresh.mjs
- * 可选环境变量见文件底部 printHelp()
+ *
+ * 【本轮新增】2026-09-16
+ *   A. 折扣截止时间数据源（原 appdetails 不返回该字段，导致页面上永远是"未知"）
+ *      → 改用官方 featuredcategories 的 specials / dailydeal 分类，一次请求覆盖
+ *        全部正在促销的游戏。已有关闭字段一律保留，只填空缺。
+ *   B. Steam 用户标签（商店页 app_tag）+ 捆绑包标记，供页面做标签体系
+ *   C. 无中文名的游戏由 CI 机翻补齐（CI 网络可达翻译接口，浏览器侧不可达）
+ *   D. 【修复】saveDataFile 曾丢掉页面写入的 provenance 字段
+ *      （source / syncedAt / gameCount / fingerprint / syncedFrom）
+ *   E. 全流程诊断输出：把 Steam 真实返回的字段名打进日志，便于事后核对
+ *
+ * 可选环境变量（全部可不填，括号内为默认值）：
+ *   STEAM_CC(cn) STEAM_LANG(schinese) ITAD_API_KEY() MAIL_MODE(always)
+ *   REQ_INTERVAL_MS(700) REQ_TIMEOUT_MS(20000) MAX_GAMES(0=不限)
+ *   SMTP_HOST SMTP_PORT(465) SMTP_SECURE(true) SMTP_USER SMTP_PASS MAIL_FROM MAIL_TO
+ *   TAG_INTERVAL_MS(1100)  商店页请求间隔（比接口慢，避免被 Steam 挡）
+ *   MAX_TAG_FETCH(150)     单次运行最多抓几款游戏的标签（0=不限）
+ *   TAG_TTL_DAYS(30)       标签缓存有效期，未过期不重抓
+ *   TRANSLATE_ENABLED(true) 是否用 CI 机翻补齐缺失的中文名
+ *   TRANSLATE_INTERVAL_MS(400)
  */
 
 import fs from 'node:fs';
@@ -59,6 +78,17 @@ const CFG = {
   timeoutMs: Number(process.env.REQ_TIMEOUT_MS || 20000),
   // 每次运行最多刷新多少个（防止清单过大跑超时；0 = 不限）
   maxGames: Number(process.env.MAX_GAMES || 0),
+  // 商店页（抓用户标签 / 捆绑包）的间隔更保守
+  tagIntervalMs: Number(process.env.TAG_INTERVAL_MS || 1100),
+  // 单次运行最多抓几款游戏的标签（0 = 不限）；标签变化很慢，靠缓存分摊到多天
+  maxTagFetch: Number(process.env.MAX_TAG_FETCH || 150),
+  // 标签缓存有效期（天）
+  tagTtlDays: Number(process.env.TAG_TTL_DAYS || 30),
+  // 是否用 CI 机翻补齐缺失的中文名（CI 网络可达翻译接口，浏览器侧常常不可达）
+  translate: String(process.env.TRANSLATE_ENABLED ?? 'true') === 'true',
+  translateIntervalMs: Number(process.env.TRANSLATE_INTERVAL_MS || 400),
+  // 诊断输出（把 Steam 真实返回的字段名打进日志，方便核对）
+  diag: String(process.env.DIAG ?? 'true') === 'true',
   // 邮件相关
   smtp: {
     host: process.env.SMTP_HOST || '',
@@ -106,29 +136,53 @@ function stripHtml(s) {
 function hasChinese(s) { return /[\u4e00-\u9fff]/.test(s || ''); }
 
 /* 带超时的 fetch（Node 18+ 自带 fetch） */
-async function fetchJSON(url, opts = {}) {
+const UA = 'Mozilla/5.0 (compatible; wishlist-daily-refresh/1.1)';
+
+function withTimeout(init, timeoutMs) {
   const ctrl = new AbortController();
-  const t = setTimeout(() => ctrl.abort(), CFG.timeoutMs);
+  const t = setTimeout(() => ctrl.abort(), timeoutMs || CFG.timeoutMs);
+  return { init: Object.assign({}, init || {}, { signal: ctrl.signal }), done: () => clearTimeout(t) };
+}
+
+async function fetchJSON(url, opts = {}) {
+  const w = withTimeout({
+    headers: {
+      'User-Agent': UA,
+      'Accept': 'application/json,text/plain,*/*',
+      ...(opts.headers || {})
+    }
+  }, opts.timeoutMs);
   try {
-    const resp = await fetch(url, {
-      signal: ctrl.signal,
-      headers: {
-        'User-Agent': 'Mozilla/5.0 (compatible; wishlist-daily-refresh/1.0)',
-        'Accept': 'application/json,text/plain,*/*',
-        ...(opts.headers || {})
-      }
-    });
+    const resp = await fetch(url, w.init);
     if (!resp.ok) throw new Error('HTTP ' + resp.status);
     const text = await resp.text();
     try { return JSON.parse(text); }
     catch (e) { throw new Error('返回非 JSON：' + text.slice(0, 80)); }
   } finally {
-    clearTimeout(t);
+    w.done();
+  }
+}
+
+/* 抓 HTML（商店页标签 / 捆绑包用） */
+async function fetchHTML(url, opts = {}) {
+  const w = withTimeout({
+    headers: {
+      'User-Agent': UA,
+      'Accept': 'text/html,application/xhtml+xml,*/*',
+      'Accept-Language': 'zh-CN,zh;q=0.9,en;q=0.8'
+    }
+  }, opts.timeoutMs);
+  try {
+    const resp = await fetch(url, w.init);
+    if (!resp.ok) throw new Error('HTTP ' + resp.status);
+    return await resp.text();
+  } finally {
+    w.done();
   }
 }
 
 /* ============================ 默认结构 ============================ */
-function defaultPrice() { return { current: null, original: null, discountPercent: 0, currency: 'CNY', isOnSale: false, discountExpiration: null, updatedAt: 0 }; }
+function defaultPrice() { return { current: null, original: null, discountPercent: 0, currency: 'CNY', isOnSale: false, discountExpiration: null, expirationSource: null, saleEvent: null, updatedAt: 0 }; }
 function defaultRating() { return { score: null, positive: null, desc: null, total: null, updatedAt: 0 }; }
 function defaultLow() { return { price: null, count: null, confidence: 'pending', source: null, updatedAt: 0 }; }
 
@@ -151,6 +205,8 @@ function extractPrice(data, priceObj) {
     out.isOnSale = out.discountPercent > 0;
     const exp = Number(priceObj.discount_expiration);
     out.discountExpiration = (out.isOnSale && exp > 0) ? exp * 1000 : null;
+    // 记录来源：官方字段给了就用 official，没给则留空由特惠日历补
+    if (out.discountExpiration) out.expirationSource = 'appdetails';
   }
   out.updatedAt = nowMs();
   return out;
@@ -171,9 +227,10 @@ function saleRemainMs(g) {
 
 /* ============================ Steam / ITAD ============================ */
 let lastReq = 0;
-async function rateLimit() {
+async function rateLimit(overrideMs) {
+  const gap = (Number(overrideMs) > 0) ? Number(overrideMs) : CFG.intervalMs;
   const delta = nowMs() - lastReq;
-  if (delta < CFG.intervalMs) await sleep(CFG.intervalMs - delta);
+  if (delta < gap) await sleep(gap - delta);
   lastReq = nowMs();
 }
 
@@ -221,6 +278,293 @@ async function itadHistoryLow(appid) {
   return { price: low, currency: cur || 'CNY', confidence: 'A', source: 'ITAD(国区)', updatedAt: nowMs() };
 }
 
+/* ==================================================================
+ * 新增数据源 A：Steam 特惠日历（折扣截止时间）
+ * ------------------------------------------------------------------
+ * 背景：store.steampowered.com/api/appdetails 的 price_overview
+ *       并不稳定返回 discount_expiration，导致页面上「促销 / 截止」
+ *       这一列对全部在促销的游戏都显示“未知”。
+ * 方案：改用官方 featuredcategories 的 specials / dailydeal 分类，
+ *       每项都带 discount_expiration。一次请求即可覆盖全部在促销的
+ *       游戏，且无需 API Key。
+ * 原则：只补「截止时间 + 活动名」，绝不改写价格 —— 价格仍以
+ *       appdetails 为准，避免引入不确定数据。
+ * ================================================================== */
+const SALE_CATEGORIES = [
+  { key: 'dailydeal', label: '今日特惠' },
+  { key: 'specials',  label: '特惠' },
+  { key: 'spotlight', label: '精选推荐' }
+];
+
+function pickFirst() {
+  for (let i = 0; i < arguments.length; i++) {
+    const v = arguments[i];
+    if (v !== undefined && v !== null && v !== '') return v;
+  }
+  return undefined;
+}
+
+/* 把 Steam 各种可能的字段写法归一成内部结构。
+   只需截止时间，所以只解析 id / expiration / 折扣%。 */
+function normalizeSaleItem(raw) {
+  if (!raw || typeof raw !== 'object') return null;
+  const appid = Number(pickFirst(raw.id, raw.appid, raw.appId, raw.steam_appid));
+  if (!appid || !isFinite(appid) || appid <= 0 || appid > 5000000) return null;
+  const expRaw = pickFirst(raw.discount_expiration, raw.discountExpiration, raw.sale_end, raw.saleEnd, raw.discount_end);
+  const exp = Number(expRaw);
+  if (!isFinite(exp) || exp <= 0) return null;
+  // Unix 秒 → 毫秒（若已经是毫秒就不动）
+  const expiration = exp < 1e12 ? exp * 1000 : exp;
+  const pct = Number(pickFirst(raw.discount_percent, raw.discounted_percent, raw.discountPercent, 0)) || 0;
+  const name = typeof raw.name === 'string' ? raw.name : null;
+  return { appid, expiration, pct, name };
+}
+
+async function fetchSaleCalendar() {
+  const map = new Map();
+  const diag = { ok: false, keys: [], perCategory: [], sampleKeys: null, sample: null, error: null };
+  let data = null;
+  try {
+    await rateLimit();
+    data = await fetchJSON(`https://store.steampowered.com/api/featuredcategories?cc=${CFG.cc}&l=${CFG.lang}`);
+    diag.ok = true;
+  } catch (e) {
+    diag.error = e.message;
+    warn('特惠日历获取失败（折扣截止时间保持原值，不影响其它数据）：' + e.message);
+    return { map, diag };
+  }
+  if (!data || typeof data !== 'object') {
+    diag.error = '返回不是对象';
+    return { map, diag };
+  }
+  diag.keys = Object.keys(data);
+
+  const bump = (item, label) => {
+    const n = normalizeSaleItem(item);
+    if (!n) return false;
+    const prev = map.get(n.appid);
+    if (!prev) map.set(n.appid, { expiration: n.expiration, pct: n.pct, name: n.name, event: label });
+    else {
+      if (n.expiration < prev.expiration) prev.expiration = n.expiration;  // 取最早结束的那个
+      if (!prev.event) prev.event = label;
+    }
+    return true;
+  };
+
+  for (const c of SALE_CATEGORIES) {
+    const cat = data[c.key];
+    let items = [];
+    if (Array.isArray(cat)) items = cat;
+    else if (cat && Array.isArray(cat.items)) items = cat.items;
+    let hit = 0;
+    items.forEach(it => { if (bump(it, c.label)) hit++; });
+    diag.perCategory.push({ key: c.key, raw: items.length, withExpiration: hit });
+    if (!diag.sampleKeys && items.length) {
+      diag.sampleKeys = Object.keys(items[0] || {});
+      diag.sample = JSON.stringify(items[0]).slice(0, 700);
+    }
+  }
+  return { map, diag };
+}
+
+/* 把日历里的截止时间补进 games（只填空缺，不覆盖更可信的来源） */
+function applySaleCalendar(games, map) {
+  let matched = 0, filled = 0, kept = 0, stillUnknown = 0;
+  games.forEach(g => {
+    if (!g) return;
+    const hit = map.get(Number(g.appid));
+    const onSale = !!(g.price && g.price.isOnSale);
+    if (!hit) {
+      if (onSale && !g.price.discountExpiration) stillUnknown++;
+      return;
+    }
+    matched++;
+    if (!g.price) g.price = defaultPrice();
+    const existing = Number(g.price.discountExpiration) > 0 ? Number(g.price.discountExpiration) : null;
+    const src = g.price.expirationSource;
+    // 官方 appdetails / 用户手动确认 的来源更可信 → 只补活动名，不动时间
+    if (existing && (src === 'manual' || src === 'appdetails')) {
+      kept++;
+      if (!g.price.saleEvent) g.price.saleEvent = hit.event;
+      g.price.expirationCheckedAt = nowMs();
+      return;
+    }
+    if (existing !== hit.expiration) filled++;
+    g.price.discountExpiration = hit.expiration;
+    g.price.expirationSource = 'featuredcategories';
+    g.price.expirationCheckedAt = nowMs();
+    g.price.saleEvent = hit.event;
+  });
+  return { matched, filled, kept, stillUnknown };
+}
+
+function printSaleDiag(diag) {
+  if (!CFG.diag) return;
+  if (!diag.ok) {
+    log('[诊断·特惠日历] 获取失败：' + (diag.error || '未知'));
+    return;
+  }
+  log('[诊断·特惠日历] 顶层分类：' + diag.keys.join(','));
+  diag.perCategory.forEach(c => {
+    log(`[诊断·特惠日历]   ${c.key}: 共 ${c.raw} 项，其中带 discount_expiration 的 ${c.withExpiration} 项`);
+  });
+  if (diag.sampleKeys) log('[诊断·特惠日历] 首项字段名：' + diag.sampleKeys.join(','));
+  if (diag.sample) log('[诊断·特惠日历] 首项原文：' + diag.sample);
+}
+
+/* ==================================================================
+ * 新增数据源 B：商店页（Steam 用户标签 + 捆绑包）
+ * ------------------------------------------------------------------
+ * appdetails 不提供「用户标签」。Steam 真实用户标签只在商店页里，
+ * 形如 <a class="app_tag" ...>类魂</a>，且 l=schinese 下直接是中文，
+ * 不需要翻译。
+ * 标签变化很慢 → 带缓存（默认 30 天），并按次限流分摊到多天。
+ * ================================================================== */
+const TAG_BLOCK_RE = /<a\b[^>]*class="[^"]*\bapp_tag\b[^"]*"[^>]*>([\s\S]*?)<\/a>/gi;
+const BUNDLE_ID_RE = /data-ds-bundleid="(\d+)"|data-bundleid="(\d+)"|bundleid="(\d+)"/gi;
+
+function parseUserTags(html) {
+  const tags = [], seen = new Set();
+  let m;
+  TAG_BLOCK_RE.lastIndex = 0;
+  while ((m = TAG_BLOCK_RE.exec(html))) {
+    const t = stripHtml(m[1]).replace(/^\+/, '').trim();
+    if (!t || t === '+' || seen.has(t)) continue;
+    seen.add(t);
+    tags.push(t);
+    if (tags.length >= 20) break;
+  }
+  return tags;
+}
+
+function parseBundleIds(html) {
+  const ids = [], seen = new Set();
+  let m;
+  BUNDLE_ID_RE.lastIndex = 0;
+  while ((m = BUNDLE_ID_RE.exec(html))) {
+    const id = m[1] || m[2] || m[3];
+    if (id && !seen.has(id)) { seen.add(id); ids.push(Number(id)); }
+  }
+  return ids;
+}
+
+async function fetchStorePage(appid) {
+  await rateLimit(CFG.tagIntervalMs);
+  return await fetchHTML(`https://store.steampowered.com/app/${appid}/?cc=${CFG.cc}&l=${CFG.lang}`);
+}
+
+function tagsNeedRefresh(g) {
+  const d = g.details || {};
+  if (!Array.isArray(d.userTags) || !d.userTags.length) return true;
+  if (!d.userTagsFetchedAt) return true;
+  return (nowMs() - d.userTagsFetchedAt) > CFG.tagTtlDays * 86400000;
+}
+
+async function enrichStoreData(games) {
+  const stat = { tried: 0, ok: 0, failed: 0, tags: 0, bundles: 0, diagTagHtml: null, diagBundleHtml: null };
+  let todo = games.filter(g => g && g.appid && tagsNeedRefresh(g));
+  if (CFG.maxTagFetch > 0 && todo.length > CFG.maxTagFetch) {
+    log(`商店页标签待补 ${todo.length} 款，本次按 MAX_TAG_FETCH 只处理 ${CFG.maxTagFetch} 款（其余留给后续运行）。`);
+    todo = todo.slice(0, CFG.maxTagFetch);
+  }
+  if (!todo.length) return stat;
+
+  for (let i = 0; i < todo.length; i++) {
+    const g = todo[i];
+    stat.tried++;
+    try {
+      const html = await fetchStorePage(g.appid);
+      if (!g.details) g.details = defaultDetails();
+      const tags = parseUserTags(html);
+      const bundles = parseBundleIds(html);
+      if (!stat.diagTagHtml) {
+        const idx = html.search(/<a\b[^>]*class="[^"]*\bapp_tag\b/);
+        stat.diagTagHtml = idx === -1 ? '(未匹配到 app_tag 区块)' : html.slice(idx, idx + 260);
+      }
+      if (!stat.diagBundleHtml) {
+        const bi = html.search(/data-ds-bundleid|data-bundleid|game_area_purchase_game_bundle/);
+        stat.diagBundleHtml = bi === -1 ? '(未匹配到 bundle 标记)' : html.slice(bi, bi + 260);
+      }
+      g.details.userTags = tags;
+      g.details.userTagsFetchedAt = nowMs();
+      if (bundles.length) g.details.bundleIds = bundles;
+      stat.ok++;
+      stat.tags += tags.length;
+      stat.bundles += bundles.length;
+      if (i % 20 === 19) log(`  标签进度 ${i + 1}/${todo.length}…`);
+    } catch (e) {
+      stat.failed++;
+      // 单款失败不影响整体
+      if (stat.failed <= 3) warn(`  标签抓取失败 ${g.name || g.appid}：${e.message}`);
+    }
+  }
+  return stat;
+}
+
+function printStoreDiag(stat) {
+  if (!CFG.diag) return;
+  log(`[诊断·商店页] 尝试 ${stat.tried} 款，成功 ${stat.ok}，失败 ${stat.failed}，共取到标签 ${stat.tags} 个、捆绑包标记 ${stat.bundles} 个`);
+  if (stat.diagTagHtml) log('[诊断·商店页] 标签区首段 HTML：' + stat.diagTagHtml);
+  if (stat.diagBundleHtml) log('[诊断·商店页] 捆绑包标记首段 HTML：' + stat.diagBundleHtml);
+}
+
+/* ==================================================================
+ * 新增数据源 C：缺失中文名的机翻补齐
+ * ------------------------------------------------------------------
+ * 浏览器侧访问 translate.googleapis.com 常年不通（实测），
+ * 而 GitHub Actions 的出口网络可以正常访问 → 把机翻放到 CI 做。
+ * 结果打标记 nameSource='machine-translation'，页面可显示「机翻」角标。
+ * 只翻译纯英文名，且已有缓存的直接复用，不重复请求。
+ * ================================================================== */
+async function translateGoogle(text) {
+  await rateLimit(CFG.translateIntervalMs);
+  const url = 'https://translate.googleapis.com/translate_a/single?client=gtx&sl=auto&tl=zh-CN&dt=t&q=' +
+    encodeURIComponent(String(text).slice(0, 900));
+  const arr = await fetchJSON(url);
+  if (!Array.isArray(arr) || !Array.isArray(arr[0])) return null;
+  const s = arr[0].map(x => (x && x[0]) || '').join('').trim();
+  return s || null;
+}
+
+async function enrichChineseNames(games) {
+  const stat = { enabled: CFG.translate, total: 0, reused: 0, translated: 0, failed: 0 };
+  if (!CFG.translate) return stat;
+  const todo = games.filter(g =>
+    g && g.name && !hasChinese(g.name) && /[A-Za-z]/.test(g.name) && g.nameSource !== 'machine-translation'
+  );
+  stat.total = todo.length;
+  if (!todo.length) return stat;
+  log(`发现 ${todo.length} 款没有中文名，开始机翻补齐（CI 侧执行）…`);
+  for (const g of todo) {
+    // 已有缓存译文 → 直接用，避免重复请求
+    if (g.nameZh && hasChinese(g.nameZh)) {
+      g.originalName = g.originalName || g.name;
+      g.name = g.nameZh;
+      g.nameSource = 'machine-translation';
+      stat.reused++;
+      continue;
+    }
+    try {
+      const zh = await translateGoogle(g.name);
+      if (zh && hasChinese(zh)) {
+        g.nameZh = zh;
+        g.originalName = g.originalName || g.name;
+        g.name = zh;
+        g.nameSource = 'machine-translation';
+        g.nameTranslatedAt = nowMs();
+        stat.translated++;
+        if (stat.translated % 20 === 0) log(`  中文名进度 ${stat.translated}…`);
+      } else {
+        stat.failed++;
+      }
+    } catch (e) {
+      stat.failed++;
+      if (stat.failed <= 3) warn(`  翻译失败 ${g.name}：${e.message}`);
+    }
+  }
+  return stat;
+}
+
 /* ============================ 主流程 ============================ */
 function loadDataFile() {
   if (!fs.existsSync(DATA_FILE)) {
@@ -235,10 +579,22 @@ function loadDataFile() {
   return data;
 }
 
+/* 【修复】这里以前只写 {version, updatedAt, refreshedAt, games}，
+   会把页面「☁️ 同步到云端」时写入的来源指纹（source / syncedAt /
+   gameCount / fingerprint / syncedFrom）整段丢掉 —— 用户点一次同步、
+   凌晨 CI 一跑，指纹就没了。现在原样保留，并补记是谁刷的。 */
+const PROVENANCE_KEYS = ['source', 'syncedAt', 'gameCount', 'fingerprint', 'syncedFrom'];
+
 function saveDataFile(data) {
   const dir = path.dirname(DATA_FILE);
   fs.mkdirSync(dir, { recursive: true });
-  const payload = { version: data.version || 3, updatedAt: nowMs(), refreshedAt: nowMs(), games: data.games };
+  const payload = { version: data.version || 3 };
+  PROVENANCE_KEYS.forEach(k => { if (data[k] !== null && data[k] !== undefined) payload[k] = data[k]; });
+  payload.updatedAt = nowMs();
+  payload.refreshedAt = nowMs();
+  payload.refreshedBy = 'github-actions';
+  payload.refreshCount = (Number(data.refreshCount) || 0) + 1;
+  payload.games = data.games;
   fs.writeFileSync(DATA_FILE, JSON.stringify(payload, null, 2), 'utf8');
   return payload;
 }
@@ -446,11 +802,44 @@ async function main() {
     }
   }
 
+  /* ---------------- 新增：特惠日历（补折扣截止时间） ---------------- */
+  let calStat = { matched: 0, filled: 0, kept: 0, stillUnknown: 0 };
+  try {
+    const cal = await fetchSaleCalendar();
+    printSaleDiag(cal.diag);
+    calStat = applySaleCalendar(data.games, cal.map);
+    log(`特惠日历：命中清单 ${calStat.matched} 款，补上截止时间 ${calStat.filled} 款，` +
+        `保留更可信来源 ${calStat.kept} 款${calStat.stillUnknown ? '，仍未知 ' + calStat.stillUnknown + ' 款' : ''}`);
+  } catch (e) {
+    warn('特惠日历处理异常（不影响其它数据）：' + e.message);
+  }
+
+  /* ---------------- 新增：中文名机翻补齐 ---------------- */
+  try {
+    const tr = await enrichChineseNames(games);
+    if (tr.total) {
+      log(`中文名：待补 ${tr.total} 款 → 新译 ${tr.translated} 款，复用缓存 ${tr.reused} 款，失败 ${tr.failed} 款`);
+    } else {
+      log('中文名：无缺失，跳过。');
+    }
+  } catch (e) {
+    warn('中文名补齐异常（不影响其它数据）：' + e.message);
+  }
+
+  /* ---------------- 新增：商店页用户标签 / 捆绑包 ---------------- */
+  try {
+    const st = await enrichStoreData(games);
+    printStoreDiag(st);
+    log(`用户标签：本次抓取 ${st.ok}/${st.tried} 款成功，共 ${st.tags} 个标签` +
+        (st.failed ? `，失败 ${st.failed} 款（下次运行会重试）` : ''));
+  } catch (e) {
+    warn('商店页标签处理异常（不影响其它数据）：' + e.message);
+  }
+
   const payload = saveDataFile(data);
   const jsonPath = path.join(ROOT, 'data', `steam-wishlist-${todayStr()}.json`);
   fs.writeFileSync(jsonPath, JSON.stringify(payload, null, 2), 'utf8');
   log('已导出 JSON：' + path.relative(ROOT, jsonPath));
-
   const changes = diffChanges(results, data.games);
   const known = g => g.price && g.price.current != null;
   const lowKnown = g => g.historicalLow && g.historicalLow.price != null;
