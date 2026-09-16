@@ -34,12 +34,18 @@ const FAKE = {
     price_overview: { final: 2400, initial: 4800, discount_percent: 50, currency: 'CNY' },
     developers: ['ConcernedApe'], publishers: ['ConcernedApe']
   },
+  '1091500': {           // 赛博朋克2077：打折，官方接口和特惠日历【都没有】截止时间
+    name: 'Cyberpunk 2077', is_free: false,     // → 只能由【商店页倒计时】补上
+    price_overview: { final: 14900, initial: 29800, discount_percent: 50, currency: 'CNY' },
+    developers: ['CD PROJEKT RED'], publishers: ['CD PROJEKT RED']
+  },
   '9999999': null        // 故意不存在，测失败容错
 };
 const REVIEWS = {
   '1245620': { total_reviews: 500000, total_positive: 460000, review_score_desc: 'Very Positive' },
   '292030': { total_reviews: 700000, total_positive: 670000, review_score_desc: 'Overwhelmingly Positive' },
-  '413150': { total_reviews: 600000, total_positive: 588000, review_score_desc: 'Overwhelmingly Positive' }
+  '413150': { total_reviews: 600000, total_positive: 588000, review_score_desc: 'Overwhelmingly Positive' },
+  '1091500': { total_reviews: 800000, total_positive: 720000, review_score_desc: 'Very Positive' }
 };
 /* 特惠日历：故意同时包含 ELDEN RING（但给一个【不同】的截止时间），
    用来验证「官方 appdetails 给了截止时间时，日历不得覆盖」。 */
@@ -59,7 +65,11 @@ const SALE = {
     ]
   }
 };
-/* 商店页 HTML 片段：用户标签 + 捆绑包标记 */
+/* 商店页 HTML 片段：用户标签 + 捆绑包标记 + 折扣倒计时 */
+const STORE_COUNTDOWNS = {
+  '1245620': SOON - 7200,     // 故意给一个与官方 appdetails 不同的时间 → 验证「不覆盖官方来源」
+  '1091500': SOON + 86400     // 只有商店页有 → 验证「商店页倒计时能补上」
+};
 const STORE_HTML = (id) => `<!doctype html><html><body>
 <div class="glance_ctn"><div class="glance_tags popular_tags">
 <a class="app_tag" href="/tags/29482/">类魂</a>
@@ -71,6 +81,10 @@ const STORE_HTML = (id) => `<!doctype html><html><body>
 </div></div>
 <div class="game_area_purchase_game_wrapper" data-ds-bundleid="12557">
   <h1>购买 ${id} 系列合集 BUNDLE (?)</h1>
+${STORE_COUNTDOWNS[id] ? `  <div class="discount_block game_purchase_discount">
+    <div class="discount_pct">-50%</div>
+    <div class="game_purchase_discount_countdown">特卖将于 <span class="countdown" data-timestamp="${STORE_COUNTDOWNS[id]}"></span> 后结束</div>
+  </div>` : ''}
 </div>
 </body></html>`;
 
@@ -148,6 +162,13 @@ const fixture = {
     {
       appid: 413150, name: 'Stardew Valley', originalName: 'Stardew Valley',
       price: { current: 48, original: 48, discountPercent: 0, currency: 'CNY', isOnSale: false, discountExpiration: null, updatedAt: 0 },
+      rating: { score: null, positive: null, total: null, desc: null, updatedAt: 0 },
+      historicalLow: { price: null, count: null, confidence: 'pending', source: null, updatedAt: 0 },
+      targetPrice: null, note: '', dlcList: [], details: {}, createdAt: Date.now(), updatedAt: Date.now()
+    },
+    {
+      appid: 1091500, name: 'Cyberpunk 2077', originalName: 'Cyberpunk 2077',
+      price: { current: 298, original: 298, discountPercent: 0, currency: 'CNY', isOnSale: false, discountExpiration: null, updatedAt: 0 },
       rating: { score: null, positive: null, total: null, desc: null, updatedAt: 0 },
       historicalLow: { price: null, count: null, confidence: 'pending', source: null, updatedAt: 0 },
       targetPrice: null, note: '', dlcList: [], details: {}, createdAt: Date.now(), updatedAt: Date.now()
@@ -248,6 +269,16 @@ check('缺失的中文名已由 CI 机翻补齐', hasChineseIn(sdv.name) && sdv.
 check('英文原名被保留到 originalName', sdv.originalName === 'Stardew Valley', String(sdv.originalName));
 check('已有中文名的游戏不被机翻改动', byId['292030'].name === '巫师3', byId['292030'].name);
 
+/* ---------- 新增：折扣截止时间的第三来源（商店页倒计时） ---------- */
+const cp = byId['1091500'];
+check('商店页倒计时补上了官方与日历都没有的截止时间',
+  cp.price.discountExpiration === (SOON + 86400) * 1000, String(cp.price.discountExpiration));
+check('该截止时间来源标记为 storepage', cp.price.expirationSource === 'storepage', String(cp.price.expirationSource));
+check('商店页倒计时不会覆盖官方 appdetails 的来源标记（艾尔登法环）',
+  elden.price.expirationSource === 'appdetails' && elden.price.discountExpiration === SOON * 1000,
+  String(elden.price.expirationSource) + ' / ' + elden.price.discountExpiration);
+check('促销中但缺截止时间的游戏会被排到商店页待补队列最前', cp.details && !!cp.details.userTagsFetchedAt);
+
 check('输出文件含 refreshedAt', !!out.refreshedAt);
 check('来源指纹 source 未被 CI 刷掉', out.source === 'manual-sync', String(out.source));
 check('来源指纹 fingerprint 未被刷掉', out.fingerprint === 'deadbeefcafe1234', String(out.fingerprint));
@@ -264,8 +295,8 @@ check('快照 JSON 已正确生成', !!snap, '新增文件：' + (leaked.join(',
 if (snap) {
   try {
     const snapData = JSON.parse(fs.readFileSync(path.join(DATA_DIR, snap), 'utf8'));
-    check('快照里保留了来源指纹、且含 4 款游戏',
-      snapData.source === 'manual-sync' && (snapData.games || []).length === 4,
+    check('快照里保留了来源指纹、且含 5 款游戏',
+      snapData.source === 'manual-sync' && (snapData.games || []).length === 5,
       'games=' + ((snapData.games || []).length) + ' source=' + snapData.source);
   } catch (e) { check('快照 JSON 可解析', false, e.message); }
 }
