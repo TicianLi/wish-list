@@ -1,9 +1,6 @@
 {
   "version": 3,
-  "updatedAt": 1789565897100,
-  "refreshedAt": 1789565897100,
-  "refreshedBy": "github-actions",
-  "refreshCount": 4,
+  "updatedAt": 1789569158433,
   "games": [
     {
       "appid": 2417610,
@@ -23,8 +20,8 @@
       "rating": {
         "score": 6.5,
         "positive": 63,
-        "total": 1021,
         "desc": "Mixed",
+        "total": 1021,
         "updatedAt": 1789565564612
       },
       "historicalLow": {
@@ -144,10 +141,8 @@
         ]
       },
       "createdAt": 1789449629221,
-      "updatedAt": 1789565564612,
-      "nameZh": "合金装备 Δ：食蛇者",
-      "nameSource": "machine-translation",
-      "nameTranslatedAt": 1789560173908
+      "updatedAt": 1789569140251,
+      "nameSource": "machine-translation"
     },
     {
       "appid": 678960,
@@ -167,8 +162,8 @@
       "rating": {
         "score": 7.5,
         "positive": 79,
-        "total": 16850,
         "desc": "Mostly Positive",
+        "total": 16850,
         "updatedAt": 1789565566052
       },
       "historicalLow": {
@@ -303,13 +298,12 @@
           "冒险",
           "鲜血"
         ],
-        "userTagsFetchedAt": 1789560238706
+        "userTagsFetchedAt": 1789560238706,
+        "bundleIds": []
       },
       "createdAt": 1789449608499,
-      "updatedAt": 1789565566052,
-      "nameZh": "代码静脉",
-      "nameSource": "machine-translation",
-      "nameTranslatedAt": 1789560174011
+      "updatedAt": 1789569140251,
+      "nameSource": "machine-translation"
     },
     {
       "appid": 812140,
@@ -329,8 +323,8 @@
       "rating": {
         "score": 8.9,
         "positive": 86,
-        "total": 62590,
         "desc": "Very Positive",
+        "total": 62590,
         "updatedAt": 1789565567446
       },
       "historicalLow": {
@@ -471,10 +465,8 @@
         ]
       },
       "createdAt": 1789449572950,
-      "updatedAt": 1789565567446,
-      "nameZh": "刺客信条®奥德赛",
-      "nameSource": "machine-translation",
-      "nameTranslatedAt": 1789560174950
+      "updatedAt": 1789569140251,
+      "nameSource": "machine-translation"
     },
     {
       "appid": 3321460,
@@ -494,8 +486,8 @@
       "rating": {
         "score": 7.5,
         "positive": 70,
-        "total": 24918,
         "desc": "Mostly Positive",
+        "total": 24918,
         "updatedAt": 1789565568883
       },
       "historicalLow": {
@@ -620,10 +612,12 @@
           "鲜血",
           "类魂系列"
         ],
-        "userTagsFetchedAt": 1789562535396
+        "userTagsFetchedAt": 1789562535396,
+        "bundleIds": []
       },
       "createdAt": 1789449564829,
-      "updatedAt": 1789565568883
+      "updatedAt": 1789569140251,
+      "nameSource": null
     },
     {
       "appid": 3489700,
@@ -643,8 +637,8 @@
       "rating": {
         "score": 9.6,
         "positive": 92,
-        "total": 43873,
         "desc": "Very Positive",
+        "total": 43873,
         "updatedAt": 1789565570234
       },
       "historicalLow": {
@@ -742,10 +736,12 @@
           "风格化",
           "玩家对战环境"
         ],
-        "userTagsFetchedAt": 1789562536465
+        "userTagsFetchedAt": 1789562536465,
+        "bundleIds": []
       },
       "createdAt": 1789449553098,
-      "updatedAt": 1789565570234
+      "updatedAt": 1789569140251,
+      "nameSource": null
     },
     {
       "appid": 1627720,
@@ -765,8 +761,8 @@
       "rating": {
         "score": 8.4,
         "positive": 84,
-        "total": 14117,
         "desc": "Very Positive",
+        "total": 14117,
         "updatedAt": 1789565571615
       },
       "historicalLow": {
@@ -905,10 +901,8 @@
         ]
       },
       "createdAt": 1789449497299,
-      "updatedAt": 1789565571615,
-      "nameZh": "P的谎言",
-      "nameSource": "machine-translation",
-      "nameTranslatedAt": 1789561280509
+      "updatedAt": 1789569140251,
+      "nameSource": "machine-translation"
     },
     {
       "appid": 2582320,
@@ -928,8 +922,8 @@
       "rating": {
         "score": 9.2,
         "positive": 89,
-        "total": 1334,
         "desc": "Very Positive",
+        "total": 1334,
         "updatedAt": 1789565573059
       },
       "historicalLow": {
@@ -1021,13 +1015,12 @@
           "剧情丰富",
           "色情内容"
         ],
-        "userTagsFetchedAt": 1789560244202
+        "userTagsFetchedAt": 1789560244202,
+        "bundleIds": []
       },
       "createdAt": 1789449490176,
-      "updatedAt": 1789565573059,
-      "nameZh": "混音带",
-      "nameSource": "machine-translation",
-      "nameTranslatedAt": 1789560175391
+      "updatedAt": 1789569140251,
+      "nameSource": "machine-translation"
     },
     {
       "appid": 2447680,
@@ -1047,8 +1040,8 @@
       "rating": {
         "score": 8.4,
         "positive": 84,
-        "total": 593,
         "desc": "Very Positive",
+        "total": 593,
         "updatedAt": 1789565574438
       },
       "historicalLow": {
@@ -1134,10 +1127,12 @@
           "单人",
           "裸露"
         ],
-        "userTagsFetchedAt": 1789560245416
+        "userTagsFetchedAt": 1789560245416,
+        "bundleIds": []
       },
       "createdAt": 1789449482564,
-      "updatedAt": 1789565574438
+      "updatedAt": 1789569140251,
+      "nameSource": null
     },
     {
       "appid": 1533420,
@@ -1157,8 +1152,8 @@
       "rating": {
         "score": 9.6,
         "positive": 93,
-        "total": 913,
         "desc": "Very Positive",
+        "total": 913,
         "updatedAt": 1789565575821
       },
       "historicalLow": {
@@ -1259,10 +1254,8 @@
         ]
       },
       "createdAt": 1789449469765,
-      "updatedAt": 1789565575821,
-      "nameZh": "霓虹白",
-      "nameSource": "machine-translation",
-      "nameTranslatedAt": 1789560176568
+      "updatedAt": 1789569140251,
+      "nameSource": "machine-translation"
     },
     {
       "appid": 1624540,
@@ -1282,8 +1275,8 @@
       "rating": {
         "score": 9.2,
         "positive": 88,
-        "total": 1194,
         "desc": "Very Positive",
+        "total": 1194,
         "updatedAt": 1789565577222
       },
       "historicalLow": {
@@ -1379,10 +1372,8 @@
         ]
       },
       "createdAt": 1789449462518,
-      "updatedAt": 1789565577222,
-      "nameZh": "讲故事的人",
-      "nameSource": "machine-translation",
-      "nameTranslatedAt": 1789561281671
+      "updatedAt": 1789569140251,
+      "nameSource": "machine-translation"
     },
     {
       "appid": 346110,
@@ -1402,8 +1393,8 @@
       "rating": {
         "score": 8.4,
         "positive": 83,
-        "total": 95633,
         "desc": "Very Positive",
+        "total": 95633,
         "updatedAt": 1789565578618
       },
       "historicalLow": {
@@ -1691,10 +1682,8 @@
         ]
       },
       "createdAt": 1789449449836,
-      "updatedAt": 1789565578618,
-      "nameZh": "方舟：生存进化",
-      "nameSource": "machine-translation",
-      "nameTranslatedAt": 1789560177879
+      "updatedAt": 1789569140251,
+      "nameSource": "machine-translation"
     },
     {
       "appid": 3017860,
@@ -1714,8 +1703,8 @@
       "rating": {
         "score": 9.2,
         "positive": 91,
-        "total": 4474,
         "desc": "Very Positive",
+        "total": 4474,
         "updatedAt": 1789565580028
       },
       "historicalLow": {
@@ -1847,10 +1836,8 @@
         ]
       },
       "createdAt": 1789449439707,
-      "updatedAt": 1789565580028,
-      "nameZh": "《DOOM》：黑暗时代",
-      "nameSource": "machine-translation",
-      "nameTranslatedAt": 1789561282870
+      "updatedAt": 1789569140251,
+      "nameSource": "machine-translation"
     },
     {
       "appid": 1216710,
@@ -1870,8 +1857,8 @@
       "rating": {
         "score": 9.6,
         "positive": 93,
-        "total": 14273,
         "desc": "Very Positive",
+        "total": 14273,
         "updatedAt": 1789565581462
       },
       "historicalLow": {
@@ -2000,7 +1987,8 @@
         ]
       },
       "createdAt": 1789449429594,
-      "updatedAt": 1789565581462
+      "updatedAt": 1789569140251,
+      "nameSource": null
     },
     {
       "appid": 2084000,
@@ -2020,8 +2008,8 @@
       "rating": {
         "score": 9.2,
         "positive": 90,
-        "total": 1444,
         "desc": "Very Positive",
+        "total": 1444,
         "updatedAt": 1789565582843
       },
       "historicalLow": {
@@ -2125,7 +2113,8 @@
         ]
       },
       "createdAt": 1789449418480,
-      "updatedAt": 1789565582843
+      "updatedAt": 1789569140251,
+      "nameSource": null
     },
     {
       "appid": 1164940,
@@ -2145,8 +2134,8 @@
       "rating": {
         "score": 8.4,
         "positive": 84,
-        "total": 1206,
         "desc": "Very Positive",
+        "total": 1206,
         "updatedAt": 1789565584253
       },
       "historicalLow": {
@@ -2283,7 +2272,8 @@
         ]
       },
       "createdAt": 1789449410717,
-      "updatedAt": 1789565584253
+      "updatedAt": 1789569140251,
+      "nameSource": null
     },
     {
       "appid": 384190,
@@ -2303,8 +2293,8 @@
       "rating": {
         "score": 9.6,
         "positive": 92,
-        "total": 6416,
         "desc": "Very Positive",
+        "total": 6416,
         "updatedAt": 1789565585624
       },
       "historicalLow": {
@@ -2396,10 +2386,8 @@
         ]
       },
       "createdAt": 1789449403972,
-      "updatedAt": 1789565585624,
-      "nameZh": "阿布祖",
-      "nameSource": "machine-translation",
-      "nameTranslatedAt": 1789560178963
+      "updatedAt": 1789569140251,
+      "nameSource": "machine-translation"
     },
     {
       "appid": 1161170,
@@ -2419,8 +2407,8 @@
       "rating": {
         "score": 9.8,
         "positive": 96,
-        "total": 6568,
         "desc": "Overwhelmingly Positive",
+        "total": 6568,
         "updatedAt": 1789565587023
       },
       "historicalLow": {
@@ -2534,7 +2522,8 @@
         ]
       },
       "createdAt": 1789449397087,
-      "updatedAt": 1789565587023
+      "updatedAt": 1789569140251,
+      "nameSource": null
     },
     {
       "appid": 1282100,
@@ -2554,8 +2543,8 @@
       "rating": {
         "score": 7.5,
         "positive": 73,
-        "total": 11615,
         "desc": "Mostly Positive",
+        "total": 11615,
         "updatedAt": 1789565588425
       },
       "historicalLow": {
@@ -2690,7 +2679,8 @@
         ]
       },
       "createdAt": 1789449385735,
-      "updatedAt": 1789565588425
+      "updatedAt": 1789569140251,
+      "nameSource": null
     },
     {
       "appid": 1966900,
@@ -2710,8 +2700,8 @@
       "rating": {
         "score": 8.9,
         "positive": 85,
-        "total": 8377,
         "desc": "Very Positive",
+        "total": 8377,
         "updatedAt": 1789565589874
       },
       "historicalLow": {
@@ -2804,7 +2794,8 @@
         ]
       },
       "createdAt": 1789449379519,
-      "updatedAt": 1789565589874
+      "updatedAt": 1789569140251,
+      "nameSource": null
     },
     {
       "appid": 3228590,
@@ -2824,8 +2815,8 @@
       "rating": {
         "score": 5.5,
         "positive": 54,
-        "total": 1965,
         "desc": "Mixed",
+        "total": 1965,
         "updatedAt": 1789565591245
       },
       "historicalLow": {
@@ -2957,7 +2948,8 @@
         ]
       },
       "createdAt": 1789449370423,
-      "updatedAt": 1789565591245
+      "updatedAt": 1789569140251,
+      "nameSource": null
     },
     {
       "appid": 775500,
@@ -2977,8 +2969,8 @@
       "rating": {
         "score": 7.5,
         "positive": 74,
-        "total": 6133,
         "desc": "Mostly Positive",
+        "total": 6133,
         "updatedAt": 1789565592650
       },
       "historicalLow": {
@@ -3147,10 +3139,12 @@
           "砍杀",
           "类魂系列"
         ],
-        "userTagsFetchedAt": 1789560259621
+        "userTagsFetchedAt": 1789560259621,
+        "bundleIds": []
       },
       "createdAt": 1789449339704,
-      "updatedAt": 1789565592650
+      "updatedAt": 1789569140251,
+      "nameSource": null
     },
     {
       "appid": 1622910,
@@ -3170,8 +3164,8 @@
       "rating": {
         "score": 8.9,
         "positive": 85,
-        "total": 590,
         "desc": "Very Positive",
+        "total": 590,
         "updatedAt": 1789565594028
       },
       "historicalLow": {
@@ -3290,10 +3284,8 @@
         ]
       },
       "createdAt": 1789449331976,
-      "updatedAt": 1789565594028,
-      "nameZh": "仍然唤醒深渊",
-      "nameSource": "machine-translation",
-      "nameTranslatedAt": 1789561284068
+      "updatedAt": 1789569140251,
+      "nameSource": "machine-translation"
     },
     {
       "appid": 1334040,
@@ -3313,8 +3305,8 @@
       "rating": {
         "score": 8.4,
         "positive": 83,
-        "total": 2781,
         "desc": "Very Positive",
+        "total": 2781,
         "updatedAt": 1789565595437
       },
       "historicalLow": {
@@ -3426,7 +3418,8 @@
         ]
       },
       "createdAt": 1789449324781,
-      "updatedAt": 1789565595437
+      "updatedAt": 1789569140251,
+      "nameSource": null
     },
     {
       "appid": 1507190,
@@ -3446,8 +3439,8 @@
       "rating": {
         "score": 9.6,
         "positive": 94,
-        "total": 1309,
         "desc": "Very Positive",
+        "total": 1309,
         "updatedAt": 1789565596845
       },
       "historicalLow": {
@@ -3528,13 +3521,12 @@
           "物理",
           "探索"
         ],
-        "userTagsFetchedAt": 1789560262941
+        "userTagsFetchedAt": 1789560262941,
+        "bundleIds": []
       },
       "createdAt": 1789449320427,
-      "updatedAt": 1789565596845,
-      "nameZh": "机械：博物馆",
-      "nameSource": "machine-translation",
-      "nameTranslatedAt": 1789560180140
+      "updatedAt": 1789569140251,
+      "nameSource": "machine-translation"
     },
     {
       "appid": 2362060,
@@ -3554,8 +3546,8 @@
       "rating": {
         "score": 6.5,
         "positive": 63,
-        "total": 1520,
         "desc": "Mixed",
+        "total": 1520,
         "updatedAt": 1789565598246
       },
       "historicalLow": {
@@ -3677,10 +3669,12 @@
           "第三人称",
           "好评原声音轨"
         ],
-        "userTagsFetchedAt": 1789565844342
+        "userTagsFetchedAt": 1789565844342,
+        "bundleIds": []
       },
       "createdAt": 1789449313978,
-      "updatedAt": 1789565598246
+      "updatedAt": 1789569140251,
+      "nameSource": null
     },
     {
       "appid": 2567870,
@@ -3700,8 +3694,8 @@
       "rating": {
         "score": 9.2,
         "positive": 89,
-        "total": 12306,
         "desc": "Very Positive",
+        "total": 12306,
         "updatedAt": 1789565599637
       },
       "historicalLow": {
@@ -3809,10 +3803,8 @@
         ]
       },
       "createdAt": 1789449305158,
-      "updatedAt": 1789565599637,
-      "nameZh": "链在一起",
-      "nameSource": "machine-translation",
-      "nameTranslatedAt": 1789561285267
+      "updatedAt": 1789569140251,
+      "nameSource": "machine-translation"
     },
     {
       "appid": 1620730,
@@ -3832,8 +3824,8 @@
       "rating": {
         "score": 6.5,
         "positive": 68,
-        "total": 287,
         "desc": "Mixed",
+        "total": 287,
         "updatedAt": 1789565601071
       },
       "historicalLow": {
@@ -3996,10 +3988,12 @@
           "科幻",
           "战斗"
         ],
-        "userTagsFetchedAt": 1789562540964
+        "userTagsFetchedAt": 1789562540964,
+        "bundleIds": []
       },
       "createdAt": 1789449295581,
-      "updatedAt": 1789565601071
+      "updatedAt": 1789569140251,
+      "nameSource": null
     },
     {
       "appid": 3265700,
@@ -4019,8 +4013,8 @@
       "rating": {
         "score": 9.9,
         "positive": 98,
-        "total": 5750,
         "desc": "Overwhelmingly Positive",
+        "total": 5750,
         "updatedAt": 1789565602464
       },
       "historicalLow": {
@@ -4127,7 +4121,8 @@
         ]
       },
       "createdAt": 1789449277706,
-      "updatedAt": 1789565602464
+      "updatedAt": 1789569140251,
+      "nameSource": null
     },
     {
       "appid": 1999170,
@@ -4147,8 +4142,8 @@
       "rating": {
         "score": 8.4,
         "positive": 84,
-        "total": 2094,
         "desc": "Very Positive",
+        "total": 2094,
         "updatedAt": 1789565603866
       },
       "historicalLow": {
@@ -4240,7 +4235,8 @@
         ]
       },
       "createdAt": 1789449268597,
-      "updatedAt": 1789565603866
+      "updatedAt": 1789569140251,
+      "nameSource": null
     },
     {
       "appid": 1296830,
@@ -4260,8 +4256,8 @@
       "rating": {
         "score": 9.6,
         "positive": 93,
-        "total": 36469,
         "desc": "Very Positive",
+        "total": 36469,
         "updatedAt": 1789565605233
       },
       "historicalLow": {
@@ -4400,7 +4396,8 @@
         ]
       },
       "createdAt": 1789449261106,
-      "updatedAt": 1789565605233
+      "updatedAt": 1789569140251,
+      "nameSource": null
     },
     {
       "appid": 1850740,
@@ -4420,8 +4417,8 @@
       "rating": {
         "score": 7.5,
         "positive": 77,
-        "total": 771,
         "desc": "Mostly Positive",
+        "total": 771,
         "updatedAt": 1789565606635
       },
       "historicalLow": {
@@ -4524,10 +4521,8 @@
         ]
       },
       "createdAt": 1789449248704,
-      "updatedAt": 1789565606635,
-      "nameZh": "幽灵观察者",
-      "nameSource": "machine-translation",
-      "nameTranslatedAt": 1789560181162
+      "updatedAt": 1789569140251,
+      "nameSource": "machine-translation"
     },
     {
       "appid": 1967630,
@@ -4547,8 +4542,8 @@
       "rating": {
         "score": 8.4,
         "positive": 83,
-        "total": 641,
         "desc": "Very Positive",
+        "total": 641,
         "updatedAt": 1789565608042
       },
       "historicalLow": {
@@ -4678,7 +4673,8 @@
         ]
       },
       "createdAt": 1789449241621,
-      "updatedAt": 1789565608042
+      "updatedAt": 1789569140251,
+      "nameSource": null
     },
     {
       "appid": 2239710,
@@ -4698,8 +4694,8 @@
       "rating": {
         "score": 7.5,
         "positive": 77,
-        "total": 2315,
         "desc": "Mostly Positive",
+        "total": 2315,
         "updatedAt": 1789565609489
       },
       "historicalLow": {
@@ -4791,7 +4787,8 @@
         ]
       },
       "createdAt": 1789449175682,
-      "updatedAt": 1789565609489
+      "updatedAt": 1789569140251,
+      "nameSource": null
     },
     {
       "appid": 3751260,
@@ -4811,8 +4808,8 @@
       "rating": {
         "score": 8.4,
         "positive": 80,
-        "total": 1406,
         "desc": "Very Positive",
+        "total": 1406,
         "updatedAt": 1789565610837
       },
       "historicalLow": {
@@ -4915,10 +4912,12 @@
           "多结局",
           "鲜血"
         ],
-        "userTagsFetchedAt": 1789562541960
+        "userTagsFetchedAt": 1789562541960,
+        "bundleIds": []
       },
       "createdAt": 1789449171748,
-      "updatedAt": 1789565610837
+      "updatedAt": 1789569140252,
+      "nameSource": null
     },
     {
       "appid": 1967430,
@@ -4938,8 +4937,8 @@
       "rating": {
         "score": 9.9,
         "positive": 98,
-        "total": 4548,
         "desc": "Overwhelmingly Positive",
+        "total": 4548,
         "updatedAt": 1789565612285
       },
       "historicalLow": {
@@ -5043,13 +5042,12 @@
           "狗",
           "猫"
         ],
-        "userTagsFetchedAt": 1789565845408
+        "userTagsFetchedAt": 1789565845408,
+        "bundleIds": []
       },
       "createdAt": 1789449165319,
-      "updatedAt": 1789565612285,
-      "nameZh": "幽灵诡计：幻影侦探",
-      "nameSource": "machine-translation",
-      "nameTranslatedAt": 1789561287504
+      "updatedAt": 1789569140252,
+      "nameSource": "machine-translation"
     },
     {
       "appid": 1266840,
@@ -5069,8 +5067,8 @@
       "rating": {
         "score": 7.5,
         "positive": 75,
-        "total": 1656,
         "desc": "Mostly Positive",
+        "total": 1656,
         "updatedAt": 1789565613632
       },
       "historicalLow": {
@@ -5158,10 +5156,8 @@
         ]
       },
       "createdAt": 1789449158223,
-      "updatedAt": 1789565613632,
-      "nameZh": "最后的立场：后果",
-      "nameSource": "machine-translation",
-      "nameTranslatedAt": 1789560182875
+      "updatedAt": 1789569140252,
+      "nameSource": "machine-translation"
     },
     {
       "appid": 1045720,
@@ -5181,8 +5177,8 @@
       "rating": {
         "score": 9.8,
         "positive": 95,
-        "total": 1269,
         "desc": "Overwhelmingly Positive",
+        "total": 1269,
         "updatedAt": 1789565615046
       },
       "historicalLow": {
@@ -5393,10 +5389,8 @@
         ]
       },
       "createdAt": 1789449148047,
-      "updatedAt": 1789565615046,
-      "nameZh": "昏迷2：恶毒姐妹",
-      "nameSource": "machine-translation",
-      "nameTranslatedAt": 1789561287670
+      "updatedAt": 1789569140252,
+      "nameSource": "machine-translation"
     },
     {
       "appid": 1746030,
@@ -5416,8 +5410,8 @@
       "rating": {
         "score": 9.9,
         "positive": 97,
-        "total": 19615,
         "desc": "Overwhelmingly Positive",
+        "total": 19615,
         "updatedAt": 1789565616564
       },
       "historicalLow": {
@@ -5520,7 +5514,8 @@
         ]
       },
       "createdAt": 1789449139281,
-      "updatedAt": 1789565616564
+      "updatedAt": 1789569140252,
+      "nameSource": null
     },
     {
       "appid": 1903340,
@@ -5540,8 +5535,8 @@
       "rating": {
         "score": 8.9,
         "positive": 87,
-        "total": 39248,
         "desc": "Very Positive",
+        "total": 39248,
         "updatedAt": 1789565617904
       },
       "historicalLow": {
@@ -5687,7 +5682,8 @@
         ]
       },
       "createdAt": 1789449123598,
-      "updatedAt": 1789565617904
+      "updatedAt": 1789569140252,
+      "nameSource": null
     },
     {
       "appid": 2001120,
@@ -5708,8 +5704,8 @@
       "rating": {
         "score": 9.9,
         "positive": 98,
-        "total": 60112,
         "desc": "Overwhelmingly Positive",
+        "total": 60112,
         "updatedAt": 1789565619220
       },
       "historicalLow": {
@@ -5824,7 +5820,8 @@
         ]
       },
       "createdAt": 1789449116702,
-      "updatedAt": 1789565619220
+      "updatedAt": 1789569140252,
+      "nameSource": null
     },
     {
       "appid": 2384580,
@@ -5844,8 +5841,8 @@
       "rating": {
         "score": 9.6,
         "positive": 94,
-        "total": 19010,
         "desc": "Very Positive",
+        "total": 19010,
         "updatedAt": 1789565620639
       },
       "historicalLow": {
@@ -5976,7 +5973,8 @@
         ]
       },
       "createdAt": 1789449076133,
-      "updatedAt": 1789565620639
+      "updatedAt": 1789569140252,
+      "nameSource": null
     },
     {
       "appid": 3681010,
@@ -5996,8 +5994,8 @@
       "rating": {
         "score": 7.5,
         "positive": 75,
-        "total": 8722,
         "desc": "Mostly Positive",
+        "total": 8722,
         "updatedAt": 1789565622035
       },
       "historicalLow": {
@@ -6127,7 +6125,8 @@
         ]
       },
       "createdAt": 1789449065652,
-      "updatedAt": 1789565622035
+      "updatedAt": 1789569140252,
+      "nameSource": null
     },
     {
       "appid": 281990,
@@ -6147,8 +6146,8 @@
       "rating": {
         "score": 8.4,
         "positive": 84,
-        "total": 47048,
         "desc": "Very Positive",
+        "total": 47048,
         "updatedAt": 1789565623436
       },
       "historicalLow": {
@@ -6421,10 +6420,8 @@
         ]
       },
       "createdAt": 1789449054846,
-      "updatedAt": 1789565623436,
-      "nameZh": "群星",
-      "nameSource": "machine-translation",
-      "nameTranslatedAt": 1789560183307
+      "updatedAt": 1789569140252,
+      "nameSource": "machine-translation"
     },
     {
       "appid": 2421410,
@@ -6444,8 +6441,8 @@
       "rating": {
         "score": 9.6,
         "positive": 93,
-        "total": 5102,
         "desc": "Very Positive",
+        "total": 5102,
         "updatedAt": 1789565624869
       },
       "historicalLow": {
@@ -6547,7 +6544,8 @@
         ]
       },
       "createdAt": 1789393237087,
-      "updatedAt": 1789565624869
+      "updatedAt": 1789569140252,
+      "nameSource": null
     },
     {
       "appid": 2997230,
@@ -6567,8 +6565,8 @@
       "rating": {
         "score": 8.4,
         "positive": 80,
-        "total": 88,
         "desc": "Mostly Positive",
+        "total": 88,
         "updatedAt": 1789565626255
       },
       "historicalLow": {
@@ -6673,10 +6671,8 @@
         ]
       },
       "createdAt": 1789393214949,
-      "updatedAt": 1789565626255,
-      "nameZh": "拉娜星球II",
-      "nameSource": "machine-translation",
-      "nameTranslatedAt": 1789560184758
+      "updatedAt": 1789569140252,
+      "nameSource": "machine-translation"
     },
     {
       "appid": 35720,
@@ -6696,8 +6692,8 @@
       "rating": {
         "score": 9.6,
         "positive": 92,
-        "total": 2616,
         "desc": "Very Positive",
+        "total": 2616,
         "updatedAt": 1789565627633
       },
       "historicalLow": {
@@ -6825,10 +6821,8 @@
         ]
       },
       "createdAt": 1789393174094,
-      "updatedAt": 1789565627633,
-      "nameZh": "《三位一体 2》：完整故事",
-      "nameSource": "machine-translation",
-      "nameTranslatedAt": 1789561288877
+      "updatedAt": 1789569140252,
+      "nameSource": "machine-translation"
     },
     {
       "appid": 1608230,
@@ -6848,8 +6842,8 @@
       "rating": {
         "score": 9.2,
         "positive": 88,
-        "total": 1596,
         "desc": "Very Positive",
+        "total": 1596,
         "updatedAt": 1789565629044
       },
       "historicalLow": {
@@ -6958,10 +6952,8 @@
         ]
       },
       "createdAt": 1789393166062,
-      "updatedAt": 1789565629044,
-      "nameZh": "拉娜星球",
-      "nameSource": "machine-translation",
-      "nameTranslatedAt": 1789560185900
+      "updatedAt": 1789569140252,
+      "nameSource": "machine-translation"
     },
     {
       "appid": 2678640,
@@ -6981,8 +6973,8 @@
       "rating": {
         "score": 9.9,
         "positive": 98,
-        "total": 2121,
         "desc": "Overwhelmingly Positive",
+        "total": 2121,
         "updatedAt": 1789565630439
       },
       "historicalLow": {
@@ -7085,7 +7077,8 @@
         ]
       },
       "createdAt": 1789393151629,
-      "updatedAt": 1789565630439
+      "updatedAt": 1789569140252,
+      "nameSource": null
     },
     {
       "appid": 2153350,
@@ -7105,8 +7098,8 @@
       "rating": {
         "score": 6.5,
         "positive": 65,
-        "total": 359,
         "desc": "Mixed",
+        "total": 359,
         "updatedAt": 1789565631847
       },
       "historicalLow": {
@@ -7206,7 +7199,8 @@
         ]
       },
       "createdAt": 1789393144482,
-      "updatedAt": 1789565631847
+      "updatedAt": 1789569140252,
+      "nameSource": null
     },
     {
       "appid": 3528450,
@@ -7226,8 +7220,8 @@
       "rating": {
         "score": 9.8,
         "positive": 95,
-        "total": 10278,
         "desc": "Very Positive",
+        "total": 10278,
         "updatedAt": 1789565633285
       },
       "historicalLow": {
@@ -7305,10 +7299,12 @@
           "色情内容",
           "心理恐怖"
         ],
-        "userTagsFetchedAt": 1789565858602
+        "userTagsFetchedAt": 1789565858602,
+        "bundleIds": []
       },
       "createdAt": 1789393042116,
-      "updatedAt": 1789565633285
+      "updatedAt": 1789569140252,
+      "nameSource": null
     },
     {
       "appid": 1029690,
@@ -7328,8 +7324,8 @@
       "rating": {
         "score": 7.5,
         "positive": 72,
-        "total": 4170,
         "desc": "Mostly Positive",
+        "total": 4170,
         "updatedAt": 1789565634642
       },
       "historicalLow": {
@@ -7620,7 +7616,8 @@
         ]
       },
       "createdAt": 1789393018475,
-      "updatedAt": 1789565634642
+      "updatedAt": 1789569140252,
+      "nameSource": null
     },
     {
       "appid": 1178830,
@@ -7640,8 +7637,8 @@
       "rating": {
         "score": 9.6,
         "positive": 93,
-        "total": 29611,
         "desc": "Very Positive",
+        "total": 29611,
         "updatedAt": 1789565636056
       },
       "historicalLow": {
@@ -7849,7 +7846,8 @@
         ]
       },
       "createdAt": 1789393002188,
-      "updatedAt": 1789565636056
+      "updatedAt": 1789569140252,
+      "nameSource": null
     },
     {
       "appid": 319910,
@@ -7869,8 +7867,8 @@
       "rating": {
         "score": 6.5,
         "positive": 69,
-        "total": 1667,
         "desc": "Mixed",
+        "total": 1667,
         "updatedAt": 1789565637537
       },
       "historicalLow": {
@@ -7993,10 +7991,8 @@
         ]
       },
       "createdAt": 1789392991099,
-      "updatedAt": 1789565637537,
-      "nameZh": "《三位一体 3：权力的神器》",
-      "nameSource": "machine-translation",
-      "nameTranslatedAt": 1789561290075
+      "updatedAt": 1789569140252,
+      "nameSource": "machine-translation"
     },
     {
       "appid": 2947440,
@@ -8016,8 +8012,8 @@
       "rating": {
         "score": 7.5,
         "positive": 77,
-        "total": 3239,
         "desc": "Mostly Positive",
+        "total": 3239,
         "updatedAt": 1789565638853
       },
       "historicalLow": {
@@ -8127,10 +8123,8 @@
         ]
       },
       "createdAt": 1789392974172,
-      "updatedAt": 1789565638853,
-      "nameZh": "寂静岭 f",
-      "nameSource": "machine-translation",
-      "nameTranslatedAt": 1789560186333
+      "updatedAt": 1789569140252,
+      "nameSource": "machine-translation"
     },
     {
       "appid": 2124490,
@@ -8150,8 +8144,8 @@
       "rating": {
         "score": 9.6,
         "positive": 93,
-        "total": 4548,
         "desc": "Very Positive",
+        "total": 4548,
         "updatedAt": 1789565640241
       },
       "historicalLow": {
@@ -8240,10 +8234,8 @@
         ]
       },
       "createdAt": 1789392915340,
-      "updatedAt": 1789565640241,
-      "nameZh": "寂静岭2",
-      "nameSource": "machine-translation",
-      "nameTranslatedAt": 1789560187001
+      "updatedAt": 1789569140252,
+      "nameSource": "machine-translation"
     },
     {
       "appid": 3105440,
@@ -8263,8 +8255,8 @@
       "rating": {
         "score": 8.4,
         "positive": 84,
-        "total": 3241,
         "desc": "Very Positive",
+        "total": 3241,
         "updatedAt": 1789565641633
       },
       "historicalLow": {
@@ -8369,7 +8361,8 @@
         ]
       },
       "createdAt": 1789392905832,
-      "updatedAt": 1789565641633
+      "updatedAt": 1789569140252,
+      "nameSource": null
     },
     {
       "appid": 3768760,
@@ -8389,8 +8382,8 @@
       "rating": {
         "score": 9.2,
         "positive": 90,
-        "total": 7616,
         "desc": "Very Positive",
+        "total": 7616,
         "updatedAt": 1789565643035
       },
       "historicalLow": {
@@ -8487,10 +8480,12 @@
           "刺客",
           "黑暗"
         ],
-        "userTagsFetchedAt": 1789565861847
+        "userTagsFetchedAt": 1789565861847,
+        "bundleIds": []
       },
       "createdAt": 1789392897440,
-      "updatedAt": 1789565643035
+      "updatedAt": 1789569140252,
+      "nameSource": null
     },
     {
       "appid": 378540,
@@ -8510,8 +8505,8 @@
       "rating": {
         "score": 6.5,
         "positive": 64,
-        "total": 1435,
         "desc": "Mixed",
+        "total": 1435,
         "updatedAt": 1789565644426
       },
       "historicalLow": {
@@ -8660,10 +8655,8 @@
         ]
       },
       "createdAt": 1789392887672,
-      "updatedAt": 1789565644426,
-      "nameZh": "浪潮",
-      "nameSource": "machine-translation",
-      "nameTranslatedAt": 1789560188070
+      "updatedAt": 1789569140252,
+      "nameSource": "machine-translation"
     },
     {
       "appid": 644830,
@@ -8683,8 +8676,8 @@
       "rating": {
         "score": 6.5,
         "positive": 66,
-        "total": 1960,
         "desc": "Mixed",
+        "total": 1960,
         "updatedAt": 1789565645830
       },
       "historicalLow": {
@@ -8859,10 +8852,8 @@
         ]
       },
       "createdAt": 1789392876650,
-      "updatedAt": 1789565645830,
-      "nameZh": "浪潮2",
-      "nameSource": "machine-translation",
-      "nameTranslatedAt": 1789561291273
+      "updatedAt": 1789569140252,
+      "nameSource": "machine-translation"
     },
     {
       "appid": 3357650,
@@ -8882,8 +8873,8 @@
       "rating": {
         "score": 9.6,
         "positive": 94,
-        "total": 9640,
         "desc": "Very Positive",
+        "total": 9640,
         "updatedAt": 1789565647238
       },
       "historicalLow": {
@@ -8984,13 +8975,12 @@
           "女性主角",
           "类魂系列"
         ],
-        "userTagsFetchedAt": 1789565862979
+        "userTagsFetchedAt": 1789565862979,
+        "bundleIds": []
       },
       "createdAt": 1789391936262,
-      "updatedAt": 1789565647238,
-      "nameZh": "务实",
-      "nameSource": "machine-translation",
-      "nameTranslatedAt": 1789560188885
+      "updatedAt": 1789569140252,
+      "nameSource": "machine-translation"
     },
     {
       "appid": 1325890,
@@ -9010,8 +9000,8 @@
       "rating": {
         "score": 6.5,
         "positive": 68,
-        "total": 123,
         "desc": "Mixed",
+        "total": 123,
         "updatedAt": 1789565648719
       },
       "historicalLow": {
@@ -9093,7 +9083,8 @@
         ]
       },
       "createdAt": 1789289423724,
-      "updatedAt": 1789565648719
+      "updatedAt": 1789569140252,
+      "nameSource": null
     },
     {
       "appid": 1123050,
@@ -9113,8 +9104,8 @@
       "rating": {
         "score": 7.5,
         "positive": 74,
-        "total": 1463,
         "desc": "Mostly Positive",
+        "total": 1463,
         "updatedAt": 1789565650042
       },
       "historicalLow": {
@@ -9237,10 +9228,8 @@
         ]
       },
       "createdAt": 1789289416953,
-      "updatedAt": 1789565650042,
-      "nameZh": "污垢",
-      "nameSource": "machine-translation",
-      "nameTranslatedAt": 1789561292476
+      "updatedAt": 1789569140252,
+      "nameSource": "machine-translation"
     },
     {
       "appid": 1167450,
@@ -9260,8 +9249,8 @@
       "rating": {
         "score": 9.2,
         "positive": 90,
-        "total": 3254,
         "desc": "Very Positive",
+        "total": 3254,
         "updatedAt": 1789565651441
       },
       "historicalLow": {
@@ -9531,13 +9520,12 @@
           "砍杀",
           "刷宝"
         ],
-        "userTagsFetchedAt": 1789560305853
+        "userTagsFetchedAt": 1789560305853,
+        "bundleIds": []
       },
       "createdAt": 1789289393679,
-      "updatedAt": 1789565651441,
-      "nameZh": "守护进程 X 机器",
-      "nameSource": "machine-translation",
-      "nameTranslatedAt": 1789560189541
+      "updatedAt": 1789569140252,
+      "nameSource": "machine-translation"
     },
     {
       "appid": 1161580,
@@ -9557,8 +9545,8 @@
       "rating": {
         "score": 8.4,
         "positive": 84,
-        "total": 897,
         "desc": "Very Positive",
+        "total": 897,
         "updatedAt": 1789565652831
       },
       "historicalLow": {
@@ -9670,7 +9658,8 @@
         ]
       },
       "createdAt": 1789289357467,
-      "updatedAt": 1789565652831
+      "updatedAt": 1789569140252,
+      "nameSource": null
     },
     {
       "appid": 585450,
@@ -9690,8 +9679,8 @@
       "rating": {
         "score": 6.5,
         "positive": 63,
-        "total": 334,
         "desc": "Mixed",
+        "total": 334,
         "updatedAt": 1789565654246
       },
       "historicalLow": {
@@ -9809,13 +9798,12 @@
           "冒险",
           "俯视"
         ],
-        "userTagsFetchedAt": 1789562545402
+        "userTagsFetchedAt": 1789562545402,
+        "bundleIds": []
       },
       "createdAt": 1789289347989,
-      "updatedAt": 1789565654246,
-      "nameZh": "阴影：觉醒",
-      "nameSource": "machine-translation",
-      "nameTranslatedAt": 1789560190709
+      "updatedAt": 1789569140252,
+      "nameSource": "machine-translation"
     },
     {
       "appid": 1684350,
@@ -9835,8 +9823,8 @@
       "rating": {
         "score": 7.5,
         "positive": 78,
-        "total": 1078,
         "desc": "Mostly Positive",
+        "total": 1078,
         "updatedAt": 1789565655645
       },
       "historicalLow": {
@@ -9941,7 +9929,8 @@
         ]
       },
       "createdAt": 1789289330600,
-      "updatedAt": 1789565655645
+      "updatedAt": 1789569140252,
+      "nameSource": null
     },
     {
       "appid": 867210,
@@ -9961,8 +9950,8 @@
       "rating": {
         "score": 7.5,
         "positive": 79,
-        "total": 854,
         "desc": "Mostly Positive",
+        "total": 854,
         "updatedAt": 1789565657025
       },
       "historicalLow": {
@@ -10155,7 +10144,8 @@
         ]
       },
       "createdAt": 1789289322471,
-      "updatedAt": 1789565657025
+      "updatedAt": 1789569140252,
+      "nameSource": null
     },
     {
       "appid": 1293160,
@@ -10175,8 +10165,8 @@
       "rating": {
         "score": 8.4,
         "positive": 82,
-        "total": 860,
         "desc": "Very Positive",
+        "total": 860,
         "updatedAt": 1789565658434
       },
       "historicalLow": {
@@ -10299,10 +10289,8 @@
         ]
       },
       "createdAt": 1789289296723,
-      "updatedAt": 1789565658434,
-      "nameZh": "媒介",
-      "nameSource": "machine-translation",
-      "nameTranslatedAt": 1789561293675
+      "updatedAt": 1789569140252,
+      "nameSource": "machine-translation"
     },
     {
       "appid": 1579380,
@@ -10322,8 +10310,8 @@
       "rating": {
         "score": 9.6,
         "positive": 94,
-        "total": 1964,
         "desc": "Very Positive",
+        "total": 1964,
         "updatedAt": 1789565659827
       },
       "historicalLow": {
@@ -10425,7 +10413,8 @@
         ]
       },
       "createdAt": 1789289279165,
-      "updatedAt": 1789565659827
+      "updatedAt": 1789569140252,
+      "nameSource": null
     },
     {
       "appid": 473950,
@@ -10445,8 +10434,8 @@
       "rating": {
         "score": 9.8,
         "positive": 96,
-        "total": 2003,
         "desc": "Overwhelmingly Positive",
+        "total": 2003,
         "updatedAt": 1789565661235
       },
       "historicalLow": {
@@ -10548,10 +10537,8 @@
         ]
       },
       "createdAt": 1789289272898,
-      "updatedAt": 1789565661235,
-      "nameZh": "流形花园",
-      "nameSource": "machine-translation",
-      "nameTranslatedAt": 1789560191920
+      "updatedAt": 1789569140252,
+      "nameSource": "machine-translation"
     },
     {
       "appid": 1150440,
@@ -10571,8 +10558,8 @@
       "rating": {
         "score": 7.5,
         "positive": 76,
-        "total": 1043,
         "desc": "Mostly Positive",
+        "total": 1043,
         "updatedAt": 1789565662685
       },
       "historicalLow": {
@@ -10679,10 +10666,8 @@
         ]
       },
       "createdAt": 1789289231546,
-      "updatedAt": 1789565662685,
-      "nameZh": "异形：黑暗后裔",
-      "nameSource": "machine-translation",
-      "nameTranslatedAt": 1789561294882
+      "updatedAt": 1789569140252,
+      "nameSource": "machine-translation"
     },
     {
       "appid": 1796220,
@@ -10702,8 +10687,8 @@
       "rating": {
         "score": 8.9,
         "positive": 86,
-        "total": 1076,
         "desc": "Very Positive",
+        "total": 1076,
         "updatedAt": 1789565664031
       },
       "historicalLow": {
@@ -10791,7 +10776,8 @@
         ]
       },
       "createdAt": 1789289193248,
-      "updatedAt": 1789565664031
+      "updatedAt": 1789569140252,
+      "nameSource": null
     },
     {
       "appid": 1096530,
@@ -10811,8 +10797,8 @@
       "rating": {
         "score": 7.5,
         "positive": 79,
-        "total": 1339,
         "desc": "Mostly Positive",
+        "total": 1339,
         "updatedAt": 1789565665451
       },
       "historicalLow": {
@@ -10992,7 +10978,8 @@
         ]
       },
       "createdAt": 1789289175348,
-      "updatedAt": 1789565665451
+      "updatedAt": 1789569140252,
+      "nameSource": null
     },
     {
       "appid": 2975950,
@@ -11012,8 +10999,8 @@
       "rating": {
         "score": 6.5,
         "positive": 61,
-        "total": 351,
         "desc": "Mixed",
+        "total": 351,
         "updatedAt": 1789565666817
       },
       "historicalLow": {
@@ -11131,7 +11118,8 @@
         ]
       },
       "createdAt": 1789289162929,
-      "updatedAt": 1789565666817
+      "updatedAt": 1789569140252,
+      "nameSource": null
     },
     {
       "appid": 1580240,
@@ -11151,8 +11139,8 @@
       "rating": {
         "score": 9.2,
         "positive": 88,
-        "total": 575,
         "desc": "Very Positive",
+        "total": 575,
         "updatedAt": 1789565668225
       },
       "historicalLow": {
@@ -11236,13 +11224,12 @@
           "日系角色扮演",
           "等角视角"
         ],
-        "userTagsFetchedAt": 1789560319060
+        "userTagsFetchedAt": 1789560319060,
+        "bundleIds": []
       },
       "createdAt": 1789289157480,
-      "updatedAt": 1789565668225,
-      "nameZh": "符文工厂 4 特别版",
-      "nameSource": "machine-translation",
-      "nameTranslatedAt": 1789560192788
+      "updatedAt": 1789569140252,
+      "nameSource": "machine-translation"
     },
     {
       "appid": 2243710,
@@ -11262,8 +11249,8 @@
       "rating": {
         "score": 9.6,
         "positive": 94,
-        "total": 326,
         "desc": "Very Positive",
+        "total": 326,
         "updatedAt": 1789565669663
       },
       "historicalLow": {
@@ -11424,10 +11411,12 @@
           "剧情丰富",
           "农业"
         ],
-        "userTagsFetchedAt": 1789560320167
+        "userTagsFetchedAt": 1789560320167,
+        "bundleIds": []
       },
       "createdAt": 1789289149519,
-      "updatedAt": 1789565669663
+      "updatedAt": 1789569140252,
+      "nameSource": null
     },
     {
       "appid": 1766740,
@@ -11447,8 +11436,8 @@
       "rating": {
         "score": 8.4,
         "positive": 82,
-        "total": 774,
         "desc": "Very Positive",
+        "total": 774,
         "updatedAt": 1789565671016
       },
       "historicalLow": {
@@ -11534,10 +11523,8 @@
         ]
       },
       "createdAt": 1789289142782,
-      "updatedAt": 1789565671016,
-      "nameZh": "丘丘查尔斯",
-      "nameSource": "machine-translation",
-      "nameTranslatedAt": 1789561296075
+      "updatedAt": 1789569140252,
+      "nameSource": "machine-translation"
     },
     {
       "appid": 493520,
@@ -11557,8 +11544,8 @@
       "rating": {
         "score": 8.4,
         "positive": 81,
-        "total": 11965,
         "desc": "Very Positive",
+        "total": 11965,
         "updatedAt": 1789565672425
       },
       "historicalLow": {
@@ -11643,7 +11630,8 @@
         ]
       },
       "createdAt": 1789289137494,
-      "updatedAt": 1789565672425
+      "updatedAt": 1789569140252,
+      "nameSource": null
     },
     {
       "appid": 866140,
@@ -11663,8 +11651,8 @@
       "rating": {
         "score": 9.2,
         "positive": 89,
-        "total": 600,
         "desc": "Very Positive",
+        "total": 600,
         "updatedAt": 1789565674302
       },
       "historicalLow": {
@@ -11808,10 +11796,8 @@
         ]
       },
       "createdAt": 1789289131662,
-      "updatedAt": 1789565674302,
-      "nameZh": "崛起：一个简单的故事",
-      "nameSource": "machine-translation",
-      "nameTranslatedAt": 1789561298775
+      "updatedAt": 1789569140252,
+      "nameSource": "machine-translation"
     },
     {
       "appid": 2633640,
@@ -11831,8 +11817,8 @@
       "rating": {
         "score": 9.6,
         "positive": 93,
-        "total": 118,
         "desc": "Very Positive",
+        "total": 118,
         "updatedAt": 1789565675232
       },
       "historicalLow": {
@@ -11914,7 +11900,8 @@
         ]
       },
       "createdAt": 1789289123766,
-      "updatedAt": 1789565675232
+      "updatedAt": 1789569140252,
+      "nameSource": null
     },
     {
       "appid": 544750,
@@ -11934,8 +11921,8 @@
       "rating": {
         "score": 7.5,
         "positive": 74,
-        "total": 1372,
         "desc": "Mostly Positive",
+        "total": 1372,
         "updatedAt": 1789565676629
       },
       "historicalLow": {
@@ -12179,13 +12166,12 @@
           "清版动作",
           "2D 格斗"
         ],
-        "userTagsFetchedAt": 1789565876255
+        "userTagsFetchedAt": 1789565876255,
+        "bundleIds": []
       },
       "createdAt": 1789289117479,
-      "updatedAt": 1789565676629,
-      "nameZh": "剑魂 VI",
-      "nameSource": "machine-translation",
-      "nameTranslatedAt": 1789560195099
+      "updatedAt": 1789569140252,
+      "nameSource": "machine-translation"
     },
     {
       "appid": 1119980,
@@ -12205,8 +12191,8 @@
       "rating": {
         "score": 9.8,
         "positive": 95,
-        "total": 605,
         "desc": "Very Positive",
+        "total": 605,
         "updatedAt": 1789565678046
       },
       "historicalLow": {
@@ -12319,10 +12305,8 @@
         ]
       },
       "createdAt": 1789289111324,
-      "updatedAt": 1789565678046,
-      "nameZh": "头脑清醒",
-      "nameSource": "machine-translation",
-      "nameTranslatedAt": 1789561300302
+      "updatedAt": 1789569140252,
+      "nameSource": "machine-translation"
     },
     {
       "appid": 668580,
@@ -12342,8 +12326,8 @@
       "rating": {
         "score": 7.5,
         "positive": 75,
-        "total": 14643,
         "desc": "Mostly Positive",
+        "total": 14643,
         "updatedAt": 1789565679454
       },
       "historicalLow": {
@@ -12551,7 +12535,8 @@
         ]
       },
       "createdAt": 1789288866643,
-      "updatedAt": 1789565679454
+      "updatedAt": 1789569140252,
+      "nameSource": null
     },
     {
       "appid": 1116580,
@@ -12571,8 +12556,8 @@
       "rating": {
         "score": 9.8,
         "positive": 95,
-        "total": 1209,
         "desc": "Very Positive",
+        "total": 1209,
         "updatedAt": 1789565680835
       },
       "historicalLow": {
@@ -12656,7 +12641,8 @@
         ]
       },
       "createdAt": 1789288713492,
-      "updatedAt": 1789565680835
+      "updatedAt": 1789569140252,
+      "nameSource": null
     },
     {
       "appid": 590380,
@@ -12676,8 +12662,8 @@
       "rating": {
         "score": 9.8,
         "positive": 95,
-        "total": 2695,
         "desc": "Very Positive",
+        "total": 2695,
         "updatedAt": 1789565682356
       },
       "historicalLow": {
@@ -12787,10 +12773,8 @@
         ]
       },
       "createdAt": 1789288699206,
-      "updatedAt": 1789565682356,
-      "nameZh": "进入突破口",
-      "nameSource": "machine-translation",
-      "nameTranslatedAt": 1789560195524
+      "updatedAt": 1789569140252,
+      "nameSource": "machine-translation"
     },
     {
       "appid": 815370,
@@ -12810,8 +12794,8 @@
       "rating": {
         "score": 7.5,
         "positive": 79,
-        "total": 19826,
         "desc": "Mostly Positive",
+        "total": 19826,
         "updatedAt": 1789565683854
       },
       "historicalLow": {
@@ -12928,7 +12912,8 @@
         ]
       },
       "createdAt": 1789288687871,
-      "updatedAt": 1789565683854
+      "updatedAt": 1789569140252,
+      "nameSource": null
     },
     {
       "appid": 1066780,
@@ -12948,8 +12933,8 @@
       "rating": {
         "score": 9.2,
         "positive": 89,
-        "total": 4262,
         "desc": "Very Positive",
+        "total": 4262,
         "updatedAt": 1789565685045
       },
       "historicalLow": {
@@ -13060,13 +13045,12 @@
           "模组",
           "程序生成"
         ],
-        "userTagsFetchedAt": 1789565880609
+        "userTagsFetchedAt": 1789565880609,
+        "bundleIds": []
       },
       "createdAt": 1789288670962,
-      "updatedAt": 1789565685045,
-      "nameZh": "运输狂热2",
-      "nameSource": "machine-translation",
-      "nameTranslatedAt": 1789560196229
+      "updatedAt": 1789569140252,
+      "nameSource": "machine-translation"
     },
     {
       "appid": 899440,
@@ -13086,8 +13070,8 @@
       "rating": {
         "score": 7.5,
         "positive": 74,
-        "total": 3129,
         "desc": "Mostly Positive",
+        "total": 3129,
         "updatedAt": 1789565686432
       },
       "historicalLow": {
@@ -13180,10 +13164,8 @@
         ]
       },
       "createdAt": 1789288651138,
-      "updatedAt": 1789565686432,
-      "nameZh": "噬神者3",
-      "nameSource": "machine-translation",
-      "nameTranslatedAt": 1789560197482
+      "updatedAt": 1789569140252,
+      "nameSource": "machine-translation"
     },
     {
       "appid": 438490,
@@ -13203,8 +13185,8 @@
       "rating": {
         "score": 6.5,
         "positive": 60,
-        "total": 965,
         "desc": "Mixed",
+        "total": 965,
         "updatedAt": 1789565687872
       },
       "historicalLow": {
@@ -13295,10 +13277,8 @@
         ]
       },
       "createdAt": 1789288633473,
-      "updatedAt": 1789565687872,
-      "nameZh": "噬神者2 愤怒爆发",
-      "nameSource": "machine-translation",
-      "nameTranslatedAt": 1789561301547
+      "updatedAt": 1789569140252,
+      "nameSource": "machine-translation"
     },
     {
       "appid": 1318690,
@@ -13318,8 +13298,8 @@
       "rating": {
         "score": 9.8,
         "positive": 95,
-        "total": 2588,
         "desc": "Overwhelmingly Positive",
+        "total": 2588,
         "updatedAt": 1789565689229
       },
       "historicalLow": {
@@ -13444,7 +13424,8 @@
         ]
       },
       "createdAt": 1789288621819,
-      "updatedAt": 1789565689229
+      "updatedAt": 1789569140252,
+      "nameSource": null
     },
     {
       "appid": 2162800,
@@ -13464,8 +13445,8 @@
       "rating": {
         "score": 9.8,
         "positive": 95,
-        "total": 1734,
         "desc": "Overwhelmingly Positive",
+        "total": 1734,
         "updatedAt": 1789565690626
       },
       "historicalLow": {
@@ -13595,7 +13576,8 @@
         ]
       },
       "createdAt": 1789288498969,
-      "updatedAt": 1789565690626
+      "updatedAt": 1789569140252,
+      "nameSource": null
     },
     {
       "appid": 581320,
@@ -13615,8 +13597,8 @@
       "rating": {
         "score": 8.4,
         "positive": 81,
-        "total": 17271,
         "desc": "Very Positive",
+        "total": 17271,
         "updatedAt": 1789565692032
       },
       "historicalLow": {
@@ -13889,10 +13871,8 @@
         ]
       },
       "createdAt": 1789288476867,
-      "updatedAt": 1789565692032,
-      "nameZh": "叛乱：沙尘暴",
-      "nameSource": "machine-translation",
-      "nameTranslatedAt": 1789560198451
+      "updatedAt": 1789569140252,
+      "nameSource": "machine-translation"
     },
     {
       "appid": 392160,
@@ -13912,8 +13892,8 @@
       "rating": {
         "score": 7.5,
         "positive": 78,
-        "total": 3096,
         "desc": "Mostly Positive",
+        "total": 3096,
         "updatedAt": 1789565693453
       },
       "historicalLow": {
@@ -14198,7 +14178,8 @@
         ]
       },
       "createdAt": 1789288431803,
-      "updatedAt": 1789565693453
+      "updatedAt": 1789569140252,
+      "nameSource": null
     },
     {
       "appid": 2144740,
@@ -14218,8 +14199,8 @@
       "rating": {
         "score": 7.5,
         "positive": 79,
-        "total": 3946,
         "desc": "Mostly Positive",
+        "total": 3946,
         "updatedAt": 1789565694831
       },
       "historicalLow": {
@@ -14393,7 +14374,8 @@
         ]
       },
       "createdAt": 1789288422502,
-      "updatedAt": 1789565694831
+      "updatedAt": 1789569140252,
+      "nameSource": null
     },
     {
       "appid": 1139900,
@@ -14413,8 +14395,8 @@
       "rating": {
         "score": 9.6,
         "positive": 92,
-        "total": 27211,
         "desc": "Very Positive",
+        "total": 27211,
         "updatedAt": 1789565696228
       },
       "historicalLow": {
@@ -14588,7 +14570,8 @@
         ]
       },
       "createdAt": 1789288315262,
-      "updatedAt": 1789565696228
+      "updatedAt": 1789569140252,
+      "nameSource": null
     },
     {
       "appid": 690640,
@@ -14608,8 +14591,8 @@
       "rating": {
         "score": 8.4,
         "positive": 81,
-        "total": 5173,
         "desc": "Very Positive",
+        "total": 5173,
         "updatedAt": 1789565697655
       },
       "historicalLow": {
@@ -14765,10 +14748,8 @@
         ]
       },
       "createdAt": 1789288295688,
-      "updatedAt": 1789565697655,
-      "nameZh": "《三位一体 4：噩梦王子》",
-      "nameSource": "machine-translation",
-      "nameTranslatedAt": 1789561302081
+      "updatedAt": 1789569140252,
+      "nameSource": "machine-translation"
     },
     {
       "appid": 312660,
@@ -14788,8 +14769,8 @@
       "rating": {
         "score": 9.2,
         "positive": 90,
-        "total": 17899,
         "desc": "Very Positive",
+        "total": 17899,
         "updatedAt": 1789565699019
       },
       "historicalLow": {
@@ -15039,10 +15020,8 @@
         ]
       },
       "createdAt": 1789288267285,
-      "updatedAt": 1789565699019,
-      "nameZh": "狙击精英4",
-      "nameSource": "machine-translation",
-      "nameTranslatedAt": 1789560199502
+      "updatedAt": 1789569140252,
+      "nameSource": "machine-translation"
     },
     {
       "appid": 1182900,
@@ -15062,8 +15041,8 @@
       "rating": {
         "score": 8.4,
         "positive": 83,
-        "total": 4474,
         "desc": "Very Positive",
+        "total": 4474,
         "updatedAt": 1789565700418
       },
       "historicalLow": {
@@ -15172,10 +15151,8 @@
         ]
       },
       "createdAt": 1789288255996,
-      "updatedAt": 1789565700418,
-      "nameZh": "瘟疫传说：安魂曲",
-      "nameSource": "machine-translation",
-      "nameTranslatedAt": 1789561303278
+      "updatedAt": 1789569140252,
+      "nameSource": "machine-translation"
     },
     {
       "appid": 1092660,
@@ -15195,8 +15172,8 @@
       "rating": {
         "score": 7.5,
         "positive": 70,
-        "total": 428,
         "desc": "Mostly Positive",
+        "total": 428,
         "updatedAt": 1789565701890
       },
       "historicalLow": {
@@ -15309,10 +15286,8 @@
         ]
       },
       "createdAt": 1789288227339,
-      "updatedAt": 1789565701890,
-      "nameZh": "女巫布莱尔",
-      "nameSource": "machine-translation",
-      "nameTranslatedAt": 1789560200527
+      "updatedAt": 1789569140252,
+      "nameSource": "machine-translation"
     },
     {
       "appid": 845880,
@@ -15332,8 +15307,8 @@
       "rating": {
         "score": 9.6,
         "positive": 93,
-        "total": 742,
         "desc": "Very Positive",
+        "total": 742,
         "updatedAt": 1789565703211
       },
       "historicalLow": {
@@ -15423,7 +15398,8 @@
         ]
       },
       "createdAt": 1789288190456,
-      "updatedAt": 1789565703211
+      "updatedAt": 1789569140252,
+      "nameSource": null
     },
     {
       "appid": 922500,
@@ -15443,8 +15419,8 @@
       "rating": {
         "score": 6.5,
         "positive": 67,
-        "total": 544,
         "desc": "Mixed",
+        "total": 544,
         "updatedAt": 1789565704610
       },
       "historicalLow": {
@@ -15530,13 +15506,12 @@
           "可爱",
           "电竞"
         ],
-        "userTagsFetchedAt": 1789565891572
+        "userTagsFetchedAt": 1789565891572,
+        "bundleIds": []
       },
       "createdAt": 1789287675940,
-      "updatedAt": 1789565704610,
-      "nameZh": "杀死拉杀死-IF",
-      "nameSource": "machine-translation",
-      "nameTranslatedAt": 1789561304485
+      "updatedAt": 1789569140252,
+      "nameSource": "machine-translation"
     },
     {
       "appid": 798490,
@@ -15556,8 +15531,8 @@
       "rating": {
         "score": 7.5,
         "positive": 75,
-        "total": 775,
         "desc": "Mostly Positive",
+        "total": 775,
         "updatedAt": 1789565706009
       },
       "historicalLow": {
@@ -15682,10 +15657,8 @@
         ]
       },
       "createdAt": 1789200620526,
-      "updatedAt": 1789565706009,
-      "nameZh": "奥赛德",
-      "nameSource": "machine-translation",
-      "nameTranslatedAt": 1789560201571
+      "updatedAt": 1789569140252,
+      "nameSource": "machine-translation"
     },
     {
       "appid": 1436590,
@@ -15705,8 +15678,8 @@
       "rating": {
         "score": 8.4,
         "positive": 82,
-        "total": 1438,
         "desc": "Very Positive",
+        "total": 1438,
         "updatedAt": 1789565707415
       },
       "historicalLow": {
@@ -15809,10 +15782,8 @@
         ]
       },
       "createdAt": 1789200615859,
-      "updatedAt": 1789565707415,
-      "nameZh": "幻境：觉醒",
-      "nameSource": "machine-translation",
-      "nameTranslatedAt": 1789561305678
+      "updatedAt": 1789569140252,
+      "nameSource": "machine-translation"
     },
     {
       "appid": 764790,
@@ -15832,8 +15803,8 @@
       "rating": {
         "score": 8.4,
         "positive": 84,
-        "total": 1750,
         "desc": "Very Positive",
+        "total": 1750,
         "updatedAt": 1789565708813
       },
       "historicalLow": {
@@ -15983,7 +15954,8 @@
         ]
       },
       "createdAt": 1789200611013,
-      "updatedAt": 1789565708813
+      "updatedAt": 1789569140252,
+      "nameSource": null
     },
     {
       "appid": 1931770,
@@ -16003,8 +15975,8 @@
       "rating": {
         "score": 9.9,
         "positive": 98,
-        "total": 11982,
         "desc": "Overwhelmingly Positive",
+        "total": 11982,
         "updatedAt": 1789565710229
       },
       "historicalLow": {
@@ -16113,7 +16085,8 @@
         ]
       },
       "createdAt": 1789200607370,
-      "updatedAt": 1789565710229
+      "updatedAt": 1789569140252,
+      "nameSource": null
     },
     {
       "appid": 374320,
@@ -16133,8 +16106,8 @@
       "rating": {
         "score": 9.6,
         "positive": 94,
-        "total": 105354,
         "desc": "Very Positive",
+        "total": 105354,
         "updatedAt": 1789565711611
       },
       "historicalLow": {
@@ -16260,13 +16233,12 @@
           "角色自定义",
           "重玩价值"
         ],
-        "userTagsFetchedAt": 1789560353148
+        "userTagsFetchedAt": 1789560353148,
+        "bundleIds": []
       },
       "createdAt": 1789200602339,
-      "updatedAt": 1789565711611,
-      "nameZh": "黑暗之魂™ III",
-      "nameSource": "machine-translation",
-      "nameTranslatedAt": 1789560203014
+      "updatedAt": 1789569140252,
+      "nameSource": "machine-translation"
     },
     {
       "appid": 782330,
@@ -16286,8 +16258,8 @@
       "rating": {
         "score": 9.2,
         "positive": 88,
-        "total": 16327,
         "desc": "Very Positive",
+        "total": 16327,
         "updatedAt": 1789565713023
       },
       "historicalLow": {
@@ -16431,10 +16403,8 @@
         ]
       },
       "createdAt": 1789200598138,
-      "updatedAt": 1789565713023,
-      "nameZh": "毁灭战士永恒",
-      "nameSource": "machine-translation",
-      "nameTranslatedAt": 1789561306881
+      "updatedAt": 1789569140252,
+      "nameSource": "machine-translation"
     },
     {
       "appid": 1649240,
@@ -16454,8 +16424,8 @@
       "rating": {
         "score": 6.5,
         "positive": 66,
-        "total": 352,
         "desc": "Mixed",
+        "total": 352,
         "updatedAt": 1789565714433
       },
       "historicalLow": {
@@ -16548,13 +16518,12 @@
           "洛夫克拉夫特式",
           "街机"
         ],
-        "userTagsFetchedAt": 1789562549668
+        "userTagsFetchedAt": 1789562549668,
+        "bundleIds": []
       },
       "createdAt": 1789200593716,
-      "updatedAt": 1789565714433,
-      "nameZh": "回归™",
-      "nameSource": "machine-translation",
-      "nameTranslatedAt": 1789560204519
+      "updatedAt": 1789569140252,
+      "nameSource": "machine-translation"
     },
     {
       "appid": 953490,
@@ -16574,8 +16543,8 @@
       "rating": {
         "score": 9.6,
         "positive": 93,
-        "total": 4983,
         "desc": "Very Positive",
+        "total": 4983,
         "updatedAt": 1789565715829
       },
       "historicalLow": {
@@ -16696,7 +16665,8 @@
         ]
       },
       "createdAt": 1789200589512,
-      "updatedAt": 1789565715829
+      "updatedAt": 1789569140252,
+      "nameSource": null
     },
     {
       "appid": 1966720,
@@ -16716,8 +16686,8 @@
       "rating": {
         "score": 9.6,
         "positive": 93,
-        "total": 17726,
         "desc": "Very Positive",
+        "total": 17726,
         "updatedAt": 1789565717209
       },
       "historicalLow": {
@@ -16802,13 +16772,12 @@
           "动作冒险",
           "永久死亡"
         ],
-        "userTagsFetchedAt": 1789560357482
+        "userTagsFetchedAt": 1789560357482,
+        "bundleIds": []
       },
       "createdAt": 1789200421989,
-      "updatedAt": 1789565717209,
-      "nameZh": "致命公司",
-      "nameSource": "machine-translation",
-      "nameTranslatedAt": 1789561308085
+      "updatedAt": 1789569140252,
+      "nameSource": "machine-translation"
     },
     {
       "appid": 1952620,
@@ -16904,13 +16873,12 @@
           "鲜血",
           "时空旅行"
         ],
-        "userTagsFetchedAt": 1789560358651
+        "userTagsFetchedAt": 1789560358651,
+        "bundleIds": []
       },
       "createdAt": 1789200412254,
-      "updatedAt": 1789565718641,
-      "nameZh": "失落的狂野",
-      "nameSource": "machine-translation",
-      "nameTranslatedAt": 1789560205489
+      "updatedAt": 1789569140252,
+      "nameSource": "machine-translation"
     },
     {
       "appid": 2446620,
@@ -17015,13 +16983,12 @@
           "2D",
           "阖家"
         ],
-        "userTagsFetchedAt": 1789560359784
+        "userTagsFetchedAt": 1789560359784,
+        "bundleIds": []
       },
       "createdAt": 1789200411045,
-      "updatedAt": 1789565719996,
-      "nameZh": "社区",
-      "nameSource": "machine-translation",
-      "nameTranslatedAt": 1789561309591
+      "updatedAt": 1789569140252,
+      "nameSource": "machine-translation"
     },
     {
       "appid": 2617700,
@@ -17041,8 +17008,8 @@
       "rating": {
         "score": 6.5,
         "positive": 68,
-        "total": 727,
         "desc": "Mixed",
+        "total": 727,
         "updatedAt": 1789565721395
       },
       "historicalLow": {
@@ -17175,7 +17142,8 @@
         ]
       },
       "createdAt": 1789200409294,
-      "updatedAt": 1789565721395
+      "updatedAt": 1789569140252,
+      "nameSource": null
     },
     {
       "appid": 2058190,
@@ -17195,8 +17163,8 @@
       "rating": {
         "score": 9.2,
         "positive": 90,
-        "total": 2711,
         "desc": "Very Positive",
+        "total": 2711,
         "updatedAt": 1789565722798
       },
       "historicalLow": {
@@ -17300,7 +17268,8 @@
         ]
       },
       "createdAt": 1789200407468,
-      "updatedAt": 1789565722798
+      "updatedAt": 1789569140252,
+      "nameSource": null
     },
     {
       "appid": 2072450,
@@ -17320,8 +17289,8 @@
       "rating": {
         "score": 8.9,
         "positive": 87,
-        "total": 6814,
         "desc": "Very Positive",
+        "total": 6814,
         "updatedAt": 1789565724207
       },
       "historicalLow": {
@@ -17593,7 +17562,8 @@
         ]
       },
       "createdAt": 1789200405077,
-      "updatedAt": 1789565724207
+      "updatedAt": 1789569140252,
+      "nameSource": null
     },
     {
       "appid": 2185060,
@@ -17613,8 +17583,8 @@
       "rating": {
         "score": 9.8,
         "positive": 95,
-        "total": 3865,
         "desc": "Very Positive",
+        "total": 3865,
         "updatedAt": 1789565725612
       },
       "historicalLow": {
@@ -17782,7 +17752,8 @@
         ]
       },
       "createdAt": 1789200402590,
-      "updatedAt": 1789565725612
+      "updatedAt": 1789569140252,
+      "nameSource": null
     },
     {
       "appid": 2215430,
@@ -17802,8 +17773,8 @@
       "rating": {
         "score": 9.2,
         "positive": 88,
-        "total": 9508,
         "desc": "Very Positive",
+        "total": 9508,
         "updatedAt": 1789565726994
       },
       "historicalLow": {
@@ -17920,10 +17891,12 @@
           "暴力",
           "在线合作"
         ],
-        "userTagsFetchedAt": 1789562552945
+        "userTagsFetchedAt": 1789562552945,
+        "bundleIds": []
       },
       "createdAt": 1789200398979,
-      "updatedAt": 1789565726994
+      "updatedAt": 1789569140252,
+      "nameSource": null
     },
     {
       "appid": 2291850,
@@ -17943,8 +17916,8 @@
       "rating": {
         "score": 9.9,
         "positive": 99,
-        "total": 3611,
         "desc": "Overwhelmingly Positive",
+        "total": 3611,
         "updatedAt": 1789565728406
       },
       "historicalLow": {
@@ -18030,10 +18003,8 @@
         ]
       },
       "createdAt": 1789200396557,
-      "updatedAt": 1789565728406,
-      "nameZh": "地下花",
-      "nameSource": "machine-translation",
-      "nameTranslatedAt": 1789560207086
+      "updatedAt": 1789569140252,
+      "nameSource": "machine-translation"
     },
     {
       "appid": 2531310,
@@ -18053,8 +18024,8 @@
       "rating": {
         "score": 8.4,
         "positive": 80,
-        "total": 7317,
         "desc": "Mostly Positive",
+        "total": 7317,
         "updatedAt": 1789565729850
       },
       "historicalLow": {
@@ -18149,13 +18120,12 @@
           "续作",
           "女性主角"
         ],
-        "userTagsFetchedAt": 1789562554044
+        "userTagsFetchedAt": 1789562554044,
+        "bundleIds": []
       },
       "createdAt": 1789200394758,
-      "updatedAt": 1789565729850,
-      "nameZh": "《最后生还者™ 第二部分》重制版",
-      "nameSource": "machine-translation",
-      "nameTranslatedAt": 1789561310972
+      "updatedAt": 1789569140252,
+      "nameSource": "machine-translation"
     },
     {
       "appid": 2721890,
@@ -18175,8 +18145,8 @@
       "rating": {
         "score": 9.9,
         "positive": 100,
-        "total": 2960,
         "desc": "Overwhelmingly Positive",
+        "total": 2960,
         "updatedAt": 1789565731230
       },
       "historicalLow": {
@@ -18280,10 +18250,8 @@
         ]
       },
       "createdAt": 1789200389919,
-      "updatedAt": 1789565731230,
-      "nameZh": "是的",
-      "nameSource": "machine-translation",
-      "nameTranslatedAt": 1789560207577
+      "updatedAt": 1789569140252,
+      "nameSource": "machine-translation"
     },
     {
       "appid": 2868840,
@@ -18303,8 +18271,8 @@
       "rating": {
         "score": 4,
         "positive": 32,
-        "total": 99058,
         "desc": "Mostly Negative",
+        "total": 99058,
         "updatedAt": 1789565732601
       },
       "historicalLow": {
@@ -18405,10 +18373,8 @@
         ]
       },
       "createdAt": 1789200385710,
-      "updatedAt": 1789565732601,
-      "nameZh": "杀戮尖塔2",
-      "nameSource": "machine-translation",
-      "nameTranslatedAt": 1789560207974
+      "updatedAt": 1789569140252,
+      "nameSource": "machine-translation"
     },
     {
       "appid": 1332010,
@@ -18428,8 +18394,8 @@
       "rating": {
         "score": 9.6,
         "positive": 93,
-        "total": 15274,
         "desc": "Very Positive",
+        "total": 15274,
         "updatedAt": 1789565734011
       },
       "historicalLow": {
@@ -18531,10 +18497,8 @@
         ]
       },
       "createdAt": 1789200382652,
-      "updatedAt": 1789565734011,
-      "nameZh": "流浪者",
-      "nameSource": "machine-translation",
-      "nameTranslatedAt": 1789560208371
+      "updatedAt": 1789569140252,
+      "nameSource": "machine-translation"
     },
     {
       "appid": 1336490,
@@ -18554,8 +18518,8 @@
       "rating": {
         "score": 9.6,
         "positive": 92,
-        "total": 5811,
         "desc": "Very Positive",
+        "total": 5811,
         "updatedAt": 1789565735413
       },
       "historicalLow": {
@@ -18673,7 +18637,8 @@
         ]
       },
       "createdAt": 1789200377845,
-      "updatedAt": 1789565735413
+      "updatedAt": 1789569140252,
+      "nameSource": null
     },
     {
       "appid": 1366540,
@@ -18693,8 +18658,8 @@
       "rating": {
         "score": 9.9,
         "positive": 98,
-        "total": 56384,
         "desc": "Overwhelmingly Positive",
+        "total": 56384,
         "updatedAt": 1789565736878
       },
       "historicalLow": {
@@ -18805,7 +18770,8 @@
         ]
       },
       "createdAt": 1789200373586,
-      "updatedAt": 1789565736878
+      "updatedAt": 1789569140252,
+      "nameSource": null
     },
     {
       "appid": 1369630,
@@ -18825,8 +18791,8 @@
       "rating": {
         "score": 9.6,
         "positive": 92,
-        "total": 17141,
         "desc": "Very Positive",
+        "total": 17141,
         "updatedAt": 1789565738239
       },
       "historicalLow": {
@@ -18925,13 +18891,12 @@
           "龙",
           "僵尸"
         ],
-        "userTagsFetchedAt": 1789560373995
+        "userTagsFetchedAt": 1789560373995,
+        "bundleIds": []
       },
       "createdAt": 1789200371171,
-      "updatedAt": 1789565738239,
-      "nameZh": "安德百合：骑士的安静",
-      "nameSource": "machine-translation",
-      "nameTranslatedAt": 1789560209915
+      "updatedAt": 1789569140252,
+      "nameSource": "machine-translation"
     },
     {
       "appid": 1687950,
@@ -18951,8 +18916,8 @@
       "rating": {
         "score": 9.8,
         "positive": 96,
-        "total": 66978,
         "desc": "Overwhelmingly Positive",
+        "total": 66978,
         "updatedAt": 1789565739610
       },
       "historicalLow": {
@@ -19037,7 +19002,8 @@
         ]
       },
       "createdAt": 1789200367552,
-      "updatedAt": 1789565739610
+      "updatedAt": 1789569140252,
+      "nameSource": null
     },
     {
       "appid": 1888930,
@@ -19057,8 +19023,8 @@
       "rating": {
         "score": 8.4,
         "positive": 80,
-        "total": 14420,
         "desc": "Very Positive",
+        "total": 14420,
         "updatedAt": 1789565741015
       },
       "historicalLow": {
@@ -19161,10 +19127,8 @@
         ]
       },
       "createdAt": 1789200363318,
-      "updatedAt": 1789565741015,
-      "nameZh": "最后生还者™ 第 I 部分",
-      "nameSource": "machine-translation",
-      "nameTranslatedAt": 1789561312148
+      "updatedAt": 1789569140252,
+      "nameSource": "machine-translation"
     },
     {
       "appid": 847370,
@@ -19184,8 +19148,8 @@
       "rating": {
         "score": 7.5,
         "positive": 77,
-        "total": 425,
         "desc": "Mostly Positive",
+        "total": 425,
         "updatedAt": 1789565742430
       },
       "historicalLow": {
@@ -19272,10 +19236,8 @@
         ]
       },
       "createdAt": 1789200357301,
-      "updatedAt": 1789565742430,
-      "nameZh": "日落超速",
-      "nameSource": "machine-translation",
-      "nameTranslatedAt": 1789560211100
+      "updatedAt": 1789569140252,
+      "nameSource": "machine-translation"
     },
     {
       "appid": 933110,
@@ -19295,8 +19257,8 @@
       "rating": {
         "score": 7.5,
         "positive": 79,
-        "total": 9170,
         "desc": "Mostly Positive",
+        "total": 9170,
         "updatedAt": 1789565743814
       },
       "historicalLow": {
@@ -19509,10 +19471,8 @@
         ]
       },
       "createdAt": 1789200354279,
-      "updatedAt": 1789565743814,
-      "nameZh": "帝国时代 III：决定版",
-      "nameSource": "machine-translation",
-      "nameTranslatedAt": 1789561312883
+      "updatedAt": 1789569140252,
+      "nameSource": "machine-translation"
     },
     {
       "appid": 1086940,
@@ -19533,8 +19493,8 @@
       "rating": {
         "score": 9.8,
         "positive": 96,
-        "total": 101257,
         "desc": "Overwhelmingly Positive",
+        "total": 101257,
         "updatedAt": 1789565745197
       },
       "historicalLow": {
@@ -19664,10 +19624,12 @@
           "战斗",
           "LGBTQ+"
         ],
-        "userTagsFetchedAt": 1789562557420
+        "userTagsFetchedAt": 1789562557420,
+        "bundleIds": []
       },
       "createdAt": 1789200350053,
-      "updatedAt": 1789565745197
+      "updatedAt": 1789569140252,
+      "nameSource": null
     },
     {
       "appid": 1938010,
@@ -19687,8 +19649,8 @@
       "rating": {
         "score": 4,
         "positive": 32,
-        "total": 3717,
         "desc": "Mostly Negative",
+        "total": 3717,
         "updatedAt": 1789565746637
       },
       "historicalLow": {
@@ -19793,13 +19755,12 @@
           "龙",
           "自然"
         ],
-        "userTagsFetchedAt": 1789565892683
+        "userTagsFetchedAt": 1789565892683,
+        "bundleIds": []
       },
       "createdAt": 1789200345183,
-      "updatedAt": 1789565746637,
-      "nameZh": "《狂野之心™》",
-      "nameSource": "machine-translation",
-      "nameTranslatedAt": 1789560212554
+      "updatedAt": 1789569140252,
+      "nameSource": "machine-translation"
     },
     {
       "appid": 1145350,
@@ -19819,8 +19780,8 @@
       "rating": {
         "score": 9.2,
         "positive": 89,
-        "total": 16084,
         "desc": "Very Positive",
+        "total": 16084,
         "updatedAt": 1789565747993
       },
       "historicalLow": {
@@ -19926,10 +19887,8 @@
         ]
       },
       "createdAt": 1789200336641,
-      "updatedAt": 1789565747993,
-      "nameZh": "哈迪斯二世",
-      "nameSource": "machine-translation",
-      "nameTranslatedAt": 1789561314109
+      "updatedAt": 1789569140252,
+      "nameSource": "machine-translation"
     },
     {
       "appid": 1158310,
@@ -19949,8 +19908,8 @@
       "rating": {
         "score": 9.2,
         "positive": 89,
-        "total": 22845,
         "desc": "Very Positive",
+        "total": 22845,
         "updatedAt": 1789565749466
       },
       "historicalLow": {
@@ -20235,10 +20194,8 @@
         ]
       },
       "createdAt": 1789200309480,
-      "updatedAt": 1789565749466,
-      "nameZh": "十字军之王3",
-      "nameSource": "machine-translation",
-      "nameTranslatedAt": 1789560213458
+      "updatedAt": 1789569140252,
+      "nameSource": "machine-translation"
     },
     {
       "appid": 1260520,
@@ -20258,8 +20215,8 @@
       "rating": {
         "score": 9.9,
         "positive": 100,
-        "total": 2080,
         "desc": "Overwhelmingly Positive",
+        "total": 2080,
         "updatedAt": 1789565750784
       },
       "historicalLow": {
@@ -20360,10 +20317,8 @@
         ]
       },
       "createdAt": 1789200306373,
-      "updatedAt": 1789565750784,
-      "nameZh": "帕特里克的帕拉盒",
-      "nameSource": "machine-translation",
-      "nameTranslatedAt": 1789561315554
+      "updatedAt": 1789569140252,
+      "nameSource": "machine-translation"
     },
     {
       "appid": 1267910,
@@ -20383,8 +20338,8 @@
       "rating": {
         "score": 8.9,
         "positive": 85,
-        "total": 3898,
         "desc": "Very Positive",
+        "total": 3898,
         "updatedAt": 1789565752233
       },
       "historicalLow": {
@@ -20511,7 +20466,8 @@
         ]
       },
       "createdAt": 1789200303362,
-      "updatedAt": 1789565752233
+      "updatedAt": 1789569140252,
+      "nameSource": null
     },
     {
       "appid": 1292940,
@@ -20531,8 +20487,8 @@
       "rating": {
         "score": 9.9,
         "positive": 98,
-        "total": 3232,
         "desc": "Overwhelmingly Positive",
+        "total": 3232,
         "updatedAt": 1789565753685
       },
       "historicalLow": {
@@ -20609,10 +20565,8 @@
         ]
       },
       "createdAt": 1789200296684,
-      "updatedAt": 1789565753685,
-      "nameZh": "密室逃脱合集",
-      "nameSource": "machine-translation",
-      "nameTranslatedAt": 1789560214644
+      "updatedAt": 1789569140252,
+      "nameSource": "machine-translation"
     },
     {
       "appid": 594570,
@@ -20632,8 +20586,8 @@
       "rating": {
         "score": 9.2,
         "positive": 91,
-        "total": 18276,
         "desc": "Very Positive",
+        "total": 18276,
         "updatedAt": 1789565754982
       },
       "historicalLow": {
@@ -20923,7 +20877,8 @@
         ]
       },
       "createdAt": 1789200291860,
-      "updatedAt": 1789565754982
+      "updatedAt": 1789569140252,
+      "nameSource": null
     },
     {
       "appid": 610370,
@@ -20943,8 +20898,8 @@
       "rating": {
         "score": 9.9,
         "positive": 98,
-        "total": 4390,
         "desc": "Overwhelmingly Positive",
+        "total": 4390,
         "updatedAt": 1789565756392
       },
       "historicalLow": {
@@ -21093,10 +21048,8 @@
         ]
       },
       "createdAt": 1789200286347,
-      "updatedAt": 1789565756392,
-      "nameZh": "亡命之徒 III",
-      "nameSource": "machine-translation",
-      "nameTranslatedAt": 1789561316803
+      "updatedAt": 1789569140252,
+      "nameSource": "machine-translation"
     },
     {
       "appid": 632360,
@@ -21116,8 +21069,8 @@
       "rating": {
         "score": 9.2,
         "positive": 89,
-        "total": 37778,
         "desc": "Very Positive",
+        "total": 37778,
         "updatedAt": 1789565757832
       },
       "historicalLow": {
@@ -21305,7 +21258,8 @@
         ]
       },
       "createdAt": 1789200283975,
-      "updatedAt": 1789565757832
+      "updatedAt": 1789569140252,
+      "nameSource": null
     },
     {
       "appid": 694280,
@@ -21325,8 +21279,8 @@
       "rating": {
         "score": 8.4,
         "positive": 82,
-        "total": 3282,
         "desc": "Very Positive",
+        "total": 3282,
         "updatedAt": 1789565759237
       },
       "historicalLow": {
@@ -21600,10 +21554,8 @@
         ]
       },
       "createdAt": 1789200280943,
-      "updatedAt": 1789565759237,
-      "nameZh": "僵尸军团4：死亡之战",
-      "nameSource": "machine-translation",
-      "nameTranslatedAt": 1789560216049
+      "updatedAt": 1789569140252,
+      "nameSource": "machine-translation"
     },
     {
       "appid": 703080,
@@ -21623,8 +21575,8 @@
       "rating": {
         "score": 8.9,
         "positive": 87,
-        "total": 13111,
         "desc": "Very Positive",
+        "total": 13111,
         "updatedAt": 1789565760663
       },
       "historicalLow": {
@@ -21895,7 +21847,8 @@
         ]
       },
       "createdAt": 1789200275496,
-      "updatedAt": 1789565760663
+      "updatedAt": 1789569140252,
+      "nameSource": null
     },
     {
       "appid": 753640,
@@ -21915,8 +21868,8 @@
       "rating": {
         "score": 9.9,
         "positive": 97,
-        "total": 17357,
         "desc": "Overwhelmingly Positive",
+        "total": 17357,
         "updatedAt": 1789565761994
       },
       "historicalLow": {
@@ -22045,10 +21998,8 @@
         ]
       },
       "createdAt": 1789200270711,
-      "updatedAt": 1789565761994,
-      "nameZh": "星际拓荒",
-      "nameSource": "machine-translation",
-      "nameTranslatedAt": 1789561317683
+      "updatedAt": 1789569140252,
+      "nameSource": "machine-translation"
     },
     {
       "appid": 813630,
@@ -22068,8 +22019,8 @@
       "rating": {
         "score": 9.6,
         "positive": 94,
-        "total": 1497,
         "desc": "Very Positive",
+        "total": 1497,
         "updatedAt": 1789565763466
       },
       "historicalLow": {
@@ -22171,10 +22122,8 @@
         ]
       },
       "createdAt": 1789200267638,
-      "updatedAt": 1789565763466,
-      "nameZh": "苏普拉兰",
-      "nameSource": "machine-translation",
-      "nameTranslatedAt": 1789560216848
+      "updatedAt": 1789569140252,
+      "nameSource": "machine-translation"
     },
     {
       "appid": 813780,
@@ -22194,8 +22143,8 @@
       "rating": {
         "score": 9.6,
         "positive": 92,
-        "total": 23746,
         "desc": "Very Positive",
+        "total": 23746,
         "updatedAt": 1789565764800
       },
       "historicalLow": {
@@ -22488,10 +22437,8 @@
         ]
       },
       "createdAt": 1789200254926,
-      "updatedAt": 1789565764800,
-      "nameZh": "帝国时代 II：决定版",
-      "nameSource": "machine-translation",
-      "nameTranslatedAt": 1789560217884
+      "updatedAt": 1789569140252,
+      "nameSource": "machine-translation"
     },
     {
       "appid": 814380,
@@ -22511,8 +22458,8 @@
       "rating": {
         "score": 9.8,
         "positive": 96,
-        "total": 170976,
         "desc": "Overwhelmingly Positive",
+        "total": 170976,
         "updatedAt": 1789565766180
       },
       "historicalLow": {
@@ -22577,13 +22524,12 @@
           "暴力",
           "鲜血"
         ],
-        "userTagsFetchedAt": 1789560395977
+        "userTagsFetchedAt": 1789560395977,
+        "bundleIds": []
       },
       "createdAt": 1789200248257,
-      "updatedAt": 1789565766180,
-      "nameZh": "《只狼™：影逝二度》- GOTY 版",
-      "nameSource": "machine-translation",
-      "nameTranslatedAt": 1789561319949
+      "updatedAt": 1789569140252,
+      "nameSource": "machine-translation"
     },
     {
       "appid": 392110,
@@ -22603,8 +22549,8 @@
       "rating": {
         "score": 8.4,
         "positive": 84,
-        "total": 3555,
         "desc": "Very Positive",
+        "total": 3555,
         "updatedAt": 1789565767585
       },
       "historicalLow": {
@@ -22879,10 +22825,8 @@
         ]
       },
       "createdAt": 1789200245276,
-      "updatedAt": 1789565767585,
-      "nameZh": "无尽空间™ 2",
-      "nameSource": "machine-translation",
-      "nameTranslatedAt": 1789560219585
+      "updatedAt": 1789569140252,
+      "nameSource": "machine-translation"
     },
     {
       "appid": 414700,
@@ -22902,8 +22846,8 @@
       "rating": {
         "score": 9.8,
         "positive": 96,
-        "total": 16789,
         "desc": "Overwhelmingly Positive",
+        "total": 16789,
         "updatedAt": 1789565769032
       },
       "historicalLow": {
@@ -22993,10 +22937,8 @@
         ]
       },
       "createdAt": 1789200242244,
-      "updatedAt": 1789565769032,
-      "nameZh": "逃生2",
-      "nameSource": "machine-translation",
-      "nameTranslatedAt": 1789561320086
+      "updatedAt": 1789569140252,
+      "nameSource": "machine-translation"
     },
     {
       "appid": 463530,
@@ -23016,8 +22958,8 @@
       "rating": {
         "score": 9.6,
         "positive": 92,
-        "total": 3433,
         "desc": "Very Positive",
+        "total": 3433,
         "updatedAt": 1789565770391
       },
       "historicalLow": {
@@ -23131,7 +23073,8 @@
         ]
       },
       "createdAt": 1789200239151,
-      "updatedAt": 1789565770391
+      "updatedAt": 1789569140252,
+      "nameSource": null
     },
     {
       "appid": 532110,
@@ -23151,8 +23094,8 @@
       "rating": {
         "score": 9.9,
         "positive": 98,
-        "total": 4414,
         "desc": "Overwhelmingly Positive",
+        "total": 4414,
         "updatedAt": 1789565771795
       },
       "historicalLow": {
@@ -23236,10 +23179,8 @@
         ]
       },
       "createdAt": 1789200235552,
-      "updatedAt": 1789565771795,
-      "nameZh": "锈湖：根源",
-      "nameSource": "machine-translation",
-      "nameTranslatedAt": 1789560221209
+      "updatedAt": 1789569140252,
+      "nameSource": "machine-translation"
     },
     {
       "appid": 546560,
@@ -23259,8 +23200,8 @@
       "rating": {
         "score": 9.9,
         "positive": 99,
-        "total": 7329,
         "desc": "Overwhelmingly Positive",
+        "total": 7329,
         "updatedAt": 1789565773191
       },
       "historicalLow": {
@@ -23362,13 +23303,12 @@
           "好评原声音轨",
           "鲜血"
         ],
-        "userTagsFetchedAt": 1789565893914
+        "userTagsFetchedAt": 1789565893914,
+        "bundleIds": []
       },
       "createdAt": 1789200231926,
-      "updatedAt": 1789565773191,
-      "nameZh": "半衰期：爱莉克斯",
-      "nameSource": "machine-translation",
-      "nameTranslatedAt": 1789561322034
+      "updatedAt": 1789569140252,
+      "nameSource": "machine-translation"
     },
     {
       "appid": 548430,
@@ -23388,8 +23328,8 @@
       "rating": {
         "score": 9.6,
         "positive": 94,
-        "total": 36615,
         "desc": "Very Positive",
+        "total": 36615,
         "updatedAt": 1789565774592
       },
       "historicalLow": {
@@ -23658,7 +23598,8 @@
         ]
       },
       "createdAt": 1789200209151,
-      "updatedAt": 1789565774592
+      "updatedAt": 1789569140252,
+      "nameSource": null
     },
     {
       "appid": 557600,
@@ -23678,8 +23619,8 @@
       "rating": {
         "score": 9.9,
         "positive": 98,
-        "total": 10919,
         "desc": "Overwhelmingly Positive",
+        "total": 10919,
         "updatedAt": 1789565775978
       },
       "historicalLow": {
@@ -23781,10 +23722,8 @@
         ]
       },
       "createdAt": 1789200194326,
-      "updatedAt": 1789565775978,
-      "nameZh": "戈罗戈阿",
-      "nameSource": "machine-translation",
-      "nameTranslatedAt": 1789560222438
+      "updatedAt": 1789569140252,
+      "nameSource": "machine-translation"
     },
     {
       "appid": 570940,
@@ -23804,8 +23743,8 @@
       "rating": {
         "score": 9.2,
         "positive": 89,
-        "total": 20571,
         "desc": "Very Positive",
+        "total": 20571,
         "updatedAt": 1789565777368
       },
       "historicalLow": {
@@ -23885,13 +23824,12 @@
           "原声音轨",
           "合作"
         ],
-        "userTagsFetchedAt": 1789561417165
+        "userTagsFetchedAt": 1789561417165,
+        "bundleIds": []
       },
       "createdAt": 1789199792368,
-      "updatedAt": 1789565777368,
-      "nameZh": "黑暗之魂™：重制版",
-      "nameSource": "machine-translation",
-      "nameTranslatedAt": 1789561322654
+      "updatedAt": 1789569140252,
+      "nameSource": "machine-translation"
     },
     {
       "appid": 588650,
@@ -23911,8 +23849,8 @@
       "rating": {
         "score": 9.9,
         "positive": 97,
-        "total": 65826,
         "desc": "Overwhelmingly Positive",
+        "total": 65826,
         "updatedAt": 1789565778782
       },
       "historicalLow": {
@@ -24105,10 +24043,8 @@
         ]
       },
       "createdAt": 1789199783608,
-      "updatedAt": 1789565778782,
-      "nameZh": "死亡细胞",
-      "nameSource": "machine-translation",
-      "nameTranslatedAt": 1789560223022
+      "updatedAt": 1789569140252,
+      "nameSource": "machine-translation"
     },
     {
       "appid": 220240,
@@ -24128,8 +24064,8 @@
       "rating": {
         "score": 7.5,
         "positive": 77,
-        "total": 7174,
         "desc": "Mostly Positive",
+        "total": 7174,
         "updatedAt": 1789565780178
       },
       "historicalLow": {
@@ -24213,10 +24149,8 @@
         ]
       },
       "createdAt": 1789199777249,
-      "updatedAt": 1789565780178,
-      "nameZh": "孤岛惊魂3",
-      "nameSource": "machine-translation",
-      "nameTranslatedAt": 1789560223269
+      "updatedAt": 1789569140252,
+      "nameSource": "machine-translation"
     },
     {
       "appid": 1677280,
@@ -24236,8 +24170,8 @@
       "rating": {
         "score": 4,
         "positive": 46,
-        "total": 5633,
         "desc": "Mixed",
+        "total": 5633,
         "updatedAt": 1789565781604
       },
       "historicalLow": {
@@ -24393,10 +24327,8 @@
         ]
       },
       "createdAt": 1789199750962,
-      "updatedAt": 1789565781604,
-      "nameZh": "英雄连3",
-      "nameSource": "machine-translation",
-      "nameTranslatedAt": 1789560224226
+      "updatedAt": 1789569140252,
+      "nameSource": "machine-translation"
     },
     {
       "appid": 335300,
@@ -24416,8 +24348,8 @@
       "rating": {
         "score": 7.5,
         "positive": 79,
-        "total": 18765,
         "desc": "Mostly Positive",
+        "total": 18765,
         "updatedAt": 1789565783038
       },
       "historicalLow": {
@@ -24500,13 +24432,12 @@
           "玩家对战",
           "重制"
         ],
-        "userTagsFetchedAt": 1789562559547
+        "userTagsFetchedAt": 1789562559547,
+        "bundleIds": []
       },
       "createdAt": 1789199716591,
-      "updatedAt": 1789565783038,
-      "nameZh": "DARK SOULS™ II：原罪学者",
-      "nameSource": "machine-translation",
-      "nameTranslatedAt": 1789561324082
+      "updatedAt": 1789569140252,
+      "nameSource": "machine-translation"
     },
     {
       "appid": 236430,
@@ -24526,8 +24457,8 @@
       "rating": {
         "score": 8.9,
         "positive": 85,
-        "total": 1701,
         "desc": "Very Positive",
+        "total": 1701,
         "updatedAt": 1789565784361
       },
       "historicalLow": {
@@ -24659,13 +24590,12 @@
           "黑暗",
           "中世纪"
         ],
-        "userTagsFetchedAt": 1789562560712
+        "userTagsFetchedAt": 1789562560712,
+        "bundleIds": []
       },
       "createdAt": 1789199704429,
-      "updatedAt": 1789565784361,
-      "nameZh": "黑暗之魂™ II",
-      "nameSource": "machine-translation",
-      "nameTranslatedAt": 1789560225413
+      "updatedAt": 1789569140252,
+      "nameSource": "machine-translation"
     },
     {
       "appid": 949230,
@@ -24685,8 +24615,8 @@
       "rating": {
         "score": 4,
         "positive": 48,
-        "total": 13982,
         "desc": "Mixed",
+        "total": 13982,
         "updatedAt": 1789565785790
       },
       "historicalLow": {
@@ -24950,7 +24880,8 @@
         ]
       },
       "createdAt": 1789199688864,
-      "updatedAt": 1789565785790
+      "updatedAt": 1789569140252,
+      "nameSource": null
     },
     {
       "appid": 255710,
@@ -24970,8 +24901,8 @@
       "rating": {
         "score": 9.2,
         "positive": 91,
-        "total": 60742,
         "desc": "Very Positive",
+        "total": 60742,
         "updatedAt": 1789565787173
       },
       "historicalLow": {
@@ -25244,10 +25175,8 @@
         ]
       },
       "createdAt": 1789199682401,
-      "updatedAt": 1789565787173,
-      "nameZh": "城市：天际线",
-      "nameSource": "machine-translation",
-      "nameTranslatedAt": 1789561324884
+      "updatedAt": 1789569140252,
+      "nameSource": "machine-translation"
     },
     {
       "appid": 260230,
@@ -25267,8 +25196,8 @@
       "rating": {
         "score": 9.8,
         "positive": 96,
-        "total": 4926,
         "desc": "Overwhelmingly Positive",
+        "total": 4926,
         "updatedAt": 1789565788592
       },
       "historicalLow": {
@@ -25348,10 +25277,8 @@
         ]
       },
       "createdAt": 1789199671365,
-      "updatedAt": 1789565788592,
-      "nameZh": "勇敢的心：伟大的战争™ / 无名战士：伟大战争的回忆™",
-      "nameSource": "machine-translation",
-      "nameTranslatedAt": 1789560226219
+      "updatedAt": 1789569140252,
+      "nameSource": "machine-translation"
     },
     {
       "appid": 848450,
@@ -25371,8 +25298,8 @@
       "rating": {
         "score": 8.9,
         "positive": 87,
-        "total": 8559,
         "desc": "Very Positive",
+        "total": 8559,
         "updatedAt": 1789565790003
       },
       "historicalLow": {
@@ -25474,7 +25401,8 @@
         ]
       },
       "createdAt": 1789199656265,
-      "updatedAt": 1789565790003
+      "updatedAt": 1789569140252,
+      "nameSource": null
     },
     {
       "appid": 264710,
@@ -25494,8 +25422,8 @@
       "rating": {
         "score": 9.9,
         "positive": 97,
-        "total": 34380,
         "desc": "Overwhelmingly Positive",
+        "total": 34380,
         "updatedAt": 1789565791374
       },
       "historicalLow": {
@@ -25600,7 +25528,8 @@
         ]
       },
       "createdAt": 1789199650264,
-      "updatedAt": 1789565791374
+      "updatedAt": 1789569140252,
+      "nameSource": null
     },
     {
       "appid": 1962700,
@@ -25620,8 +25549,8 @@
       "rating": {
         "score": 7.5,
         "positive": 70,
-        "total": 8739,
         "desc": "Mostly Positive",
+        "total": 8739,
         "updatedAt": 1789565792789
       },
       "historicalLow": {
@@ -25735,7 +25664,8 @@
         ]
       },
       "createdAt": 1789199644423,
-      "updatedAt": 1789565792789
+      "updatedAt": 1789569140252,
+      "nameSource": null
     },
     {
       "appid": 268500,
@@ -25755,8 +25685,8 @@
       "rating": {
         "score": 7.5,
         "positive": 77,
-        "total": 12984,
         "desc": "Mostly Positive",
+        "total": 12984,
         "updatedAt": 1789565794161
       },
       "historicalLow": {
@@ -25921,10 +25851,8 @@
         ]
       },
       "createdAt": 1789199632217,
-      "updatedAt": 1789565794161,
-      "nameZh": "幽浮®2",
-      "nameSource": "machine-translation",
-      "nameTranslatedAt": 1789561326329
+      "updatedAt": 1789569140252,
+      "nameSource": "machine-translation"
     },
     {
       "appid": 275850,
@@ -25945,8 +25873,8 @@
       "rating": {
         "score": 9.2,
         "positive": 88,
-        "total": 67013,
         "desc": "Very Positive",
+        "total": 67013,
         "updatedAt": 1789565795637
       },
       "historicalLow": {
@@ -26076,7 +26004,8 @@
         ]
       },
       "createdAt": 1789199623232,
-      "updatedAt": 1789565795637
+      "updatedAt": 1789569140252,
+      "nameSource": null
     },
     {
       "appid": 314650,
@@ -26096,8 +26025,8 @@
       "rating": {
         "score": 9.9,
         "positive": 97,
-        "total": 2517,
         "desc": "Overwhelmingly Positive",
+        "total": 2517,
         "updatedAt": 1789565797251
       },
       "historicalLow": {
@@ -26325,13 +26254,12 @@
           "独立",
           "程序生成"
         ],
-        "userTagsFetchedAt": 1789561430313
+        "userTagsFetchedAt": 1789561430313,
+        "bundleIds": []
       },
       "createdAt": 1789199605783,
-      "updatedAt": 1789565797251,
-      "nameZh": "太空引擎",
-      "nameSource": "machine-translation",
-      "nameTranslatedAt": 1789560227323
+      "updatedAt": 1789569140252,
+      "nameSource": "machine-translation"
     },
     {
       "appid": 1449690,
@@ -26351,8 +26279,8 @@
       "rating": {
         "score": 9.6,
         "positive": 93,
-        "total": 8791,
         "desc": "Very Positive",
+        "total": 8791,
         "updatedAt": 1789565798375
       },
       "historicalLow": {
@@ -26425,13 +26353,12 @@
           "反乌托邦",
           "单人"
         ],
-        "userTagsFetchedAt": 1789562561769
+        "userTagsFetchedAt": 1789562561769,
+        "bundleIds": []
       },
       "createdAt": 1789199580443,
-      "updatedAt": 1789565798375,
-      "nameZh": "行尸走肉：揭秘最终系列",
-      "nameSource": "machine-translation",
-      "nameTranslatedAt": 1789561327288
+      "updatedAt": 1789569140252,
+      "nameSource": "machine-translation"
     },
     {
       "appid": 235460,
@@ -26451,8 +26378,8 @@
       "rating": {
         "score": 9.2,
         "positive": 91,
-        "total": 1261,
         "desc": "Very Positive",
+        "total": 1261,
         "updatedAt": 1789565799770
       },
       "historicalLow": {
@@ -26509,13 +26436,12 @@
         "userTags": [
           "鲜血"
         ],
-        "userTagsFetchedAt": 1789561432456
+        "userTagsFetchedAt": 1789561432456,
+        "bundleIds": []
       },
       "createdAt": 1789199571448,
-      "updatedAt": 1789565799770,
-      "nameZh": "合金装备崛起：复仇",
-      "nameSource": "machine-translation",
-      "nameTranslatedAt": 1789560228005
+      "updatedAt": 1789569140252,
+      "nameSource": "machine-translation"
     },
     {
       "appid": 8870,
@@ -26535,8 +26461,8 @@
       "rating": {
         "score": 9.6,
         "positive": 93,
-        "total": 19787,
         "desc": "Very Positive",
+        "total": 19787,
         "updatedAt": 1789565801199
       },
       "historicalLow": {
@@ -26660,10 +26586,12 @@
         "userTags": [
           "鲜血"
         ],
-        "userTagsFetchedAt": 1789561433555
+        "userTagsFetchedAt": 1789561433555,
+        "bundleIds": []
       },
       "createdAt": 1789199564670,
-      "updatedAt": 1789565801199
+      "updatedAt": 1789569140252,
+      "nameSource": null
     },
     {
       "appid": 12150,
@@ -26683,8 +26611,8 @@
       "rating": {
         "score": 9.6,
         "positive": 92,
-        "total": 330,
         "desc": "Very Positive",
+        "total": 330,
         "updatedAt": 1789565802650
       },
       "historicalLow": {
@@ -26736,13 +26664,12 @@
           "裸露",
           "暴力"
         ],
-        "userTagsFetchedAt": 1789561434657
+        "userTagsFetchedAt": 1789561434657,
+        "bundleIds": []
       },
       "createdAt": 1789199555039,
-      "updatedAt": 1789565802650,
-      "nameZh": "马克思佩恩2：马克思佩恩的陨落",
-      "nameSource": "machine-translation",
-      "nameTranslatedAt": 1789560229136
+      "updatedAt": 1789569140252,
+      "nameSource": "machine-translation"
     },
     {
       "appid": 48700,
@@ -26762,8 +26689,8 @@
       "rating": {
         "score": 9.9,
         "positive": 98,
-        "total": 24616,
         "desc": "Overwhelmingly Positive",
+        "total": 24616,
         "updatedAt": 1789565803982
       },
       "historicalLow": {
@@ -26877,10 +26804,8 @@
         ]
       },
       "createdAt": 1789199542539,
-      "updatedAt": 1789565803982,
-      "nameZh": "《骑马与砍杀：战团》",
-      "nameSource": "machine-translation",
-      "nameTranslatedAt": 1789561328513
+      "updatedAt": 1789569140252,
+      "nameSource": "machine-translation"
     },
     {
       "appid": 489830,
@@ -26900,8 +26825,8 @@
       "rating": {
         "score": 9.2,
         "positive": 88,
-        "total": 26580,
         "desc": "Very Positive",
+        "total": 26580,
         "updatedAt": 1789565805392
       },
       "historicalLow": {
@@ -27014,10 +26939,8 @@
         ]
       },
       "createdAt": 1789199532499,
-      "updatedAt": 1789565805392,
-      "nameZh": "上古卷轴 V：天际特别版",
-      "nameSource": "machine-translation",
-      "nameTranslatedAt": 1789560229564
+      "updatedAt": 1789569140252,
+      "nameSource": "machine-translation"
     },
     {
       "appid": 204100,
@@ -27037,8 +26960,8 @@
       "rating": {
         "score": 8.4,
         "positive": 82,
-        "total": 2186,
         "desc": "Very Positive",
+        "total": 2186,
         "updatedAt": 1789565806786
       },
       "historicalLow": {
@@ -27111,13 +27034,12 @@
           "合作",
           "鲜血"
         ],
-        "userTagsFetchedAt": 1789561438001
+        "userTagsFetchedAt": 1789561438001,
+        "bundleIds": []
       },
       "createdAt": 1789199524386,
-      "updatedAt": 1789565806786,
-      "nameZh": "马克思佩恩3",
-      "nameSource": "machine-translation",
-      "nameTranslatedAt": 1789560231207
+      "updatedAt": 1789569140252,
+      "nameSource": "machine-translation"
     },
     {
       "appid": 207610,
@@ -27137,8 +27059,8 @@
       "rating": {
         "score": 9.8,
         "positive": 95,
-        "total": 2802,
         "desc": "Overwhelmingly Positive",
+        "total": 2802,
         "updatedAt": 1789565808182
       },
       "historicalLow": {
@@ -27233,10 +27155,8 @@
         ]
       },
       "createdAt": 1789199516272,
-      "updatedAt": 1789565808182,
-      "nameZh": "行尸走肉",
-      "nameSource": "machine-translation",
-      "nameTranslatedAt": 1789561329684
+      "updatedAt": 1789569140252,
+      "nameSource": "machine-translation"
     },
     {
       "appid": 3081120,
@@ -27256,8 +27176,8 @@
       "rating": {
         "score": 6.5,
         "positive": 64,
-        "total": 11,
         "desc": "Mixed",
+        "total": 11,
         "updatedAt": 1789565809598
       },
       "historicalLow": {
@@ -27335,13 +27255,12 @@
           "第一人称射击",
           "暴力"
         ],
-        "userTagsFetchedAt": 1789561440328
+        "userTagsFetchedAt": 1789561440328,
+        "bundleIds": []
       },
       "createdAt": 1789199506479,
-      "updatedAt": 1789565809598,
-      "nameZh": "猎犬：自动机",
-      "nameSource": "machine-translation",
-      "nameTranslatedAt": 1789560232180
+      "updatedAt": 1789569140252,
+      "nameSource": "machine-translation"
     },
     {
       "appid": 3762550,
@@ -27361,8 +27280,8 @@
       "rating": {
         "score": 5.5,
         "positive": 59,
-        "total": 34,
         "desc": "Mixed",
+        "total": 34,
         "updatedAt": 1789565811005
       },
       "historicalLow": {
@@ -27478,7 +27397,8 @@
         ]
       },
       "createdAt": 1789199455916,
-      "updatedAt": 1789565811005
+      "updatedAt": 1789569140252,
+      "nameSource": null
     },
     {
       "appid": 3312020,
@@ -27498,8 +27418,8 @@
       "rating": {
         "score": 6.5,
         "positive": 64,
-        "total": 77,
         "desc": "Mixed",
+        "total": 77,
         "updatedAt": 1789565812383
       },
       "historicalLow": {
@@ -27574,13 +27494,12 @@
           "悬疑",
           "冒险"
         ],
-        "userTagsFetchedAt": 1789561442400
+        "userTagsFetchedAt": 1789561442400,
+        "bundleIds": []
       },
       "createdAt": 1789199334456,
-      "updatedAt": 1789565812383,
-      "nameZh": "迷失在异常中",
-      "nameSource": "machine-translation",
-      "nameTranslatedAt": 1789561331422
+      "updatedAt": 1789569140252,
+      "nameSource": "machine-translation"
     },
     {
       "appid": 1659040,
@@ -27600,8 +27519,8 @@
       "rating": {
         "score": 8.4,
         "positive": 83,
-        "total": 7950,
         "desc": "Very Positive",
+        "total": 7950,
         "updatedAt": 1789565813797
       },
       "historicalLow": {
@@ -27856,10 +27775,8 @@
         ]
       },
       "createdAt": 1789199221077,
-      "updatedAt": 1789565813797,
-      "nameZh": "HITMAN 暗杀世界",
-      "nameSource": "machine-translation",
-      "nameTranslatedAt": 1789560233419
+      "updatedAt": 1789569140252,
+      "nameSource": "machine-translation"
     },
     {
       "appid": 1771300,
@@ -27879,8 +27796,8 @@
       "rating": {
         "score": 9.6,
         "positive": 93,
-        "total": 41059,
         "desc": "Very Positive",
+        "total": 41059,
         "updatedAt": 1789565815202
       },
       "historicalLow": {
@@ -28096,7 +28013,8 @@
         ]
       },
       "createdAt": 1789199208155,
-      "updatedAt": 1789565815202
+      "updatedAt": 1789569140252,
+      "nameSource": null
     },
     {
       "appid": 1794680,
@@ -28116,8 +28034,8 @@
       "rating": {
         "score": 9.9,
         "positive": 97,
-        "total": 26598,
         "desc": "Overwhelmingly Positive",
+        "total": 26598,
         "updatedAt": 1789565816576
       },
       "historicalLow": {
@@ -28324,7 +28242,8 @@
         ]
       },
       "createdAt": 1789199195781,
-      "updatedAt": 1789565816576
+      "updatedAt": 1789569140252,
+      "nameSource": null
     },
     {
       "appid": 3332600,
@@ -28344,8 +28263,8 @@
       "rating": {
         "score": 9.6,
         "positive": 92,
-        "total": 677,
         "desc": "Very Positive",
+        "total": 677,
         "updatedAt": 1789565817991
       },
       "historicalLow": {
@@ -28433,7 +28352,8 @@
         ]
       },
       "createdAt": 1789199164496,
-      "updatedAt": 1789565817991
+      "updatedAt": 1789569140252,
+      "nameSource": null
     },
     {
       "appid": 1601570,
@@ -28453,8 +28373,8 @@
       "rating": {
         "score": 9.2,
         "positive": 88,
-        "total": 3632,
         "desc": "Very Positive",
+        "total": 3632,
         "updatedAt": 1789565819362
       },
       "historicalLow": {
@@ -28573,7 +28493,8 @@
         ]
       },
       "createdAt": 1789194107390,
-      "updatedAt": 1789565819362
+      "updatedAt": 1789569140252,
+      "nameSource": null
     },
     {
       "appid": 346010,
@@ -28593,8 +28514,8 @@
       "rating": {
         "score": 9.9,
         "positive": 97,
-        "total": 10925,
         "desc": "Overwhelmingly Positive",
+        "total": 10925,
         "updatedAt": 1789565820767
       },
       "historicalLow": {
@@ -28743,7 +28664,8 @@
         ]
       },
       "createdAt": 1789194100122,
-      "updatedAt": 1789565820767
+      "updatedAt": 1789569140252,
+      "nameSource": null
     },
     {
       "appid": 684410,
@@ -28763,8 +28685,8 @@
       "rating": {
         "score": 9.6,
         "positive": 92,
-        "total": 1233,
         "desc": "Very Positive",
+        "total": 1233,
         "updatedAt": 1789565822174
       },
       "historicalLow": {
@@ -28871,7 +28793,8 @@
         ]
       },
       "createdAt": 1789194090965,
-      "updatedAt": 1789565822174
+      "updatedAt": 1789569140252,
+      "nameSource": null
     },
     {
       "appid": 108710,
@@ -28891,8 +28814,8 @@
       "rating": {
         "score": 9.2,
         "positive": 88,
-        "total": 5379,
         "desc": "Very Positive",
+        "total": 5379,
         "updatedAt": 1789565823573
       },
       "historicalLow": {
@@ -29003,10 +28926,8 @@
         ]
       },
       "createdAt": 1789194075102,
-      "updatedAt": 1789565823573,
-      "nameZh": "艾伦·韦克",
-      "nameSource": "machine-translation",
-      "nameTranslatedAt": 1789561332121
+      "updatedAt": 1789569140252,
+      "nameSource": "machine-translation"
     },
     {
       "appid": 301640,
@@ -29026,8 +28947,8 @@
       "rating": {
         "score": 8.4,
         "positive": 83,
-        "total": 3963,
         "desc": "Very Positive",
+        "total": 3963,
         "updatedAt": 1789565824976
       },
       "historicalLow": {
@@ -29116,10 +29037,8 @@
         ]
       },
       "createdAt": 1789193285256,
-      "updatedAt": 1789565824976,
-      "nameZh": "僵尸军团三部曲",
-      "nameSource": "machine-translation",
-      "nameTranslatedAt": 1789560234690
+      "updatedAt": 1789569140252,
+      "nameSource": "machine-translation"
     },
     {
       "appid": 966670,
@@ -29139,8 +29058,8 @@
       "rating": {
         "score": 8.9,
         "positive": 85,
-        "total": 107,
         "desc": "Very Positive",
+        "total": 107,
         "updatedAt": 1789565826385
       },
       "historicalLow": {
@@ -29222,10 +29141,8 @@
         ]
       },
       "createdAt": 1789193256380,
-      "updatedAt": 1789565826385,
-      "nameZh": "流浪者：弗兰肯斯坦的生物",
-      "nameSource": "machine-translation",
-      "nameTranslatedAt": 1789561333814
+      "updatedAt": 1789569140252,
+      "nameSource": "machine-translation"
     },
     {
       "appid": 1623730,
@@ -29245,8 +29162,8 @@
       "rating": {
         "score": 9.6,
         "positive": 92,
-        "total": 140657,
         "desc": "Very Positive",
+        "total": 140657,
         "updatedAt": 1789565827787
       },
       "historicalLow": {
@@ -29362,7 +29279,8 @@
         ]
       },
       "createdAt": 1789193138200,
-      "updatedAt": 1789565827787
+      "updatedAt": 1789569140252,
+      "nameSource": null
     },
     {
       "appid": 1545560,
@@ -29382,8 +29300,8 @@
       "rating": {
         "score": 9.6,
         "positive": 92,
-        "total": 2017,
         "desc": "Very Positive",
+        "total": 2017,
         "updatedAt": 1789565829181
       },
       "historicalLow": {
@@ -29506,7 +29424,8 @@
         ]
       },
       "createdAt": 1789193126410,
-      "updatedAt": 1789565829181
+      "updatedAt": 1789569140252,
+      "nameSource": null
     },
     {
       "appid": 3117820,
@@ -29526,8 +29445,8 @@
       "rating": {
         "score": 9.6,
         "positive": 94,
-        "total": 31580,
         "desc": "Very Positive",
+        "total": 31580,
         "updatedAt": 1789565830594
       },
       "historicalLow": {
@@ -29654,7 +29573,8 @@
         ]
       },
       "createdAt": 1789193117365,
-      "updatedAt": 1789565830594
+      "updatedAt": 1789569140252,
+      "nameSource": null
     },
     {
       "appid": 3636770,
@@ -29674,8 +29594,8 @@
       "rating": {
         "score": 9.9,
         "positive": 98,
-        "total": 4011,
         "desc": "Overwhelmingly Positive",
+        "total": 4011,
         "updatedAt": 1789565832033
       },
       "historicalLow": {
@@ -29750,10 +29670,8 @@
         ]
       },
       "createdAt": 1789193108997,
-      "updatedAt": 1789565832033,
-      "nameZh": "湖的仆人",
-      "nameSource": "machine-translation",
-      "nameTranslatedAt": 1789560235515
+      "updatedAt": 1789569140252,
+      "nameSource": "machine-translation"
     },
     {
       "appid": 3755860,
@@ -29773,8 +29691,8 @@
       "rating": {
         "score": 9.9,
         "positive": 97,
-        "total": 3175,
         "desc": "Overwhelmingly Positive",
+        "total": 3175,
         "updatedAt": 1789565833375
       },
       "historicalLow": {
@@ -29856,10 +29774,8 @@
         ]
       },
       "createdAt": 1789193099884,
-      "updatedAt": 1789565833375,
-      "nameZh": "黑色灵魂",
-      "nameSource": "machine-translation",
-      "nameTranslatedAt": 1789561334486
+      "updatedAt": 1789569140252,
+      "nameSource": "machine-translation"
     },
     {
       "appid": 3855540,
@@ -29879,8 +29795,8 @@
       "rating": {
         "score": 9.9,
         "positive": 98,
-        "total": 2798,
         "desc": "Overwhelmingly Positive",
+        "total": 2798,
         "updatedAt": 1789565834780
       },
       "historicalLow": {
@@ -29962,10 +29878,8 @@
         ]
       },
       "createdAt": 1789193087637,
-      "updatedAt": 1789565834780,
-      "nameZh": "黑魂II",
-      "nameSource": "machine-translation",
-      "nameTranslatedAt": 1789560235954
+      "updatedAt": 1789569140252,
+      "nameSource": "machine-translation"
     },
     {
       "appid": 2510710,
@@ -29985,8 +29899,8 @@
       "rating": {
         "score": 8.4,
         "positive": 82,
-        "total": 471,
         "desc": "Very Positive",
+        "total": 471,
         "updatedAt": 1789565836230
       },
       "historicalLow": {
@@ -30066,13 +29980,12 @@
           "好评原声音轨",
           "即时战略"
         ],
-        "userTagsFetchedAt": 1789561461142
+        "userTagsFetchedAt": 1789561461142,
+        "bundleIds": []
       },
       "createdAt": 1789192967910,
-      "updatedAt": 1789565836230,
-      "nameZh": "国津神：女神之路",
-      "nameSource": "machine-translation",
-      "nameTranslatedAt": 1789560237095
+      "updatedAt": 1789569140252,
+      "nameSource": "machine-translation"
     },
     {
       "appid": 780310,
@@ -30092,8 +30005,8 @@
       "rating": {
         "score": 9.2,
         "positive": 89,
-        "total": 7493,
         "desc": "Very Positive",
+        "total": 7493,
         "updatedAt": 1789565837639
       },
       "historicalLow": {
@@ -30251,7 +30164,8 @@
         ]
       },
       "createdAt": 1789192956054,
-      "updatedAt": 1789565837639
+      "updatedAt": 1789569140252,
+      "nameSource": null
     },
     {
       "appid": 2442460,
@@ -30271,8 +30185,8 @@
       "rating": {
         "score": 8.4,
         "positive": 84,
-        "total": 281,
         "desc": "Very Positive",
+        "total": 281,
         "updatedAt": 1789565838993
       },
       "historicalLow": {
@@ -30405,7 +30319,13 @@
         ]
       },
       "createdAt": 1789192947581,
-      "updatedAt": 1789565838993
+      "updatedAt": 1789569140252,
+      "nameSource": null
     }
-  ]
+  ],
+  "source": "manual-sync",
+  "syncedAt": 1789569158433,
+  "gameCount": 197,
+  "fingerprint": "30a857c27957c800",
+  "syncedFrom": "https://ticianli.github.io"
 }
