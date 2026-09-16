@@ -491,8 +491,55 @@ function purchaseZoneOf(html) {
   const end = b === -1 ? Math.min(rest.length, 20000) : Math.min(b, 20000);
   return rest.slice(0, end);
 }
+/* 变体 B：本地化「文字日期」。
+   用户截图证实：像「周间特惠」这类促销，Steam 在购买区只渲染一行本地化文字，
+   **整页没有任何 data-timestamp**（run #12 实测 Lies of P：countdown=true 但 data-timestamp=false）。
+   例如：<p class="game_purchase_discount_countdown">周间特惠！9月22日截止</p>
+   于是上面所有「要数字」的模式全部落空。这里补一个文字日期的兜底解析。 */
+const EN_MONTH = { jan: 1, feb: 2, mar: 3, apr: 4, may: 5, jun: 6, jul: 7, aug: 8, sep: 9, oct: 10, nov: 11, dec: 12 };
+/* 「关键词 + 日期」的兜底：购买区里写着「…截止 / …结束 / Offer ends …」时把日期抠出来 */
+const KEYWORD_DATE = [
+  /(?:截止|结束|ends?|until|through)[^\d]{0,24}(\d{4}\s*[年\-\/.]\s*\d{1,2}\s*[月\-\/.]\s*\d{1,2}\s*日?)/i,
+  /(?:截止|结束|ends?|until|through)[^\d]{0,24}(\d{1,2}\s*月\s*\d{1,2}\s*日)/i,
+  /(?:截止|结束|ends?|until|through)[^\d]{0,24}((?:Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)[a-z]*\.?\s+\d{1,2})/i
+];
+/* 取出「折扣倒计时」那个节点的纯文字 + 原始 HTML（原始 HTML 进诊断，便于核对 Steam 到底怎么写的） */
+function countdownTextOf(zone) {
+  if (!zone) return { text: '', html: '' };
+  const i = zone.search(/class="[^"]*game_purchase_discount_countdown[^"]*"/);
+  if (i === -1) return { text: '', html: '' };
+  const seg = zone.slice(i, i + 600);
+  const html = seg.slice(0, 400);
+  const gt = seg.indexOf('>');
+  if (gt === -1) return { text: '', html };
+  const text = seg.slice(gt + 1, gt + 320)
+    .replace(/<[^>]*>/g, ' ').replace(/&nbsp;/g, ' ').replace(/\s+/g, ' ').trim();
+  return { text, html };
+}
+/* 从「周间特惠！9月22日截止」「Offer ends September 22」这类文字里抠出日期。
+   Steam 不给时间点，所以按「当天 23:59:59（北京时间）结束」处理 —— 只会略微保守，不会早报。 */
+function parseLocalizedDate(text) {
+  if (!text) return null;
+  const now = Date.now();
+  let mo = null, d = null, y = null, m = null;
+  m = /(\d{4})\s*[年\-\/.]\s*(\d{1,2})\s*[月\-\/.]\s*(\d{1,2})\s*日?/.exec(text);       // 2026年9月22日
+  if (m) { y = +m[1]; mo = +m[2]; d = +m[3]; }
+  if (!m) { m = /(\d{1,2})\s*月\s*(\d{1,2})\s*日/.exec(text); if (m) { mo = +m[1]; d = +m[2]; } }   // 9月22日
+  if (!m) {                                                                              // September 22 / Sep. 22
+    const e = /([A-Za-z]{3,9})\.?\s+(\d{1,2})(?:st|nd|rd|th)?/.exec(text);
+    if (e) { const k = e[1].slice(0, 3).toLowerCase(); if (EN_MONTH[k]) { mo = EN_MONTH[k]; d = +e[2]; } }
+  }
+  if (!mo || !d || mo < 1 || mo > 12 || d < 1 || d > 31) return null;
+  const guessed = (y == null);
+  if (guessed) y = new Date(now + 8 * 3600000).getUTCFullYear();   // 取北京时间当年
+  const dayEnd = (yy) => Date.UTC(yy, mo - 1, d, 15, 59, 59);     // 该日 23:59:59 北京时间 = 15:59:59 UTC
+  let ms = dayEnd(y);
+  if (guessed && ms < now - 86400000) ms = dayEnd(y + 1);         // 没写年份且已过去 → 顺延到明年
+  if (ms <= now || ms > now + 400 * 86400000) return null;
+  return { ms: ms, y: y, mo: mo, d: d };
+}
 function parseSaleDeadline(html) {
-  const diag = { matched: null, snippet: '' };
+  const diag = { matched: null, snippet: '', countdownHtml: '' };
   const zone = purchaseZoneOf(html);
   const scopes = zone ? [['购买区', zone], ['整页', html]] : [['整页', html]];
   for (const [where, text] of scopes) {
@@ -512,6 +559,28 @@ function parseSaleDeadline(html) {
       diag.matched = where + '·模式#' + best.pat;
       diag.snippet = text.slice(Math.max(0, best.index - 100), best.index + 240);
       return { expirationMs: best.ms, diag };
+    }
+  }
+  /* 变体 B 兜底：时间戳全落空时，读「折扣倒计时」节点里的本地化文字日期 */
+  const cd = countdownTextOf(zone || html);
+  diag.countdownHtml = cd.html;
+  const lit = parseLocalizedDate(cd.text);
+  if (lit) {
+    diag.matched = '文字日期「' + cd.text.slice(0, 46) + '」';
+    diag.snippet = cd.html;
+    return { expirationMs: lit.ms, diag };
+  }
+  /* 变体 B2：倒计时节点里没写日期时，退一步在购买区里找「…截止 / Offer ends …」这类文字。
+     仍然只在购买区里找，避免抓到推荐位/其它游戏的日期。 */
+  const plain = String(zone || '').replace(/<[^>]*>/g, ' ').replace(/&nbsp;/g, ' ').replace(/\s+/g, ' ');
+  for (const kw of KEYWORD_DATE) {
+    const k = kw.exec(plain);
+    if (!k) continue;
+    const lit2 = parseLocalizedDate(k[1]);
+    if (lit2) {
+      diag.matched = '购买区文字「' + k[0].slice(0, 46) + '」';
+      diag.snippet = k[0].slice(0, 240);
+      return { expirationMs: lit2.ms, diag };
     }
   }
   const pi = html.search(/discount_pct|discount_block|game_area_purchase/);
@@ -570,7 +639,9 @@ function storePagePriority(g) {
 async function enrichStoreData(games) {
   const stat = {
     tried: 0, ok: 0, failed: 0, tags: 0, withTags: 0, bundles: 0, deadlines: 0, needDeadline: 0,
-    diagTagHtml: null, diagBundleHtml: null, diagDeadline: null, diagDeadlineNoMatch: null, diagNoMatchGame: null
+    byText: 0, byKeyword: 0,
+    diagTagHtml: null, diagBundleHtml: null, diagDeadline: null, diagDeadlineNoMatch: null,
+    diagNoMatchGame: null, diagNoMatchCountdown: null
   };
   const all = games.filter(g => g && g.appid);
   stat.needDeadline = all.filter(g => g.price && g.price.isOnSale && toMs(g.price.discountExpiration) == null).length;
@@ -605,10 +676,16 @@ async function enrichStoreData(games) {
       if (g.price && g.price.isOnSale) {
         const dl = parseSaleDeadline(html);
         if (dl.expirationMs) {
-          if (fillDeadlineFromStore(g, dl.expirationMs)) stat.deadlines++;
+          if (fillDeadlineFromStore(g, dl.expirationMs)) {
+            stat.deadlines++;
+            const how = String(dl.diag.matched);
+            if (how.indexOf('文字日期') === 0) stat.byText++;
+            else if (how.indexOf('购买区文字') === 0) stat.byKeyword++;
+          }
           if (!stat.diagDeadline) stat.diagDeadline = (dl.diag.matched || '') + ' → ' + dl.diag.snippet;
         } else if (!stat.diagDeadlineNoMatch) {
           stat.diagDeadlineNoMatch = dl.diag.snippet;
+          stat.diagNoMatchCountdown = dl.diag.countdownHtml || '(购买区里没有 game_purchase_discount_countdown 节点)';
           stat.diagNoMatchGame = (g.name || g.appid) + '（AppID ' + g.appid + '）' +
             ' ｜ 页面 ' + html.length + ' 字符' +
             ' ｜ 购买区：' + /game_area_purchase/.test(html) +
@@ -640,11 +717,13 @@ function printStoreDiag(stat) {
   if (!CFG.diag) return;
   log(`[诊断·商店页] 尝试 ${stat.tried} 款，成功 ${stat.ok}，失败 ${stat.failed}；` +
       `其中 ${stat.withTags} 款解析出用户标签（共 ${stat.tags} 个）、捆绑包标记 ${stat.bundles} 个、` +
-      `补上折扣截止时间 ${stat.deadlines} 款（清单里促销却缺截止时间的共 ${stat.needDeadline} 款）`);
+      `补上折扣截止时间 ${stat.deadlines} 款（其中倒计时文字日期 ${stat.byText} 款、` +
+      `购买区关键词日期 ${stat.byKeyword} 款；清单里促销却缺截止时间的共 ${stat.needDeadline} 款）`);
   if (stat.diagTagHtml) log('[诊断·商店页] 标签区首段 HTML：' + stat.diagTagHtml);
   if (stat.diagBundleHtml) log('[诊断·商店页] 捆绑包标记首段 HTML：' + stat.diagBundleHtml);
   if (stat.diagDeadline) log('[诊断·商店页] 折扣倒计时命中：' + stat.diagDeadline);
   if (stat.diagNoMatchGame) log('[诊断·商店页] 未命中倒计时的样例：' + stat.diagNoMatchGame);
+  if (stat.diagNoMatchCountdown) log('[诊断·商店页] 该样例的倒计时节点原文：' + stat.diagNoMatchCountdown);
   if (stat.diagDeadlineNoMatch) log('[诊断·商店页] 该样例的购买区原文：' + stat.diagDeadlineNoMatch);
 }
 
