@@ -1,9 +1,9 @@
 {
   "version": 3,
-  "updatedAt": 1789562566198,
-  "refreshedAt": 1789562566198,
+  "updatedAt": 1789565897100,
+  "refreshedAt": 1789565897100,
   "refreshedBy": "github-actions",
-  "refreshCount": 3,
+  "refreshCount": 4,
   "games": [
     {
       "appid": 2417610,
@@ -18,14 +18,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789562200174
+        "updatedAt": 1789565564123
       },
       "rating": {
         "score": 6.5,
         "positive": 63,
         "total": 1021,
         "desc": "Mixed",
-        "updatedAt": 1789562200780
+        "updatedAt": 1789565564612
       },
       "historicalLow": {
         "price": 87.2,
@@ -144,7 +144,7 @@
         ]
       },
       "createdAt": 1789449629221,
-      "updatedAt": 1789562200780,
+      "updatedAt": 1789565564612,
       "nameZh": "合金装备 Δ：食蛇者",
       "nameSource": "machine-translation",
       "nameTranslatedAt": 1789560173908
@@ -162,14 +162,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789562201529
+        "updatedAt": 1789565565349
       },
       "rating": {
         "score": 7.5,
         "positive": 79,
-        "total": 16849,
+        "total": 16850,
         "desc": "Mostly Positive",
-        "updatedAt": 1789562202176
+        "updatedAt": 1789565566052
       },
       "historicalLow": {
         "price": 26.8,
@@ -306,7 +306,7 @@
         "userTagsFetchedAt": 1789560238706
       },
       "createdAt": 1789449608499,
-      "updatedAt": 1789562202176,
+      "updatedAt": 1789565566052,
       "nameZh": "代码静脉",
       "nameSource": "machine-translation",
       "nameTranslatedAt": 1789560174011
@@ -324,14 +324,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789562202933
+        "updatedAt": 1789565566768
       },
       "rating": {
         "score": 8.9,
         "positive": 86,
-        "total": 62587,
+        "total": 62590,
         "desc": "Very Positive",
-        "updatedAt": 1789562203591
+        "updatedAt": 1789565567446
       },
       "historicalLow": {
         "price": 0,
@@ -471,7 +471,7 @@
         ]
       },
       "createdAt": 1789449572950,
-      "updatedAt": 1789562203591,
+      "updatedAt": 1789565567446,
       "nameZh": "刺客信条®奥德赛",
       "nameSource": "machine-translation",
       "nameTranslatedAt": 1789560174950
@@ -489,14 +489,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789562204266
+        "updatedAt": 1789565568188
       },
       "rating": {
         "score": 7.5,
         "positive": 70,
         "total": 24918,
         "desc": "Mostly Positive",
-        "updatedAt": 1789562204978
+        "updatedAt": 1789565568883
       },
       "historicalLow": {
         "price": 214.4,
@@ -623,7 +623,7 @@
         "userTagsFetchedAt": 1789562535396
       },
       "createdAt": 1789449564829,
-      "updatedAt": 1789562204978
+      "updatedAt": 1789565568883
     },
     {
       "appid": 3489700,
@@ -638,14 +638,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789562205678
+        "updatedAt": 1789565569561
       },
       "rating": {
         "score": 9.6,
         "positive": 92,
         "total": 43873,
         "desc": "Very Positive",
-        "updatedAt": 1789562206379
+        "updatedAt": 1789565570234
       },
       "historicalLow": {
         "price": 179.56,
@@ -745,7 +745,7 @@
         "userTagsFetchedAt": 1789562536465
       },
       "createdAt": 1789449553098,
-      "updatedAt": 1789562206379
+      "updatedAt": 1789565570234
     },
     {
       "appid": 1627720,
@@ -757,17 +757,17 @@
         "discountPercent": 50,
         "currency": "CNY",
         "isOnSale": true,
-        "discountExpiration": null,
-        "expirationSource": null,
+        "discountExpiration": 1790006399000,
+        "expirationSource": "storepage",
         "saleEvent": null,
-        "updatedAt": 1789562207068
+        "updatedAt": 1789565570921
       },
       "rating": {
         "score": 8.4,
         "positive": 84,
         "total": 14117,
         "desc": "Very Positive",
-        "updatedAt": 1789562207796
+        "updatedAt": 1789565571615
       },
       "historicalLow": {
         "price": 149,
@@ -897,7 +897,7 @@
           "暴力",
           "重玩价值"
         ],
-        "userTagsFetchedAt": 1789562478212,
+        "userTagsFetchedAt": 1789565842096,
         "bundleIds": [
           54629,
           47677,
@@ -905,7 +905,7 @@
         ]
       },
       "createdAt": 1789449497299,
-      "updatedAt": 1789562207796,
+      "updatedAt": 1789565571615,
       "nameZh": "P的谎言",
       "nameSource": "machine-translation",
       "nameTranslatedAt": 1789561280509
@@ -923,14 +923,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789562208452
+        "updatedAt": 1789565572330
       },
       "rating": {
         "score": 9.2,
         "positive": 89,
         "total": 1334,
         "desc": "Very Positive",
-        "updatedAt": 1789562209177
+        "updatedAt": 1789565573059
       },
       "historicalLow": {
         "price": 61.2,
@@ -1024,7 +1024,7 @@
         "userTagsFetchedAt": 1789560244202
       },
       "createdAt": 1789449490176,
-      "updatedAt": 1789562209177,
+      "updatedAt": 1789565573059,
       "nameZh": "混音带",
       "nameSource": "machine-translation",
       "nameTranslatedAt": 1789560175391
@@ -1042,14 +1042,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789562209856
+        "updatedAt": 1789565573721
       },
       "rating": {
         "score": 8.4,
         "positive": 84,
         "total": 593,
         "desc": "Very Positive",
-        "updatedAt": 1789562210584
+        "updatedAt": 1789565574438
       },
       "historicalLow": {
         "price": 32.43,
@@ -1137,7 +1137,7 @@
         "userTagsFetchedAt": 1789560245416
       },
       "createdAt": 1789449482564,
-      "updatedAt": 1789562210584
+      "updatedAt": 1789565574438
     },
     {
       "appid": 1533420,
@@ -1152,14 +1152,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789562211253
+        "updatedAt": 1789565575106
       },
       "rating": {
         "score": 9.6,
         "positive": 93,
         "total": 913,
         "desc": "Very Positive",
-        "updatedAt": 1789562211962
+        "updatedAt": 1789565575821
       },
       "historicalLow": {
         "price": 35.2,
@@ -1259,7 +1259,7 @@
         ]
       },
       "createdAt": 1789449469765,
-      "updatedAt": 1789562211962,
+      "updatedAt": 1789565575821,
       "nameZh": "霓虹白",
       "nameSource": "machine-translation",
       "nameTranslatedAt": 1789560176568
@@ -1277,14 +1277,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789562212654
+        "updatedAt": 1789565576559
       },
       "rating": {
         "score": 9.2,
         "positive": 88,
         "total": 1194,
         "desc": "Very Positive",
-        "updatedAt": 1789562213371
+        "updatedAt": 1789565577222
       },
       "historicalLow": {
         "price": 30,
@@ -1379,7 +1379,7 @@
         ]
       },
       "createdAt": 1789449462518,
-      "updatedAt": 1789562213371,
+      "updatedAt": 1789565577222,
       "nameZh": "讲故事的人",
       "nameSource": "machine-translation",
       "nameTranslatedAt": 1789561281671
@@ -1397,14 +1397,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789562214073
+        "updatedAt": 1789565577926
       },
       "rating": {
         "score": 8.4,
         "positive": 83,
         "total": 95633,
         "desc": "Very Positive",
-        "updatedAt": 1789562214765
+        "updatedAt": 1789565578618
       },
       "historicalLow": {
         "price": 0,
@@ -1691,7 +1691,7 @@
         ]
       },
       "createdAt": 1789449449836,
-      "updatedAt": 1789562214765,
+      "updatedAt": 1789565578618,
       "nameZh": "方舟：生存进化",
       "nameSource": "machine-translation",
       "nameTranslatedAt": 1789560177879
@@ -1709,14 +1709,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789562215465
+        "updatedAt": 1789565579319
       },
       "rating": {
         "score": 9.2,
         "positive": 91,
         "total": 4474,
         "desc": "Very Positive",
-        "updatedAt": 1789562216173
+        "updatedAt": 1789565580028
       },
       "historicalLow": {
         "price": 115.17,
@@ -1847,7 +1847,7 @@
         ]
       },
       "createdAt": 1789449439707,
-      "updatedAt": 1789562216173,
+      "updatedAt": 1789565580028,
       "nameZh": "《DOOM》：黑暗时代",
       "nameSource": "machine-translation",
       "nameTranslatedAt": 1789561282870
@@ -1865,14 +1865,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789562216856
+        "updatedAt": 1789565580710
       },
       "rating": {
         "score": 9.6,
         "positive": 93,
         "total": 14273,
         "desc": "Very Positive",
-        "updatedAt": 1789562217567
+        "updatedAt": 1789565581462
       },
       "historicalLow": {
         "price": 20.3,
@@ -2000,7 +2000,7 @@
         ]
       },
       "createdAt": 1789449429594,
-      "updatedAt": 1789562217567
+      "updatedAt": 1789565581462
     },
     {
       "appid": 2084000,
@@ -2015,14 +2015,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789562218249
+        "updatedAt": 1789565582131
       },
       "rating": {
         "score": 9.2,
         "positive": 90,
         "total": 1444,
         "desc": "Very Positive",
-        "updatedAt": 1789562218965
+        "updatedAt": 1789565582843
       },
       "historicalLow": {
         "price": 29,
@@ -2125,7 +2125,7 @@
         ]
       },
       "createdAt": 1789449418480,
-      "updatedAt": 1789562218965
+      "updatedAt": 1789565582843
     },
     {
       "appid": 1164940,
@@ -2137,17 +2137,17 @@
         "discountPercent": 75,
         "currency": "CNY",
         "isOnSale": true,
-        "discountExpiration": null,
-        "expirationSource": null,
+        "discountExpiration": 1790265599000,
+        "expirationSource": "storepage",
         "saleEvent": null,
-        "updatedAt": 1789562219658
+        "updatedAt": 1789565583580
       },
       "rating": {
         "score": 8.4,
         "positive": 84,
         "total": 1206,
         "desc": "Very Positive",
-        "updatedAt": 1789562220368
+        "updatedAt": 1789565584253
       },
       "historicalLow": {
         "price": 0,
@@ -2275,7 +2275,7 @@
           "破坏",
           "好评原声音轨"
         ],
-        "userTagsFetchedAt": 1789562479319,
+        "userTagsFetchedAt": 1789565843299,
         "bundleIds": [
           33227,
           42609,
@@ -2283,7 +2283,7 @@
         ]
       },
       "createdAt": 1789449410717,
-      "updatedAt": 1789562220368
+      "updatedAt": 1789565584253
     },
     {
       "appid": 384190,
@@ -2298,14 +2298,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789562221055
+        "updatedAt": 1789565584903
       },
       "rating": {
         "score": 9.6,
         "positive": 92,
         "total": 6416,
         "desc": "Very Positive",
-        "updatedAt": 1789562221782
+        "updatedAt": 1789565585624
       },
       "historicalLow": {
         "price": 17,
@@ -2396,7 +2396,7 @@
         ]
       },
       "createdAt": 1789449403972,
-      "updatedAt": 1789562221782,
+      "updatedAt": 1789565585624,
       "nameZh": "阿布祖",
       "nameSource": "machine-translation",
       "nameTranslatedAt": 1789560178963
@@ -2414,14 +2414,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789562222451
+        "updatedAt": 1789565586374
       },
       "rating": {
         "score": 9.8,
         "positive": 96,
         "total": 6568,
         "desc": "Overwhelmingly Positive",
-        "updatedAt": 1789562223167
+        "updatedAt": 1789565587023
       },
       "historicalLow": {
         "price": 20.8,
@@ -2534,7 +2534,7 @@
         ]
       },
       "createdAt": 1789449397087,
-      "updatedAt": 1789562223167
+      "updatedAt": 1789565587023
     },
     {
       "appid": 1282100,
@@ -2549,14 +2549,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789562223851
+        "updatedAt": 1789565587734
       },
       "rating": {
         "score": 7.5,
         "positive": 73,
         "total": 11615,
         "desc": "Mostly Positive",
-        "updatedAt": 1789562224569
+        "updatedAt": 1789565588425
       },
       "historicalLow": {
         "price": 61.25,
@@ -2690,7 +2690,7 @@
         ]
       },
       "createdAt": 1789449385735,
-      "updatedAt": 1789562224569
+      "updatedAt": 1789565588425
     },
     {
       "appid": 1966900,
@@ -2705,14 +2705,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789562225244
+        "updatedAt": 1789565589105
       },
       "rating": {
         "score": 8.9,
         "positive": 85,
-        "total": 8376,
+        "total": 8377,
         "desc": "Very Positive",
-        "updatedAt": 1789562225965
+        "updatedAt": 1789565589874
       },
       "historicalLow": {
         "price": 11,
@@ -2804,7 +2804,7 @@
         ]
       },
       "createdAt": 1789449379519,
-      "updatedAt": 1789562225965
+      "updatedAt": 1789565589874
     },
     {
       "appid": 3228590,
@@ -2819,14 +2819,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789562226656
+        "updatedAt": 1789565590588
       },
       "rating": {
         "score": 5.5,
         "positive": 54,
         "total": 1965,
         "desc": "Mixed",
-        "updatedAt": 1789562227386
+        "updatedAt": 1789565591245
       },
       "historicalLow": {
         "price": 42.5,
@@ -2957,7 +2957,7 @@
         ]
       },
       "createdAt": 1789449370423,
-      "updatedAt": 1789562227386
+      "updatedAt": 1789565591245
     },
     {
       "appid": 775500,
@@ -2972,14 +2972,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789562228066
+        "updatedAt": 1789565591967
       },
       "rating": {
         "score": 7.5,
         "positive": 74,
         "total": 6133,
         "desc": "Mostly Positive",
-        "updatedAt": 1789562229004
+        "updatedAt": 1789565592650
       },
       "historicalLow": {
         "price": 0,
@@ -3150,7 +3150,7 @@
         "userTagsFetchedAt": 1789560259621
       },
       "createdAt": 1789449339704,
-      "updatedAt": 1789562229004
+      "updatedAt": 1789565592650
     },
     {
       "appid": 1622910,
@@ -3165,14 +3165,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789562229450
+        "updatedAt": 1789565593318
       },
       "rating": {
         "score": 8.9,
         "positive": 85,
         "total": 590,
         "desc": "Very Positive",
-        "updatedAt": 1789562230166
+        "updatedAt": 1789565594028
       },
       "historicalLow": {
         "price": 32,
@@ -3290,7 +3290,7 @@
         ]
       },
       "createdAt": 1789449331976,
-      "updatedAt": 1789562230166,
+      "updatedAt": 1789565594028,
       "nameZh": "仍然唤醒深渊",
       "nameSource": "machine-translation",
       "nameTranslatedAt": 1789561284068
@@ -3308,14 +3308,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789562230854
+        "updatedAt": 1789565594709
       },
       "rating": {
         "score": 8.4,
         "positive": 83,
         "total": 2781,
         "desc": "Very Positive",
-        "updatedAt": 1789562231564
+        "updatedAt": 1789565595437
       },
       "historicalLow": {
         "price": 47,
@@ -3426,7 +3426,7 @@
         ]
       },
       "createdAt": 1789449324781,
-      "updatedAt": 1789562231564
+      "updatedAt": 1789565595437
     },
     {
       "appid": 1507190,
@@ -3441,14 +3441,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789562232236
+        "updatedAt": 1789565596114
       },
       "rating": {
         "score": 9.6,
         "positive": 94,
         "total": 1309,
         "desc": "Very Positive",
-        "updatedAt": 1789562232972
+        "updatedAt": 1789565596845
       },
       "historicalLow": {
         "price": 0,
@@ -3531,7 +3531,7 @@
         "userTagsFetchedAt": 1789560262941
       },
       "createdAt": 1789449320427,
-      "updatedAt": 1789562232972,
+      "updatedAt": 1789565596845,
       "nameZh": "机械：博物馆",
       "nameSource": "machine-translation",
       "nameTranslatedAt": 1789560180140
@@ -3549,14 +3549,14 @@
         "discountExpiration": 1789664400000,
         "expirationSource": "storepage",
         "saleEvent": null,
-        "updatedAt": 1789562233656
+        "updatedAt": 1789565597528
       },
       "rating": {
         "score": 6.5,
         "positive": 63,
         "total": 1520,
         "desc": "Mixed",
-        "updatedAt": 1789562234366
+        "updatedAt": 1789565598246
       },
       "historicalLow": {
         "price": 150.08,
@@ -3677,10 +3677,10 @@
           "第三人称",
           "好评原声音轨"
         ],
-        "userTagsFetchedAt": 1789562480389
+        "userTagsFetchedAt": 1789565844342
       },
       "createdAt": 1789449313978,
-      "updatedAt": 1789562234366
+      "updatedAt": 1789565598246
     },
     {
       "appid": 2567870,
@@ -3695,14 +3695,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789562235041
+        "updatedAt": 1789565598903
       },
       "rating": {
         "score": 9.2,
         "positive": 89,
-        "total": 12305,
+        "total": 12306,
         "desc": "Very Positive",
-        "updatedAt": 1789562235767
+        "updatedAt": 1789565599637
       },
       "historicalLow": {
         "price": 17.6,
@@ -3809,7 +3809,7 @@
         ]
       },
       "createdAt": 1789449305158,
-      "updatedAt": 1789562235767,
+      "updatedAt": 1789565599637,
       "nameZh": "链在一起",
       "nameSource": "machine-translation",
       "nameTranslatedAt": 1789561285267
@@ -3827,14 +3827,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789562236481
+        "updatedAt": 1789565600303
       },
       "rating": {
         "score": 6.5,
         "positive": 68,
         "total": 287,
         "desc": "Mixed",
-        "updatedAt": 1789562237182
+        "updatedAt": 1789565601071
       },
       "historicalLow": {
         "price": 67.2,
@@ -3999,7 +3999,7 @@
         "userTagsFetchedAt": 1789562540964
       },
       "createdAt": 1789449295581,
-      "updatedAt": 1789562237182
+      "updatedAt": 1789565601071
     },
     {
       "appid": 3265700,
@@ -4014,14 +4014,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789562237853
+        "updatedAt": 1789565601716
       },
       "rating": {
         "score": 9.9,
         "positive": 98,
         "total": 5750,
         "desc": "Overwhelmingly Positive",
-        "updatedAt": 1789562238574
+        "updatedAt": 1789565602464
       },
       "historicalLow": {
         "price": 31.2,
@@ -4127,7 +4127,7 @@
         ]
       },
       "createdAt": 1789449277706,
-      "updatedAt": 1789562238574
+      "updatedAt": 1789565602464
     },
     {
       "appid": 1999170,
@@ -4142,14 +4142,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789562239252
+        "updatedAt": 1789565603098
       },
       "rating": {
         "score": 8.4,
         "positive": 84,
         "total": 2094,
         "desc": "Very Positive",
-        "updatedAt": 1789562239968
+        "updatedAt": 1789565603866
       },
       "historicalLow": {
         "price": 9.8,
@@ -4240,7 +4240,7 @@
         ]
       },
       "createdAt": 1789449268597,
-      "updatedAt": 1789562239969
+      "updatedAt": 1789565603866
     },
     {
       "appid": 1296830,
@@ -4255,14 +4255,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789562240650
+        "updatedAt": 1789565604609
       },
       "rating": {
         "score": 9.6,
         "positive": 93,
         "total": 36469,
         "desc": "Very Positive",
-        "updatedAt": 1789562241359
+        "updatedAt": 1789565605233
       },
       "historicalLow": {
         "price": 40.6,
@@ -4400,7 +4400,7 @@
         ]
       },
       "createdAt": 1789449261106,
-      "updatedAt": 1789562241359
+      "updatedAt": 1789565605233
     },
     {
       "appid": 1850740,
@@ -4415,14 +4415,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789562242059
+        "updatedAt": 1789565605927
       },
       "rating": {
         "score": 7.5,
         "positive": 77,
         "total": 771,
         "desc": "Mostly Positive",
-        "updatedAt": 1789562242773
+        "updatedAt": 1789565606635
       },
       "historicalLow": {
         "price": 25,
@@ -4524,7 +4524,7 @@
         ]
       },
       "createdAt": 1789449248704,
-      "updatedAt": 1789562242773,
+      "updatedAt": 1789565606635,
       "nameZh": "幽灵观察者",
       "nameSource": "machine-translation",
       "nameTranslatedAt": 1789560181162
@@ -4542,14 +4542,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789562243453
+        "updatedAt": 1789565607335
       },
       "rating": {
         "score": 8.4,
         "positive": 83,
         "total": 641,
         "desc": "Very Positive",
-        "updatedAt": 1789562244168
+        "updatedAt": 1789565608042
       },
       "historicalLow": {
         "price": 34.3,
@@ -4678,7 +4678,7 @@
         ]
       },
       "createdAt": 1789449241621,
-      "updatedAt": 1789562244168
+      "updatedAt": 1789565608042
     },
     {
       "appid": 2239710,
@@ -4693,14 +4693,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789562244843
+        "updatedAt": 1789565608749
       },
       "rating": {
         "score": 7.5,
         "positive": 77,
         "total": 2315,
         "desc": "Mostly Positive",
-        "updatedAt": 1789562245569
+        "updatedAt": 1789565609489
       },
       "historicalLow": {
         "price": 68.8,
@@ -4791,7 +4791,7 @@
         ]
       },
       "createdAt": 1789449175682,
-      "updatedAt": 1789562245569
+      "updatedAt": 1789565609489
     },
     {
       "appid": 3751260,
@@ -4806,14 +4806,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789562246255
+        "updatedAt": 1789565610181
       },
       "rating": {
         "score": 8.4,
         "positive": 80,
-        "total": 1404,
+        "total": 1406,
         "desc": "Very Positive",
-        "updatedAt": 1789562246979
+        "updatedAt": 1789565610837
       },
       "historicalLow": {
         "price": 298,
@@ -4918,7 +4918,7 @@
         "userTagsFetchedAt": 1789562541960
       },
       "createdAt": 1789449171748,
-      "updatedAt": 1789562246979
+      "updatedAt": 1789565610837
     },
     {
       "appid": 1967430,
@@ -4930,17 +4930,17 @@
         "discountPercent": 67,
         "currency": "CNY",
         "isOnSale": true,
-        "discountExpiration": null,
-        "expirationSource": null,
+        "discountExpiration": 1790006399000,
+        "expirationSource": "storepage",
         "saleEvent": null,
-        "updatedAt": 1789562247661
+        "updatedAt": 1789565611550
       },
       "rating": {
         "score": 9.9,
         "positive": 98,
-        "total": 4547,
+        "total": 4548,
         "desc": "Overwhelmingly Positive",
-        "updatedAt": 1789562248364
+        "updatedAt": 1789565612285
       },
       "historicalLow": {
         "price": 48.84,
@@ -5043,10 +5043,10 @@
           "狗",
           "猫"
         ],
-        "userTagsFetchedAt": 1789562481473
+        "userTagsFetchedAt": 1789565845408
       },
       "createdAt": 1789449165319,
-      "updatedAt": 1789562248364,
+      "updatedAt": 1789565612285,
       "nameZh": "幽灵诡计：幻影侦探",
       "nameSource": "machine-translation",
       "nameTranslatedAt": 1789561287504
@@ -5064,14 +5064,14 @@
         "discountExpiration": 1789578000000,
         "expirationSource": "storepage",
         "saleEvent": null,
-        "updatedAt": 1789562249049
+        "updatedAt": 1789565612930
       },
       "rating": {
         "score": 7.5,
         "positive": 75,
         "total": 1656,
         "desc": "Mostly Positive",
-        "updatedAt": 1789562249767
+        "updatedAt": 1789565613632
       },
       "historicalLow": {
         "price": 25.76,
@@ -5152,13 +5152,13 @@
           "3D",
           "动作角色扮演"
         ],
-        "userTagsFetchedAt": 1789562482582,
+        "userTagsFetchedAt": 1789565846489,
         "bundleIds": [
           23317
         ]
       },
       "createdAt": 1789449158223,
-      "updatedAt": 1789562249767,
+      "updatedAt": 1789565613632,
       "nameZh": "最后的立场：后果",
       "nameSource": "machine-translation",
       "nameTranslatedAt": 1789560182875
@@ -5173,17 +5173,17 @@
         "discountPercent": 90,
         "currency": "CNY",
         "isOnSale": true,
-        "discountExpiration": null,
-        "expirationSource": null,
+        "discountExpiration": 1789833599000,
+        "expirationSource": "storepage",
         "saleEvent": null,
-        "updatedAt": 1789562250500
+        "updatedAt": 1789565614353
       },
       "rating": {
         "score": 9.8,
         "positive": 95,
         "total": 1269,
         "desc": "Overwhelmingly Positive",
-        "updatedAt": 1789562251168
+        "updatedAt": 1789565615046
       },
       "historicalLow": {
         "price": 5.22,
@@ -5385,7 +5385,7 @@
           "库存管理",
           "鲜血"
         ],
-        "userTagsFetchedAt": 1789562483714,
+        "userTagsFetchedAt": 1789565847621,
         "bundleIds": [
           45978,
           13176,
@@ -5393,7 +5393,7 @@
         ]
       },
       "createdAt": 1789449148047,
-      "updatedAt": 1789562251168,
+      "updatedAt": 1789565615046,
       "nameZh": "昏迷2：恶毒姐妹",
       "nameSource": "machine-translation",
       "nameTranslatedAt": 1789561287670
@@ -5408,17 +5408,17 @@
         "discountPercent": 40,
         "currency": "CNY",
         "isOnSale": true,
-        "discountExpiration": null,
-        "expirationSource": null,
+        "discountExpiration": 1790351999000,
+        "expirationSource": "storepage",
         "saleEvent": null,
-        "updatedAt": 1789562251861
+        "updatedAt": 1789565615715
       },
       "rating": {
         "score": 9.9,
         "positive": 97,
         "total": 19615,
         "desc": "Overwhelmingly Positive",
-        "updatedAt": 1789562252577
+        "updatedAt": 1789565616564
       },
       "historicalLow": {
         "price": 34.8,
@@ -5512,7 +5512,7 @@
           "彩色",
           "视觉小说"
         ],
-        "userTagsFetchedAt": 1789562484803,
+        "userTagsFetchedAt": 1789565848673,
         "bundleIds": [
           81625,
           79781,
@@ -5520,7 +5520,7 @@
         ]
       },
       "createdAt": 1789449139281,
-      "updatedAt": 1789562252577
+      "updatedAt": 1789565616564
     },
     {
       "appid": 1903340,
@@ -5532,17 +5532,17 @@
         "discountPercent": 20,
         "currency": "CNY",
         "isOnSale": true,
-        "discountExpiration": null,
-        "expirationSource": null,
+        "discountExpiration": 1790611199000,
+        "expirationSource": "storepage",
         "saleEvent": null,
-        "updatedAt": 1789562253258
+        "updatedAt": 1789565617106
       },
       "rating": {
         "score": 8.9,
         "positive": 87,
         "total": 39248,
         "desc": "Very Positive",
-        "updatedAt": 1789562253977
+        "updatedAt": 1789565617904
       },
       "historicalLow": {
         "price": 174.4,
@@ -5678,7 +5678,7 @@
           "独立",
           "人工智能"
         ],
-        "userTagsFetchedAt": 1789562485949,
+        "userTagsFetchedAt": 1789565849824,
         "bundleIds": [
           53644,
           74895,
@@ -5687,7 +5687,7 @@
         ]
       },
       "createdAt": 1789449123598,
-      "updatedAt": 1789562253977
+      "updatedAt": 1789565617904
     },
     {
       "appid": 2001120,
@@ -5702,15 +5702,15 @@
         "discountExpiration": 1790614800000,
         "expirationSource": "featuredcategories",
         "saleEvent": "特惠",
-        "updatedAt": 1789562254652,
-        "expirationCheckedAt": 1789562475762
+        "updatedAt": 1789565618565,
+        "expirationCheckedAt": 1789565839643
       },
       "rating": {
         "score": 9.9,
         "positive": 98,
         "total": 60112,
         "desc": "Overwhelmingly Positive",
-        "updatedAt": 1789562255382
+        "updatedAt": 1789565619220
       },
       "historicalLow": {
         "price": 128.7,
@@ -5824,7 +5824,7 @@
         ]
       },
       "createdAt": 1789449116702,
-      "updatedAt": 1789562255382
+      "updatedAt": 1789565619220
     },
     {
       "appid": 2384580,
@@ -5836,17 +5836,17 @@
         "discountPercent": 30,
         "currency": "CNY",
         "isOnSale": true,
-        "discountExpiration": null,
-        "expirationSource": null,
+        "discountExpiration": 1790611199000,
+        "expirationSource": "storepage",
         "saleEvent": null,
-        "updatedAt": 1789562256057
+        "updatedAt": 1789565619950
       },
       "rating": {
         "score": 9.6,
         "positive": 94,
         "total": 19010,
         "desc": "Very Positive",
-        "updatedAt": 1789562256774
+        "updatedAt": 1789565620639
       },
       "historicalLow": {
         "price": 244.3,
@@ -5970,13 +5970,13 @@
           "战争",
           "战术"
         ],
-        "userTagsFetchedAt": 1789562487097,
+        "userTagsFetchedAt": 1789565850919,
         "bundleIds": [
           72787
         ]
       },
       "createdAt": 1789449076133,
-      "updatedAt": 1789562256774
+      "updatedAt": 1789565620639
     },
     {
       "appid": 3681010,
@@ -5988,17 +5988,17 @@
         "discountPercent": 43,
         "currency": "CNY",
         "isOnSale": true,
-        "discountExpiration": null,
-        "expirationSource": null,
+        "discountExpiration": 1790611199000,
+        "expirationSource": "storepage",
         "saleEvent": null,
-        "updatedAt": 1789562257479
+        "updatedAt": 1789565621328
       },
       "rating": {
         "score": 7.5,
         "positive": 75,
         "total": 8722,
         "desc": "Mostly Positive",
-        "updatedAt": 1789562258165
+        "updatedAt": 1789565622035
       },
       "historicalLow": {
         "price": 198.36,
@@ -6121,13 +6121,13 @@
           "女性主角",
           "合作"
         ],
-        "userTagsFetchedAt": 1789562488125,
+        "userTagsFetchedAt": 1789565851952,
         "bundleIds": [
           87098
         ]
       },
       "createdAt": 1789449065652,
-      "updatedAt": 1789562258165
+      "updatedAt": 1789565622035
     },
     {
       "appid": 281990,
@@ -6142,14 +6142,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789562258913
+        "updatedAt": 1789565622791
       },
       "rating": {
         "score": 8.4,
         "positive": 84,
-        "total": 47046,
+        "total": 47048,
         "desc": "Very Positive",
-        "updatedAt": 1789562259566
+        "updatedAt": 1789565623436
       },
       "historicalLow": {
         "price": 0,
@@ -6421,7 +6421,7 @@
         ]
       },
       "createdAt": 1789449054846,
-      "updatedAt": 1789562259566,
+      "updatedAt": 1789565623436,
       "nameZh": "群星",
       "nameSource": "machine-translation",
       "nameTranslatedAt": 1789560183307
@@ -6436,17 +6436,17 @@
         "discountPercent": 40,
         "currency": "CNY",
         "isOnSale": true,
-        "discountExpiration": null,
-        "expirationSource": null,
+        "discountExpiration": 1789919999000,
+        "expirationSource": "storepage",
         "saleEvent": null,
-        "updatedAt": 1789562260262
+        "updatedAt": 1789565624139
       },
       "rating": {
         "score": 9.6,
         "positive": 93,
         "total": 5102,
         "desc": "Very Positive",
-        "updatedAt": 1789562260978
+        "updatedAt": 1789565624869
       },
       "historicalLow": {
         "price": 40.8,
@@ -6539,7 +6539,7 @@
           "单人",
           "沉浸式模拟"
         ],
-        "userTagsFetchedAt": 1789562489246,
+        "userTagsFetchedAt": 1789565853096,
         "bundleIds": [
           72618,
           70639,
@@ -6547,7 +6547,7 @@
         ]
       },
       "createdAt": 1789393237087,
-      "updatedAt": 1789562260978
+      "updatedAt": 1789565624869
     },
     {
       "appid": 2997230,
@@ -6559,17 +6559,17 @@
         "discountPercent": 30,
         "currency": "CNY",
         "isOnSale": true,
-        "discountExpiration": null,
-        "expirationSource": null,
+        "discountExpiration": 1790351999000,
+        "expirationSource": "storepage",
         "saleEvent": null,
-        "updatedAt": 1789562261658
+        "updatedAt": 1789565625510
       },
       "rating": {
         "score": 8.4,
         "positive": 80,
         "total": 88,
         "desc": "Mostly Positive",
-        "updatedAt": 1789562262385
+        "updatedAt": 1789565626255
       },
       "historicalLow": {
         "price": 41.3,
@@ -6665,7 +6665,7 @@
           "2D",
           "解谜"
         ],
-        "userTagsFetchedAt": 1789562490350,
+        "userTagsFetchedAt": 1789565854237,
         "bundleIds": [
           69682,
           69835,
@@ -6673,7 +6673,7 @@
         ]
       },
       "createdAt": 1789393214949,
-      "updatedAt": 1789562262385,
+      "updatedAt": 1789565626255,
       "nameZh": "拉娜星球II",
       "nameSource": "machine-translation",
       "nameTranslatedAt": 1789560184758
@@ -6691,14 +6691,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789562263057
+        "updatedAt": 1789565626964
       },
       "rating": {
         "score": 9.6,
         "positive": 92,
         "total": 2616,
         "desc": "Very Positive",
-        "updatedAt": 1789562263790
+        "updatedAt": 1789565627633
       },
       "historicalLow": {
         "price": 5,
@@ -6825,7 +6825,7 @@
         ]
       },
       "createdAt": 1789393174094,
-      "updatedAt": 1789562263790,
+      "updatedAt": 1789565627633,
       "nameZh": "《三位一体 2》：完整故事",
       "nameSource": "machine-translation",
       "nameTranslatedAt": 1789561288877
@@ -6840,17 +6840,17 @@
         "discountPercent": 80,
         "currency": "CNY",
         "isOnSale": true,
-        "discountExpiration": null,
-        "expirationSource": null,
+        "discountExpiration": 1790351999000,
+        "expirationSource": "storepage",
         "saleEvent": null,
-        "updatedAt": 1789562264459
+        "updatedAt": 1789565628314
       },
       "rating": {
         "score": 9.2,
         "positive": 88,
         "total": 1596,
         "desc": "Very Positive",
-        "updatedAt": 1789562265180
+        "updatedAt": 1789565629044
       },
       "historicalLow": {
         "price": 5.9,
@@ -6950,7 +6950,7 @@
           "科幻",
           "手绘"
         ],
-        "userTagsFetchedAt": 1789562491421,
+        "userTagsFetchedAt": 1789565855274,
         "bundleIds": [
           69682,
           69835,
@@ -6958,7 +6958,7 @@
         ]
       },
       "createdAt": 1789393166062,
-      "updatedAt": 1789562265180,
+      "updatedAt": 1789565629044,
       "nameZh": "拉娜星球",
       "nameSource": "machine-translation",
       "nameTranslatedAt": 1789560185900
@@ -6973,17 +6973,17 @@
         "discountPercent": 25,
         "currency": "CNY",
         "isOnSale": true,
-        "discountExpiration": null,
-        "expirationSource": null,
+        "discountExpiration": 1790006399000,
+        "expirationSource": "storepage",
         "saleEvent": null,
-        "updatedAt": 1789562265867
+        "updatedAt": 1789565629719
       },
       "rating": {
         "score": 9.9,
         "positive": 98,
         "total": 2121,
         "desc": "Overwhelmingly Positive",
-        "updatedAt": 1789562266579
+        "updatedAt": 1789565630439
       },
       "historicalLow": {
         "price": 33.75,
@@ -7077,7 +7077,7 @@
           "类银河战士恶魔城",
           "欢乐"
         ],
-        "userTagsFetchedAt": 1789562492529,
+        "userTagsFetchedAt": 1789565856503,
         "bundleIds": [
           86055,
           87795,
@@ -7085,7 +7085,7 @@
         ]
       },
       "createdAt": 1789393151629,
-      "updatedAt": 1789562266579
+      "updatedAt": 1789565630439
     },
     {
       "appid": 2153350,
@@ -7097,17 +7097,17 @@
         "discountPercent": 60,
         "currency": "CNY",
         "isOnSale": true,
-        "discountExpiration": null,
-        "expirationSource": null,
+        "discountExpiration": 1790265599000,
+        "expirationSource": "storepage",
         "saleEvent": null,
-        "updatedAt": 1789562267261
+        "updatedAt": 1789565631115
       },
       "rating": {
         "score": 6.5,
         "positive": 65,
         "total": 359,
         "desc": "Mixed",
-        "updatedAt": 1789562267969
+        "updatedAt": 1789565631847
       },
       "historicalLow": {
         "price": 35.2,
@@ -7198,7 +7198,7 @@
           "重制",
           "剧情丰富"
         ],
-        "userTagsFetchedAt": 1789562493633,
+        "userTagsFetchedAt": 1789565857542,
         "bundleIds": [
           86661,
           39086,
@@ -7206,7 +7206,7 @@
         ]
       },
       "createdAt": 1789393144482,
-      "updatedAt": 1789562267970
+      "updatedAt": 1789565631847
     },
     {
       "appid": 3528450,
@@ -7218,17 +7218,17 @@
         "discountPercent": 30,
         "currency": "CNY",
         "isOnSale": true,
-        "discountExpiration": null,
-        "expirationSource": null,
+        "discountExpiration": 1790006399000,
+        "expirationSource": "storepage",
         "saleEvent": null,
-        "updatedAt": 1789562268656
+        "updatedAt": 1789565632558
       },
       "rating": {
         "score": 9.8,
         "positive": 95,
-        "total": 10277,
+        "total": 10278,
         "desc": "Very Positive",
-        "updatedAt": 1789562269377
+        "updatedAt": 1789565633285
       },
       "historicalLow": {
         "price": 18.2,
@@ -7305,10 +7305,10 @@
           "色情内容",
           "心理恐怖"
         ],
-        "userTagsFetchedAt": 1789562494705
+        "userTagsFetchedAt": 1789565858602
       },
       "createdAt": 1789393042116,
-      "updatedAt": 1789562269377
+      "updatedAt": 1789565633285
     },
     {
       "appid": 1029690,
@@ -7323,14 +7323,14 @@
         "discountExpiration": 1789664400000,
         "expirationSource": "storepage",
         "saleEvent": null,
-        "updatedAt": 1789562270070
+        "updatedAt": 1789565633913
       },
       "rating": {
         "score": 7.5,
         "positive": 72,
         "total": 4170,
         "desc": "Mostly Positive",
-        "updatedAt": 1789562270778
+        "updatedAt": 1789565634642
       },
       "historicalLow": {
         "price": 13.8,
@@ -7612,7 +7612,7 @@
           "枪械改装",
           "虚拟现实"
         ],
-        "userTagsFetchedAt": 1789562495839,
+        "userTagsFetchedAt": 1789565859773,
         "bundleIds": [
           33906,
           3293,
@@ -7620,7 +7620,7 @@
         ]
       },
       "createdAt": 1789393018475,
-      "updatedAt": 1789562270778
+      "updatedAt": 1789565634642
     },
     {
       "appid": 1178830,
@@ -7632,17 +7632,17 @@
         "discountPercent": 50,
         "currency": "CNY",
         "isOnSale": true,
-        "discountExpiration": null,
-        "expirationSource": null,
+        "discountExpiration": 1790179199000,
+        "expirationSource": "storepage",
         "saleEvent": null,
-        "updatedAt": 1789562271478
+        "updatedAt": 1789565635349
       },
       "rating": {
         "score": 9.6,
         "positive": 93,
         "total": 29611,
         "desc": "Very Positive",
-        "updatedAt": 1789562272178
+        "updatedAt": 1789565636056
       },
       "historicalLow": {
         "price": 24,
@@ -7841,7 +7841,7 @@
           "拟真",
           "第三人称"
         ],
-        "userTagsFetchedAt": 1789562496907,
+        "userTagsFetchedAt": 1789565860856,
         "bundleIds": [
           24572,
           23375,
@@ -7849,7 +7849,7 @@
         ]
       },
       "createdAt": 1789393002188,
-      "updatedAt": 1789562272178
+      "updatedAt": 1789565636056
     },
     {
       "appid": 319910,
@@ -7864,14 +7864,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789562272858
+        "updatedAt": 1789565636737
       },
       "rating": {
         "score": 6.5,
         "positive": 69,
         "total": 1667,
         "desc": "Mixed",
-        "updatedAt": 1789562273584
+        "updatedAt": 1789565637537
       },
       "historicalLow": {
         "price": 16.19,
@@ -7993,7 +7993,7 @@
         ]
       },
       "createdAt": 1789392991099,
-      "updatedAt": 1789562273584,
+      "updatedAt": 1789565637537,
       "nameZh": "《三位一体 3：权力的神器》",
       "nameSource": "machine-translation",
       "nameTranslatedAt": 1789561290075
@@ -8011,14 +8011,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789562274261
+        "updatedAt": 1789565638123
       },
       "rating": {
         "score": 7.5,
         "positive": 77,
-        "total": 3238,
+        "total": 3239,
         "desc": "Mostly Positive",
-        "updatedAt": 1789562274986
+        "updatedAt": 1789565638853
       },
       "historicalLow": {
         "price": 149,
@@ -8127,7 +8127,7 @@
         ]
       },
       "createdAt": 1789392974172,
-      "updatedAt": 1789562274986,
+      "updatedAt": 1789565638853,
       "nameZh": "寂静岭 f",
       "nameSource": "machine-translation",
       "nameTranslatedAt": 1789560186333
@@ -8145,14 +8145,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789562275674
+        "updatedAt": 1789565639543
       },
       "rating": {
         "score": 9.6,
         "positive": 93,
         "total": 4548,
         "desc": "Very Positive",
-        "updatedAt": 1789562276422
+        "updatedAt": 1789565640241
       },
       "historicalLow": {
         "price": 119.2,
@@ -8240,7 +8240,7 @@
         ]
       },
       "createdAt": 1789392915340,
-      "updatedAt": 1789562276422,
+      "updatedAt": 1789565640241,
       "nameZh": "寂静岭2",
       "nameSource": "machine-translation",
       "nameTranslatedAt": 1789560187001
@@ -8258,14 +8258,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789562277049
+        "updatedAt": 1789565640931
       },
       "rating": {
         "score": 8.4,
         "positive": 84,
-        "total": 3239,
+        "total": 3241,
         "desc": "Very Positive",
-        "updatedAt": 1789562277769
+        "updatedAt": 1789565641633
       },
       "historicalLow": {
         "price": 111.75,
@@ -8369,7 +8369,7 @@
         ]
       },
       "createdAt": 1789392905832,
-      "updatedAt": 1789562277769
+      "updatedAt": 1789565641633
     },
     {
       "appid": 3768760,
@@ -8381,17 +8381,17 @@
         "discountPercent": 20,
         "currency": "CNY",
         "isOnSale": true,
-        "discountExpiration": null,
-        "expirationSource": null,
+        "discountExpiration": 1790697599000,
+        "expirationSource": "storepage",
         "saleEvent": null,
-        "updatedAt": 1789562278452
+        "updatedAt": 1789565642328
       },
       "rating": {
         "score": 9.2,
         "positive": 90,
-        "total": 7615,
+        "total": 7616,
         "desc": "Very Positive",
-        "updatedAt": 1789562279169
+        "updatedAt": 1789565643035
       },
       "historicalLow": {
         "price": 238.4,
@@ -8487,10 +8487,10 @@
           "刺客",
           "黑暗"
         ],
-        "userTagsFetchedAt": 1789562498035
+        "userTagsFetchedAt": 1789565861847
       },
       "createdAt": 1789392897440,
-      "updatedAt": 1789562279169
+      "updatedAt": 1789565643035
     },
     {
       "appid": 378540,
@@ -8505,14 +8505,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789562279858
+        "updatedAt": 1789565643715
       },
       "rating": {
         "score": 6.5,
         "positive": 64,
         "total": 1435,
         "desc": "Mixed",
-        "updatedAt": 1789562280572
+        "updatedAt": 1789565644426
       },
       "historicalLow": {
         "price": 8.32,
@@ -8660,7 +8660,7 @@
         ]
       },
       "createdAt": 1789392887672,
-      "updatedAt": 1789562280572,
+      "updatedAt": 1789565644426,
       "nameZh": "浪潮",
       "nameSource": "machine-translation",
       "nameTranslatedAt": 1789560188070
@@ -8678,14 +8678,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789562281266
+        "updatedAt": 1789565645130
       },
       "rating": {
         "score": 6.5,
         "positive": 66,
         "total": 1960,
         "desc": "Mixed",
-        "updatedAt": 1789562281968
+        "updatedAt": 1789565645830
       },
       "historicalLow": {
         "price": 12.9,
@@ -8859,7 +8859,7 @@
         ]
       },
       "createdAt": 1789392876650,
-      "updatedAt": 1789562281968,
+      "updatedAt": 1789565645830,
       "nameZh": "浪潮2",
       "nameSource": "machine-translation",
       "nameTranslatedAt": 1789561291273
@@ -8874,17 +8874,17 @@
         "discountPercent": 20,
         "currency": "CNY",
         "isOnSale": true,
-        "discountExpiration": null,
-        "expirationSource": null,
+        "discountExpiration": 1790006399000,
+        "expirationSource": "storepage",
         "saleEvent": null,
-        "updatedAt": 1789562282640
+        "updatedAt": 1789565646535
       },
       "rating": {
         "score": 9.6,
         "positive": 94,
-        "total": 9639,
+        "total": 9640,
         "desc": "Very Positive",
-        "updatedAt": 1789562283362
+        "updatedAt": 1789565647238
       },
       "historicalLow": {
         "price": 214.4,
@@ -8984,10 +8984,10 @@
           "女性主角",
           "类魂系列"
         ],
-        "userTagsFetchedAt": 1789562499043
+        "userTagsFetchedAt": 1789565862979
       },
       "createdAt": 1789391936262,
-      "updatedAt": 1789562283362,
+      "updatedAt": 1789565647238,
       "nameZh": "务实",
       "nameSource": "machine-translation",
       "nameTranslatedAt": 1789560188885
@@ -9002,17 +9002,17 @@
         "discountPercent": 85,
         "currency": "CNY",
         "isOnSale": true,
-        "discountExpiration": null,
-        "expirationSource": null,
+        "discountExpiration": 1790351999000,
+        "expirationSource": "storepage",
         "saleEvent": null,
-        "updatedAt": 1789562284036
+        "updatedAt": 1789565647928
       },
       "rating": {
         "score": 6.5,
         "positive": 68,
         "total": 123,
         "desc": "Mixed",
-        "updatedAt": 1789562284765
+        "updatedAt": 1789565648719
       },
       "historicalLow": {
         "price": 7.5,
@@ -9087,13 +9087,13 @@
           "哲理",
           "第三人称"
         ],
-        "userTagsFetchedAt": 1789562500178,
+        "userTagsFetchedAt": 1789565864100,
         "bundleIds": [
           81657
         ]
       },
       "createdAt": 1789289423724,
-      "updatedAt": 1789562284765
+      "updatedAt": 1789565648719
     },
     {
       "appid": 1123050,
@@ -9108,14 +9108,14 @@
         "discountExpiration": 1789664400000,
         "expirationSource": "storepage",
         "saleEvent": null,
-        "updatedAt": 1789562285446
+        "updatedAt": 1789565649314
       },
       "rating": {
         "score": 7.5,
         "positive": 74,
         "total": 1463,
         "desc": "Mostly Positive",
-        "updatedAt": 1789562286159
+        "updatedAt": 1789565650042
       },
       "historicalLow": {
         "price": 24,
@@ -9229,7 +9229,7 @@
           "控制器",
           "电影式"
         ],
-        "userTagsFetchedAt": 1789562501310,
+        "userTagsFetchedAt": 1789565865190,
         "bundleIds": [
           22163,
           71089,
@@ -9237,7 +9237,7 @@
         ]
       },
       "createdAt": 1789289416953,
-      "updatedAt": 1789562286159,
+      "updatedAt": 1789565650042,
       "nameZh": "污垢",
       "nameSource": "machine-translation",
       "nameTranslatedAt": 1789561292476
@@ -9255,14 +9255,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789562286884
+        "updatedAt": 1789565650721
       },
       "rating": {
         "score": 9.2,
         "positive": 90,
         "total": 3254,
         "desc": "Very Positive",
-        "updatedAt": 1789562287560
+        "updatedAt": 1789565651441
       },
       "historicalLow": {
         "price": 27.6,
@@ -9534,7 +9534,7 @@
         "userTagsFetchedAt": 1789560305853
       },
       "createdAt": 1789289393679,
-      "updatedAt": 1789562287560,
+      "updatedAt": 1789565651441,
       "nameZh": "守护进程 X 机器",
       "nameSource": "machine-translation",
       "nameTranslatedAt": 1789560189541
@@ -9552,14 +9552,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789562288244
+        "updatedAt": 1789565652184
       },
       "rating": {
         "score": 8.4,
         "positive": 84,
         "total": 897,
         "desc": "Very Positive",
-        "updatedAt": 1789562288961
+        "updatedAt": 1789565652831
       },
       "historicalLow": {
         "price": 44.7,
@@ -9670,7 +9670,7 @@
         ]
       },
       "createdAt": 1789289357467,
-      "updatedAt": 1789562288961
+      "updatedAt": 1789565652831
     },
     {
       "appid": 585450,
@@ -9685,14 +9685,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789562289670
+        "updatedAt": 1789565653521
       },
       "rating": {
         "score": 6.5,
         "positive": 63,
         "total": 334,
         "desc": "Mixed",
-        "updatedAt": 1789562290358
+        "updatedAt": 1789565654246
       },
       "historicalLow": {
         "price": 14.9,
@@ -9812,7 +9812,7 @@
         "userTagsFetchedAt": 1789562545402
       },
       "createdAt": 1789289347989,
-      "updatedAt": 1789562290358,
+      "updatedAt": 1789565654246,
       "nameZh": "阴影：觉醒",
       "nameSource": "machine-translation",
       "nameTranslatedAt": 1789560190709
@@ -9830,14 +9830,14 @@
         "discountExpiration": 1789578000000,
         "expirationSource": "storepage",
         "saleEvent": null,
-        "updatedAt": 1789562291042
+        "updatedAt": 1789565654922
       },
       "rating": {
         "score": 7.5,
         "positive": 78,
         "total": 1078,
         "desc": "Mostly Positive",
-        "updatedAt": 1789562291758
+        "updatedAt": 1789565655645
       },
       "historicalLow": {
         "price": 36,
@@ -9933,7 +9933,7 @@
           "恶魔",
           "冒险"
         ],
-        "userTagsFetchedAt": 1789562502386,
+        "userTagsFetchedAt": 1789565866336,
         "bundleIds": [
           59352,
           37844,
@@ -9941,7 +9941,7 @@
         ]
       },
       "createdAt": 1789289330600,
-      "updatedAt": 1789562291758
+      "updatedAt": 1789565655645
     },
     {
       "appid": 867210,
@@ -9956,14 +9956,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789562292441
+        "updatedAt": 1789565656336
       },
       "rating": {
         "score": 7.5,
         "positive": 79,
         "total": 854,
         "desc": "Mostly Positive",
-        "updatedAt": 1789562293152
+        "updatedAt": 1789565657025
       },
       "historicalLow": {
         "price": 27.5,
@@ -10155,7 +10155,7 @@
         ]
       },
       "createdAt": 1789289322471,
-      "updatedAt": 1789562293152
+      "updatedAt": 1789565657025
     },
     {
       "appid": 1293160,
@@ -10167,17 +10167,17 @@
         "discountPercent": 75,
         "currency": "CNY",
         "isOnSale": true,
-        "discountExpiration": null,
-        "expirationSource": null,
+        "discountExpiration": 1790092799000,
+        "expirationSource": "storepage",
         "saleEvent": null,
-        "updatedAt": 1789562293841
+        "updatedAt": 1789565657735
       },
       "rating": {
         "score": 8.4,
         "positive": 82,
         "total": 860,
         "desc": "Very Positive",
-        "updatedAt": 1789562294558
+        "updatedAt": 1789565658434
       },
       "historicalLow": {
         "price": 49.5,
@@ -10291,7 +10291,7 @@
           "原声音轨",
           "经典"
         ],
-        "userTagsFetchedAt": 1789562503520,
+        "userTagsFetchedAt": 1789565867409,
         "bundleIds": [
           16913,
           11803,
@@ -10299,7 +10299,7 @@
         ]
       },
       "createdAt": 1789289296723,
-      "updatedAt": 1789562294558,
+      "updatedAt": 1789565658434,
       "nameZh": "媒介",
       "nameSource": "machine-translation",
       "nameTranslatedAt": 1789561293675
@@ -10317,14 +10317,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789562295236
+        "updatedAt": 1789565659165
       },
       "rating": {
         "score": 9.6,
         "positive": 94,
         "total": 1964,
         "desc": "Very Positive",
-        "updatedAt": 1789562295951
+        "updatedAt": 1789565659827
       },
       "historicalLow": {
         "price": 20,
@@ -10425,7 +10425,7 @@
         ]
       },
       "createdAt": 1789289279165,
-      "updatedAt": 1789562295951
+      "updatedAt": 1789565659827
     },
     {
       "appid": 473950,
@@ -10437,17 +10437,17 @@
         "discountPercent": 75,
         "currency": "CNY",
         "isOnSale": true,
-        "discountExpiration": null,
-        "expirationSource": null,
+        "discountExpiration": 1789747199000,
+        "expirationSource": "storepage",
         "saleEvent": null,
-        "updatedAt": 1789562296638
+        "updatedAt": 1789565660564
       },
       "rating": {
         "score": 9.8,
         "positive": 96,
         "total": 2003,
         "desc": "Overwhelmingly Positive",
-        "updatedAt": 1789562297350
+        "updatedAt": 1789565661235
       },
       "historicalLow": {
         "price": 19,
@@ -10540,7 +10540,7 @@
           "彩色",
           "多结局"
         ],
-        "userTagsFetchedAt": 1789562504629,
+        "userTagsFetchedAt": 1789565868497,
         "bundleIds": [
           16317,
           85972,
@@ -10548,7 +10548,7 @@
         ]
       },
       "createdAt": 1789289272898,
-      "updatedAt": 1789562297350,
+      "updatedAt": 1789565661235,
       "nameZh": "流形花园",
       "nameSource": "machine-translation",
       "nameTranslatedAt": 1789560191920
@@ -10566,14 +10566,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789562298027
+        "updatedAt": 1789565661950
       },
       "rating": {
         "score": 7.5,
         "positive": 76,
         "total": 1043,
         "desc": "Mostly Positive",
-        "updatedAt": 1789562298752
+        "updatedAt": 1789565662685
       },
       "historicalLow": {
         "price": 50.7,
@@ -10679,7 +10679,7 @@
         ]
       },
       "createdAt": 1789289231546,
-      "updatedAt": 1789562298752,
+      "updatedAt": 1789565662685,
       "nameZh": "异形：黑暗后裔",
       "nameSource": "machine-translation",
       "nameTranslatedAt": 1789561294882
@@ -10694,17 +10694,17 @@
         "discountPercent": 75,
         "currency": "CNY",
         "isOnSale": true,
-        "discountExpiration": null,
-        "expirationSource": null,
+        "discountExpiration": 1790351999000,
+        "expirationSource": "storepage",
         "saleEvent": null,
-        "updatedAt": 1789562299424
+        "updatedAt": 1789565663316
       },
       "rating": {
         "score": 8.9,
         "positive": 86,
         "total": 1076,
         "desc": "Very Positive",
-        "updatedAt": 1789562300152
+        "updatedAt": 1789565664031
       },
       "historicalLow": {
         "price": 19,
@@ -10783,7 +10783,7 @@
           "摩托车越野",
           "动作"
         ],
-        "userTagsFetchedAt": 1789562505771,
+        "userTagsFetchedAt": 1789565869601,
         "bundleIds": [
           44322,
           40922,
@@ -10791,7 +10791,7 @@
         ]
       },
       "createdAt": 1789289193248,
-      "updatedAt": 1789562300152
+      "updatedAt": 1789565664031
     },
     {
       "appid": 1096530,
@@ -10803,17 +10803,17 @@
         "discountPercent": 75,
         "currency": "CNY",
         "isOnSale": true,
-        "discountExpiration": null,
-        "expirationSource": null,
+        "discountExpiration": 1790092799000,
+        "expirationSource": "storepage",
         "saleEvent": null,
-        "updatedAt": 1789562300839
+        "updatedAt": 1789565664711
       },
       "rating": {
         "score": 7.5,
         "positive": 79,
         "total": 1339,
         "desc": "Mostly Positive",
-        "updatedAt": 1789562301552
+        "updatedAt": 1789565665451
       },
       "historicalLow": {
         "price": 0,
@@ -10984,7 +10984,7 @@
           "关卡编辑",
           "团队导向"
         ],
-        "userTagsFetchedAt": 1789562506848,
+        "userTagsFetchedAt": 1789565870710,
         "bundleIds": [
           69579,
           31894,
@@ -10992,7 +10992,7 @@
         ]
       },
       "createdAt": 1789289175348,
-      "updatedAt": 1789562301552
+      "updatedAt": 1789565665451
     },
     {
       "appid": 2975950,
@@ -11004,17 +11004,17 @@
         "discountPercent": 20,
         "currency": "CNY",
         "isOnSale": true,
-        "discountExpiration": null,
-        "expirationSource": null,
+        "discountExpiration": 1790092799000,
+        "expirationSource": "storepage",
         "saleEvent": null,
-        "updatedAt": 1789562302228
+        "updatedAt": 1789565666103
       },
       "rating": {
         "score": 6.5,
         "positive": 61,
         "total": 351,
         "desc": "Mixed",
-        "updatedAt": 1789562302950
+        "updatedAt": 1789565666817
       },
       "historicalLow": {
         "price": 110.4,
@@ -11123,7 +11123,7 @@
           "团队导向",
           "六角格棋盘"
         ],
-        "userTagsFetchedAt": 1789562507879,
+        "userTagsFetchedAt": 1789565871818,
         "bundleIds": [
           69579,
           69580,
@@ -11131,7 +11131,7 @@
         ]
       },
       "createdAt": 1789289162929,
-      "updatedAt": 1789562302950
+      "updatedAt": 1789565666817
     },
     {
       "appid": 1580240,
@@ -11146,14 +11146,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789562303631
+        "updatedAt": 1789565667522
       },
       "rating": {
         "score": 9.2,
         "positive": 88,
         "total": 575,
         "desc": "Very Positive",
-        "updatedAt": 1789562304351
+        "updatedAt": 1789565668225
       },
       "historicalLow": {
         "price": 57,
@@ -11239,7 +11239,7 @@
         "userTagsFetchedAt": 1789560319060
       },
       "createdAt": 1789289157480,
-      "updatedAt": 1789562304351,
+      "updatedAt": 1789565668225,
       "nameZh": "符文工厂 4 特别版",
       "nameSource": "machine-translation",
       "nameTranslatedAt": 1789560192788
@@ -11257,14 +11257,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789562305065
+        "updatedAt": 1789565668919
       },
       "rating": {
         "score": 9.6,
         "positive": 94,
         "total": 326,
         "desc": "Very Positive",
-        "updatedAt": 1789562305747
+        "updatedAt": 1789565669663
       },
       "historicalLow": {
         "price": 56.32,
@@ -11427,7 +11427,7 @@
         "userTagsFetchedAt": 1789560320167
       },
       "createdAt": 1789289149519,
-      "updatedAt": 1789562305747
+      "updatedAt": 1789565669663
     },
     {
       "appid": 1766740,
@@ -11442,14 +11442,14 @@
         "discountExpiration": 1789578000000,
         "expirationSource": "storepage",
         "saleEvent": null,
-        "updatedAt": 1789562306430
+        "updatedAt": 1789565670309
       },
       "rating": {
         "score": 8.4,
         "positive": 82,
-        "total": 773,
+        "total": 774,
         "desc": "Very Positive",
-        "updatedAt": 1789562307151
+        "updatedAt": 1789565671016
       },
       "historicalLow": {
         "price": 7.6,
@@ -11527,14 +11527,14 @@
           "手绘",
           "合作"
         ],
-        "userTagsFetchedAt": 1789562509145,
+        "userTagsFetchedAt": 1789565872991,
         "bundleIds": [
           35529,
           80005
         ]
       },
       "createdAt": 1789289142782,
-      "updatedAt": 1789562307151,
+      "updatedAt": 1789565671016,
       "nameZh": "丘丘查尔斯",
       "nameSource": "machine-translation",
       "nameTranslatedAt": 1789561296075
@@ -11552,14 +11552,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789562307826
+        "updatedAt": 1789565671730
       },
       "rating": {
         "score": 8.4,
         "positive": 81,
         "total": 11965,
         "desc": "Very Positive",
-        "updatedAt": 1789562308548
+        "updatedAt": 1789565672425
       },
       "historicalLow": {
         "price": 0,
@@ -11643,7 +11643,7 @@
         ]
       },
       "createdAt": 1789289137494,
-      "updatedAt": 1789562308548
+      "updatedAt": 1789565672425
     },
     {
       "appid": 866140,
@@ -11655,17 +11655,17 @@
         "discountPercent": 80,
         "currency": "CNY",
         "isOnSale": true,
-        "discountExpiration": null,
-        "expirationSource": null,
+        "discountExpiration": 1790006399000,
+        "expirationSource": "storepage",
         "saleEvent": null,
-        "updatedAt": 1789562309236
+        "updatedAt": 1789565673129
       },
       "rating": {
         "score": 9.2,
         "positive": 89,
         "total": 600,
         "desc": "Very Positive",
-        "updatedAt": 1789562309946
+        "updatedAt": 1789565674302
       },
       "historicalLow": {
         "price": 15.2,
@@ -11800,7 +11800,7 @@
           "风格化",
           "解谜"
         ],
-        "userTagsFetchedAt": 1789562510277,
+        "userTagsFetchedAt": 1789565874089,
         "bundleIds": [
           25458,
           26004,
@@ -11808,7 +11808,7 @@
         ]
       },
       "createdAt": 1789289131662,
-      "updatedAt": 1789562309946,
+      "updatedAt": 1789565674302,
       "nameZh": "崛起：一个简单的故事",
       "nameSource": "machine-translation",
       "nameTranslatedAt": 1789561298775
@@ -11823,17 +11823,17 @@
         "discountPercent": 80,
         "currency": "CNY",
         "isOnSale": true,
-        "discountExpiration": null,
-        "expirationSource": null,
+        "discountExpiration": 1790006399000,
+        "expirationSource": "storepage",
         "saleEvent": null,
-        "updatedAt": 1789562310625
+        "updatedAt": 1789565674501
       },
       "rating": {
         "score": 9.6,
         "positive": 93,
         "total": 118,
         "desc": "Very Positive",
-        "updatedAt": 1789562311339
+        "updatedAt": 1789565675232
       },
       "historicalLow": {
         "price": 4.4,
@@ -11907,14 +11907,14 @@
           "潜行",
           "合作"
         ],
-        "userTagsFetchedAt": 1789562511309,
+        "userTagsFetchedAt": 1789565875164,
         "bundleIds": [
           41448,
           46492
         ]
       },
       "createdAt": 1789289123766,
-      "updatedAt": 1789562311339
+      "updatedAt": 1789565675232
     },
     {
       "appid": 544750,
@@ -11929,14 +11929,14 @@
         "discountExpiration": 1789664400000,
         "expirationSource": "storepage",
         "saleEvent": null,
-        "updatedAt": 1789562312076
+        "updatedAt": 1789565675956
       },
       "rating": {
         "score": 7.5,
         "positive": 74,
         "total": 1372,
         "desc": "Mostly Positive",
-        "updatedAt": 1789562312744
+        "updatedAt": 1789565676629
       },
       "historicalLow": {
         "price": 29.8,
@@ -12179,10 +12179,10 @@
           "清版动作",
           "2D 格斗"
         ],
-        "userTagsFetchedAt": 1789562512389
+        "userTagsFetchedAt": 1789565876255
       },
       "createdAt": 1789289117479,
-      "updatedAt": 1789562312744,
+      "updatedAt": 1789565676629,
       "nameZh": "剑魂 VI",
       "nameSource": "machine-translation",
       "nameTranslatedAt": 1789560195099
@@ -12197,17 +12197,17 @@
         "discountPercent": 90,
         "currency": "CNY",
         "isOnSale": true,
-        "discountExpiration": null,
-        "expirationSource": null,
+        "discountExpiration": 1790006399000,
+        "expirationSource": "storepage",
         "saleEvent": null,
-        "updatedAt": 1789562313448
+        "updatedAt": 1789565677320
       },
       "rating": {
         "score": 9.8,
         "positive": 95,
         "total": 605,
         "desc": "Very Positive",
-        "updatedAt": 1789562314141
+        "updatedAt": 1789565678046
       },
       "historicalLow": {
         "price": 10.3,
@@ -12311,7 +12311,7 @@
           "隐藏物体",
           "平台解谜"
         ],
-        "userTagsFetchedAt": 1789562513404,
+        "userTagsFetchedAt": 1789565877331,
         "bundleIds": [
           22640,
           50159,
@@ -12319,7 +12319,7 @@
         ]
       },
       "createdAt": 1789289111324,
-      "updatedAt": 1789562314141,
+      "updatedAt": 1789565678046,
       "nameZh": "头脑清醒",
       "nameSource": "machine-translation",
       "nameTranslatedAt": 1789561300302
@@ -12337,14 +12337,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789562314833
+        "updatedAt": 1789565678725
       },
       "rating": {
         "score": 7.5,
         "positive": 75,
-        "total": 14642,
+        "total": 14643,
         "desc": "Mostly Positive",
-        "updatedAt": 1789562315548
+        "updatedAt": 1789565679454
       },
       "historicalLow": {
         "price": 47.8,
@@ -12551,7 +12551,7 @@
         ]
       },
       "createdAt": 1789288866643,
-      "updatedAt": 1789562315548
+      "updatedAt": 1789565679454
     },
     {
       "appid": 1116580,
@@ -12566,14 +12566,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789562316229
+        "updatedAt": 1789565680132
       },
       "rating": {
         "score": 9.8,
         "positive": 95,
         "total": 1209,
         "desc": "Very Positive",
-        "updatedAt": 1789562316936
+        "updatedAt": 1789565680835
       },
       "historicalLow": {
         "price": 9.6,
@@ -12656,7 +12656,7 @@
         ]
       },
       "createdAt": 1789288713492,
-      "updatedAt": 1789562316936
+      "updatedAt": 1789565680835
     },
     {
       "appid": 590380,
@@ -12668,17 +12668,17 @@
         "discountPercent": 80,
         "currency": "CNY",
         "isOnSale": true,
-        "discountExpiration": null,
-        "expirationSource": null,
+        "discountExpiration": 1789747199000,
+        "expirationSource": "storepage",
         "saleEvent": null,
-        "updatedAt": 1789562317617
+        "updatedAt": 1789565681522
       },
       "rating": {
         "score": 9.8,
         "positive": 95,
         "total": 2695,
         "desc": "Very Positive",
-        "updatedAt": 1789562318339
+        "updatedAt": 1789565682356
       },
       "historicalLow": {
         "price": 10,
@@ -12779,7 +12779,7 @@
           "模拟",
           "好评原声音轨"
         ],
-        "userTagsFetchedAt": 1789562514515,
+        "userTagsFetchedAt": 1789565878361,
         "bundleIds": [
           6242,
           48803,
@@ -12787,7 +12787,7 @@
         ]
       },
       "createdAt": 1789288699206,
-      "updatedAt": 1789562318339,
+      "updatedAt": 1789565682356,
       "nameZh": "进入突破口",
       "nameSource": "machine-translation",
       "nameTranslatedAt": 1789560195524
@@ -12802,17 +12802,17 @@
         "discountPercent": 90,
         "currency": "CNY",
         "isOnSale": true,
-        "discountExpiration": null,
-        "expirationSource": null,
+        "discountExpiration": 1790092799000,
+        "expirationSource": "storepage",
         "saleEvent": null,
-        "updatedAt": 1789562319025
+        "updatedAt": 1789565682907
       },
       "rating": {
         "score": 7.5,
         "positive": 79,
-        "total": 19825,
+        "total": 19826,
         "desc": "Mostly Positive",
-        "updatedAt": 1789562319740
+        "updatedAt": 1789565683854
       },
       "historicalLow": {
         "price": 8,
@@ -12921,14 +12921,14 @@
           "建造",
           "动作冒险"
         ],
-        "userTagsFetchedAt": 1789562515585,
+        "userTagsFetchedAt": 1789565879457,
         "bundleIds": [
           65995,
           65996
         ]
       },
       "createdAt": 1789288687871,
-      "updatedAt": 1789562319740
+      "updatedAt": 1789565683854
     },
     {
       "appid": 1066780,
@@ -12940,17 +12940,17 @@
         "discountPercent": 90,
         "currency": "CNY",
         "isOnSale": true,
-        "discountExpiration": null,
-        "expirationSource": null,
+        "discountExpiration": 1790006399000,
+        "expirationSource": "storepage",
         "saleEvent": null,
-        "updatedAt": 1789562320424
+        "updatedAt": 1789565684332
       },
       "rating": {
         "score": 9.2,
         "positive": 89,
         "total": 4262,
         "desc": "Very Positive",
-        "updatedAt": 1789562321153
+        "updatedAt": 1789565685045
       },
       "historicalLow": {
         "price": 13.6,
@@ -13060,10 +13060,10 @@
           "模组",
           "程序生成"
         ],
-        "userTagsFetchedAt": 1789562516669
+        "userTagsFetchedAt": 1789565880609
       },
       "createdAt": 1789288670962,
-      "updatedAt": 1789562321153,
+      "updatedAt": 1789565685045,
       "nameZh": "运输狂热2",
       "nameSource": "machine-translation",
       "nameTranslatedAt": 1789560196229
@@ -13081,14 +13081,14 @@
         "discountExpiration": 1789664400000,
         "expirationSource": "storepage",
         "saleEvent": null,
-        "updatedAt": 1789562321823
+        "updatedAt": 1789565685701
       },
       "rating": {
         "score": 7.5,
         "positive": 74,
         "total": 3129,
         "desc": "Mostly Positive",
-        "updatedAt": 1789562322537
+        "updatedAt": 1789565686432
       },
       "historicalLow": {
         "price": 26.8,
@@ -13174,13 +13174,13 @@
           "开放世界",
           "类魂系列"
         ],
-        "userTagsFetchedAt": 1789562517740,
+        "userTagsFetchedAt": 1789565881690,
         "bundleIds": [
           34010
         ]
       },
       "createdAt": 1789288651138,
-      "updatedAt": 1789562322537,
+      "updatedAt": 1789565686432,
       "nameZh": "噬神者3",
       "nameSource": "machine-translation",
       "nameTranslatedAt": 1789560197482
@@ -13198,14 +13198,14 @@
         "discountExpiration": 1789664400000,
         "expirationSource": "storepage",
         "saleEvent": null,
-        "updatedAt": 1789562323225
+        "updatedAt": 1789565687096
       },
       "rating": {
         "score": 6.5,
         "positive": 60,
         "total": 965,
         "desc": "Mixed",
-        "updatedAt": 1789562323940
+        "updatedAt": 1789565687872
       },
       "historicalLow": {
         "price": 26.8,
@@ -13289,13 +13289,13 @@
           "裸露",
           "冒险"
         ],
-        "userTagsFetchedAt": 1789562518848,
+        "userTagsFetchedAt": 1789565882733,
         "bundleIds": [
           34010
         ]
       },
       "createdAt": 1789288633473,
-      "updatedAt": 1789562323940,
+      "updatedAt": 1789565687872,
       "nameZh": "噬神者2 愤怒爆发",
       "nameSource": "machine-translation",
       "nameTranslatedAt": 1789561301547
@@ -13310,17 +13310,17 @@
         "discountPercent": 90,
         "currency": "CNY",
         "isOnSale": true,
-        "discountExpiration": null,
-        "expirationSource": null,
+        "discountExpiration": 1789747199000,
+        "expirationSource": "storepage",
         "saleEvent": null,
-        "updatedAt": 1789562324615
+        "updatedAt": 1789565688513
       },
       "rating": {
         "score": 9.8,
         "positive": 95,
         "total": 2588,
         "desc": "Overwhelmingly Positive",
-        "updatedAt": 1789562325338
+        "updatedAt": 1789565689229
       },
       "historicalLow": {
         "price": 3.5,
@@ -13437,14 +13437,14 @@
           "独立",
           "阖家"
         ],
-        "userTagsFetchedAt": 1789562519991,
+        "userTagsFetchedAt": 1789565883890,
         "bundleIds": [
           21489,
           42902
         ]
       },
       "createdAt": 1789288621819,
-      "updatedAt": 1789562325338
+      "updatedAt": 1789565689229
     },
     {
       "appid": 2162800,
@@ -13456,17 +13456,17 @@
         "discountPercent": 50,
         "currency": "CNY",
         "isOnSale": true,
-        "discountExpiration": null,
-        "expirationSource": null,
+        "discountExpiration": 1789747199000,
+        "expirationSource": "storepage",
         "saleEvent": null,
-        "updatedAt": 1789562326018
+        "updatedAt": 1789565689900
       },
       "rating": {
         "score": 9.8,
         "positive": 95,
         "total": 1734,
         "desc": "Overwhelmingly Positive",
-        "updatedAt": 1789562326780
+        "updatedAt": 1789565690626
       },
       "historicalLow": {
         "price": 37.5,
@@ -13587,7 +13587,7 @@
           "可模组化",
           "探索"
         ],
-        "userTagsFetchedAt": 1789562521102,
+        "userTagsFetchedAt": 1789565885013,
         "bundleIds": [
           42902,
           46765,
@@ -13595,7 +13595,7 @@
         ]
       },
       "createdAt": 1789288498969,
-      "updatedAt": 1789562326780
+      "updatedAt": 1789565690626
     },
     {
       "appid": 581320,
@@ -13610,14 +13610,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789562327494
+        "updatedAt": 1789565691402
       },
       "rating": {
         "score": 8.4,
         "positive": 81,
         "total": 17271,
         "desc": "Very Positive",
-        "updatedAt": 1789562328140
+        "updatedAt": 1789565692032
       },
       "historicalLow": {
         "price": 0,
@@ -13889,7 +13889,7 @@
         ]
       },
       "createdAt": 1789288476867,
-      "updatedAt": 1789562328140,
+      "updatedAt": 1789565692032,
       "nameZh": "叛乱：沙尘暴",
       "nameSource": "machine-translation",
       "nameTranslatedAt": 1789560198451
@@ -13907,14 +13907,14 @@
         "discountExpiration": 1789664400000,
         "expirationSource": "storepage",
         "saleEvent": null,
-        "updatedAt": 1789562328832
+        "updatedAt": 1789565692724
       },
       "rating": {
         "score": 7.5,
         "positive": 78,
         "total": 3096,
         "desc": "Mostly Positive",
-        "updatedAt": 1789562329544
+        "updatedAt": 1789565693453
       },
       "historicalLow": {
         "price": 16.8,
@@ -14190,7 +14190,7 @@
           "沉浸式模拟",
           "大战略"
         ],
-        "userTagsFetchedAt": 1789562522246,
+        "userTagsFetchedAt": 1789565886148,
         "bundleIds": [
           30502,
           30503,
@@ -14198,7 +14198,7 @@
         ]
       },
       "createdAt": 1789288431803,
-      "updatedAt": 1789562329544
+      "updatedAt": 1789565693453
     },
     {
       "appid": 2144740,
@@ -14210,17 +14210,17 @@
         "discountPercent": 80,
         "currency": "CNY",
         "isOnSale": true,
-        "discountExpiration": null,
-        "expirationSource": null,
+        "discountExpiration": 1790265599000,
+        "expirationSource": "storepage",
         "saleEvent": null,
-        "updatedAt": 1789562330239
+        "updatedAt": 1789565694194
       },
       "rating": {
         "score": 7.5,
         "positive": 79,
         "total": 3946,
         "desc": "Mostly Positive",
-        "updatedAt": 1789562330934
+        "updatedAt": 1789565694831
       },
       "historicalLow": {
         "price": 33.6,
@@ -14385,7 +14385,7 @@
           "摩托车",
           "格斗"
         ],
-        "userTagsFetchedAt": 1789562523287,
+        "userTagsFetchedAt": 1789565887312,
         "bundleIds": [
           36394,
           74429,
@@ -14393,7 +14393,7 @@
         ]
       },
       "createdAt": 1789288422502,
-      "updatedAt": 1789562330934
+      "updatedAt": 1789565694831
     },
     {
       "appid": 1139900,
@@ -14405,17 +14405,17 @@
         "discountPercent": 75,
         "currency": "CNY",
         "isOnSale": true,
-        "discountExpiration": null,
-        "expirationSource": null,
+        "discountExpiration": 1790265599000,
+        "expirationSource": "storepage",
         "saleEvent": null,
-        "updatedAt": 1789562331625
+        "updatedAt": 1789565695516
       },
       "rating": {
         "score": 9.6,
         "positive": 92,
         "total": 27211,
         "desc": "Very Positive",
-        "updatedAt": 1789562332339
+        "updatedAt": 1789565696228
       },
       "historicalLow": {
         "price": 0,
@@ -14580,7 +14580,7 @@
           "策略",
           "射击"
         ],
-        "userTagsFetchedAt": 1789562524442,
+        "userTagsFetchedAt": 1789565888344,
         "bundleIds": [
           79463,
           22401,
@@ -14588,7 +14588,7 @@
         ]
       },
       "createdAt": 1789288315262,
-      "updatedAt": 1789562332339
+      "updatedAt": 1789565696228
     },
     {
       "appid": 690640,
@@ -14603,14 +14603,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789562333028
+        "updatedAt": 1789565696913
       },
       "rating": {
         "score": 8.4,
         "positive": 81,
-        "total": 5172,
+        "total": 5173,
         "desc": "Very Positive",
-        "updatedAt": 1789562333735
+        "updatedAt": 1789565697655
       },
       "historicalLow": {
         "price": 23.6,
@@ -14765,7 +14765,7 @@
         ]
       },
       "createdAt": 1789288295688,
-      "updatedAt": 1789562333735,
+      "updatedAt": 1789565697655,
       "nameZh": "《三位一体 4：噩梦王子》",
       "nameSource": "machine-translation",
       "nameTranslatedAt": 1789561302081
@@ -14783,14 +14783,14 @@
         "discountExpiration": 1789664400000,
         "expirationSource": "storepage",
         "saleEvent": null,
-        "updatedAt": 1789562334430
+        "updatedAt": 1789565698321
       },
       "rating": {
         "score": 9.2,
         "positive": 90,
-        "total": 17898,
+        "total": 17899,
         "desc": "Very Positive",
-        "updatedAt": 1789562335146
+        "updatedAt": 1789565699019
       },
       "historicalLow": {
         "price": 15.8,
@@ -15032,14 +15032,14 @@
           "策略",
           "氛围"
         ],
-        "userTagsFetchedAt": 1789562525568,
+        "userTagsFetchedAt": 1789565889572,
         "bundleIds": [
           3293,
           646
         ]
       },
       "createdAt": 1789288267285,
-      "updatedAt": 1789562335146,
+      "updatedAt": 1789565699019,
       "nameZh": "狙击精英4",
       "nameSource": "machine-translation",
       "nameTranslatedAt": 1789560199502
@@ -15057,14 +15057,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789562335816
+        "updatedAt": 1789565699729
       },
       "rating": {
         "score": 8.4,
         "positive": 83,
         "total": 4474,
         "desc": "Very Positive",
-        "updatedAt": 1789562336548
+        "updatedAt": 1789565700418
       },
       "historicalLow": {
         "price": 59.7,
@@ -15172,7 +15172,7 @@
         ]
       },
       "createdAt": 1789288255996,
-      "updatedAt": 1789562336548,
+      "updatedAt": 1789565700418,
       "nameZh": "瘟疫传说：安魂曲",
       "nameSource": "machine-translation",
       "nameTranslatedAt": 1789561303278
@@ -15187,17 +15187,17 @@
         "discountPercent": 80,
         "currency": "CNY",
         "isOnSale": true,
-        "discountExpiration": null,
-        "expirationSource": null,
+        "discountExpiration": 1790006399000,
+        "expirationSource": "storepage",
         "saleEvent": null,
-        "updatedAt": 1789562337229
+        "updatedAt": 1789565701151
       },
       "rating": {
         "score": 7.5,
         "positive": 70,
         "total": 428,
         "desc": "Mostly Positive",
-        "updatedAt": 1789562337936
+        "updatedAt": 1789565701890
       },
       "historicalLow": {
         "price": 18,
@@ -15302,14 +15302,14 @@
           "合作",
           "好评原声音轨"
         ],
-        "userTagsFetchedAt": 1789562526720,
+        "userTagsFetchedAt": 1789565890504,
         "bundleIds": [
           22373,
           11803
         ]
       },
       "createdAt": 1789288227339,
-      "updatedAt": 1789562337936,
+      "updatedAt": 1789565701890,
       "nameZh": "女巫布莱尔",
       "nameSource": "machine-translation",
       "nameTranslatedAt": 1789560200527
@@ -15327,14 +15327,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789562338616
+        "updatedAt": 1789565702521
       },
       "rating": {
         "score": 9.6,
         "positive": 93,
         "total": 742,
         "desc": "Very Positive",
-        "updatedAt": 1789562339343
+        "updatedAt": 1789565703211
       },
       "historicalLow": {
         "price": 15,
@@ -15423,7 +15423,7 @@
         ]
       },
       "createdAt": 1789288190456,
-      "updatedAt": 1789562339343
+      "updatedAt": 1789565703211
     },
     {
       "appid": 922500,
@@ -15435,17 +15435,17 @@
         "discountPercent": 75,
         "currency": "CNY",
         "isOnSale": true,
-        "discountExpiration": null,
-        "expirationSource": null,
+        "discountExpiration": 1790092799000,
+        "expirationSource": "storepage",
         "saleEvent": null,
-        "updatedAt": 1789562340010
+        "updatedAt": 1789565703900
       },
       "rating": {
         "score": 6.5,
         "positive": 67,
         "total": 544,
         "desc": "Mixed",
-        "updatedAt": 1789562340732
+        "updatedAt": 1789565704610
       },
       "historicalLow": {
         "price": 25,
@@ -15530,10 +15530,10 @@
           "可爱",
           "电竞"
         ],
-        "userTagsFetchedAt": 1789562527738
+        "userTagsFetchedAt": 1789565891572
       },
       "createdAt": 1789287675940,
-      "updatedAt": 1789562340732,
+      "updatedAt": 1789565704610,
       "nameZh": "杀死拉杀死-IF",
       "nameSource": "machine-translation",
       "nameTranslatedAt": 1789561304485
@@ -15551,14 +15551,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789562341458
+        "updatedAt": 1789565705323
       },
       "rating": {
         "score": 7.5,
         "positive": 75,
         "total": 775,
         "desc": "Mostly Positive",
-        "updatedAt": 1789562342131
+        "updatedAt": 1789565706009
       },
       "historicalLow": {
         "price": 12.9,
@@ -15682,7 +15682,7 @@
         ]
       },
       "createdAt": 1789200620526,
-      "updatedAt": 1789562342131,
+      "updatedAt": 1789565706009,
       "nameZh": "奥赛德",
       "nameSource": "machine-translation",
       "nameTranslatedAt": 1789560201571
@@ -15700,14 +15700,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789562342817
+        "updatedAt": 1789565706733
       },
       "rating": {
         "score": 8.4,
         "positive": 82,
         "total": 1438,
         "desc": "Very Positive",
-        "updatedAt": 1789562343531
+        "updatedAt": 1789565707415
       },
       "historicalLow": {
         "price": 19,
@@ -15809,7 +15809,7 @@
         ]
       },
       "createdAt": 1789200615859,
-      "updatedAt": 1789562343531,
+      "updatedAt": 1789565707415,
       "nameZh": "幻境：觉醒",
       "nameSource": "machine-translation",
       "nameTranslatedAt": 1789561305678
@@ -15827,14 +15827,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789562344226
+        "updatedAt": 1789565708106
       },
       "rating": {
         "score": 8.4,
         "positive": 84,
         "total": 1750,
         "desc": "Very Positive",
-        "updatedAt": 1789562344941
+        "updatedAt": 1789565708813
       },
       "historicalLow": {
         "price": 15.2,
@@ -15983,7 +15983,7 @@
         ]
       },
       "createdAt": 1789200611013,
-      "updatedAt": 1789562344941
+      "updatedAt": 1789565708813
     },
     {
       "appid": 1931770,
@@ -15998,14 +15998,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789562345615
+        "updatedAt": 1789565709642
       },
       "rating": {
         "score": 9.9,
         "positive": 98,
-        "total": 11981,
+        "total": 11982,
         "desc": "Overwhelmingly Positive",
-        "updatedAt": 1789562346340
+        "updatedAt": 1789565710229
       },
       "historicalLow": {
         "price": 40,
@@ -16113,7 +16113,7 @@
         ]
       },
       "createdAt": 1789200607370,
-      "updatedAt": 1789562346340
+      "updatedAt": 1789565710229
     },
     {
       "appid": 374320,
@@ -16128,14 +16128,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789562347015
+        "updatedAt": 1789565710980
       },
       "rating": {
         "score": 9.6,
         "positive": 94,
-        "total": 105353,
+        "total": 105354,
         "desc": "Very Positive",
-        "updatedAt": 1789562347743
+        "updatedAt": 1789565711611
       },
       "historicalLow": {
         "price": 67,
@@ -16263,7 +16263,7 @@
         "userTagsFetchedAt": 1789560353148
       },
       "createdAt": 1789200602339,
-      "updatedAt": 1789562347743,
+      "updatedAt": 1789565711611,
       "nameZh": "黑暗之魂™ III",
       "nameSource": "machine-translation",
       "nameTranslatedAt": 1789560203014
@@ -16281,14 +16281,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789562348462
+        "updatedAt": 1789565712348
       },
       "rating": {
         "score": 9.2,
         "positive": 88,
         "total": 16327,
         "desc": "Very Positive",
-        "updatedAt": 1789562349133
+        "updatedAt": 1789565713023
       },
       "historicalLow": {
         "price": 16.5,
@@ -16431,7 +16431,7 @@
         ]
       },
       "createdAt": 1789200598138,
-      "updatedAt": 1789562349133,
+      "updatedAt": 1789565713023,
       "nameZh": "毁灭战士永恒",
       "nameSource": "machine-translation",
       "nameTranslatedAt": 1789561306881
@@ -16449,14 +16449,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789562349820
+        "updatedAt": 1789565713711
       },
       "rating": {
         "score": 6.5,
         "positive": 66,
         "total": 352,
         "desc": "Mixed",
-        "updatedAt": 1789562350529
+        "updatedAt": 1789565714433
       },
       "historicalLow": {
         "price": 136.6,
@@ -16551,7 +16551,7 @@
         "userTagsFetchedAt": 1789562549668
       },
       "createdAt": 1789200593716,
-      "updatedAt": 1789562350529,
+      "updatedAt": 1789565714433,
       "nameZh": "回归™",
       "nameSource": "machine-translation",
       "nameTranslatedAt": 1789560204519
@@ -16569,14 +16569,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789562351218
+        "updatedAt": 1789565715095
       },
       "rating": {
         "score": 9.6,
         "positive": 93,
-        "total": 4982,
+        "total": 4983,
         "desc": "Very Positive",
-        "updatedAt": 1789562351934
+        "updatedAt": 1789565715829
       },
       "historicalLow": {
         "price": 7.6,
@@ -16696,7 +16696,7 @@
         ]
       },
       "createdAt": 1789200589512,
-      "updatedAt": 1789562351934
+      "updatedAt": 1789565715829
     },
     {
       "appid": 1966720,
@@ -16711,14 +16711,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789562352607
+        "updatedAt": 1789565716483
       },
       "rating": {
         "score": 9.6,
         "positive": 93,
         "total": 17726,
         "desc": "Very Positive",
-        "updatedAt": 1789562353335
+        "updatedAt": 1789565717209
       },
       "historicalLow": {
         "price": 27.3,
@@ -16805,7 +16805,7 @@
         "userTagsFetchedAt": 1789560357482
       },
       "createdAt": 1789200421989,
-      "updatedAt": 1789562353335,
+      "updatedAt": 1789565717209,
       "nameZh": "致命公司",
       "nameSource": "machine-translation",
       "nameTranslatedAt": 1789561308085
@@ -16823,7 +16823,7 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789562354010
+        "updatedAt": 1789565717873
       },
       "rating": {
         "score": null,
@@ -16907,7 +16907,7 @@
         "userTagsFetchedAt": 1789560358651
       },
       "createdAt": 1789200412254,
-      "updatedAt": 1789562354706,
+      "updatedAt": 1789565718641,
       "nameZh": "失落的狂野",
       "nameSource": "machine-translation",
       "nameTranslatedAt": 1789560205489
@@ -16925,7 +16925,7 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789562355409
+        "updatedAt": 1789565719278
       },
       "rating": {
         "score": null,
@@ -17018,7 +17018,7 @@
         "userTagsFetchedAt": 1789560359784
       },
       "createdAt": 1789200411045,
-      "updatedAt": 1789562356113,
+      "updatedAt": 1789565719996,
       "nameZh": "社区",
       "nameSource": "machine-translation",
       "nameTranslatedAt": 1789561309591
@@ -17036,14 +17036,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789562356824
+        "updatedAt": 1789565720764
       },
       "rating": {
         "score": 6.5,
         "positive": 68,
         "total": 727,
         "desc": "Mixed",
-        "updatedAt": 1789562357528
+        "updatedAt": 1789565721395
       },
       "historicalLow": {
         "price": 36.4,
@@ -17175,7 +17175,7 @@
         ]
       },
       "createdAt": 1789200409294,
-      "updatedAt": 1789562357528
+      "updatedAt": 1789565721395
     },
     {
       "appid": 2058190,
@@ -17190,14 +17190,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789562358210
+        "updatedAt": 1789565722125
       },
       "rating": {
         "score": 9.2,
         "positive": 90,
         "total": 2711,
         "desc": "Very Positive",
-        "updatedAt": 1789562358939
+        "updatedAt": 1789565722798
       },
       "historicalLow": {
         "price": 59.4,
@@ -17300,7 +17300,7 @@
         ]
       },
       "createdAt": 1789200407468,
-      "updatedAt": 1789562358939
+      "updatedAt": 1789565722798
     },
     {
       "appid": 2072450,
@@ -17315,14 +17315,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789562359711
+        "updatedAt": 1789565723538
       },
       "rating": {
         "score": 8.9,
         "positive": 87,
         "total": 6814,
         "desc": "Very Positive",
-        "updatedAt": 1789562360331
+        "updatedAt": 1789565724207
       },
       "historicalLow": {
         "price": 74.5,
@@ -17593,7 +17593,7 @@
         ]
       },
       "createdAt": 1789200405077,
-      "updatedAt": 1789562360331
+      "updatedAt": 1789565724207
     },
     {
       "appid": 2185060,
@@ -17608,14 +17608,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789562361033
+        "updatedAt": 1789565724952
       },
       "rating": {
         "score": 9.8,
         "positive": 95,
-        "total": 3864,
+        "total": 3865,
         "desc": "Very Positive",
-        "updatedAt": 1789562361731
+        "updatedAt": 1789565725612
       },
       "historicalLow": {
         "price": null,
@@ -17782,7 +17782,7 @@
         ]
       },
       "createdAt": 1789200402590,
-      "updatedAt": 1789562361731
+      "updatedAt": 1789565725612
     },
     {
       "appid": 2215430,
@@ -17797,14 +17797,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789562362429
+        "updatedAt": 1789565726312
       },
       "rating": {
         "score": 9.2,
         "positive": 88,
         "total": 9508,
         "desc": "Very Positive",
-        "updatedAt": 1789562363134
+        "updatedAt": 1789565726994
       },
       "historicalLow": {
         "price": 238.8,
@@ -17923,7 +17923,7 @@
         "userTagsFetchedAt": 1789562552945
       },
       "createdAt": 1789200398979,
-      "updatedAt": 1789562363134
+      "updatedAt": 1789565726994
     },
     {
       "appid": 2291850,
@@ -17938,14 +17938,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789562363814
+        "updatedAt": 1789565727682
       },
       "rating": {
         "score": 9.9,
         "positive": 99,
         "total": 3611,
         "desc": "Overwhelmingly Positive",
-        "updatedAt": 1789562364533
+        "updatedAt": 1789565728406
       },
       "historicalLow": {
         "price": 7.5,
@@ -18030,7 +18030,7 @@
         ]
       },
       "createdAt": 1789200396557,
-      "updatedAt": 1789562364533,
+      "updatedAt": 1789565728406,
       "nameZh": "地下花",
       "nameSource": "machine-translation",
       "nameTranslatedAt": 1789560207086
@@ -18048,14 +18048,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789562365224
+        "updatedAt": 1789565729092
       },
       "rating": {
         "score": 8.4,
         "positive": 80,
         "total": 7317,
         "desc": "Mostly Positive",
-        "updatedAt": 1789562365937
+        "updatedAt": 1789565729850
       },
       "historicalLow": {
         "price": 276,
@@ -18152,7 +18152,7 @@
         "userTagsFetchedAt": 1789562554044
       },
       "createdAt": 1789200394758,
-      "updatedAt": 1789562365937,
+      "updatedAt": 1789565729850,
       "nameZh": "《最后生还者™ 第二部分》重制版",
       "nameSource": "machine-translation",
       "nameTranslatedAt": 1789561310972
@@ -18170,14 +18170,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789562366624
+        "updatedAt": 1789565730487
       },
       "rating": {
         "score": 9.9,
         "positive": 100,
         "total": 2960,
         "desc": "Overwhelmingly Positive",
-        "updatedAt": 1789562367338
+        "updatedAt": 1789565731230
       },
       "historicalLow": {
         "price": 29.4,
@@ -18280,7 +18280,7 @@
         ]
       },
       "createdAt": 1789200389919,
-      "updatedAt": 1789562367338,
+      "updatedAt": 1789565731230,
       "nameZh": "是的",
       "nameSource": "machine-translation",
       "nameTranslatedAt": 1789560207577
@@ -18298,14 +18298,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789562368011
+        "updatedAt": 1789565732079
       },
       "rating": {
         "score": 4,
         "positive": 32,
-        "total": 99053,
+        "total": 99058,
         "desc": "Mostly Negative",
-        "updatedAt": 1789562368730
+        "updatedAt": 1789565732601
       },
       "historicalLow": {
         "price": 88,
@@ -18405,7 +18405,7 @@
         ]
       },
       "createdAt": 1789200385710,
-      "updatedAt": 1789562368730,
+      "updatedAt": 1789565732601,
       "nameZh": "杀戮尖塔2",
       "nameSource": "machine-translation",
       "nameTranslatedAt": 1789560207974
@@ -18423,14 +18423,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789562369417
+        "updatedAt": 1789565733290
       },
       "rating": {
         "score": 9.6,
         "positive": 93,
         "total": 15274,
         "desc": "Very Positive",
-        "updatedAt": 1789562370133
+        "updatedAt": 1789565734011
       },
       "historicalLow": {
         "price": 49,
@@ -18531,7 +18531,7 @@
         ]
       },
       "createdAt": 1789200382652,
-      "updatedAt": 1789562370133,
+      "updatedAt": 1789565734011,
       "nameZh": "流浪者",
       "nameSource": "machine-translation",
       "nameTranslatedAt": 1789560208371
@@ -18549,14 +18549,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789562370832
+        "updatedAt": 1789565734725
       },
       "rating": {
         "score": 9.6,
         "positive": 92,
         "total": 5811,
         "desc": "Very Positive",
-        "updatedAt": 1789562371540
+        "updatedAt": 1789565735413
       },
       "historicalLow": {
         "price": 29.7,
@@ -18673,7 +18673,7 @@
         ]
       },
       "createdAt": 1789200377845,
-      "updatedAt": 1789562371540
+      "updatedAt": 1789565735413
     },
     {
       "appid": 1366540,
@@ -18688,14 +18688,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789562372222
+        "updatedAt": 1789565736102
       },
       "rating": {
         "score": 9.9,
         "positive": 98,
-        "total": 56383,
+        "total": 56384,
         "desc": "Overwhelmingly Positive",
-        "updatedAt": 1789562372938
+        "updatedAt": 1789565736878
       },
       "historicalLow": {
         "price": 56,
@@ -18805,7 +18805,7 @@
         ]
       },
       "createdAt": 1789200373586,
-      "updatedAt": 1789562372938
+      "updatedAt": 1789565736878
     },
     {
       "appid": 1369630,
@@ -18820,14 +18820,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789562373625
+        "updatedAt": 1789565737508
       },
       "rating": {
         "score": 9.6,
         "positive": 92,
-        "total": 17140,
+        "total": 17141,
         "desc": "Very Positive",
-        "updatedAt": 1789562374331
+        "updatedAt": 1789565738239
       },
       "historicalLow": {
         "price": 39.2,
@@ -18928,7 +18928,7 @@
         "userTagsFetchedAt": 1789560373995
       },
       "createdAt": 1789200371171,
-      "updatedAt": 1789562374331,
+      "updatedAt": 1789565738239,
       "nameZh": "安德百合：骑士的安静",
       "nameSource": "machine-translation",
       "nameTranslatedAt": 1789560209915
@@ -18946,14 +18946,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789562375013
+        "updatedAt": 1789565738891
       },
       "rating": {
         "score": 9.8,
         "positive": 96,
-        "total": 66977,
+        "total": 66978,
         "desc": "Overwhelmingly Positive",
-        "updatedAt": 1789562375733
+        "updatedAt": 1789565739610
       },
       "historicalLow": {
         "price": 53.6,
@@ -19037,7 +19037,7 @@
         ]
       },
       "createdAt": 1789200367552,
-      "updatedAt": 1789562375733
+      "updatedAt": 1789565739610
     },
     {
       "appid": 1888930,
@@ -19052,14 +19052,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789562376417
+        "updatedAt": 1789565740319
       },
       "rating": {
         "score": 8.4,
         "positive": 80,
         "total": 14420,
         "desc": "Very Positive",
-        "updatedAt": 1789562377128
+        "updatedAt": 1789565741015
       },
       "historicalLow": {
         "price": 207,
@@ -19161,7 +19161,7 @@
         ]
       },
       "createdAt": 1789200363318,
-      "updatedAt": 1789562377128,
+      "updatedAt": 1789565741015,
       "nameZh": "最后生还者™ 第 I 部分",
       "nameSource": "machine-translation",
       "nameTranslatedAt": 1789561312148
@@ -19179,14 +19179,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789562377820
+        "updatedAt": 1789565741689
       },
       "rating": {
         "score": 7.5,
         "positive": 77,
         "total": 425,
         "desc": "Mostly Positive",
-        "updatedAt": 1789562378544
+        "updatedAt": 1789565742430
       },
       "historicalLow": {
         "price": null,
@@ -19272,7 +19272,7 @@
         ]
       },
       "createdAt": 1789200357301,
-      "updatedAt": 1789562378544,
+      "updatedAt": 1789565742430,
       "nameZh": "日落超速",
       "nameSource": "machine-translation",
       "nameTranslatedAt": 1789560211100
@@ -19290,14 +19290,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789562379248
+        "updatedAt": 1789565743104
       },
       "rating": {
         "score": 7.5,
         "positive": 79,
         "total": 9170,
         "desc": "Mostly Positive",
-        "updatedAt": 1789562379935
+        "updatedAt": 1789565743814
       },
       "historicalLow": {
         "price": null,
@@ -19509,7 +19509,7 @@
         ]
       },
       "createdAt": 1789200354279,
-      "updatedAt": 1789562379935,
+      "updatedAt": 1789565743814,
       "nameZh": "帝国时代 III：决定版",
       "nameSource": "machine-translation",
       "nameTranslatedAt": 1789561312883
@@ -19527,15 +19527,15 @@
         "discountExpiration": 1790010000000,
         "expirationSource": "featuredcategories",
         "saleEvent": "特惠",
-        "updatedAt": 1789562380614,
-        "expirationCheckedAt": 1789562475762
+        "updatedAt": 1789565744475,
+        "expirationCheckedAt": 1789565839643
       },
       "rating": {
         "score": 9.8,
         "positive": 96,
-        "total": 101256,
+        "total": 101257,
         "desc": "Overwhelmingly Positive",
-        "updatedAt": 1789562381341
+        "updatedAt": 1789565745197
       },
       "historicalLow": {
         "price": 208.6,
@@ -19667,7 +19667,7 @@
         "userTagsFetchedAt": 1789562557420
       },
       "createdAt": 1789200350053,
-      "updatedAt": 1789562381341
+      "updatedAt": 1789565745197
     },
     {
       "appid": 1938010,
@@ -19679,17 +19679,17 @@
         "discountPercent": 80,
         "currency": "CNY",
         "isOnSale": true,
-        "discountExpiration": null,
-        "expirationSource": null,
+        "discountExpiration": 1790611199000,
+        "expirationSource": "storepage",
         "saleEvent": null,
-        "updatedAt": 1789562382050
+        "updatedAt": 1789565745890
       },
       "rating": {
         "score": 4,
         "positive": 32,
         "total": 3717,
         "desc": "Mostly Negative",
-        "updatedAt": 1789562382739
+        "updatedAt": 1789565746637
       },
       "historicalLow": {
         "price": 20.9,
@@ -19793,10 +19793,10 @@
           "龙",
           "自然"
         ],
-        "userTagsFetchedAt": 1789562528800
+        "userTagsFetchedAt": 1789565892683
       },
       "createdAt": 1789200345183,
-      "updatedAt": 1789562382739,
+      "updatedAt": 1789565746637,
       "nameZh": "《狂野之心™》",
       "nameSource": "machine-translation",
       "nameTranslatedAt": 1789560212554
@@ -19814,14 +19814,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789562383429
+        "updatedAt": 1789565747277
       },
       "rating": {
         "score": 9.2,
         "positive": 89,
         "total": 16084,
         "desc": "Very Positive",
-        "updatedAt": 1789562384125
+        "updatedAt": 1789565747993
       },
       "historicalLow": {
         "price": 75.6,
@@ -19926,7 +19926,7 @@
         ]
       },
       "createdAt": 1789200336641,
-      "updatedAt": 1789562384125,
+      "updatedAt": 1789565747993,
       "nameZh": "哈迪斯二世",
       "nameSource": "machine-translation",
       "nameTranslatedAt": 1789561314109
@@ -19944,14 +19944,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789562384845
+        "updatedAt": 1789565748864
       },
       "rating": {
         "score": 9.2,
         "positive": 89,
         "total": 22845,
         "desc": "Very Positive",
-        "updatedAt": 1789562385535
+        "updatedAt": 1789565749466
       },
       "historicalLow": {
         "price": 59.4,
@@ -20235,7 +20235,7 @@
         ]
       },
       "createdAt": 1789200309480,
-      "updatedAt": 1789562385535,
+      "updatedAt": 1789565749466,
       "nameZh": "十字军之王3",
       "nameSource": "machine-translation",
       "nameTranslatedAt": 1789560213458
@@ -20253,14 +20253,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789562386234
+        "updatedAt": 1789565750144
       },
       "rating": {
         "score": 9.9,
         "positive": 100,
         "total": 2080,
         "desc": "Overwhelmingly Positive",
-        "updatedAt": 1789562386937
+        "updatedAt": 1789565750784
       },
       "historicalLow": {
         "price": 38,
@@ -20360,7 +20360,7 @@
         ]
       },
       "createdAt": 1789200306373,
-      "updatedAt": 1789562386937,
+      "updatedAt": 1789565750784,
       "nameZh": "帕特里克的帕拉盒",
       "nameSource": "machine-translation",
       "nameTranslatedAt": 1789561315554
@@ -20378,14 +20378,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789562387613
+        "updatedAt": 1789565751476
       },
       "rating": {
         "score": 8.9,
         "positive": 85,
         "total": 3898,
         "desc": "Very Positive",
-        "updatedAt": 1789562388330
+        "updatedAt": 1789565752233
       },
       "historicalLow": {
         "price": 16.8,
@@ -20511,7 +20511,7 @@
         ]
       },
       "createdAt": 1789200303362,
-      "updatedAt": 1789562388330
+      "updatedAt": 1789565752233
     },
     {
       "appid": 1292940,
@@ -20526,14 +20526,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789562389010
+        "updatedAt": 1789565752867
       },
       "rating": {
         "score": 9.9,
         "positive": 98,
         "total": 3232,
         "desc": "Overwhelmingly Positive",
-        "updatedAt": 1789562389757
+        "updatedAt": 1789565753685
       },
       "historicalLow": {
         "price": 6.6,
@@ -20609,7 +20609,7 @@
         ]
       },
       "createdAt": 1789200296684,
-      "updatedAt": 1789562389757,
+      "updatedAt": 1789565753685,
       "nameZh": "密室逃脱合集",
       "nameSource": "machine-translation",
       "nameTranslatedAt": 1789560214644
@@ -20627,14 +20627,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789562390440
+        "updatedAt": 1789565754289
       },
       "rating": {
         "score": 9.2,
         "positive": 91,
         "total": 18276,
         "desc": "Very Positive",
-        "updatedAt": 1789562391133
+        "updatedAt": 1789565754982
       },
       "historicalLow": {
         "price": 67,
@@ -20923,7 +20923,7 @@
         ]
       },
       "createdAt": 1789200291860,
-      "updatedAt": 1789562391133
+      "updatedAt": 1789565754982
     },
     {
       "appid": 610370,
@@ -20938,14 +20938,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789562391842
+        "updatedAt": 1789565755745
       },
       "rating": {
         "score": 9.9,
         "positive": 98,
         "total": 4390,
         "desc": "Overwhelmingly Positive",
-        "updatedAt": 1789562392540
+        "updatedAt": 1789565756392
       },
       "historicalLow": {
         "price": 13.6,
@@ -21093,7 +21093,7 @@
         ]
       },
       "createdAt": 1789200286347,
-      "updatedAt": 1789562392540,
+      "updatedAt": 1789565756392,
       "nameZh": "亡命之徒 III",
       "nameSource": "machine-translation",
       "nameTranslatedAt": 1789561316803
@@ -21111,14 +21111,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789562393232
+        "updatedAt": 1789565757105
       },
       "rating": {
         "score": 9.2,
         "positive": 89,
-        "total": 37777,
+        "total": 37778,
         "desc": "Very Positive",
-        "updatedAt": 1789562393924
+        "updatedAt": 1789565757832
       },
       "historicalLow": {
         "price": 26.4,
@@ -21305,7 +21305,7 @@
         ]
       },
       "createdAt": 1789200283975,
-      "updatedAt": 1789562393924
+      "updatedAt": 1789565757832
     },
     {
       "appid": 694280,
@@ -21320,14 +21320,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789562394714
+        "updatedAt": 1789565758693
       },
       "rating": {
         "score": 8.4,
         "positive": 82,
         "total": 3282,
         "desc": "Very Positive",
-        "updatedAt": 1789562395324
+        "updatedAt": 1789565759237
       },
       "historicalLow": {
         "price": 8.4,
@@ -21600,7 +21600,7 @@
         ]
       },
       "createdAt": 1789200280943,
-      "updatedAt": 1789562395324,
+      "updatedAt": 1789565759237,
       "nameZh": "僵尸军团4：死亡之战",
       "nameSource": "machine-translation",
       "nameTranslatedAt": 1789560216049
@@ -21618,14 +21618,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789562396021
+        "updatedAt": 1789565759883
       },
       "rating": {
         "score": 8.9,
         "positive": 87,
         "total": 13111,
         "desc": "Very Positive",
-        "updatedAt": 1789562396717
+        "updatedAt": 1789565760663
       },
       "historicalLow": {
         "price": 9,
@@ -21895,7 +21895,7 @@
         ]
       },
       "createdAt": 1789200275496,
-      "updatedAt": 1789562396717
+      "updatedAt": 1789565760663
     },
     {
       "appid": 753640,
@@ -21910,14 +21910,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789562397407
+        "updatedAt": 1789565761313
       },
       "rating": {
         "score": 9.9,
         "positive": 97,
         "total": 17357,
         "desc": "Overwhelmingly Positive",
-        "updatedAt": 1789562398137
+        "updatedAt": 1789565761994
       },
       "historicalLow": {
         "price": 47.5,
@@ -22045,7 +22045,7 @@
         ]
       },
       "createdAt": 1789200270711,
-      "updatedAt": 1789562398137,
+      "updatedAt": 1789565761994,
       "nameZh": "星际拓荒",
       "nameSource": "machine-translation",
       "nameTranslatedAt": 1789561317683
@@ -22063,14 +22063,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789562398817
+        "updatedAt": 1789565762664
       },
       "rating": {
         "score": 9.6,
         "positive": 94,
         "total": 1497,
         "desc": "Very Positive",
-        "updatedAt": 1789562399526
+        "updatedAt": 1789565763466
       },
       "historicalLow": {
         "price": 14,
@@ -22171,7 +22171,7 @@
         ]
       },
       "createdAt": 1789200267638,
-      "updatedAt": 1789562399526,
+      "updatedAt": 1789565763466,
       "nameZh": "苏普拉兰",
       "nameSource": "machine-translation",
       "nameTranslatedAt": 1789560216848
@@ -22189,14 +22189,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789562400237
+        "updatedAt": 1789565764154
       },
       "rating": {
         "score": 9.6,
         "positive": 92,
-        "total": 23745,
+        "total": 23746,
         "desc": "Very Positive",
-        "updatedAt": 1789562400943
+        "updatedAt": 1789565764800
       },
       "historicalLow": {
         "price": 24.8,
@@ -22488,7 +22488,7 @@
         ]
       },
       "createdAt": 1789200254926,
-      "updatedAt": 1789562400943,
+      "updatedAt": 1789565764800,
       "nameZh": "帝国时代 II：决定版",
       "nameSource": "machine-translation",
       "nameTranslatedAt": 1789560217884
@@ -22506,14 +22506,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789562401602
+        "updatedAt": 1789565765479
       },
       "rating": {
         "score": 9.8,
         "positive": 96,
-        "total": 170972,
+        "total": 170976,
         "desc": "Overwhelmingly Positive",
-        "updatedAt": 1789562402326
+        "updatedAt": 1789565766180
       },
       "historicalLow": {
         "price": 134,
@@ -22580,7 +22580,7 @@
         "userTagsFetchedAt": 1789560395977
       },
       "createdAt": 1789200248257,
-      "updatedAt": 1789562402326,
+      "updatedAt": 1789565766180,
       "nameZh": "《只狼™：影逝二度》- GOTY 版",
       "nameSource": "machine-translation",
       "nameTranslatedAt": 1789561319949
@@ -22598,14 +22598,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789562403073
+        "updatedAt": 1789565766927
       },
       "rating": {
         "score": 8.4,
         "positive": 84,
         "total": 3555,
         "desc": "Very Positive",
-        "updatedAt": 1789562403726
+        "updatedAt": 1789565767585
       },
       "historicalLow": {
         "price": 25.8,
@@ -22879,7 +22879,7 @@
         ]
       },
       "createdAt": 1789200245276,
-      "updatedAt": 1789562403726,
+      "updatedAt": 1789565767585,
       "nameZh": "无尽空间™ 2",
       "nameSource": "machine-translation",
       "nameTranslatedAt": 1789560219585
@@ -22897,14 +22897,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789562404398
+        "updatedAt": 1789565768256
       },
       "rating": {
         "score": 9.8,
         "positive": 96,
         "total": 16789,
         "desc": "Overwhelmingly Positive",
-        "updatedAt": 1789562405118
+        "updatedAt": 1789565769032
       },
       "historicalLow": {
         "price": 7.6,
@@ -22993,7 +22993,7 @@
         ]
       },
       "createdAt": 1789200242244,
-      "updatedAt": 1789562405118,
+      "updatedAt": 1789565769032,
       "nameZh": "逃生2",
       "nameSource": "machine-translation",
       "nameTranslatedAt": 1789561320086
@@ -23011,14 +23011,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789562405813
+        "updatedAt": 1789565769674
       },
       "rating": {
         "score": 9.6,
         "positive": 92,
         "total": 3433,
         "desc": "Very Positive",
-        "updatedAt": 1789562406524
+        "updatedAt": 1789565770391
       },
       "historicalLow": {
         "price": 29.7,
@@ -23131,7 +23131,7 @@
         ]
       },
       "createdAt": 1789200239151,
-      "updatedAt": 1789562406524
+      "updatedAt": 1789565770391
     },
     {
       "appid": 532110,
@@ -23146,14 +23146,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789562407190
+        "updatedAt": 1789565771065
       },
       "rating": {
         "score": 9.9,
         "positive": 98,
         "total": 4414,
         "desc": "Overwhelmingly Positive",
-        "updatedAt": 1789562407914
+        "updatedAt": 1789565771795
       },
       "historicalLow": {
         "price": 6.1,
@@ -23236,7 +23236,7 @@
         ]
       },
       "createdAt": 1789200235552,
-      "updatedAt": 1789562407914,
+      "updatedAt": 1789565771795,
       "nameZh": "锈湖：根源",
       "nameSource": "machine-translation",
       "nameTranslatedAt": 1789560221209
@@ -23251,17 +23251,17 @@
         "discountPercent": 75,
         "currency": "CNY",
         "isOnSale": true,
-        "discountExpiration": null,
-        "expirationSource": null,
+        "discountExpiration": 1790006399000,
+        "expirationSource": "storepage",
         "saleEvent": null,
-        "updatedAt": 1789562408607
+        "updatedAt": 1789565772477
       },
       "rating": {
         "score": 9.9,
         "positive": 99,
         "total": 7329,
         "desc": "Overwhelmingly Positive",
-        "updatedAt": 1789562409314
+        "updatedAt": 1789565773191
       },
       "historicalLow": {
         "price": 49.5,
@@ -23362,10 +23362,10 @@
           "好评原声音轨",
           "鲜血"
         ],
-        "userTagsFetchedAt": 1789562529919
+        "userTagsFetchedAt": 1789565893914
       },
       "createdAt": 1789200231926,
-      "updatedAt": 1789562409314,
+      "updatedAt": 1789565773191,
       "nameZh": "半衰期：爱莉克斯",
       "nameSource": "machine-translation",
       "nameTranslatedAt": 1789561322034
@@ -23380,17 +23380,17 @@
         "discountPercent": 70,
         "currency": "CNY",
         "isOnSale": true,
-        "discountExpiration": null,
-        "expirationSource": null,
+        "discountExpiration": 1790006399000,
+        "expirationSource": "storepage",
         "saleEvent": null,
-        "updatedAt": 1789562410037
+        "updatedAt": 1789565773867
       },
       "rating": {
         "score": 9.6,
         "positive": 94,
         "total": 36615,
         "desc": "Very Positive",
-        "updatedAt": 1789562410741
+        "updatedAt": 1789565774592
       },
       "historicalLow": {
         "price": 27,
@@ -23650,7 +23650,7 @@
           "黑暗",
           "动作类 Rogue"
         ],
-        "userTagsFetchedAt": 1789562531030,
+        "userTagsFetchedAt": 1789565894932,
         "bundleIds": [
           14949,
           6306,
@@ -23658,7 +23658,7 @@
         ]
       },
       "createdAt": 1789200209151,
-      "updatedAt": 1789562410741
+      "updatedAt": 1789565774592
     },
     {
       "appid": 557600,
@@ -23673,14 +23673,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789562411402
+        "updatedAt": 1789565775243
       },
       "rating": {
         "score": 9.9,
         "positive": 98,
         "total": 10919,
         "desc": "Overwhelmingly Positive",
-        "updatedAt": 1789562412115
+        "updatedAt": 1789565775978
       },
       "historicalLow": {
         "price": 15,
@@ -23781,7 +23781,7 @@
         ]
       },
       "createdAt": 1789200194326,
-      "updatedAt": 1789562412115,
+      "updatedAt": 1789565775978,
       "nameZh": "戈罗戈阿",
       "nameSource": "machine-translation",
       "nameTranslatedAt": 1789560222438
@@ -23799,14 +23799,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789562412793
+        "updatedAt": 1789565776647
       },
       "rating": {
         "score": 9.2,
         "positive": 89,
         "total": 20571,
         "desc": "Very Positive",
-        "updatedAt": 1789562413524
+        "updatedAt": 1789565777368
       },
       "historicalLow": {
         "price": 99,
@@ -23888,7 +23888,7 @@
         "userTagsFetchedAt": 1789561417165
       },
       "createdAt": 1789199792368,
-      "updatedAt": 1789562413524,
+      "updatedAt": 1789565777368,
       "nameZh": "黑暗之魂™：重制版",
       "nameSource": "machine-translation",
       "nameTranslatedAt": 1789561322654
@@ -23903,17 +23903,17 @@
         "discountPercent": 50,
         "currency": "CNY",
         "isOnSale": true,
-        "discountExpiration": null,
-        "expirationSource": null,
+        "discountExpiration": 1790006399000,
+        "expirationSource": "storepage",
         "saleEvent": null,
-        "updatedAt": 1789562414204
+        "updatedAt": 1789565778080
       },
       "rating": {
         "score": 9.9,
         "positive": 97,
         "total": 65826,
         "desc": "Overwhelmingly Positive",
-        "updatedAt": 1789562414918
+        "updatedAt": 1789565778782
       },
       "historicalLow": {
         "price": 32,
@@ -24097,7 +24097,7 @@
           "独立",
           "抢先体验"
         ],
-        "userTagsFetchedAt": 1789562532120,
+        "userTagsFetchedAt": 1789565896120,
         "bundleIds": [
           46406,
           30317,
@@ -24105,7 +24105,7 @@
         ]
       },
       "createdAt": 1789199783608,
-      "updatedAt": 1789562414918,
+      "updatedAt": 1789565778782,
       "nameZh": "死亡细胞",
       "nameSource": "machine-translation",
       "nameTranslatedAt": 1789560223022
@@ -24123,14 +24123,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789562415591
+        "updatedAt": 1789565779441
       },
       "rating": {
         "score": 7.5,
         "positive": 77,
         "total": 7174,
         "desc": "Mostly Positive",
-        "updatedAt": 1789562416309
+        "updatedAt": 1789565780178
       },
       "historicalLow": {
         "price": 14,
@@ -24213,7 +24213,7 @@
         ]
       },
       "createdAt": 1789199777249,
-      "updatedAt": 1789562416309,
+      "updatedAt": 1789565780178,
       "nameZh": "孤岛惊魂3",
       "nameSource": "machine-translation",
       "nameTranslatedAt": 1789560223269
@@ -24231,14 +24231,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789562416997
+        "updatedAt": 1789565780861
       },
       "rating": {
         "score": 4,
         "positive": 46,
         "total": 5633,
         "desc": "Mixed",
-        "updatedAt": 1789562417709
+        "updatedAt": 1789565781604
       },
       "historicalLow": {
         "price": 79.2,
@@ -24393,7 +24393,7 @@
         ]
       },
       "createdAt": 1789199750962,
-      "updatedAt": 1789562417709,
+      "updatedAt": 1789565781604,
       "nameZh": "英雄连3",
       "nameSource": "machine-translation",
       "nameTranslatedAt": 1789560224226
@@ -24411,14 +24411,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789562418390
+        "updatedAt": 1789565782249
       },
       "rating": {
         "score": 7.5,
         "positive": 79,
-        "total": 18764,
+        "total": 18765,
         "desc": "Mostly Positive",
-        "updatedAt": 1789562419109
+        "updatedAt": 1789565783038
       },
       "historicalLow": {
         "price": 39,
@@ -24503,7 +24503,7 @@
         "userTagsFetchedAt": 1789562559547
       },
       "createdAt": 1789199716591,
-      "updatedAt": 1789562419109,
+      "updatedAt": 1789565783038,
       "nameZh": "DARK SOULS™ II：原罪学者",
       "nameSource": "machine-translation",
       "nameTranslatedAt": 1789561324082
@@ -24521,14 +24521,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789562419791
+        "updatedAt": 1789565783648
       },
       "rating": {
         "score": 8.9,
         "positive": 85,
         "total": 1701,
         "desc": "Very Positive",
-        "updatedAt": 1789562420504
+        "updatedAt": 1789565784361
       },
       "historicalLow": {
         "price": 62,
@@ -24662,7 +24662,7 @@
         "userTagsFetchedAt": 1789562560712
       },
       "createdAt": 1789199704429,
-      "updatedAt": 1789562420504,
+      "updatedAt": 1789565784361,
       "nameZh": "黑暗之魂™ II",
       "nameSource": "machine-translation",
       "nameTranslatedAt": 1789560225413
@@ -24677,17 +24677,17 @@
         "discountPercent": 30,
         "currency": "CNY",
         "isOnSale": true,
-        "discountExpiration": null,
-        "expirationSource": null,
+        "discountExpiration": 1790092799000,
+        "expirationSource": "storepage",
         "saleEvent": null,
-        "updatedAt": 1789562421424
+        "updatedAt": 1789565785216
       },
       "rating": {
         "score": 4,
         "positive": 48,
         "total": 13982,
         "desc": "Mixed",
-        "updatedAt": 1789562421906
+        "updatedAt": 1789565785790
       },
       "historicalLow": {
         "price": 138.6,
@@ -24944,13 +24944,13 @@
           "好评原声音轨",
           "心理恐怖"
         ],
-        "userTagsFetchedAt": 1789562533320,
+        "userTagsFetchedAt": 1789565897099,
         "bundleIds": [
           73583
         ]
       },
       "createdAt": 1789199688864,
-      "updatedAt": 1789562421906
+      "updatedAt": 1789565785790
     },
     {
       "appid": 255710,
@@ -24965,14 +24965,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789562422893
+        "updatedAt": 1789565786791
       },
       "rating": {
         "score": 9.2,
         "positive": 91,
         "total": 60742,
         "desc": "Very Positive",
-        "updatedAt": 1789562423311
+        "updatedAt": 1789565787173
       },
       "historicalLow": {
         "price": 13.8,
@@ -25244,7 +25244,7 @@
         ]
       },
       "createdAt": 1789199682401,
-      "updatedAt": 1789562423311,
+      "updatedAt": 1789565787173,
       "nameZh": "城市：天际线",
       "nameSource": "machine-translation",
       "nameTranslatedAt": 1789561324884
@@ -25262,14 +25262,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789562423986
+        "updatedAt": 1789565787857
       },
       "rating": {
         "score": 9.8,
         "positive": 96,
         "total": 4926,
         "desc": "Overwhelmingly Positive",
-        "updatedAt": 1789562424702
+        "updatedAt": 1789565788592
       },
       "historicalLow": {
         "price": 18,
@@ -25348,7 +25348,7 @@
         ]
       },
       "createdAt": 1789199671365,
-      "updatedAt": 1789562424702,
+      "updatedAt": 1789565788592,
       "nameZh": "勇敢的心：伟大的战争™ / 无名战士：伟大战争的回忆™",
       "nameSource": "machine-translation",
       "nameTranslatedAt": 1789560226219
@@ -25366,14 +25366,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789562425394
+        "updatedAt": 1789565789250
       },
       "rating": {
         "score": 8.9,
         "positive": 87,
         "total": 8559,
         "desc": "Very Positive",
-        "updatedAt": 1789562426109
+        "updatedAt": 1789565790003
       },
       "historicalLow": {
         "price": 32.7,
@@ -25474,7 +25474,7 @@
         ]
       },
       "createdAt": 1789199656265,
-      "updatedAt": 1789562426109
+      "updatedAt": 1789565790003
     },
     {
       "appid": 264710,
@@ -25489,14 +25489,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789562426794
+        "updatedAt": 1789565790665
       },
       "rating": {
         "score": 9.9,
         "positive": 97,
         "total": 34380,
         "desc": "Overwhelmingly Positive",
-        "updatedAt": 1789562427505
+        "updatedAt": 1789565791374
       },
       "historicalLow": {
         "price": 32.7,
@@ -25600,7 +25600,7 @@
         ]
       },
       "createdAt": 1789199650264,
-      "updatedAt": 1789562427505
+      "updatedAt": 1789565791374
     },
     {
       "appid": 1962700,
@@ -25615,14 +25615,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789562428193
+        "updatedAt": 1789565792067
       },
       "rating": {
         "score": 7.5,
         "positive": 70,
         "total": 8739,
         "desc": "Mostly Positive",
-        "updatedAt": 1789562428902
+        "updatedAt": 1789565792789
       },
       "historicalLow": {
         "price": null,
@@ -25735,7 +25735,7 @@
         ]
       },
       "createdAt": 1789199644423,
-      "updatedAt": 1789562428902
+      "updatedAt": 1789565792789
     },
     {
       "appid": 268500,
@@ -25750,14 +25750,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789562429598
+        "updatedAt": 1789565793488
       },
       "rating": {
         "score": 7.5,
         "positive": 77,
         "total": 12984,
         "desc": "Mostly Positive",
-        "updatedAt": 1789562430305
+        "updatedAt": 1789565794161
       },
       "historicalLow": {
         "price": 9.5,
@@ -25921,7 +25921,7 @@
         ]
       },
       "createdAt": 1789199632217,
-      "updatedAt": 1789562430305,
+      "updatedAt": 1789565794161,
       "nameZh": "幽浮®2",
       "nameSource": "machine-translation",
       "nameTranslatedAt": 1789561326329
@@ -25939,15 +25939,15 @@
         "discountExpiration": 1790010000000,
         "expirationSource": "featuredcategories",
         "saleEvent": "特惠",
-        "updatedAt": 1789562430983,
-        "expirationCheckedAt": 1789562475762
+        "updatedAt": 1789565794894,
+        "expirationCheckedAt": 1789565839643
       },
       "rating": {
         "score": 9.2,
         "positive": 88,
-        "total": 67011,
+        "total": 67013,
         "desc": "Very Positive",
-        "updatedAt": 1789562431707
+        "updatedAt": 1789565795637
       },
       "historicalLow": {
         "price": 69,
@@ -26076,7 +26076,7 @@
         ]
       },
       "createdAt": 1789199623232,
-      "updatedAt": 1789562431707
+      "updatedAt": 1789565795637
     },
     {
       "appid": 314650,
@@ -26091,14 +26091,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789562432396
+        "updatedAt": 1789565796268
       },
       "rating": {
         "score": 9.9,
         "positive": 97,
         "total": 2517,
         "desc": "Overwhelmingly Positive",
-        "updatedAt": 1789562433110
+        "updatedAt": 1789565797251
       },
       "historicalLow": {
         "price": 60,
@@ -26328,7 +26328,7 @@
         "userTagsFetchedAt": 1789561430313
       },
       "createdAt": 1789199605783,
-      "updatedAt": 1789562433110,
+      "updatedAt": 1789565797251,
       "nameZh": "太空引擎",
       "nameSource": "machine-translation",
       "nameTranslatedAt": 1789560227323
@@ -26346,14 +26346,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789562433783
+        "updatedAt": 1789565797641
       },
       "rating": {
         "score": 9.6,
         "positive": 93,
         "total": 8791,
         "desc": "Very Positive",
-        "updatedAt": 1789562434519
+        "updatedAt": 1789565798375
       },
       "historicalLow": {
         "price": 16.8,
@@ -26428,7 +26428,7 @@
         "userTagsFetchedAt": 1789562561769
       },
       "createdAt": 1789199580443,
-      "updatedAt": 1789562434519,
+      "updatedAt": 1789565798375,
       "nameZh": "行尸走肉：揭秘最终系列",
       "nameSource": "machine-translation",
       "nameTranslatedAt": 1789561327288
@@ -26446,14 +26446,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789562435186
+        "updatedAt": 1789565799104
       },
       "rating": {
         "score": 9.2,
         "positive": 91,
         "total": 1261,
         "desc": "Very Positive",
-        "updatedAt": 1789562435910
+        "updatedAt": 1789565799770
       },
       "historicalLow": {
         "price": 67.2,
@@ -26512,7 +26512,7 @@
         "userTagsFetchedAt": 1789561432456
       },
       "createdAt": 1789199571448,
-      "updatedAt": 1789562435910,
+      "updatedAt": 1789565799770,
       "nameZh": "合金装备崛起：复仇",
       "nameSource": "machine-translation",
       "nameTranslatedAt": 1789560228005
@@ -26530,14 +26530,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789562436606
+        "updatedAt": 1789565800502
       },
       "rating": {
         "score": 9.6,
         "positive": 93,
         "total": 19787,
         "desc": "Very Positive",
-        "updatedAt": 1789562437307
+        "updatedAt": 1789565801199
       },
       "historicalLow": {
         "price": 23,
@@ -26663,7 +26663,7 @@
         "userTagsFetchedAt": 1789561433555
       },
       "createdAt": 1789199564670,
-      "updatedAt": 1789562437307
+      "updatedAt": 1789565801199
     },
     {
       "appid": 12150,
@@ -26678,14 +26678,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789562437986
+        "updatedAt": 1789565801909
       },
       "rating": {
         "score": 9.6,
         "positive": 92,
         "total": 330,
         "desc": "Very Positive",
-        "updatedAt": 1789562438702
+        "updatedAt": 1789565802650
       },
       "historicalLow": {
         "price": 15.8,
@@ -26739,7 +26739,7 @@
         "userTagsFetchedAt": 1789561434657
       },
       "createdAt": 1789199555039,
-      "updatedAt": 1789562438702,
+      "updatedAt": 1789565802650,
       "nameZh": "马克思佩恩2：马克思佩恩的陨落",
       "nameSource": "machine-translation",
       "nameTranslatedAt": 1789560229136
@@ -26757,14 +26757,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789562439421
+        "updatedAt": 1789565803275
       },
       "rating": {
         "score": 9.9,
         "positive": 98,
         "total": 24616,
         "desc": "Overwhelmingly Positive",
-        "updatedAt": 1789562440092
+        "updatedAt": 1789565803982
       },
       "historicalLow": {
         "price": 9.9,
@@ -26877,7 +26877,7 @@
         ]
       },
       "createdAt": 1789199542539,
-      "updatedAt": 1789562440092,
+      "updatedAt": 1789565803982,
       "nameZh": "《骑马与砍杀：战团》",
       "nameSource": "machine-translation",
       "nameTranslatedAt": 1789561328513
@@ -26895,14 +26895,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789562440783
+        "updatedAt": 1789565804658
       },
       "rating": {
         "score": 9.2,
         "positive": 88,
         "total": 26580,
         "desc": "Very Positive",
-        "updatedAt": 1789562441506
+        "updatedAt": 1789565805392
       },
       "historicalLow": {
         "price": 16.5,
@@ -27014,7 +27014,7 @@
         ]
       },
       "createdAt": 1789199532499,
-      "updatedAt": 1789562441506,
+      "updatedAt": 1789565805392,
       "nameZh": "上古卷轴 V：天际特别版",
       "nameSource": "machine-translation",
       "nameTranslatedAt": 1789560229564
@@ -27032,14 +27032,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789562442207
+        "updatedAt": 1789565806099
       },
       "rating": {
         "score": 8.4,
         "positive": 82,
         "total": 2186,
         "desc": "Very Positive",
-        "updatedAt": 1789562442898
+        "updatedAt": 1789565806786
       },
       "historicalLow": {
         "price": 29,
@@ -27114,7 +27114,7 @@
         "userTagsFetchedAt": 1789561438001
       },
       "createdAt": 1789199524386,
-      "updatedAt": 1789562442898,
+      "updatedAt": 1789565806786,
       "nameZh": "马克思佩恩3",
       "nameSource": "machine-translation",
       "nameTranslatedAt": 1789560231207
@@ -27132,14 +27132,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789562443583
+        "updatedAt": 1789565807469
       },
       "rating": {
         "score": 9.8,
         "positive": 95,
-        "total": 2803,
+        "total": 2802,
         "desc": "Overwhelmingly Positive",
-        "updatedAt": 1789562444299
+        "updatedAt": 1789565808182
       },
       "historicalLow": {
         "price": 5,
@@ -27233,7 +27233,7 @@
         ]
       },
       "createdAt": 1789199516272,
-      "updatedAt": 1789562444299,
+      "updatedAt": 1789565808182,
       "nameZh": "行尸走肉",
       "nameSource": "machine-translation",
       "nameTranslatedAt": 1789561329684
@@ -27251,14 +27251,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789562445055
+        "updatedAt": 1789565808883
       },
       "rating": {
         "score": 6.5,
         "positive": 64,
         "total": 11,
         "desc": "Mixed",
-        "updatedAt": 1789562445724
+        "updatedAt": 1789565809598
       },
       "historicalLow": {
         "price": null,
@@ -27338,7 +27338,7 @@
         "userTagsFetchedAt": 1789561440328
       },
       "createdAt": 1789199506479,
-      "updatedAt": 1789562445724,
+      "updatedAt": 1789565809598,
       "nameZh": "猎犬：自动机",
       "nameSource": "machine-translation",
       "nameTranslatedAt": 1789560232180
@@ -27356,14 +27356,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789562446391
+        "updatedAt": 1789565810263
       },
       "rating": {
         "score": 5.5,
         "positive": 59,
         "total": 34,
         "desc": "Mixed",
-        "updatedAt": 1789562447109
+        "updatedAt": 1789565811005
       },
       "historicalLow": {
         "price": null,
@@ -27478,7 +27478,7 @@
         ]
       },
       "createdAt": 1789199455916,
-      "updatedAt": 1789562447109
+      "updatedAt": 1789565811005
     },
     {
       "appid": 3312020,
@@ -27493,14 +27493,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789562447778
+        "updatedAt": 1789565811691
       },
       "rating": {
         "score": 6.5,
         "positive": 64,
         "total": 77,
         "desc": "Mixed",
-        "updatedAt": 1789562448494
+        "updatedAt": 1789565812383
       },
       "historicalLow": {
         "price": null,
@@ -27577,7 +27577,7 @@
         "userTagsFetchedAt": 1789561442400
       },
       "createdAt": 1789199334456,
-      "updatedAt": 1789562448494,
+      "updatedAt": 1789565812383,
       "nameZh": "迷失在异常中",
       "nameSource": "machine-translation",
       "nameTranslatedAt": 1789561331422
@@ -27595,14 +27595,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789562449198
+        "updatedAt": 1789565813098
       },
       "rating": {
         "score": 8.4,
         "positive": 83,
         "total": 7950,
         "desc": "Very Positive",
-        "updatedAt": 1789562449905
+        "updatedAt": 1789565813797
       },
       "historicalLow": {
         "price": 10.8,
@@ -27856,7 +27856,7 @@
         ]
       },
       "createdAt": 1789199221077,
-      "updatedAt": 1789562449905,
+      "updatedAt": 1789565813797,
       "nameZh": "HITMAN 暗杀世界",
       "nameSource": "machine-translation",
       "nameTranslatedAt": 1789560233419
@@ -27874,14 +27874,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789562450599
+        "updatedAt": 1789565814506
       },
       "rating": {
         "score": 9.6,
         "positive": 93,
-        "total": 41058,
+        "total": 41059,
         "desc": "Very Positive",
-        "updatedAt": 1789562451308
+        "updatedAt": 1789565815202
       },
       "historicalLow": {
         "price": 91.2,
@@ -28096,7 +28096,7 @@
         ]
       },
       "createdAt": 1789199208155,
-      "updatedAt": 1789562451308
+      "updatedAt": 1789565815202
     },
     {
       "appid": 1794680,
@@ -28111,14 +28111,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789562452001
+        "updatedAt": 1789565815868
       },
       "rating": {
         "score": 9.9,
         "positive": 97,
         "total": 26598,
         "desc": "Overwhelmingly Positive",
-        "updatedAt": 1789562452696
+        "updatedAt": 1789565816576
       },
       "historicalLow": {
         "price": null,
@@ -28324,7 +28324,7 @@
         ]
       },
       "createdAt": 1789199195781,
-      "updatedAt": 1789562452696
+      "updatedAt": 1789565816576
     },
     {
       "appid": 3332600,
@@ -28339,14 +28339,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789562453385
+        "updatedAt": 1789565817295
       },
       "rating": {
         "score": 9.6,
         "positive": 92,
         "total": 677,
         "desc": "Very Positive",
-        "updatedAt": 1789562454119
+        "updatedAt": 1789565817991
       },
       "historicalLow": {
         "price": 36.4,
@@ -28433,7 +28433,7 @@
         ]
       },
       "createdAt": 1789199164496,
-      "updatedAt": 1789562454119
+      "updatedAt": 1789565817991
     },
     {
       "appid": 1601570,
@@ -28448,14 +28448,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789562454790
+        "updatedAt": 1789565818691
       },
       "rating": {
         "score": 9.2,
         "positive": 88,
-        "total": 3631,
+        "total": 3632,
         "desc": "Very Positive",
-        "updatedAt": 1789562455507
+        "updatedAt": 1789565819362
       },
       "historicalLow": {
         "price": 54.5,
@@ -28573,7 +28573,7 @@
         ]
       },
       "createdAt": 1789194107390,
-      "updatedAt": 1789562455507
+      "updatedAt": 1789565819362
     },
     {
       "appid": 346010,
@@ -28588,14 +28588,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789562456183
+        "updatedAt": 1789565820068
       },
       "rating": {
         "score": 9.9,
         "positive": 97,
         "total": 10925,
         "desc": "Overwhelmingly Positive",
-        "updatedAt": 1789562456923
+        "updatedAt": 1789565820767
       },
       "historicalLow": {
         "price": 5.8,
@@ -28743,7 +28743,7 @@
         ]
       },
       "createdAt": 1789194100122,
-      "updatedAt": 1789562456923
+      "updatedAt": 1789565820767
     },
     {
       "appid": 684410,
@@ -28758,14 +28758,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789562457575
+        "updatedAt": 1789565821491
       },
       "rating": {
         "score": 9.6,
         "positive": 92,
         "total": 1233,
         "desc": "Very Positive",
-        "updatedAt": 1789562458301
+        "updatedAt": 1789565822174
       },
       "historicalLow": {
         "price": 3.4,
@@ -28871,7 +28871,7 @@
         ]
       },
       "createdAt": 1789194090965,
-      "updatedAt": 1789562458301
+      "updatedAt": 1789565822174
     },
     {
       "appid": 108710,
@@ -28886,14 +28886,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789562458988
+        "updatedAt": 1789565822856
       },
       "rating": {
         "score": 9.2,
         "positive": 88,
         "total": 5379,
         "desc": "Very Positive",
-        "updatedAt": 1789562459693
+        "updatedAt": 1789565823573
       },
       "historicalLow": {
         "price": 5,
@@ -29003,7 +29003,7 @@
         ]
       },
       "createdAt": 1789194075102,
-      "updatedAt": 1789562459693,
+      "updatedAt": 1789565823573,
       "nameZh": "艾伦·韦克",
       "nameSource": "machine-translation",
       "nameTranslatedAt": 1789561332121
@@ -29021,14 +29021,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789562460384
+        "updatedAt": 1789565824286
       },
       "rating": {
         "score": 8.4,
         "positive": 83,
-        "total": 3962,
+        "total": 3963,
         "desc": "Very Positive",
-        "updatedAt": 1789562461111
+        "updatedAt": 1789565824976
       },
       "historicalLow": {
         "price": 12.2,
@@ -29116,7 +29116,7 @@
         ]
       },
       "createdAt": 1789193285256,
-      "updatedAt": 1789562461111,
+      "updatedAt": 1789565824976,
       "nameZh": "僵尸军团三部曲",
       "nameSource": "machine-translation",
       "nameTranslatedAt": 1789560234690
@@ -29134,14 +29134,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789562461777
+        "updatedAt": 1789565825669
       },
       "rating": {
         "score": 8.9,
         "positive": 85,
         "total": 107,
         "desc": "Very Positive",
-        "updatedAt": 1789562462500
+        "updatedAt": 1789565826385
       },
       "historicalLow": {
         "price": 5.4,
@@ -29222,7 +29222,7 @@
         ]
       },
       "createdAt": 1789193256380,
-      "updatedAt": 1789562462500,
+      "updatedAt": 1789565826385,
       "nameZh": "流浪者：弗兰肯斯坦的生物",
       "nameSource": "machine-translation",
       "nameTranslatedAt": 1789561333814
@@ -29240,14 +29240,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789562463180
+        "updatedAt": 1789565827051
       },
       "rating": {
         "score": 9.6,
         "positive": 92,
-        "total": 140654,
+        "total": 140657,
         "desc": "Very Positive",
-        "updatedAt": 1789562463904
+        "updatedAt": 1789565827787
       },
       "historicalLow": {
         "price": 75.6,
@@ -29362,7 +29362,7 @@
         ]
       },
       "createdAt": 1789193138200,
-      "updatedAt": 1789562463904
+      "updatedAt": 1789565827787
     },
     {
       "appid": 1545560,
@@ -29377,14 +29377,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789562464609
+        "updatedAt": 1789565828461
       },
       "rating": {
         "score": 9.6,
         "positive": 92,
         "total": 2017,
         "desc": "Very Positive",
-        "updatedAt": 1789562465300
+        "updatedAt": 1789565829181
       },
       "historicalLow": {
         "price": 37.3,
@@ -29506,7 +29506,7 @@
         ]
       },
       "createdAt": 1789193126410,
-      "updatedAt": 1789562465300
+      "updatedAt": 1789565829181
     },
     {
       "appid": 3117820,
@@ -29521,14 +29521,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789562465987
+        "updatedAt": 1789565829870
       },
       "rating": {
         "score": 9.6,
         "positive": 94,
-        "total": 31579,
+        "total": 31580,
         "desc": "Very Positive",
-        "updatedAt": 1789562466719
+        "updatedAt": 1789565830594
       },
       "historicalLow": {
         "price": 64,
@@ -29654,7 +29654,7 @@
         ]
       },
       "createdAt": 1789193117365,
-      "updatedAt": 1789562466719
+      "updatedAt": 1789565830594
     },
     {
       "appid": 3636770,
@@ -29669,14 +29669,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789562467376
+        "updatedAt": 1789565831241
       },
       "rating": {
         "score": 9.9,
         "positive": 98,
         "total": 4011,
         "desc": "Overwhelmingly Positive",
-        "updatedAt": 1789562468102
+        "updatedAt": 1789565832033
       },
       "historicalLow": {
         "price": 24.8,
@@ -29750,7 +29750,7 @@
         ]
       },
       "createdAt": 1789193108997,
-      "updatedAt": 1789562468102,
+      "updatedAt": 1789565832033,
       "nameZh": "湖的仆人",
       "nameSource": "machine-translation",
       "nameTranslatedAt": 1789560235515
@@ -29768,14 +29768,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789562468788
+        "updatedAt": 1789565832663
       },
       "rating": {
         "score": 9.9,
         "positive": 97,
         "total": 3175,
         "desc": "Overwhelmingly Positive",
-        "updatedAt": 1789562469506
+        "updatedAt": 1789565833375
       },
       "historicalLow": {
         "price": 39.2,
@@ -29856,7 +29856,7 @@
         ]
       },
       "createdAt": 1789193099884,
-      "updatedAt": 1789562469506,
+      "updatedAt": 1789565833375,
       "nameZh": "黑色灵魂",
       "nameSource": "machine-translation",
       "nameTranslatedAt": 1789561334486
@@ -29874,14 +29874,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789562470204
+        "updatedAt": 1789565834052
       },
       "rating": {
         "score": 9.9,
         "positive": 98,
-        "total": 2796,
+        "total": 2798,
         "desc": "Overwhelmingly Positive",
-        "updatedAt": 1789562470904
+        "updatedAt": 1789565834780
       },
       "historicalLow": {
         "price": 39.2,
@@ -29962,7 +29962,7 @@
         ]
       },
       "createdAt": 1789193087637,
-      "updatedAt": 1789562470904,
+      "updatedAt": 1789565834780,
       "nameZh": "黑魂II",
       "nameSource": "machine-translation",
       "nameTranslatedAt": 1789560235954
@@ -29980,14 +29980,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789562471601
+        "updatedAt": 1789565835485
       },
       "rating": {
         "score": 8.4,
         "positive": 82,
         "total": 471,
         "desc": "Very Positive",
-        "updatedAt": 1789562472301
+        "updatedAt": 1789565836230
       },
       "historicalLow": {
         "price": 148.5,
@@ -30069,7 +30069,7 @@
         "userTagsFetchedAt": 1789561461142
       },
       "createdAt": 1789192967910,
-      "updatedAt": 1789562472301,
+      "updatedAt": 1789565836230,
       "nameZh": "国津神：女神之路",
       "nameSource": "machine-translation",
       "nameTranslatedAt": 1789560237095
@@ -30087,14 +30087,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789562473023
+        "updatedAt": 1789565836872
       },
       "rating": {
         "score": 9.2,
         "positive": 89,
         "total": 7493,
         "desc": "Very Positive",
-        "updatedAt": 1789562473700
+        "updatedAt": 1789565837639
       },
       "historicalLow": {
         "price": 26.7,
@@ -30251,7 +30251,7 @@
         ]
       },
       "createdAt": 1789192956054,
-      "updatedAt": 1789562473700
+      "updatedAt": 1789565837639
     },
     {
       "appid": 2442460,
@@ -30266,14 +30266,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789562474404
+        "updatedAt": 1789565838251
       },
       "rating": {
         "score": 8.4,
         "positive": 84,
         "total": 281,
         "desc": "Very Positive",
-        "updatedAt": 1789562475100
+        "updatedAt": 1789565838993
       },
       "historicalLow": {
         "price": 46,
@@ -30405,7 +30405,7 @@
         ]
       },
       "createdAt": 1789192947581,
-      "updatedAt": 1789562475100
+      "updatedAt": 1789565838993
     }
   ]
 }
