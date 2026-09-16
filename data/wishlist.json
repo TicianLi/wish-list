@@ -1,9 +1,9 @@
 {
   "version": 3,
-  "updatedAt": 1789561463489,
-  "refreshedAt": 1789561463489,
+  "updatedAt": 1789562566198,
+  "refreshedAt": 1789562566198,
   "refreshedBy": "github-actions",
-  "refreshCount": 2,
+  "refreshCount": 3,
   "games": [
     {
       "appid": 2417610,
@@ -18,14 +18,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789561003769
+        "updatedAt": 1789562200174
       },
       "rating": {
         "score": 6.5,
         "positive": 63,
         "total": 1021,
         "desc": "Mixed",
-        "updatedAt": 1789561004289
+        "updatedAt": 1789562200780
       },
       "historicalLow": {
         "price": 87.2,
@@ -114,11 +114,37 @@
         "description": "全部故事的起点。 以2004年推出的「METAL GEAR SOLID 3 SNAKE EATER」为范本的重制版作品。 在维持原作剧情与世界观的同时，透过最新的画面与富立体感的音效表现，享受在丛林中的极致求生匿踪动作体验。",
         "descriptionOriginal": "全部故事的起点。 以2004年推出的「METAL GEAR SOLID 3 SNAKE EATER」为范本的重制版作品。 在维持原作剧情与世界观的同时，透过最新的画面与富立体感的音效表现，享受在丛林中的极致求生匿踪动作体验。",
         "descriptionTranslated": false,
-        "userTags": [],
-        "userTagsFetchedAt": 1789561391796
+        "userTags": [
+          "潜行",
+          "动作",
+          "剧情丰富",
+          "电影式",
+          "冷战",
+          "重制",
+          "军事",
+          "单人",
+          "第三人称射击",
+          "动作冒险",
+          "战术",
+          "生存",
+          "3D",
+          "冒险",
+          "第三人称",
+          "战争",
+          "暴力",
+          "探索",
+          "好评原声音轨",
+          "坦克"
+        ],
+        "userTagsFetchedAt": 1789562534384,
+        "bundleIds": [
+          66680,
+          66681,
+          66682
+        ]
       },
       "createdAt": 1789449629221,
-      "updatedAt": 1789561004289,
+      "updatedAt": 1789562200780,
       "nameZh": "合金装备 Δ：食蛇者",
       "nameSource": "machine-translation",
       "nameTranslatedAt": 1789560173908
@@ -136,14 +162,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789561004990
+        "updatedAt": 1789562201529
       },
       "rating": {
         "score": 7.5,
         "positive": 79,
         "total": 16849,
         "desc": "Mostly Positive",
-        "updatedAt": 1789561005736
+        "updatedAt": 1789562202176
       },
       "historicalLow": {
         "price": 26.8,
@@ -280,7 +306,7 @@
         "userTagsFetchedAt": 1789560238706
       },
       "createdAt": 1789449608499,
-      "updatedAt": 1789561005736,
+      "updatedAt": 1789562202176,
       "nameZh": "代码静脉",
       "nameSource": "machine-translation",
       "nameTranslatedAt": 1789560174011
@@ -298,14 +324,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789561006387
+        "updatedAt": 1789562202933
       },
       "rating": {
         "score": 8.9,
         "positive": 86,
         "total": 62587,
         "desc": "Very Positive",
-        "updatedAt": 1789561007083
+        "updatedAt": 1789562203591
       },
       "historicalLow": {
         "price": 0,
@@ -445,7 +471,7 @@
         ]
       },
       "createdAt": 1789449572950,
-      "updatedAt": 1789561007083,
+      "updatedAt": 1789562203591,
       "nameZh": "刺客信条®奥德赛",
       "nameSource": "machine-translation",
       "nameTranslatedAt": 1789560174950
@@ -463,14 +489,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789561007777
+        "updatedAt": 1789562204266
       },
       "rating": {
         "score": 7.5,
         "positive": 70,
         "total": 24918,
         "desc": "Mostly Positive",
-        "updatedAt": 1789561008507
+        "updatedAt": 1789562204978
       },
       "historicalLow": {
         "price": 214.4,
@@ -572,11 +598,32 @@
         "description": "以帕卫尔大陆为背景展开的开放世界动作冒险游戏——《红色沙漠》。 你将化身灰鬃的克里夫，踏上夺回失去的一切、从迫近的威胁中拯救世界的旅程。 驰骋广袤的野生大陆、深入隐藏的古代遗迹、行走于神秘的阿比斯领域，在战斗、探险与发现中开辟只属于你的道路。",
         "descriptionOriginal": "以帕卫尔大陆为背景展开的开放世界动作冒险游戏——《红色沙漠》。 你将化身灰鬃的克里夫，踏上夺回失去的一切、从迫近的威胁中拯救世界的旅程。 驰骋广袤的野生大陆、深入隐藏的古代遗迹、行走于神秘的阿比斯领域，在战斗、探险与发现中开辟只属于你的道路。",
         "descriptionTranslated": false,
-        "userTags": [],
-        "userTagsFetchedAt": 1789561392836
+        "userTags": [
+          "开放世界",
+          "单人",
+          "动作",
+          "探索",
+          "冒险",
+          "战斗",
+          "奇幻",
+          "中世纪",
+          "角色扮演",
+          "动作冒险",
+          "第三人称",
+          "龙",
+          "自选历险体验",
+          "马匹",
+          "剧情丰富",
+          "玩家对战环境",
+          "3D",
+          "人工智能",
+          "鲜血",
+          "类魂系列"
+        ],
+        "userTagsFetchedAt": 1789562535396
       },
       "createdAt": 1789449564829,
-      "updatedAt": 1789561008507
+      "updatedAt": 1789562204978
     },
     {
       "appid": 3489700,
@@ -591,14 +638,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789561009175
+        "updatedAt": 1789562205678
       },
       "rating": {
         "score": 9.6,
         "positive": 92,
         "total": 43873,
         "desc": "Very Positive",
-        "updatedAt": 1789561009913
+        "updatedAt": 1789562206379
       },
       "historicalLow": {
         "price": 179.56,
@@ -673,11 +720,32 @@
         "description": "在后末日动作冒险游戏《剑星》中拯救濒临灭绝的人类。揭开地球衰败之谜，体验激烈战斗与曲折剧情。",
         "descriptionOriginal": "在后末日动作冒险游戏《剑星》中拯救濒临灭绝的人类。揭开地球衰败之谜，体验激烈战斗与曲折剧情。",
         "descriptionTranslated": false,
-        "userTags": [],
-        "userTagsFetchedAt": 1789561393937
+        "userTags": [
+          "女性主角",
+          "动作",
+          "砍杀",
+          "色情内容",
+          "类魂系列",
+          "单人",
+          "第三人称",
+          "动作角色扮演",
+          "后末日",
+          "冒险",
+          "动作冒险",
+          "战斗",
+          "未来",
+          "3D",
+          "剧情丰富",
+          "多结局",
+          "反乌托邦",
+          "快速反应事件",
+          "风格化",
+          "玩家对战环境"
+        ],
+        "userTagsFetchedAt": 1789562536465
       },
       "createdAt": 1789449553098,
-      "updatedAt": 1789561009913
+      "updatedAt": 1789562206379
     },
     {
       "appid": 1627720,
@@ -692,14 +760,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789561010628
+        "updatedAt": 1789562207068
       },
       "rating": {
         "score": 8.4,
         "positive": 84,
         "total": 14117,
         "desc": "Very Positive",
-        "updatedAt": 1789561011301
+        "updatedAt": 1789562207796
       },
       "historicalLow": {
         "price": 149,
@@ -808,12 +876,36 @@
         "descriptionOriginal": "《Lies of P》是一款精彩刺激的魂类游戏，灵感源于《匹诺曹》的故事，风格颠覆原作，游戏设定在“美好时代”的暗黑优雅背景之下。",
         "descriptionTranslated": false,
         "userTags": [
-          "暴力"
+          "类魂系列",
+          "黑暗奇幻",
+          "动作",
+          "单人",
+          "剧情丰富",
+          "动作角色扮演",
+          "蒸汽朋克",
+          "第三人称",
+          "探索",
+          "黑暗",
+          "冒险",
+          "氛围",
+          "低容错",
+          "3D",
+          "角色扮演",
+          "选择取向",
+          "多结局",
+          "哥特",
+          "暴力",
+          "重玩价值"
         ],
-        "userTagsFetchedAt": 1789561335848
+        "userTagsFetchedAt": 1789562478212,
+        "bundleIds": [
+          54629,
+          47677,
+          36531
+        ]
       },
       "createdAt": 1789449497299,
-      "updatedAt": 1789561011301,
+      "updatedAt": 1789562207796,
       "nameZh": "P的谎言",
       "nameSource": "machine-translation",
       "nameTranslatedAt": 1789561280509
@@ -831,14 +923,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789561011976
+        "updatedAt": 1789562208452
       },
       "rating": {
         "score": 9.2,
         "positive": 89,
         "total": 1334,
         "desc": "Very Positive",
-        "updatedAt": 1789561012838
+        "updatedAt": 1789562209177
       },
       "historicalLow": {
         "price": 61.2,
@@ -932,7 +1024,7 @@
         "userTagsFetchedAt": 1789560244202
       },
       "createdAt": 1789449490176,
-      "updatedAt": 1789561012838,
+      "updatedAt": 1789562209177,
       "nameZh": "混音带",
       "nameSource": "machine-translation",
       "nameTranslatedAt": 1789560175391
@@ -950,14 +1042,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789561013370
+        "updatedAt": 1789562209856
       },
       "rating": {
         "score": 8.4,
         "positive": 84,
         "total": 593,
         "desc": "Very Positive",
-        "updatedAt": 1789561014103
+        "updatedAt": 1789562210584
       },
       "historicalLow": {
         "price": 32.43,
@@ -1045,7 +1137,7 @@
         "userTagsFetchedAt": 1789560245416
       },
       "createdAt": 1789449482564,
-      "updatedAt": 1789561014103
+      "updatedAt": 1789562210584
     },
     {
       "appid": 1533420,
@@ -1060,14 +1152,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789561014799
+        "updatedAt": 1789562211253
       },
       "rating": {
         "score": 9.6,
         "positive": 93,
         "total": 913,
         "desc": "Very Positive",
-        "updatedAt": 1789561015504
+        "updatedAt": 1789562211962
       },
       "historicalLow": {
         "price": 35.2,
@@ -1167,7 +1259,7 @@
         ]
       },
       "createdAt": 1789449469765,
-      "updatedAt": 1789561015504,
+      "updatedAt": 1789562211962,
       "nameZh": "霓虹白",
       "nameSource": "machine-translation",
       "nameTranslatedAt": 1789560176568
@@ -1185,14 +1277,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789561016163
+        "updatedAt": 1789562212654
       },
       "rating": {
         "score": 9.2,
         "positive": 88,
         "total": 1194,
         "desc": "Very Positive",
-        "updatedAt": 1789561016887
+        "updatedAt": 1789562213371
       },
       "historicalLow": {
         "price": 30,
@@ -1287,7 +1379,7 @@
         ]
       },
       "createdAt": 1789449462518,
-      "updatedAt": 1789561016887,
+      "updatedAt": 1789562213371,
       "nameZh": "讲故事的人",
       "nameSource": "machine-translation",
       "nameTranslatedAt": 1789561281671
@@ -1305,14 +1397,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789561017596
+        "updatedAt": 1789562214073
       },
       "rating": {
         "score": 8.4,
         "positive": 83,
         "total": 95633,
         "desc": "Very Positive",
-        "updatedAt": 1789561018282
+        "updatedAt": 1789562214765
       },
       "historicalLow": {
         "price": 0,
@@ -1599,7 +1691,7 @@
         ]
       },
       "createdAt": 1789449449836,
-      "updatedAt": 1789561018282,
+      "updatedAt": 1789562214765,
       "nameZh": "方舟：生存进化",
       "nameSource": "machine-translation",
       "nameTranslatedAt": 1789560177879
@@ -1617,14 +1709,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789561019055
+        "updatedAt": 1789562215465
       },
       "rating": {
         "score": 9.2,
         "positive": 91,
         "total": 4474,
         "desc": "Very Positive",
-        "updatedAt": 1789561019720
+        "updatedAt": 1789562216173
       },
       "historicalLow": {
         "price": 115.17,
@@ -1727,11 +1819,35 @@
         "description": "《DOOM: The Dark Ages》是大受好评的《DOOM》(2016) 及《DOOM Eternal》前传，描写毁灭战士之怒的壮阔电影级起源故事。玩家将化身为脚踏鲜血的毁灭战士，在这场前所未见、凶险万分的中世纪战争中对抗地狱大军。",
         "descriptionOriginal": "《DOOM: The Dark Ages》是大受好评的《DOOM》(2016) 及《DOOM Eternal》前传，描写毁灭战士之怒的壮阔电影级起源故事。玩家将化身为脚踏鲜血的毁灭战士，在这场前所未见、凶险万分的中世纪战争中对抗地狱大军。",
         "descriptionTranslated": false,
-        "userTags": [],
-        "userTagsFetchedAt": 1789561395044
+        "userTags": [
+          "动作",
+          "第一人称射击",
+          "恶魔",
+          "黑暗奇幻",
+          "单人",
+          "鲜血",
+          "科幻",
+          "第一人称",
+          "电影式",
+          "射击",
+          "剧情丰富",
+          "氛围",
+          "故事架构丰富",
+          "龙",
+          "机甲",
+          "冒险",
+          "快节奏",
+          "复古射击",
+          "好评原声音轨",
+          "暴力"
+        ],
+        "userTagsFetchedAt": 1789562537651,
+        "bundleIds": [
+          15366
+        ]
       },
       "createdAt": 1789449439707,
-      "updatedAt": 1789561019720,
+      "updatedAt": 1789562216173,
       "nameZh": "《DOOM》：黑暗时代",
       "nameSource": "machine-translation",
       "nameTranslatedAt": 1789561282870
@@ -1749,14 +1865,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789561020374
+        "updatedAt": 1789562216856
       },
       "rating": {
         "score": 9.6,
         "positive": 93,
         "total": 14273,
         "desc": "Very Positive",
-        "updatedAt": 1789561021107
+        "updatedAt": 1789562217567
       },
       "historicalLow": {
         "price": 20.3,
@@ -1884,7 +2000,7 @@
         ]
       },
       "createdAt": 1789449429594,
-      "updatedAt": 1789561021107
+      "updatedAt": 1789562217567
     },
     {
       "appid": 2084000,
@@ -1899,14 +2015,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789561021798
+        "updatedAt": 1789562218249
       },
       "rating": {
         "score": 9.2,
         "positive": 90,
         "total": 1444,
         "desc": "Very Positive",
-        "updatedAt": 1789561022492
+        "updatedAt": 1789562218965
       },
       "historicalLow": {
         "price": 29,
@@ -2009,7 +2125,7 @@
         ]
       },
       "createdAt": 1789449418480,
-      "updatedAt": 1789561022492
+      "updatedAt": 1789562218965
     },
     {
       "appid": 1164940,
@@ -2024,14 +2140,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789561023199
+        "updatedAt": 1789562219658
       },
       "rating": {
         "score": 8.4,
         "positive": 84,
         "total": 1206,
         "desc": "Very Positive",
-        "updatedAt": 1789561023886
+        "updatedAt": 1789562220368
       },
       "historicalLow": {
         "price": 0,
@@ -2159,7 +2275,7 @@
           "破坏",
           "好评原声音轨"
         ],
-        "userTagsFetchedAt": 1789561336961,
+        "userTagsFetchedAt": 1789562479319,
         "bundleIds": [
           33227,
           42609,
@@ -2167,7 +2283,7 @@
         ]
       },
       "createdAt": 1789449410717,
-      "updatedAt": 1789561023886
+      "updatedAt": 1789562220368
     },
     {
       "appid": 384190,
@@ -2182,14 +2298,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789561024569
+        "updatedAt": 1789562221055
       },
       "rating": {
         "score": 9.6,
         "positive": 92,
         "total": 6416,
         "desc": "Very Positive",
-        "updatedAt": 1789561025317
+        "updatedAt": 1789562221782
       },
       "historicalLow": {
         "price": 17,
@@ -2280,7 +2396,7 @@
         ]
       },
       "createdAt": 1789449403972,
-      "updatedAt": 1789561025317,
+      "updatedAt": 1789562221782,
       "nameZh": "阿布祖",
       "nameSource": "machine-translation",
       "nameTranslatedAt": 1789560178963
@@ -2298,14 +2414,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789561025975
+        "updatedAt": 1789562222451
       },
       "rating": {
         "score": 9.8,
         "positive": 96,
         "total": 6568,
         "desc": "Overwhelmingly Positive",
-        "updatedAt": 1789561026690
+        "updatedAt": 1789562223167
       },
       "historicalLow": {
         "price": 20.8,
@@ -2388,11 +2504,37 @@
         "description": "《山海旅人》是一款2D志怪风格冒险解谜游戏。玩家将扮演七云，最后一位“逆梦师”，通过探索他人残留的记忆，穿梭时间、扭转历史，帮助受困灵魂重入轮回。",
         "descriptionOriginal": "《山海旅人》是一款2D志怪风格冒险解谜游戏。玩家将扮演七云，最后一位“逆梦师”，通过探索他人残留的记忆，穿梭时间、扭转历史，帮助受困灵魂重入轮回。",
         "descriptionTranslated": false,
-        "userTags": [],
-        "userTagsFetchedAt": 1789561396147
+        "userTags": [
+          "冒险",
+          "悬疑",
+          "像素图形",
+          "解谜",
+          "单人",
+          "推理",
+          "2D",
+          "氛围",
+          "指向点击",
+          "剧情丰富",
+          "独立",
+          "喜剧",
+          "恐怖",
+          "惊悚",
+          "灵异",
+          "神话",
+          "历史",
+          "风格化",
+          "故事架构丰富",
+          "休闲"
+        ],
+        "userTagsFetchedAt": 1789562538748,
+        "bundleIds": [
+          25092,
+          53480,
+          46393
+        ]
       },
       "createdAt": 1789449397087,
-      "updatedAt": 1789561026690
+      "updatedAt": 1789562223167
     },
     {
       "appid": 1282100,
@@ -2407,14 +2549,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789561027373
+        "updatedAt": 1789562223851
       },
       "rating": {
         "score": 7.5,
         "positive": 73,
         "total": 11615,
         "desc": "Mostly Positive",
-        "updatedAt": 1789561028094
+        "updatedAt": 1789562224569
       },
       "historicalLow": {
         "price": 61.25,
@@ -2518,11 +2660,37 @@
         "description": "《Remnant II®》是畅销游戏《Remnant: From the Ashes》的续作。在本作中，人类幸存者将再次深陷可怕的世界，对抗新的邪恶怪物和神一般的敌人头目。",
         "descriptionOriginal": "《Remnant II®》是畅销游戏《Remnant: From the Ashes》的续作。在本作中，人类幸存者将再次深陷可怕的世界，对抗新的邪恶怪物和神一般的敌人头目。",
         "descriptionTranslated": false,
-        "userTags": [],
-        "userTagsFetchedAt": 1789561397235
+        "userTags": [
+          "类魂系列",
+          "合作",
+          "动作",
+          "第三人称射击",
+          "冒险",
+          "角色扮演",
+          "射击",
+          "黑暗",
+          "在线合作",
+          "多人",
+          "动作冒险",
+          "后末日",
+          "第三人称",
+          "恐怖",
+          "战斗",
+          "玩家对战环境",
+          "氛围",
+          "单人",
+          "控制器",
+          "刷宝射击游戏"
+        ],
+        "userTagsFetchedAt": 1789562539927,
+        "bundleIds": [
+          34205,
+          34206,
+          47677
+        ]
       },
       "createdAt": 1789449385735,
-      "updatedAt": 1789561028094
+      "updatedAt": 1789562224569
     },
     {
       "appid": 1966900,
@@ -2537,14 +2705,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789561028771
+        "updatedAt": 1789562225244
       },
       "rating": {
         "score": 8.9,
         "positive": 85,
         "total": 8376,
         "desc": "Very Positive",
-        "updatedAt": 1789561029562
+        "updatedAt": 1789562225965
       },
       "historicalLow": {
         "price": 11,
@@ -2636,7 +2804,7 @@
         ]
       },
       "createdAt": 1789449379519,
-      "updatedAt": 1789561029562
+      "updatedAt": 1789562225965
     },
     {
       "appid": 3228590,
@@ -2651,14 +2819,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789561030220
+        "updatedAt": 1789562226656
       },
       "rating": {
         "score": 5.5,
         "positive": 54,
         "total": 1965,
         "desc": "Mixed",
-        "updatedAt": 1789561030997
+        "updatedAt": 1789562227386
       },
       "historicalLow": {
         "price": 42.5,
@@ -2789,7 +2957,7 @@
         ]
       },
       "createdAt": 1789449370423,
-      "updatedAt": 1789561030997
+      "updatedAt": 1789562227386
     },
     {
       "appid": 775500,
@@ -2804,14 +2972,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789561031632
+        "updatedAt": 1789562228066
       },
       "rating": {
         "score": 7.5,
         "positive": 74,
         "total": 6133,
         "desc": "Mostly Positive",
-        "updatedAt": 1789561032284
+        "updatedAt": 1789562229004
       },
       "historicalLow": {
         "price": 0,
@@ -2982,7 +3150,7 @@
         "userTagsFetchedAt": 1789560259621
       },
       "createdAt": 1789449339704,
-      "updatedAt": 1789561032284
+      "updatedAt": 1789562229004
     },
     {
       "appid": 1622910,
@@ -2997,14 +3165,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789561033010
+        "updatedAt": 1789562229450
       },
       "rating": {
         "score": 8.9,
         "positive": 85,
         "total": 590,
         "desc": "Very Positive",
-        "updatedAt": 1789561033688
+        "updatedAt": 1789562230166
       },
       "historicalLow": {
         "price": 32,
@@ -3122,7 +3290,7 @@
         ]
       },
       "createdAt": 1789449331976,
-      "updatedAt": 1789561033688,
+      "updatedAt": 1789562230166,
       "nameZh": "仍然唤醒深渊",
       "nameSource": "machine-translation",
       "nameTranslatedAt": 1789561284068
@@ -3140,14 +3308,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789561034405
+        "updatedAt": 1789562230854
       },
       "rating": {
         "score": 8.4,
         "positive": 83,
         "total": 2781,
         "desc": "Very Positive",
-        "updatedAt": 1789561035102
+        "updatedAt": 1789562231564
       },
       "historicalLow": {
         "price": 47,
@@ -3258,7 +3426,7 @@
         ]
       },
       "createdAt": 1789449324781,
-      "updatedAt": 1789561035102
+      "updatedAt": 1789562231564
     },
     {
       "appid": 1507190,
@@ -3273,14 +3441,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789561035781
+        "updatedAt": 1789562232236
       },
       "rating": {
         "score": 9.6,
         "positive": 94,
         "total": 1309,
         "desc": "Very Positive",
-        "updatedAt": 1789561036484
+        "updatedAt": 1789562232972
       },
       "historicalLow": {
         "price": 0,
@@ -3363,7 +3531,7 @@
         "userTagsFetchedAt": 1789560262941
       },
       "createdAt": 1789449320427,
-      "updatedAt": 1789561036484,
+      "updatedAt": 1789562232972,
       "nameZh": "机械：博物馆",
       "nameSource": "machine-translation",
       "nameTranslatedAt": 1789560180140
@@ -3378,17 +3546,17 @@
         "discountPercent": 44,
         "currency": "CNY",
         "isOnSale": true,
-        "discountExpiration": null,
-        "expirationSource": null,
+        "discountExpiration": 1789664400000,
+        "expirationSource": "storepage",
         "saleEvent": null,
-        "updatedAt": 1789561037206
+        "updatedAt": 1789562233656
       },
       "rating": {
         "score": 6.5,
         "positive": 63,
-        "total": 1519,
+        "total": 1520,
         "desc": "Mixed",
-        "updatedAt": 1789561037912
+        "updatedAt": 1789562234366
       },
       "historicalLow": {
         "price": 150.08,
@@ -3509,10 +3677,10 @@
           "第三人称",
           "好评原声音轨"
         ],
-        "userTagsFetchedAt": 1789561337927
+        "userTagsFetchedAt": 1789562480389
       },
       "createdAt": 1789449313978,
-      "updatedAt": 1789561037912
+      "updatedAt": 1789562234366
     },
     {
       "appid": 2567870,
@@ -3527,14 +3695,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789561038580
+        "updatedAt": 1789562235041
       },
       "rating": {
         "score": 9.2,
         "positive": 89,
         "total": 12305,
         "desc": "Very Positive",
-        "updatedAt": 1789561039385
+        "updatedAt": 1789562235767
       },
       "historicalLow": {
         "price": 17.6,
@@ -3641,7 +3809,7 @@
         ]
       },
       "createdAt": 1789449305158,
-      "updatedAt": 1789561039385,
+      "updatedAt": 1789562235767,
       "nameZh": "链在一起",
       "nameSource": "machine-translation",
       "nameTranslatedAt": 1789561285267
@@ -3659,14 +3827,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789561040040
+        "updatedAt": 1789562236481
       },
       "rating": {
         "score": 6.5,
         "positive": 68,
         "total": 287,
         "desc": "Mixed",
-        "updatedAt": 1789561040696
+        "updatedAt": 1789562237182
       },
       "historicalLow": {
         "price": 67.2,
@@ -3806,11 +3974,32 @@
         "description": "如果战争是我们最所接近的人间地狱，那会因为这世界上藏着最可怕的恶魔——人类。在一个被内乱摧残与世隔绝的国家，发现你过去的秘密，应对一场神秘灾难的后果。",
         "descriptionOriginal": "如果战争是我们最所接近的人间地狱，那会因为这世界上藏着最可怕的恶魔——人类。在一个被内乱摧残与世隔绝的国家，发现你过去的秘密，应对一场神秘灾难的后果。",
         "descriptionTranslated": false,
-        "userTags": [],
-        "userTagsFetchedAt": 1789561398375
+        "userTags": [
+          "动作",
+          "单人",
+          "冒险",
+          "第三人称",
+          "氛围",
+          "类魂系列",
+          "剧情丰富",
+          "角色扮演",
+          "探索",
+          "动作冒险",
+          "动作角色扮演",
+          "黑暗奇幻",
+          "暴力",
+          "开放世界",
+          "黑暗",
+          "灵异",
+          "解谜",
+          "洛夫克拉夫特式",
+          "科幻",
+          "战斗"
+        ],
+        "userTagsFetchedAt": 1789562540964
       },
       "createdAt": 1789449295581,
-      "updatedAt": 1789561040696
+      "updatedAt": 1789562237182
     },
     {
       "appid": 3265700,
@@ -3825,14 +4014,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789561041374
+        "updatedAt": 1789562237853
       },
       "rating": {
         "score": 9.9,
         "positive": 98,
         "total": 5750,
         "desc": "Overwhelmingly Positive",
-        "updatedAt": 1789561042101
+        "updatedAt": 1789562238574
       },
       "historicalLow": {
         "price": 31.2,
@@ -3938,7 +4127,7 @@
         ]
       },
       "createdAt": 1789449277706,
-      "updatedAt": 1789561042101
+      "updatedAt": 1789562238574
     },
     {
       "appid": 1999170,
@@ -3953,14 +4142,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789561042774
+        "updatedAt": 1789562239252
       },
       "rating": {
         "score": 8.4,
         "positive": 84,
         "total": 2094,
         "desc": "Very Positive",
-        "updatedAt": 1789561043491
+        "updatedAt": 1789562239968
       },
       "historicalLow": {
         "price": 9.8,
@@ -4051,7 +4240,7 @@
         ]
       },
       "createdAt": 1789449268597,
-      "updatedAt": 1789561043491
+      "updatedAt": 1789562239969
     },
     {
       "appid": 1296830,
@@ -4066,14 +4255,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789561044170
+        "updatedAt": 1789562240650
       },
       "rating": {
         "score": 9.6,
         "positive": 93,
         "total": 36469,
         "desc": "Very Positive",
-        "updatedAt": 1789561044896
+        "updatedAt": 1789562241359
       },
       "historicalLow": {
         "price": 40.6,
@@ -4211,7 +4400,7 @@
         ]
       },
       "createdAt": 1789449261106,
-      "updatedAt": 1789561044896
+      "updatedAt": 1789562241359
     },
     {
       "appid": 1850740,
@@ -4226,14 +4415,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789561045609
+        "updatedAt": 1789562242059
       },
       "rating": {
         "score": 7.5,
         "positive": 77,
         "total": 771,
         "desc": "Mostly Positive",
-        "updatedAt": 1789561046301
+        "updatedAt": 1789562242773
       },
       "historicalLow": {
         "price": 25,
@@ -4335,7 +4524,7 @@
         ]
       },
       "createdAt": 1789449248704,
-      "updatedAt": 1789561046301,
+      "updatedAt": 1789562242773,
       "nameZh": "幽灵观察者",
       "nameSource": "machine-translation",
       "nameTranslatedAt": 1789560181162
@@ -4353,14 +4542,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789561046980
+        "updatedAt": 1789562243453
       },
       "rating": {
         "score": 8.4,
         "positive": 83,
         "total": 641,
         "desc": "Very Positive",
-        "updatedAt": 1789561047680
+        "updatedAt": 1789562244168
       },
       "historicalLow": {
         "price": 34.3,
@@ -4489,7 +4678,7 @@
         ]
       },
       "createdAt": 1789449241621,
-      "updatedAt": 1789561047680
+      "updatedAt": 1789562244168
     },
     {
       "appid": 2239710,
@@ -4504,14 +4693,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789561048379
+        "updatedAt": 1789562244843
       },
       "rating": {
         "score": 7.5,
         "positive": 77,
         "total": 2315,
         "desc": "Mostly Positive",
-        "updatedAt": 1789561049083
+        "updatedAt": 1789562245569
       },
       "historicalLow": {
         "price": 68.8,
@@ -4602,7 +4791,7 @@
         ]
       },
       "createdAt": 1789449175682,
-      "updatedAt": 1789561049083
+      "updatedAt": 1789562245569
     },
     {
       "appid": 3751260,
@@ -4617,14 +4806,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789561049783
+        "updatedAt": 1789562246255
       },
       "rating": {
         "score": 8.4,
         "positive": 80,
         "total": 1404,
         "desc": "Very Positive",
-        "updatedAt": 1789561050493
+        "updatedAt": 1789562246979
       },
       "historicalLow": {
         "price": 298,
@@ -4704,11 +4893,32 @@
         "description": "《The Blood of Dawnwalker》为开放世界的黑暗奇幻动作RPG。 故事背景在14世纪的欧洲，你将扮演科恩，一名白昼时为人类，黑夜时为吸血鬼的年轻人。在为了拯救家人的奋斗之中，所做出的各种抉择与揭露的秘密，将塑造成属于你的故事。",
         "descriptionOriginal": "《The Blood of Dawnwalker》为开放世界的黑暗奇幻动作RPG。 故事背景在14世纪的欧洲，你将扮演科恩，一名白昼时为人类，黑夜时为吸血鬼的年轻人。在为了拯救家人的奋斗之中，所做出的各种抉择与揭露的秘密，将塑造成属于你的故事。",
         "descriptionTranslated": false,
-        "userTags": [],
-        "userTagsFetchedAt": 1789561399437
+        "userTags": [
+          "角色扮演",
+          "开放世界",
+          "黑暗奇幻",
+          "冒险",
+          "动作角色扮演",
+          "吸血鬼",
+          "第三人称",
+          "单人",
+          "奇幻",
+          "动作",
+          "剧情丰富",
+          "氛围",
+          "时间管理",
+          "战斗",
+          "选择取向",
+          "动作冒险",
+          "拟真",
+          "历史",
+          "多结局",
+          "鲜血"
+        ],
+        "userTagsFetchedAt": 1789562541960
       },
       "createdAt": 1789449171748,
-      "updatedAt": 1789561050493
+      "updatedAt": 1789562246979
     },
     {
       "appid": 1967430,
@@ -4723,14 +4933,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789561051166
+        "updatedAt": 1789562247661
       },
       "rating": {
         "score": 9.9,
         "positive": 98,
         "total": 4547,
         "desc": "Overwhelmingly Positive",
-        "updatedAt": 1789561051879
+        "updatedAt": 1789562248364
       },
       "historicalLow": {
         "price": 48.84,
@@ -4833,10 +5043,10 @@
           "狗",
           "猫"
         ],
-        "userTagsFetchedAt": 1789561338996
+        "userTagsFetchedAt": 1789562481473
       },
       "createdAt": 1789449165319,
-      "updatedAt": 1789561051879,
+      "updatedAt": 1789562248364,
       "nameZh": "幽灵诡计：幻影侦探",
       "nameSource": "machine-translation",
       "nameTranslatedAt": 1789561287504
@@ -4851,17 +5061,17 @@
         "discountPercent": 72,
         "currency": "CNY",
         "isOnSale": true,
-        "discountExpiration": null,
-        "expirationSource": null,
+        "discountExpiration": 1789578000000,
+        "expirationSource": "storepage",
         "saleEvent": null,
-        "updatedAt": 1789561052558
+        "updatedAt": 1789562249049
       },
       "rating": {
         "score": 7.5,
         "positive": 75,
         "total": 1656,
         "desc": "Mostly Positive",
-        "updatedAt": 1789561053293
+        "updatedAt": 1789562249767
       },
       "historicalLow": {
         "price": 25.76,
@@ -4942,13 +5152,13 @@
           "3D",
           "动作角色扮演"
         ],
-        "userTagsFetchedAt": 1789561340152,
+        "userTagsFetchedAt": 1789562482582,
         "bundleIds": [
           23317
         ]
       },
       "createdAt": 1789449158223,
-      "updatedAt": 1789561053293,
+      "updatedAt": 1789562249767,
       "nameZh": "最后的立场：后果",
       "nameSource": "machine-translation",
       "nameTranslatedAt": 1789560182875
@@ -4966,14 +5176,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789561054036
+        "updatedAt": 1789562250500
       },
       "rating": {
         "score": 9.8,
         "positive": 95,
         "total": 1269,
         "desc": "Overwhelmingly Positive",
-        "updatedAt": 1789561054688
+        "updatedAt": 1789562251168
       },
       "historicalLow": {
         "price": 5.22,
@@ -5175,7 +5385,7 @@
           "库存管理",
           "鲜血"
         ],
-        "userTagsFetchedAt": 1789561341365,
+        "userTagsFetchedAt": 1789562483714,
         "bundleIds": [
           45978,
           13176,
@@ -5183,7 +5393,7 @@
         ]
       },
       "createdAt": 1789449148047,
-      "updatedAt": 1789561054688,
+      "updatedAt": 1789562251168,
       "nameZh": "昏迷2：恶毒姐妹",
       "nameSource": "machine-translation",
       "nameTranslatedAt": 1789561287670
@@ -5201,14 +5411,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789561055375
+        "updatedAt": 1789562251861
       },
       "rating": {
         "score": 9.9,
         "positive": 97,
         "total": 19615,
         "desc": "Overwhelmingly Positive",
-        "updatedAt": 1789561056093
+        "updatedAt": 1789562252577
       },
       "historicalLow": {
         "price": 34.8,
@@ -5302,7 +5512,7 @@
           "彩色",
           "视觉小说"
         ],
-        "userTagsFetchedAt": 1789561342324,
+        "userTagsFetchedAt": 1789562484803,
         "bundleIds": [
           81625,
           79781,
@@ -5310,7 +5520,7 @@
         ]
       },
       "createdAt": 1789449139281,
-      "updatedAt": 1789561056093
+      "updatedAt": 1789562252577
     },
     {
       "appid": 1903340,
@@ -5325,14 +5535,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789561056786
+        "updatedAt": 1789562253258
       },
       "rating": {
         "score": 8.9,
         "positive": 87,
         "total": 39248,
         "desc": "Very Positive",
-        "updatedAt": 1789561057488
+        "updatedAt": 1789562253977
       },
       "historicalLow": {
         "price": 174.4,
@@ -5446,11 +5656,38 @@
         "description": "率领第33号远征队踏上消灭绘母的征途，竭尽全力夺下她绘就死亡的画刷。置身这款采用即时机制的回合制角色扮演游戏，探索奇妙世界，感受法兰西19世纪末“美好年代”时期的风采，对抗超乎想象的敌人。",
         "descriptionOriginal": "率领第33号远征队踏上消灭绘母的征途，竭尽全力夺下她绘就死亡的画刷。置身这款采用即时机制的回合制角色扮演游戏，探索奇妙世界，感受法兰西19世纪末“美好年代”时期的风采，对抗超乎想象的敌人。",
         "descriptionTranslated": false,
-        "userTags": [],
-        "userTagsFetchedAt": 1789561343395
+        "userTags": [
+          "回合制战斗",
+          "剧情丰富",
+          "奇幻",
+          "好评原声音轨",
+          "角色扮演",
+          "单人",
+          "日系角色扮演",
+          "探索",
+          "故事架构丰富",
+          "冒险",
+          "团队角色扮演",
+          "黑暗奇幻",
+          "动作角色扮演",
+          "3D",
+          "类魂系列",
+          "角色自定义",
+          "后末日",
+          "动作",
+          "独立",
+          "人工智能"
+        ],
+        "userTagsFetchedAt": 1789562485949,
+        "bundleIds": [
+          53644,
+          74895,
+          66136,
+          53645
+        ]
       },
       "createdAt": 1789449123598,
-      "updatedAt": 1789561057488
+      "updatedAt": 1789562253977
     },
     {
       "appid": 2001120,
@@ -5465,15 +5702,15 @@
         "discountExpiration": 1790614800000,
         "expirationSource": "featuredcategories",
         "saleEvent": "特惠",
-        "updatedAt": 1789561058150,
-        "expirationCheckedAt": 1789561279478
+        "updatedAt": 1789562254652,
+        "expirationCheckedAt": 1789562475762
       },
       "rating": {
         "score": 9.9,
         "positive": 98,
         "total": 60112,
         "desc": "Overwhelmingly Positive",
-        "updatedAt": 1789561058880
+        "updatedAt": 1789562255382
       },
       "historicalLow": {
         "price": 128.7,
@@ -5587,7 +5824,7 @@
         ]
       },
       "createdAt": 1789449116702,
-      "updatedAt": 1789561058880
+      "updatedAt": 1789562255382
     },
     {
       "appid": 2384580,
@@ -5602,14 +5839,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789561059566
+        "updatedAt": 1789562256057
       },
       "rating": {
         "score": 9.6,
         "positive": 94,
-        "total": 19009,
+        "total": 19010,
         "desc": "Very Positive",
-        "updatedAt": 1789561060334
+        "updatedAt": 1789562256774
       },
       "historicalLow": {
         "price": 244.3,
@@ -5733,13 +5970,13 @@
           "战争",
           "战术"
         ],
-        "userTagsFetchedAt": 1789561344561,
+        "userTagsFetchedAt": 1789562487097,
         "bundleIds": [
           72787
         ]
       },
       "createdAt": 1789449076133,
-      "updatedAt": 1789561060334
+      "updatedAt": 1789562256774
     },
     {
       "appid": 3681010,
@@ -5754,14 +5991,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789561060973
+        "updatedAt": 1789562257479
       },
       "rating": {
         "score": 7.5,
         "positive": 75,
         "total": 8722,
         "desc": "Mostly Positive",
-        "updatedAt": 1789561061717
+        "updatedAt": 1789562258165
       },
       "historicalLow": {
         "price": 198.36,
@@ -5862,11 +6099,35 @@
         "description": "黑暗战国动作RPG“仁王”系列第三部力作。本作舞台是兼具自由度与紧张感的开放地图，还可自由切换“武士”与“忍者”两种战斗风格挑战各路强敌妖怪。",
         "descriptionOriginal": "黑暗战国动作RPG“仁王”系列第三部力作。本作舞台是兼具自由度与紧张感的开放地图，还可自由切换“武士”与“忍者”两种战斗风格挑战各路强敌妖怪。",
         "descriptionTranslated": false,
-        "userTags": [],
-        "userTagsFetchedAt": 1789561345531
+        "userTags": [
+          "动作",
+          "动作角色扮演",
+          "类魂系列",
+          "角色扮演",
+          "开放世界",
+          "砍杀",
+          "低容错",
+          "第三人称",
+          "黑暗奇幻",
+          "奇幻",
+          "忍者",
+          "氛围",
+          "历史",
+          "角色自定义",
+          "剧情丰富",
+          "日系角色扮演",
+          "单人",
+          "多人",
+          "女性主角",
+          "合作"
+        ],
+        "userTagsFetchedAt": 1789562488125,
+        "bundleIds": [
+          87098
+        ]
       },
       "createdAt": 1789449065652,
-      "updatedAt": 1789561061717
+      "updatedAt": 1789562258165
     },
     {
       "appid": 281990,
@@ -5881,14 +6142,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789561062423
+        "updatedAt": 1789562258913
       },
       "rating": {
         "score": 8.4,
         "positive": 84,
         "total": 47046,
         "desc": "Very Positive",
-        "updatedAt": 1789561063101
+        "updatedAt": 1789562259566
       },
       "historicalLow": {
         "price": 0,
@@ -6160,7 +6421,7 @@
         ]
       },
       "createdAt": 1789449054846,
-      "updatedAt": 1789561063101,
+      "updatedAt": 1789562259566,
       "nameZh": "群星",
       "nameSource": "machine-translation",
       "nameTranslatedAt": 1789560183307
@@ -6178,14 +6439,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789561063776
+        "updatedAt": 1789562260262
       },
       "rating": {
         "score": 9.6,
         "positive": 93,
         "total": 5102,
         "desc": "Very Positive",
-        "updatedAt": 1789561064517
+        "updatedAt": 1789562260978
       },
       "historicalLow": {
         "price": 40.8,
@@ -6278,7 +6539,7 @@
           "单人",
           "沉浸式模拟"
         ],
-        "userTagsFetchedAt": 1789561346760,
+        "userTagsFetchedAt": 1789562489246,
         "bundleIds": [
           72618,
           70639,
@@ -6286,7 +6547,7 @@
         ]
       },
       "createdAt": 1789393237087,
-      "updatedAt": 1789561064517
+      "updatedAt": 1789562260978
     },
     {
       "appid": 2997230,
@@ -6301,14 +6562,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789561065201
+        "updatedAt": 1789562261658
       },
       "rating": {
         "score": 8.4,
         "positive": 80,
         "total": 88,
         "desc": "Mostly Positive",
-        "updatedAt": 1789561065935
+        "updatedAt": 1789562262385
       },
       "historicalLow": {
         "price": 41.3,
@@ -6404,7 +6665,7 @@
           "2D",
           "解谜"
         ],
-        "userTagsFetchedAt": 1789561347807,
+        "userTagsFetchedAt": 1789562490350,
         "bundleIds": [
           69682,
           69835,
@@ -6412,7 +6673,7 @@
         ]
       },
       "createdAt": 1789393214949,
-      "updatedAt": 1789561065935,
+      "updatedAt": 1789562262385,
       "nameZh": "拉娜星球II",
       "nameSource": "machine-translation",
       "nameTranslatedAt": 1789560184758
@@ -6430,14 +6691,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789561066557
+        "updatedAt": 1789562263057
       },
       "rating": {
         "score": 9.6,
         "positive": 92,
         "total": 2616,
         "desc": "Very Positive",
-        "updatedAt": 1789561067408
+        "updatedAt": 1789562263790
       },
       "historicalLow": {
         "price": 5,
@@ -6564,7 +6825,7 @@
         ]
       },
       "createdAt": 1789393174094,
-      "updatedAt": 1789561067408,
+      "updatedAt": 1789562263790,
       "nameZh": "《三位一体 2》：完整故事",
       "nameSource": "machine-translation",
       "nameTranslatedAt": 1789561288877
@@ -6582,14 +6843,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789561067960
+        "updatedAt": 1789562264459
       },
       "rating": {
         "score": 9.2,
         "positive": 88,
         "total": 1596,
         "desc": "Very Positive",
-        "updatedAt": 1789561068705
+        "updatedAt": 1789562265180
       },
       "historicalLow": {
         "price": 5.9,
@@ -6689,7 +6950,7 @@
           "科幻",
           "手绘"
         ],
-        "userTagsFetchedAt": 1789561348917,
+        "userTagsFetchedAt": 1789562491421,
         "bundleIds": [
           69682,
           69835,
@@ -6697,7 +6958,7 @@
         ]
       },
       "createdAt": 1789393166062,
-      "updatedAt": 1789561068705,
+      "updatedAt": 1789562265180,
       "nameZh": "拉娜星球",
       "nameSource": "machine-translation",
       "nameTranslatedAt": 1789560185900
@@ -6715,14 +6976,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789561069402
+        "updatedAt": 1789562265867
       },
       "rating": {
         "score": 9.9,
         "positive": 98,
         "total": 2121,
         "desc": "Overwhelmingly Positive",
-        "updatedAt": 1789561070600
+        "updatedAt": 1789562266579
       },
       "historicalLow": {
         "price": 33.75,
@@ -6816,7 +7077,7 @@
           "类银河战士恶魔城",
           "欢乐"
         ],
-        "userTagsFetchedAt": 1789561350043,
+        "userTagsFetchedAt": 1789562492529,
         "bundleIds": [
           86055,
           87795,
@@ -6824,7 +7085,7 @@
         ]
       },
       "createdAt": 1789393151629,
-      "updatedAt": 1789561070600
+      "updatedAt": 1789562266579
     },
     {
       "appid": 2153350,
@@ -6839,14 +7100,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789561070784
+        "updatedAt": 1789562267261
       },
       "rating": {
         "score": 6.5,
         "positive": 65,
         "total": 359,
         "desc": "Mixed",
-        "updatedAt": 1789561071507
+        "updatedAt": 1789562267969
       },
       "historicalLow": {
         "price": 35.2,
@@ -6937,7 +7198,7 @@
           "重制",
           "剧情丰富"
         ],
-        "userTagsFetchedAt": 1789561351189,
+        "userTagsFetchedAt": 1789562493633,
         "bundleIds": [
           86661,
           39086,
@@ -6945,7 +7206,7 @@
         ]
       },
       "createdAt": 1789393144482,
-      "updatedAt": 1789561071507
+      "updatedAt": 1789562267970
     },
     {
       "appid": 3528450,
@@ -6960,14 +7221,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789561072243
+        "updatedAt": 1789562268656
       },
       "rating": {
         "score": 9.8,
         "positive": 95,
         "total": 10277,
         "desc": "Very Positive",
-        "updatedAt": 1789561072967
+        "updatedAt": 1789562269377
       },
       "historicalLow": {
         "price": 18.2,
@@ -7044,10 +7305,10 @@
           "色情内容",
           "心理恐怖"
         ],
-        "userTagsFetchedAt": 1789561352207
+        "userTagsFetchedAt": 1789562494705
       },
       "createdAt": 1789393042116,
-      "updatedAt": 1789561072967
+      "updatedAt": 1789562269377
     },
     {
       "appid": 1029690,
@@ -7059,17 +7320,17 @@
         "discountPercent": 90,
         "currency": "CNY",
         "isOnSale": true,
-        "discountExpiration": null,
-        "expirationSource": null,
+        "discountExpiration": 1789664400000,
+        "expirationSource": "storepage",
         "saleEvent": null,
-        "updatedAt": 1789561073637
+        "updatedAt": 1789562270070
       },
       "rating": {
         "score": 7.5,
         "positive": 72,
         "total": 4170,
         "desc": "Mostly Positive",
-        "updatedAt": 1789561074354
+        "updatedAt": 1789562270778
       },
       "historicalLow": {
         "price": 13.8,
@@ -7351,7 +7612,7 @@
           "枪械改装",
           "虚拟现实"
         ],
-        "userTagsFetchedAt": 1789561353336,
+        "userTagsFetchedAt": 1789562495839,
         "bundleIds": [
           33906,
           3293,
@@ -7359,7 +7620,7 @@
         ]
       },
       "createdAt": 1789393018475,
-      "updatedAt": 1789561074354
+      "updatedAt": 1789562270778
     },
     {
       "appid": 1178830,
@@ -7374,14 +7635,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789561074996
+        "updatedAt": 1789562271478
       },
       "rating": {
         "score": 9.6,
         "positive": 93,
         "total": 29611,
         "desc": "Very Positive",
-        "updatedAt": 1789561075768
+        "updatedAt": 1789562272178
       },
       "historicalLow": {
         "price": 24,
@@ -7580,7 +7841,7 @@
           "拟真",
           "第三人称"
         ],
-        "userTagsFetchedAt": 1789561354401,
+        "userTagsFetchedAt": 1789562496907,
         "bundleIds": [
           24572,
           23375,
@@ -7588,7 +7849,7 @@
         ]
       },
       "createdAt": 1789393002188,
-      "updatedAt": 1789561075768
+      "updatedAt": 1789562272178
     },
     {
       "appid": 319910,
@@ -7603,14 +7864,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789561076400
+        "updatedAt": 1789562272858
       },
       "rating": {
         "score": 6.5,
         "positive": 69,
         "total": 1667,
         "desc": "Mixed",
-        "updatedAt": 1789561077135
+        "updatedAt": 1789562273584
       },
       "historicalLow": {
         "price": 16.19,
@@ -7732,7 +7993,7 @@
         ]
       },
       "createdAt": 1789392991099,
-      "updatedAt": 1789561077135,
+      "updatedAt": 1789562273584,
       "nameZh": "《三位一体 3：权力的神器》",
       "nameSource": "machine-translation",
       "nameTranslatedAt": 1789561290075
@@ -7750,14 +8011,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789561077793
+        "updatedAt": 1789562274261
       },
       "rating": {
         "score": 7.5,
         "positive": 77,
         "total": 3238,
         "desc": "Mostly Positive",
-        "updatedAt": 1789561078471
+        "updatedAt": 1789562274986
       },
       "historicalLow": {
         "price": 149,
@@ -7836,11 +8097,37 @@
         "description": "主人公是居住在群山环绕的日本乡村小镇·戎之丘的高中生·深水雏子。 她的日常生活因为神秘白色“怪物”的出现突然崩塌。 她一边在面目全非的熟悉小镇中探索、战斗、解谜，一边迎来属于她的“结局”。",
         "descriptionOriginal": "主人公是居住在群山环绕的日本乡村小镇·戎之丘的高中生·深水雏子。 她的日常生活因为神秘白色“怪物”的出现突然崩塌。 她一边在面目全非的熟悉小镇中探索、战斗、解谜，一边迎来属于她的“结局”。",
         "descriptionTranslated": false,
-        "userTags": [],
-        "userTagsFetchedAt": 1789561400537
+        "userTags": [
+          "心理恐怖",
+          "恐怖",
+          "女性主角",
+          "生存恐怖",
+          "剧情丰富",
+          "类魂系列",
+          "动作",
+          "心理",
+          "冒险",
+          "氛围",
+          "动作冒险",
+          "探索",
+          "电影式",
+          "多结局",
+          "鲜血",
+          "第三人称",
+          "单人",
+          "暴力",
+          "3D",
+          "战斗"
+        ],
+        "userTagsFetchedAt": 1789562543137,
+        "bundleIds": [
+          86124,
+          70045,
+          79426
+        ]
       },
       "createdAt": 1789392974172,
-      "updatedAt": 1789561078471,
+      "updatedAt": 1789562274986,
       "nameZh": "寂静岭 f",
       "nameSource": "machine-translation",
       "nameTranslatedAt": 1789560186333
@@ -7858,14 +8145,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789561079199
+        "updatedAt": 1789562275674
       },
       "rating": {
         "score": 9.6,
         "positive": 93,
-        "total": 4547,
+        "total": 4548,
         "desc": "Very Positive",
-        "updatedAt": 1789561079902
+        "updatedAt": 1789562276422
       },
       "historicalLow": {
         "price": 119.2,
@@ -7925,11 +8212,35 @@
         "description": "收到已过世的妻子玛丽寄来的信，詹姆斯借机来到充满回忆的城镇「寂静岭」。 但是市街却深锁于浓雾之中，变成诡异生物徘徊的鬼城。 和怪物战斗并解谜的同时，在城镇中探索妻子蛛丝马迹的『SILENT HILL 2』重制版作品。",
         "descriptionOriginal": "收到已过世的妻子玛丽寄来的信，詹姆斯借机来到充满回忆的城镇「寂静岭」。 但是市街却深锁于浓雾之中，变成诡异生物徘徊的鬼城。 和怪物战斗并解谜的同时，在城镇中探索妻子蛛丝马迹的『SILENT HILL 2』重制版作品。",
         "descriptionTranslated": false,
-        "userTags": [],
-        "userTagsFetchedAt": 1789561401637
+        "userTags": [
+          "心理恐怖",
+          "恐怖",
+          "剧情丰富",
+          "生存恐怖",
+          "氛围",
+          "心理",
+          "重制",
+          "好评原声音轨",
+          "单人",
+          "第三人称",
+          "多结局",
+          "冒险",
+          "探索",
+          "电影式",
+          "动作",
+          "色情内容",
+          "暴力",
+          "经典",
+          "3D",
+          "动作冒险"
+        ],
+        "userTagsFetchedAt": 1789562544196,
+        "bundleIds": [
+          70249
+        ]
       },
       "createdAt": 1789392915340,
-      "updatedAt": 1789561079902,
+      "updatedAt": 1789562276422,
       "nameZh": "寂静岭2",
       "nameSource": "machine-translation",
       "nameTranslatedAt": 1789560187001
@@ -7947,14 +8258,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789561080650
+        "updatedAt": 1789562277049
       },
       "rating": {
         "score": 8.4,
         "positive": 84,
         "total": 3239,
         "desc": "Very Positive",
-        "updatedAt": 1789561081427
+        "updatedAt": 1789562277769
       },
       "historicalLow": {
         "price": 111.75,
@@ -8058,7 +8369,7 @@
         ]
       },
       "createdAt": 1789392905832,
-      "updatedAt": 1789561081427
+      "updatedAt": 1789562277769
     },
     {
       "appid": 3768760,
@@ -8073,14 +8384,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789561081981
+        "updatedAt": 1789562278452
       },
       "rating": {
         "score": 9.2,
         "positive": 90,
         "total": 7615,
         "desc": "Very Positive",
-        "updatedAt": 1789561082815
+        "updatedAt": 1789562279169
       },
       "historicalLow": {
         "price": 238.4,
@@ -8154,11 +8465,32 @@
         "description": "赢得编号。007 初露锋芒 是IO Interactive出品的惊险刺激的间谍动作冒险游戏。跟随年轻、机智但偶尔鲁莽的詹姆斯·邦德的脚步，他是军情六处训练项目中的新兵，一起探索这位世界最著名间谍的起源故事。",
         "descriptionOriginal": "赢得编号。007 初露锋芒 是IO Interactive出品的惊险刺激的间谍动作冒险游戏。跟随年轻、机智但偶尔鲁莽的詹姆斯·邦德的脚步，他是军情六处训练项目中的新兵，一起探索这位世界最著名间谍的起源故事。",
         "descriptionTranslated": false,
-        "userTags": [],
-        "userTagsFetchedAt": 1789561355519
+        "userTags": [
+          "单人",
+          "动作",
+          "动作冒险",
+          "潜行",
+          "剧情丰富",
+          "冒险",
+          "第三人称射击",
+          "电影式",
+          "第三人称",
+          "氛围",
+          "3D",
+          "探索",
+          "驾驶",
+          "战斗",
+          "射击",
+          "控制器",
+          "故事架构丰富",
+          "沉浸式模拟",
+          "刺客",
+          "黑暗"
+        ],
+        "userTagsFetchedAt": 1789562498035
       },
       "createdAt": 1789392897440,
-      "updatedAt": 1789561082815
+      "updatedAt": 1789562279169
     },
     {
       "appid": 378540,
@@ -8173,14 +8505,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789561083422
+        "updatedAt": 1789562279858
       },
       "rating": {
         "score": 6.5,
         "positive": 64,
         "total": 1435,
         "desc": "Mixed",
-        "updatedAt": 1789561084087
+        "updatedAt": 1789562280572
       },
       "historicalLow": {
         "price": 8.32,
@@ -8328,7 +8660,7 @@
         ]
       },
       "createdAt": 1789392887672,
-      "updatedAt": 1789561084087,
+      "updatedAt": 1789562280572,
       "nameZh": "浪潮",
       "nameSource": "machine-translation",
       "nameTranslatedAt": 1789560188070
@@ -8346,14 +8678,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789561084792
+        "updatedAt": 1789562281266
       },
       "rating": {
         "score": 6.5,
         "positive": 66,
         "total": 1960,
         "desc": "Mixed",
-        "updatedAt": 1789561085464
+        "updatedAt": 1789562281968
       },
       "historicalLow": {
         "price": 12.9,
@@ -8527,7 +8859,7 @@
         ]
       },
       "createdAt": 1789392876650,
-      "updatedAt": 1789561085464,
+      "updatedAt": 1789562281968,
       "nameZh": "浪潮2",
       "nameSource": "machine-translation",
       "nameTranslatedAt": 1789561291273
@@ -8545,14 +8877,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789561086209
+        "updatedAt": 1789562282640
       },
       "rating": {
         "score": 9.6,
         "positive": 94,
         "total": 9639,
         "desc": "Very Positive",
-        "updatedAt": 1789561086865
+        "updatedAt": 1789562283362
       },
       "historicalLow": {
         "price": 214.4,
@@ -8652,10 +8984,10 @@
           "女性主角",
           "类魂系列"
         ],
-        "userTagsFetchedAt": 1789561356639
+        "userTagsFetchedAt": 1789562499043
       },
       "createdAt": 1789391936262,
-      "updatedAt": 1789561086865,
+      "updatedAt": 1789562283362,
       "nameZh": "务实",
       "nameSource": "machine-translation",
       "nameTranslatedAt": 1789560188885
@@ -8673,14 +9005,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789561087552
+        "updatedAt": 1789562284036
       },
       "rating": {
         "score": 6.5,
         "positive": 68,
         "total": 123,
         "desc": "Mixed",
-        "updatedAt": 1789561088270
+        "updatedAt": 1789562284765
       },
       "historicalLow": {
         "price": 7.5,
@@ -8755,13 +9087,13 @@
           "哲理",
           "第三人称"
         ],
-        "userTagsFetchedAt": 1789561357674,
+        "userTagsFetchedAt": 1789562500178,
         "bundleIds": [
           81657
         ]
       },
       "createdAt": 1789289423724,
-      "updatedAt": 1789561088270
+      "updatedAt": 1789562284765
     },
     {
       "appid": 1123050,
@@ -8773,17 +9105,17 @@
         "discountPercent": 70,
         "currency": "CNY",
         "isOnSale": true,
-        "discountExpiration": null,
-        "expirationSource": null,
+        "discountExpiration": 1789664400000,
+        "expirationSource": "storepage",
         "saleEvent": null,
-        "updatedAt": 1789561088985
+        "updatedAt": 1789562285446
       },
       "rating": {
         "score": 7.5,
         "positive": 74,
         "total": 1463,
         "desc": "Mostly Positive",
-        "updatedAt": 1789561089682
+        "updatedAt": 1789562286159
       },
       "historicalLow": {
         "price": 24,
@@ -8897,7 +9229,7 @@
           "控制器",
           "电影式"
         ],
-        "userTagsFetchedAt": 1789561358816,
+        "userTagsFetchedAt": 1789562501310,
         "bundleIds": [
           22163,
           71089,
@@ -8905,7 +9237,7 @@
         ]
       },
       "createdAt": 1789289416953,
-      "updatedAt": 1789561089682,
+      "updatedAt": 1789562286159,
       "nameZh": "污垢",
       "nameSource": "machine-translation",
       "nameTranslatedAt": 1789561292476
@@ -8923,14 +9255,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789561090406
+        "updatedAt": 1789562286884
       },
       "rating": {
         "score": 9.2,
         "positive": 90,
         "total": 3254,
         "desc": "Very Positive",
-        "updatedAt": 1789561091081
+        "updatedAt": 1789562287560
       },
       "historicalLow": {
         "price": 27.6,
@@ -9202,7 +9534,7 @@
         "userTagsFetchedAt": 1789560305853
       },
       "createdAt": 1789289393679,
-      "updatedAt": 1789561091081,
+      "updatedAt": 1789562287560,
       "nameZh": "守护进程 X 机器",
       "nameSource": "machine-translation",
       "nameTranslatedAt": 1789560189541
@@ -9220,14 +9552,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789561091775
+        "updatedAt": 1789562288244
       },
       "rating": {
         "score": 8.4,
         "positive": 84,
         "total": 897,
         "desc": "Very Positive",
-        "updatedAt": 1789561092488
+        "updatedAt": 1789562288961
       },
       "historicalLow": {
         "price": 44.7,
@@ -9338,7 +9670,7 @@
         ]
       },
       "createdAt": 1789289357467,
-      "updatedAt": 1789561092488
+      "updatedAt": 1789562288961
     },
     {
       "appid": 585450,
@@ -9353,14 +9685,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789561093175
+        "updatedAt": 1789562289670
       },
       "rating": {
         "score": 6.5,
         "positive": 63,
         "total": 334,
         "desc": "Mixed",
-        "updatedAt": 1789561093871
+        "updatedAt": 1789562290358
       },
       "historicalLow": {
         "price": 14.9,
@@ -9455,11 +9787,32 @@
         "description": "《暗影：觉醒》是一款采用即时战斗的独特线性单人RPG。你将操作一只由影界被召唤而来的恶魔“吞噬者”，吞噬死亡英雄的灵魂，并踏上一场史诗冒险。这里有充满挑战的游戏内容，扣人心弦的故事剧情和赏心悦目的画面。",
         "descriptionOriginal": "《暗影：觉醒》是一款采用即时战斗的独特线性单人RPG。你将操作一只由影界被召唤而来的恶魔“吞噬者”，吞噬死亡英雄的灵魂，并踏上一场史诗冒险。这里有充满挑战的游戏内容，扣人心弦的故事剧情和赏心悦目的画面。",
         "descriptionTranslated": false,
-        "userTags": [],
-        "userTagsFetchedAt": 1789561402744
+        "userTags": [
+          "角色扮演",
+          "动作",
+          "砍杀",
+          "等角视角",
+          "单人",
+          "动作角色扮演",
+          "刷宝",
+          "黑暗奇幻",
+          "奇幻",
+          "解谜",
+          "魔法",
+          "即时",
+          "剧情丰富",
+          "团队角色扮演",
+          "恶魔",
+          "氛围",
+          "电脑角色扮演",
+          "制作",
+          "冒险",
+          "俯视"
+        ],
+        "userTagsFetchedAt": 1789562545402
       },
       "createdAt": 1789289347989,
-      "updatedAt": 1789561093871,
+      "updatedAt": 1789562290358,
       "nameZh": "阴影：觉醒",
       "nameSource": "machine-translation",
       "nameTranslatedAt": 1789560190709
@@ -9474,17 +9827,17 @@
         "discountPercent": 70,
         "currency": "CNY",
         "isOnSale": true,
-        "discountExpiration": null,
-        "expirationSource": null,
+        "discountExpiration": 1789578000000,
+        "expirationSource": "storepage",
         "saleEvent": null,
-        "updatedAt": 1789561094557
+        "updatedAt": 1789562291042
       },
       "rating": {
         "score": 7.5,
         "positive": 78,
         "total": 1078,
         "desc": "Mostly Positive",
-        "updatedAt": 1789561095275
+        "updatedAt": 1789562291758
       },
       "historicalLow": {
         "price": 36,
@@ -9580,7 +9933,7 @@
           "恶魔",
           "冒险"
         ],
-        "userTagsFetchedAt": 1789561359938,
+        "userTagsFetchedAt": 1789562502386,
         "bundleIds": [
           59352,
           37844,
@@ -9588,7 +9941,7 @@
         ]
       },
       "createdAt": 1789289330600,
-      "updatedAt": 1789561095275
+      "updatedAt": 1789562291758
     },
     {
       "appid": 867210,
@@ -9603,14 +9956,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789561095972
+        "updatedAt": 1789562292441
       },
       "rating": {
         "score": 7.5,
         "positive": 79,
         "total": 854,
         "desc": "Mostly Positive",
-        "updatedAt": 1789561096673
+        "updatedAt": 1789562293152
       },
       "historicalLow": {
         "price": 27.5,
@@ -9802,7 +10155,7 @@
         ]
       },
       "createdAt": 1789289322471,
-      "updatedAt": 1789561096673
+      "updatedAt": 1789562293152
     },
     {
       "appid": 1293160,
@@ -9817,14 +10170,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789561097361
+        "updatedAt": 1789562293841
       },
       "rating": {
         "score": 8.4,
         "positive": 82,
         "total": 860,
         "desc": "Very Positive",
-        "updatedAt": 1789561098077
+        "updatedAt": 1789562294558
       },
       "historicalLow": {
         "price": 49.5,
@@ -9916,11 +10269,37 @@
         "description": "一款第三人称心理恐怖游戏，让你在现实世界与精神世界之间穿梭探索。作为被废弃度假村吸引的灵媒，你将揭开黑暗的秘密，直面创伤的余波，并承受洞悉多重真相的后果。",
         "descriptionOriginal": "一款第三人称心理恐怖游戏，让你在现实世界与精神世界之间穿梭探索。作为被废弃度假村吸引的灵媒，你将揭开黑暗的秘密，直面创伤的余波，并承受洞悉多重真相的后果。",
         "descriptionTranslated": false,
-        "userTags": [],
-        "userTagsFetchedAt": 1789561361003
+        "userTags": [
+          "冒险",
+          "恐怖",
+          "女性主角",
+          "心理恐怖",
+          "氛围",
+          "剧情丰富",
+          "第三人称",
+          "黑暗",
+          "单人",
+          "色情内容",
+          "心理",
+          "好评原声音轨",
+          "步行模拟",
+          "暴力",
+          "鲜血",
+          "解谜",
+          "动作",
+          "独立",
+          "原声音轨",
+          "经典"
+        ],
+        "userTagsFetchedAt": 1789562503520,
+        "bundleIds": [
+          16913,
+          11803,
+          67471
+        ]
       },
       "createdAt": 1789289296723,
-      "updatedAt": 1789561098077,
+      "updatedAt": 1789562294558,
       "nameZh": "媒介",
       "nameSource": "machine-translation",
       "nameTranslatedAt": 1789561293675
@@ -9938,14 +10317,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789561098846
+        "updatedAt": 1789562295236
       },
       "rating": {
         "score": 9.6,
         "positive": 94,
         "total": 1964,
         "desc": "Very Positive",
-        "updatedAt": 1789561099484
+        "updatedAt": 1789562295951
       },
       "historicalLow": {
         "price": 20,
@@ -10046,7 +10425,7 @@
         ]
       },
       "createdAt": 1789289279165,
-      "updatedAt": 1789561099484
+      "updatedAt": 1789562295951
     },
     {
       "appid": 473950,
@@ -10061,14 +10440,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789561100223
+        "updatedAt": 1789562296638
       },
       "rating": {
         "score": 9.8,
         "positive": 96,
         "total": 2003,
         "desc": "Overwhelmingly Positive",
-        "updatedAt": 1789561100928
+        "updatedAt": 1789562297350
       },
       "historicalLow": {
         "price": 19,
@@ -10161,7 +10540,7 @@
           "彩色",
           "多结局"
         ],
-        "userTagsFetchedAt": 1789561362192,
+        "userTagsFetchedAt": 1789562504629,
         "bundleIds": [
           16317,
           85972,
@@ -10169,7 +10548,7 @@
         ]
       },
       "createdAt": 1789289272898,
-      "updatedAt": 1789561100928,
+      "updatedAt": 1789562297350,
       "nameZh": "流形花园",
       "nameSource": "machine-translation",
       "nameTranslatedAt": 1789560191920
@@ -10187,14 +10566,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789561101547
+        "updatedAt": 1789562298027
       },
       "rating": {
         "score": 7.5,
         "positive": 76,
         "total": 1043,
         "desc": "Mostly Positive",
-        "updatedAt": 1789561102331
+        "updatedAt": 1789562298752
       },
       "historicalLow": {
         "price": 50.7,
@@ -10300,7 +10679,7 @@
         ]
       },
       "createdAt": 1789289231546,
-      "updatedAt": 1789561102331,
+      "updatedAt": 1789562298752,
       "nameZh": "异形：黑暗后裔",
       "nameSource": "machine-translation",
       "nameTranslatedAt": 1789561294882
@@ -10318,14 +10697,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789561103005
+        "updatedAt": 1789562299424
       },
       "rating": {
         "score": 8.9,
         "positive": 86,
         "total": 1076,
         "desc": "Very Positive",
-        "updatedAt": 1789561103721
+        "updatedAt": 1789562300152
       },
       "historicalLow": {
         "price": 19,
@@ -10404,7 +10783,7 @@
           "摩托车越野",
           "动作"
         ],
-        "userTagsFetchedAt": 1789561363226,
+        "userTagsFetchedAt": 1789562505771,
         "bundleIds": [
           44322,
           40922,
@@ -10412,7 +10791,7 @@
         ]
       },
       "createdAt": 1789289193248,
-      "updatedAt": 1789561103721
+      "updatedAt": 1789562300152
     },
     {
       "appid": 1096530,
@@ -10427,14 +10806,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789561104355
+        "updatedAt": 1789562300839
       },
       "rating": {
         "score": 7.5,
         "positive": 79,
         "total": 1339,
         "desc": "Mostly Positive",
-        "updatedAt": 1789561105058
+        "updatedAt": 1789562301552
       },
       "historicalLow": {
         "price": 0,
@@ -10605,7 +10984,7 @@
           "关卡编辑",
           "团队导向"
         ],
-        "userTagsFetchedAt": 1789561364315,
+        "userTagsFetchedAt": 1789562506848,
         "bundleIds": [
           69579,
           31894,
@@ -10613,7 +10992,7 @@
         ]
       },
       "createdAt": 1789289175348,
-      "updatedAt": 1789561105058
+      "updatedAt": 1789562301552
     },
     {
       "appid": 2975950,
@@ -10628,14 +11007,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789561105739
+        "updatedAt": 1789562302228
       },
       "rating": {
         "score": 6.5,
         "positive": 61,
         "total": 351,
         "desc": "Mixed",
-        "updatedAt": 1789561106516
+        "updatedAt": 1789562302950
       },
       "historicalLow": {
         "price": 110.4,
@@ -10744,7 +11123,7 @@
           "团队导向",
           "六角格棋盘"
         ],
-        "userTagsFetchedAt": 1789561365408,
+        "userTagsFetchedAt": 1789562507879,
         "bundleIds": [
           69579,
           69580,
@@ -10752,7 +11131,7 @@
         ]
       },
       "createdAt": 1789289162929,
-      "updatedAt": 1789561106516
+      "updatedAt": 1789562302950
     },
     {
       "appid": 1580240,
@@ -10767,14 +11146,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789561107135
+        "updatedAt": 1789562303631
       },
       "rating": {
         "score": 9.2,
         "positive": 88,
         "total": 575,
         "desc": "Very Positive",
-        "updatedAt": 1789561107865
+        "updatedAt": 1789562304351
       },
       "historicalLow": {
         "price": 57,
@@ -10860,7 +11239,7 @@
         "userTagsFetchedAt": 1789560319060
       },
       "createdAt": 1789289157480,
-      "updatedAt": 1789561107865,
+      "updatedAt": 1789562304351,
       "nameZh": "符文工厂 4 特别版",
       "nameSource": "machine-translation",
       "nameTranslatedAt": 1789560192788
@@ -10878,14 +11257,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789561108611
+        "updatedAt": 1789562305065
       },
       "rating": {
         "score": 9.6,
         "positive": 94,
         "total": 326,
         "desc": "Very Positive",
-        "updatedAt": 1789561109278
+        "updatedAt": 1789562305747
       },
       "historicalLow": {
         "price": 56.32,
@@ -11048,7 +11427,7 @@
         "userTagsFetchedAt": 1789560320167
       },
       "createdAt": 1789289149519,
-      "updatedAt": 1789561109278
+      "updatedAt": 1789562305747
     },
     {
       "appid": 1766740,
@@ -11060,17 +11439,17 @@
         "discountPercent": 90,
         "currency": "CNY",
         "isOnSale": true,
-        "discountExpiration": null,
-        "expirationSource": null,
+        "discountExpiration": 1789578000000,
+        "expirationSource": "storepage",
         "saleEvent": null,
-        "updatedAt": 1789561110032
+        "updatedAt": 1789562306430
       },
       "rating": {
         "score": 8.4,
         "positive": 82,
         "total": 773,
         "desc": "Very Positive",
-        "updatedAt": 1789561110678
+        "updatedAt": 1789562307151
       },
       "historicalLow": {
         "price": 7.6,
@@ -11148,14 +11527,14 @@
           "手绘",
           "合作"
         ],
-        "userTagsFetchedAt": 1789561366548,
+        "userTagsFetchedAt": 1789562509145,
         "bundleIds": [
           35529,
           80005
         ]
       },
       "createdAt": 1789289142782,
-      "updatedAt": 1789561110678,
+      "updatedAt": 1789562307151,
       "nameZh": "丘丘查尔斯",
       "nameSource": "machine-translation",
       "nameTranslatedAt": 1789561296075
@@ -11173,14 +11552,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789561111358
+        "updatedAt": 1789562307826
       },
       "rating": {
         "score": 8.4,
         "positive": 81,
         "total": 11965,
         "desc": "Very Positive",
-        "updatedAt": 1789561112108
+        "updatedAt": 1789562308548
       },
       "historicalLow": {
         "price": 0,
@@ -11236,11 +11615,35 @@
         "description": "《GTFO》是一款极端讲求合作的硬核恐怖射击游戏，能让你前一秒还在提心吊胆，下一秒就激烈开战。唯有靠潜行、策略和团队配合，方可在致命的地下监狱中搏得一线生机。不同心协力，就等着同归于尽吧。",
         "descriptionOriginal": "《GTFO》是一款极端讲求合作的硬核恐怖射击游戏，能让你前一秒还在提心吊胆，下一秒就激烈开战。唯有靠潜行、策略和团队配合，方可在致命的地下监狱中搏得一线生机。不同心协力，就等着同归于尽吧。",
         "descriptionTranslated": false,
-        "userTags": [],
-        "userTagsFetchedAt": 1789561403835
+        "userTags": [
+          "在线合作",
+          "恐怖",
+          "第一人称射击",
+          "合作",
+          "低容错",
+          "多人",
+          "射击",
+          "生存恐怖",
+          "动作",
+          "潜行",
+          "战术",
+          "团队导向",
+          "鲜血",
+          "第一人称",
+          "僵尸",
+          "玩家对战环境",
+          "氛围",
+          "角色自定义",
+          "暴力",
+          "重玩价值"
+        ],
+        "userTagsFetchedAt": 1789562546407,
+        "bundleIds": [
+          79730
+        ]
       },
       "createdAt": 1789289137494,
-      "updatedAt": 1789561112108
+      "updatedAt": 1789562308548
     },
     {
       "appid": 866140,
@@ -11255,14 +11658,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789561112795
+        "updatedAt": 1789562309236
       },
       "rating": {
         "score": 9.2,
         "positive": 89,
         "total": 600,
         "desc": "Very Positive",
-        "updatedAt": 1789561113523
+        "updatedAt": 1789562309946
       },
       "historicalLow": {
         "price": 15.2,
@@ -11397,7 +11800,7 @@
           "风格化",
           "解谜"
         ],
-        "userTagsFetchedAt": 1789561367665,
+        "userTagsFetchedAt": 1789562510277,
         "bundleIds": [
           25458,
           26004,
@@ -11405,7 +11808,7 @@
         ]
       },
       "createdAt": 1789289131662,
-      "updatedAt": 1789561113523,
+      "updatedAt": 1789562309946,
       "nameZh": "崛起：一个简单的故事",
       "nameSource": "machine-translation",
       "nameTranslatedAt": 1789561298775
@@ -11423,14 +11826,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789561114168
+        "updatedAt": 1789562310625
       },
       "rating": {
         "score": 9.6,
         "positive": 93,
         "total": 118,
         "desc": "Very Positive",
-        "updatedAt": 1789561114905
+        "updatedAt": 1789562311339
       },
       "historicalLow": {
         "price": 4.4,
@@ -11504,14 +11907,14 @@
           "潜行",
           "合作"
         ],
-        "userTagsFetchedAt": 1789561368741,
+        "userTagsFetchedAt": 1789562511309,
         "bundleIds": [
           41448,
           46492
         ]
       },
       "createdAt": 1789289123766,
-      "updatedAt": 1789561114905
+      "updatedAt": 1789562311339
     },
     {
       "appid": 544750,
@@ -11523,17 +11926,17 @@
         "discountPercent": 90,
         "currency": "CNY",
         "isOnSale": true,
-        "discountExpiration": null,
-        "expirationSource": null,
+        "discountExpiration": 1789664400000,
+        "expirationSource": "storepage",
         "saleEvent": null,
-        "updatedAt": 1789561115619
+        "updatedAt": 1789562312076
       },
       "rating": {
         "score": 7.5,
         "positive": 74,
         "total": 1372,
         "desc": "Mostly Positive",
-        "updatedAt": 1789561116270
+        "updatedAt": 1789562312744
       },
       "historicalLow": {
         "price": 29.8,
@@ -11776,10 +12179,10 @@
           "清版动作",
           "2D 格斗"
         ],
-        "userTagsFetchedAt": 1789561369808
+        "userTagsFetchedAt": 1789562512389
       },
       "createdAt": 1789289117479,
-      "updatedAt": 1789561116270,
+      "updatedAt": 1789562312744,
       "nameZh": "剑魂 VI",
       "nameSource": "machine-translation",
       "nameTranslatedAt": 1789560195099
@@ -11797,14 +12200,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789561116946
+        "updatedAt": 1789562313448
       },
       "rating": {
         "score": 9.8,
         "positive": 95,
         "total": 605,
         "desc": "Very Positive",
-        "updatedAt": 1789561117670
+        "updatedAt": 1789562314141
       },
       "historicalLow": {
         "price": 10.3,
@@ -11908,7 +12311,7 @@
           "隐藏物体",
           "平台解谜"
         ],
-        "userTagsFetchedAt": 1789561371111,
+        "userTagsFetchedAt": 1789562513404,
         "bundleIds": [
           22640,
           50159,
@@ -11916,7 +12319,7 @@
         ]
       },
       "createdAt": 1789289111324,
-      "updatedAt": 1789561117670,
+      "updatedAt": 1789562314141,
       "nameZh": "头脑清醒",
       "nameSource": "machine-translation",
       "nameTranslatedAt": 1789561300302
@@ -11934,14 +12337,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789561118386
+        "updatedAt": 1789562314833
       },
       "rating": {
         "score": 7.5,
         "positive": 75,
         "total": 14642,
         "desc": "Mostly Positive",
-        "updatedAt": 1789561119064
+        "updatedAt": 1789562315548
       },
       "historicalLow": {
         "price": 47.8,
@@ -12119,11 +12522,36 @@
         "description": "欢迎进入美妙疯狂的乌托邦世界。生死之战，一触即发。针对独特敌人制定最佳战术，升级装备，利用环境条件完成任务。想要揭开真相？那就做好流血的准备吧！",
         "descriptionOriginal": "欢迎进入美妙疯狂的乌托邦世界。生死之战，一触即发。针对独特敌人制定最佳战术，升级装备，利用环境条件完成任务。想要揭开真相？那就做好流血的准备吧！",
         "descriptionTranslated": false,
-        "userTags": [],
-        "userTagsFetchedAt": 1789561404949
+        "userTags": [
+          "冒险",
+          "第一人称射击",
+          "色情内容",
+          "动作",
+          "单人",
+          "开放世界",
+          "动作冒险",
+          "恐怖",
+          "解谜",
+          "科幻",
+          "射击",
+          "第一人称",
+          "悬疑",
+          "赛博朋克",
+          "角色扮演",
+          "架空历史",
+          "机器人",
+          "探索",
+          "氛围",
+          "鲜血"
+        ],
+        "userTagsFetchedAt": 1789562547662,
+        "bundleIds": [
+          72176,
+          72184
+        ]
       },
       "createdAt": 1789288866643,
-      "updatedAt": 1789561119064
+      "updatedAt": 1789562315548
     },
     {
       "appid": 1116580,
@@ -12138,14 +12566,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789561119826
+        "updatedAt": 1789562316229
       },
       "rating": {
         "score": 9.8,
         "positive": 95,
         "total": 1209,
         "desc": "Very Positive",
-        "updatedAt": 1789561120498
+        "updatedAt": 1789562316936
       },
       "historicalLow": {
         "price": 9.6,
@@ -12228,7 +12656,7 @@
         ]
       },
       "createdAt": 1789288713492,
-      "updatedAt": 1789561120498
+      "updatedAt": 1789562316936
     },
     {
       "appid": 590380,
@@ -12243,14 +12671,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789561121147
+        "updatedAt": 1789562317617
       },
       "rating": {
         "score": 9.8,
         "positive": 95,
         "total": 2695,
         "desc": "Very Positive",
-        "updatedAt": 1789561121862
+        "updatedAt": 1789562318339
       },
       "historicalLow": {
         "price": 10,
@@ -12351,7 +12779,7 @@
           "模拟",
           "好评原声音轨"
         ],
-        "userTagsFetchedAt": 1789561372046,
+        "userTagsFetchedAt": 1789562514515,
         "bundleIds": [
           6242,
           48803,
@@ -12359,7 +12787,7 @@
         ]
       },
       "createdAt": 1789288699206,
-      "updatedAt": 1789561121862,
+      "updatedAt": 1789562318339,
       "nameZh": "进入突破口",
       "nameSource": "machine-translation",
       "nameTranslatedAt": 1789560195524
@@ -12377,14 +12805,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789561122567
+        "updatedAt": 1789562319025
       },
       "rating": {
         "score": 7.5,
         "positive": 79,
         "total": 19825,
         "desc": "Mostly Positive",
-        "updatedAt": 1789561123274
+        "updatedAt": 1789562319740
       },
       "historicalLow": {
         "price": 8,
@@ -12493,14 +12921,14 @@
           "建造",
           "动作冒险"
         ],
-        "userTagsFetchedAt": 1789561373104,
+        "userTagsFetchedAt": 1789562515585,
         "bundleIds": [
           65995,
           65996
         ]
       },
       "createdAt": 1789288687871,
-      "updatedAt": 1789561123274
+      "updatedAt": 1789562319740
     },
     {
       "appid": 1066780,
@@ -12515,14 +12943,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789561123950
+        "updatedAt": 1789562320424
       },
       "rating": {
         "score": 9.2,
         "positive": 89,
         "total": 4262,
         "desc": "Very Positive",
-        "updatedAt": 1789561124711
+        "updatedAt": 1789562321153
       },
       "historicalLow": {
         "price": 13.6,
@@ -12632,10 +13060,10 @@
           "模组",
           "程序生成"
         ],
-        "userTagsFetchedAt": 1789561374208
+        "userTagsFetchedAt": 1789562516669
       },
       "createdAt": 1789288670962,
-      "updatedAt": 1789561124711,
+      "updatedAt": 1789562321153,
       "nameZh": "运输狂热2",
       "nameSource": "machine-translation",
       "nameTranslatedAt": 1789560196229
@@ -12650,17 +13078,17 @@
         "discountPercent": 90,
         "currency": "CNY",
         "isOnSale": true,
-        "discountExpiration": null,
-        "expirationSource": null,
+        "discountExpiration": 1789664400000,
+        "expirationSource": "storepage",
         "saleEvent": null,
-        "updatedAt": 1789561125355
+        "updatedAt": 1789562321823
       },
       "rating": {
         "score": 7.5,
         "positive": 74,
         "total": 3129,
         "desc": "Mostly Positive",
-        "updatedAt": 1789561126060
+        "updatedAt": 1789562322537
       },
       "historicalLow": {
         "price": 26.8,
@@ -12746,13 +13174,13 @@
           "开放世界",
           "类魂系列"
         ],
-        "userTagsFetchedAt": 1789561375295,
+        "userTagsFetchedAt": 1789562517740,
         "bundleIds": [
           34010
         ]
       },
       "createdAt": 1789288651138,
-      "updatedAt": 1789561126060,
+      "updatedAt": 1789562322537,
       "nameZh": "噬神者3",
       "nameSource": "machine-translation",
       "nameTranslatedAt": 1789560197482
@@ -12767,17 +13195,17 @@
         "discountPercent": 90,
         "currency": "CNY",
         "isOnSale": true,
-        "discountExpiration": null,
-        "expirationSource": null,
+        "discountExpiration": 1789664400000,
+        "expirationSource": "storepage",
         "saleEvent": null,
-        "updatedAt": 1789561126731
+        "updatedAt": 1789562323225
       },
       "rating": {
         "score": 6.5,
         "positive": 60,
         "total": 965,
         "desc": "Mixed",
-        "updatedAt": 1789561127452
+        "updatedAt": 1789562323940
       },
       "historicalLow": {
         "price": 26.8,
@@ -12861,13 +13289,13 @@
           "裸露",
           "冒险"
         ],
-        "userTagsFetchedAt": 1789561376373,
+        "userTagsFetchedAt": 1789562518848,
         "bundleIds": [
           34010
         ]
       },
       "createdAt": 1789288633473,
-      "updatedAt": 1789561127452,
+      "updatedAt": 1789562323940,
       "nameZh": "噬神者2 愤怒爆发",
       "nameSource": "machine-translation",
       "nameTranslatedAt": 1789561301547
@@ -12885,14 +13313,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789561128149
+        "updatedAt": 1789562324615
       },
       "rating": {
         "score": 9.8,
         "positive": 95,
         "total": 2588,
         "desc": "Overwhelmingly Positive",
-        "updatedAt": 1789561128871
+        "updatedAt": 1789562325338
       },
       "historicalLow": {
         "price": 3.5,
@@ -13009,14 +13437,14 @@
           "独立",
           "阖家"
         ],
-        "userTagsFetchedAt": 1789561377616,
+        "userTagsFetchedAt": 1789562519991,
         "bundleIds": [
           21489,
           42902
         ]
       },
       "createdAt": 1789288621819,
-      "updatedAt": 1789561128871
+      "updatedAt": 1789562325338
     },
     {
       "appid": 2162800,
@@ -13031,14 +13459,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789561129540
+        "updatedAt": 1789562326018
       },
       "rating": {
         "score": 9.8,
         "positive": 95,
         "total": 1734,
         "desc": "Overwhelmingly Positive",
-        "updatedAt": 1789561130260
+        "updatedAt": 1789562326780
       },
       "historicalLow": {
         "price": 37.5,
@@ -13159,7 +13587,7 @@
           "可模组化",
           "探索"
         ],
-        "userTagsFetchedAt": 1789561378685,
+        "userTagsFetchedAt": 1789562521102,
         "bundleIds": [
           42902,
           46765,
@@ -13167,7 +13595,7 @@
         ]
       },
       "createdAt": 1789288498969,
-      "updatedAt": 1789561130260
+      "updatedAt": 1789562326780
     },
     {
       "appid": 581320,
@@ -13182,14 +13610,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789561131152
+        "updatedAt": 1789562327494
       },
       "rating": {
         "score": 8.4,
         "positive": 81,
         "total": 17271,
         "desc": "Very Positive",
-        "updatedAt": 1789561131713
+        "updatedAt": 1789562328140
       },
       "historicalLow": {
         "price": 0,
@@ -13461,7 +13889,7 @@
         ]
       },
       "createdAt": 1789288476867,
-      "updatedAt": 1789561131713,
+      "updatedAt": 1789562328140,
       "nameZh": "叛乱：沙尘暴",
       "nameSource": "machine-translation",
       "nameTranslatedAt": 1789560198451
@@ -13476,17 +13904,17 @@
         "discountPercent": 80,
         "currency": "CNY",
         "isOnSale": true,
-        "discountExpiration": null,
-        "expirationSource": null,
+        "discountExpiration": 1789664400000,
+        "expirationSource": "storepage",
         "saleEvent": null,
-        "updatedAt": 1789561132349
+        "updatedAt": 1789562328832
       },
       "rating": {
         "score": 7.5,
         "positive": 78,
         "total": 3096,
         "desc": "Mostly Positive",
-        "updatedAt": 1789561133071
+        "updatedAt": 1789562329544
       },
       "historicalLow": {
         "price": 16.8,
@@ -13762,7 +14190,7 @@
           "沉浸式模拟",
           "大战略"
         ],
-        "userTagsFetchedAt": 1789561379831,
+        "userTagsFetchedAt": 1789562522246,
         "bundleIds": [
           30502,
           30503,
@@ -13770,7 +14198,7 @@
         ]
       },
       "createdAt": 1789288431803,
-      "updatedAt": 1789561133071
+      "updatedAt": 1789562329544
     },
     {
       "appid": 2144740,
@@ -13785,14 +14213,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789561133779
+        "updatedAt": 1789562330239
       },
       "rating": {
         "score": 7.5,
         "positive": 79,
         "total": 3946,
         "desc": "Mostly Positive",
-        "updatedAt": 1789561134534
+        "updatedAt": 1789562330934
       },
       "historicalLow": {
         "price": 33.6,
@@ -13935,11 +14363,37 @@
         "description": "在赛博朋克末世中冒险，体验这款令人热血贲张的第一人称视角硬核砍杀游戏。成为终极赛博忍者，与BOSS进行史诗般的决战。改进的技能系统、互动性剧情、全新的游戏模式，以及令人着迷的合成波原声配乐。",
         "descriptionOriginal": "在赛博朋克末世中冒险，体验这款令人热血贲张的第一人称视角硬核砍杀游戏。成为终极赛博忍者，与BOSS进行史诗般的决战。改进的技能系统、互动性剧情、全新的游戏模式，以及令人着迷的合成波原声配乐。",
         "descriptionTranslated": false,
-        "userTags": [],
-        "userTagsFetchedAt": 1789561380811
+        "userTags": [
+          "赛博朋克",
+          "动作",
+          "快节奏",
+          "砍杀",
+          "奔跑",
+          "第一人称",
+          "低容错",
+          "剑术",
+          "暴力",
+          "车辆作战",
+          "音乐",
+          "冒险",
+          "动作冒险",
+          "后末日",
+          "单人",
+          "战斗",
+          "忍者",
+          "鲜血",
+          "摩托车",
+          "格斗"
+        ],
+        "userTagsFetchedAt": 1789562523287,
+        "bundleIds": [
+          36394,
+          74429,
+          42609
+        ]
       },
       "createdAt": 1789288422502,
-      "updatedAt": 1789561134534
+      "updatedAt": 1789562330934
     },
     {
       "appid": 1139900,
@@ -13954,14 +14408,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789561135195
+        "updatedAt": 1789562331625
       },
       "rating": {
         "score": 9.6,
         "positive": 92,
         "total": 27211,
         "desc": "Very Positive",
-        "updatedAt": 1789561135878
+        "updatedAt": 1789562332339
       },
       "historicalLow": {
         "price": 0,
@@ -14104,11 +14558,37 @@
         "description": "Ghostrunner提供了独特的单玩家游戏体验：快节奏的暴力战斗，以及将科幻故事与世界末日主题相融合的原生环境。它讲述了一个已终结的世界，以及在其中为生存而战的居民的故事。",
         "descriptionOriginal": "Ghostrunner提供了独特的单玩家游戏体验：快节奏的暴力战斗，以及将科幻故事与世界末日主题相融合的原生环境。它讲述了一个已终结的世界，以及在其中为生存而战的居民的故事。",
         "descriptionTranslated": false,
-        "userTags": [],
-        "userTagsFetchedAt": 1789561381853
+        "userTags": [
+          "动作",
+          "赛博朋克",
+          "快节奏",
+          "第一人称",
+          "低容错",
+          "剑术",
+          "单人",
+          "砍杀",
+          "未来",
+          "暴力",
+          "科幻",
+          "好评原声音轨",
+          "动作冒险",
+          "战斗",
+          "冒险",
+          "忍者",
+          "后末日",
+          "格斗",
+          "策略",
+          "射击"
+        ],
+        "userTagsFetchedAt": 1789562524442,
+        "bundleIds": [
+          79463,
+          22401,
+          36394
+        ]
       },
       "createdAt": 1789288315262,
-      "updatedAt": 1789561135878
+      "updatedAt": 1789562332339
     },
     {
       "appid": 690640,
@@ -14123,14 +14603,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789561136546
+        "updatedAt": 1789562333028
       },
       "rating": {
         "score": 8.4,
         "positive": 81,
         "total": 5172,
         "desc": "Very Positive",
-        "updatedAt": 1789561137258
+        "updatedAt": 1789562333735
       },
       "historicalLow": {
         "price": 23.6,
@@ -14285,7 +14765,7 @@
         ]
       },
       "createdAt": 1789288295688,
-      "updatedAt": 1789561137258,
+      "updatedAt": 1789562333735,
       "nameZh": "《三位一体 4：噩梦王子》",
       "nameSource": "machine-translation",
       "nameTranslatedAt": 1789561302081
@@ -14300,17 +14780,17 @@
         "discountPercent": 90,
         "currency": "CNY",
         "isOnSale": true,
-        "discountExpiration": null,
-        "expirationSource": null,
+        "discountExpiration": 1789664400000,
+        "expirationSource": "storepage",
         "saleEvent": null,
-        "updatedAt": 1789561137963
+        "updatedAt": 1789562334430
       },
       "rating": {
         "score": 9.2,
         "positive": 90,
         "total": 17898,
         "desc": "Very Positive",
-        "updatedAt": 1789561138671
+        "updatedAt": 1789562335146
       },
       "historicalLow": {
         "price": 15.8,
@@ -14552,14 +15032,14 @@
           "策略",
           "氛围"
         ],
-        "userTagsFetchedAt": 1789561383218,
+        "userTagsFetchedAt": 1789562525568,
         "bundleIds": [
           3293,
           646
         ]
       },
       "createdAt": 1789288267285,
-      "updatedAt": 1789561138671,
+      "updatedAt": 1789562335146,
       "nameZh": "狙击精英4",
       "nameSource": "machine-translation",
       "nameTranslatedAt": 1789560199502
@@ -14577,14 +15057,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789561139357
+        "updatedAt": 1789562335816
       },
       "rating": {
         "score": 8.4,
         "positive": 83,
         "total": 4474,
         "desc": "Very Positive",
-        "updatedAt": 1789561140123
+        "updatedAt": 1789562336548
       },
       "historicalLow": {
         "price": 59.7,
@@ -14692,7 +15172,7 @@
         ]
       },
       "createdAt": 1789288255996,
-      "updatedAt": 1789561140123,
+      "updatedAt": 1789562336548,
       "nameZh": "瘟疫传说：安魂曲",
       "nameSource": "machine-translation",
       "nameTranslatedAt": 1789561303278
@@ -14710,14 +15190,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789561140769
+        "updatedAt": 1789562337229
       },
       "rating": {
         "score": 7.5,
         "positive": 70,
         "total": 428,
         "desc": "Mostly Positive",
-        "updatedAt": 1789561141457
+        "updatedAt": 1789562337936
       },
       "historicalLow": {
         "price": 18,
@@ -14800,11 +15280,36 @@
         "description": "一款基于《布莱尔女巫》电影的第一视角剧情驱动心理恐怖游戏。探索布莱克山森林这片闹鬼之地，展开令人心悸的调查，直面深藏于林间的邪恶力量。",
         "descriptionOriginal": "一款基于《布莱尔女巫》电影的第一视角剧情驱动心理恐怖游戏。探索布莱克山森林这片闹鬼之地，展开令人心悸的调查，直面深藏于林间的邪恶力量。",
         "descriptionTranslated": false,
-        "userTags": [],
-        "userTagsFetchedAt": 1789561384036
+        "userTags": [
+          "恐怖",
+          "冒险",
+          "心理恐怖",
+          "独立",
+          "第一人称",
+          "暴力",
+          "狗",
+          "黑暗",
+          "步行模拟",
+          "氛围",
+          "剧情丰富",
+          "单人",
+          "生存恐怖",
+          "调查",
+          "电影式",
+          "生存",
+          "心理",
+          "多人",
+          "合作",
+          "好评原声音轨"
+        ],
+        "userTagsFetchedAt": 1789562526720,
+        "bundleIds": [
+          22373,
+          11803
+        ]
       },
       "createdAt": 1789288227339,
-      "updatedAt": 1789561141457,
+      "updatedAt": 1789562337936,
       "nameZh": "女巫布莱尔",
       "nameSource": "machine-translation",
       "nameTranslatedAt": 1789560200527
@@ -14822,14 +15327,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789561142251
+        "updatedAt": 1789562338616
       },
       "rating": {
         "score": 9.6,
         "positive": 93,
         "total": 742,
         "desc": "Very Positive",
-        "updatedAt": 1789561142851
+        "updatedAt": 1789562339343
       },
       "historicalLow": {
         "price": 15,
@@ -14918,7 +15423,7 @@
         ]
       },
       "createdAt": 1789288190456,
-      "updatedAt": 1789561142851
+      "updatedAt": 1789562339343
     },
     {
       "appid": 922500,
@@ -14933,14 +15438,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789561143531
+        "updatedAt": 1789562340010
       },
       "rating": {
         "score": 6.5,
         "positive": 67,
         "total": 544,
         "desc": "Mixed",
-        "updatedAt": 1789561144254
+        "updatedAt": 1789562340732
       },
       "historicalLow": {
         "price": 25,
@@ -15025,10 +15530,10 @@
           "可爱",
           "电竞"
         ],
-        "userTagsFetchedAt": 1789561385192
+        "userTagsFetchedAt": 1789562527738
       },
       "createdAt": 1789287675940,
-      "updatedAt": 1789561144254,
+      "updatedAt": 1789562340732,
       "nameZh": "杀死拉杀死-IF",
       "nameSource": "machine-translation",
       "nameTranslatedAt": 1789561304485
@@ -15046,14 +15551,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789561145213
+        "updatedAt": 1789562341458
       },
       "rating": {
         "score": 7.5,
         "positive": 75,
         "total": 775,
         "desc": "Mostly Positive",
-        "updatedAt": 1789561145679
+        "updatedAt": 1789562342131
       },
       "historicalLow": {
         "price": 12.9,
@@ -15177,7 +15682,7 @@
         ]
       },
       "createdAt": 1789200620526,
-      "updatedAt": 1789561145679,
+      "updatedAt": 1789562342131,
       "nameZh": "奥赛德",
       "nameSource": "machine-translation",
       "nameTranslatedAt": 1789560201571
@@ -15195,14 +15700,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789561146341
+        "updatedAt": 1789562342817
       },
       "rating": {
         "score": 8.4,
         "positive": 82,
         "total": 1438,
         "desc": "Very Positive",
-        "updatedAt": 1789561147051
+        "updatedAt": 1789562343531
       },
       "historicalLow": {
         "price": 19,
@@ -15304,7 +15809,7 @@
         ]
       },
       "createdAt": 1789200615859,
-      "updatedAt": 1789561147051,
+      "updatedAt": 1789562343531,
       "nameZh": "幻境：觉醒",
       "nameSource": "machine-translation",
       "nameTranslatedAt": 1789561305678
@@ -15322,14 +15827,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789561147743
+        "updatedAt": 1789562344226
       },
       "rating": {
         "score": 8.4,
         "positive": 84,
         "total": 1750,
         "desc": "Very Positive",
-        "updatedAt": 1789561148457
+        "updatedAt": 1789562344941
       },
       "historicalLow": {
         "price": 15.2,
@@ -15478,7 +15983,7 @@
         ]
       },
       "createdAt": 1789200611013,
-      "updatedAt": 1789561148457
+      "updatedAt": 1789562344941
     },
     {
       "appid": 1931770,
@@ -15493,14 +15998,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789561149134
+        "updatedAt": 1789562345615
       },
       "rating": {
         "score": 9.9,
         "positive": 98,
         "total": 11981,
         "desc": "Overwhelmingly Positive",
-        "updatedAt": 1789561149873
+        "updatedAt": 1789562346340
       },
       "historicalLow": {
         "price": 40,
@@ -15608,7 +16113,7 @@
         ]
       },
       "createdAt": 1789200607370,
-      "updatedAt": 1789561149873
+      "updatedAt": 1789562346340
     },
     {
       "appid": 374320,
@@ -15623,14 +16128,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789561150643
+        "updatedAt": 1789562347015
       },
       "rating": {
         "score": 9.6,
         "positive": 94,
-        "total": 105352,
+        "total": 105353,
         "desc": "Very Positive",
-        "updatedAt": 1789561151285
+        "updatedAt": 1789562347743
       },
       "historicalLow": {
         "price": 67,
@@ -15758,7 +16263,7 @@
         "userTagsFetchedAt": 1789560353148
       },
       "createdAt": 1789200602339,
-      "updatedAt": 1789561151285,
+      "updatedAt": 1789562347743,
       "nameZh": "黑暗之魂™ III",
       "nameSource": "machine-translation",
       "nameTranslatedAt": 1789560203014
@@ -15776,14 +16281,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789561152066
+        "updatedAt": 1789562348462
       },
       "rating": {
         "score": 9.2,
         "positive": 88,
         "total": 16327,
         "desc": "Very Positive",
-        "updatedAt": 1789561152679
+        "updatedAt": 1789562349133
       },
       "historicalLow": {
         "price": 16.5,
@@ -15898,11 +16403,35 @@
         "description": "地狱军团入侵了人世间，在恢弘的单人剧情模式中扮演毁灭战士，在各个次元歼灭恶魔，制止人类最终的毁灭。 它们唯一所惧怕的……就是你。",
         "descriptionOriginal": "地狱军团入侵了人世间，在恢弘的单人剧情模式中扮演毁灭战士，在各个次元歼灭恶魔，制止人类最终的毁灭。 它们唯一所惧怕的……就是你。",
         "descriptionTranslated": false,
-        "userTags": [],
-        "userTagsFetchedAt": 1789561406039
+        "userTags": [
+          "鲜血",
+          "第一人称射击",
+          "动作",
+          "好评原声音轨",
+          "快节奏",
+          "暴力",
+          "恶魔",
+          "射击",
+          "第一人称",
+          "单人",
+          "多人",
+          "科幻",
+          "后末日",
+          "氛围",
+          "低容错",
+          "剧情丰富",
+          "冒险",
+          "恐怖",
+          "复古射击",
+          "阖家"
+        ],
+        "userTagsFetchedAt": 1789562548613,
+        "bundleIds": [
+          15366
+        ]
       },
       "createdAt": 1789200598138,
-      "updatedAt": 1789561152679,
+      "updatedAt": 1789562349133,
       "nameZh": "毁灭战士永恒",
       "nameSource": "machine-translation",
       "nameTranslatedAt": 1789561306881
@@ -15920,14 +16449,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789561153394
+        "updatedAt": 1789562349820
       },
       "rating": {
         "score": 6.5,
         "positive": 66,
         "total": 352,
         "desc": "Mixed",
-        "updatedAt": 1789561154104
+        "updatedAt": 1789562350529
       },
       "historicalLow": {
         "price": 136.6,
@@ -15997,11 +16526,32 @@
         "description": "摆脱命运轮回 竭力奋战，求得生存。在这款获奖无数的第三人称射击游戏中，体验塞勒涅的故事。游戏现已登陆 PC。迎接 roguelike 的挑战。在枪林弹雨中直面敌人。与其他玩家共同体验《Returnal™》之旅。",
         "descriptionOriginal": "摆脱命运轮回 竭力奋战，求得生存。在这款获奖无数的第三人称射击游戏中，体验塞勒涅的故事。游戏现已登陆 PC。迎接 roguelike 的挑战。在枪林弹雨中直面敌人。与其他玩家共同体验《Returnal™》之旅。",
         "descriptionTranslated": false,
-        "userTags": [],
-        "userTagsFetchedAt": 1789561407139
+        "userTags": [
+          "弹幕射击",
+          "动作",
+          "类 Rogue",
+          "单人",
+          "女性主角",
+          "第三人称射击",
+          "合作",
+          "动作类 Rogue",
+          "太空",
+          "在线合作",
+          "科幻",
+          "射击",
+          "低容错",
+          "多人",
+          "心理恐怖",
+          "轻度 Rogue",
+          "氛围",
+          "恐怖",
+          "洛夫克拉夫特式",
+          "街机"
+        ],
+        "userTagsFetchedAt": 1789562549668
       },
       "createdAt": 1789200593716,
-      "updatedAt": 1789561154104,
+      "updatedAt": 1789562350529,
       "nameZh": "回归™",
       "nameSource": "machine-translation",
       "nameTranslatedAt": 1789560204519
@@ -16019,14 +16569,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789561154746
+        "updatedAt": 1789562351218
       },
       "rating": {
         "score": 9.6,
         "positive": 93,
         "total": 4982,
         "desc": "Very Positive",
-        "updatedAt": 1789561155469
+        "updatedAt": 1789562351934
       },
       "historicalLow": {
         "price": 7.6,
@@ -16146,7 +16696,7 @@
         ]
       },
       "createdAt": 1789200589512,
-      "updatedAt": 1789561155469
+      "updatedAt": 1789562351934
     },
     {
       "appid": 1966720,
@@ -16161,14 +16711,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789561156144
+        "updatedAt": 1789562352607
       },
       "rating": {
         "score": 9.6,
         "positive": 93,
         "total": 17726,
         "desc": "Very Positive",
-        "updatedAt": 1789561156882
+        "updatedAt": 1789562353335
       },
       "historicalLow": {
         "price": 27.3,
@@ -16255,7 +16805,7 @@
         "userTagsFetchedAt": 1789560357482
       },
       "createdAt": 1789200421989,
-      "updatedAt": 1789561156882,
+      "updatedAt": 1789562353335,
       "nameZh": "致命公司",
       "nameSource": "machine-translation",
       "nameTranslatedAt": 1789561308085
@@ -16273,7 +16823,7 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789561157534
+        "updatedAt": 1789562354010
       },
       "rating": {
         "score": null,
@@ -16357,7 +16907,7 @@
         "userTagsFetchedAt": 1789560358651
       },
       "createdAt": 1789200412254,
-      "updatedAt": 1789561158294,
+      "updatedAt": 1789562354706,
       "nameZh": "失落的狂野",
       "nameSource": "machine-translation",
       "nameTranslatedAt": 1789560205489
@@ -16375,7 +16925,7 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789561158953
+        "updatedAt": 1789562355409
       },
       "rating": {
         "score": null,
@@ -16468,7 +17018,7 @@
         "userTagsFetchedAt": 1789560359784
       },
       "createdAt": 1789200411045,
-      "updatedAt": 1789561159664,
+      "updatedAt": 1789562356113,
       "nameZh": "社区",
       "nameSource": "machine-translation",
       "nameTranslatedAt": 1789561309591
@@ -16486,14 +17036,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789561160398
+        "updatedAt": 1789562356824
       },
       "rating": {
         "score": 6.5,
         "positive": 68,
         "total": 727,
         "desc": "Mixed",
-        "updatedAt": 1789561161166
+        "updatedAt": 1789562357528
       },
       "historicalLow": {
         "price": 36.4,
@@ -16625,7 +17175,7 @@
         ]
       },
       "createdAt": 1789200409294,
-      "updatedAt": 1789561161166
+      "updatedAt": 1789562357528
     },
     {
       "appid": 2058190,
@@ -16640,14 +17190,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789561161769
+        "updatedAt": 1789562358210
       },
       "rating": {
         "score": 9.2,
         "positive": 90,
         "total": 2711,
         "desc": "Very Positive",
-        "updatedAt": 1789561162458
+        "updatedAt": 1789562358939
       },
       "historicalLow": {
         "price": 59.4,
@@ -16722,11 +17272,35 @@
         "description": "全世界翘首以盼！木村拓哉主演，《审判之眼》系列最新作！在全新的舞台——横滨，讲述曾为律师的侦探八神隆之的故事。 一起本看似寻常的案件审判，牵扯出充满谜团的复仇剧。故事的走向出乎所有人预料……失落的真相，被遗忘的正义。在“湮灭的记忆”中，八神隆之将要看到什么？ 尽情体验超越前作的悬疑法庭剧巨制！",
         "descriptionOriginal": "全世界翘首以盼！木村拓哉主演，《审判之眼》系列最新作！在全新的舞台——横滨，讲述曾为律师的侦探八神隆之的故事。 一起本看似寻常的案件审判，牵扯出充满谜团的复仇剧。故事的走向出乎所有人预料……失落的真相，被遗忘的正义。在“湮灭的记忆”中，八神隆之将要看到什么？ 尽情体验超越前作的悬疑法庭剧巨制！",
         "descriptionTranslated": false,
-        "userTags": [],
-        "userTagsFetchedAt": 1789561408245
+        "userTags": [
+          "动作",
+          "冒险",
+          "清版动作",
+          "动作冒险",
+          "3D 格斗",
+          "电影式",
+          "拟真",
+          "第三人称",
+          "砍杀",
+          "犯罪",
+          "阴谋",
+          "推理",
+          "黑暗",
+          "调查",
+          "赌博",
+          "武术",
+          "逻辑",
+          "现代",
+          "角色扮演",
+          "动作角色扮演"
+        ],
+        "userTagsFetchedAt": 1789562550894,
+        "bundleIds": [
+          26688
+        ]
       },
       "createdAt": 1789200407468,
-      "updatedAt": 1789561162458
+      "updatedAt": 1789562358939
     },
     {
       "appid": 2072450,
@@ -16741,14 +17315,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789561163208
+        "updatedAt": 1789562359711
       },
       "rating": {
         "score": 8.9,
         "positive": 87,
         "total": 6814,
         "desc": "Very Positive",
-        "updatedAt": 1789561163866
+        "updatedAt": 1789562360331
       },
       "historicalLow": {
         "price": 74.5,
@@ -16991,11 +17565,35 @@
         "description": "从“人生低谷”东山再起的男人——春日一番，以及面临“人生最后”之战的男人——桐生一马。 由两位主角演绎的超大作RPG，系列至高的感人故事 。 战斗进化为更具策略性的“动态指令RPG战斗”。 故事的舞台发生在异国他乡的“夏威夷”，为系列首度。 玩转各色夏威夷独特的娱乐场所吧！",
         "descriptionOriginal": "从“人生低谷”东山再起的男人——春日一番，以及面临“人生最后”之战的男人——桐生一马。 由两位主角演绎的超大作RPG，系列至高的感人故事 。 战斗进化为更具策略性的“动态指令RPG战斗”。 故事的舞台发生在异国他乡的“夏威夷”，为系列首度。 玩转各色夏威夷独特的娱乐场所吧！",
         "descriptionTranslated": false,
-        "userTags": [],
-        "userTagsFetchedAt": 1789561409376
+        "userTags": [
+          "动作",
+          "日系角色扮演",
+          "冒险",
+          "回合制战斗",
+          "色情内容",
+          "喜剧",
+          "单人",
+          "剧情丰富",
+          "欢乐",
+          "情感",
+          "暴力",
+          "回合制",
+          "动作角色扮演",
+          "角色扮演",
+          "动作冒险",
+          "鲜血",
+          "清版动作",
+          "武术",
+          "好评原声音轨",
+          "彩色"
+        ],
+        "userTagsFetchedAt": 1789562551970,
+        "bundleIds": [
+          42073
+        ]
       },
       "createdAt": 1789200405077,
-      "updatedAt": 1789561163866
+      "updatedAt": 1789562360331
     },
     {
       "appid": 2185060,
@@ -17010,14 +17608,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789561164595
+        "updatedAt": 1789562361033
       },
       "rating": {
         "score": 9.8,
         "positive": 95,
         "total": 3864,
         "desc": "Very Positive",
-        "updatedAt": 1789561165255
+        "updatedAt": 1789562361731
       },
       "historicalLow": {
         "price": null,
@@ -17184,7 +17782,7 @@
         ]
       },
       "createdAt": 1789200402590,
-      "updatedAt": 1789561165255
+      "updatedAt": 1789562361731
     },
     {
       "appid": 2215430,
@@ -17199,14 +17797,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789561165989
+        "updatedAt": 1789562362429
       },
       "rating": {
         "score": 9.2,
         "positive": 88,
         "total": 9508,
         "desc": "Very Positive",
-        "updatedAt": 1789561166744
+        "updatedAt": 1789562363134
       },
       "historicalLow": {
         "price": 238.8,
@@ -17300,11 +17898,32 @@
         "description": "风暴将至，在PC上体验完整的《Ghost of Tsushima导演剪辑版》，在这场开放世界动作冒险中开辟自己的道路，发现隐藏的奇景。本游戏由Sucker Punch Productions、Nixxes Software和PlayStation Studios为您呈现。",
         "descriptionOriginal": "风暴将至，在PC上体验完整的《Ghost of Tsushima导演剪辑版》，在这场开放世界动作冒险中开辟自己的道路，发现隐藏的奇景。本游戏由Sucker Punch Productions、Nixxes Software和PlayStation Studios为您呈现。",
         "descriptionTranslated": false,
-        "userTags": [],
-        "userTagsFetchedAt": 1789561410449
+        "userTags": [
+          "开放世界",
+          "动作",
+          "剧情丰富",
+          "单人",
+          "冒险",
+          "潜行",
+          "战斗",
+          "忍者",
+          "第三人称",
+          "类魂系列",
+          "动作冒险",
+          "武士",
+          "历史",
+          "动作角色扮演",
+          "氛围",
+          "探索",
+          "多人",
+          "鲜血",
+          "暴力",
+          "在线合作"
+        ],
+        "userTagsFetchedAt": 1789562552945
       },
       "createdAt": 1789200398979,
-      "updatedAt": 1789561166744
+      "updatedAt": 1789562363134
     },
     {
       "appid": 2291850,
@@ -17319,14 +17938,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789561167343
+        "updatedAt": 1789562363814
       },
       "rating": {
         "score": 9.9,
         "positive": 99,
         "total": 3611,
         "desc": "Overwhelmingly Positive",
-        "updatedAt": 1789561168100
+        "updatedAt": 1789562364533
       },
       "historicalLow": {
         "price": 7.5,
@@ -17411,7 +18030,7 @@
         ]
       },
       "createdAt": 1789200396557,
-      "updatedAt": 1789561168101,
+      "updatedAt": 1789562364533,
       "nameZh": "地下花",
       "nameSource": "machine-translation",
       "nameTranslatedAt": 1789560207086
@@ -17429,14 +18048,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789561168784
+        "updatedAt": 1789562365224
       },
       "rating": {
         "score": 8.4,
         "positive": 80,
         "total": 7317,
         "desc": "Mostly Positive",
-        "updatedAt": 1789561169590
+        "updatedAt": 1789562365937
       },
       "historicalLow": {
         "price": 276,
@@ -17508,11 +18127,32 @@
         "description": "体验这个荣获超过300项年度最佳游戏奖项肯定的作品，现已登陆PC。通过强化的图形效果、Roguelike生存体验“赴死之旅”等游戏模式以及更多其他内容，探索艾莉和埃比的故事。",
         "descriptionOriginal": "体验这个荣获超过300项年度最佳游戏奖项肯定的作品，现已登陆PC。通过强化的图形效果、Roguelike生存体验“赴死之旅”等游戏模式以及更多其他内容，探索艾莉和埃比的故事。",
         "descriptionTranslated": false,
-        "userTags": [],
-        "userTagsFetchedAt": 1789561411544
+        "userTags": [
+          "剧情丰富",
+          "后末日",
+          "第三人称射击",
+          "动作冒险",
+          "LGBTQ+",
+          "恐怖",
+          "第三人称",
+          "动作",
+          "潜行",
+          "情感",
+          "拟真",
+          "单人",
+          "氛围",
+          "生存",
+          "冒险",
+          "生存恐怖",
+          "惊悚",
+          "黑暗",
+          "续作",
+          "女性主角"
+        ],
+        "userTagsFetchedAt": 1789562554044
       },
       "createdAt": 1789200394758,
-      "updatedAt": 1789561169590,
+      "updatedAt": 1789562365937,
       "nameZh": "《最后生还者™ 第二部分》重制版",
       "nameSource": "machine-translation",
       "nameTranslatedAt": 1789561310972
@@ -17530,14 +18170,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789561170149
+        "updatedAt": 1789562366624
       },
       "rating": {
         "score": 9.9,
         "positive": 100,
         "total": 2960,
         "desc": "Overwhelmingly Positive",
-        "updatedAt": 1789561170910
+        "updatedAt": 1789562367338
       },
       "historicalLow": {
         "price": 29.4,
@@ -17640,7 +18280,7 @@
         ]
       },
       "createdAt": 1789200389919,
-      "updatedAt": 1789561170910,
+      "updatedAt": 1789562367338,
       "nameZh": "是的",
       "nameSource": "machine-translation",
       "nameTranslatedAt": 1789560207577
@@ -17658,14 +18298,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789561171532
+        "updatedAt": 1789562368011
       },
       "rating": {
         "score": 4,
         "positive": 32,
         "total": 99053,
         "desc": "Mostly Negative",
-        "updatedAt": 1789561172273
+        "updatedAt": 1789562368730
       },
       "historicalLow": {
         "price": 88,
@@ -17765,7 +18405,7 @@
         ]
       },
       "createdAt": 1789200385710,
-      "updatedAt": 1789561172273,
+      "updatedAt": 1789562368730,
       "nameZh": "杀戮尖塔2",
       "nameSource": "machine-translation",
       "nameTranslatedAt": 1789560207974
@@ -17783,14 +18423,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789561173054
+        "updatedAt": 1789562369417
       },
       "rating": {
         "score": 9.6,
         "positive": 93,
         "total": 15274,
         "desc": "Very Positive",
-        "updatedAt": 1789561173651
+        "updatedAt": 1789562370133
       },
       "historicalLow": {
         "price": 49,
@@ -17891,7 +18531,7 @@
         ]
       },
       "createdAt": 1789200382652,
-      "updatedAt": 1789561173651,
+      "updatedAt": 1789562370133,
       "nameZh": "流浪者",
       "nameSource": "machine-translation",
       "nameTranslatedAt": 1789560208371
@@ -17909,14 +18549,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789561174343
+        "updatedAt": 1789562370832
       },
       "rating": {
         "score": 9.6,
         "positive": 92,
         "total": 5811,
         "desc": "Very Positive",
-        "updatedAt": 1789561175067
+        "updatedAt": 1789562371540
       },
       "historicalLow": {
         "price": 29.7,
@@ -18033,7 +18673,7 @@
         ]
       },
       "createdAt": 1789200377845,
-      "updatedAt": 1789561175067
+      "updatedAt": 1789562371540
     },
     {
       "appid": 1366540,
@@ -18048,14 +18688,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789561175742
+        "updatedAt": 1789562372222
       },
       "rating": {
         "score": 9.9,
         "positive": 98,
         "total": 56383,
         "desc": "Overwhelmingly Positive",
-        "updatedAt": 1789561176497
+        "updatedAt": 1789562372938
       },
       "historicalLow": {
         "price": 56,
@@ -18165,7 +18805,7 @@
         ]
       },
       "createdAt": 1789200373586,
-      "updatedAt": 1789561176497
+      "updatedAt": 1789562372938
     },
     {
       "appid": 1369630,
@@ -18180,14 +18820,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789561177163
+        "updatedAt": 1789562373625
       },
       "rating": {
         "score": 9.6,
         "positive": 92,
-        "total": 17139,
+        "total": 17140,
         "desc": "Very Positive",
-        "updatedAt": 1789561177888
+        "updatedAt": 1789562374331
       },
       "historicalLow": {
         "price": 39.2,
@@ -18288,7 +18928,7 @@
         "userTagsFetchedAt": 1789560373995
       },
       "createdAt": 1789200371171,
-      "updatedAt": 1789561177888,
+      "updatedAt": 1789562374331,
       "nameZh": "安德百合：骑士的安静",
       "nameSource": "machine-translation",
       "nameTranslatedAt": 1789560209915
@@ -18306,14 +18946,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789561178555
+        "updatedAt": 1789562375013
       },
       "rating": {
         "score": 9.8,
         "positive": 96,
         "total": 66977,
         "desc": "Overwhelmingly Positive",
-        "updatedAt": 1789561179329
+        "updatedAt": 1789562375733
       },
       "historicalLow": {
         "price": 53.6,
@@ -18397,7 +19037,7 @@
         ]
       },
       "createdAt": 1789200367552,
-      "updatedAt": 1789561179329
+      "updatedAt": 1789562375733
     },
     {
       "appid": 1888930,
@@ -18412,14 +19052,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789561179953
+        "updatedAt": 1789562376417
       },
       "rating": {
         "score": 8.4,
         "positive": 80,
         "total": 14420,
         "desc": "Very Positive",
-        "updatedAt": 1789561180659
+        "updatedAt": 1789562377128
       },
       "historicalLow": {
         "price": 207,
@@ -18493,11 +19133,35 @@
         "description": "探索广受赞誉的游戏《The Last of Us™》，以这款游戏为灵感的同名电视剧同样大获好评。带领乔尔和艾莉穿越末日后的美国，遇见令人难忘的盟友和敌人，踏上一段充满挑战的旅程。",
         "descriptionOriginal": "探索广受赞誉的游戏《The Last of Us™》，以这款游戏为灵感的同名电视剧同样大获好评。带领乔尔和艾莉穿越末日后的美国，遇见令人难忘的盟友和敌人，踏上一段充满挑战的旅程。",
         "descriptionTranslated": false,
-        "userTags": [],
-        "userTagsFetchedAt": 1789561412639
+        "userTags": [
+          "剧情丰富",
+          "后末日",
+          "恐怖",
+          "僵尸",
+          "动作冒险",
+          "射击",
+          "单人",
+          "第三人称射击",
+          "生存",
+          "第三人称",
+          "生存恐怖",
+          "电影式",
+          "情感",
+          "动作",
+          "冒险",
+          "氛围",
+          "惊悚",
+          "重制",
+          "原声音轨",
+          "暴力"
+        ],
+        "userTagsFetchedAt": 1789562555216,
+        "bundleIds": [
+          30590
+        ]
       },
       "createdAt": 1789200363318,
-      "updatedAt": 1789561180659,
+      "updatedAt": 1789562377128,
       "nameZh": "最后生还者™ 第 I 部分",
       "nameSource": "machine-translation",
       "nameTranslatedAt": 1789561312148
@@ -18515,14 +19179,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789561181370
+        "updatedAt": 1789562377820
       },
       "rating": {
         "score": 7.5,
         "positive": 77,
         "total": 425,
         "desc": "Mostly Positive",
-        "updatedAt": 1789561182047
+        "updatedAt": 1789562378544
       },
       "historicalLow": {
         "price": null,
@@ -18580,11 +19244,35 @@
         "description": "Sunset Overdrive transforms an open-world apocalypse into your tactical playground. Zip, grind and wall-run across Sunset City with an unconventional arsenal. Hyper-agility, unique weapons, and customizable abilities deliver an explosive and irreverent adventure in the end times.",
         "descriptionOriginal": "Sunset Overdrive transforms an open-world apocalypse into your tactical playground. Zip, grind and wall-run across Sunset City with an unconventional arsenal. Hyper-agility, unique weapons, and customizable abilities deliver an explosive and irreverent adventure in the end times.",
         "descriptionTranslated": false,
-        "userTags": [],
-        "userTagsFetchedAt": 1789561413756
+        "userTags": [
+          "开放世界",
+          "动作",
+          "跑酷",
+          "角色自定义",
+          "第三人称射击",
+          "欢乐",
+          "冒险",
+          "单人",
+          "喜剧",
+          "暴力",
+          "僵尸",
+          "彩色",
+          "后末日",
+          "好评原声音轨",
+          "第三人称",
+          "射击",
+          "快节奏",
+          "沙盒",
+          "女性主角",
+          "3D 平台"
+        ],
+        "userTagsFetchedAt": 1789562556343,
+        "bundleIds": [
+          9764
+        ]
       },
       "createdAt": 1789200357301,
-      "updatedAt": 1789561182047,
+      "updatedAt": 1789562378544,
       "nameZh": "日落超速",
       "nameSource": "machine-translation",
       "nameTranslatedAt": 1789560211100
@@ -18602,14 +19290,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789561182733
+        "updatedAt": 1789562379248
       },
       "rating": {
         "score": 7.5,
         "positive": 79,
         "total": 9170,
         "desc": "Mostly Positive",
-        "updatedAt": 1789561183444
+        "updatedAt": 1789562379935
       },
       "historicalLow": {
         "price": null,
@@ -18821,7 +19509,7 @@
         ]
       },
       "createdAt": 1789200354279,
-      "updatedAt": 1789561183444,
+      "updatedAt": 1789562379935,
       "nameZh": "帝国时代 III：决定版",
       "nameSource": "machine-translation",
       "nameTranslatedAt": 1789561312883
@@ -18839,15 +19527,15 @@
         "discountExpiration": 1790010000000,
         "expirationSource": "featuredcategories",
         "saleEvent": "特惠",
-        "updatedAt": 1789561184229,
-        "expirationCheckedAt": 1789561279478
+        "updatedAt": 1789562380614,
+        "expirationCheckedAt": 1789562475762
       },
       "rating": {
         "score": 9.8,
         "positive": 96,
         "total": 101256,
         "desc": "Overwhelmingly Positive",
-        "updatedAt": 1789561184857
+        "updatedAt": 1789562381341
       },
       "historicalLow": {
         "price": 208.6,
@@ -18954,11 +19642,32 @@
         "description": "《博德之门3》是一款以“龙与地下城”世界为背景的、强调故事与队伍冒险体验的角色扮演游戏。你的每一个选择，都会编织出一段关于同伴与背叛、生存与牺牲，以及至上力量诱惑的故事。",
         "descriptionOriginal": "《博德之门3》是一款以“龙与地下城”世界为背景的、强调故事与队伍冒险体验的角色扮演游戏。你的每一个选择，都会编织出一段关于同伴与背叛、生存与牺牲，以及至上力量诱惑的故事。",
         "descriptionTranslated": false,
-        "userTags": [],
-        "userTagsFetchedAt": 1789561414836
+        "userTags": [
+          "角色扮演",
+          "角色自定义",
+          "选择取向",
+          "回合制战斗",
+          "剧情丰富",
+          "色情内容",
+          "电脑角色扮演",
+          "奇幻",
+          "冒险",
+          "爱情",
+          "在线合作",
+          "多人",
+          "裸露",
+          "策略",
+          "单人",
+          "合作战役",
+          "职业导向",
+          "黑暗奇幻",
+          "战斗",
+          "LGBTQ+"
+        ],
+        "userTagsFetchedAt": 1789562557420
       },
       "createdAt": 1789200350053,
-      "updatedAt": 1789561184857
+      "updatedAt": 1789562381341
     },
     {
       "appid": 1938010,
@@ -18973,14 +19682,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789561185602
+        "updatedAt": 1789562382050
       },
       "rating": {
         "score": 4,
         "positive": 32,
         "total": 3717,
         "desc": "Mostly Negative",
-        "updatedAt": 1789561186238
+        "updatedAt": 1789562382739
       },
       "historicalLow": {
         "price": 20.9,
@@ -19084,10 +19793,10 @@
           "龙",
           "自然"
         ],
-        "userTagsFetchedAt": 1789561386273
+        "userTagsFetchedAt": 1789562528800
       },
       "createdAt": 1789200345183,
-      "updatedAt": 1789561186238,
+      "updatedAt": 1789562382739,
       "nameZh": "《狂野之心™》",
       "nameSource": "machine-translation",
       "nameTranslatedAt": 1789560212554
@@ -19105,14 +19814,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789561186931
+        "updatedAt": 1789562383429
       },
       "rating": {
         "score": 9.2,
         "positive": 89,
         "total": 16084,
         "desc": "Very Positive",
-        "updatedAt": 1789561187691
+        "updatedAt": 1789562384125
       },
       "historicalLow": {
         "price": 75.6,
@@ -19217,7 +19926,7 @@
         ]
       },
       "createdAt": 1789200336641,
-      "updatedAt": 1789561187691,
+      "updatedAt": 1789562384125,
       "nameZh": "哈迪斯二世",
       "nameSource": "machine-translation",
       "nameTranslatedAt": 1789561314109
@@ -19235,14 +19944,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789561188412
+        "updatedAt": 1789562384845
       },
       "rating": {
         "score": 9.2,
         "positive": 89,
         "total": 22845,
         "desc": "Very Positive",
-        "updatedAt": 1789561189102
+        "updatedAt": 1789562385535
       },
       "historicalLow": {
         "price": 59.4,
@@ -19526,7 +20235,7 @@
         ]
       },
       "createdAt": 1789200309480,
-      "updatedAt": 1789561189102,
+      "updatedAt": 1789562385535,
       "nameZh": "十字军之王3",
       "nameSource": "machine-translation",
       "nameTranslatedAt": 1789560213458
@@ -19544,14 +20253,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789561189883
+        "updatedAt": 1789562386234
       },
       "rating": {
         "score": 9.9,
         "positive": 100,
         "total": 2080,
         "desc": "Overwhelmingly Positive",
-        "updatedAt": 1789561190467
+        "updatedAt": 1789562386937
       },
       "historicalLow": {
         "price": 38,
@@ -19651,7 +20360,7 @@
         ]
       },
       "createdAt": 1789200306373,
-      "updatedAt": 1789561190467,
+      "updatedAt": 1789562386937,
       "nameZh": "帕特里克的帕拉盒",
       "nameSource": "machine-translation",
       "nameTranslatedAt": 1789561315554
@@ -19669,14 +20378,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789561191182
+        "updatedAt": 1789562387613
       },
       "rating": {
         "score": 8.9,
         "positive": 85,
         "total": 3898,
         "desc": "Very Positive",
-        "updatedAt": 1789561191910
+        "updatedAt": 1789562388330
       },
       "historicalLow": {
         "price": 16.8,
@@ -19802,7 +20511,7 @@
         ]
       },
       "createdAt": 1789200303362,
-      "updatedAt": 1789561191910
+      "updatedAt": 1789562388330
     },
     {
       "appid": 1292940,
@@ -19817,14 +20526,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789561192652
+        "updatedAt": 1789562389010
       },
       "rating": {
         "score": 9.9,
         "positive": 98,
         "total": 3232,
         "desc": "Overwhelmingly Positive",
-        "updatedAt": 1789561193256
+        "updatedAt": 1789562389757
       },
       "historicalLow": {
         "price": 6.6,
@@ -19900,7 +20609,7 @@
         ]
       },
       "createdAt": 1789200296684,
-      "updatedAt": 1789561193256,
+      "updatedAt": 1789562389757,
       "nameZh": "密室逃脱合集",
       "nameSource": "machine-translation",
       "nameTranslatedAt": 1789560214644
@@ -19918,14 +20627,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789561194115
+        "updatedAt": 1789562390440
       },
       "rating": {
         "score": 9.2,
         "positive": 91,
         "total": 18276,
         "desc": "Very Positive",
-        "updatedAt": 1789561194685
+        "updatedAt": 1789562391133
       },
       "historicalLow": {
         "price": 67,
@@ -20214,7 +20923,7 @@
         ]
       },
       "createdAt": 1789200291860,
-      "updatedAt": 1789561194685
+      "updatedAt": 1789562391133
     },
     {
       "appid": 610370,
@@ -20229,14 +20938,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789561195374
+        "updatedAt": 1789562391842
       },
       "rating": {
         "score": 9.9,
         "positive": 98,
         "total": 4390,
         "desc": "Overwhelmingly Positive",
-        "updatedAt": 1789561196056
+        "updatedAt": 1789562392540
       },
       "historicalLow": {
         "price": 13.6,
@@ -20384,7 +21093,7 @@
         ]
       },
       "createdAt": 1789200286347,
-      "updatedAt": 1789561196056,
+      "updatedAt": 1789562392540,
       "nameZh": "亡命之徒 III",
       "nameSource": "machine-translation",
       "nameTranslatedAt": 1789561316803
@@ -20402,14 +21111,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789561196814
+        "updatedAt": 1789562393232
       },
       "rating": {
         "score": 9.2,
         "positive": 89,
         "total": 37777,
         "desc": "Very Positive",
-        "updatedAt": 1789561197468
+        "updatedAt": 1789562393924
       },
       "historicalLow": {
         "price": 26.4,
@@ -20596,7 +21305,7 @@
         ]
       },
       "createdAt": 1789200283975,
-      "updatedAt": 1789561197468
+      "updatedAt": 1789562393924
     },
     {
       "appid": 694280,
@@ -20611,14 +21320,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789561198333
+        "updatedAt": 1789562394714
       },
       "rating": {
         "score": 8.4,
         "positive": 82,
         "total": 3282,
         "desc": "Very Positive",
-        "updatedAt": 1789561198839
+        "updatedAt": 1789562395324
       },
       "historicalLow": {
         "price": 8.4,
@@ -20891,7 +21600,7 @@
         ]
       },
       "createdAt": 1789200280943,
-      "updatedAt": 1789561198839,
+      "updatedAt": 1789562395324,
       "nameZh": "僵尸军团4：死亡之战",
       "nameSource": "machine-translation",
       "nameTranslatedAt": 1789560216049
@@ -20909,14 +21618,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789561199565
+        "updatedAt": 1789562396021
       },
       "rating": {
         "score": 8.9,
         "positive": 87,
         "total": 13111,
         "desc": "Very Positive",
-        "updatedAt": 1789561200241
+        "updatedAt": 1789562396717
       },
       "historicalLow": {
         "price": 9,
@@ -21186,7 +21895,7 @@
         ]
       },
       "createdAt": 1789200275496,
-      "updatedAt": 1789561200241
+      "updatedAt": 1789562396717
     },
     {
       "appid": 753640,
@@ -21201,14 +21910,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789561200998
+        "updatedAt": 1789562397407
       },
       "rating": {
         "score": 9.9,
         "positive": 97,
         "total": 17357,
         "desc": "Overwhelmingly Positive",
-        "updatedAt": 1789561201662
+        "updatedAt": 1789562398137
       },
       "historicalLow": {
         "price": 47.5,
@@ -21336,7 +22045,7 @@
         ]
       },
       "createdAt": 1789200270711,
-      "updatedAt": 1789561201662,
+      "updatedAt": 1789562398137,
       "nameZh": "星际拓荒",
       "nameSource": "machine-translation",
       "nameTranslatedAt": 1789561317683
@@ -21354,14 +22063,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789561202328
+        "updatedAt": 1789562398817
       },
       "rating": {
         "score": 9.6,
         "positive": 94,
         "total": 1497,
         "desc": "Very Positive",
-        "updatedAt": 1789561203117
+        "updatedAt": 1789562399526
       },
       "historicalLow": {
         "price": 14,
@@ -21462,7 +22171,7 @@
         ]
       },
       "createdAt": 1789200267638,
-      "updatedAt": 1789561203117,
+      "updatedAt": 1789562399526,
       "nameZh": "苏普拉兰",
       "nameSource": "machine-translation",
       "nameTranslatedAt": 1789560216848
@@ -21480,14 +22189,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789561203782
+        "updatedAt": 1789562400237
       },
       "rating": {
         "score": 9.6,
         "positive": 92,
-        "total": 23744,
+        "total": 23745,
         "desc": "Very Positive",
-        "updatedAt": 1789561204430
+        "updatedAt": 1789562400943
       },
       "historicalLow": {
         "price": 24.8,
@@ -21779,7 +22488,7 @@
         ]
       },
       "createdAt": 1789200254926,
-      "updatedAt": 1789561204430,
+      "updatedAt": 1789562400943,
       "nameZh": "帝国时代 II：决定版",
       "nameSource": "machine-translation",
       "nameTranslatedAt": 1789560217884
@@ -21797,14 +22506,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789561205174
+        "updatedAt": 1789562401602
       },
       "rating": {
         "score": 9.8,
         "positive": 96,
-        "total": 170969,
+        "total": 170972,
         "desc": "Overwhelmingly Positive",
-        "updatedAt": 1789561205875
+        "updatedAt": 1789562402326
       },
       "historicalLow": {
         "price": 134,
@@ -21871,7 +22580,7 @@
         "userTagsFetchedAt": 1789560395977
       },
       "createdAt": 1789200248257,
-      "updatedAt": 1789561205875,
+      "updatedAt": 1789562402326,
       "nameZh": "《只狼™：影逝二度》- GOTY 版",
       "nameSource": "machine-translation",
       "nameTranslatedAt": 1789561319949
@@ -21889,14 +22598,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789561206595
+        "updatedAt": 1789562403073
       },
       "rating": {
         "score": 8.4,
         "positive": 84,
         "total": 3555,
         "desc": "Very Positive",
-        "updatedAt": 1789561207241
+        "updatedAt": 1789562403726
       },
       "historicalLow": {
         "price": 25.8,
@@ -22170,7 +22879,7 @@
         ]
       },
       "createdAt": 1789200245276,
-      "updatedAt": 1789561207241,
+      "updatedAt": 1789562403726,
       "nameZh": "无尽空间™ 2",
       "nameSource": "machine-translation",
       "nameTranslatedAt": 1789560219585
@@ -22188,14 +22897,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789561207962
+        "updatedAt": 1789562404398
       },
       "rating": {
         "score": 9.8,
         "positive": 96,
         "total": 16789,
         "desc": "Overwhelmingly Positive",
-        "updatedAt": 1789561208677
+        "updatedAt": 1789562405118
       },
       "historicalLow": {
         "price": 7.6,
@@ -22284,7 +22993,7 @@
         ]
       },
       "createdAt": 1789200242244,
-      "updatedAt": 1789561208677,
+      "updatedAt": 1789562405118,
       "nameZh": "逃生2",
       "nameSource": "machine-translation",
       "nameTranslatedAt": 1789561320086
@@ -22302,14 +23011,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789561209353
+        "updatedAt": 1789562405813
       },
       "rating": {
         "score": 9.6,
         "positive": 92,
         "total": 3433,
         "desc": "Very Positive",
-        "updatedAt": 1789561210062
+        "updatedAt": 1789562406524
       },
       "historicalLow": {
         "price": 29.7,
@@ -22422,7 +23131,7 @@
         ]
       },
       "createdAt": 1789200239151,
-      "updatedAt": 1789561210062
+      "updatedAt": 1789562406524
     },
     {
       "appid": 532110,
@@ -22437,14 +23146,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789561210707
+        "updatedAt": 1789562407190
       },
       "rating": {
         "score": 9.9,
         "positive": 98,
         "total": 4414,
         "desc": "Overwhelmingly Positive",
-        "updatedAt": 1789561211449
+        "updatedAt": 1789562407914
       },
       "historicalLow": {
         "price": 6.1,
@@ -22527,7 +23236,7 @@
         ]
       },
       "createdAt": 1789200235552,
-      "updatedAt": 1789561211449,
+      "updatedAt": 1789562407914,
       "nameZh": "锈湖：根源",
       "nameSource": "machine-translation",
       "nameTranslatedAt": 1789560221209
@@ -22545,14 +23254,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789561212139
+        "updatedAt": 1789562408607
       },
       "rating": {
         "score": 9.9,
         "positive": 99,
         "total": 7329,
         "desc": "Overwhelmingly Positive",
-        "updatedAt": 1789561212904
+        "updatedAt": 1789562409314
       },
       "historicalLow": {
         "price": 49.5,
@@ -22653,10 +23362,10 @@
           "好评原声音轨",
           "鲜血"
         ],
-        "userTagsFetchedAt": 1789561387439
+        "userTagsFetchedAt": 1789562529919
       },
       "createdAt": 1789200231926,
-      "updatedAt": 1789561212904,
+      "updatedAt": 1789562409314,
       "nameZh": "半衰期：爱莉克斯",
       "nameSource": "machine-translation",
       "nameTranslatedAt": 1789561322034
@@ -22674,14 +23383,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789561213623
+        "updatedAt": 1789562410037
       },
       "rating": {
         "score": 9.6,
         "positive": 94,
         "total": 36615,
         "desc": "Very Positive",
-        "updatedAt": 1789561214267
+        "updatedAt": 1789562410741
       },
       "historicalLow": {
         "price": 27,
@@ -22941,7 +23650,7 @@
           "黑暗",
           "动作类 Rogue"
         ],
-        "userTagsFetchedAt": 1789561388572,
+        "userTagsFetchedAt": 1789562531030,
         "bundleIds": [
           14949,
           6306,
@@ -22949,7 +23658,7 @@
         ]
       },
       "createdAt": 1789200209151,
-      "updatedAt": 1789561214267
+      "updatedAt": 1789562410741
     },
     {
       "appid": 557600,
@@ -22964,14 +23673,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789561214899
+        "updatedAt": 1789562411402
       },
       "rating": {
         "score": 9.9,
         "positive": 98,
         "total": 10919,
         "desc": "Overwhelmingly Positive",
-        "updatedAt": 1789561215649
+        "updatedAt": 1789562412115
       },
       "historicalLow": {
         "price": 15,
@@ -23072,7 +23781,7 @@
         ]
       },
       "createdAt": 1789200194326,
-      "updatedAt": 1789561215649,
+      "updatedAt": 1789562412115,
       "nameZh": "戈罗戈阿",
       "nameSource": "machine-translation",
       "nameTranslatedAt": 1789560222438
@@ -23090,14 +23799,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789561216354
+        "updatedAt": 1789562412793
       },
       "rating": {
         "score": 9.2,
         "positive": 89,
         "total": 20571,
         "desc": "Very Positive",
-        "updatedAt": 1789561217031
+        "updatedAt": 1789562413524
       },
       "historicalLow": {
         "price": 99,
@@ -23179,7 +23888,7 @@
         "userTagsFetchedAt": 1789561417165
       },
       "createdAt": 1789199792368,
-      "updatedAt": 1789561217031,
+      "updatedAt": 1789562413524,
       "nameZh": "黑暗之魂™：重制版",
       "nameSource": "machine-translation",
       "nameTranslatedAt": 1789561322654
@@ -23197,14 +23906,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789561217731
+        "updatedAt": 1789562414204
       },
       "rating": {
         "score": 9.9,
         "positive": 97,
         "total": 65826,
         "desc": "Overwhelmingly Positive",
-        "updatedAt": 1789561218461
+        "updatedAt": 1789562414918
       },
       "historicalLow": {
         "price": 32,
@@ -23388,7 +24097,7 @@
           "独立",
           "抢先体验"
         ],
-        "userTagsFetchedAt": 1789561389612,
+        "userTagsFetchedAt": 1789562532120,
         "bundleIds": [
           46406,
           30317,
@@ -23396,7 +24105,7 @@
         ]
       },
       "createdAt": 1789199783608,
-      "updatedAt": 1789561218461,
+      "updatedAt": 1789562414918,
       "nameZh": "死亡细胞",
       "nameSource": "machine-translation",
       "nameTranslatedAt": 1789560223022
@@ -23414,14 +24123,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789561219202
+        "updatedAt": 1789562415591
       },
       "rating": {
         "score": 7.5,
         "positive": 77,
         "total": 7174,
         "desc": "Mostly Positive",
-        "updatedAt": 1789561219849
+        "updatedAt": 1789562416309
       },
       "historicalLow": {
         "price": 14,
@@ -23504,7 +24213,7 @@
         ]
       },
       "createdAt": 1789199777249,
-      "updatedAt": 1789561219849,
+      "updatedAt": 1789562416309,
       "nameZh": "孤岛惊魂3",
       "nameSource": "machine-translation",
       "nameTranslatedAt": 1789560223269
@@ -23522,14 +24231,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789561220523
+        "updatedAt": 1789562416997
       },
       "rating": {
         "score": 4,
         "positive": 46,
         "total": 5633,
         "desc": "Mixed",
-        "updatedAt": 1789561221299
+        "updatedAt": 1789562417709
       },
       "historicalLow": {
         "price": 79.2,
@@ -23654,11 +24363,37 @@
         "description": "传奇战术系列游戏再度回归！《英雄连3》是动作、战术与战略的完美结合。变身将军掌控实时战斗，引领全面攻势——你的每个选择都至关重要。",
         "descriptionOriginal": "传奇战术系列游戏再度回归！《英雄连3》是动作、战术与战略的完美结合。变身将军掌控实时战斗，引领全面攻势——你的每个选择都至关重要。",
         "descriptionTranslated": false,
-        "userTags": [],
-        "userTagsFetchedAt": 1789561419284
+        "userTags": [
+          "策略",
+          "单人",
+          "战争游戏",
+          "即时战略",
+          "多人",
+          "动作即时战略",
+          "二战",
+          "合作",
+          "玩家对战环境",
+          "即时战术",
+          "玩家对战",
+          "历史",
+          "军事",
+          "回合制战术",
+          "俯视",
+          "动作",
+          "回合战略",
+          "战术",
+          "选择取向",
+          "战争"
+        ],
+        "userTagsFetchedAt": 1789562558555,
+        "bundleIds": [
+          64260,
+          63878,
+          82772
+        ]
       },
       "createdAt": 1789199750962,
-      "updatedAt": 1789561221299,
+      "updatedAt": 1789562417709,
       "nameZh": "英雄连3",
       "nameSource": "machine-translation",
       "nameTranslatedAt": 1789560224226
@@ -23676,14 +24411,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789561221937
+        "updatedAt": 1789562418390
       },
       "rating": {
         "score": 7.5,
         "positive": 79,
         "total": 18764,
         "desc": "Mostly Positive",
-        "updatedAt": 1789561222677
+        "updatedAt": 1789562419109
       },
       "historicalLow": {
         "price": 39,
@@ -23743,11 +24478,32 @@
         "description": "DARK SOULS™ II：原罪学者。 当然，不管你是对是错，DARK SOULS™ II : Scholar of the First Sin，或者说是从初版特别“Direction Cut”版开始的全新体验，一触即触。",
         "descriptionOriginal": "DARK SOULS™ II：原罪学者。 当然，不管你是对是错，DARK SOULS™ II : Scholar of the First Sin，或者说是从初版特别“Direction Cut”版开始的全新体验，一触即触。",
         "descriptionTranslated": false,
-        "userTags": [],
-        "userTagsFetchedAt": 1789561420358
+        "userTags": [
+          "类魂系列",
+          "黑暗奇幻",
+          "角色扮演",
+          "低容错",
+          "动作",
+          "第三人称",
+          "氛围",
+          "动作角色扮演",
+          "角色自定义",
+          "合作",
+          "多人",
+          "奇幻",
+          "冒险",
+          "中世纪",
+          "黑暗",
+          "单人",
+          "故事架构丰富",
+          "剧情丰富",
+          "玩家对战",
+          "重制"
+        ],
+        "userTagsFetchedAt": 1789562559547
       },
       "createdAt": 1789199716591,
-      "updatedAt": 1789561222677,
+      "updatedAt": 1789562419109,
       "nameZh": "DARK SOULS™ II：原罪学者",
       "nameSource": "machine-translation",
       "nameTranslatedAt": 1789561324082
@@ -23765,14 +24521,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789561223334
+        "updatedAt": 1789562419791
       },
       "rating": {
         "score": 8.9,
         "positive": 85,
         "total": 1701,
         "desc": "Very Positive",
-        "updatedAt": 1789561224037
+        "updatedAt": 1789562420504
       },
       "historicalLow": {
         "price": 62,
@@ -23881,11 +24637,32 @@
         "description": "FROM SOFTWARE隆重呈獻，繼2011年DARK SOULS™後，萬眾矚目的系列續作DARK SOULS™ II正式推出！獨特的動作RPG玩法，加上超乎人智的艱困挑戰，將引領玩家進入遊戲的黑暗世界中，感受前所未有的戰慄體驗。 Dark Souls™ II將維持系列一貫灰暗晦澀的故事，並於單人劇情及多人遊戲中加入更多創新要素，帶來更加扣人心弦的遊戲歷程。",
         "descriptionOriginal": "FROM SOFTWARE隆重呈獻，繼2011年DARK SOULS™後，萬眾矚目的系列續作DARK SOULS™ II正式推出！獨特的動作RPG玩法，加上超乎人智的艱困挑戰，將引領玩家進入遊戲的黑暗世界中，感受前所未有的戰慄體驗。 Dark Souls™ II將維持系列一貫灰暗晦澀的故事，並於單人劇情及多人遊戲中加入更多創新要素，帶來更加扣人心弦的遊戲歷程。",
         "descriptionTranslated": false,
-        "userTags": [],
-        "userTagsFetchedAt": 1789561421446
+        "userTags": [
+          "类魂系列",
+          "角色扮演",
+          "低容错",
+          "黑暗奇幻",
+          "动作角色扮演",
+          "动作",
+          "冒险",
+          "探索",
+          "氛围",
+          "合作",
+          "多人",
+          "奇幻",
+          "史诗级",
+          "玩家对战",
+          "沉浸式",
+          "第三人称",
+          "重玩价值",
+          "开放世界",
+          "黑暗",
+          "中世纪"
+        ],
+        "userTagsFetchedAt": 1789562560712
       },
       "createdAt": 1789199704429,
-      "updatedAt": 1789561224037,
+      "updatedAt": 1789562420504,
       "nameZh": "黑暗之魂™ II",
       "nameSource": "machine-translation",
       "nameTranslatedAt": 1789560225413
@@ -23903,14 +24680,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789561224936
+        "updatedAt": 1789562421424
       },
       "rating": {
         "score": 4,
         "positive": 48,
-        "total": 13980,
+        "total": 13982,
         "desc": "Mixed",
-        "updatedAt": 1789561225483
+        "updatedAt": 1789562421906
       },
       "historicalLow": {
         "price": 138.6,
@@ -24167,13 +24944,13 @@
           "好评原声音轨",
           "心理恐怖"
         ],
-        "userTagsFetchedAt": 1789561390835,
+        "userTagsFetchedAt": 1789562533320,
         "bundleIds": [
           73583
         ]
       },
       "createdAt": 1789199688864,
-      "updatedAt": 1789561225483
+      "updatedAt": 1789562421906
     },
     {
       "appid": 255710,
@@ -24188,14 +24965,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789561226497
+        "updatedAt": 1789562422893
       },
       "rating": {
         "score": 9.2,
         "positive": 91,
-        "total": 60741,
+        "total": 60742,
         "desc": "Very Positive",
-        "updatedAt": 1789561226841
+        "updatedAt": 1789562423311
       },
       "historicalLow": {
         "price": 13.8,
@@ -24467,7 +25244,7 @@
         ]
       },
       "createdAt": 1789199682401,
-      "updatedAt": 1789561226841,
+      "updatedAt": 1789562423311,
       "nameZh": "城市：天际线",
       "nameSource": "machine-translation",
       "nameTranslatedAt": 1789561324884
@@ -24485,14 +25262,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789561227530
+        "updatedAt": 1789562423986
       },
       "rating": {
         "score": 9.8,
         "positive": 96,
         "total": 4926,
         "desc": "Overwhelmingly Positive",
-        "updatedAt": 1789561228251
+        "updatedAt": 1789562424702
       },
       "historicalLow": {
         "price": 18,
@@ -24571,7 +25348,7 @@
         ]
       },
       "createdAt": 1789199671365,
-      "updatedAt": 1789561228251,
+      "updatedAt": 1789562424702,
       "nameZh": "勇敢的心：伟大的战争™ / 无名战士：伟大战争的回忆™",
       "nameSource": "machine-translation",
       "nameTranslatedAt": 1789560226219
@@ -24589,14 +25366,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789561228917
+        "updatedAt": 1789562425394
       },
       "rating": {
         "score": 8.9,
         "positive": 87,
         "total": 8559,
         "desc": "Very Positive",
-        "updatedAt": 1789561229662
+        "updatedAt": 1789562426109
       },
       "historicalLow": {
         "price": 32.7,
@@ -24697,7 +25474,7 @@
         ]
       },
       "createdAt": 1789199656265,
-      "updatedAt": 1789561229662
+      "updatedAt": 1789562426109
     },
     {
       "appid": 264710,
@@ -24712,14 +25489,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789561230317
+        "updatedAt": 1789562426794
       },
       "rating": {
         "score": 9.9,
         "positive": 97,
         "total": 34380,
         "desc": "Overwhelmingly Positive",
-        "updatedAt": 1789561231022
+        "updatedAt": 1789562427505
       },
       "historicalLow": {
         "price": 32.7,
@@ -24823,7 +25600,7 @@
         ]
       },
       "createdAt": 1789199650264,
-      "updatedAt": 1789561231022
+      "updatedAt": 1789562427505
     },
     {
       "appid": 1962700,
@@ -24838,14 +25615,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789561231704
+        "updatedAt": 1789562428193
       },
       "rating": {
         "score": 7.5,
         "positive": 70,
         "total": 8739,
         "desc": "Mostly Positive",
-        "updatedAt": 1789561232437
+        "updatedAt": 1789562428902
       },
       "historicalLow": {
         "price": null,
@@ -24958,7 +25735,7 @@
         ]
       },
       "createdAt": 1789199644423,
-      "updatedAt": 1789561232437
+      "updatedAt": 1789562428902
     },
     {
       "appid": 268500,
@@ -24973,14 +25750,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789561233117
+        "updatedAt": 1789562429598
       },
       "rating": {
         "score": 7.5,
         "positive": 77,
         "total": 12984,
         "desc": "Mostly Positive",
-        "updatedAt": 1789561233846
+        "updatedAt": 1789562430305
       },
       "historicalLow": {
         "price": 9.5,
@@ -25144,7 +25921,7 @@
         ]
       },
       "createdAt": 1789199632217,
-      "updatedAt": 1789561233846,
+      "updatedAt": 1789562430305,
       "nameZh": "幽浮®2",
       "nameSource": "machine-translation",
       "nameTranslatedAt": 1789561326329
@@ -25162,15 +25939,15 @@
         "discountExpiration": 1790010000000,
         "expirationSource": "featuredcategories",
         "saleEvent": "特惠",
-        "updatedAt": 1789561234505,
-        "expirationCheckedAt": 1789561279478
+        "updatedAt": 1789562430983,
+        "expirationCheckedAt": 1789562475762
       },
       "rating": {
         "score": 9.2,
         "positive": 88,
         "total": 67011,
         "desc": "Very Positive",
-        "updatedAt": 1789561235243
+        "updatedAt": 1789562431707
       },
       "historicalLow": {
         "price": 69,
@@ -25299,7 +26076,7 @@
         ]
       },
       "createdAt": 1789199623232,
-      "updatedAt": 1789561235243
+      "updatedAt": 1789562431707
     },
     {
       "appid": 314650,
@@ -25314,14 +26091,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789561235937
+        "updatedAt": 1789562432396
       },
       "rating": {
         "score": 9.9,
         "positive": 97,
         "total": 2517,
         "desc": "Overwhelmingly Positive",
-        "updatedAt": 1789561236632
+        "updatedAt": 1789562433110
       },
       "historicalLow": {
         "price": 60,
@@ -25551,7 +26328,7 @@
         "userTagsFetchedAt": 1789561430313
       },
       "createdAt": 1789199605783,
-      "updatedAt": 1789561236632,
+      "updatedAt": 1789562433110,
       "nameZh": "太空引擎",
       "nameSource": "machine-translation",
       "nameTranslatedAt": 1789560227323
@@ -25569,14 +26346,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789561237297
+        "updatedAt": 1789562433783
       },
       "rating": {
         "score": 9.6,
         "positive": 93,
         "total": 8791,
         "desc": "Very Positive",
-        "updatedAt": 1789561238058
+        "updatedAt": 1789562434519
       },
       "historicalLow": {
         "price": 16.8,
@@ -25626,11 +26403,32 @@
         "description": "The Walking Dead: The Telltale Definitive Series 内含全 4 季游戏、400 Days 和 The Walking Dead:Michonne，共有 23 个不同章节、超过 50 小时的游戏内容。",
         "descriptionOriginal": "The Walking Dead: The Telltale Definitive Series 内含全 4 季游戏、400 Days 和 The Walking Dead:Michonne，共有 23 个不同章节、超过 50 小时的游戏内容。",
         "descriptionTranslated": false,
-        "userTags": [],
-        "userTagsFetchedAt": 1789561431369
+        "userTags": [
+          "选择取向",
+          "剧情丰富",
+          "互动小说",
+          "多结局",
+          "恐怖",
+          "僵尸",
+          "漫画",
+          "冒险",
+          "自选历险体验",
+          "后末日",
+          "视觉小说",
+          "指向点击",
+          "氛围",
+          "3D",
+          "第三人称",
+          "黑暗",
+          "动态旁白",
+          "对话丰富",
+          "反乌托邦",
+          "单人"
+        ],
+        "userTagsFetchedAt": 1789562561769
       },
       "createdAt": 1789199580443,
-      "updatedAt": 1789561238058,
+      "updatedAt": 1789562434519,
       "nameZh": "行尸走肉：揭秘最终系列",
       "nameSource": "machine-translation",
       "nameTranslatedAt": 1789561327288
@@ -25648,14 +26446,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789561238717
+        "updatedAt": 1789562435186
       },
       "rating": {
         "score": 9.2,
         "positive": 91,
         "total": 1261,
         "desc": "Very Positive",
-        "updatedAt": 1789561239432
+        "updatedAt": 1789562435910
       },
       "historicalLow": {
         "price": 67.2,
@@ -25714,7 +26512,7 @@
         "userTagsFetchedAt": 1789561432456
       },
       "createdAt": 1789199571448,
-      "updatedAt": 1789561239432,
+      "updatedAt": 1789562435910,
       "nameZh": "合金装备崛起：复仇",
       "nameSource": "machine-translation",
       "nameTranslatedAt": 1789560228005
@@ -25732,14 +26530,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789561240137
+        "updatedAt": 1789562436606
       },
       "rating": {
         "score": 9.6,
         "positive": 93,
         "total": 19787,
         "desc": "Very Positive",
-        "updatedAt": 1789561240814
+        "updatedAt": 1789562437307
       },
       "historicalLow": {
         "price": 23,
@@ -25865,7 +26663,7 @@
         "userTagsFetchedAt": 1789561433555
       },
       "createdAt": 1789199564670,
-      "updatedAt": 1789561240814
+      "updatedAt": 1789562437307
     },
     {
       "appid": 12150,
@@ -25880,14 +26678,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789561241501
+        "updatedAt": 1789562437986
       },
       "rating": {
         "score": 9.6,
         "positive": 92,
         "total": 330,
         "desc": "Very Positive",
-        "updatedAt": 1789561242292
+        "updatedAt": 1789562438702
       },
       "historicalLow": {
         "price": 15.8,
@@ -25941,7 +26739,7 @@
         "userTagsFetchedAt": 1789561434657
       },
       "createdAt": 1789199555039,
-      "updatedAt": 1789561242292,
+      "updatedAt": 1789562438702,
       "nameZh": "马克思佩恩2：马克思佩恩的陨落",
       "nameSource": "machine-translation",
       "nameTranslatedAt": 1789560229136
@@ -25959,14 +26757,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789561242935
+        "updatedAt": 1789562439421
       },
       "rating": {
         "score": 9.9,
         "positive": 98,
         "total": 24616,
         "desc": "Overwhelmingly Positive",
-        "updatedAt": 1789561243628
+        "updatedAt": 1789562440092
       },
       "historicalLow": {
         "price": 9.9,
@@ -26079,7 +26877,7 @@
         ]
       },
       "createdAt": 1789199542539,
-      "updatedAt": 1789561243628,
+      "updatedAt": 1789562440092,
       "nameZh": "《骑马与砍杀：战团》",
       "nameSource": "machine-translation",
       "nameTranslatedAt": 1789561328513
@@ -26097,14 +26895,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789561244366
+        "updatedAt": 1789562440783
       },
       "rating": {
         "score": 9.2,
         "positive": 88,
         "total": 26580,
         "desc": "Very Positive",
-        "updatedAt": 1789561245040
+        "updatedAt": 1789562441506
       },
       "historicalLow": {
         "price": 16.5,
@@ -26187,11 +26985,36 @@
         "description": "荣获超过200项年度游戏大奖的《The Elder Scrolls V: Skyrim》推出特别版，以令人惊叹的细致画面带来史诗奇幻巨作。特别版内含大获好评的主游戏、附加内容，还有全新功能。",
         "descriptionOriginal": "荣获超过200项年度游戏大奖的《The Elder Scrolls V: Skyrim》推出特别版，以令人惊叹的细致画面带来史诗奇幻巨作。特别版内含大获好评的主游戏、附加内容，还有全新功能。",
         "descriptionTranslated": false,
-        "userTags": [],
-        "userTagsFetchedAt": 1789561436841
+        "userTags": [
+          "开放世界",
+          "角色扮演",
+          "冒险",
+          "奇幻",
+          "单人",
+          "角色自定义",
+          "可模组化",
+          "龙",
+          "剧情丰富",
+          "魔法",
+          "第一人称",
+          "动作",
+          "氛围",
+          "好评原声音轨",
+          "第三人称",
+          "潜行",
+          "经典",
+          "重制",
+          "女性主角",
+          "步行模拟"
+        ],
+        "userTagsFetchedAt": 1789562562949,
+        "bundleIds": [
+          3783,
+          24386
+        ]
       },
       "createdAt": 1789199532499,
-      "updatedAt": 1789561245040,
+      "updatedAt": 1789562441506,
       "nameZh": "上古卷轴 V：天际特别版",
       "nameSource": "machine-translation",
       "nameTranslatedAt": 1789560229564
@@ -26209,14 +27032,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789561245706
+        "updatedAt": 1789562442207
       },
       "rating": {
         "score": 8.4,
         "positive": 82,
         "total": 2186,
         "desc": "Very Positive",
-        "updatedAt": 1789561246435
+        "updatedAt": 1789562442898
       },
       "historicalLow": {
         "price": 29,
@@ -26291,7 +27114,7 @@
         "userTagsFetchedAt": 1789561438001
       },
       "createdAt": 1789199524386,
-      "updatedAt": 1789561246435,
+      "updatedAt": 1789562442898,
       "nameZh": "马克思佩恩3",
       "nameSource": "machine-translation",
       "nameTranslatedAt": 1789560231207
@@ -26309,14 +27132,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789561247196
+        "updatedAt": 1789562443583
       },
       "rating": {
         "score": 9.8,
         "positive": 95,
         "total": 2803,
         "desc": "Overwhelmingly Positive",
-        "updatedAt": 1789561247862
+        "updatedAt": 1789562444299
       },
       "historicalLow": {
         "price": 5,
@@ -26382,11 +27205,35 @@
         "description": "A five-part adventure horror series set in the same universe as Robert Kirkman’s award-winning comic book series.",
         "descriptionOriginal": "A five-part adventure horror series set in the same universe as Robert Kirkman’s award-winning comic book series.",
         "descriptionTranslated": false,
-        "userTags": [],
-        "userTagsFetchedAt": 1789561439038
+        "userTags": [
+          "僵尸",
+          "剧情丰富",
+          "冒险",
+          "指向点击",
+          "剧集",
+          "选择取向",
+          "单人",
+          "恐怖",
+          "情感",
+          "自选历险体验",
+          "氛围",
+          "后末日",
+          "漫画",
+          "生存",
+          "快速反应事件",
+          "鲜血",
+          "动作",
+          "第三人称",
+          "视觉小说",
+          "多人"
+        ],
+        "userTagsFetchedAt": 1789562564051,
+        "bundleIds": [
+          13313
+        ]
       },
       "createdAt": 1789199516272,
-      "updatedAt": 1789561247862,
+      "updatedAt": 1789562444299,
       "nameZh": "行尸走肉",
       "nameSource": "machine-translation",
       "nameTranslatedAt": 1789561329684
@@ -26404,14 +27251,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789561248525
+        "updatedAt": 1789562445055
       },
       "rating": {
         "score": 6.5,
         "positive": 64,
         "total": 11,
         "desc": "Mixed",
-        "updatedAt": 1789561249229
+        "updatedAt": 1789562445724
       },
       "historicalLow": {
         "price": null,
@@ -26491,7 +27338,7 @@
         "userTagsFetchedAt": 1789561440328
       },
       "createdAt": 1789199506479,
-      "updatedAt": 1789561249229,
+      "updatedAt": 1789562445724,
       "nameZh": "猎犬：自动机",
       "nameSource": "machine-translation",
       "nameTranslatedAt": 1789560232180
@@ -26509,14 +27356,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789561249921
+        "updatedAt": 1789562446391
       },
       "rating": {
         "score": 5.5,
         "positive": 59,
         "total": 34,
         "desc": "Mixed",
-        "updatedAt": 1789561250624
+        "updatedAt": 1789562447109
       },
       "historicalLow": {
         "price": null,
@@ -26631,7 +27478,7 @@
         ]
       },
       "createdAt": 1789199455916,
-      "updatedAt": 1789561250624
+      "updatedAt": 1789562447109
     },
     {
       "appid": 3312020,
@@ -26646,14 +27493,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789561251299
+        "updatedAt": 1789562447778
       },
       "rating": {
         "score": 6.5,
         "positive": 64,
         "total": 77,
         "desc": "Mixed",
-        "updatedAt": 1789561252035
+        "updatedAt": 1789562448494
       },
       "historicalLow": {
         "price": null,
@@ -26730,7 +27577,7 @@
         "userTagsFetchedAt": 1789561442400
       },
       "createdAt": 1789199334456,
-      "updatedAt": 1789561252035,
+      "updatedAt": 1789562448494,
       "nameZh": "迷失在异常中",
       "nameSource": "machine-translation",
       "nameTranslatedAt": 1789561331422
@@ -26748,14 +27595,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789561252734
+        "updatedAt": 1789562449198
       },
       "rating": {
         "score": 8.4,
         "positive": 83,
         "total": 7950,
         "desc": "Very Positive",
-        "updatedAt": 1789561253739
+        "updatedAt": 1789562449905
       },
       "historicalLow": {
         "price": 10.8,
@@ -26980,11 +27827,36 @@
         "description": "欢迎来到终极暗杀世界。《HITMAN暗杀世界》汇集了《HITMAN》、《HITMAN 2》和《HITMAN 3》的精华内容，包括主要战役、契约模式、升级契约、行踪不定的目标街机模式以及由roguelike类型启发而来的HITMAN：Freelancer游戏模式。",
         "descriptionOriginal": "欢迎来到终极暗杀世界。《HITMAN暗杀世界》汇集了《HITMAN》、《HITMAN 2》和《HITMAN 3》的精华内容，包括主要战役、契约模式、升级契约、行踪不定的目标街机模式以及由roguelike类型启发而来的HITMAN：Freelancer游戏模式。",
         "descriptionTranslated": false,
-        "userTags": [],
-        "userTagsFetchedAt": 1789561443476
+        "userTags": [
+          "潜行",
+          "刺客",
+          "单人",
+          "虚拟现实",
+          "动作",
+          "沙盒",
+          "多人",
+          "暴力",
+          "射击",
+          "第三人称",
+          "第三人称射击",
+          "开放世界",
+          "拟真",
+          "解谜",
+          "冒险",
+          "电影式",
+          "鲜血",
+          "沉浸式模拟",
+          "欢乐",
+          "资本主义"
+        ],
+        "userTagsFetchedAt": 1789562565165,
+        "bundleIds": [
+          30335,
+          47369
+        ]
       },
       "createdAt": 1789199221077,
-      "updatedAt": 1789561253739,
+      "updatedAt": 1789562449905,
       "nameZh": "HITMAN 暗杀世界",
       "nameSource": "machine-translation",
       "nameTranslatedAt": 1789560233419
@@ -27002,14 +27874,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789561254290
+        "updatedAt": 1789562450599
       },
       "rating": {
         "score": 9.6,
         "positive": 93,
         "total": 41058,
         "desc": "Very Positive",
-        "updatedAt": 1789561254853
+        "updatedAt": 1789562451308
       },
       "historicalLow": {
         "price": 91.2,
@@ -27195,11 +28067,36 @@
         "description": "走进 15 世纪的欧洲，体验丰富多彩的开放世界，畅玩这款精彩的叙事驱动型角色扮演游戏，开启究极中世纪冒险，扮演年轻的亨利，踏上一场史诗级的旅程。",
         "descriptionOriginal": "走进 15 世纪的欧洲，体验丰富多彩的开放世界，畅玩这款精彩的叙事驱动型角色扮演游戏，开启究极中世纪冒险，扮演年轻的亨利，踏上一场史诗级的旅程。",
         "descriptionTranslated": false,
-        "userTags": [],
-        "userTagsFetchedAt": 1789561444544
+        "userTags": [
+          "角色扮演",
+          "中世纪",
+          "开放世界",
+          "单人",
+          "剧情丰富",
+          "第一人称",
+          "拟真",
+          "冒险",
+          "动作",
+          "历史",
+          "剑术",
+          "战斗",
+          "沉浸式",
+          "选择取向",
+          "氛围",
+          "架空历史",
+          "动作冒险",
+          "3D",
+          "LGBTQ+",
+          "色情内容"
+        ],
+        "userTagsFetchedAt": 1789562566197,
+        "bundleIds": [
+          58158,
+          60659
+        ]
       },
       "createdAt": 1789199208155,
-      "updatedAt": 1789561254853
+      "updatedAt": 1789562451308
     },
     {
       "appid": 1794680,
@@ -27214,14 +28111,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789561255505
+        "updatedAt": 1789562452001
       },
       "rating": {
         "score": 9.9,
         "positive": 97,
         "total": 26598,
         "desc": "Overwhelmingly Positive",
-        "updatedAt": 1789561256237
+        "updatedAt": 1789562452696
       },
       "historicalLow": {
         "price": null,
@@ -27427,7 +28324,7 @@
         ]
       },
       "createdAt": 1789199195781,
-      "updatedAt": 1789561256237
+      "updatedAt": 1789562452696
     },
     {
       "appid": 3332600,
@@ -27442,14 +28339,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789561256903
+        "updatedAt": 1789562453385
       },
       "rating": {
         "score": 9.6,
         "positive": 92,
         "total": 677,
         "desc": "Very Positive",
-        "updatedAt": 1789561257674
+        "updatedAt": 1789562454119
       },
       "historicalLow": {
         "price": 36.4,
@@ -27536,7 +28433,7 @@
         ]
       },
       "createdAt": 1789199164496,
-      "updatedAt": 1789561257674
+      "updatedAt": 1789562454119
     },
     {
       "appid": 1601570,
@@ -27551,14 +28448,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789561258303
+        "updatedAt": 1789562454790
       },
       "rating": {
         "score": 9.2,
         "positive": 88,
         "total": 3631,
         "desc": "Very Positive",
-        "updatedAt": 1789561259045
+        "updatedAt": 1789562455507
       },
       "historicalLow": {
         "price": 54.5,
@@ -27676,7 +28573,7 @@
         ]
       },
       "createdAt": 1789194107390,
-      "updatedAt": 1789561259045
+      "updatedAt": 1789562455507
     },
     {
       "appid": 346010,
@@ -27691,14 +28588,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789561259791
+        "updatedAt": 1789562456183
       },
       "rating": {
         "score": 9.9,
         "positive": 97,
         "total": 10925,
         "desc": "Overwhelmingly Positive",
-        "updatedAt": 1789561260436
+        "updatedAt": 1789562456923
       },
       "historicalLow": {
         "price": 5.8,
@@ -27846,7 +28743,7 @@
         ]
       },
       "createdAt": 1789194100122,
-      "updatedAt": 1789561260436
+      "updatedAt": 1789562456923
     },
     {
       "appid": 684410,
@@ -27861,14 +28758,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789561261251
+        "updatedAt": 1789562457575
       },
       "rating": {
         "score": 9.6,
         "positive": 92,
         "total": 1233,
         "desc": "Very Positive",
-        "updatedAt": 1789561261805
+        "updatedAt": 1789562458301
       },
       "historicalLow": {
         "price": 3.4,
@@ -27974,7 +28871,7 @@
         ]
       },
       "createdAt": 1789194090965,
-      "updatedAt": 1789561261805
+      "updatedAt": 1789562458301
     },
     {
       "appid": 108710,
@@ -27989,14 +28886,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789561262519
+        "updatedAt": 1789562458988
       },
       "rating": {
         "score": 9.2,
         "positive": 88,
         "total": 5379,
         "desc": "Very Positive",
-        "updatedAt": 1789561263241
+        "updatedAt": 1789562459693
       },
       "historicalLow": {
         "price": 5,
@@ -28106,7 +29003,7 @@
         ]
       },
       "createdAt": 1789194075102,
-      "updatedAt": 1789561263241,
+      "updatedAt": 1789562459693,
       "nameZh": "艾伦·韦克",
       "nameSource": "machine-translation",
       "nameTranslatedAt": 1789561332121
@@ -28124,14 +29021,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789561264032
+        "updatedAt": 1789562460384
       },
       "rating": {
         "score": 8.4,
         "positive": 83,
         "total": 3962,
         "desc": "Very Positive",
-        "updatedAt": 1789561264609
+        "updatedAt": 1789562461111
       },
       "historicalLow": {
         "price": 12.2,
@@ -28219,7 +29116,7 @@
         ]
       },
       "createdAt": 1789193285256,
-      "updatedAt": 1789561264609,
+      "updatedAt": 1789562461111,
       "nameZh": "僵尸军团三部曲",
       "nameSource": "machine-translation",
       "nameTranslatedAt": 1789560234690
@@ -28237,14 +29134,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789561265313
+        "updatedAt": 1789562461777
       },
       "rating": {
         "score": 8.9,
         "positive": 85,
         "total": 107,
         "desc": "Very Positive",
-        "updatedAt": 1789561266007
+        "updatedAt": 1789562462500
       },
       "historicalLow": {
         "price": 5.4,
@@ -28325,7 +29222,7 @@
         ]
       },
       "createdAt": 1789193256380,
-      "updatedAt": 1789561266007,
+      "updatedAt": 1789562462500,
       "nameZh": "流浪者：弗兰肯斯坦的生物",
       "nameSource": "machine-translation",
       "nameTranslatedAt": 1789561333814
@@ -28343,14 +29240,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789561266688
+        "updatedAt": 1789562463180
       },
       "rating": {
         "score": 9.6,
         "positive": 92,
         "total": 140654,
         "desc": "Very Positive",
-        "updatedAt": 1789561267457
+        "updatedAt": 1789562463904
       },
       "historicalLow": {
         "price": 75.6,
@@ -28465,7 +29362,7 @@
         ]
       },
       "createdAt": 1789193138200,
-      "updatedAt": 1789561267457
+      "updatedAt": 1789562463904
     },
     {
       "appid": 1545560,
@@ -28480,14 +29377,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789561268139
+        "updatedAt": 1789562464609
       },
       "rating": {
         "score": 9.6,
         "positive": 92,
         "total": 2017,
         "desc": "Very Positive",
-        "updatedAt": 1789561268932
+        "updatedAt": 1789562465300
       },
       "historicalLow": {
         "price": 37.3,
@@ -28609,7 +29506,7 @@
         ]
       },
       "createdAt": 1789193126410,
-      "updatedAt": 1789561268932
+      "updatedAt": 1789562465300
     },
     {
       "appid": 3117820,
@@ -28624,14 +29521,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789561269494
+        "updatedAt": 1789562465987
       },
       "rating": {
         "score": 9.6,
         "positive": 94,
         "total": 31579,
         "desc": "Very Positive",
-        "updatedAt": 1789561270252
+        "updatedAt": 1789562466719
       },
       "historicalLow": {
         "price": 64,
@@ -28757,7 +29654,7 @@
         ]
       },
       "createdAt": 1789193117365,
-      "updatedAt": 1789561270252
+      "updatedAt": 1789562466719
     },
     {
       "appid": 3636770,
@@ -28772,14 +29669,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789561270915
+        "updatedAt": 1789562467376
       },
       "rating": {
         "score": 9.9,
         "positive": 98,
-        "total": 4009,
+        "total": 4011,
         "desc": "Overwhelmingly Positive",
-        "updatedAt": 1789561271619
+        "updatedAt": 1789562468102
       },
       "historicalLow": {
         "price": 24.8,
@@ -28853,7 +29750,7 @@
         ]
       },
       "createdAt": 1789193108997,
-      "updatedAt": 1789561271619,
+      "updatedAt": 1789562468102,
       "nameZh": "湖的仆人",
       "nameSource": "machine-translation",
       "nameTranslatedAt": 1789560235515
@@ -28871,14 +29768,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789561272334
+        "updatedAt": 1789562468788
       },
       "rating": {
         "score": 9.9,
         "positive": 97,
         "total": 3175,
         "desc": "Overwhelmingly Positive",
-        "updatedAt": 1789561273112
+        "updatedAt": 1789562469506
       },
       "historicalLow": {
         "price": 39.2,
@@ -28959,7 +29856,7 @@
         ]
       },
       "createdAt": 1789193099884,
-      "updatedAt": 1789561273112,
+      "updatedAt": 1789562469506,
       "nameZh": "黑色灵魂",
       "nameSource": "machine-translation",
       "nameTranslatedAt": 1789561334486
@@ -28977,14 +29874,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789561273710
+        "updatedAt": 1789562470204
       },
       "rating": {
         "score": 9.9,
         "positive": 98,
         "total": 2796,
         "desc": "Overwhelmingly Positive",
-        "updatedAt": 1789561274428
+        "updatedAt": 1789562470904
       },
       "historicalLow": {
         "price": 39.2,
@@ -29065,7 +29962,7 @@
         ]
       },
       "createdAt": 1789193087637,
-      "updatedAt": 1789561274428,
+      "updatedAt": 1789562470904,
       "nameZh": "黑魂II",
       "nameSource": "machine-translation",
       "nameTranslatedAt": 1789560235954
@@ -29083,14 +29980,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789561275140
+        "updatedAt": 1789562471601
       },
       "rating": {
         "score": 8.4,
         "positive": 82,
         "total": 471,
         "desc": "Very Positive",
-        "updatedAt": 1789561275828
+        "updatedAt": 1789562472301
       },
       "historicalLow": {
         "price": 148.5,
@@ -29172,7 +30069,7 @@
         "userTagsFetchedAt": 1789561461142
       },
       "createdAt": 1789192967910,
-      "updatedAt": 1789561275828,
+      "updatedAt": 1789562472301,
       "nameZh": "国津神：女神之路",
       "nameSource": "machine-translation",
       "nameTranslatedAt": 1789560237095
@@ -29190,14 +30087,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789561276555
+        "updatedAt": 1789562473023
       },
       "rating": {
         "score": 9.2,
         "positive": 89,
         "total": 7493,
         "desc": "Very Positive",
-        "updatedAt": 1789561277264
+        "updatedAt": 1789562473700
       },
       "historicalLow": {
         "price": 26.7,
@@ -29354,7 +30251,7 @@
         ]
       },
       "createdAt": 1789192956054,
-      "updatedAt": 1789561277264
+      "updatedAt": 1789562473700
     },
     {
       "appid": 2442460,
@@ -29369,14 +30266,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1789561277931
+        "updatedAt": 1789562474404
       },
       "rating": {
         "score": 8.4,
         "positive": 84,
         "total": 281,
         "desc": "Very Positive",
-        "updatedAt": 1789561278646
+        "updatedAt": 1789562475100
       },
       "historicalLow": {
         "price": 46,
@@ -29508,7 +30405,7 @@
         ]
       },
       "createdAt": 1789192947581,
-      "updatedAt": 1789561278646
+      "updatedAt": 1789562475100
     }
   ]
 }
