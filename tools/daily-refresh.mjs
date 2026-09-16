@@ -27,6 +27,10 @@
  *      → 改用官方 featuredcategories 的 specials / dailydeal 分类，一次请求覆盖
  *        全部正在促销的游戏。已有关闭字段一律保留，只填空缺。
  *   B. Steam 用户标签（商店页 app_tag）+ 捆绑包标记，供页面做标签体系
+ *   A. 折扣截止时间：appdetails 绝大多数情况下不返回该字段。
+ *      改为三级来源：商店页倒计时（逐款，最准）→ 官方特惠日历 → appdetails；
+ *      优先级 appdetails / 手动 > 商店页 > 特惠日历，只填空缺、绝不编造。
+ *   B. Steam 用户标签 + 捆绑包：从商店页抓（l=schinese 直接是中文），带 30 天缓存。
  *   C. 无中文名的游戏由 CI 机翻补齐（CI 网络可达翻译接口，浏览器侧不可达）
  *   D. 【修复】saveDataFile 曾丢掉页面写入的 provenance 字段
  *      （source / syncedAt / gameCount / fingerprint / syncedFrom）
@@ -37,10 +41,12 @@
  *   REQ_INTERVAL_MS(700) REQ_TIMEOUT_MS(20000) MAX_GAMES(0=不限)
  *   SMTP_HOST SMTP_PORT(465) SMTP_SECURE(true) SMTP_USER SMTP_PASS MAIL_FROM MAIL_TO
  *   TAG_INTERVAL_MS(1100)  商店页请求间隔（比接口慢，避免被 Steam 挡）
- *   MAX_TAG_FETCH(150)     单次运行最多抓几款游戏的标签（0=不限）
+ *   MAX_TAG_FETCH(150)     单次运行最多抓几款游戏的商店页（0=不限）
  *   TAG_TTL_DAYS(30)       标签缓存有效期，未过期不重抓
  *   TRANSLATE_ENABLED(true) 是否用 CI 机翻补齐缺失的中文名
- *   TRANSLATE_INTERVAL_MS(400)
+ *   TRANSLATE_INTERVAL_MS(1200)  翻译请求间隔
+ *   TRANSLATE_RETRIES(3)   翻译被限流（HTTP 429）时的重试次数
+ *   DIAG(true)             是否输出诊断日志
  */
 
 import fs from 'node:fs';
@@ -86,7 +92,9 @@ const CFG = {
   tagTtlDays: Number(process.env.TAG_TTL_DAYS || 30),
   // 是否用 CI 机翻补齐缺失的中文名（CI 网络可达翻译接口，浏览器侧常常不可达）
   translate: String(process.env.TRANSLATE_ENABLED ?? 'true') === 'true',
-  translateIntervalMs: Number(process.env.TRANSLATE_INTERVAL_MS || 400),
+  translateIntervalMs: Number(process.env.TRANSLATE_INTERVAL_MS || 1200),
+  // 翻译接口在被限流（HTTP 429）时重试几次；每次退避递增（实测 400ms 间隔会大量 429）
+  translateRetries: Number(process.env.TRANSLATE_RETRIES || 3),
   // 诊断输出（把 Steam 真实返回的字段名打进日志，方便核对）
   diag: String(process.env.DIAG ?? 'true') === 'true',
   // 邮件相关
@@ -448,6 +456,54 @@ function parseBundleIds(html) {
   return ids;
 }
 
+/* ------------------------------------------------------------------
+ * 折扣截止时间（真实来源 #3：商店页倒计时）
+ *   featuredcategories 只在「特惠轮播」里给十来条，覆盖率极低
+ *   （实测 197 款里 54 款促销，只补上 3 款）。
+ *   真正逐款带倒计时的是商店页：限时促销会在购买区渲染 countdown 节点，
+ *   带 data-timestamp（Unix 秒）。这里按「由具体到宽泛」依次尝试多条模式，
+ *   命中即止；每条都必须通过「将来 400 天内」的合理性校验，否则视为解析错误丢弃。
+ *   命中与否、以及命中位置附近的原文，都会打进诊断日志，便于事后核对真实字段名。
+ * ------------------------------------------------------------------ */
+function toMs(v) {
+  const n = Number(v);
+  if (!isFinite(n) || n <= 0) return null;
+  return n < 1e12 ? n * 1000 : n;        // 秒 → 毫秒
+}
+const DEADLINE_PATTERNS = [
+  /class="[^"]*discount[^"]*countdown[^"]*"[\s\S]{0,400}?data-timestamp="(\d{9,13})"/i,
+  /class="[^"]*countdown[^"]*"[\s\S]{0,400}?data-timestamp="(\d{9,13})"/i,
+  /"discount_expiration"\s*:\s*"?(\d{9,13})"?/i,
+  /data-discount-expiration="(\d{9,13})"/i
+];
+function parseSaleDeadline(html) {
+  const diag = { matched: null, snippet: '' };
+  for (let i = 0; i < DEADLINE_PATTERNS.length; i++) {
+    const m = DEADLINE_PATTERNS[i].exec(html);
+    if (!m) continue;
+    const ms = toMs(m[1]);
+    if (ms == null) continue;
+    const now = Date.now();
+    if (ms <= now || ms > now + 400 * 86400000) continue;   // 合理性校验：必须是将来的、合理范围内的
+    diag.matched = '模式#' + (i + 1);
+    diag.snippet = html.slice(Math.max(0, m.index - 100), m.index + 240);
+    return { expirationMs: ms, diag };
+  }
+  const pi = html.search(/discount_pct|discount_block|game_area_purchase/);
+  diag.snippet = pi === -1 ? '(整页没有 discount 相关标记)' : html.slice(Math.max(0, pi - 80), pi + 300);
+  return { expirationMs: null, diag };
+}
+/* 商店页倒计时的优先级：不覆盖 appdetails（官方逐款接口）与手动值；
+   可以覆盖 featuredcategories（那只是特惠轮播，不够准）。 */
+function fillDeadlineFromStore(g, ms) {
+  if (!g.price || !g.price.isOnSale) return false;
+  const src = g.price.expirationSource;
+  if (g.price.discountExpiration != null && (src === 'appdetails' || src === 'manual')) return false;
+  g.price.discountExpiration = ms;
+  g.price.expirationSource = 'storepage';
+  return true;
+}
+
 async function fetchStorePage(appid) {
   await rateLimit(CFG.tagIntervalMs);
   return await fetchHTML(`https://store.steampowered.com/app/${appid}/?cc=${CFG.cc}&l=${CFG.lang}`);
@@ -459,12 +515,35 @@ function tagsNeedRefresh(g) {
   if (!d.userTagsFetchedAt) return true;
   return (nowMs() - d.userTagsFetchedAt) > CFG.tagTtlDays * 86400000;
 }
+/* 商店页的价值不只有标签：折扣截止时间也只能从商店页拿到。
+   所以「正在促销却没有截止时间（或记录的截止时间已过期）」的游戏，
+   即使标签是新的，也要再取一次商店页。 */
+function storePageNeedRefresh(g) {
+  if (tagsNeedRefresh(g)) return true;
+  if (g.price && g.price.isOnSale) {
+    const ms = toMs(g.price.discountExpiration);
+    if (ms == null) return true;
+    if (ms <= nowMs()) return true;
+  }
+  return false;
+}
+/* 「促销中且缺截止时间」的排最前，保证单次配额花在用户看得见的改进上 */
+function storePagePriority(g) {
+  return (g.price && g.price.isOnSale && toMs(g.price.discountExpiration) == null) ? 0 : 1;
+}
 
 async function enrichStoreData(games) {
-  const stat = { tried: 0, ok: 0, failed: 0, tags: 0, bundles: 0, diagTagHtml: null, diagBundleHtml: null };
-  let todo = games.filter(g => g && g.appid && tagsNeedRefresh(g));
+  const stat = {
+    tried: 0, ok: 0, failed: 0, tags: 0, withTags: 0, bundles: 0, deadlines: 0, needDeadline: 0,
+    diagTagHtml: null, diagBundleHtml: null, diagDeadline: null, diagDeadlineNoMatch: null
+  };
+  const all = games.filter(g => g && g.appid);
+  stat.needDeadline = all.filter(g => g.price && g.price.isOnSale && toMs(g.price.discountExpiration) == null).length;
+  let todo = all.filter(g => storePageNeedRefresh(g));
+  todo.sort((a, b) => storePagePriority(a) - storePagePriority(b));
   if (CFG.maxTagFetch > 0 && todo.length > CFG.maxTagFetch) {
-    log(`商店页标签待补 ${todo.length} 款，本次按 MAX_TAG_FETCH 只处理 ${CFG.maxTagFetch} 款（其余留给后续运行）。`);
+    log(`商店页待补 ${todo.length} 款（其中促销中却缺折扣截止时间的 ${stat.needDeadline} 款），` +
+        `本次按 MAX_TAG_FETCH 只处理 ${CFG.maxTagFetch} 款（缺截止时间的已排到最前）。`);
     todo = todo.slice(0, CFG.maxTagFetch);
   }
   if (!todo.length) return stat;
@@ -477,25 +556,38 @@ async function enrichStoreData(games) {
       if (!g.details) g.details = defaultDetails();
       const tags = parseUserTags(html);
       const bundles = parseBundleIds(html);
-      if (!stat.diagTagHtml) {
+      /* 诊断样本只在「真的解析出东西」时留一份，
+         否则样本会取自恰好没有标签的那一款，看起来像解析坏了 */
+      if (!stat.diagTagHtml && tags.length) {
         const idx = html.search(/<a\b[^>]*class="[^"]*\bapp_tag\b/);
-        stat.diagTagHtml = idx === -1 ? '(未匹配到 app_tag 区块)' : html.slice(idx, idx + 260);
+        stat.diagTagHtml = idx === -1 ? '(解析出标签但定位不到区块)' : html.slice(idx, idx + 260);
       }
-      if (!stat.diagBundleHtml) {
+      if (!stat.diagBundleHtml && bundles.length) {
         const bi = html.search(/data-ds-bundleid|data-bundleid|game_area_purchase_game_bundle/);
-        stat.diagBundleHtml = bi === -1 ? '(未匹配到 bundle 标记)' : html.slice(bi, bi + 260);
+        stat.diagBundleHtml = bi === -1 ? '(解析出标记但定位不到区块)' : html.slice(bi, bi + 260);
+      }
+      /* 折扣截止时间：来自商店页的倒计时节点 */
+      if (g.price && g.price.isOnSale) {
+        const dl = parseSaleDeadline(html);
+        if (dl.expirationMs) {
+          if (fillDeadlineFromStore(g, dl.expirationMs)) stat.deadlines++;
+          if (!stat.diagDeadline) stat.diagDeadline = (dl.diag.matched || '') + ' → ' + dl.diag.snippet;
+        } else if (!stat.diagDeadlineNoMatch) {
+          stat.diagDeadlineNoMatch = dl.diag.snippet;
+        }
       }
       g.details.userTags = tags;
       g.details.userTagsFetchedAt = nowMs();
       if (bundles.length) g.details.bundleIds = bundles;
       stat.ok++;
       stat.tags += tags.length;
+      if (tags.length) stat.withTags++;
       stat.bundles += bundles.length;
-      if (i % 20 === 19) log(`  标签进度 ${i + 1}/${todo.length}…`);
+      if (i % 20 === 19) log(`  商店页进度 ${i + 1}/${todo.length}…`);
     } catch (e) {
       stat.failed++;
       // 单款失败不影响整体
-      if (stat.failed <= 3) warn(`  标签抓取失败 ${g.name || g.appid}：${e.message}`);
+      if (stat.failed <= 3) warn(`  商店页抓取失败 ${g.name || g.appid}：${e.message}`);
     }
   }
   return stat;
@@ -503,9 +595,13 @@ async function enrichStoreData(games) {
 
 function printStoreDiag(stat) {
   if (!CFG.diag) return;
-  log(`[诊断·商店页] 尝试 ${stat.tried} 款，成功 ${stat.ok}，失败 ${stat.failed}，共取到标签 ${stat.tags} 个、捆绑包标记 ${stat.bundles} 个`);
+  log(`[诊断·商店页] 尝试 ${stat.tried} 款，成功 ${stat.ok}，失败 ${stat.failed}；` +
+      `其中 ${stat.withTags} 款解析出用户标签（共 ${stat.tags} 个）、捆绑包标记 ${stat.bundles} 个、` +
+      `补上折扣截止时间 ${stat.deadlines} 款（清单里促销却缺截止时间的共 ${stat.needDeadline} 款）`);
   if (stat.diagTagHtml) log('[诊断·商店页] 标签区首段 HTML：' + stat.diagTagHtml);
   if (stat.diagBundleHtml) log('[诊断·商店页] 捆绑包标记首段 HTML：' + stat.diagBundleHtml);
+  if (stat.diagDeadline) log('[诊断·商店页] 折扣倒计时命中：' + stat.diagDeadline);
+  if (stat.diagDeadlineNoMatch) log('[诊断·商店页] 有促销游戏未命中倒计时，购买区原文：' + stat.diagDeadlineNoMatch);
 }
 
 /* ==================================================================
@@ -517,13 +613,25 @@ function printStoreDiag(stat) {
  * 只翻译纯英文名，且已有缓存的直接复用，不重复请求。
  * ================================================================== */
 async function translateGoogle(text) {
-  await rateLimit(CFG.translateIntervalMs);
-  const url = 'https://translate.googleapis.com/translate_a/single?client=gtx&sl=auto&tl=zh-CN&dt=t&q=' +
-    encodeURIComponent(String(text).slice(0, 900));
-  const arr = await fetchJSON(url);
-  if (!Array.isArray(arr) || !Array.isArray(arr[0])) return null;
-  const s = arr[0].map(x => (x && x[0]) || '').join('').trim();
-  return s || null;
+  const q = encodeURIComponent(String(text).slice(0, 900));
+  const url = 'https://translate.googleapis.com/translate_a/single?client=gtx&sl=auto&tl=zh-CN&dt=t&q=' + q;
+  let lastErr = null;
+  const tries = Math.max(1, CFG.translateRetries);
+  for (let i = 0; i < tries; i++) {
+    if (i > 0) await sleep(CFG.translateIntervalMs * i * 2);   // 退避：1.2s → 2.4s …
+    await rateLimit(CFG.translateIntervalMs);
+    try {
+      const arr = await fetchJSON(url);
+      if (!Array.isArray(arr) || !Array.isArray(arr[0])) return null;
+      const s = arr[0].map(x => (x && x[0]) || '').join('').trim();
+      return s || null;
+    } catch (e) {
+      lastErr = e;
+      // 只有「被限流 / 服务端临时故障」才重试；其它错误直接放弃，别浪费时间
+      if (!/HTTP (429|500|502|503|504)/.test(String(e.message || ''))) throw e;
+    }
+  }
+  throw lastErr || new Error('translate failed');
 }
 
 async function enrichChineseNames(games) {
