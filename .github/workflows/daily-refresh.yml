@@ -92,7 +92,20 @@ jobs:
             echo "数据无变化，无需提交。"
           else
             git commit -m "chore: 每日自动刷新 $(date -u +'%Y-%m-%d %H:%M') UTC"
-            git push
+            # 历史问题 #2：如果这次运行期间远端 main 被别的提交推进了（例如从页面/脚本改了仓库文件），
+            # 直接 git push 会被拒 —— 之前 run #5 就是这么失败（exit 1）的。
+            # 这里改成「先 rebase 再推」，最多重试 3 次。
+            ok=0
+            for i in 1 2 3; do
+              git pull --rebase --autostash origin main || true
+              if git push origin HEAD:main; then ok=1; break; fi
+              echo "第 $i 次推送失败，5 秒后重试…"
+              sleep 5
+            done
+            if [ "$ok" != "1" ]; then
+              echo "::error::数据已在本地提交，但推送远端 main 失败（已重试 3 次）。请检查仓库 Settings → Actions → Workflow permissions 是否为 Read and write。"
+              exit 1
+            fi
             echo "✅ 已提交刷新后的数据"
           fi
 
