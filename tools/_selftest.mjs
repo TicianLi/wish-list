@@ -39,6 +39,11 @@ const FAKE = {
     price_overview: { final: 14900, initial: 29800, discount_percent: 50, currency: 'CNY' },
     developers: ['CD PROJEKT RED'], publishers: ['CD PROJEKT RED']
   },
+  '1627720': {           // P的谎言：打折，商店页只给【本地化文字】"周间特惠！9月22日截止"，
+    name: 'Lies of P', is_free: false,      // 整页没有 data-timestamp → 只能靠文字日期解析
+    price_overview: { final: 14900, initial: 29800, discount_percent: 50, currency: 'CNY' },
+    developers: ['NEOWIZ'], publishers: ['NEOWIZ']
+  },
   '9999999': null        // 故意不存在，测失败容错
 };
 const REVIEWS = {
@@ -70,6 +75,9 @@ const STORE_COUNTDOWNS = {
   '1245620': SOON - 7200,     // 故意给一个与官方 appdetails 不同的时间 → 验证「不覆盖官方来源」
   '1091500': SOON + 86400     // 只有商店页有 → 验证「商店页倒计时能补上」
 };
+/* 变体 B：Steam 只渲染一行本地化文字日期，整页【没有】data-timestamp。
+   复现用户截图里的 Lies of P（AppID 1627720）：购买框上方写「周间特惠！9月22日截止」。 */
+const STORE_TEXT_DATES = { '1627720': '周间特惠！9月22日截止' };
 const STORE_HTML = (id) => `<!doctype html><html><body>
 <div class="glance_ctn"><div class="glance_tags popular_tags">
 <a class="app_tag" href="/tags/29482/">类魂</a>
@@ -84,6 +92,10 @@ const STORE_HTML = (id) => `<!doctype html><html><body>
 ${STORE_COUNTDOWNS[id] ? `  <div class="discount_block game_purchase_discount">
     <div class="discount_pct">-50%</div>
     <div class="game_purchase_discount_countdown">特卖将于 <span class="countdown" data-timestamp="${STORE_COUNTDOWNS[id]}"></span> 后结束</div>
+  </div>` : ''}
+${STORE_TEXT_DATES[id] ? `  <div class="discount_block game_purchase_discount">
+    <div class="discount_pct">-50%</div>
+    <p class="game_purchase_discount_countdown">${STORE_TEXT_DATES[id]}</p>
   </div>` : ''}
 </div>
 </body></html>`;
@@ -171,6 +183,13 @@ const fixture = {
     {
       appid: 1091500, name: 'Cyberpunk 2077', originalName: 'Cyberpunk 2077',
       price: { current: 298, original: 298, discountPercent: 0, currency: 'CNY', isOnSale: false, discountExpiration: null, updatedAt: 0 },
+      rating: { score: null, positive: null, total: null, desc: null, updatedAt: 0 },
+      historicalLow: { price: null, count: null, confidence: 'pending', source: null, updatedAt: 0 },
+      targetPrice: null, note: '', dlcList: [], details: {}, createdAt: Date.now(), updatedAt: Date.now()
+    },
+    {
+      appid: 1627720, name: 'Lies of P', originalName: 'Lies of P',
+      price: { current: 149, original: 298, discountPercent: 50, currency: 'CNY', isOnSale: true, discountExpiration: null, expirationSource: null, saleEvent: null, updatedAt: 0 },
       rating: { score: null, positive: null, total: null, desc: null, updatedAt: 0 },
       historicalLow: { price: null, count: null, confidence: 'pending', source: null, updatedAt: 0 },
       targetPrice: null, note: '', dlcList: [], details: {}, createdAt: Date.now(), updatedAt: Date.now()
@@ -286,6 +305,22 @@ check('★ 商店页请求带上了年龄门 Cookie（否则拿到的会是年�
   seenStoreCookies.length > 0 && seenStoreCookies.every(c => /birthtime=\d+/.test(c) && /mature_content=1/.test(c)),
   '共 ' + seenStoreCookies.length + ' 次请求，首个 Cookie：' + (seenStoreCookies[0] || '(空)'));
 
+/* ---------- 变体 B：只有本地化文字日期、整页没有 data-timestamp ----------
+   用户截图实测：Lies of P 的商店页写着「周间特惠！9月22日截止」——
+   信息明明在页面上，我们却抓不到，因为它不是数字时间戳。
+   这条回归锁死「文字日期也必须解析出来」。 */
+const lop = byId['1627720'];
+const lopMs = lop && lop.price ? lop.price.discountExpiration : null;
+const lopBj = lopMs ? new Date(lopMs + 8 * 3600000) : null;   // 换算成北京时间读年月日
+check('★ 只有文字日期的促销也能解析出截止时间（Lies of P）', lopBj != null,
+  'discountExpiration=' + JSON.stringify(lopMs));
+check('★ 文字日期解析正确：北京时间 9 月 22 日 23:59',
+  !!lopBj && lopBj.getUTCMonth() === 8 && lopBj.getUTCDate() === 22 &&
+  lopBj.getUTCHours() === 23 && lopBj.getUTCMinutes() === 59,
+  lopBj ? lopBj.toISOString() + '（北京）' : 'null');
+check('该文字日期的来源标记为 storepage', !!lop && lop.price.expirationSource === 'storepage',
+  lop ? String(lop.price.expirationSource) : 'no game');
+
 check('输出文件含 refreshedAt', !!out.refreshedAt);
 check('来源指纹 source 未被 CI 刷掉', out.source === 'manual-sync', String(out.source));
 check('来源指纹 fingerprint 未被刷掉', out.fingerprint === 'deadbeefcafe1234', String(out.fingerprint));
@@ -302,8 +337,8 @@ check('快照 JSON 已正确生成', !!snap, '新增文件：' + (leaked.join(',
 if (snap) {
   try {
     const snapData = JSON.parse(fs.readFileSync(path.join(DATA_DIR, snap), 'utf8'));
-    check('快照里保留了来源指纹、且含 5 款游戏',
-      snapData.source === 'manual-sync' && (snapData.games || []).length === 5,
+    check('快照里保留了来源指纹、且含 6 款游戏',
+      snapData.source === 'manual-sync' && (snapData.games || []).length === 6,
       'games=' + ((snapData.games || []).length) + ' source=' + snapData.source);
   } catch (e) { check('快照 JSON 可解析', false, e.message); }
 }
