@@ -88,6 +88,7 @@ ${STORE_COUNTDOWNS[id] ? `  <div class="discount_block game_purchase_discount">
 </div>
 </body></html>`;
 
+const seenStoreCookies = [];
 const server = http.createServer((req, res) => {
   const u = new URL(req.url, 'http://x');
   const json = (body) => { res.writeHead(200, { 'Content-Type': 'application/json' }); res.end(JSON.stringify(body)); };
@@ -103,6 +104,7 @@ const server = http.createServer((req, res) => {
   }
   if (u.pathname.startsWith('/app/')) {
     const id = u.pathname.split('/')[2];
+    seenStoreCookies.push(req.headers.cookie || '');
     res.writeHead(200, { 'Content-Type': 'text/html; charset=utf-8' });
     return res.end(STORE_HTML(id));
   }
@@ -278,6 +280,11 @@ check('商店页倒计时不会覆盖官方 appdetails 的来源标记（艾尔�
   elden.price.expirationSource === 'appdetails' && elden.price.discountExpiration === SOON * 1000,
   String(elden.price.expirationSource) + ' / ' + elden.price.discountExpiration);
 check('促销中但缺截止时间的游戏会被排到商店页待补队列最前', cp.details && !!cp.details.userTagsFetchedAt);
+/* run #11 的实战教训：不带年龄 Cookie 时 Steam 返回「年龄确认页」，没有购买区，
+   于是 117 款全部"抓取成功"却一个倒计时都解析不出来。这里锁死：请求必须带年龄门 Cookie。 */
+check('★ 商店页请求带上了年龄门 Cookie（否则拿到的会是年龄确认页）',
+  seenStoreCookies.length > 0 && seenStoreCookies.every(c => /birthtime=\d+/.test(c) && /mature_content=1/.test(c)),
+  '共 ' + seenStoreCookies.length + ' 次请求，首个 Cookie：' + (seenStoreCookies[0] || '(空)'));
 
 check('输出文件含 refreshedAt', !!out.refreshedAt);
 check('来源指纹 source 未被 CI 刷掉', out.source === 'manual-sync', String(out.source));
