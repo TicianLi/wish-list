@@ -177,7 +177,8 @@ async function fetchHTML(url, opts = {}) {
     headers: {
       'User-Agent': UA,
       'Accept': 'text/html,application/xhtml+xml,*/*',
-      'Accept-Language': 'zh-CN,zh;q=0.9,en;q=0.8'
+      'Accept-Language': 'zh-CN,zh;q=0.9,en;q=0.8',
+      ...(opts.headers || {})
     }
   }, opts.timeoutMs);
   try {
@@ -473,24 +474,49 @@ function toMs(v) {
 const DEADLINE_PATTERNS = [
   /class="[^"]*discount[^"]*countdown[^"]*"[\s\S]{0,400}?data-timestamp="(\d{9,13})"/i,
   /class="[^"]*countdown[^"]*"[\s\S]{0,400}?data-timestamp="(\d{9,13})"/i,
+  /data-timestamp="(\d{9,13})"[\s\S]{0,300}?class="[^"]*countdown[^"]*"/i,
+  /InitDailyDealTimer\s*\(\s*[^,)]*,\s*(\d{9,13})/i,
   /"discount_expiration"\s*:\s*"?(\d{9,13})"?/i,
   /data-discount-expiration="(\d{9,13})"/i
 ];
+/* 只在「购买区」里找倒计时。
+   整页里还散布着推荐位 / 特惠栏 / 系列合集 的倒计时，
+   直接取整页第一个会张冠李戴 —— 把别的游戏的截止时间记到本款头上。
+   购买区起点：game_area_purchase；终点：whatever 先出现的描述区/标签区。 */
+function purchaseZoneOf(html) {
+  const pi = html.search(/id="game_area_purchase"|class="[^"]*game_area_purchase/);
+  if (pi === -1) return null;
+  const rest = html.slice(pi);
+  const b = rest.search(/id="game_meta_data"|id="game_area_description"|class="app_tag"/);
+  const end = b === -1 ? Math.min(rest.length, 20000) : Math.min(b, 20000);
+  return rest.slice(0, end);
+}
 function parseSaleDeadline(html) {
   const diag = { matched: null, snippet: '' };
-  for (let i = 0; i < DEADLINE_PATTERNS.length; i++) {
-    const m = DEADLINE_PATTERNS[i].exec(html);
-    if (!m) continue;
-    const ms = toMs(m[1]);
-    if (ms == null) continue;
-    const now = Date.now();
-    if (ms <= now || ms > now + 400 * 86400000) continue;   // 合理性校验：必须是将来的、合理范围内的
-    diag.matched = '模式#' + (i + 1);
-    diag.snippet = html.slice(Math.max(0, m.index - 100), m.index + 240);
-    return { expirationMs: ms, diag };
+  const zone = purchaseZoneOf(html);
+  const scopes = zone ? [['购买区', zone], ['整页', html]] : [['整页', html]];
+  for (const [where, text] of scopes) {
+    /* 同一区域里可能有多条候选（本体的购买框、合集包、DLC 各带一个倒计时）。
+       取「离购买区起点最近」的那条 —— 本体的购买框永远排在最前面。 */
+    let best = null;
+    for (let i = 0; i < DEADLINE_PATTERNS.length; i++) {
+      const m = DEADLINE_PATTERNS[i].exec(text);
+      if (!m) continue;
+      const ms = toMs(m[1]);
+      if (ms == null) continue;
+      const now = Date.now();
+      if (ms <= now || ms > now + 400 * 86400000) continue;   // 合理性校验：必须是将来的、合理范围内的
+      if (!best || m.index < best.index) best = { index: m.index, ms, pat: i + 1 };
+    }
+    if (best) {
+      diag.matched = where + '·模式#' + best.pat;
+      diag.snippet = text.slice(Math.max(0, best.index - 100), best.index + 240);
+      return { expirationMs: best.ms, diag };
+    }
   }
   const pi = html.search(/discount_pct|discount_block|game_area_purchase/);
-  diag.snippet = pi === -1 ? '(整页没有 discount 相关标记)' : html.slice(Math.max(0, pi - 80), pi + 300);
+  diag.snippet = (pi === -1 ? '(整页没有 discount 相关标记)' : html.slice(Math.max(0, pi - 80), pi + 300)) +
+    (zone ? '' : ' ｜ 也没有购买区（疑似年龄门 / 地区限制页）');
   return { expirationMs: null, diag };
 }
 /* 商店页倒计时的优先级：不覆盖 appdetails（官方逐款接口）与手动值；
@@ -504,9 +530,18 @@ function fillDeadlineFromStore(g, ms) {
   return true;
 }
 
+/* 年龄门（age gate）绕过：
+   Steam 对「成人内容」游戏，在没有年龄 Cookie 时会返回「年龄确认页」，
+   那一页没有购买区（没有 game_area_purchase / discount_block），
+   于是折扣倒计时永远解析不到 —— 这就是 run #11 里「117 款全部成功、
+   但补上折扣截止时间 0 款」的原因。
+   带上这两条 Cookie 后返回的就是完整商店页。Cookie 只影响「能不能看」，
+   不影响价格/地区（地区仍由 cc 参数决定），所以是安全的。 */
+const AGE_GATE_COOKIE = 'birthtime=628473601; lastagecheckage=1-January-1990; mature_content=1; wants_mature_content=1';
 async function fetchStorePage(appid) {
   await rateLimit(CFG.tagIntervalMs);
-  return await fetchHTML(`https://store.steampowered.com/app/${appid}/?cc=${CFG.cc}&l=${CFG.lang}`);
+  return await fetchHTML(`https://store.steampowered.com/app/${appid}/?cc=${CFG.cc}&l=${CFG.lang}`,
+    { headers: { Cookie: AGE_GATE_COOKIE } });
 }
 
 function tagsNeedRefresh(g) {
@@ -535,7 +570,7 @@ function storePagePriority(g) {
 async function enrichStoreData(games) {
   const stat = {
     tried: 0, ok: 0, failed: 0, tags: 0, withTags: 0, bundles: 0, deadlines: 0, needDeadline: 0,
-    diagTagHtml: null, diagBundleHtml: null, diagDeadline: null, diagDeadlineNoMatch: null
+    diagTagHtml: null, diagBundleHtml: null, diagDeadline: null, diagDeadlineNoMatch: null, diagNoMatchGame: null
   };
   const all = games.filter(g => g && g.appid);
   stat.needDeadline = all.filter(g => g.price && g.price.isOnSale && toMs(g.price.discountExpiration) == null).length;
@@ -574,6 +609,14 @@ async function enrichStoreData(games) {
           if (!stat.diagDeadline) stat.diagDeadline = (dl.diag.matched || '') + ' → ' + dl.diag.snippet;
         } else if (!stat.diagDeadlineNoMatch) {
           stat.diagDeadlineNoMatch = dl.diag.snippet;
+          stat.diagNoMatchGame = (g.name || g.appid) + '（AppID ' + g.appid + '）' +
+            ' ｜ 页面 ' + html.length + ' 字符' +
+            ' ｜ 购买区：' + /game_area_purchase/.test(html) +
+            ' ｜ discount_pct：' + /discount_pct/.test(html) +
+            ' ｜ countdown：' + /countdown/i.test(html) +
+            ' ｜ data-timestamp：' + /data-timestamp/i.test(html) +
+            ' ｜ 年龄门标记(agecheck/mature/birthtime)：' + /agecheck|age_check|age-gate|mature_content|birthtime/i.test(html) +
+            ' ｜ app_tag：' + /app_tag/.test(html);
         }
       }
       g.details.userTags = tags;
@@ -601,7 +644,8 @@ function printStoreDiag(stat) {
   if (stat.diagTagHtml) log('[诊断·商店页] 标签区首段 HTML：' + stat.diagTagHtml);
   if (stat.diagBundleHtml) log('[诊断·商店页] 捆绑包标记首段 HTML：' + stat.diagBundleHtml);
   if (stat.diagDeadline) log('[诊断·商店页] 折扣倒计时命中：' + stat.diagDeadline);
-  if (stat.diagDeadlineNoMatch) log('[诊断·商店页] 有促销游戏未命中倒计时，购买区原文：' + stat.diagDeadlineNoMatch);
+  if (stat.diagNoMatchGame) log('[诊断·商店页] 未命中倒计时的样例：' + stat.diagNoMatchGame);
+  if (stat.diagDeadlineNoMatch) log('[诊断·商店页] 该样例的购买区原文：' + stat.diagDeadlineNoMatch);
 }
 
 /* ==================================================================
