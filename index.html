@@ -230,6 +230,7 @@ tr.series-head + tr td{padding-left:14px;}
 .tag.k-feature{background:#1d3a2e;color:#a8e0c0;}
 .tag.k-category{background:#332a44;color:#cdbcf0;}
 .tag.k-platform{background:#3a3222;color:#e8d8a8;}
+.tag.k-user{background:#2a3348;color:#c8d4ea;}
 .vs-box{display:grid;grid-template-columns:1fr;gap:4px;margin-top:6px;}
 .vs-row{display:grid;grid-template-columns:76px 1fr 56px;align-items:center;gap:8px;font-size:12px;}
 .vs-name{color:var(--muted);}
@@ -457,8 +458,54 @@ body.gate-locked #taskReopen,
 body.gate-locked .overlay,
 body.gate-locked .modal{visibility:hidden !important;}
 
+/* ---- 新增功能样式：云端拉取 / 标签云 / 预算规划 / 捆绑包 / 价格解读 ----
+   全部为追加样式，不改动任何既有类名与布局规则。 */
+.tb-hint{font-size:11.5px;color:var(--muted);min-width:0;overflow:hidden;text-overflow:ellipsis;}
+.tb-hint.ok{color:#6fd88f;}
+.tb-hint.warn{color:var(--yellow);}
+.tb-hint.err{color:#ff8a8a;}
+.tagcloud{display:flex;flex-wrap:wrap;gap:6px;flex:1 1 260px;min-width:0;max-height:132px;overflow-y:auto;padding:2px 0;}
+.tagcloud .tc{display:inline-flex;align-items:center;gap:4px;background:#22344a;color:#bcd8f0;border:1px solid transparent;
+  font-size:12px;padding:2px 9px;border-radius:11px;cursor:pointer;transition:background .14s,border-color .14s;}
+.tagcloud .tc:hover{background:#2b425e;border-color:var(--accent-dim);}
+.tagcloud .tc.on{background:#1d3a58;border-color:var(--accent);color:#dff0ff;}
+.tagcloud .tc b{font-weight:600;color:var(--accent);font-size:11px;}
+.tagcloud .tc .x{color:var(--muted);font-size:10px;}
+.tagcloud .tc-empty{font-size:11.5px;color:var(--muted);}
+.budget-out{margin-top:9px;border-top:1px dashed #22334a;padding-top:9px;}
+.budget-out:empty{display:none;}
+.budget-sum{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:8px;}
+.budget-sum .bs{background:var(--bg3);border:1px solid var(--border);border-radius:8px;padding:5px 10px;font-size:11.5px;color:var(--muted);}
+.budget-sum .bs b{color:var(--accent);font-size:14px;display:block;font-weight:600;}
+.budget-list{display:flex;flex-direction:column;gap:4px;max-height:260px;overflow-y:auto;}
+.budget-item{display:grid;grid-template-columns:1fr auto auto;gap:8px;align-items:center;font-size:12.5px;
+  background:var(--bg3);border:1px solid var(--border);border-radius:7px;padding:5px 9px;cursor:pointer;}
+.budget-item:hover{border-color:var(--accent-dim);}
+.budget-item .bi-name{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+.budget-item .bi-price{color:#6fd88f;font-weight:600;}
+.budget-item .bi-disc{color:var(--orange);font-size:11px;}
+.bundle-card{border:1px solid var(--border);border-radius:8px;padding:8px 10px;margin-bottom:7px;background:var(--bg3);}
+.bundle-card .bc-head{display:flex;flex-wrap:wrap;gap:8px;align-items:baseline;justify-content:space-between;font-size:12.5px;}
+.insight-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(116px,1fr));gap:7px;}
+.insight-cell{background:var(--bg3);border:1px solid var(--border);border-radius:8px;padding:6px 9px;}
+.insight-cell .ic-l{font-size:11px;color:var(--muted);}
+.insight-cell .ic-v{font-size:14px;font-weight:600;}
+.ic-v.g{color:#6fd88f;} .ic-v.o{color:var(--orange);} .ic-v.r{color:#ff8a8a;} .ic-v.a{color:var(--accent);}
+.tier-badge{display:inline-block;font-size:11px;padding:1px 7px;border-radius:9px;font-weight:600;}
+.tier-legend{background:#5a1f1f;color:#ffd0d0;}
+.tier-bone{background:#5a3a1a;color:#ffdca8;}
+.tier-good{background:#1d3a2e;color:#a8e0c0;}
+.tier-mild{background:#22344a;color:#bcd8f0;}
+.tier-none{background:#2b2b2b;color:#a8a8a8;}
+.tr-chip{display:inline-block;background:#3a2f1a;color:#e0c34a;font-size:10px;padding:0 5px;border-radius:7px;margin-left:5px;vertical-align:middle;cursor:help;}
+.sale-ev{display:inline-block;background:#33234a;color:#d3b8f0;font-size:10px;padding:0 6px;border-radius:8px;margin-top:3px;}
+.src-note{font-size:10.5px;color:var(--muted);}
+
 /* 移动端 */
 @media (max-width:720px){
+  .tagcloud{max-height:none;}
+  .budget-item{grid-template-columns:1fr auto;}
+  .budget-item .bi-disc{grid-column:1 / -1;}
   .detail-grid{grid-template-columns:1fr;}
   .cand-item img{width:120px;height:45px;}
   header.topbar h1{font-size:17px;}
@@ -623,6 +670,44 @@ body.gate-locked .modal{visibility:hidden !important;}
         <button class="btn danger" id="btnDeleteSel" style="display:none;" data-page-node-id="EKcRIC3uFwbB9aq5ILiRIm">🗑 删除已选</button>
         <button class="btn danger" id="btnClearAll" data-page-node-id="mzYCikNPD8J0zSKFImhYOB">🗑 一键清空</button>
       </div>
+      <!-- ===== 新增：云端刷新结果回拉（折扣截止 / 用户标签 / 捆绑包 / 机翻中文名 靠它进入页面） ===== -->
+      <div class="tb-row">
+        <span class="tb-label">云端刷新</span>
+        <button class="btn" id="btnCloudPull" title="从云端（GitHub Pages 上的 data/wishlist.json）拉取每天凌晨自动刷新得到的最新数据：折扣截止时间、用户标签、捆绑包、机翻中文名。只更新这些「公共数据」，你自己的目标价 / 备注 / 手动史低不会被改动。">⬇️ 拉取云端刷新结果</button>
+        <button class="btn" id="btnCloudPullInfo" title="查看云端数据的时间与数据指纹">🔍 云端信息</button>
+        <span class="tb-hint" id="cloudPullHint">未拉取</span>
+      </div>
+      <!-- ===== 新增：Steam 用户标签（标签云 + 按标签筛选） ===== -->
+      <div class="tb-row">
+        <span class="tb-label">用户标签</span>
+        <select id="filterUserTag" title="按 Steam 用户标签筛选（数据来自云端刷新，需先点上方「拉取云端刷新结果」）"><option value="">全部用户标签</option></select>
+        <button class="btn" id="btnTagCloudToggle" title="展开 / 收起标签云（点标签即筛选，再点取消）">🏷 标签云</button>
+        <div class="tagcloud" id="tagCloud" style="display:none;"></div>
+      </div>
+      <!-- ===== 新增：预算规划器 ===== -->
+      <div class="tb-row">
+        <span class="tb-label">预算规划</span>
+        <input type="number" id="budgetAmount" min="0" step="1" placeholder="预算 ¥" style="width:104px;" title="输入你能接受的预算金额（人民币）">
+        <select id="budgetStrategy" title="挑选策略">
+          <option value="value">按性价比优先</option>
+          <option value="discount">按折扣力度优先</option>
+          <option value="score">按口碑评分优先</option>
+          <option value="deadline">按即将结束优先</option>
+          <option value="cheap">按绝对价格最低优先</option>
+        </select>
+        <label class="check-row" style="margin:0;font-size:12px;" title="只考虑当前处于促销中的游戏"><input type="checkbox" id="budgetOnlySale" checked><span>只看促销中</span></label>
+        <label class="check-row" style="margin:0;font-size:12px;" title="只考虑当前正在筛选出来的游戏"><input type="checkbox" id="budgetUseFilters"><span>只在当前筛选结果中挑</span></label>
+        <button class="btn" id="btnBudgetPlan">🧮 生成购买方案</button>
+        <span class="tb-hint" id="budgetHint"></span>
+      </div>
+      <div class="budget-out" id="budgetOut"></div>
+      <!-- ===== 新增：捆绑包洞察 ===== -->
+      <div class="tb-row">
+        <span class="tb-label">捆绑包</span>
+        <button class="btn" id="btnBundleScan" title="在云端数据里查找「同一个捆绑包中包含你 2 款以上愿望单游戏」的情况——这种包往往比你单买更划算">🎁 分析捆绑包</button>
+        <span class="tb-hint" id="bundleHint"></span>
+      </div>
+      <div class="budget-out" id="bundleOut"></div>
     </div>
   </section>
 
@@ -901,7 +986,7 @@ const DEFAULT_SETTINGS = {
 const STATE = {
   games: [],
   settings: Object.assign({}, DEFAULT_SETTINGS),
-  filters: { search: '', rec: '', conf: '', target: '', sale: '', series: '', value: '', genre: '', feature: '' },
+  filters: { search: '', rec: '', conf: '', target: '', sale: '', series: '', value: '', genre: '', feature: '', usertag: '' },
   sort: { key: null, dir: 1 },          // null = 默认按添加时间倒序
   selection: new Set(),
   busy: { refreshAll: false, importing: false, adding: false, ocr: false },
@@ -966,7 +1051,7 @@ function debounce(fn, ms) {
 /* ============================================================
  * STORAGE（localStorage 数据 + 迁移 + 损坏保护）
  * ============================================================ */
-function defaultPrice()      { return { current: null, original: null, discountPercent: 0, currency: 'CNY', isOnSale: false, discountExpiration: null, updatedAt: 0 }; }
+function defaultPrice()      { return { current: null, original: null, discountPercent: 0, currency: 'CNY', isOnSale: false, discountExpiration: null, expirationSource: null, saleEvent: null, updatedAt: 0 }; }
 function defaultRating()     { return { score: null, positive: null, desc: null, total: null, updatedAt: 0 }; }
 function defaultLow()        { return { price: null, count: null, confidence: 'pending', source: null, updatedAt: 0 }; }
 function defaultDetails()    {
@@ -978,7 +1063,10 @@ function defaultDetails()    {
     tags: [],            // 兼容旧字段（= genres）
     featureTags: [],     // 中文「游戏特色」
     metacritic: null, chineseSupport: false, reviewTotal: null,
-    description: '', descriptionOriginal: '', descriptionTranslated: false
+    description: '', descriptionOriginal: '', descriptionTranslated: false,
+    userTags: [],        // Steam 用户标签（store 页 app_tag，云端刷新获得）
+    userTagsFetchedAt: null,
+    bundleIds: []        // 该游戏所属的捆绑包 ID（云端刷新获得）
   };
 }
 
@@ -1065,6 +1153,12 @@ function loadData() {
     if (!Array.isArray(merged.details.featureTags)) merged.details.featureTags = [];
     if (!Array.isArray(merged.details.categories)) merged.details.categories = [];
     if (!Array.isArray(merged.details.platforms)) merged.details.platforms = [];
+    // 云端刷新带来的新字段：老数据里没有 → 补空数组，绝不因缺字段而报错
+    if (!Array.isArray(merged.details.userTags)) merged.details.userTags = [];
+    if (!Array.isArray(merged.details.bundleIds)) merged.details.bundleIds = [];
+    // 中文名来源（'machine-translation' = 云端机翻补的），只用于展示徽标
+    if (typeof merged.nameSource !== 'string') merged.nameSource = null;
+    if (merged.details.userTagsFetchedAt === undefined) merged.details.userTagsFetchedAt = null;
     merged.details.tags = merged.details.genres.slice(0, 8);
     merged.dlcList = merged.dlcList.map(d => {
       if (!d.kind) hasOldDlcKind = true;
@@ -1638,15 +1732,23 @@ function deadlineCellHtml(g) {
   if (!(g.price && g.price.isOnSale)) return '<span style="color:var(--muted)">—</span>';
   const exp = g.price.discountExpiration;
   const expMs = toTimestampMs(exp);
-  if (expMs == null) return '<span style="color:var(--muted)" title="Steam 未返回该游戏的折扣截止时间">未知</span>';
+  /* 新增：促销归属（来自 Steam 官方特惠日历），有就展示，没有就不显示 */
+  const ev = g.price.saleEvent
+    ? '<br><span class="sale-ev" title="来自 Steam 官方特惠日历">' + esc(g.price.saleEvent) + '</span>' : '';
+  if (expMs == null) {
+    return '<span style="color:var(--muted)" title="Steam 接口未返回该游戏的折扣截止时间。' +
+      '云端每天刷新时会从官方特惠日历补齐；可点「⬇️ 拉取云端刷新结果」获取。">未知</span>' + ev;
+  }
   const ms = expMs - nowMs();
   const end = ms <= 0;
   const soon = !end && ms <= 24 * 3600 * 1000;
   const cls = end ? 'low-pending' : (soon ? 'sale-soon' : 'sale-ok');
   const label = end ? '已结束' : fmtRemain(ms);
-  return '<span class="' + cls + '" title="截止：' + esc(fmtDeadline(expMs)) + '（' + esc(fmtTime(expMs)) + '）">' +
+  const srcTxt = g.price.expirationSource === 'featuredcategories' ? '来源：Steam 官方特惠日历'
+    : (g.price.expirationSource === 'appdetails' ? '来源：Steam 商店接口' : '来源：Steam');
+  return '<span class="' + cls + '" title="截止：' + esc(fmtDeadline(expMs)) + '（' + esc(fmtTime(expMs)) + '）· ' + esc(srcTxt) + '">' +
     esc(label) + (soon ? ' ⚠️' : '') + '</span>' +
-    '<br><small style="color:var(--muted)">' + esc(fmtDeadline(exp)) + '</small>';
+    '<br><small style="color:var(--muted)">' + esc(fmtDeadline(exp)) + '</small>' + ev;
 }
 
 function extractDetails(data) {
@@ -1712,6 +1814,7 @@ const TAG_KINDS = [
   { key: 'feature',  label: '特色' },
   { key: 'category', label: '功能' },
   { key: 'platform', label: '平台' },
+  { key: 'user',     label: '用户标签' },
 ];
 function tagsOfKind(g, kind) {
   const d = (g && g.details) || {};
@@ -1720,6 +1823,7 @@ function tagsOfKind(g, kind) {
     case 'feature':  return d.featureTags || [];
     case 'category': return d.categories || [];
     case 'platform': return d.platforms || [];
+    case 'user':     return d.userTags || [];
   }
   return [];
 }
@@ -2269,12 +2373,17 @@ async function addGameByAppid(appid, opts) {
     // 刷新模式：更新 Steam 数据，保留用户字段；DLC 转后台
     existing.name = info.nameInfo.name;
     existing.originalName = info.nameInfo.original;
-    existing.price = info.price;
+    /* 新增：价格用「合并」而不是「替换」——
+       本地 appdetails 拿不到「折扣截止 / 促销归属」，若云端已补过且还没过期就保留，
+       否则一次本机刷新就会把云端成果冲掉（这正是需求里说的「不能用了这个 API，别的功能就没了」）。 */
+    existing.price = mergePriceKeepCloud(existing.price, info.price);
     existing.rating = info.rating;
-    existing.details = info.details;
+    /* 新增：详情同样合并，保住云端抓来的用户标签 / 捆绑包 */
+    existing.details = mergeDetailsKeepCloud(existing.details, info.details);
     existing.updatedAt = nowMs();
     await refreshItadLow(existing, opts);
     saveData();
+    recordPriceObs(existing);
     scheduleDlcFetch(existing, info.dlcIds, opts.quietDlc);
     return existing;
   }
@@ -3066,6 +3175,7 @@ function matchSearch(g, kw) {
     g.name, g.originalName, g.appid,
     (g.details && (g.details.genres || []).join(' ')) || '',
     (g.details && (g.details.featureTags || []).join(' ')) || '',
+    (g.details && (g.details.userTags || []).join(' ')) || '',
     (g.details && (g.details.developers || []).join(' ')) || '',
     (g.details && (g.details.publishers || []).join(' ')) || '',
     g.note || ''
@@ -3113,6 +3223,8 @@ function matchValue(g, v) {
 }
 function matchGenre(g, v)  { return !v || ((g.details && g.details.genres) || []).indexOf(v) !== -1; }
 function matchFeature(g, v){ return !v || ((g.details && g.details.featureTags) || []).indexOf(v) !== -1; }
+/* 新增：Steam 用户标签筛选（云端刷新写入 details.userTags） */
+function matchUserTag(g, v){ return !v || ((g.details && g.details.userTags) || []).indexOf(v) !== -1; }
 function matchPlatform(g, v) {
   return !v || ((g.details && g.details.platforms) || []).indexOf(v) !== -1;
 }
@@ -3128,6 +3240,7 @@ const FILTER_DIMS = [
   { key: 'value',   match: (g, f) => matchValue(g, f.value) },
   { key: 'genre',   match: (g, f) => matchGenre(g, f.genre) },
   { key: 'feature', match: (g, f) => matchFeature(g, f.feature) },
+  { key: 'usertag', match: (g, f) => matchUserTag(g, f.usertag) },
   { key: 'platform',match: (g, f) => matchPlatform(g, f.platform) }
 ];
 
@@ -3157,7 +3270,7 @@ function computeFacetCounts() {
   const games = STATE.games;
   const out = {};
   FILTER_DIMS.forEach(dim => {
-    if (dim.key === 'search' || dim.key === 'genre' || dim.key === 'feature' || dim.key === 'platform') return;
+    if (dim.key === 'search' || dim.key === 'genre' || dim.key === 'feature' || dim.key === 'usertag' || dim.key === 'platform') return;
     let n = 0;
     games.forEach(g => { if (passesDims(g, STATE.filters, dim.key)) n++; });
     out[dim.key] = { all: n, values: {} };
@@ -3182,22 +3295,24 @@ function computeFacetCounts() {
     });
   });
 
-  // 类型 / 特色标签：数量随其他筛选条件动态变化
-  const tagCount = (listKey, matchFn) => {
+  // 类型 / 特色 / 用户标签：数量随其他筛选条件动态变化
+  const tagCount = (dimKey, field) => {
     const map = {};
     games.forEach(g => {
-      if (!passesDims(g, STATE.filters, listKey)) return;
-      ((g.details && g.details[listKey === 'genre' ? 'genres' : 'featureTags']) || []).forEach(t => {
+      if (!passesDims(g, STATE.filters, dimKey)) return;
+      ((g.details && g.details[field]) || []).forEach(t => {
         map[t] = (map[t] || 0) + 1;
       });
     });
     return map;
   };
-  out.genre   = { all: 0, values: tagCount('genre', null) };
-  out.feature = { all: 0, values: tagCount('feature', null) };
+  out.genre   = { all: 0, values: tagCount('genre', 'genres') };
+  out.feature = { all: 0, values: tagCount('feature', 'featureTags') };
+  out.usertag = { all: 0, values: tagCount('usertag', 'userTags') };
   games.forEach(g => {
     if (passesDims(g, STATE.filters, 'genre')) out.genre.all++;
     if (passesDims(g, STATE.filters, 'feature')) out.feature.all++;
+    if (passesDims(g, STATE.filters, 'usertag')) out.usertag.all++;
   });
   return out;
 }
@@ -3339,14 +3454,18 @@ function renderTable() {
     const extra = tagList.length > 3 ? '+' + (tagList.length - 3) : '';
     return '<tr data-appid="' + g.appid + '" class="' + (isTargetReached(g) ? 'reached ' : '') + (isAtHistoricalLow(g) ? 'at-low ' : '') + (STATE.selection.has(g.appid) ? 'selected' : '') + '">' +
       '<td><input type="checkbox" class="row-check" data-appid="' + g.appid + '"' + (STATE.selection.has(g.appid) ? ' checked' : '') + '></td>' +
-      '<td class="gname" title="点击查看详情">' + esc(g.name) + '<span class="en">' + esc(g.originalName || '') + '</span>' +
+      '<td class="gname" title="点击查看详情">' + esc(g.name) +
+        (g.nameSource === 'machine-translation' ? '<span class="tr-chip" title="中文名由云端机器翻译补齐（Steam 无官方中文名）">译</span>' : '') +
+        '<span class="en">' + esc(g.originalName || '') + '</span>' +
         (mates > 0 ? '<span class="series-chip" title="同系列还有 ' + mates + ' 部作品">📚 系列 ' + (mates + 1) + ' 部</span>' : '') + '</td>' +
       '<td>' + g.appid + '</td>' +
       '<td>' + (g.rating && g.rating.score != null ? g.rating.score.toFixed(1) : '<span class="low-pending">待核</span>') + '</td>' +
       '<td>' + (g.rating && g.rating.positive != null ? g.rating.positive + '%' : '—') +
         (g.rating && g.rating.total ? '<br><small style="color:var(--muted)">' + fmtCount(g.rating.total) + ' 条</small>' : '') + '</td>' +
       '<td>' + priceCell + (origCell ? '<br><small style="color:var(--muted)">原价 ' + origCell + '</small>' : '') + '</td>' +
-      '<td>' + (g.price && g.price.isOnSale ? '<span class="badge-disc">-' + g.price.discountPercent + '%</span>' : '—') +
+      '<td>' + (g.price && g.price.isOnSale
+          ? '<span class="badge-disc">-' + g.price.discountPercent + '%</span>' + discountTierBadge(g.price.discountPercent)
+          : '—') +
         '<br><small>' + deadlineCellHtml(g) + '</small></td>' +
       '<td class="td-low" title="点击输入史低价格">✎ ' + lowCellHtml(g) +
         (isAtHistoricalLow(g) ? ' <span class="at-low-badge" title="当前价已达史低">史低中</span>' : '') + '</td>' +
@@ -3429,6 +3548,9 @@ function renderAll() {
   renderActiveFilters();
   setupXScroll();
   scheduleDeadlineTick();
+  // 新增功能：标签云跟随数据变化；同时把当前价格记进本机观察历史（价格没变则不重复记）
+  try { renderTagCloud(); } catch (e) {}
+  try { recordAllPriceObs(); } catch (e) {}
 }
 
 /* 折扣倒计时每分钟刷新一次（只在有折扣且有截止时间时才重绘，省性能） */
@@ -3480,6 +3602,7 @@ function openDetail(appid) {
   const tagBlocks = [
     { kind: 'genre',    title: '🎮 游戏类型', cls: '' },
     { kind: 'feature',  title: '✨ 游戏特色', cls: 'k-feature' },
+    { kind: 'user',     title: '🏷 Steam 用户标签', cls: 'k-user' },
     { kind: 'category', title: '🧩 功能特性', cls: 'k-category' },
     { kind: 'platform', title: '💻 支持平台', cls: 'k-platform' },
   ].map(b => {
@@ -3529,11 +3652,17 @@ function openDetail(appid) {
   $('#detailBody').innerHTML =
     '<div class="detail-grid">' +
       '<div class="full">' + (d.headerImage ? '<img class="d-hero" src="' + esc(d.headerImage) + '" alt="">' : '') + '</div>' +
-      '<div class="d-item"><div class="d-label">游戏名称</div><div class="d-val">' + esc(g.name) + '</div></div>' +
+      '<div class="d-item"><div class="d-label">游戏名称</div><div class="d-val">' + esc(g.name) +
+        (g.nameSource === 'machine-translation' ? ' <span class="tr-chip">译</span><br><small class="src-note">中文名由云端机器翻译补齐（Steam 无官方中文名）</small>' : '') +
+        '</div></div>' +
       '<div class="d-item"><div class="d-label">AppID / 英文名</div><div class="d-val">' + g.appid + ' · ' + esc(g.originalName || '—') + '</div></div>' +
       '<div class="d-item full"><div class="d-label">标签（按类别）</div><div class="d-val">' + tagsHtml + '</div></div>' +
       '<div class="d-item"><div class="d-label">当前价格</div><div class="d-val">' + (p.current != null ? fmtPrice(p.current, p.currency) + (p.isOnSale ? ' <span class="badge-disc">-' + p.discountPercent + '%</span>（原价 ' + fmtPrice(p.original, p.currency) + '）' : '') : '<span class="low-pending">获取失败/待核</span>') + '</div></div>' +
       '<div class="d-item"><div class="d-label">折扣截止</div><div class="d-val">' + saleLine + '</div></div>' +
+      /* 新增：价格解读（折扣档位 / 本次省下 / 距史低 / 促销剩余 / 促销归属 / 截止来源） */
+      '<div class="d-item full"><div class="d-label">价格解读</div><div class="d-val">' + priceInsightHtml(g) + '</div></div>' +
+      /* 新增：史低与折扣历史对比（本机观察到的价格变化） */
+      '<div class="d-item full"><div class="d-label">史低与折扣历史对比（本机观察）</div><div class="d-val">' + priceHistHtml(g) + '</div></div>' +
       '<div class="d-item"><div class="d-label">史低</div><div class="d-val">' + lowCellHtml(g) + '（来源：' + esc(lo.source || '未查询') + ' · 更新：' + fmtTime(lo.updatedAt) + '）' +
         (isAtHistoricalLow(g) ? ' <span class="at-low-badge">当前已达史低</span>' : '') + '</div></div>' +
       '<div class="d-item"><div class="d-label">目标价</div><div class="d-val">' + targetCellHtml(g) + ' · ' + targetLine + '</div></div>' +
@@ -3552,6 +3681,8 @@ function openDetail(appid) {
         '<div class="vs-note">算法：口碑 30% + 相对史低水位 22% + 绝对价格 12% + 折扣力度 12% + 史低稀缺性 8% + 媒体评分 6% + 中文支持 5% + 玩家体量 5%。缺数据的因子按中性值折算，覆盖度低于 55% 时表格中会标 *。</div>' +
       '</div>' +
       '<div class="d-item full"><div class="d-label">同系列作品（' + mates.length + '）</div><div class="d-val">' + matesHtml + '</div></div>' +
+      /* 新增：捆绑包洞察（同一个包里有几款你的愿望单游戏） */
+      '<div class="d-item full"><div class="d-label">捆绑包洞察</div><div class="d-val">' + bundleInsightHtml(g) + '</div></div>' +
       '<div class="d-item full"><div class="d-label">简介' + (d.descriptionTranslated ? '（机翻自官方原文）' : '') + '</div><div class="desc-box">' + esc(d.description || '暂无数据') + '</div>' +
         (d.descriptionTranslated && d.descriptionOriginal ? '<div class="dlc-orig">原文：' + esc(clampText(d.descriptionOriginal, 260)) + '</div>' : '') + '</div>' +
       '<div class="d-item full"><div class="d-label">备注</div><div class="d-val">' + (g.note ? esc(g.note) : '<span style="color:var(--muted)">无（表格内 📝 可添加）</span>') + '</div></div>' +
@@ -4332,7 +4463,7 @@ const applyFilterUi = () => {
 $('#filterSearch').addEventListener('input', debounce(() => { STATE.filters.search = $('#filterSearch').value; applyFilterUi(); }, 200));
 [['filterRec', 'rec'], ['filterConf', 'conf'], ['filterTarget', 'target'],
  ['filterSale', 'sale'], ['filterSeries', 'series'], ['filterValue', 'value'],
- ['filterGenre', 'genre'], ['filterFeature', 'feature']].forEach(([id, key]) => {
+ ['filterGenre', 'genre'], ['filterFeature', 'feature'], ['filterUserTag', 'usertag']].forEach(([id, key]) => {
   const el = $('#' + id);
   if (!el) return;
   el.addEventListener('change', () => { STATE.filters[key] = el.value; applyFilterUi(); });
@@ -4372,7 +4503,7 @@ function syncGroupBtn() {
 }
 /* 一键重置所有筛选（需求 #5 配套） */
 $('#btnResetFilters').addEventListener('click', () => {
-  STATE.filters = { search: '', rec: '', conf: '', target: '', sale: '', series: '', value: '', genre: '', feature: '' };
+  STATE.filters = { search: '', rec: '', conf: '', target: '', sale: '', series: '', value: '', genre: '', feature: '', usertag: '' };
   saveFilters();
   syncFilterUi();
   renderAll();
@@ -4418,12 +4549,14 @@ function refreshTagFilterOptions() {
     }
     sel.value = cur;
   };
-  const gs = $('#filterGenre'), fs = $('#filterFeature');
+  const gs = $('#filterGenre'), fs = $('#filterFeature'), us = $('#filterUserTag');
   if (counts) {
     if (gs) gs.dataset.allLabel = '全部类型';
     if (fs) fs.dataset.allLabel = '全部特色';
+    if (us) us.dataset.allLabel = '全部用户标签';
     fillTagSel(gs, counts.genre.values, 'genre', '全部类型', counts.genre.all);
     fillTagSel(fs, counts.feature.values, 'feature', '全部特色', counts.feature.all);
+    if (counts.usertag) fillTagSel(us, counts.usertag.values, 'usertag', '全部用户标签', counts.usertag.all);
   }
 
   /* ---- B) 固定选项下拉：把数量写进文案 ---- */
@@ -4454,7 +4587,8 @@ function refreshTagFilterOptions() {
 function syncFilterUi() {
   const map = [['filterSearch', 'search'], ['filterRec', 'rec'], ['filterConf', 'conf'],
     ['filterTarget', 'target'], ['filterSale', 'sale'], ['filterSeries', 'series'],
-    ['filterValue', 'value'], ['filterGenre', 'genre'], ['filterFeature', 'feature']];
+    ['filterValue', 'value'], ['filterGenre', 'genre'], ['filterFeature', 'feature'],
+    ['filterUserTag', 'usertag']];
   map.forEach(([id, key]) => { const el = $('#' + id); if (el) el.value = STATE.filters[key] || ''; });
   const tk = $('#tagKindSel'); if (tk) tk.value = STATE.tagKind || 'genre';
 }
@@ -4530,7 +4664,8 @@ const ACTIVE_FILTER_DEFS = [
   { key: 'series',  label: '作品范围', get: v => ({ in: '仅系列作品', solo: '仅独立作品' }[v] || v) },
   { key: 'value',   label: '性价比' },
   { key: 'genre',   label: '类型' },
-  { key: 'feature', label: '特色' }
+  { key: 'feature', label: '特色' },
+  { key: 'usertag', label: '用户标签' }
 ];
 function renderActiveFilters() {
   const sec = document.getElementById('secTools');
@@ -4580,6 +4715,576 @@ window.addEventListener('unhandledrejection', ev => {
 window.addEventListener('error', ev => {
   console.error(ev.error || ev.message);
 });
+
+/* ============================================================
+ * 新增功能模块（需求 #1 的配套能力）
+ *   ① 折扣力度分级 / 价格解读
+ *   ② 本机价格观察历史（史低与折扣历史对比）
+ *   ③ Steam 用户标签云 + 按用户标签筛选
+ *   ④ 预算规划器
+ *   ⑤ 捆绑包洞察
+ *   ⑥ 云端刷新结果回拉（折扣截止 / 用户标签 / 捆绑包 / 机翻中文名 靠它进入页面）
+ *
+ * 设计约束：
+ *   · 全部是「只读派生 + 追加 UI」，不改变任何既有字段语义、不删任何既有功能；
+ *   · 每一处外部依赖都 try/catch 兜住，任何一步失败都不会影响原有流程；
+ *   · 新增 localStorage key 全部以 sw_ 前缀独立命名，不与既有 key 冲突。
+ * ============================================================ */
+
+/* ---------------- ① 折扣力度分级 ---------------- */
+const DISCOUNT_TIERS = [
+  { min: 90, label: '白菜价', cls: 'tier-legend', tip: '降幅 ≥ 90%，基本等于白送' },
+  { min: 75, label: '骨折',   cls: 'tier-bone',   tip: '降幅 ≥ 75%，很少见的好价' },
+  { min: 50, label: '半价',   cls: 'tier-good',   tip: '降幅 ≥ 50%，值得认真考虑' },
+  { min: 25, label: '小促',   cls: 'tier-mild',   tip: '降幅 ≥ 25%，力度一般' },
+  { min: 1,  label: '微折',   cls: 'tier-none',   tip: '降幅不足 25%' }
+];
+function discountTier(pct) {
+  const n = Number(pct) || 0;
+  if (n <= 0) return { label: '无折扣', cls: 'tier-none', tip: '当前没有折扣' };
+  return DISCOUNT_TIERS.find(t => n >= t.min) || DISCOUNT_TIERS[DISCOUNT_TIERS.length - 1];
+}
+function discountTierBadge(pct) {
+  const t = discountTier(pct);
+  return '<span class="tier-badge ' + t.cls + '" title="' + esc(t.tip) + '">' + t.label + '</span>';
+}
+/* 通用小格子（用于价格解读 / 观察历史） */
+function ic(l, v, cls) {
+  return '<div class="insight-cell"><div class="ic-l">' + esc(l) + '</div>' +
+    '<div class="ic-v ' + (cls || '') + '">' + v + '</div></div>';
+}
+function priceInsightHtml(g) {
+  const p = (g && g.price) || {};
+  if (p.current == null) return '<span style="color:var(--muted)">价格未获取，无法解读（可点行内 ♻️ 刷新，或点上方「⬇️ 拉取云端刷新结果」）。</span>';
+  const tier = discountTier(p.discountPercent);
+  const cells = [];
+  cells.push(ic('折扣档位', '<span class="tier-badge ' + tier.cls + '">' + esc(tier.label) + '</span>'));
+  if (p.isOnSale && p.original != null && p.original > p.current) {
+    cells.push(ic('本次省下', '¥' + (p.original - p.current).toFixed(2), 'g'));
+    cells.push(ic('到手价比例', Math.round((p.current / p.original) * 100) + '%', 'a'));
+  } else {
+    cells.push(ic('折扣', '当前无折扣'));
+  }
+  const lo = (g && g.historicalLow) || {};
+  if (lo.price != null && p.current != null) {
+    const diff = p.current - lo.price;
+    if (diff <= 0.005) cells.push(ic('对比史低', '已持平或更低', 'g'));
+    else cells.push(ic('距史低', '还差 ¥' + diff.toFixed(2) + '（' + Math.round((diff / p.current) * 100) + '%）', 'o'));
+  } else {
+    cells.push(ic('对比史低', '史低待核'));
+  }
+  if (p.isOnSale) {
+    const ms = saleRemainMs(g);
+    cells.push(ic('促销剩余', ms == null ? '未知' : esc(fmtRemain(ms)), (ms != null && ms > 0 && ms <= 86400000) ? 'r' : ''));
+  }
+  if (p.saleEvent) cells.push(ic('促销归属', esc(p.saleEvent), 'a'));
+  if (p.expirationSource) {
+    const srcLabel = p.expirationSource === 'featuredcategories' ? 'Steam 官方特惠日历'
+      : (p.expirationSource === 'appdetails' ? 'Steam 商店接口' : esc(p.expirationSource));
+    cells.push(ic('截止时间来源', srcLabel));
+  }
+  return '<div class="insight-grid">' + cells.join('') + '</div>';
+}
+
+/* ---------------- ② 本机价格观察历史 ---------------- */
+const PRICE_HIST_KEY = 'sw_price_hist_v1';
+const PRICE_HIST_MAX = 40;                 // 每款最多保留 40 条观察记录
+let PRICE_HIST_CACHE = null;
+function loadPriceHist() {
+  try {
+    const o = JSON.parse(localStorage.getItem(PRICE_HIST_KEY) || '{}');
+    return (o && typeof o === 'object' && !Array.isArray(o)) ? o : {};
+  } catch (e) { return {}; }
+}
+function priceHistAll() {
+  if (!PRICE_HIST_CACHE) PRICE_HIST_CACHE = loadPriceHist();
+  return PRICE_HIST_CACHE;
+}
+const savePriceHist = debounce(() => {
+  try { localStorage.setItem(PRICE_HIST_KEY, JSON.stringify(priceHistAll())); } catch (e) {}
+}, 900);
+/* 记一条观察：只有「价格或折扣」真的变了才记，避免同一天刷屏 */
+function recordPriceObs(g) {
+  try {
+    if (!g || !g.price || g.price.current == null) return;
+    const all = priceHistAll();
+    const key = String(g.appid);
+    const arr = Array.isArray(all[key]) ? all[key] : [];
+    const cur = { t: nowMs(), p: Number(g.price.current), d: Number(g.price.discountPercent) || 0 };
+    const last = arr[arr.length - 1];
+    if (last && last.p === cur.p && last.d === cur.d) return;
+    arr.push(cur);
+    while (arr.length > PRICE_HIST_MAX) arr.shift();
+    all[key] = arr;
+    savePriceHist();
+  } catch (e) {}
+}
+function recordAllPriceObs() {
+  try { STATE.games.forEach(recordPriceObs); } catch (e) {}
+}
+function priceHistOf(g) {
+  try { return (priceHistAll()[String(g.appid)] || []).slice(); } catch (e) { return []; }
+}
+function priceHistStat(g) {
+  const h = priceHistOf(g);
+  if (!h.length) return null;
+  let min = Infinity, minT = 0;
+  h.forEach(x => { if (x.p != null && x.p < min) { min = x.p; minT = x.t; } });
+  const last = h[h.length - 1];
+  const prev = h.length > 1 ? h[h.length - 2] : null;
+  const cur = (g.price && g.price.current != null) ? g.price.current : null;
+  return {
+    n: h.length, min: isFinite(min) ? min : null, minT,
+    last, prev, delta: (prev && last) ? (last.p - prev.p) : null,
+    belowOwnMin: (isFinite(min) && cur != null && cur < min - 0.005)
+  };
+}
+function priceHistHtml(g) {
+  const s = priceHistStat(g);
+  if (!s) {
+    return '<span style="color:var(--muted)">还没有本机观察记录。本机每次「刷新」或「拉取云端刷新结果」都会记录一次当时的价格（价格没变则不重复记）。' +
+      '<br>注意：这是<b>你自己机器上观察到的记录</b>，不等于 Steam 全历史最低价；全历史最低请看上方「史低」。</span>';
+  }
+  const rows = [ic('观察次数', s.n + ' 次')];
+  if (s.min != null) rows.push(ic('本机观察最低', '¥' + s.min.toFixed(2) + '<br><small class="src-note">' + esc(fmtTime(s.minT)) + '</small>', s.belowOwnMin ? 'g' : ''));
+  if (s.prev && s.last) {
+    const d = s.last.p - s.prev.p;
+    if (Math.abs(d) < 0.005) rows.push(ic('较上次观察', '持平'));
+    else if (d > 0) rows.push(ic('较上次观察', '↑ 涨 ¥' + d.toFixed(2), 'r'));
+    else rows.push(ic('较上次观察', '↓ 降 ¥' + Math.abs(d).toFixed(2), 'g'));
+  }
+  if (s.last) rows.push(ic('最近观察价', '¥' + s.last.p.toFixed(2) + '<br><small class="src-note">' + esc(fmtTime(s.last.t)) + '</small>'));
+  const head = s.belowOwnMin
+    ? '<div class="src-note" style="margin-bottom:5px;">🎉 当前价已低于本机观察到的历史最低。</div>'
+    : '';
+  return head + '<div class="insight-grid">' + rows.join('') + '</div>';
+}
+
+/* ---------------- ③ Steam 用户标签云 ---------------- */
+function userTagCounts() {
+  const map = {};
+  STATE.games.forEach(g => {
+    ((g.details && g.details.userTags) || []).forEach(t => { map[t] = (map[t] || 0) + 1; });
+  });
+  return map;
+}
+function renderTagCloud() {
+  const box = $('#tagCloud');
+  if (!box) return;
+  const counts = userTagCounts();
+  const items = Object.keys(counts).sort((a, b) => counts[b] - counts[a] || a.localeCompare(b, 'zh')).slice(0, 40);
+  const cur = STATE.filters.usertag || '';
+  const html = items.length
+    ? items.map(t => '<span class="tc' + (cur === t ? ' on' : '') + '" data-tag="' + esc(t) + '" title="点一下按「' + esc(t) + '」筛选，再点一下取消">' +
+        esc(t) + ' <b>' + counts[t] + '</b>' + (cur === t ? ' <span class="x">×</span>' : '') + '</span>').join('')
+    : '<span class="tc-empty">还没有用户标签数据。点上方「⬇️ 拉取云端刷新结果」后即可看到（标签由云端每天自动从 Steam 商店页抓取，中文）。</span>';
+  if (box.__lastHtml !== html) { box.innerHTML = html; box.__lastHtml = html; }
+}
+function setTagCloudOpen(open) {
+  const box = $('#tagCloud'), btn = $('#btnTagCloudToggle');
+  if (!box) return;
+  box.style.display = open ? 'flex' : 'none';
+  if (btn) { btn.classList.toggle('off', !open); btn.title = open ? '收起标签云' : '展开标签云（点标签即筛选，再点取消）'; }
+  try { localStorage.setItem('sw_tagcloud_v1', open ? '1' : '0'); } catch (e) {}
+}
+
+/* ---------------- ④ 预算规划器 ---------------- */
+const BUDGET_STRATEGIES = {
+  value:    { label: '性价比优先' },
+  discount: { label: '折扣力度优先' },
+  score:    { label: '口碑评分优先' },
+  deadline: { label: '即将结束优先' },
+  cheap:    { label: '绝对价格最低优先' }
+};
+function budgetSortKey(g, strategy) {
+  switch (strategy) {
+    case 'discount': return -(Number(g.price && g.price.discountPercent) || 0);
+    case 'score':    return -(g.rating && g.rating.score != null ? g.rating.score : -1);
+    case 'deadline': { const ms = saleRemainMs(g); return (ms != null && ms > 0) ? ms : Infinity; }
+    case 'cheap':    return (g.price && g.price.current != null) ? g.price.current : Infinity;
+    case 'value':
+    default:         return -computeValueScore(g).score;
+  }
+}
+/* 按策略排序后贪心装入预算。诚实说明：这是贪心算法，不保证全局最优。 */
+function budgetPlan(amount, strategy, opts) {
+  opts = opts || {};
+  const src = opts.games || STATE.games;
+  const pool = src.filter(g => {
+    if (!g.price || g.price.current == null) return false;
+    if (g.price.current <= 0) return false;            // 免费游戏不占预算，不进方案
+    if (opts.onlySale && !g.price.isOnSale) return false;
+    return true;
+  });
+  const sorted = pool.slice().sort((a, b) => {
+    const ka = budgetSortKey(a, strategy), kb = budgetSortKey(b, strategy);
+    if (ka !== kb) return ka - kb;
+    return (a.price.current - b.price.current) || (a.appid - b.appid);
+  });
+  const picked = [];
+  let left = Number(amount) || 0;
+  sorted.forEach(g => { if (g.price.current <= left + 1e-6) { picked.push(g); left -= g.price.current; } });
+  const spent = picked.reduce((s, g) => s + g.price.current, 0);
+  const sumOrig = picked.reduce((s, g) => s + ((g.price.original != null && g.price.original > g.price.current) ? g.price.original : g.price.current), 0);
+  const avgDisc = picked.length
+    ? Math.round(picked.reduce((s, g) => s + (Number(g.price.discountPercent) || 0), 0) / picked.length) : 0;
+  return { picked, poolSize: pool.length, scanned: src.length, spent, rest: (Number(amount) || 0) - spent, saved: Math.max(0, sumOrig - spent), sumOrig, avgDisc };
+}
+function renderBudgetPlan() {
+  const out = $('#budgetOut'), hint = $('#budgetHint');
+  if (!out) return;
+  const amount = Number(($('#budgetAmount') || {}).value);
+  if (!amount || amount <= 0) {
+    out.innerHTML = '';
+    if (hint) { hint.className = 'tb-hint warn'; hint.textContent = '请先填写大于 0 的预算金额'; }
+    return;
+  }
+  const strategy = ($('#budgetStrategy') || {}).value || 'value';
+  const onlySale = $('#budgetOnlySale') ? $('#budgetOnlySale').checked : true;
+  const useFilters = $('#budgetUseFilters') ? $('#budgetUseFilters').checked : false;
+  const games = useFilters ? applyFilters(STATE.games) : STATE.games;
+  const r = budgetPlan(amount, strategy, { onlySale, games });
+  if (!r.poolSize) {
+    out.innerHTML = '<div class="src-note">没有可选游戏（可能开了「只看促销中」，或当前筛选结果为空）。</div>';
+    if (hint) { hint.className = 'tb-hint warn'; hint.textContent = '可选游戏 0 款'; }
+    return;
+  }
+  const head = '<div class="budget-sum">' +
+    '<div class="bs">方案款数<b>' + r.picked.length + ' 款</b></div>' +
+    '<div class="bs">合计花费<b>¥' + r.spent.toFixed(2) + '</b></div>' +
+    '<div class="bs">剩余预算<b>¥' + r.rest.toFixed(2) + '</b></div>' +
+    '<div class="bs">合计省下<b>¥' + r.saved.toFixed(2) + '</b></div>' +
+    '<div class="bs">平均折扣<b>' + r.avgDisc + '%</b></div>' +
+    '<div class="bs">可选池<b>' + r.poolSize + ' / ' + r.scanned + '</b></div>' +
+    '</div>';
+  const list = r.picked.length
+    ? '<div class="budget-list">' + r.picked.map(g =>
+        '<div class="budget-item" data-open-appid="' + g.appid + '" title="点击查看详情">' +
+          '<span class="bi-name">' + esc(g.name) + (g.nameSource === 'machine-translation' ? '<span class="tr-chip">译</span>' : '') + '</span>' +
+          '<span class="bi-price">' + esc(fmtPrice(g.price.current, g.price.currency) || '') + '</span>' +
+          '<span class="bi-disc">' + (g.price.isOnSale ? '-' + g.price.discountPercent + '% ' : '') + discountTier(g.price.discountPercent).label + '</span>' +
+        '</div>').join('') + '</div>'
+    : '<div class="src-note">预算内没有可买的游戏（最便宜的一款也超预算）。</div>';
+  out.innerHTML = head + list +
+    '<div class="src-note" style="margin-top:6px;">策略：' + esc((BUDGET_STRATEGIES[strategy] || BUDGET_STRATEGIES.value).label) +
+    '。算法为「按策略排序后依次装入」，简单直观但不保证是数学上的全局最优解；点任意一行可看该游戏详情。</div>';
+  if (hint) { hint.className = 'tb-hint ok'; hint.textContent = '已生成方案：' + r.picked.length + ' 款 / ¥' + r.spent.toFixed(2); }
+}
+
+/* ---------------- ⑤ 捆绑包洞察 ---------------- */
+function bundleIndex() {
+  const map = {};
+  STATE.games.forEach(g => {
+    ((g.details && g.details.bundleIds) || []).forEach(id => {
+      const k = String(id);
+      (map[k] = map[k] || []).push(g);
+    });
+  });
+  return map;
+}
+function bundlesWorthLooking() {
+  const idx = bundleIndex();
+  return Object.keys(idx)
+    .map(k => ({ id: k, games: idx[k] }))
+    .filter(b => b.games.length >= 2)
+    .sort((a, b) => (b.games.length - a.games.length) || (Number(a.id) - Number(b.id)));
+}
+function bundleInsightHtml(g) {
+  const ids = (g && g.details && g.details.bundleIds) || [];
+  if (!ids.length) {
+    return '<span style="color:var(--muted)">暂无捆绑包信息。捆绑包由云端每天从 Steam 商店页抓取，点上方「⬇️ 拉取云端刷新结果」后再看。</span>';
+  }
+  const idx = bundleIndex();
+  return ids.map(id => {
+    const mates = (idx[String(id)] || []).filter(x => Number(x.appid) !== Number(g.appid));
+    const mateHtml = mates.length
+      ? '包含你的另外 <b>' + mates.length + '</b> 款愿望单游戏：' +
+        mates.map(m => '<a href="javascript:void(0)" data-open-appid="' + m.appid + '">' + esc(m.name) + '</a>').join('、') +
+        (mates.length >= 2 ? ' <span class="at-low-badge">建议比价</span>' : '')
+      : '<span style="color:var(--muted)">你的愿望单里没有其它游戏在这个包里</span>';
+    return '<div class="bundle-card"><div class="bc-head"><span>🎁 捆绑包 ' + esc(String(id)) + '</span>' +
+      '<a href="https://store.steampowered.com/bundle/' + encodeURIComponent(String(id)) + '/" target="_blank" rel="noopener noreferrer">去 Steam 看这个包 ↗</a>' +
+      '</div><div class="src-note" style="margin-top:4px;">' + mateHtml + '</div></div>';
+  }).join('');
+}
+function renderBundleScan() {
+  const out = $('#bundleOut'), hint = $('#bundleHint');
+  if (!out) return;
+  const idx = bundleIndex();
+  const total = Object.keys(idx).length;
+  if (!total) {
+    out.innerHTML = '';
+    if (hint) { hint.className = 'tb-hint warn'; hint.textContent = '没有捆绑包数据 —— 先点「⬇️ 拉取云端刷新结果」'; }
+    return;
+  }
+  const list = bundlesWorthLooking();
+  if (!list.length) {
+    out.innerHTML = '<div class="src-note">共发现 ' + total + ' 个捆绑包，但没有哪个包里同时包含你 2 款以上愿望单游戏。</div>';
+    if (hint) { hint.className = 'tb-hint ok'; hint.textContent = '扫描完成：' + total + ' 个包，无可比价组合'; }
+    return;
+  }
+  out.innerHTML = '<div class="src-note" style="margin-bottom:6px;">共发现 ' + total + ' 个捆绑包，其中 <b>' + list.length +
+    '</b> 个包含你 2 款以上愿望单游戏 —— 这类包常比单买便宜，建议去 Steam 比价：</div>' +
+    list.map(b => {
+      const sum = b.games.reduce((s, g) => s + ((g.price && g.price.current != null) ? g.price.current : 0), 0);
+      return '<div class="bundle-card"><div class="bc-head"><span>🎁 捆绑包 ' + esc(b.id) + ' · 含你的 ' + b.games.length + ' 款</span>' +
+        '<a href="https://store.steampowered.com/bundle/' + encodeURIComponent(b.id) + '/" target="_blank" rel="noopener noreferrer">去 Steam 看 ↗</a></div>' +
+        '<div class="src-note" style="margin-top:4px;">这些游戏当前单买合计约 ¥' + sum.toFixed(2) + '：' +
+        b.games.map(g => '<a href="javascript:void(0)" data-open-appid="' + g.appid + '">' + esc(g.name) + '</a>').join('、') + '</div></div>';
+    }).join('');
+  if (hint) { hint.className = 'tb-hint ok'; hint.textContent = '找到 ' + list.length + ' 个可能更划算的包'; }
+}
+
+/* ---------------- ⑥ 云端刷新结果回拉 ---------------- */
+const CLOUD_PULL_KEY = 'sw_cloud_pull_v1';
+function loadPullMeta() {
+  try { const o = JSON.parse(localStorage.getItem(CLOUD_PULL_KEY) || '{}'); return (o && typeof o === 'object') ? o : {}; }
+  catch (e) { return {}; }
+}
+function savePullMeta(m) {
+  try { localStorage.setItem(CLOUD_PULL_KEY, JSON.stringify(m)); } catch (e) {}
+}
+function decodeBase64Utf8(b64) {
+  const clean = String(b64 || '').replace(/\s+/g, '');
+  const bin = atob(clean);
+  const bytes = new Uint8Array(bin.length);
+  for (let i = 0; i < bin.length; i++) bytes[i] = bin.charCodeAt(i);
+  return new TextDecoder('utf-8').decode(bytes);
+}
+function priceSig(p) {
+  p = p || {};
+  return [p.current, p.original, p.discountPercent, p.isOnSale ? 1 : 0, p.discountExpiration || null, p.saleEvent || null].join('|');
+}
+/* 详情合并：新版数据里缺的「云端字段」用旧值补回，避免本地刷新把云端成果冲掉 */
+function mergeDetailsKeepCloud(oldD, newD) {
+  const out = Object.assign({}, newD);
+  const od = oldD || {};
+  if ((!Array.isArray(out.userTags) || !out.userTags.length) && Array.isArray(od.userTags) && od.userTags.length) {
+    out.userTags = od.userTags.slice();
+    out.userTagsFetchedAt = od.userTagsFetchedAt || null;
+  }
+  if ((!Array.isArray(out.bundleIds) || !out.bundleIds.length) && Array.isArray(od.bundleIds) && od.bundleIds.length) {
+    out.bundleIds = od.bundleIds.slice();
+  }
+  return out;
+}
+/* 价格合并：本地刷新拿不到「折扣截止」，若云端已补过且还没过期，就保留 */
+function mergePriceKeepCloud(oldP, newP) {
+  const out = Object.assign({}, newP);
+  const op = oldP || {};
+  const oldExpOk = op.discountExpiration && toTimestampMs(op.discountExpiration) > nowMs();
+  if (out.discountExpiration == null && oldExpOk) {
+    out.discountExpiration = op.discountExpiration;
+    out.expirationSource = op.expirationSource || null;
+    out.saleEvent = op.saleEvent || null;
+  }
+  return out;
+}
+/* 把云端数据合并进本机：只覆盖「公共数据」，用户字段（目标价/备注/手动史低）一律不动 */
+function mergeCloudGames(remoteGames) {
+  const byId = new Map();
+  (remoteGames || []).forEach(rg => { if (rg && rg.appid) byId.set(Number(rg.appid), rg); });
+  let updated = 0, tags = 0, bundles = 0, translated = 0, unmatched = 0;
+  STATE.games.forEach(g => {
+    const rg = byId.get(Number(g.appid));
+    if (!rg) { unmatched++; return; }
+    let changed = false;
+    if (rg.price && typeof rg.price === 'object') {
+      const np = mergePriceKeepCloud(g.price, rg.price);
+      if (priceSig(g.price) !== priceSig(np)) changed = true;
+      g.price = np;
+    }
+    if (rg.rating && typeof rg.rating === 'object') g.rating = Object.assign({}, g.rating, rg.rating);
+    if (rg.details && typeof rg.details === 'object') {
+      const rd = rg.details;
+      if (Array.isArray(rd.userTags) && rd.userTags.length) {
+        g.details.userTags = rd.userTags.slice();
+        g.details.userTagsFetchedAt = rd.userTagsFetchedAt || nowMs();
+        tags++; changed = true;
+      }
+      if (Array.isArray(rd.bundleIds) && rd.bundleIds.length) { g.details.bundleIds = rd.bundleIds.slice(); bundles++; changed = true; }
+      ['genres', 'featureTags', 'categories', 'platforms', 'developers', 'publishers'].forEach(k => {
+        if (Array.isArray(rd[k]) && rd[k].length) g.details[k] = rd[k].slice();
+      });
+      if (rd.description) {
+        g.details.description = rd.description;
+        g.details.descriptionOriginal = rd.descriptionOriginal || g.details.descriptionOriginal;
+        g.details.descriptionTranslated = !!rd.descriptionTranslated;
+      }
+      if (rd.chineseSupport !== undefined) g.details.chineseSupport = !!rd.chineseSupport;
+      if (rd.metacritic != null) g.details.metacritic = rd.metacritic;
+      if (rd.headerImage) g.details.headerImage = rd.headerImage;
+      if (rd.releaseDate) g.details.releaseDate = rd.releaseDate;
+    }
+    /* 云端机翻补的中文名：只有本地还没有中文时才采用 */
+    if (rg.name && !hasChinese(g.name) && hasChinese(rg.name)) { g.name = rg.name; translated++; changed = true; }
+    if (rg.nameSource) g.nameSource = rg.nameSource;
+    /* 史低：手动确认的绝不覆盖（与 CI 脚本同一条红线） */
+    if (rg.historicalLow && rg.historicalLow.price != null) {
+      if (!(g.historicalLow && g.historicalLow.source === '手动确认')) {
+        g.historicalLow = Object.assign({}, g.historicalLow, rg.historicalLow);
+      }
+    }
+    if (changed) { g.updatedAt = nowMs(); updated++; }
+    recordPriceObs(g);
+  });
+  return { updated, tags, bundles, translated, unmatched, remoteCount: byId.size, localCount: STATE.games.length };
+}
+/* 拉取通道：优先同源（GitHub Pages 上的 data/wishlist.json，无需 Token），失败再走 GitHub API */
+async function fetchCloudJSON() {
+  const cfg = loadCloudCfg();
+  let sameErr = null;
+  try {
+    const r = await fetchWithTimeout('data/wishlist.json?t=' + Date.now(), { cache: 'no-store' }, 20000);
+    if (r && r.ok) return { data: await r.json(), via: '同源 data/wishlist.json（GitHub Pages）' };
+    sameErr = 'HTTP ' + (r && r.status);
+  } catch (e) { sameErr = e && e.message; }
+  if (cfg.token) {
+    const api = 'https://api.github.com/repos/' + cfg.owner + '/' + cfg.repo + '/contents/' + cfg.path +
+      '?ref=' + encodeURIComponent(cfg.branch);
+    const r = await ghFetch(api, cfg.token, { __cfg: cfg });
+    const j = await r.json();
+    if (!j || !j.content) throw new Error('GitHub 返回的内容为空（路径 ' + cfg.path + ' 是否正确？）');
+    return { data: JSON.parse(decodeBase64Utf8(j.content)), via: 'GitHub API（' + cfg.owner + '/' + cfg.repo + '）' };
+  }
+  throw new Error('同源读取 data/wishlist.json 失败（' + sameErr + '），且本机还没配置 GitHub Token 作为后备通道。\n' +
+    '常见原因：① 页面是用 file:// 双击打开的（同源拉取不可用）→ 请改用 https://ticianli.github.io/wish-list/ 访问；' +
+    '② 云端还没发布过 data/wishlist.json；③ 网络被拦截。');
+}
+async function pullFromCloud(opts) {
+  opts = opts || {};
+  holdProgress();
+  try {
+    setProgress('正在拉取云端刷新结果…', null);
+    const got = await fetchCloudJSON();
+    const data = got.data;
+    if (!data || !Array.isArray(data.games)) throw new Error('云端文件格式不对：缺少 games 数组。');
+    if (!STATE.games.length) throw new Error('本机愿望单为空。请先添加游戏并「☁️ 同步到云端」，再拉取云端刷新结果。');
+    const meta = {
+      source: data.source || null,
+      syncedAt: data.syncedAt || null,
+      gameCount: data.gameCount != null ? data.gameCount : (data.games || []).length,
+      fingerprint: data.fingerprint || null,
+      refreshedAt: data.refreshedAt || data.updatedAt || null,
+      refreshedBy: data.refreshedBy || null,
+      refreshCount: data.refreshCount != null ? data.refreshCount : null,
+      lastPullAt: nowMs(),
+      via: got.via
+    };
+    const stat = mergeCloudGames(data.games);
+    saveData();
+    savePullMeta(meta);
+    renderAll();
+    updateCloudPullHint(meta);
+    const bits = ['✅ 已从云端更新 ' + stat.updated + ' / ' + stat.localCount + ' 款'];
+    if (stat.tags) bits.push('用户标签 ' + stat.tags + ' 款');
+    if (stat.bundles) bits.push('捆绑包 ' + stat.bundles + ' 款');
+    if (stat.translated) bits.push('补中文名 ' + stat.translated + ' 款');
+    if (stat.unmatched) bits.push('云端尚无 ' + stat.unmatched + ' 款（本机新加、还没上传）');
+    bits.push('来源：' + got.via);
+    toast(bits.join('\n'), 'success', 13000);
+    dbgPush({ ok: true, via: 'cloud-pull', url: shortUrl(got.via), games: stat.updated });
+    return { ok: true, stat, meta };
+  } catch (e) {
+    const netFail = e.network || isNetworkError(e);
+    toast('拉取云端数据失败：' + e.message + (netFail ? '\n（这是网络层问题，不是数据问题；换网络后可重试。）' : ''), 'error', 16000);
+    dbgPush({ ok: false, via: 'cloud-pull', err: String(e.message) });
+    return { ok: false, error: e };
+  } finally { releaseProgress(); }
+}
+function updateCloudPullHint(meta) {
+  const el = $('#cloudPullHint');
+  if (!el) return;
+  meta = meta || loadPullMeta();
+  if (!meta || !meta.lastPullAt) {
+    el.className = 'tb-hint';
+    el.textContent = '未拉取';
+    el.title = '点左边的按钮，把云端每天自动刷新得到的「折扣截止 / 用户标签 / 捆绑包 / 机翻中文名」拉回本机。';
+    return;
+  }
+  const refr = meta.refreshedAt ? fmtTime(meta.refreshedAt) : (meta.syncedAt ? fmtTime(meta.syncedAt) : '未知');
+  el.className = 'tb-hint ok';
+  el.textContent = '上次拉取 ' + fmtTime(meta.lastPullAt);
+  el.title = '拉取方式：' + (meta.via || '—') +
+    '\n云端刷新时间：' + refr +
+    '\n页面同步到云端时间：' + (meta.syncedAt ? fmtTime(meta.syncedAt) : '未知') +
+    '\n数据来源标记：' + (meta.source || '未标注') +
+    '\n数据指纹：' + (meta.fingerprint || '无') +
+    '\n云端收录款数：' + (meta.gameCount != null ? meta.gameCount : '未知') +
+    '\n本机拉取时间：' + fmtTime(meta.lastPullAt);
+}
+function cloudPullInfo() {
+  const m = loadPullMeta();
+  if (!m || !m.lastPullAt) {
+    toast('本机还没有拉取过云端数据。点「⬇️ 拉取云端刷新结果」后，这里会显示云端文件的时间与数据指纹。', 'warn', 9000);
+    return;
+  }
+  toast('云端数据信息\n' +
+    '· 拉取方式：' + (m.via || '—') + '\n' +
+    '· 本机拉取时间：' + fmtTime(m.lastPullAt) + '\n' +
+    '· 云端刷新时间：' + (m.refreshedAt ? fmtTime(m.refreshedAt) : '未知') + '\n' +
+    '· 页面同步到云端时间：' + (m.syncedAt ? fmtTime(m.syncedAt) : '未知') + '\n' +
+    '· 数据来源标记：' + (m.source || '未标注') + '\n' +
+    '· 数据指纹：' + (m.fingerprint || '无') + '\n' +
+    '· 云端收录款数：' + (m.gameCount != null ? m.gameCount : '未知'), 'success', 15000);
+}
+function triggerCloudPull() {
+  const cfg = loadCloudCfg();
+  showConfirm(
+    '从云端拉取每天凌晨自动刷新得到的最新数据？\n\n' +
+    '· 会更新：折扣截止时间、促销归属、用户标签、捆绑包、评分、云端机翻的中文名与简介\n' +
+    '· 不会改动：你的目标价、备注、手动确认的史低、DLC 列表\n' +
+    '· 只更新两边都有的游戏（你新加还没同步上云的游戏保持原样，不会被删）\n' +
+    '· 数据来源：' + cfg.owner + '/' + cfg.repo + ' 的 ' + cfg.path + '（分支 ' + cfg.branch + '）',
+    () => pullFromCloud()
+  );
+}
+
+/* ---------------- 新增控件的事件绑定 ---------------- */
+(function initNewFeatures() {
+  try {
+    const $btnPull = $('#btnCloudPull');
+    if ($btnPull) $btnPull.addEventListener('click', triggerCloudPull);
+    const $btnPullInfo = $('#btnCloudPullInfo');
+    if ($btnPullInfo) $btnPullInfo.addEventListener('click', cloudPullInfo);
+
+    let cloudOpen = true;
+    try { cloudOpen = localStorage.getItem('sw_tagcloud_v1') !== '0'; } catch (e) {}
+    setTagCloudOpen(cloudOpen);
+    updateCloudPullHint();
+    const $btnTC = $('#btnTagCloudToggle');
+    if ($btnTC) $btnTC.addEventListener('click', () => {
+      const box = $('#tagCloud');
+      setTagCloudOpen(!(box && box.style.display === 'flex'));
+    });
+    const $cloud = $('#tagCloud');
+    if ($cloud) $cloud.addEventListener('click', e => {
+      const chip = e.target.closest('.tc[data-tag]');
+      if (!chip) return;
+      const tag = chip.dataset.tag;
+      STATE.filters.usertag = (STATE.filters.usertag === tag) ? '' : tag;
+      applyFilterUi();
+      syncFilterUi();
+      renderTagCloud();
+    });
+
+    const $btnBudget = $('#btnBudgetPlan');
+    if ($btnBudget) $btnBudget.addEventListener('click', renderBudgetPlan);
+    const $bOut = $('#budgetOut');
+    if ($bOut) $bOut.addEventListener('click', e => {
+      const row = e.target.closest('[data-open-appid]');
+      if (row) openDetail(Number(row.dataset.openAppid));
+    });
+
+    const $btnBundle = $('#btnBundleScan');
+    if ($btnBundle) $btnBundle.addEventListener('click', renderBundleScan);
+    const $bunOut = $('#bundleOut');
+    if ($bunOut) $bunOut.addEventListener('click', e => {
+      const a = e.target.closest('[data-open-appid]');
+      if (a) { e.preventDefault(); openDetail(Number(a.dataset.openAppid)); }
+    });
+  } catch (e) { console.warn('新增功能初始化失败（不影响原有功能）', e); }
+})();
 
 /* ============================================================
  * 问题 #4：隐私访问门实现
