@@ -433,6 +433,21 @@ function printSaleDiag(diag) {
  * ================================================================== */
 const TAG_BLOCK_RE = /<a\b[^>]*class="[^"]*\bapp_tag\b[^"]*"[^>]*>([\s\S]*?)<\/a>/gi;
 const BUNDLE_ID_RE = /data-ds-bundleid="(\d+)"|data-bundleid="(\d+)"|bundleid="(\d+)"/gi;
+/* 【上限哨兵用】商店页里"真实标签节点"的计数正则。
+   注意必须排除 Steam 自己塞的那个占位符 `<a class="app_tag" style="display:none;">+</a>`
+   —— 它永远存在且不是标签（parseUserTags 也会把它过滤掉）。
+   不排除的话哨兵每天都会误报"疑似截断"（实测单页 21 个节点 vs 解析 20 个，差的正是它）。 */
+const REAL_TAG_NODE_RE = /<a\b[^>]*class="[^"]*\bapp_tag\b[^"]*"[^>]*>(?:(?!<\/a>)[\s\S])*?<\/a>/gi;
+function countRealTagNodes(html) {
+  const matches = html.match(REAL_TAG_NODE_RE) || [];
+  let n = 0;
+  for (const raw of matches) {
+    // 抠出 <a ...> 与 </a> 之间的文本，只认"非空且不是 +"的
+    const t = stripHtml(raw.replace(/^<a\b[^>]*>/i, '').replace(/<\/a>\s*$/i, '')).replace(/^\+/, '').trim();
+    if (t && t !== '+') n++;
+  }
+  return n;
+}
 
 function parseUserTags(html) {
   /* 【架构改动·彻底去掉款数上限】
@@ -715,18 +730,19 @@ async function enrichStoreData(games) {
       }
       const tags = parseUserTags(html);
       const bundles = parseBundleIds(html);
-      /* 【上限哨兵】数一数页面上「原始 app_tag 节点」到底有多少个，
-         和解析出来的标签数比对。若原始数 > 解析数，说明又出现了静默截断
-         （历史上就是 `if (tags.length >= 20) break;` 造成的）。
-         不报警不代表页面标签就多 —— 是 Steam 商店页 app_tag 区本身只列
-         约 20 个（其余同标签仍在，但不在此区块）。哨兵只负责"别丢东西"。 */
-      stat.rawTagNodes = (stat.rawTagNodes || 0) + (html.match(/class="[^"]*\bapp_tag\b/g) || []).length;
-      stat.maxRawTags = Math.max(stat.maxRawTags || 0, (html.match(/class="[^"]*\bapp_tag\b/g) || []).length);
-      if ((html.match(/class="[^"]*\bapp_tag\b/g) || []).length > tags.length) {
+      /* 【上限哨兵】数一数页面上「真实 app_tag 节点」有多少个（已排除 Steam 自带的 `+` 占位符），
+         与解析出的标签数比对。若原始数 > 解析数，说明又出现了静默截断。
+         实测（run #28）：单页最多 21 个节点 = 20 个真实标签 + 1 个 `+` 占位符，
+         即 **Steam 商店页 app_tag 区本身只列约 20 个标签**，不是我们砍的。
+         哨兵只负责"我们这边别丢东西"，页面标签多寡是 Steam 的事。 */
+      const rawN = countRealTagNodes(html);
+      stat.rawTagNodes = (stat.rawTagNodes || 0) + rawN;
+      stat.maxRawTags = Math.max(stat.maxRawTags || 0, rawN);
+      if (rawN > tags.length) {
         stat.tagTruncated = (stat.tagTruncated || 0) + 1;
         if (!stat.diagTagTrunc) {
-          stat.diagTagTrunc = (g.name || g.appid) + '：原始 app_tag 节点 ' +
-            (html.match(/class="[^"]*\bapp_tag\b/g) || []).length + ' 个，解析出 ' + tags.length + ' 个';
+          stat.diagTagTrunc = (g.name || g.appid) + '：原始真实 app_tag 节点 ' + rawN +
+            ' 个，解析出 ' + tags.length + ' 个';
         }
       }
       /* 诊断样本只在「真的解析出东西」时留一份，
@@ -1133,13 +1149,14 @@ async function main() {
     printStoreDiag(st);
     log(`用户标签：本次抓取 ${st.ok}/${st.tried} 款成功，共 ${st.tags} 个标签` +
         (st.failed ? `，失败 ${st.failed} 款（下次运行会重试）` : ''));
-    /* 【上限哨兵】明确报告"页面原始节点数 vs 解析数"，让任何新的静默截断
-       在日志里一眼可见，而不是等用户发现"怎么只有 20 个标签"。 */
-    log(`[上限哨兵] app_tag 原始节点：单页最多 ${st.maxRawTags || 0} 个、合计 ${st.rawTagNodes || 0} 个；` +
+    /* 【上限哨兵】明确报告"页面真实节点数 vs 解析数"，让任何新的静默截断
+       在日志里一眼可见，而不是等用户发现"怎么只有 20 个标签"。
+       实测单页约 20 个是 Steam 自身的展示上限（哨兵会显示"无截断"）。 */
+    log(`[上限哨兵] 真实 app_tag 节点：单页最多 ${st.maxRawTags || 0} 个、合计 ${st.rawTagNodes || 0} 个；` +
         `解析出 ${st.tags} 个标签；` +
         (st.tagTruncated
           ? `⚠ 有 ${st.tagTruncated} 款原始节点多于解析结果，疑似截断！样例：${st.diagTagTrunc}`
-          : `无截断（两者一致）。`));
+          : `无截断（两者一致；单页上限由 Steam 决定，非本站所砍）。`));
   } catch (e) {
     warn('商店页标签处理异常（不影响其它数据）：' + e.message);
   }
