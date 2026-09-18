@@ -160,6 +160,79 @@ const STUB = `
   });
   check('本机独有 9999 未被删除', m3.has9999 === true, JSON.stringify(m3));
 
+  log('\n=== I. 弹着候选时点「取消任务」→ 弹窗必须关掉、标记必须清掉 ===');
+  {
+    const page2 = await browser.newPage();
+    const errs2 = [];
+    page2.on('pageerror', e => errs2.push(e.message));
+    await page2.evaluateOnNewDocument(() => { try { localStorage.setItem('sw_gate_owner_v1', '1'); } catch (e) {} });
+    await page2.evaluateOnNewDocument(STUB);
+    await page2.goto(url, { waitUntil: 'domcontentloaded' });
+    await sleep(1200);
+    await page2.evaluate(() => { $('#addInput').value = 'alpha task'; $('#btnAdd').click(); });
+    await sleep(2600);
+    let s2 = await page2.evaluate(() => ({
+      q: STATE.taskQueue.map(t => ({ status: t.status, pickOpened: t.pickOpened })),
+      candOpen: document.getElementById('modalCandidates').classList.contains('show')
+    }));
+    check('I1 前置：候选弹窗已打开', s2.candOpen === true, JSON.stringify(s2));
+    /* 点「取消任务」 */
+    await page2.evaluate(() => { document.getElementById('btnCancelTask').click(); });
+    await sleep(600);
+    s2 = await page2.evaluate(() => ({
+      q: STATE.taskQueue.map(t => ({ status: t.status, pickOpened: t.pickOpened })),
+      candOpen: document.getElementById('modalCandidates').classList.contains('show'),
+      overlay: document.getElementById('overlay').classList.contains('show'),
+      pickBtns: document.querySelectorAll('#taskList button[data-tact="pick"]').length,
+      retryBtns: document.querySelectorAll('#taskList button[data-tact="retry"]').length
+    }));
+    check('I2 取消后候选弹窗关闭', s2.candOpen === false, JSON.stringify(s2));
+    check('I3 取消后遮罩层关闭', s2.overlay === false, JSON.stringify(s2));
+    check('I4 取消后任务不再占着弹窗（pickOpened=false）', s2.q.every(t => !t.pickOpened), JSON.stringify(s2.q));
+    check('I5 取消后任务可重试（有重试按钮、无残留选择按钮）',
+      s2.retryBtns === 1 && s2.pickBtns === 0, JSON.stringify(s2));
+    /* 取消后再加一条：队列必须还活着 */
+    await page2.evaluate(() => { $('#addInput').value = 'alpha task2'; $('#btnAdd').click(); });
+    await sleep(2600);
+    s2 = await page2.evaluate(() => ({
+      candOpen: document.getElementById('modalCandidates').classList.contains('show'),
+      candCount: document.querySelectorAll('#candList .cand-item').length,
+      statuses: STATE.taskQueue.map(t => t.status)
+    }));
+    check('I6 取消后队列仍能处理新任务', s2.candOpen === true && s2.candCount > 0, JSON.stringify(s2));
+    await page2.close();
+  }
+
+  log('\n=== J. 候选弹窗必须独占（不与导入/OCR 弹窗叠加）===');
+  {
+    const page3 = await browser.newPage();
+    await page3.evaluateOnNewDocument(() => { try { localStorage.setItem('sw_gate_owner_v1', '1'); } catch (e) {} });
+    await page3.evaluateOnNewDocument(STUB);
+    await page3.goto(url, { waitUntil: 'domcontentloaded' });
+    await sleep(1200);
+    /* 打开「导入愿望单」弹窗 → 再入队触发候选 */
+    await page3.evaluate(() => { document.getElementById('btnImportWish').click(); });
+    await sleep(300);
+    let s3 = await page3.evaluate(() => ({ imp: document.getElementById('modalImport').classList.contains('show') }));
+    check('J1 前置：导入弹窗已打开', s3.imp === true, JSON.stringify(s3));
+    await page3.evaluate(() => { $('#addInput').value = 'alpha task'; $('#btnAdd').click(); });
+    await sleep(2600);
+    s3 = await page3.evaluate(() => ({
+      cand: document.getElementById('modalCandidates').classList.contains('show'),
+      imp: document.getElementById('modalImport').classList.contains('show'),
+      shownCount: document.querySelectorAll('.modal.show').length
+    }));
+    check('J2 候选弹出时导入弹窗被自动关掉', s3.cand === true && s3.imp === false, JSON.stringify(s3));
+    check('J3 同一时刻只开一个弹窗', s3.shownCount === 1, JSON.stringify(s3));
+    /* 点选后任务必须能完成 */
+    await page3.evaluate(() => { const it = document.querySelector('#candList .cand-item'); if (it) it.click(); });
+    await sleep(3000);
+    const s3b = await page3.evaluate(() => STATE.taskQueue.map(t => t.status));
+    check('J4 点选后任务能完成（不被叠加弹窗影响）',
+      s3b.indexOf('done') >= 0, JSON.stringify(s3b));
+    await page3.close();
+  }
+
   log('\n=== 页面错误 ===');
   /* 只关心真正的 JS 运行时错误；favicon / 外部 CDN 的资源 404、连接被拒不算产品问题 */
   const realErrs = errs.filter(e =>
