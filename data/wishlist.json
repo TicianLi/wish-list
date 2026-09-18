@@ -1,15 +1,2970 @@
 {
   "version": 3,
-  "source": "manual-sync",
-  "syncedAt": 1789569158433,
-  "gameCount": 197,
-  "fingerprint": "30a857c27957c800",
-  "syncedFrom": "https://ticianli.github.io",
-  "updatedAt": 1789678559325,
-  "refreshedAt": 1789678559325,
-  "refreshedBy": "github-actions",
-  "refreshCount": 2,
+  "updatedAt": 1789748642056,
   "games": [
+    {
+      "appid": 2187290,
+      "name": "墙世界",
+      "originalName": "墙世界",
+      "price": {
+        "current": 4.35,
+        "original": 29,
+        "discountPercent": 85,
+        "currency": "CNY",
+        "isOnSale": true,
+        "discountExpiration": null,
+        "expirationSource": null,
+        "saleEvent": null,
+        "updatedAt": 1789748599688
+      },
+      "rating": {
+        "score": 7.5,
+        "positive": 76,
+        "total": 1141,
+        "desc": "Mostly Positive",
+        "updatedAt": 1789748600432
+      },
+      "historicalLow": {
+        "price": 4.35,
+        "count": 5,
+        "confidence": "A",
+        "source": "ITAD(国区)",
+        "updatedAt": 1789748601331,
+        "currency": "CNY"
+      },
+      "targetPrice": null,
+      "note": "",
+      "dlcList": [
+        {
+          "appid": 2474860,
+          "name": "墙世界: 深度威胁",
+          "price": 4.5,
+          "shortDescription": "跨越大裂隙，探索机械蜘蛛未曾踏足过的墙体！与全新的敌人战斗，面对前所未见的威胁。开拓无人勘察的生态群系，解锁新技术。揭晓过去的秘密，查明事情的真相！",
+          "description": "跨越大裂隙，探索机械蜘蛛未曾踏足过的墙体！与全新的敌人战斗，面对前所未见的威胁。开拓无人勘察的生态群系，解锁新技术。揭晓过去的秘密，查明事情的真相！",
+          "kind": "其他",
+          "type": "dlc",
+          "originalDescription": "跨越大裂隙，探索机械蜘蛛未曾踏足过的墙体！与全新的敌人战斗，面对前所未见的威胁。开拓无人勘察的生态群系，解锁新技术。揭晓过去的秘密，查明事情的真相！",
+          "translated": false,
+          "updatedAt": 1789748601694
+        },
+        {
+          "appid": 2337040,
+          "name": "Wall World Original Soundtrack",
+          "price": 5.5,
+          "shortDescription": "The official soundtrack for Wall World.",
+          "description": "The official soundtrack for Wall World.",
+          "kind": "原声",
+          "type": "music",
+          "originalDescription": "The official soundtrack for Wall World.",
+          "translated": false,
+          "updatedAt": 1789748603458
+        }
+      ],
+      "details": {
+        "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2187290/header_schinese.jpg?t=1776425388",
+        "isFree": false,
+        "type": "game",
+        "releaseDate": "2023 年 4 月 5 日",
+        "releaseTs": null,
+        "developers": [
+          "Alawar"
+        ],
+        "publishers": [
+          "Alawar"
+        ],
+        "platforms": [
+          "Windows"
+        ],
+        "categories": [
+          "单人",
+          "Steam 成就",
+          "Steam 集换式卡牌",
+          "DUALSHOCK 控制器支持",
+          "DUALSHOCK 控制器支持",
+          "DualSense 控制器支持",
+          "DualSense 控制器支持",
+          "部分支持控制器",
+          "Steam 云",
+          "家庭共享"
+        ],
+        "genres": [
+          "动作",
+          "冒险",
+          "独立",
+          "策略"
+        ],
+        "tags": [
+          "动作",
+          "冒险",
+          "独立",
+          "策略"
+        ],
+        "featureTags": [
+          "单人",
+          "成就",
+          "集换式卡牌",
+          "云存档",
+          "家庭共享"
+        ],
+        "metacritic": null,
+        "chineseSupport": true,
+        "reviewTotal": 11360,
+        "description": "骑在巨大的机械蜘蛛上探索《Wall World》吧：采掘宝贵资源，升级装备抵御成群怪物，在战斗之中探索充满异域风情的生态群系吧。 你能活下来并探寻《Wall World》 的秘密吗？",
+        "descriptionOriginal": "骑在巨大的机械蜘蛛上探索《Wall World》吧：采掘宝贵资源，升级装备抵御成群怪物，在战斗之中探索充满异域风情的生态群系吧。 你能活下来并探寻《Wall World》 的秘密吗？",
+        "descriptionTranslated": false,
+        "userTags": [],
+        "userTagsFetchedAt": null,
+        "bundleIds": []
+      },
+      "createdAt": 1789748600432,
+      "updatedAt": 1789748603458
+    },
+    {
+      "appid": 1036890,
+      "name": "影子武士3：决定版",
+      "originalName": "影子武士3：决定版",
+      "price": {
+        "current": 40.8,
+        "original": 136,
+        "discountPercent": 70,
+        "currency": "CNY",
+        "isOnSale": true,
+        "discountExpiration": null,
+        "expirationSource": null,
+        "saleEvent": null,
+        "updatedAt": 1789748498578
+      },
+      "rating": {
+        "score": 6.5,
+        "positive": 61,
+        "total": 1130,
+        "desc": "Mixed",
+        "updatedAt": 1789748499009
+      },
+      "historicalLow": {
+        "price": 27.2,
+        "count": 4,
+        "confidence": "A",
+        "source": "ITAD(国区)",
+        "updatedAt": 1789748500740,
+        "currency": "CNY"
+      },
+      "targetPrice": null,
+      "note": "",
+      "dlcList": [],
+      "details": {
+        "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1036890/header.jpg?t=1728947655",
+        "isFree": false,
+        "type": "game",
+        "releaseDate": "2022 年 3 月 1 日",
+        "releaseTs": null,
+        "developers": [
+          "Flying Wild Hog"
+        ],
+        "publishers": [
+          "Devolver Digital"
+        ],
+        "platforms": [
+          "Windows"
+        ],
+        "categories": [
+          "单人",
+          "Steam 成就",
+          "完全支持控制器",
+          "Steam 集换式卡牌",
+          "Steam 云",
+          "家庭共享"
+        ],
+        "genres": [
+          "动作",
+          "冒险"
+        ],
+        "tags": [
+          "动作",
+          "冒险"
+        ],
+        "featureTags": [
+          "单人",
+          "成就",
+          "集换式卡牌",
+          "云存档",
+          "家庭共享"
+        ],
+        "metacritic": 71,
+        "chineseSupport": true,
+        "reviewTotal": 4822,
+        "description": "在《影子武士3》满载新功能的最终版中，踏上穿越神话日本国度的刺激旅程，享受快节奏枪战、锋利近战和壮观自由奔跑移动的超暴力融合体验",
+        "descriptionOriginal": "在《影子武士3》满载新功能的最终版中，踏上穿越神话日本国度的刺激旅程，享受快节奏枪战、锋利近战和壮观自由奔跑移动的超暴力融合体验",
+        "descriptionTranslated": false,
+        "userTags": [],
+        "userTagsFetchedAt": null,
+        "bundleIds": []
+      },
+      "createdAt": 1789748499009,
+      "updatedAt": 1789748499009
+    },
+    {
+      "appid": 233130,
+      "name": "影子武士",
+      "originalName": "影子武士",
+      "price": {
+        "current": 10.8,
+        "original": 108,
+        "discountPercent": 90,
+        "currency": "CNY",
+        "isOnSale": true,
+        "discountExpiration": null,
+        "expirationSource": null,
+        "saleEvent": null,
+        "updatedAt": 1789748482500
+      },
+      "rating": {
+        "score": 8.9,
+        "positive": 87,
+        "total": 2430,
+        "desc": "Very Positive",
+        "updatedAt": 1789748484433
+      },
+      "historicalLow": {
+        "price": 0,
+        "count": 1,
+        "confidence": "A",
+        "source": "ITAD(国区)",
+        "updatedAt": 1789748485839,
+        "currency": "CNY"
+      },
+      "targetPrice": null,
+      "note": "",
+      "dlcList": [
+        {
+          "appid": 2550000,
+          "name": "Shadow Warrior: Special Edition Upgrade",
+          "price": null,
+          "shortDescription": "The Shadow Warrior Special Edition Upgrade includes the Serious Sam 3 sledgehammer and Hotline Miami katana in-game weapons, the Shadow Warrior digital art book, and the official Shadow Warrior soundtrack.",
+          "description": "The Shadow Warrior Special Edition Upgrade includes the Serious Sam 3 sledgehammer and Hotline Miami katana in-game weapons, the Shadow Warrior digital art book…",
+          "kind": "原声",
+          "type": "dlc",
+          "originalDescription": "The Shadow Warrior Special Edition Upgrade includes the Serious Sam 3 sledgehammer and Hotline Miami katana in-game weapons, the Shadow Warrior digital art book, and the official Shadow Warrior soundtrack.",
+          "translated": false,
+          "updatedAt": 1789748487721
+        }
+      ],
+      "details": {
+        "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/233130/header.jpg?t=1710246206",
+        "isFree": false,
+        "type": "game",
+        "releaseDate": "2013 年 9 月 26 日",
+        "releaseTs": null,
+        "developers": [
+          "Flying Wild Hog"
+        ],
+        "publishers": [
+          "Devolver Digital"
+        ],
+        "platforms": [
+          "Windows",
+          "macOS",
+          "Linux"
+        ],
+        "categories": [
+          "单人",
+          "Steam 成就",
+          "完全支持控制器",
+          "Steam 集换式卡牌",
+          "支持字幕",
+          "Steam 云",
+          "在电视上远程畅玩",
+          "家庭共享"
+        ],
+        "genres": [
+          "动作",
+          "冒险"
+        ],
+        "tags": [
+          "动作",
+          "冒险"
+        ],
+        "featureTags": [
+          "单人",
+          "成就",
+          "集换式卡牌",
+          "云存档",
+          "家庭共享"
+        ],
+        "metacritic": 74,
+        "chineseSupport": true,
+        "reviewTotal": 15959,
+        "description": "Shadow Warrior is a bold reimagining of the classic 3D Realms’ shooter from independent developer Flying Wild Hog (Hard Reset) starring the legendary and quick-witted warrior Lo Wang.",
+        "descriptionOriginal": "Shadow Warrior is a bold reimagining of the classic 3D Realms’ shooter from independent developer Flying Wild Hog (Hard Reset) starring the legendary and quick-witted warrior Lo Wang.",
+        "descriptionTranslated": false,
+        "userTags": [],
+        "userTagsFetchedAt": null,
+        "bundleIds": []
+      },
+      "createdAt": 1789748484433,
+      "updatedAt": 1789748487721
+    },
+    {
+      "appid": 238010,
+      "name": "Deus Ex: Human Revolution - Director's Cut",
+      "originalName": "Deus Ex: Human Revolution - Director's Cut",
+      "price": {
+        "current": 9.8,
+        "original": 98,
+        "discountPercent": 90,
+        "currency": "CNY",
+        "isOnSale": true,
+        "discountExpiration": null,
+        "expirationSource": null,
+        "saleEvent": null,
+        "updatedAt": 1789748448969
+      },
+      "rating": {
+        "score": 9.2,
+        "positive": 88,
+        "total": 1130,
+        "desc": "Very Positive",
+        "updatedAt": 1789748451344
+      },
+      "historicalLow": {
+        "price": 2.99,
+        "count": 1,
+        "confidence": "A",
+        "source": "ITAD(国区)",
+        "updatedAt": 1789748453105,
+        "currency": "CNY"
+      },
+      "targetPrice": null,
+      "note": "",
+      "dlcList": [],
+      "details": {
+        "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/238010/header.jpg?t=1779722099",
+        "isFree": false,
+        "type": "game",
+        "releaseDate": "2013 年 10 月 25 日",
+        "releaseTs": null,
+        "developers": [
+          "Eidos Montreal"
+        ],
+        "publishers": [
+          "Eidos Interactive Corp."
+        ],
+        "platforms": [
+          "Windows"
+        ],
+        "categories": [
+          "单人",
+          "Steam 成就",
+          "完全支持控制器",
+          "Steam 集换式卡牌",
+          "支持字幕",
+          "DUALSHOCK 控制器支持",
+          "DualSense 控制器支持",
+          "Steam 云",
+          "解说可用",
+          "在平板上远程畅玩",
+          "家庭共享"
+        ],
+        "genres": [
+          "动作",
+          "角色扮演"
+        ],
+        "tags": [
+          "动作",
+          "角色扮演"
+        ],
+        "featureTags": [
+          "单人",
+          "成就",
+          "集换式卡牌",
+          "云存档",
+          "家庭共享"
+        ],
+        "metacritic": 91,
+        "chineseSupport": false,
+        "reviewTotal": 25397,
+        "description": "You play Adam Jensen, an ex-SWAT specialist who's been handpicked to oversee the defensive needs of one of America's most experimental biotechnology firms. When a black ops team breaks in and kills the very scientists you were hired to protect, everything you thought you knew about your job changes.",
+        "descriptionOriginal": "You play Adam Jensen, an ex-SWAT specialist who's been handpicked to oversee the defensive needs of one of America's most experimental biotechnology firms. When a black ops team breaks in and kills the very scientists you were hired to protect, everything you thought you knew about your job changes.",
+        "descriptionTranslated": false,
+        "userTags": [],
+        "userTagsFetchedAt": null,
+        "bundleIds": []
+      },
+      "createdAt": 1789748451344,
+      "updatedAt": 1789748451344
+    },
+    {
+      "appid": 324800,
+      "name": "影子武士2",
+      "originalName": "影子武士2",
+      "price": {
+        "current": 10.8,
+        "original": 108,
+        "discountPercent": 90,
+        "currency": "CNY",
+        "isOnSale": true,
+        "discountExpiration": null,
+        "expirationSource": null,
+        "saleEvent": null,
+        "updatedAt": 1789748413177
+      },
+      "rating": {
+        "score": 8.9,
+        "positive": 87,
+        "total": 8596,
+        "desc": "Very Positive",
+        "updatedAt": 1789748414426
+      },
+      "historicalLow": {
+        "price": 10.8,
+        "count": 30,
+        "confidence": "A",
+        "source": "ITAD(国区)",
+        "updatedAt": 1789748416405,
+        "currency": "CNY"
+      },
+      "targetPrice": null,
+      "note": "",
+      "dlcList": [
+        {
+          "appid": 565840,
+          "name": "Shadow Warrior 2: The Way of the Wang DLC",
+          "price": null,
+          "shortDescription": "Shadow Warrior 2’s The Way of the Wang DLC opens up a new area within the game’s hub town, presenting seven special trials for Lo Wang to unlock and overcome.",
+          "description": "Shadow Warrior 2’s The Way of the Wang DLC opens up a new area within the game’s hub town, presenting seven special trials for Lo Wang to unlock and overcome.",
+          "kind": "其他",
+          "type": "dlc",
+          "originalDescription": "Shadow Warrior 2’s The Way of the Wang DLC opens up a new area within the game’s hub town, presenting seven special trials for Lo Wang to unlock and overcome.",
+          "translated": false,
+          "updatedAt": 1789748418617
+        },
+        {
+          "appid": 592460,
+          "name": "Shadow Warrior 2: Bounty Hunt DLC Part 1",
+          "price": 0,
+          "shortDescription": "The Shadow Warrior 2: Bounty Hunt Part 1 DLC piles on the action with fourteen wild new missions, two dazzling new weapons, and four tantalizing new perks for Lo Wang and the gang.",
+          "description": "The Shadow Warrior 2: Bounty Hunt Part 1 DLC piles on the action with fourteen wild new missions, two dazzling new weapons, and four tantalizing new perks for L…",
+          "kind": "道具包",
+          "type": "dlc",
+          "originalDescription": "The Shadow Warrior 2: Bounty Hunt Part 1 DLC piles on the action with fourteen wild new missions, two dazzling new weapons, and four tantalizing new perks for Lo Wang and the gang.",
+          "translated": false,
+          "updatedAt": 1789748421846
+        },
+        {
+          "appid": 592461,
+          "name": "Shadow Warrior 2: Bounty Hunt DLC Part 2",
+          "price": null,
+          "shortDescription": "The Shadow Warrior 2: Bounty Hunt Part 2 DLC delivers thirteen thrilling new missions, two spectacular new weapons, and three powerful new perks for Lo Wang and the gang.",
+          "description": "The Shadow Warrior 2: Bounty Hunt Part 2 DLC delivers thirteen thrilling new missions, two spectacular new weapons, and three powerful new perks for Lo Wang and…",
+          "kind": "道具包",
+          "type": "dlc",
+          "originalDescription": "The Shadow Warrior 2: Bounty Hunt Part 2 DLC delivers thirteen thrilling new missions, two spectacular new weapons, and three powerful new perks for Lo Wang and the gang.",
+          "translated": false,
+          "updatedAt": 1789748424216
+        },
+        {
+          "appid": 522333,
+          "name": "Shadow Warrior 2 - Soundtrack",
+          "price": null,
+          "shortDescription": "",
+          "description": "",
+          "kind": "原声",
+          "type": "music",
+          "originalDescription": "",
+          "translated": false,
+          "updatedAt": 1789748425263
+        }
+      ],
+      "details": {
+        "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/324800/header.jpg?t=1728689727",
+        "isFree": false,
+        "type": "game",
+        "releaseDate": "2016 年 10 月 13 日",
+        "releaseTs": null,
+        "developers": [
+          "Flying Wild Hog"
+        ],
+        "publishers": [
+          "Devolver Digital"
+        ],
+        "platforms": [
+          "Windows"
+        ],
+        "categories": [
+          "单人",
+          "多人",
+          "合作",
+          "在线合作",
+          "Steam 成就",
+          "完全支持控制器",
+          "Steam 集换式卡牌",
+          "Steam 云",
+          "在电视上远程畅玩",
+          "家庭共享"
+        ],
+        "genres": [
+          "动作",
+          "冒险"
+        ],
+        "tags": [
+          "动作",
+          "冒险"
+        ],
+        "featureTags": [
+          "单人",
+          "多人",
+          "联机合作",
+          "成就",
+          "集换式卡牌",
+          "云存档",
+          "家庭共享"
+        ],
+        "metacritic": 78,
+        "chineseSupport": true,
+        "reviewTotal": 24123,
+        "description": "影子武士2是Flying wild Hog不落俗套的第一人称射击游戏的惊人进化，故事承接前将军Lo Wang的不幸遭遇。",
+        "descriptionOriginal": "影子武士2是Flying wild Hog不落俗套的第一人称射击游戏的惊人进化，故事承接前将军Lo Wang的不幸遭遇。",
+        "descriptionTranslated": false,
+        "userTags": [],
+        "userTagsFetchedAt": null,
+        "bundleIds": []
+      },
+      "createdAt": 1789748414426,
+      "updatedAt": 1789748425263
+    },
+    {
+      "appid": 916440,
+      "name": "纪元1800",
+      "originalName": "纪元1800",
+      "price": {
+        "current": 49.5,
+        "original": 198,
+        "discountPercent": 75,
+        "currency": "CNY",
+        "isOnSale": true,
+        "discountExpiration": null,
+        "expirationSource": null,
+        "saleEvent": null,
+        "updatedAt": 1789748405033
+      },
+      "rating": {
+        "score": 7.5,
+        "positive": 78,
+        "total": 7418,
+        "desc": "Mostly Positive",
+        "updatedAt": 1789748405580
+      },
+      "historicalLow": {
+        "price": 0,
+        "count": 1,
+        "confidence": "A",
+        "source": "ITAD(国区)",
+        "updatedAt": 1789748407099,
+        "currency": "CNY"
+      },
+      "targetPrice": null,
+      "note": "",
+      "dlcList": [
+        {
+          "appid": 1933240,
+          "name": "Anno 1800™ - Season 4 Pass",
+          "price": 62.5,
+          "shortDescription": "体验第 4 年季票中的三个全新 DLC，在新世界中提升帝国，继续书写您在工业革命时代的传奇！",
+          "description": "体验第 4 年季票中的三个全新 DLC，在新世界中提升帝国，继续书写您在工业革命时代的传奇！",
+          "kind": "季票",
+          "type": "dlc",
+          "originalDescription": "体验第 4 年季票中的三个全新 DLC，在新世界中提升帝国，继续书写您在工业革命时代的传奇！",
+          "translated": false,
+          "updatedAt": 1789748407600
+        },
+        {
+          "appid": 1530880,
+          "name": "Anno 1800™ - Season 3 Pass",
+          "price": 49,
+          "shortDescription": "进入《纪元 1800》工业革命的下一篇章，体验第三年季票中的三个全新 DLC，沉浸于游戏的世界中。",
+          "description": "进入《纪元 1800》工业革命的下一篇章，体验第三年季票中的三个全新 DLC，沉浸于游戏的世界中。",
+          "kind": "季票",
+          "type": "dlc",
+          "originalDescription": "进入《纪元 1800》工业革命的下一篇章，体验第三年季票中的三个全新 DLC，沉浸于游戏的世界中。",
+          "translated": false,
+          "updatedAt": 1789748408814
+        },
+        {
+          "appid": 1247710,
+          "name": "Anno 1800™ - Season 2 Pass",
+          "price": 62.5,
+          "shortDescription": "用包含 3 个新 DLC 的《Anno 1800》Season 2 Pass 进一步推动工业革命",
+          "description": "用包含 3 个新 DLC 的《Anno 1800》Season 2 Pass 进一步推动工业革命",
+          "kind": "其他",
+          "type": "dlc",
+          "originalDescription": "用包含 3 个新 DLC 的《Anno 1800》Season 2 Pass 进一步推动工业革命",
+          "translated": false,
+          "updatedAt": 1789748410132
+        },
+        {
+          "appid": 1066850,
+          "name": "Anno 1800™ - Season 1 Pass",
+          "price": 62.5,
+          "shortDescription": "用《纪元1800》季票丰富你的城市建设体验。季票包含3个DLC，能给你带来新的冒险、挑战、工具，让你塑造属于你的工业革命。",
+          "description": "用《纪元1800》季票丰富你的城市建设体验。季票包含3个DLC，能给你带来新的冒险、挑战、工具，让你塑造属于你的工业革命。",
+          "kind": "季票",
+          "type": "dlc",
+          "originalDescription": "用《纪元1800》季票丰富你的城市建设体验。季票包含3个DLC，能给你带来新的冒险、挑战、工具，让你塑造属于你的工业革命。",
+          "translated": false,
+          "updatedAt": 1789748411407
+        },
+        {
+          "appid": 3256930,
+          "name": "Anno 1800 - End of an Era Pack",
+          "price": 20,
+          "shortDescription": "通过时代之末组合包，庆祝《纪元 1800》的压轴大戏！使用超过 27 件节日新装饰和外观，将你的城市变成终极庆祝盛会！",
+          "description": "通过时代之末组合包，庆祝《纪元 1800》的压轴大戏！使用超过 27 件节日新装饰和外观，将你的城市变成终极庆祝盛会！",
+          "kind": "外观道具",
+          "type": "dlc",
+          "originalDescription": "通过时代之末组合包，庆祝《纪元 1800》的压轴大戏！使用超过 27 件节日新装饰和外观，将你的城市变成终极庆祝盛会！",
+          "translated": false,
+          "updatedAt": 1789748412033
+        },
+        {
+          "appid": 3113620,
+          "name": "Anno 1800 - Pirate Cove Pack",
+          "price": 20,
+          "shortDescription": "使用海盗湾组合包，让海盗们占领你的城市！内含超过 21 件新奇大胆的全新装饰道具和外观，使用白色沙滩、大炮和船只残骸，将你的海岸线打造成海盗们的传奇圣殿。",
+          "description": "使用海盗湾组合包，让海盗们占领你的城市！内含超过 21 件新奇大胆的全新装饰道具和外观，使用白色沙滩、大炮和船只残骸，将你的海岸线打造成海盗们的传奇圣殿。",
+          "kind": "外观道具",
+          "type": "dlc",
+          "originalDescription": "使用海盗湾组合包，让海盗们占领你的城市！内含超过 21 件新奇大胆的全新装饰道具和外观，使用白色沙滩、大炮和船只残骸，将你的海岸线打造成海盗们的传奇圣殿。",
+          "translated": false,
+          "updatedAt": 1789748413706
+        },
+        {
+          "appid": 2830580,
+          "name": "Anno 1800 - Steampunk Pack",
+          "price": 20,
+          "shortDescription": "为你的城市带来别样的风采！“蒸气朋克”组合包内含超过 18 件全新装饰道具和外观，将为你带来一种介于艺术和科技之间的别样风采，它的灵感来自于工业革命中一条没有实现的道路。",
+          "description": "为你的城市带来别样的风采！“蒸气朋克”组合包内含超过 18 件全新装饰道具和外观，将为你带来一种介于艺术和科技之间的别样风采，它的灵感来自于工业革命中一条没有实现的道路。",
+          "kind": "外观道具",
+          "type": "dlc",
+          "originalDescription": "为你的城市带来别样的风采！“蒸气朋克”组合包内含超过 18 件全新装饰道具和外观，将为你带来一种介于艺术和科技之间的别样风采，它的灵感来自于工业革命中一条没有实现的道路。",
+          "translated": false,
+          "updatedAt": 1789748415030
+        },
+        {
+          "appid": 2622040,
+          "name": "Anno 1800 - Eldritch Pack",
+          "price": 20,
+          "shortDescription": "使用《纪元 1800》Eldritch 组合包，畅享 20 多件哥特主题的装饰道具和维多利亚风格的皮肤，涉猎黑暗艺术，为城市增添一份神秘的气息。",
+          "description": "使用《纪元 1800》Eldritch 组合包，畅享 20 多件哥特主题的装饰道具和维多利亚风格的皮肤，涉猎黑暗艺术，为城市增添一份神秘的气息。",
+          "kind": "道具包",
+          "type": "dlc",
+          "originalDescription": "使用《纪元 1800》Eldritch 组合包，畅享 20 多件哥特主题的装饰道具和维多利亚风格的皮肤，涉猎黑暗艺术，为城市增添一份神秘的气息。",
+          "translated": false,
+          "updatedAt": 1789748415539
+        },
+        {
+          "appid": 2504950,
+          "name": "Anno 1800™ National Park Pack",
+          "price": 20,
+          "shortDescription": "使用超过 20 种全新的装饰道具和系统，打造令人惊艳的公园和湖泊，让你的居民从繁忙的都市生活中喘口气。",
+          "description": "使用超过 20 种全新的装饰道具和系统，打造令人惊艳的公园和湖泊，让你的居民从繁忙的都市生活中喘口气。",
+          "kind": "道具包",
+          "type": "dlc",
+          "originalDescription": "使用超过 20 种全新的装饰道具和系统，打造令人惊艳的公园和湖泊，让你的居民从繁忙的都市生活中喘口气。",
+          "translated": false,
+          "updatedAt": 1789748416091
+        },
+        {
+          "appid": 2400950,
+          "name": "Anno 1800™ Fiesta Pack",
+          "price": 20,
+          "shortDescription": "使用超过 20 种全新装饰道具和皮肤变体，一起庆祝新世界文化的繁荣发展，美化居民的街区！",
+          "description": "使用超过 20 种全新装饰道具和皮肤变体，一起庆祝新世界文化的繁荣发展，美化居民的街区！",
+          "kind": "道具包",
+          "type": "dlc",
+          "originalDescription": "使用超过 20 种全新装饰道具和皮肤变体，一起庆祝新世界文化的繁荣发展，美化居民的街区！",
+          "translated": false,
+          "updatedAt": 1789748416869
+        },
+        {
+          "appid": 1933242,
+          "name": "Anno 1800 Cosmetic Pack Bundle #1",
+          "price": 100,
+          "shortDescription": "购买《纪元 1800™》装饰组合捆绑包 #1，使用首批 6 个装饰 DLC，按照你的想法装饰城市！",
+          "description": "购买《纪元 1800™》装饰组合捆绑包 #1，使用首批 6 个装饰 DLC，按照你的想法装饰城市！",
+          "kind": "外观道具",
+          "type": "dlc",
+          "originalDescription": "购买《纪元 1800™》装饰组合捆绑包 #1，使用首批 6 个装饰 DLC，按照你的想法装饰城市！",
+          "translated": false,
+          "updatedAt": 1789748418572
+        },
+        {
+          "appid": 2622020,
+          "name": "Anno 1800 Cosmetic Pack Bundle #2",
+          "price": 158.18,
+          "shortDescription": "购买《纪元 1800》第二个装饰组合捆绑包，使用 10 个最新的装饰 DLC，按照你的想法装饰城市！",
+          "description": "购买《纪元 1800》第二个装饰组合捆绑包，使用 10 个最新的装饰 DLC，按照你的想法装饰城市！",
+          "kind": "外观道具",
+          "type": "dlc",
+          "originalDescription": "购买《纪元 1800》第二个装饰组合捆绑包，使用 10 个最新的装饰 DLC，按照你的想法装饰城市！",
+          "translated": false,
+          "updatedAt": 1789748419728
+        },
+        {
+          "appid": 2277980,
+          "name": "Anno 1800™ Dragon Garden Pack",
+          "price": 20,
+          "shortDescription": "快来入手《纪元 1800™》江南庙会组合包，庆祝春节，使用超过 15 件全新装饰道具，打造生机勃勃的市肆庙会。",
+          "description": "快来入手《纪元 1800™》江南庙会组合包，庆祝春节，使用超过 15 件全新装饰道具，打造生机勃勃的市肆庙会。",
+          "kind": "道具包",
+          "type": "dlc",
+          "originalDescription": "快来入手《纪元 1800™》江南庙会组合包，庆祝春节，使用超过 15 件全新装饰道具，打造生机勃勃的市肆庙会。",
+          "translated": false,
+          "updatedAt": 1789748421108
+        },
+        {
+          "appid": 2222650,
+          "name": "Anno 1800 - Old Town Pack",
+          "price": 20,
+          "shortDescription": "使用超过 20 种主题装饰道具和皮肤，打造您城市中的老镇，感受历史带来的魅力。",
+          "description": "使用超过 20 种主题装饰道具和皮肤，打造您城市中的老镇，感受历史带来的魅力。",
+          "kind": "道具包",
+          "type": "dlc",
+          "originalDescription": "使用超过 20 种主题装饰道具和皮肤，打造您城市中的老镇，感受历史带来的魅力。",
+          "translated": false,
+          "updatedAt": 1789748422398
+        },
+        {
+          "appid": 2055760,
+          "name": "Anno 1800 - Industrial Zone Pack",
+          "price": 20,
+          "shortDescription": "The Anno 1800™ Industrial Zone Pack adds over 20 new ornaments to proclaim the constantly evolving spirit of your city.",
+          "description": "The Anno 1800™ Industrial Zone Pack adds over 20 new ornaments to proclaim the constantly evolving spirit of your city.",
+          "kind": "其他",
+          "type": "dlc",
+          "originalDescription": "The Anno 1800™ Industrial Zone Pack adds over 20 new ornaments to proclaim the constantly evolving spirit of your city.",
+          "translated": false,
+          "updatedAt": 1789748425355
+        }
+      ],
+      "details": {
+        "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/916440/header.jpg?t=1778771290",
+        "isFree": false,
+        "type": "game",
+        "releaseDate": "2019 年 4 月 16 日",
+        "releaseTs": null,
+        "developers": [
+          "Ubisoft Mainz"
+        ],
+        "publishers": [
+          "Ubisoft"
+        ],
+        "platforms": [
+          "Windows"
+        ],
+        "categories": [
+          "单人",
+          "多人",
+          "玩家对战",
+          "线上玩家对战",
+          "合作",
+          "在线合作",
+          "Steam 成就",
+          "Steam 集换式卡牌",
+          "支持字幕"
+        ],
+        "genres": [
+          "模拟",
+          "策略"
+        ],
+        "tags": [
+          "模拟",
+          "策略"
+        ],
+        "featureTags": [
+          "单人",
+          "多人",
+          "联机合作",
+          "在线对战",
+          "成就",
+          "集换式卡牌"
+        ],
+        "metacritic": 81,
+        "chineseSupport": true,
+        "reviewTotal": 29864,
+        "description": "在《Anno 1800》里引领工业革命！ 体验史上瞬息万变的精彩时期之一。发现新科技、新大陆和新社会。打造你梦想中的新世界！",
+        "descriptionOriginal": "在《Anno 1800》里引领工业革命！ 体验史上瞬息万变的精彩时期之一。发现新科技、新大陆和新社会。打造你梦想中的新世界！",
+        "descriptionTranslated": false,
+        "userTags": [],
+        "userTagsFetchedAt": null,
+        "bundleIds": []
+      },
+      "createdAt": 1789748405580,
+      "updatedAt": 1789748425355
+    },
+    {
+      "appid": 243470,
+      "name": "Watch_Dogs™",
+      "originalName": "Watch_Dogs™",
+      "price": {
+        "current": 9.8,
+        "original": 98,
+        "discountPercent": 90,
+        "currency": "CNY",
+        "isOnSale": true,
+        "discountExpiration": null,
+        "expirationSource": null,
+        "saleEvent": null,
+        "updatedAt": 1789748385730
+      },
+      "rating": {
+        "score": 8.4,
+        "positive": 82,
+        "total": 9831,
+        "desc": "Very Positive",
+        "updatedAt": 1789748387950
+      },
+      "historicalLow": {
+        "price": 9.8,
+        "count": 2,
+        "confidence": "A",
+        "source": "ITAD(国区)",
+        "updatedAt": 1789748389286,
+        "currency": "CNY"
+      },
+      "targetPrice": null,
+      "note": "",
+      "dlcList": [
+        {
+          "appid": 293054,
+          "name": "Watch_Dogs™ - Season Pass",
+          "price": 14.8,
+          "shortDescription": "The Season Pass contains a new Single Player Campaign featuring the legendary hacker T-Bone as a new playable character, 3 additional missions, 3 new weapons and 5 additional skins. It also includes a new mind bending game mode!",
+          "description": "The Season Pass contains a new Single Player Campaign featuring the legendary hacker T-Bone as a new playable character, 3 additional missions, 3 new weapons an…",
+          "kind": "季票",
+          "type": "dlc",
+          "originalDescription": "The Season Pass contains a new Single Player Campaign featuring the legendary hacker T-Bone as a new playable character, 3 additional missions, 3 new weapons and 5 additional skins. It also includes a new mind bending game mode!",
+          "translated": false,
+          "updatedAt": 1789748390964
+        },
+        {
+          "appid": 293057,
+          "name": "Watch_Dogs - Conspiracy",
+          "price": 14.8,
+          "shortDescription": "Unlock a standalone mind bending game mode in which cyborgs invaded Chicago. Track them and take them down!",
+          "description": "Unlock a standalone mind bending game mode in which cyborgs invaded Chicago. Track them and take them down!",
+          "kind": "其他",
+          "type": "dlc",
+          "originalDescription": "Unlock a standalone mind bending game mode in which cyborgs invaded Chicago. Track them and take them down!",
+          "translated": false,
+          "updatedAt": 1789748392716
+        },
+        {
+          "appid": 293059,
+          "name": "Watch_Dogs - Access Granted Pack",
+          "price": 14.8,
+          "shortDescription": "在三个全新的任务中增强你的骇客能力 ! 解锁6个额外的皮肤并可通向全新的强力技能，从而强化你对芝加哥的控制。",
+          "description": "在三个全新的任务中增强你的骇客能力 ! 解锁6个额外的皮肤并可通向全新的强力技能，从而强化你对芝加哥的控制。",
+          "kind": "其他",
+          "type": "dlc",
+          "originalDescription": "在三个全新的任务中增强你的骇客能力 ! 解锁6个额外的皮肤并可通向全新的强力技能，从而强化你对芝加哥的控制。",
+          "translated": false,
+          "updatedAt": 1789748393158
+        },
+        {
+          "appid": 293061,
+          "name": "Watch_Dogs - Bad Blood",
+          "price": 14.8,
+          "shortDescription": "Revisit Chicago in a brand new Watch_Dogs adventure! Play as T-Bone Grady, the legendary and eccentric hacker and Aiden Pearce's trusted comrade. Now on the run from Blume, T-Bone only has two choices: flee and start a new life elsewhere, or fight Blume to save an old friend. Face your shady past on your road to redemption.",
+          "description": "Revisit Chicago in a brand new Watch_Dogs adventure! Play as T-Bone Grady, the legendary and eccentric hacker and Aiden Pearce's trusted comrade. Now on the run…",
+          "kind": "其他",
+          "type": "dlc",
+          "originalDescription": "Revisit Chicago in a brand new Watch_Dogs adventure! Play as T-Bone Grady, the legendary and eccentric hacker and Aiden Pearce's trusted comrade. Now on the run from Blume, T-Bone only has two choices: flee and start a new life elsewhere, or fight Blume to save an old friend. Face your shady past on your road to redemption.",
+          "translated": false,
+          "updatedAt": 1789748394958
+        }
+      ],
+      "details": {
+        "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/243470/header.jpg?t=1739177057",
+        "isFree": false,
+        "type": "game",
+        "releaseDate": "2014 年 5 月 26 日",
+        "releaseTs": null,
+        "developers": [
+          "Ubisoft"
+        ],
+        "publishers": [
+          "Ubisoft"
+        ],
+        "platforms": [
+          "Windows"
+        ],
+        "categories": [
+          "单人",
+          "多人",
+          "Steam 成就",
+          "Steam 集换式卡牌",
+          "部分支持控制器"
+        ],
+        "genres": [
+          "动作",
+          "冒险"
+        ],
+        "tags": [
+          "动作",
+          "冒险"
+        ],
+        "featureTags": [
+          "单人",
+          "多人",
+          "成就",
+          "集换式卡牌"
+        ],
+        "metacritic": 77,
+        "chineseSupport": false,
+        "reviewTotal": 49213,
+        "description": "只需滑动手指，您就可以联系亲朋好友、购买最新出品的手工零件和工具，还能获知世界各地的新闻。但通过同样简单的滑动动作，我们还能投下不断扩张的阴影。每一次连接我们都会留下电子痕迹，循着这些痕迹就能追踪我们生活中的每一个行为和重要事件，辨别我们的好恶——而这不仅仅适用于人。如今所有的大城市都有网络连接，市区的基础设施都由复杂的操作系统监视控制。",
+        "descriptionOriginal": "只需滑动手指，您就可以联系亲朋好友、购买最新出品的手工零件和工具，还能获知世界各地的新闻。但通过同样简单的滑动动作，我们还能投下不断扩张的阴影。每一次连接我们都会留下电子痕迹，循着这些痕迹就能追踪我们生活中的每一个行为和重要事件，辨别我们的好恶——而这不仅仅适用于人。如今所有的大城市都有网络连接，市区的基础设施都由复杂的操作系统监视控制。",
+        "descriptionTranslated": false,
+        "userTags": [],
+        "userTagsFetchedAt": null,
+        "bundleIds": []
+      },
+      "createdAt": 1789748387950,
+      "updatedAt": 1789748394958
+    },
+    {
+      "appid": 289650,
+      "name": "刺客信条：大革命",
+      "originalName": "刺客信条：大革命",
+      "price": {
+        "current": 32,
+        "original": 128,
+        "discountPercent": 75,
+        "currency": "CNY",
+        "isOnSale": true,
+        "discountExpiration": null,
+        "expirationSource": null,
+        "saleEvent": null,
+        "updatedAt": 1789748367703
+      },
+      "rating": {
+        "score": 7.5,
+        "positive": 79,
+        "total": 22199,
+        "desc": "Mostly Positive",
+        "updatedAt": 1789748368337
+      },
+      "historicalLow": {
+        "price": 22,
+        "count": 16,
+        "confidence": "A",
+        "source": "ITAD(国区)",
+        "updatedAt": 1789748370094,
+        "currency": "CNY"
+      },
+      "targetPrice": null,
+      "note": "",
+      "dlcList": [
+        {
+          "appid": 324331,
+          "name": "Assassin’s Creed Unity Revolutionary Armaments Pack",
+          "price": 15,
+          "shortDescription": "This weapons pack includes 6 powerful new weapons for your master assassin.",
+          "description": "This weapons pack includes 6 powerful new weapons for your master assassin.",
+          "kind": "道具包",
+          "type": "dlc",
+          "originalDescription": "This weapons pack includes 6 powerful new weapons for your master assassin.",
+          "translated": false,
+          "updatedAt": 1789748371767
+        },
+        {
+          "appid": 324332,
+          "name": "Secrets of the Revolution",
+          "price": 35,
+          "shortDescription": "革命还没结束，巴黎人民需要你的帮助。 发现法国大革命与三个秘密任务： - 三个任务：化学革命、美国囚犯、因科学而死 - 8 把武器，从强大的步枪和手枪，到以锋利的斧头和剑 。 - 6 件装备，为亚诺装备最优秀装备。",
+          "description": "革命还没结束，巴黎人民需要你的帮助。 发现法国大革命与三个秘密任务： - 三个任务：化学革命、美国囚犯、因科学而死 - 8 把武器，从强大的步枪和手枪，到以锋利的斧头和剑 。 - 6 件装备，为亚诺装备最优秀装备。",
+          "kind": "其他",
+          "type": "dlc",
+          "originalDescription": "革命还没结束，巴黎人民需要你的帮助。 发现法国大革命与三个秘密任务： - 三个任务：化学革命、美国囚犯、因科学而死 - 8 把武器，从强大的步枪和手枪，到以锋利的斧头和剑 。 - 6 件装备，为亚诺装备最优秀装备。",
+          "translated": false,
+          "updatedAt": 1789748372380
+        }
+      ],
+      "details": {
+        "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/289650/header.jpg?t=1786632648",
+        "isFree": false,
+        "type": "game",
+        "releaseDate": "2014 年 11 月 12 日",
+        "releaseTs": null,
+        "developers": [
+          "Ubisoft"
+        ],
+        "publishers": [
+          "Ubisoft"
+        ],
+        "platforms": [
+          "Windows"
+        ],
+        "categories": [
+          "单人",
+          "多人",
+          "合作",
+          "Steam 成就",
+          "应用内购买",
+          "自定义音量控制",
+          "可调整难度",
+          "可以仅用鼠标",
+          "无需应对快速反应事件",
+          "随时保存",
+          "立体声",
+          "环绕声",
+          "部分支持控制器"
+        ],
+        "genres": [
+          "动作",
+          "冒险"
+        ],
+        "tags": [
+          "动作",
+          "冒险"
+        ],
+        "featureTags": [
+          "单人",
+          "多人",
+          "联机合作",
+          "成就"
+        ],
+        "metacritic": null,
+        "chineseSupport": false,
+        "reviewTotal": 79125,
+        "description": "巴黎，1789 年。在这款动作冒险游戏中，以阿尔诺·多里安的视角，亲历法国大革命的风云。化身刺客，为拯救祖国，揭穿革命幕后黑手的面纱。",
+        "descriptionOriginal": "巴黎，1789 年。在这款动作冒险游戏中，以阿尔诺·多里安的视角，亲历法国大革命的风云。化身刺客，为拯救祖国，揭穿革命幕后黑手的面纱。",
+        "descriptionTranslated": false,
+        "userTags": [],
+        "userTagsFetchedAt": null,
+        "bundleIds": []
+      },
+      "createdAt": 1789748368337,
+      "updatedAt": 1789748372380
+    },
+    {
+      "appid": 330020,
+      "name": "Children of Morta",
+      "originalName": "Children of Morta",
+      "price": {
+        "current": 8,
+        "original": 80,
+        "discountPercent": 90,
+        "currency": "CNY",
+        "isOnSale": true,
+        "discountExpiration": null,
+        "expirationSource": null,
+        "saleEvent": null,
+        "updatedAt": 1789748348603
+      },
+      "rating": {
+        "score": 7.5,
+        "positive": 78,
+        "total": 2939,
+        "desc": "Mostly Positive",
+        "updatedAt": 1789748350167
+      },
+      "historicalLow": {
+        "price": 0,
+        "count": 2,
+        "confidence": "A",
+        "source": "ITAD(国区)",
+        "updatedAt": 1789748351793,
+        "currency": "CNY"
+      },
+      "targetPrice": null,
+      "note": "",
+      "dlcList": [
+        {
+          "appid": 1317160,
+          "name": "Children of Morta: Paws and Claws",
+          "price": 4.4,
+          "shortDescription": "本DLC还将帮到那些急需救助的动物——不是在虚拟的游戏中，而是现实中真实的动物。",
+          "description": "本DLC还将帮到那些急需救助的动物——不是在虚拟的游戏中，而是现实中真实的动物。",
+          "kind": "其他",
+          "type": "dlc",
+          "originalDescription": "本DLC还将帮到那些急需救助的动物——不是在虚拟的游戏中，而是现实中真实的动物。",
+          "translated": false,
+          "updatedAt": 1789748352289
+        },
+        {
+          "appid": 1556830,
+          "name": "Children of Morta: Family Fireside Fables",
+          "price": 0,
+          "shortDescription": "Family Fireside Fables 之中包含了六段荡气回肠的传奇故事，从经典的冒险到惊悚类型应有尽有，而且将由游戏标志性的旁白配音 Ed Kelly",
+          "description": "Family Fireside Fables 之中包含了六段荡气回肠的传奇故事，从经典的冒险到惊悚类型应有尽有，而且将由游戏标志性的旁白配音 Ed Kelly",
+          "kind": "其他",
+          "type": "music",
+          "originalDescription": "Family Fireside Fables 之中包含了六段荡气回肠的传奇故事，从经典的冒险到惊悚类型应有尽有，而且将由游戏标志性的旁白配音 Ed Kelly",
+          "translated": false,
+          "updatedAt": 1789748353464
+        },
+        {
+          "appid": 1648880,
+          "name": "Children of Morta: Ancient Spirits",
+          "price": 6.6,
+          "shortDescription": "Ancient Spirits是Children of Morta的全新DLC，将为游戏带来全新可游玩角色，皮肤以及圣迹。",
+          "description": "Ancient Spirits是Children of Morta的全新DLC，将为游戏带来全新可游玩角色，皮肤以及圣迹。",
+          "kind": "其他",
+          "type": "dlc",
+          "originalDescription": "Ancient Spirits是Children of Morta的全新DLC，将为游戏带来全新可游玩角色，皮肤以及圣迹。",
+          "translated": false,
+          "updatedAt": 1789748354725
+        }
+      ],
+      "details": {
+        "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/330020/header.jpg?t=1765218667",
+        "isFree": false,
+        "type": "game",
+        "releaseDate": "2019 年 9 月 3 日",
+        "releaseTs": null,
+        "developers": [
+          "Dead Mage"
+        ],
+        "publishers": [
+          "11 bit studios"
+        ],
+        "platforms": [
+          "Windows",
+          "macOS",
+          "Linux"
+        ],
+        "categories": [
+          "单人",
+          "多人",
+          "合作",
+          "在线合作",
+          "同屏/分屏合作",
+          "同屏/分屏",
+          "Steam 成就",
+          "完全支持控制器",
+          "Steam 云",
+          "统计数据",
+          "在手机上远程畅玩",
+          "在平板上远程畅玩",
+          "在电视上远程畅玩",
+          "远程同乐",
+          "家庭共享"
+        ],
+        "genres": [
+          "动作",
+          "冒险",
+          "独立",
+          "角色扮演"
+        ],
+        "tags": [
+          "动作",
+          "冒险",
+          "独立",
+          "角色扮演"
+        ],
+        "featureTags": [
+          "单人",
+          "多人",
+          "联机合作",
+          "成就",
+          "云存档",
+          "家庭共享"
+        ],
+        "metacritic": 82,
+        "chineseSupport": true,
+        "reviewTotal": 18228,
+        "description": "踏上这非凡的英雄家族的冒险旅程。随着大地逐渐被腐化，圣山莫塔的守护者们挺身对抗古老的邪恶。但……这并不是一个拯救世界的故事。这是一个勇敢的家族团结在一起，阻止周遭的世界被黑暗吞噬的故事。",
+        "descriptionOriginal": "踏上这非凡的英雄家族的冒险旅程。随着大地逐渐被腐化，圣山莫塔的守护者们挺身对抗古老的邪恶。但……这并不是一个拯救世界的故事。这是一个勇敢的家族团结在一起，阻止周遭的世界被黑暗吞噬的故事。",
+        "descriptionTranslated": false,
+        "userTags": [],
+        "userTagsFetchedAt": null,
+        "bundleIds": []
+      },
+      "createdAt": 1789748350167,
+      "updatedAt": 1789748354725
+    },
+    {
+      "appid": 464060,
+      "name": "RUINER",
+      "originalName": "RUINER",
+      "price": {
+        "current": 76,
+        "original": 76,
+        "discountPercent": 0,
+        "currency": "CNY",
+        "isOnSale": false,
+        "discountExpiration": null,
+        "expirationSource": null,
+        "saleEvent": null,
+        "updatedAt": 1789748340220
+      },
+      "rating": {
+        "score": 8.9,
+        "positive": 86,
+        "total": 1884,
+        "desc": "Very Positive",
+        "updatedAt": 1789748342312
+      },
+      "historicalLow": {
+        "price": 7.6,
+        "count": 5,
+        "confidence": "A",
+        "source": "ITAD(国区)",
+        "updatedAt": 1789748343959,
+        "currency": "CNY"
+      },
+      "targetPrice": null,
+      "note": "",
+      "dlcList": [
+        {
+          "appid": 721620,
+          "name": "RUINER Official Soundtrack",
+          "price": 29,
+          "shortDescription": "The official RUINER soundtrack with music by Sidewalks & Skeletons, Zamilska, Antigone & Francois X and more!",
+          "description": "The official RUINER soundtrack with music by Sidewalks & Skeletons, Zamilska, Antigone & Francois X and more!",
+          "kind": "原声",
+          "type": "music",
+          "originalDescription": "The official RUINER soundtrack with music by Sidewalks & Skeletons, Zamilska, Antigone & Francois X and more!",
+          "translated": false,
+          "updatedAt": 1789748345992
+        }
+      ],
+      "details": {
+        "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/464060/header.jpg?t=1789052609",
+        "isFree": false,
+        "type": "game",
+        "releaseDate": "2017 年 9 月 26 日",
+        "releaseTs": null,
+        "developers": [
+          "Reikon Games"
+        ],
+        "publishers": [
+          "Devolver Digital"
+        ],
+        "platforms": [
+          "Windows",
+          "Linux"
+        ],
+        "categories": [
+          "单人",
+          "Steam 成就",
+          "完全支持控制器",
+          "Steam 集换式卡牌",
+          "Steam 云",
+          "家庭共享"
+        ],
+        "genres": [
+          "动作",
+          "独立"
+        ],
+        "tags": [
+          "动作",
+          "独立"
+        ],
+        "featureTags": [
+          "单人",
+          "成就",
+          "集换式卡牌",
+          "云存档",
+          "家庭共享"
+        ],
+        "metacritic": 75,
+        "chineseSupport": true,
+        "reviewTotal": 10340,
+        "description": "RUINER 是一款刺激的动作射击游戏,故事发生于 2091 年岭谷市,一位配有生化装置的狂徒为拯救被绑的兄长,接受了神秘黑客的帮助,攻击腐败的体制并揭发背后的真相。 在堕落的暗巷中体验,瓦解「天堂」背后主宰虚拟世界的企业巨头。 结合超极限的反应速度、强化工具及武器来达成任务。",
+        "descriptionOriginal": "RUINER 是一款刺激的动作射击游戏,故事发生于 2091 年岭谷市,一位配有生化装置的狂徒为拯救被绑的兄长,接受了神秘黑客的帮助,攻击腐败的体制并揭发背后的真相。 在堕落的暗巷中体验,瓦解「天堂」背后主宰虚拟世界的企业巨头。 结合超极限的反应速度、强化工具及武器来达成任务。",
+        "descriptionTranslated": false,
+        "userTags": [],
+        "userTagsFetchedAt": null,
+        "bundleIds": []
+      },
+      "createdAt": 1789748342312,
+      "updatedAt": 1789748345992
+    },
+    {
+      "appid": 1465460,
+      "name": "Infection Free Zone (无感染区)",
+      "originalName": "Infection Free Zone (无感染区)",
+      "price": {
+        "current": 61.6,
+        "original": 88,
+        "discountPercent": 30,
+        "currency": "CNY",
+        "isOnSale": true,
+        "discountExpiration": null,
+        "expirationSource": null,
+        "saleEvent": null,
+        "updatedAt": 1789748242147
+      },
+      "rating": {
+        "score": 6.5,
+        "positive": 67,
+        "total": 4896,
+        "desc": "Mixed",
+        "updatedAt": 1789748243329
+      },
+      "historicalLow": {
+        "price": 61.6,
+        "count": 5,
+        "confidence": "A",
+        "source": "ITAD(国区)",
+        "updatedAt": 1789748244754,
+        "currency": "CNY"
+      },
+      "targetPrice": null,
+      "note": "",
+      "dlcList": [
+        {
+          "appid": 3905440,
+          "name": "Infection Free Zone - Supporter Pack",
+          "price": 33.6,
+          "shortDescription": "Support the development of Infection Free Zone with this cosmetic pack featuring exclusive emblems and unique vehicle skins. Stand out while surviving - and help us keep improving the game!",
+          "description": "Support the development of Infection Free Zone with this cosmetic pack featuring exclusive emblems and unique vehicle skins. Stand out while surviving - and hel…",
+          "kind": "外观道具",
+          "type": "dlc",
+          "originalDescription": "Support the development of Infection Free Zone with this cosmetic pack featuring exclusive emblems and unique vehicle skins. Stand out while surviving - and help us keep improving the game!",
+          "translated": false,
+          "updatedAt": 1789748246728
+        }
+      ],
+      "details": {
+        "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1465460/2ef07dc94864deedc7b5ac437e4da1bb78a2b808/header_alt_assets_4.jpg?t=1789486550",
+        "isFree": false,
+        "type": "game",
+        "releaseDate": "2024 年 4 月 11 日",
+        "releaseTs": null,
+        "developers": [
+          "Jutsu Games"
+        ],
+        "publishers": [
+          "Games Operators"
+        ],
+        "platforms": [
+          "Windows"
+        ],
+        "categories": [
+          "单人",
+          "Steam 成就",
+          "Steam 创意工坊",
+          "Steam 云",
+          "包含关卡编辑器",
+          "家庭共享"
+        ],
+        "genres": [
+          "动作",
+          "独立",
+          "模拟",
+          "策略",
+          "抢先体验"
+        ],
+        "tags": [
+          "动作",
+          "独立",
+          "模拟",
+          "策略",
+          "抢先体验"
+        ],
+        "featureTags": [
+          "单人",
+          "成就",
+          "云存档",
+          "创意工坊",
+          "关卡编辑",
+          "家庭共享"
+        ],
+        "metacritic": null,
+        "chineseSupport": true,
+        "reviewTotal": 16571,
+        "description": "病毒在全球肆虐，城市幸存者的命运就掌握在你手中。选择一个聚居地，重建并改造建筑，打造出自给自足的安全区。夜幕降临后，你必须抵御来袭的感染者，保卫家园！ 游戏使用了真实地理数据，你可以在全球任意城市游玩",
+        "descriptionOriginal": "病毒在全球肆虐，城市幸存者的命运就掌握在你手中。选择一个聚居地，重建并改造建筑，打造出自给自足的安全区。夜幕降临后，你必须抵御来袭的感染者，保卫家园！ 游戏使用了真实地理数据，你可以在全球任意城市游玩",
+        "descriptionTranslated": false,
+        "userTags": [],
+        "userTagsFetchedAt": null,
+        "bundleIds": []
+      },
+      "createdAt": 1789748243329,
+      "updatedAt": 1789748246728
+    },
+    {
+      "appid": 460920,
+      "name": "Steep™",
+      "originalName": "Steep™",
+      "price": {
+        "current": 7.4,
+        "original": 148,
+        "discountPercent": 95,
+        "currency": "CNY",
+        "isOnSale": true,
+        "discountExpiration": null,
+        "expirationSource": null,
+        "saleEvent": null,
+        "updatedAt": 1789748233045
+      },
+      "rating": {
+        "score": 7.5,
+        "positive": 71,
+        "total": 8655,
+        "desc": "Mostly Positive",
+        "updatedAt": 1789748234450
+      },
+      "historicalLow": {
+        "price": 7.4,
+        "count": 1,
+        "confidence": "A",
+        "source": "ITAD(国区)",
+        "updatedAt": 1789748236116,
+        "currency": "CNY"
+      },
+      "targetPrice": null,
+      "note": "",
+      "dlcList": [
+        {
+          "appid": 564360,
+          "name": "Steep™ - Season Pass",
+          "price": 14.7,
+          "shortDescription": "使用《STEEP™》季票尽情享受游戏乐趣：3 个组合包内含专属挑战、特色服装以及肾上腺素激增的附加运动，让你定制自己的滑翔方式，提升你的高山运动体验到新的级别。季票还包含了奖励直升机票、一套专属雪人服装和 10000 Steep 币。",
+          "description": "使用《STEEP™》季票尽情享受游戏乐趣：3 个组合包内含专属挑战、特色服装以及肾上腺素激增的附加运动，让你定制自己的滑翔方式，提升你的高山运动体验到新的级别。季票还包含了奖励直升机票、一套专属雪人服装和 10000 Steep 币。",
+          "kind": "季票",
+          "type": "dlc",
+          "originalDescription": "使用《STEEP™》季票尽情享受游戏乐趣：3 个组合包内含专属挑战、特色服装以及肾上腺素激增的附加运动，让你定制自己的滑翔方式，提升你的高山运动体验到新的级别。季票还包含了奖励直升机票、一套专属雪人服装和 10000 Steep 币。",
+          "translated": false,
+          "updatedAt": 1789748236738
+        },
+        {
+          "appid": 951660,
+          "name": "Steep - X-Games Pass",
+          "price": 11.25,
+          "shortDescription": "征服《Steep》史上最出色的滑雪场来赢得 X Games 金牌并克服高难度挑战吧。使用《90 年代》DLC 为游戏增添怀旧氛围，操控你的火箭飞鼠装，在美到窒息的景观里展现疯狂特技。",
+          "description": "征服《Steep》史上最出色的滑雪场来赢得 X Games 金牌并克服高难度挑战吧。使用《90 年代》DLC 为游戏增添怀旧氛围，操控你的火箭飞鼠装，在美到窒息的景观里展现疯狂特技。",
+          "kind": "其他",
+          "type": "dlc",
+          "originalDescription": "征服《Steep》史上最出色的滑雪场来赢得 X Games 金牌并克服高难度挑战吧。使用《90 年代》DLC 为游戏增添怀旧氛围，操控你的火箭飞鼠装，在美到窒息的景观里展现疯狂特技。",
+          "translated": false,
+          "updatedAt": 1789748237918
+        },
+        {
+          "appid": 951662,
+          "name": "Steep - X-Games DLC",
+          "price": 7.2,
+          "shortDescription": "前往阿拉斯加参加 X Games，在壮观的滑雪场将自己的技巧和创意发挥到极致。通过疯狂特技和技巧取得高分，挑衅排行榜上的其他玩家。争夺金牌并成为新一任自由式滑雪冠军！",
+          "description": "前往阿拉斯加参加 X Games，在壮观的滑雪场将自己的技巧和创意发挥到极致。通过疯狂特技和技巧取得高分，挑衅排行榜上的其他玩家。争夺金牌并成为新一任自由式滑雪冠军！",
+          "kind": "其他",
+          "type": "dlc",
+          "originalDescription": "前往阿拉斯加参加 X Games，在壮观的滑雪场将自己的技巧和创意发挥到极致。通过疯狂特技和技巧取得高分，挑衅排行榜上的其他玩家。争夺金牌并成为新一任自由式滑雪冠军！",
+          "translated": false,
+          "updatedAt": 1789748238973
+        },
+        {
+          "appid": 951666,
+          "name": "Steep™ - 90's DLC",
+          "price": 25,
+          "shortDescription": "为游戏增添怀旧氛围，让你的《Steep》看起来就像 90 年代的冬季运动游戏：取得 3 样专属怀旧自订物品，特技，音乐，全都来自美好的旧时光！",
+          "description": "为游戏增添怀旧氛围，让你的《Steep》看起来就像 90 年代的冬季运动游戏：取得 3 样专属怀旧自订物品，特技，音乐，全都来自美好的旧时光！",
+          "kind": "其他",
+          "type": "dlc",
+          "originalDescription": "为游戏增添怀旧氛围，让你的《Steep》看起来就像 90 年代的冬季运动游戏：取得 3 样专属怀旧自订物品，特技，音乐，全都来自美好的旧时光！",
+          "translated": false,
+          "updatedAt": 1789748240290
+        },
+        {
+          "appid": 951664,
+          "name": "Steep™ - Rocket Wings DLC",
+          "price": 25,
+          "shortDescription": "高速翱翔过阿尔卑斯及阿拉斯加的天际和山谷，附有大胆冒险者最爱运动“火箭飞鼠装”的 15 项全新挑战！为你的火箭飞鼠装取得 3 项专属自订物品，从众多选手中脱颖而出。",
+          "description": "高速翱翔过阿尔卑斯及阿拉斯加的天际和山谷，附有大胆冒险者最爱运动“火箭飞鼠装”的 15 项全新挑战！为你的火箭飞鼠装取得 3 项专属自订物品，从众多选手中脱颖而出。",
+          "kind": "其他",
+          "type": "dlc",
+          "originalDescription": "高速翱翔过阿尔卑斯及阿拉斯加的天际和山谷，附有大胆冒险者最爱运动“火箭飞鼠装”的 15 项全新挑战！为你的火箭飞鼠装取得 3 项专属自订物品，从众多选手中脱颖而出。",
+          "translated": false,
+          "updatedAt": 1789748241452
+        },
+        {
+          "appid": 556390,
+          "name": "Steep™ - Welcome Pack",
+          "price": 28,
+          "shortDescription": "备齐完美装备，开启《Steep™》滑雪之旅！ 本款组合包内含： • 可用于定制角色的专属冰薄荷色工作服 • 20 000 Steep 币 • 10 张直升机票，带你加速穿梭山巅",
+          "description": "备齐完美装备，开启《Steep™》滑雪之旅！ 本款组合包内含： • 可用于定制角色的专属冰薄荷色工作服 • 20 000 Steep 币 • 10 张直升机票，带你加速穿梭山巅",
+          "kind": "其他",
+          "type": "dlc",
+          "originalDescription": "备齐完美装备，开启《Steep™》滑雪之旅！ 本款组合包内含： • 可用于定制角色的专属冰薄荷色工作服 • 20 000 Steep 币 • 10 张直升机票，带你加速穿梭山巅",
+          "translated": false,
+          "updatedAt": 1789748242721
+        },
+        {
+          "appid": 556391,
+          "name": "Steep™ - Winterfest Pack",
+          "price": 8.7,
+          "shortDescription": "为了《Steep™》阿尔卑斯的疯狂派对胜盛装打扮吧！在山间尽享全新滑雪运动，换上有趣奇异的装备来定制自我风格，准备好接受冬季狂欢的精彩专属挑战，测试你的技巧！",
+          "description": "为了《Steep™》阿尔卑斯的疯狂派对胜盛装打扮吧！在山间尽享全新滑雪运动，换上有趣奇异的装备来定制自我风格，准备好接受冬季狂欢的精彩专属挑战，测试你的技巧！",
+          "kind": "其他",
+          "type": "dlc",
+          "originalDescription": "为了《Steep™》阿尔卑斯的疯狂派对胜盛装打扮吧！在山间尽享全新滑雪运动，换上有趣奇异的装备来定制自我风格，准备好接受冬季狂欢的精彩专属挑战，测试你的技巧！",
+          "translated": false,
+          "updatedAt": 1789748243881
+        },
+        {
+          "appid": 556392,
+          "name": "Steep™ - Extreme Pack",
+          "price": 7.2,
+          "shortDescription": "《STEEP™》将带领你畅游前所未有的极致游戏体验。开启全新故事章节，加入伊卡洛斯团队，体验 Extreme Pack 中 3 种令肾上腺素激增的新式运动、额外挑战与全新自定义装备，一同称霸天际！",
+          "description": "《STEEP™》将带领你畅游前所未有的极致游戏体验。开启全新故事章节，加入伊卡洛斯团队，体验 Extreme Pack 中 3 种令肾上腺素激增的新式运动、额外挑战与全新自定义装备，一同称霸天际！",
+          "kind": "章节",
+          "type": "dlc",
+          "originalDescription": "《STEEP™》将带领你畅游前所未有的极致游戏体验。开启全新故事章节，加入伊卡洛斯团队，体验 Extreme Pack 中 3 种令肾上腺素激增的新式运动、额外挑战与全新自定义装备，一同称霸天际！",
+          "translated": false,
+          "updatedAt": 1789748244499
+        }
+      ],
+      "details": {
+        "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/460920/0e27cc9c517c046f3ce08e34253eca5d402b3177/header.jpg?t=1777994343",
+        "isFree": false,
+        "type": "game",
+        "releaseDate": "2016 年 12 月 2 日",
+        "releaseTs": null,
+        "developers": [
+          "Ubisoft Annecy",
+          "Ubisoft Montpellier",
+          "Ubisoft Kiev"
+        ],
+        "publishers": [
+          "Ubisoft"
+        ],
+        "platforms": [
+          "Windows"
+        ],
+        "categories": [
+          "单人",
+          "多人",
+          "玩家对战",
+          "线上玩家对战",
+          "Steam 集换式卡牌",
+          "应用内购买",
+          "部分支持控制器"
+        ],
+        "genres": [
+          "动作",
+          "体育"
+        ],
+        "tags": [
+          "动作",
+          "体育"
+        ],
+        "featureTags": [
+          "单人",
+          "多人",
+          "在线对战",
+          "集换式卡牌"
+        ],
+        "metacritic": 72,
+        "chineseSupport": true,
+        "reviewTotal": 30601,
+        "description": "在阿尔卑斯山脉的广阔开放世界中，无尽遨游飘落新鲜细雪的天地。 独自一人或与好友一同挑战，称霸最险峻的高山，自由体验滑雪、飞鼠装滑翔、单板滑雪与滑翔伞飞行的快感。记录并分享你的最佳表现。",
+        "descriptionOriginal": "在阿尔卑斯山脉的广阔开放世界中，无尽遨游飘落新鲜细雪的天地。 独自一人或与好友一同挑战，称霸最险峻的高山，自由体验滑雪、飞鼠装滑翔、单板滑雪与滑翔伞飞行的快感。记录并分享你的最佳表现。",
+        "descriptionTranslated": false,
+        "userTags": [],
+        "userTagsFetchedAt": null,
+        "bundleIds": []
+      },
+      "createdAt": 1789748234450,
+      "updatedAt": 1789748244499
+    },
+    {
+      "appid": 3202030,
+      "name": "龙胤立志传",
+      "originalName": "龙胤立志传",
+      "price": {
+        "current": 61.2,
+        "original": 68,
+        "discountPercent": 10,
+        "currency": "CNY",
+        "isOnSale": true,
+        "discountExpiration": null,
+        "expirationSource": null,
+        "saleEvent": null,
+        "updatedAt": 1789748159479
+      },
+      "rating": {
+        "score": 7.5,
+        "positive": 76,
+        "total": 6601,
+        "desc": "Mostly Positive",
+        "updatedAt": 1789748160117
+      },
+      "historicalLow": {
+        "price": 61.2,
+        "count": 5,
+        "confidence": "A",
+        "source": "ITAD(国区)",
+        "updatedAt": 1789748161425,
+        "currency": "CNY"
+      },
+      "targetPrice": null,
+      "note": "",
+      "dlcList": [
+        {
+          "appid": 4383960,
+          "name": "龙胤立志传 - 支持者包",
+          "price": 16.2,
+          "shortDescription": "此内容需要在 Steam 上拥有基础游戏 龙胤立志传 才能畅玩。",
+          "description": "此内容需要在 Steam 上拥有基础游戏 龙胤立志传 才能畅玩。",
+          "kind": "支持者包",
+          "type": "dlc",
+          "originalDescription": "此内容需要在 Steam 上拥有基础游戏 龙胤立志传 才能畅玩。",
+          "translated": false,
+          "updatedAt": 1789748161862
+        }
+      ],
+      "details": {
+        "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3202030/bc4c2ec5f266b3f67a276dc6a253f86b3457e458/header_alt_assets_2_schinese.jpg?t=1786432843",
+        "isFree": false,
+        "type": "game",
+        "releaseDate": "2026 年 3 月 12 日",
+        "releaseTs": null,
+        "developers": [
+          "TPP Studio"
+        ],
+        "publishers": [
+          "噪点游戏 SERICA GAMES"
+        ],
+        "platforms": [
+          "Windows"
+        ],
+        "categories": [
+          "单人",
+          "Steam 成就",
+          "Steam 云",
+          "家庭共享"
+        ],
+        "genres": [
+          "独立",
+          "角色扮演",
+          "模拟",
+          "策略"
+        ],
+        "tags": [
+          "独立",
+          "角色扮演",
+          "模拟",
+          "策略"
+        ],
+        "featureTags": [
+          "单人",
+          "成就",
+          "云存档",
+          "家庭共享"
+        ],
+        "metacritic": null,
+        "chineseSupport": true,
+        "reviewTotal": 7155,
+        "description": "《龙胤立志传》是一款融合门派经营的开放江湖武侠游戏。在各大门派割据一方的神州之上，你可以自由驰骋，历经奇遇，修炼神功，踏上行侠仗义或行凶作恶之路，也可以经营自己的门派，攻城略地，称霸一方，最终谱写一段独一无二的武林传奇。",
+        "descriptionOriginal": "《龙胤立志传》是一款融合门派经营的开放江湖武侠游戏。在各大门派割据一方的神州之上，你可以自由驰骋，历经奇遇，修炼神功，踏上行侠仗义或行凶作恶之路，也可以经营自己的门派，攻城略地，称霸一方，最终谱写一段独一无二的武林传奇。",
+        "descriptionTranslated": false,
+        "userTags": [],
+        "userTagsFetchedAt": null,
+        "bundleIds": []
+      },
+      "createdAt": 1789748160117,
+      "updatedAt": 1789748161862
+    },
+    {
+      "appid": 1340990,
+      "name": "浪人崛起",
+      "originalName": "浪人崛起",
+      "price": {
+        "current": 124,
+        "original": 248,
+        "discountPercent": 50,
+        "currency": "CNY",
+        "isOnSale": true,
+        "discountExpiration": null,
+        "expirationSource": null,
+        "saleEvent": null,
+        "updatedAt": 1789748153243
+      },
+      "rating": {
+        "score": 5.5,
+        "positive": 56,
+        "total": 5638,
+        "desc": "Mixed",
+        "updatedAt": 1789748153612
+      },
+      "historicalLow": {
+        "price": 124,
+        "count": 6,
+        "confidence": "A",
+        "source": "ITAD(国区)",
+        "updatedAt": 1789748155104,
+        "currency": "CNY"
+      },
+      "targetPrice": null,
+      "note": "",
+      "dlcList": [],
+      "details": {
+        "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1340990/header_schinese.jpg?t=1775540130",
+        "isFree": false,
+        "type": "game",
+        "releaseDate": "2025 年 3 月 10 日",
+        "releaseTs": null,
+        "developers": [
+          "KOEI TECMO GAMES CO., LTD."
+        ],
+        "publishers": [
+          "KOEI TECMO GAMES CO., LTD."
+        ],
+        "platforms": [
+          "Windows"
+        ],
+        "categories": [
+          "单人",
+          "多人",
+          "合作",
+          "在线合作",
+          "Steam 成就",
+          "Steam 集换式卡牌",
+          "支持字幕",
+          "推荐使用手柄",
+          "DUALSHOCK 控制器支持",
+          "DUALSHOCK 控制器支持",
+          "DualSense 控制器支持",
+          "DualSense 控制器支持",
+          "部分支持控制器",
+          "Steam 云",
+          "Steam 排行榜",
+          "家庭共享"
+        ],
+        "genres": [
+          "动作",
+          "冒险",
+          "角色扮演"
+        ],
+        "tags": [
+          "动作",
+          "冒险",
+          "角色扮演"
+        ],
+        "featureTags": [
+          "单人",
+          "多人",
+          "联机合作",
+          "成就",
+          "集换式卡牌",
+          "云存档",
+          "手柄支持",
+          "家庭共享"
+        ],
+        "metacritic": 73,
+        "chineseSupport": true,
+        "reviewTotal": 6510,
+        "description": "本游戏由曾推出《仁王》和《NINJA GAIDEN》的资深工作室Team NINJA精心打造。进入这款以日本幕末时期为舞台的开放世界动作角色扮演游戏，在19世纪饱受战乱蹂躏的日本，展开一场史诗般的旅程。",
+        "descriptionOriginal": "本游戏由曾推出《仁王》和《NINJA GAIDEN》的资深工作室Team NINJA精心打造。进入这款以日本幕末时期为舞台的开放世界动作角色扮演游戏，在19世纪饱受战乱蹂躏的日本，展开一场史诗般的旅程。",
+        "descriptionTranslated": false,
+        "userTags": [],
+        "userTagsFetchedAt": null,
+        "bundleIds": []
+      },
+      "createdAt": 1789748153612,
+      "updatedAt": 1789748153612
+    },
+    {
+      "appid": 1324130,
+      "name": "Stranded: Alien Dawn",
+      "originalName": "Stranded: Alien Dawn",
+      "price": {
+        "current": 46.2,
+        "original": 132,
+        "discountPercent": 65,
+        "currency": "CNY",
+        "isOnSale": true,
+        "discountExpiration": null,
+        "expirationSource": null,
+        "saleEvent": null,
+        "updatedAt": 1789748146759
+      },
+      "rating": {
+        "score": 7.5,
+        "positive": 76,
+        "total": 975,
+        "desc": "Mostly Positive",
+        "updatedAt": 1789748148432
+      },
+      "historicalLow": {
+        "price": 46.2,
+        "count": 3,
+        "confidence": "A",
+        "source": "ITAD(国区)",
+        "updatedAt": 1789748149820,
+        "currency": "CNY"
+      },
+      "targetPrice": null,
+      "note": "",
+      "dlcList": [
+        {
+          "appid": 2104870,
+          "name": "Stranded: Alien Dawn - Robots and Guardians",
+          "price": 18.2,
+          "shortDescription": "扩展您的《滞困：异星黎明》体验。在解放了首位有感知能力的仿生人霍普后，您被迫前往外围星域寻求庇护。冷酷无情的制造联盟试图在她获得全感知觉前摧毁她，而您必须起身反抗。",
+          "description": "扩展您的《滞困：异星黎明》体验。在解放了首位有感知能力的仿生人霍普后，您被迫前往外围星域寻求庇护。冷酷无情的制造联盟试图在她获得全感知觉前摧毁她，而您必须起身反抗。",
+          "kind": "其他",
+          "type": "dlc",
+          "originalDescription": "扩展您的《滞困：异星黎明》体验。在解放了首位有感知能力的仿生人霍普后，您被迫前往外围星域寻求庇护。冷酷无情的制造联盟试图在她获得全感知觉前摧毁她，而您必须起身反抗。",
+          "translated": false,
+          "updatedAt": 1789748150555
+        },
+        {
+          "appid": 2395740,
+          "name": "Stranded: Alien Dawn Official Soundtrack",
+          "price": 16.5,
+          "shortDescription": "利用这个撼动人心的官方原声带，彻底沉浸于《滞困：异星黎明》的世界。通过 32 首以乡村音乐为灵感并带有未知世界奇异氛围的乐曲，想象身处新异星边境的生活。",
+          "description": "利用这个撼动人心的官方原声带，彻底沉浸于《滞困：异星黎明》的世界。通过 32 首以乡村音乐为灵感并带有未知世界奇异氛围的乐曲，想象身处新异星边境的生活。",
+          "kind": "原声",
+          "type": "music",
+          "originalDescription": "利用这个撼动人心的官方原声带，彻底沉浸于《滞困：异星黎明》的世界。通过 32 首以乡村音乐为灵感并带有未知世界奇异氛围的乐曲，想象身处新异星边境的生活。",
+          "translated": false,
+          "updatedAt": 1789748151630
+        }
+      ],
+      "details": {
+        "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1324130/header.jpg?t=1759746262",
+        "isFree": false,
+        "type": "game",
+        "releaseDate": "2023 年 4 月 25 日",
+        "releaseTs": null,
+        "developers": [
+          "Haemimont Games"
+        ],
+        "publishers": [
+          "Paradox Interactive"
+        ],
+        "platforms": [
+          "Windows"
+        ],
+        "categories": [
+          "单人",
+          "Steam 成就",
+          "完全支持控制器",
+          "Steam 创意工坊",
+          "Steam 云",
+          "家庭共享"
+        ],
+        "genres": [
+          "模拟",
+          "策略"
+        ],
+        "tags": [
+          "模拟",
+          "策略"
+        ],
+        "featureTags": [
+          "单人",
+          "成就",
+          "云存档",
+          "创意工坊",
+          "家庭共享"
+        ],
+        "metacritic": 81,
+        "chineseSupport": true,
+        "reviewTotal": 9718,
+        "description": "在《滞困：异星黎明》勇闯新世界，在这款行星生存模拟游戏中，您将掌握一个身处困境的小团体的命运。通过扣人心弦且身历其境的策略玩法来打造您的故事：您要做出重要的抉择以保护您的生存者。",
+        "descriptionOriginal": "在《滞困：异星黎明》勇闯新世界，在这款行星生存模拟游戏中，您将掌握一个身处困境的小团体的命运。通过扣人心弦且身历其境的策略玩法来打造您的故事：您要做出重要的抉择以保护您的生存者。",
+        "descriptionTranslated": false,
+        "userTags": [],
+        "userTagsFetchedAt": null,
+        "bundleIds": []
+      },
+      "createdAt": 1789748148432,
+      "updatedAt": 1789748151630
+    },
+    {
+      "appid": 3467710,
+      "name": "墙世界2",
+      "originalName": "墙世界2",
+      "price": {
+        "current": 26.4,
+        "original": 48,
+        "discountPercent": 45,
+        "currency": "CNY",
+        "isOnSale": true,
+        "discountExpiration": null,
+        "expirationSource": null,
+        "saleEvent": null,
+        "updatedAt": 1789748138560
+      },
+      "rating": {
+        "score": 5.5,
+        "positive": 54,
+        "total": 166,
+        "desc": "Mixed",
+        "updatedAt": 1789748139150
+      },
+      "historicalLow": {
+        "price": 26.4,
+        "count": 1,
+        "confidence": "A",
+        "source": "ITAD(国区)",
+        "updatedAt": 1789748140061,
+        "currency": "CNY"
+      },
+      "targetPrice": null,
+      "note": "",
+      "dlcList": [
+        {
+          "appid": 4071020,
+          "name": "Wall World 2 Soundtrack",
+          "price": 9,
+          "shortDescription": "The official soundtrack for Wall World 2.",
+          "description": "The official soundtrack for Wall World 2.",
+          "kind": "原声",
+          "type": "music",
+          "originalDescription": "The official soundtrack for Wall World 2.",
+          "translated": false,
+          "updatedAt": 1789748141643
+        }
+      ],
+      "details": {
+        "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3467710/68655fe459c3cc2d0e1fcc0c6c420c56a666a32d/header_schinese.jpg?t=1776425443",
+        "isFree": false,
+        "type": "game",
+        "releaseDate": "2025 年 11 月 11 日",
+        "releaseTs": null,
+        "developers": [
+          "Alawar"
+        ],
+        "publishers": [
+          "Alawar"
+        ],
+        "platforms": [
+          "Windows",
+          "macOS"
+        ],
+        "categories": [
+          "单人",
+          "Steam 成就",
+          "完全支持控制器",
+          "Steam 集换式卡牌",
+          "Steam 云",
+          "家庭共享"
+        ],
+        "genres": [
+          "动作",
+          "冒险",
+          "独立",
+          "策略"
+        ],
+        "tags": [
+          "动作",
+          "冒险",
+          "独立",
+          "策略"
+        ],
+        "featureTags": [
+          "单人",
+          "成就",
+          "集换式卡牌",
+          "云存档",
+          "家庭共享"
+        ],
+        "metacritic": null,
+        "chineseSupport": true,
+        "reviewTotal": 1751,
+        "description": "在神秘的墙内世界中，精彩绝伦的冒险仍在继续。驾驶机械蜘蛛进入巨墙内部：寻找神器和技术，升级外骨骼战衣和蜘蛛，与深处的怪物战斗，查明真相！",
+        "descriptionOriginal": "在神秘的墙内世界中，精彩绝伦的冒险仍在继续。驾驶机械蜘蛛进入巨墙内部：寻找神器和技术，升级外骨骼战衣和蜘蛛，与深处的怪物战斗，查明真相！",
+        "descriptionTranslated": false,
+        "userTags": [],
+        "userTagsFetchedAt": null,
+        "bundleIds": []
+      },
+      "createdAt": 1789748139150,
+      "updatedAt": 1789748141643
+    },
+    {
+      "appid": 1147560,
+      "name": "小骨：英雄杀手(Skul: The Hero Slayer)",
+      "originalName": "小骨：英雄杀手(Skul: The Hero Slayer)",
+      "price": {
+        "current": 35,
+        "original": 70,
+        "discountPercent": 50,
+        "currency": "CNY",
+        "isOnSale": true,
+        "discountExpiration": null,
+        "expirationSource": null,
+        "saleEvent": null,
+        "updatedAt": 1789748087428
+      },
+      "rating": {
+        "score": 9.6,
+        "positive": 92,
+        "total": 20042,
+        "desc": "Very Positive",
+        "updatedAt": 1789748088059
+      },
+      "historicalLow": {
+        "price": 35,
+        "count": 33,
+        "confidence": "A",
+        "source": "ITAD(国区)",
+        "updatedAt": 1789748089003,
+        "currency": "CNY"
+      },
+      "targetPrice": null,
+      "note": "",
+      "dlcList": [
+        {
+          "appid": 2512790,
+          "name": "Skul: The Hero Slayer - Mythology Pack",
+          "price": 20,
+          "shortDescription": "神秘小骨降临哈莫尼亚大陆！ 这是《Skul: The Hero Slayer》的首个DLC。在游戏本体讲述的故事中，特别的小骷髅人“小骨”为了拯救被抓捕的魔王而与人类抗争。",
+          "description": "神秘小骨降临哈莫尼亚大陆！ 这是《Skul: The Hero Slayer》的首个DLC。在游戏本体讲述的故事中，特别的小骷髅人“小骨”为了拯救被抓捕的魔王而与人类抗争。",
+          "kind": "其他",
+          "type": "dlc",
+          "originalDescription": "神秘小骨降临哈莫尼亚大陆！ 这是《Skul: The Hero Slayer》的首个DLC。在游戏本体讲述的故事中，特别的小骷髅人“小骨”为了拯救被抓捕的魔王而与人类抗争。",
+          "translated": false,
+          "updatedAt": 1789748089449
+        },
+        {
+          "appid": 1525720,
+          "name": "Skul: The Hero Slayer Soundtrack",
+          "price": 16.5,
+          "shortDescription": "共35首的“小骨：英雄杀手”插曲",
+          "description": "共35首的“小骨：英雄杀手”插曲",
+          "kind": "原声",
+          "type": "music",
+          "originalDescription": "共35首的“小骨：英雄杀手”插曲",
+          "translated": false,
+          "updatedAt": 1789748090651
+        }
+      ],
+      "details": {
+        "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1147560/header.jpg?t=1774420210",
+        "isFree": false,
+        "type": "game",
+        "releaseDate": "2021 年 1 月 20 日",
+        "releaseTs": null,
+        "developers": [
+          "SOUTHPAW GAMES"
+        ],
+        "publishers": [
+          "NEOWIZ"
+        ],
+        "platforms": [
+          "Windows",
+          "macOS",
+          "Linux"
+        ],
+        "categories": [
+          "单人",
+          "完全支持控制器",
+          "Steam 云",
+          "在手机上远程畅玩",
+          "在平板上远程畅玩",
+          "在电视上远程畅玩",
+          "家庭共享"
+        ],
+        "genres": [
+          "动作",
+          "独立"
+        ],
+        "tags": [
+          "动作",
+          "独立"
+        ],
+        "featureTags": [
+          "单人",
+          "云存档",
+          "家庭共享"
+        ],
+        "metacritic": 80,
+        "chineseSupport": true,
+        "reviewTotal": 50810,
+        "description": "Skul：The Hero Slayer是2D Rogue Lite动作平台游戏。负责魔王城平安的小骷髅“Skul”，为了拯救被人类捉住的魔王，一个人独自对抗帝国军队开始冒险。",
+        "descriptionOriginal": "Skul：The Hero Slayer是2D Rogue Lite动作平台游戏。负责魔王城平安的小骷髅“Skul”，为了拯救被人类捉住的魔王，一个人独自对抗帝国军队开始冒险。",
+        "descriptionTranslated": false,
+        "userTags": [],
+        "userTagsFetchedAt": null,
+        "bundleIds": []
+      },
+      "createdAt": 1789748088059,
+      "updatedAt": 1789748090651
+    },
+    {
+      "appid": 2444750,
+      "name": "梦之形",
+      "originalName": "梦之形",
+      "price": {
+        "current": 61.6,
+        "original": 88,
+        "discountPercent": 30,
+        "currency": "CNY",
+        "isOnSale": true,
+        "discountExpiration": null,
+        "expirationSource": null,
+        "saleEvent": null,
+        "updatedAt": 1789748082235
+      },
+      "rating": {
+        "score": 7.5,
+        "positive": 78,
+        "total": 5120,
+        "desc": "Mostly Positive",
+        "updatedAt": 1789748082839
+      },
+      "historicalLow": {
+        "price": 61.6,
+        "count": 9,
+        "confidence": "A",
+        "source": "ITAD(国区)",
+        "updatedAt": 1789748083716,
+        "currency": "CNY"
+      },
+      "targetPrice": null,
+      "note": "",
+      "dlcList": [
+        {
+          "appid": 3969650,
+          "name": "Shape of Dreams - Original Soundtrack",
+          "price": 33,
+          "shortDescription": "《梦之形 原声带🎵》 聆听陪伴你踏上《梦之形》梦境旅程的音乐。 由 LEVEL UP GAME AUDIO 制作的原声带共收录 24 首曲目，并附赠“皇家卫队·拉赛尔塔服装”。",
+          "description": "《梦之形 原声带🎵》 聆听陪伴你踏上《梦之形》梦境旅程的音乐。 由 LEVEL UP GAME AUDIO 制作的原声带共收录 24 首曲目，并附赠“皇家卫队·拉赛尔塔服装”。",
+          "kind": "原声",
+          "type": "music",
+          "originalDescription": "《梦之形 原声带🎵》 聆听陪伴你踏上《梦之形》梦境旅程的音乐。 由 LEVEL UP GAME AUDIO 制作的原声带共收录 24 首曲目，并附赠“皇家卫队·拉赛尔塔服装”。",
+          "translated": false,
+          "updatedAt": 1789748084153
+        }
+      ],
+      "details": {
+        "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2444750/1adafc84eaa10a9ddfecc167fca226fd32725396/header_alt_assets_5_schinese.jpg?t=1789645379",
+        "isFree": false,
+        "type": "game",
+        "releaseDate": "2025 年 9 月 10 日",
+        "releaseTs": null,
+        "developers": [
+          "Lizard Smoothie"
+        ],
+        "publishers": [
+          "NEOWIZ"
+        ],
+        "platforms": [
+          "Windows"
+        ],
+        "categories": [
+          "单人",
+          "多人",
+          "合作",
+          "在线合作",
+          "Steam 成就",
+          "完全支持控制器",
+          "DUALSHOCK 控制器支持",
+          "DUALSHOCK 控制器支持",
+          "DualSense 控制器支持",
+          "DualSense 控制器支持",
+          "Steam 云",
+          "家庭共享"
+        ],
+        "genres": [
+          "动作",
+          "冒险",
+          "独立",
+          "角色扮演"
+        ],
+        "tags": [
+          "动作",
+          "冒险",
+          "独立",
+          "角色扮演"
+        ],
+        "featureTags": [
+          "单人",
+          "多人",
+          "联机合作",
+          "成就",
+          "云存档",
+          "家庭共享"
+        ],
+        "metacritic": null,
+        "chineseSupport": true,
+        "reviewTotal": 15823,
+        "description": "《梦之形》是一款结合了MOBA风格的动作Roguelike游戏。踏上梦境世界的冒险，编辑英雄的记忆，亲手打造你心仪的冠军。你可以独自面对所有挑战，或者与朋友们一起，在最多四人的合作游戏中共同作战。",
+        "descriptionOriginal": "《梦之形》是一款结合了MOBA风格的动作Roguelike游戏。踏上梦境世界的冒险，编辑英雄的记忆，亲手打造你心仪的冠军。你可以独自面对所有挑战，或者与朋友们一起，在最多四人的合作游戏中共同作战。",
+        "descriptionTranslated": false,
+        "userTags": [],
+        "userTagsFetchedAt": null,
+        "bundleIds": []
+      },
+      "createdAt": 1789748082839,
+      "updatedAt": 1789748084153
+    },
+    {
+      "appid": 1879330,
+      "name": "无双大蛇２ 终极版",
+      "originalName": "无双大蛇２ 终极版",
+      "price": {
+        "current": 174.3,
+        "original": 249,
+        "discountPercent": 30,
+        "currency": "CNY",
+        "isOnSale": true,
+        "discountExpiration": null,
+        "expirationSource": null,
+        "saleEvent": null,
+        "updatedAt": 1789747990985
+      },
+      "rating": {
+        "score": 9.2,
+        "positive": 88,
+        "total": 1447,
+        "desc": "Very Positive",
+        "updatedAt": 1789747992841
+      },
+      "historicalLow": {
+        "price": 174.3,
+        "count": 25,
+        "confidence": "A",
+        "source": "ITAD(国区)",
+        "updatedAt": 1789747993814,
+        "currency": "CNY"
+      },
+      "targetPrice": null,
+      "note": "",
+      "dlcList": [],
+      "details": {
+        "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1879330/header_schinese.jpg?t=1775537576",
+        "isFree": false,
+        "type": "game",
+        "releaseDate": "2022 年 7 月 12 日",
+        "releaseTs": null,
+        "developers": [
+          "KOEI TECMO GAMES CO., LTD."
+        ],
+        "publishers": [
+          "KOEI TECMO GAMES CO., LTD."
+        ],
+        "platforms": [
+          "Windows"
+        ],
+        "categories": [
+          "单人",
+          "多人",
+          "玩家对战",
+          "同屏/分屏玩家对战",
+          "合作",
+          "同屏/分屏合作",
+          "同屏/分屏",
+          "Steam 成就",
+          "Steam 集换式卡牌",
+          "自定义音量控制",
+          "可调整难度",
+          "推荐使用手柄",
+          "可以仅用键盘",
+          "随时保存",
+          "立体声",
+          "环绕声",
+          "部分支持控制器",
+          "Steam 云",
+          "家庭共享"
+        ],
+        "genres": [
+          "动作",
+          "策略"
+        ],
+        "tags": [
+          "动作",
+          "策略"
+        ],
+        "featureTags": [
+          "单人",
+          "多人",
+          "联机合作",
+          "在线对战",
+          "成就",
+          "集换式卡牌",
+          "云存档",
+          "手柄支持",
+          "家庭共享"
+        ],
+        "metacritic": 83,
+        "chineseSupport": true,
+        "reviewTotal": 2129,
+        "description": "究极的《无双大蛇２》于Steam登场！本作包含《无双大蛇２》的全部内容外，还将加入使故事更有深度的新角色、篇章，以及已于其他平台发布的下载内容等。以如此大量的追加要素来畅玩无双大蛇的世界！",
+        "descriptionOriginal": "究极的《无双大蛇２》于Steam登场！本作包含《无双大蛇２》的全部内容外，还将加入使故事更有深度的新角色、篇章，以及已于其他平台发布的下载内容等。以如此大量的追加要素来畅玩无双大蛇的世界！",
+        "descriptionTranslated": false,
+        "userTags": [],
+        "userTagsFetchedAt": null,
+        "bundleIds": []
+      },
+      "createdAt": 1789747992841,
+      "updatedAt": 1789747992841
+    },
+    {
+      "appid": 831560,
+      "name": "WARRIORS OROCHI 4 / 無雙OROCHI 蛇魔３",
+      "originalName": "WARRIORS OROCHI 4 / 無雙OROCHI 蛇魔３",
+      "price": {
+        "current": 174.5,
+        "original": 349,
+        "discountPercent": 50,
+        "currency": "CNY",
+        "isOnSale": true,
+        "discountExpiration": null,
+        "expirationSource": null,
+        "saleEvent": null,
+        "updatedAt": 1789747985277
+      },
+      "rating": {
+        "score": 8.9,
+        "positive": 85,
+        "total": 3280,
+        "desc": "Very Positive",
+        "updatedAt": 1789747985825
+      },
+      "historicalLow": {
+        "price": 174,
+        "count": 18,
+        "confidence": "A",
+        "source": "ITAD(国区)",
+        "updatedAt": 1789747986800,
+        "currency": "CNY"
+      },
+      "targetPrice": null,
+      "note": "",
+      "dlcList": [
+        {
+          "appid": 933504,
+          "name": "WARRIORS OROCHI 4/無双OROCHI３ - Season Pass",
+          "price": 45,
+          "shortDescription": "能以优惠价格取得『無雙OROCHI 蛇魔３』追加内容的季票。",
+          "description": "能以优惠价格取得『無雙OROCHI 蛇魔３』追加内容的季票。",
+          "kind": "季票",
+          "type": "dlc",
+          "originalDescription": "能以优惠价格取得『無雙OROCHI 蛇魔３』追加内容的季票。",
+          "translated": false,
+          "updatedAt": 1789747987277
+        },
+        {
+          "appid": 1147480,
+          "name": "無雙OROCHI 蛇魔３ Ultimate升級版",
+          "price": 116.5,
+          "shortDescription": "在战术动作游戏“無雙OROCHI 蛇魔”系列最新版《無雙OROCHI 蛇魔３》的基础上追求极限耐玩要素，追加内容《無雙OROCHI 蛇魔３ Ultimate 升级包》崭新登场！ 来体验究极的“無雙OROCHI 蛇魔”世界吧！",
+          "description": "在战术动作游戏“無雙OROCHI 蛇魔”系列最新版《無雙OROCHI 蛇魔３》的基础上追求极限耐玩要素，追加内容《無雙OROCHI 蛇魔３ Ultimate 升级包》崭新登场！ 来体验究极的“無雙OROCHI 蛇魔”世界吧！",
+          "kind": "版本升级包",
+          "type": "dlc",
+          "originalDescription": "在战术动作游戏“無雙OROCHI 蛇魔”系列最新版《無雙OROCHI 蛇魔３》的基础上追求极限耐玩要素，追加内容《無雙OROCHI 蛇魔３ Ultimate 升级包》崭新登场！ 来体验究极的“無雙OROCHI 蛇魔”世界吧！",
+          "translated": false,
+          "updatedAt": 1789747988468
+        },
+        {
+          "appid": 1176621,
+          "name": "WARRIORS OROCHI 4 Ultimate - Weapon `Feline Paws`",
+          "price": 0,
+          "shortDescription": "追加盖娅的武器。 敬请享受与众不同的战场。",
+          "description": "追加盖娅的武器。 敬请享受与众不同的战场。",
+          "kind": "道具包",
+          "type": "dlc",
+          "originalDescription": "追加盖娅的武器。 敬请享受与众不同的战场。",
+          "translated": false,
+          "updatedAt": 1789747990358
+        },
+        {
+          "appid": 1176622,
+          "name": "WARRIORS OROCHI 4 Ultimate - Weapon `Traffic Signal`",
+          "price": 0,
+          "shortDescription": "追加哈迪斯的武器。 敬请享受与众不同的战场。",
+          "description": "追加哈迪斯的武器。 敬请享受与众不同的战场。",
+          "kind": "道具包",
+          "type": "dlc",
+          "originalDescription": "追加哈迪斯的武器。 敬请享受与众不同的战场。",
+          "translated": false,
+          "updatedAt": 1789747992202
+        },
+        {
+          "appid": 1176623,
+          "name": "WARRIORS OROCHI 4 Ultimate - Weapon `Fork`",
+          "price": 0,
+          "shortDescription": "追加杨戬的武器。 敬请享受与众不同的战场。",
+          "description": "追加杨戬的武器。 敬请享受与众不同的战场。",
+          "kind": "道具包",
+          "type": "dlc",
+          "originalDescription": "追加杨戬的武器。 敬请享受与众不同的战场。",
+          "translated": false,
+          "updatedAt": 1789747993359
+        },
+        {
+          "appid": 1176613,
+          "name": "WARRIORS OROCHI 4 Ultimate - Legendary Costumes OROCHI Pack 4",
+          "price": 5,
+          "shortDescription": "追加無雙OROCHI 蛇魔原创武将的传奇服装。 敬请享受与众不同的战场。",
+          "description": "追加無雙OROCHI 蛇魔原创武将的传奇服装。 敬请享受与众不同的战场。",
+          "kind": "原声",
+          "type": "dlc",
+          "originalDescription": "追加無雙OROCHI 蛇魔原创武将的传奇服装。 敬请享受与众不同的战场。",
+          "translated": false,
+          "updatedAt": 1789747994587
+        },
+        {
+          "appid": 1176614,
+          "name": "WARRIORS OROCHI 4 Ultimate - Special Costume for Hades",
+          "price": 7,
+          "shortDescription": "追加哈迪斯的特别服装。 敬请享受与众不同的战场。",
+          "description": "追加哈迪斯的特别服装。 敬请享受与众不同的战场。",
+          "kind": "原声",
+          "type": "dlc",
+          "originalDescription": "追加哈迪斯的特别服装。 敬请享受与众不同的战场。",
+          "translated": false,
+          "updatedAt": 1789747995774
+        },
+        {
+          "appid": 1176615,
+          "name": "WARRIORS OROCHI 4 Ultimate - Special Costume for Yang Jian",
+          "price": 7,
+          "shortDescription": "追加杨戬的特别服装。 敬请享受与众不同的战场。",
+          "description": "追加杨戬的特别服装。 敬请享受与众不同的战场。",
+          "kind": "原声",
+          "type": "dlc",
+          "originalDescription": "追加杨戬的特别服装。 敬请享受与众不同的战场。",
+          "translated": false,
+          "updatedAt": 1789747997581
+        },
+        {
+          "appid": 1176616,
+          "name": "WARRIORS OROCHI 4 Ultimate - Sacred Treasure `Garm`",
+          "price": 3.5,
+          "shortDescription": "追加神器“地狱犬”。 敬请享受与众不同的战场。 ※可使用新的普通神术与蓄力神术。",
+          "description": "追加神器“地狱犬”。 敬请享受与众不同的战场。 ※可使用新的普通神术与蓄力神术。",
+          "kind": "其他",
+          "type": "dlc",
+          "originalDescription": "追加神器“地狱犬”。 敬请享受与众不同的战场。 ※可使用新的普通神术与蓄力神术。",
+          "translated": false,
+          "updatedAt": 1789747999478
+        },
+        {
+          "appid": 1176617,
+          "name": "WARRIORS OROCHI 4 Ultimate - Sacred Treasure `World Tree Bident`",
+          "price": 3.5,
+          "shortDescription": "追加神器“花梣二叉枪”。 敬请享受与众不同的战场。 ※可使用新的普通神术与蓄力神术。",
+          "description": "追加神器“花梣二叉枪”。 敬请享受与众不同的战场。 ※可使用新的普通神术与蓄力神术。",
+          "kind": "其他",
+          "type": "dlc",
+          "originalDescription": "追加神器“花梣二叉枪”。 敬请享受与众不同的战场。 ※可使用新的普通神术与蓄力神术。",
+          "translated": false,
+          "updatedAt": 1789748000566
+        },
+        {
+          "appid": 1176618,
+          "name": "WARRIORS OROCHI 4 Ultimate - Legendary Weapons OROCHI Pack 4",
+          "price": 3.5,
+          "shortDescription": "追加無雙OROCHI 蛇魔原创武将的传奇武器。 敬请享受与众不同的战场。",
+          "description": "追加無雙OROCHI 蛇魔原创武将的传奇武器。 敬请享受与众不同的战场。",
+          "kind": "道具包",
+          "type": "dlc",
+          "originalDescription": "追加無雙OROCHI 蛇魔原创武将的传奇武器。 敬请享受与众不同的战场。",
+          "translated": false,
+          "updatedAt": 1789748001785
+        },
+        {
+          "appid": 1176619,
+          "name": "WARRIORS OROCHI 4 Ultimate - Series BGM Pack",
+          "price": 14.5,
+          "shortDescription": "追加10首BGM。 敬请享受全新BGM。",
+          "description": "追加10首BGM。 敬请享受全新BGM。",
+          "kind": "其他",
+          "type": "dlc",
+          "originalDescription": "追加10首BGM。 敬请享受全新BGM。",
+          "translated": false,
+          "updatedAt": 1789748002391
+        },
+        {
+          "appid": 1176612,
+          "name": "WARRIORS OROCHI 4 Ultimate - Bonus Costume for Ryu Hayabusa",
+          "price": 0,
+          "shortDescription": "追加龙隼的特典服装。 敬请享受与众不同的战场。",
+          "description": "追加龙隼的特典服装。 敬请享受与众不同的战场。",
+          "kind": "原声",
+          "type": "dlc",
+          "originalDescription": "追加龙隼的特典服装。 敬请享受与众不同的战场。",
+          "translated": false,
+          "updatedAt": 1789748002986
+        },
+        {
+          "appid": 933460,
+          "name": "WARRIORS OROCHI 4/無双OROCHI３ - Bonus Mount Pegasus",
+          "price": 3,
+          "shortDescription": "追加特典坐骑「飞马」。 敬请体验不同于平常的战场乐趣吧。",
+          "description": "追加特典坐骑「飞马」。 敬请体验不同于平常的战场乐趣吧。",
+          "kind": "其他",
+          "type": "dlc",
+          "originalDescription": "追加特典坐骑「飞马」。 敬请体验不同于平常的战场乐趣吧。",
+          "translated": false,
+          "updatedAt": 1789748003601
+        },
+        {
+          "appid": 933470,
+          "name": "WARRIORS OROCHI 4/無双OROCHI３- Bonus Mount Unicorn",
+          "price": 3,
+          "shortDescription": "追加特典坐骑「独角兽」。 敬请体验不同于平常的战场乐趣吧。",
+          "description": "追加特典坐骑「独角兽」。 敬请体验不同于平常的战场乐趣吧。",
+          "kind": "其他",
+          "type": "dlc",
+          "originalDescription": "追加特典坐骑「独角兽」。 敬请体验不同于平常的战场乐趣吧。",
+          "translated": false,
+          "updatedAt": 1789748004182
+        }
+      ],
+      "details": {
+        "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/831560/header_schinese.jpg?t=1775537630",
+        "isFree": false,
+        "type": "game",
+        "releaseDate": "2018 年 10 月 15 日",
+        "releaseTs": null,
+        "developers": [
+          "KOEI TECMO GAMES CO., LTD."
+        ],
+        "publishers": [
+          "KOEI TECMO GAMES CO., LTD."
+        ],
+        "platforms": [
+          "Windows"
+        ],
+        "categories": [
+          "单人",
+          "多人",
+          "玩家对战",
+          "线上玩家对战",
+          "合作",
+          "在线合作",
+          "同屏/分屏合作",
+          "同屏/分屏",
+          "Steam 成就",
+          "Steam 集换式卡牌",
+          "自定义音量控制",
+          "可调整难度",
+          "推荐使用手柄",
+          "可以仅用键盘",
+          "无需应对快速反应事件",
+          "立体声",
+          "部分支持控制器",
+          "Steam 云",
+          "Steam 排行榜",
+          "远程同乐",
+          "家庭共享"
+        ],
+        "genres": [
+          "动作"
+        ],
+        "tags": [
+          "动作"
+        ],
+        "featureTags": [
+          "单人",
+          "多人",
+          "联机合作",
+          "在线对战",
+          "成就",
+          "集换式卡牌",
+          "云存档",
+          "手柄支持",
+          "家庭共享"
+        ],
+        "metacritic": null,
+        "chineseSupport": true,
+        "reviewTotal": 4427,
+        "description": "在战术动作游戏“無雙OROCHI 蛇魔”系列最新版《無雙OROCHI 蛇魔３》的基础上，追加内容《無雙OROCHI 蛇魔３ Ultimate 升级包》汇集了更多的耐玩要素。 究极的“無雙OROCHI 蛇魔”在此完成！",
+        "descriptionOriginal": "在战术动作游戏“無雙OROCHI 蛇魔”系列最新版《無雙OROCHI 蛇魔３》的基础上，追加内容《無雙OROCHI 蛇魔３ Ultimate 升级包》汇集了更多的耐玩要素。 究极的“無雙OROCHI 蛇魔”在此完成！",
+        "descriptionTranslated": false,
+        "userTags": [],
+        "userTagsFetchedAt": null,
+        "bundleIds": []
+      },
+      "createdAt": 1789747985825,
+      "updatedAt": 1789748004182
+    },
+    {
+      "appid": 1876890,
+      "name": "逸剑风云决",
+      "originalName": "逸剑风云决",
+      "price": {
+        "current": 54.6,
+        "original": 78,
+        "discountPercent": 30,
+        "currency": "CNY",
+        "isOnSale": true,
+        "discountExpiration": null,
+        "expirationSource": null,
+        "saleEvent": null,
+        "updatedAt": 1789747977381
+      },
+      "rating": {
+        "score": 9.8,
+        "positive": 95,
+        "total": 40650,
+        "desc": "Very Positive",
+        "updatedAt": 1789747978536
+      },
+      "historicalLow": {
+        "price": 54.6,
+        "count": 2,
+        "confidence": "A",
+        "source": "ITAD(国区)",
+        "updatedAt": 1789747979467,
+        "currency": "CNY"
+      },
+      "targetPrice": null,
+      "note": "",
+      "dlcList": [
+        {
+          "appid": 3600640,
+          "name": "逸剑风云决 - 番外扩展包：碧海仙踪",
+          "price": 25.2,
+          "shortDescription": "一场关于稀世之珍的赌局，开启一段全新的江湖旅途。你将邂逅身世成谜的卜算少女，探寻神秘岛屿，重现失传武学。亦可开辟一处世外桃源，享受纷争之外的片刻宁静。",
+          "description": "一场关于稀世之珍的赌局，开启一段全新的江湖旅途。你将邂逅身世成谜的卜算少女，探寻神秘岛屿，重现失传武学。亦可开辟一处世外桃源，享受纷争之外的片刻宁静。",
+          "kind": "资料片",
+          "type": "dlc",
+          "originalDescription": "一场关于稀世之珍的赌局，开启一段全新的江湖旅途。你将邂逅身世成谜的卜算少女，探寻神秘岛屿，重现失传武学。亦可开辟一处世外桃源，享受纷争之外的片刻宁静。",
+          "translated": false,
+          "updatedAt": 1789747980386
+        },
+        {
+          "appid": 3027840,
+          "name": "逸剑风云决 - 坐骑扩展包：疾风骏影",
+          "price": 16.2,
+          "shortDescription": "【坐骑扩展包：疾风骏影】为游戏本体《逸剑风云决》的扩展包，该扩展包包含6种坐骑。",
+          "description": "【坐骑扩展包：疾风骏影】为游戏本体《逸剑风云决》的扩展包，该扩展包包含6种坐骑。",
+          "kind": "资料片",
+          "type": "dlc",
+          "originalDescription": "【坐骑扩展包：疾风骏影】为游戏本体《逸剑风云决》的扩展包，该扩展包包含6种坐骑。",
+          "translated": false,
+          "updatedAt": 1789747981545
+        },
+        {
+          "appid": 3600650,
+          "name": "逸剑风云决 - [大侠立志传]联动扩展包：武家旧事",
+          "price": 0,
+          "shortDescription": "《逸剑风云决》和《大侠立志传》的免费联动扩展包。",
+          "description": "《逸剑风云决》和《大侠立志传》的免费联动扩展包。",
+          "kind": "资料片",
+          "type": "dlc",
+          "originalDescription": "《逸剑风云决》和《大侠立志传》的免费联动扩展包。",
+          "translated": false,
+          "updatedAt": 1789747983373
+        }
+      ],
+      "details": {
+        "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1876890/ef32ad7a3d7bca74bd2d2d6b42c389491fd30493/header_schinese.jpg?t=1774667199",
+        "isFree": false,
+        "type": "game",
+        "releaseDate": "2023 年 9 月 14 日",
+        "releaseTs": null,
+        "developers": [
+          "The Swordman Studio"
+        ],
+        "publishers": [
+          "Spiral Up Games"
+        ],
+        "platforms": [
+          "Windows"
+        ],
+        "categories": [
+          "单人",
+          "Steam 成就",
+          "部分支持控制器",
+          "Steam 云",
+          "家庭共享"
+        ],
+        "genres": [
+          "冒险",
+          "独立",
+          "角色扮演",
+          "策略"
+        ],
+        "tags": [
+          "冒险",
+          "独立",
+          "角色扮演",
+          "策略"
+        ],
+        "featureTags": [
+          "单人",
+          "成就",
+          "云存档",
+          "家庭共享"
+        ],
+        "metacritic": 80,
+        "chineseSupport": true,
+        "reviewTotal": 37064,
+        "description": "《逸剑风云决》是一款像素武侠RPG。玩家将扮演一名来自关外辽城的普通少年，因意外卷入江湖纷争而身中剧毒，幸得武当掌门清虚真人出手才得救。自此，你梦想成为一代大侠，正式踏入了中原武林。你的选择将改变整个武林故事，与江湖中各种侠客结交互动，甚至改变他们的命运！",
+        "descriptionOriginal": "《逸剑风云决》是一款像素武侠RPG。玩家将扮演一名来自关外辽城的普通少年，因意外卷入江湖纷争而身中剧毒，幸得武当掌门清虚真人出手才得救。自此，你梦想成为一代大侠，正式踏入了中原武林。你的选择将改变整个武林故事，与江湖中各种侠客结交互动，甚至改变他们的命运！",
+        "descriptionTranslated": false,
+        "userTags": [],
+        "userTagsFetchedAt": null,
+        "bundleIds": []
+      },
+      "createdAt": 1789747978536,
+      "updatedAt": 1789747983373
+    },
+    {
+      "appid": 447040,
+      "name": "Watch_Dogs® 2",
+      "originalName": "Watch_Dogs® 2",
+      "price": {
+        "current": 14.9,
+        "original": 298,
+        "discountPercent": 95,
+        "currency": "CNY",
+        "isOnSale": true,
+        "discountExpiration": null,
+        "expirationSource": null,
+        "saleEvent": null,
+        "updatedAt": 1789747969685
+      },
+      "rating": {
+        "score": 7.5,
+        "positive": 79,
+        "total": 36876,
+        "desc": "Mostly Positive",
+        "updatedAt": 1789747971536
+      },
+      "historicalLow": {
+        "price": 14.9,
+        "count": 2,
+        "confidence": "A",
+        "source": "ITAD(国区)",
+        "updatedAt": 1789747972577,
+        "currency": "CNY"
+      },
+      "targetPrice": null,
+      "note": "",
+      "dlcList": [
+        {
+          "appid": 525031,
+          "name": "Watch_Dogs® 2 - No Compromise",
+          "price": 7.2,
+          "shortDescription": "《WATCH_DOGS® 2》带来全新的主要行动，在一场出了差错的 DedSec",
+          "description": "《WATCH_DOGS® 2》带来全新的主要行动，在一场出了差错的 DedSec",
+          "kind": "其他",
+          "type": "dlc",
+          "originalDescription": "《WATCH_DOGS® 2》带来全新的主要行动，在一场出了差错的 DedSec",
+          "translated": false,
+          "updatedAt": 1789747973035
+        },
+        {
+          "appid": 525030,
+          "name": "Watch_Dogs® 2 - Human Conditions",
+          "price": 11.25,
+          "shortDescription": "生物科技在《WATCH_DOGS® 2》所帶來的全新三個故事任務中扮演主軸，內容針對尖端科學、醫學以及科技的濫用。在《人類條件》中，你也將體驗到全新的合作遊戲菁英難度等級，並且面對配有專門獵捕你裝備的全新電腦敵人。 包含： - 在全新的任務中體驗三個新的遊戲世界故事 - 菁英合作任務來挑戰你的技術 - 搭配先進科技的全新電腦敵人類型:干擾者 可在 DedSec App 中找到新任務。",
+          "description": "生物科技在《WATCH_DOGS® 2》所帶來的全新三個故事任務中扮演主軸，內容針對尖端科學、醫學以及科技的濫用。在《人類條件》中，你也將體驗到全新的合作遊戲菁英難度等級，並且面對配有專門獵捕你裝備的全新電腦敵人。 包含： - 在全新的任務中體驗三個新的遊戲世界故事 - 菁英合作任務來挑戰你的技術 - 搭配先進科技的全…",
+          "kind": "其他",
+          "type": "dlc",
+          "originalDescription": "生物科技在《WATCH_DOGS® 2》所帶來的全新三個故事任務中扮演主軸，內容針對尖端科學、醫學以及科技的濫用。在《人類條件》中，你也將體驗到全新的合作遊戲菁英難度等級，並且面對配有專門獵捕你裝備的全新電腦敵人。 包含： - 在全新的任務中體驗三個新的遊戲世界故事 - 菁英合作任務來挑戰你的技術 - 搭配先進科技的全新電腦敵人類型:干擾者 可在 DedSec App 中找到新任務。",
+          "translated": false,
+          "updatedAt": 1789747974293
+        },
+        {
+          "appid": 525000,
+          "name": "Watch_Dogs® 2 - T-Bone Pack",
+          "price": 5.25,
+          "shortDescription": "Get the style and the swagger of legendary hacker T-Bone Grady in the first Watch_Dogs 2 DLC bundle! New Features: - T-Bone Truck - T-Bone inspired outfit - New elite enemies with laser-guided grenade launchers - New co-op difficulty mode",
+          "description": "Get the style and the swagger of legendary hacker T-Bone Grady in the first Watch_Dogs 2 DLC bundle! New Features: - T-Bone Truck - T-Bone inspired outfit - New…",
+          "kind": "其他",
+          "type": "dlc",
+          "originalDescription": "Get the style and the swagger of legendary hacker T-Bone Grady in the first Watch_Dogs 2 DLC bundle! New Features: - T-Bone Truck - T-Bone inspired outfit - New elite enemies with laser-guided grenade launchers - New co-op difficulty mode",
+          "translated": false,
+          "updatedAt": 1789747976660
+        },
+        {
+          "appid": 597076,
+          "name": "Watch_Dogs® 2 - Mega Pack",
+          "price": 98,
+          "shortDescription": "你已拥有该包罗万象的定制化同捆包了，就尽量地秀出来吧，包含自订服装与载具、武器以及遥控设备外观。",
+          "description": "你已拥有该包罗万象的定制化同捆包了，就尽量地秀出来吧，包含自订服装与载具、武器以及遥控设备外观。",
+          "kind": "外观道具",
+          "type": "dlc",
+          "originalDescription": "你已拥有该包罗万象的定制化同捆包了，就尽量地秀出来吧，包含自订服装与载具、武器以及遥控设备外观。",
+          "translated": false,
+          "updatedAt": 1789747977869
+        },
+        {
+          "appid": 525010,
+          "name": "Watch_Dogs® 2 - Ultra Texture Pack",
+          "price": 0,
+          "shortDescription": "&quot;“让显卡努力工作好踏出更贴近真实的一步！”",
+          "description": "&quot;“让显卡努力工作好踏出更贴近真实的一步！”",
+          "kind": "其他",
+          "type": "dlc",
+          "originalDescription": "&quot;“让显卡努力工作好踏出更贴近真实的一步！”",
+          "translated": false,
+          "updatedAt": 1789747979082
+        },
+        {
+          "appid": 525011,
+          "name": "Watch_Dogs® 2 - Root Access Pack",
+          "price": 35,
+          "shortDescription": "This pack includes: - The Zodiac Killer mission - Void Dasher car - Peste Negra car - Chameleon Copter decal - Defalt Outfit - Protocol Pistol Pack",
+          "description": "This pack includes: - The Zodiac Killer mission - Void Dasher car - Peste Negra car - Chameleon Copter decal - Defalt Outfit - Protocol Pistol Pack",
+          "kind": "其他",
+          "type": "dlc",
+          "originalDescription": "This pack includes: - The Zodiac Killer mission - Void Dasher car - Peste Negra car - Chameleon Copter decal - Defalt Outfit - Protocol Pistol Pack",
+          "translated": false,
+          "updatedAt": 1789747981156
+        },
+        {
+          "appid": 525012,
+          "name": "Watch_Dogs® 2 - Punk Rock Pack",
+          "price": 25,
+          "shortDescription": "Stand up and stand out with this patchwork pack of DIY-themed gear. Contains a set of custom clothing, as well as skin for weapon, drone and vehicle.",
+          "description": "Stand up and stand out with this patchwork pack of DIY-themed gear. Contains a set of custom clothing, as well as skin for weapon, drone and vehicle.",
+          "kind": "外观道具",
+          "type": "dlc",
+          "originalDescription": "Stand up and stand out with this patchwork pack of DIY-themed gear. Contains a set of custom clothing, as well as skin for weapon, drone and vehicle.",
+          "translated": false,
+          "updatedAt": 1789747983840
+        },
+        {
+          "appid": 525013,
+          "name": "Watch_Dogs® 2 - Psychedelic Pack",
+          "price": 35,
+          "shortDescription": "Embrace the San Francisco psychedelic vibe! With this full set of customization, give Marcus the funkiest look: outfit, weapon, drone and car, let all them colour and brighten your day.",
+          "description": "Embrace the San Francisco psychedelic vibe! With this full set of customization, give Marcus the funkiest look: outfit, weapon, drone and car, let all them colo…",
+          "kind": "道具包",
+          "type": "dlc",
+          "originalDescription": "Embrace the San Francisco psychedelic vibe! With this full set of customization, give Marcus the funkiest look: outfit, weapon, drone and car, let all them colour and brighten your day.",
+          "translated": false,
+          "updatedAt": 1789747985581
+        },
+        {
+          "appid": 525014,
+          "name": "Watch_Dogs® 2 - Black Hat Pack",
+          "price": 35,
+          "shortDescription": "Let your dark side show with this pack of monochrome gear. Contains a set of custom clothing, as well skins for vehicle, weapon and RC devices.",
+          "description": "Let your dark side show with this pack of monochrome gear. Contains a set of custom clothing, as well skins for vehicle, weapon and RC devices.",
+          "kind": "外观道具",
+          "type": "dlc",
+          "originalDescription": "Let your dark side show with this pack of monochrome gear. Contains a set of custom clothing, as well skins for vehicle, weapon and RC devices.",
+          "translated": false,
+          "updatedAt": 1789747987465
+        },
+        {
+          "appid": 525015,
+          "name": "Watch_Dogs® 2 - Pixel Art Pack",
+          "price": 35,
+          "shortDescription": "&quot;Let's play.&quot; Relive the glory days of hardcore gaming with this timeless pack of lo-fi retro pixel art-themed gear. With adorable versions of DedSec members on the shirt, who wouldn't want to leap back into the 8-bit era?",
+          "description": "&quot;Let's play.&quot; Relive the glory days of hardcore gaming with this timeless pack of lo-fi retro pixel art-themed gear. With adorable versions of DedSec …",
+          "kind": "其他",
+          "type": "dlc",
+          "originalDescription": "&quot;Let's play.&quot; Relive the glory days of hardcore gaming with this timeless pack of lo-fi retro pixel art-themed gear. With adorable versions of DedSec members on the shirt, who wouldn't want to leap back into the 8-bit era?",
+          "translated": false,
+          "updatedAt": 1789747989985
+        },
+        {
+          "appid": 525016,
+          "name": "Watch_Dogs® 2 - Guru Pack",
+          "price": 35,
+          "shortDescription": "With this set of cult-inspired gear, your charisma will be undeniable. Contains a set of custom clothing, as well as skins for vehicle, weapon and RC devices.",
+          "description": "With this set of cult-inspired gear, your charisma will be undeniable. Contains a set of custom clothing, as well as skins for vehicle, weapon and RC devices.",
+          "kind": "外观道具",
+          "type": "dlc",
+          "originalDescription": "With this set of cult-inspired gear, your charisma will be undeniable. Contains a set of custom clothing, as well as skins for vehicle, weapon and RC devices.",
+          "translated": false,
+          "updatedAt": 1789747992578
+        },
+        {
+          "appid": 525017,
+          "name": "Watch_Dogs® 2 - EliteSec Pack",
+          "price": 35,
+          "shortDescription": "There is no job too dangerous for professional mercenaries. Contains a set of custom clothing, as well as skins for vehicle, weapon and RC devices.",
+          "description": "There is no job too dangerous for professional mercenaries. Contains a set of custom clothing, as well as skins for vehicle, weapon and RC devices.",
+          "kind": "外观道具",
+          "type": "dlc",
+          "originalDescription": "There is no job too dangerous for professional mercenaries. Contains a set of custom clothing, as well as skins for vehicle, weapon and RC devices.",
+          "translated": false,
+          "updatedAt": 1789747994822
+        },
+        {
+          "appid": 525018,
+          "name": "Watch_Dogs® 2 - Glam Pack",
+          "price": 35,
+          "shortDescription": "&quot;Shine. Shine bright.&quot; Never be less than your fabulous self. Leopard print, hot pink, Glam Gear is high-end chic for high-end hacker. You'll make them all melt.",
+          "description": "&quot;Shine. Shine bright.&quot; Never be less than your fabulous self. Leopard print, hot pink, Glam Gear is high-end chic for high-end hacker. You'll make the…",
+          "kind": "其他",
+          "type": "dlc",
+          "originalDescription": "&quot;Shine. Shine bright.&quot; Never be less than your fabulous self. Leopard print, hot pink, Glam Gear is high-end chic for high-end hacker. You'll make them all melt.",
+          "translated": false,
+          "updatedAt": 1789747997466
+        },
+        {
+          "appid": 525019,
+          "name": "Watch_Dogs® 2 - Private Eye Pack",
+          "price": 0,
+          "shortDescription": "&quot;Everyone has secrets, no one can hide.&quot; From the mean streets to the dark corners of the web, there is no truth you cannot find. No secret is safe, with this set of FREE Private Eye gear.",
+          "description": "&quot;Everyone has secrets, no one can hide.&quot; From the mean streets to the dark corners of the web, there is no truth you cannot find. No secret is safe, w…",
+          "kind": "其他",
+          "type": "dlc",
+          "originalDescription": "&quot;Everyone has secrets, no one can hide.&quot; From the mean streets to the dark corners of the web, there is no truth you cannot find. No secret is safe, with this set of FREE Private Eye gear.",
+          "translated": false,
+          "updatedAt": 1789747999810
+        },
+        {
+          "appid": 525032,
+          "name": "Watch_Dogs® 2 - Urban Artist Pack",
+          "price": 25,
+          "shortDescription": "&quot;They were here… and they left their mark.&quot; Make an impression on the Bay Area with this flashy pack of customized graffiti-themed gear. Either a statement or a conversation, graffiti is your voice. Leave no surface untagged.",
+          "description": "&quot;They were here… and they left their mark.&quot; Make an impression on the Bay Area with this flashy pack of customized graffiti-themed gear. Either a stat…",
+          "kind": "其他",
+          "type": "dlc",
+          "originalDescription": "&quot;They were here… and they left their mark.&quot; Make an impression on the Bay Area with this flashy pack of customized graffiti-themed gear. Either a statement or a conversation, graffiti is your voice. Leave no surface untagged.",
+          "translated": false,
+          "updatedAt": 1789748002284
+        }
+      ],
+      "details": {
+        "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/447040/header.jpg?t=1751986887",
+        "isFree": false,
+        "type": "game",
+        "releaseDate": "2016 年 11 月 28 日",
+        "releaseTs": null,
+        "developers": [
+          "Ubisoft"
+        ],
+        "publishers": [
+          "Ubisoft"
+        ],
+        "platforms": [
+          "Windows"
+        ],
+        "categories": [
+          "单人",
+          "多人",
+          "合作",
+          "Steam 成就",
+          "应用内购买",
+          "部分支持控制器"
+        ],
+        "genres": [
+          "动作",
+          "冒险"
+        ],
+        "tags": [
+          "动作",
+          "冒险"
+        ],
+        "featureTags": [
+          "单人",
+          "多人",
+          "联机合作",
+          "成就"
+        ],
+        "metacritic": null,
+        "chineseSupport": true,
+        "reviewTotal": 95304,
+        "description": "欢迎来到技术革命的起源地：旧金山。扮演年轻的聪明黑客马可仕（Marcus），加入最恶名昭彰的黑客团体 DedSec。你的目标：执行史上最大规模的黑客行动。",
+        "descriptionOriginal": "欢迎来到技术革命的起源地：旧金山。扮演年轻的聪明黑客马可仕（Marcus），加入最恶名昭彰的黑客团体 DedSec。你的目标：执行史上最大规模的黑客行动。",
+        "descriptionTranslated": false,
+        "userTags": [],
+        "userTagsFetchedAt": null,
+        "bundleIds": []
+      },
+      "createdAt": 1789747971536,
+      "updatedAt": 1789748002284
+    },
     {
       "appid": 2417610,
       "name": "合金装备 Δ：食蛇者",
@@ -28,8 +2983,8 @@
       "rating": {
         "score": 6.5,
         "positive": 63,
-        "total": 1023,
         "desc": "Mixed",
+        "total": 1023,
         "updatedAt": 1789678221182
       },
       "historicalLow": {
@@ -149,7 +3104,7 @@
         ]
       },
       "createdAt": 1789449629221,
-      "updatedAt": 1789678221183,
+      "updatedAt": 1789748624381,
       "nameSource": "machine-translation"
     },
     {
@@ -170,8 +3125,8 @@
       "rating": {
         "score": 7.5,
         "positive": 79,
-        "total": 16851,
         "desc": "Mostly Positive",
+        "total": 16851,
         "updatedAt": 1789678222451
       },
       "historicalLow": {
@@ -310,7 +3265,7 @@
         "bundleIds": []
       },
       "createdAt": 1789449608499,
-      "updatedAt": 1789678222451,
+      "updatedAt": 1789748624381,
       "nameSource": "machine-translation"
     },
     {
@@ -331,8 +3286,8 @@
       "rating": {
         "score": 8.9,
         "positive": 86,
-        "total": 62596,
         "desc": "Very Positive",
+        "total": 62596,
         "updatedAt": 1789678223913
       },
       "historicalLow": {
@@ -473,7 +3428,7 @@
         ]
       },
       "createdAt": 1789449572950,
-      "updatedAt": 1789678223913,
+      "updatedAt": 1789748624381,
       "nameSource": "machine-translation"
     },
     {
@@ -494,8 +3449,8 @@
       "rating": {
         "score": 7.5,
         "positive": 70,
-        "total": 24973,
         "desc": "Mostly Positive",
+        "total": 24973,
         "updatedAt": 1789678225268
       },
       "historicalLow": {
@@ -624,7 +3579,7 @@
         "bundleIds": []
       },
       "createdAt": 1789449564829,
-      "updatedAt": 1789678225268,
+      "updatedAt": 1789748624381,
       "nameSource": null
     },
     {
@@ -645,8 +3600,8 @@
       "rating": {
         "score": 9.6,
         "positive": 92,
-        "total": 43890,
         "desc": "Very Positive",
+        "total": 43890,
         "updatedAt": 1789678226692
       },
       "historicalLow": {
@@ -748,7 +3703,7 @@
         "bundleIds": []
       },
       "createdAt": 1789449553098,
-      "updatedAt": 1789678226692,
+      "updatedAt": 1789748624381,
       "nameSource": null
     },
     {
@@ -769,8 +3724,8 @@
       "rating": {
         "score": 8.4,
         "positive": 84,
-        "total": 14124,
         "desc": "Very Positive",
+        "total": 14124,
         "updatedAt": 1789678228189
       },
       "historicalLow": {
@@ -909,7 +3864,7 @@
         ]
       },
       "createdAt": 1789449497299,
-      "updatedAt": 1789678228189,
+      "updatedAt": 1789748624381,
       "nameSource": "machine-translation"
     },
     {
@@ -930,8 +3885,8 @@
       "rating": {
         "score": 9.2,
         "positive": 89,
-        "total": 1335,
         "desc": "Very Positive",
+        "total": 1335,
         "updatedAt": 1789678229442
       },
       "historicalLow": {
@@ -1027,7 +3982,7 @@
         "bundleIds": []
       },
       "createdAt": 1789449490176,
-      "updatedAt": 1789678229442,
+      "updatedAt": 1789748624381,
       "nameSource": "machine-translation"
     },
     {
@@ -1048,8 +4003,8 @@
       "rating": {
         "score": 8.4,
         "positive": 84,
-        "total": 594,
         "desc": "Very Positive",
+        "total": 594,
         "updatedAt": 1789678230932
       },
       "historicalLow": {
@@ -1139,7 +4094,7 @@
         "bundleIds": []
       },
       "createdAt": 1789449482564,
-      "updatedAt": 1789678230932,
+      "updatedAt": 1789748624381,
       "nameSource": null
     },
     {
@@ -1160,8 +4115,8 @@
       "rating": {
         "score": 9.6,
         "positive": 93,
-        "total": 913,
         "desc": "Very Positive",
+        "total": 913,
         "updatedAt": 1789678232273
       },
       "historicalLow": {
@@ -1262,7 +4217,7 @@
         ]
       },
       "createdAt": 1789449469765,
-      "updatedAt": 1789678232273,
+      "updatedAt": 1789748624381,
       "nameSource": "machine-translation"
     },
     {
@@ -1283,8 +4238,8 @@
       "rating": {
         "score": 9.2,
         "positive": 88,
-        "total": 1195,
         "desc": "Very Positive",
+        "total": 1195,
         "updatedAt": 1789678233659
       },
       "historicalLow": {
@@ -1380,7 +4335,7 @@
         ]
       },
       "createdAt": 1789449462518,
-      "updatedAt": 1789678233659,
+      "updatedAt": 1789748624381,
       "nameSource": "machine-translation"
     },
     {
@@ -1401,8 +4356,8 @@
       "rating": {
         "score": 8.4,
         "positive": 83,
-        "total": 95659,
         "desc": "Very Positive",
+        "total": 95659,
         "updatedAt": 1789678235086
       },
       "historicalLow": {
@@ -1690,7 +4645,7 @@
         ]
       },
       "createdAt": 1789449449836,
-      "updatedAt": 1789678235086,
+      "updatedAt": 1789748624381,
       "nameSource": "machine-translation"
     },
     {
@@ -1711,8 +4666,8 @@
       "rating": {
         "score": 9.2,
         "positive": 91,
-        "total": 4478,
         "desc": "Very Positive",
+        "total": 4478,
         "updatedAt": 1789678236449
       },
       "historicalLow": {
@@ -1844,7 +4799,7 @@
         ]
       },
       "createdAt": 1789449439707,
-      "updatedAt": 1789678236449,
+      "updatedAt": 1789748624381,
       "nameSource": "machine-translation"
     },
     {
@@ -1865,8 +4820,8 @@
       "rating": {
         "score": 9.6,
         "positive": 93,
-        "total": 14275,
         "desc": "Very Positive",
+        "total": 14275,
         "updatedAt": 1789678237875
       },
       "historicalLow": {
@@ -1995,7 +4950,7 @@
         ]
       },
       "createdAt": 1789449429594,
-      "updatedAt": 1789678237875,
+      "updatedAt": 1789748624381,
       "nameSource": null
     },
     {
@@ -2016,8 +4971,8 @@
       "rating": {
         "score": 9.2,
         "positive": 90,
-        "total": 1446,
         "desc": "Very Positive",
+        "total": 1446,
         "updatedAt": 1789678239282
       },
       "historicalLow": {
@@ -2121,7 +5076,7 @@
         ]
       },
       "createdAt": 1789449418480,
-      "updatedAt": 1789678239282,
+      "updatedAt": 1789748624381,
       "nameSource": null
     },
     {
@@ -2142,8 +5097,8 @@
       "rating": {
         "score": 8.4,
         "positive": 84,
-        "total": 1207,
         "desc": "Very Positive",
+        "total": 1207,
         "updatedAt": 1789678240669
       },
       "historicalLow": {
@@ -2280,7 +5235,7 @@
         ]
       },
       "createdAt": 1789449410717,
-      "updatedAt": 1789678240669,
+      "updatedAt": 1789748624381,
       "nameSource": null
     },
     {
@@ -2301,8 +5256,8 @@
       "rating": {
         "score": 9.6,
         "positive": 92,
-        "total": 6417,
         "desc": "Very Positive",
+        "total": 6417,
         "updatedAt": 1789678242054
       },
       "historicalLow": {
@@ -2394,7 +5349,7 @@
         ]
       },
       "createdAt": 1789449403972,
-      "updatedAt": 1789678242054,
+      "updatedAt": 1789748624381,
       "nameSource": "machine-translation"
     },
     {
@@ -2415,8 +5370,8 @@
       "rating": {
         "score": 9.8,
         "positive": 96,
-        "total": 6568,
         "desc": "Overwhelmingly Positive",
+        "total": 6568,
         "updatedAt": 1789678243593
       },
       "historicalLow": {
@@ -2530,7 +5485,7 @@
         ]
       },
       "createdAt": 1789449397087,
-      "updatedAt": 1789678243593,
+      "updatedAt": 1789748624381,
       "nameSource": null
     },
     {
@@ -2551,8 +5506,8 @@
       "rating": {
         "score": 7.5,
         "positive": 73,
-        "total": 11616,
         "desc": "Mostly Positive",
+        "total": 11616,
         "updatedAt": 1789678244832
       },
       "historicalLow": {
@@ -2687,7 +5642,7 @@
         ]
       },
       "createdAt": 1789449385735,
-      "updatedAt": 1789678244832,
+      "updatedAt": 1789748624381,
       "nameSource": null
     },
     {
@@ -2708,8 +5663,8 @@
       "rating": {
         "score": 8.9,
         "positive": 85,
-        "total": 8378,
         "desc": "Very Positive",
+        "total": 8378,
         "updatedAt": 1789678246375
       },
       "historicalLow": {
@@ -2802,7 +5757,7 @@
         ]
       },
       "createdAt": 1789449379519,
-      "updatedAt": 1789678246375,
+      "updatedAt": 1789748624381,
       "nameSource": null
     },
     {
@@ -2823,8 +5778,8 @@
       "rating": {
         "score": 5.5,
         "positive": 54,
-        "total": 1967,
         "desc": "Mixed",
+        "total": 1967,
         "updatedAt": 1789678247695
       },
       "historicalLow": {
@@ -2956,7 +5911,7 @@
         ]
       },
       "createdAt": 1789449370423,
-      "updatedAt": 1789678247695,
+      "updatedAt": 1789748624381,
       "nameSource": null
     },
     {
@@ -2977,8 +5932,8 @@
       "rating": {
         "score": 7.5,
         "positive": 74,
-        "total": 6132,
         "desc": "Mostly Positive",
+        "total": 6132,
         "updatedAt": 1789678249074
       },
       "historicalLow": {
@@ -3151,7 +6106,7 @@
         "bundleIds": []
       },
       "createdAt": 1789449339704,
-      "updatedAt": 1789678249074,
+      "updatedAt": 1789748624381,
       "nameSource": null
     },
     {
@@ -3172,8 +6127,8 @@
       "rating": {
         "score": 8.9,
         "positive": 85,
-        "total": 591,
         "desc": "Very Positive",
+        "total": 591,
         "updatedAt": 1789678250512
       },
       "historicalLow": {
@@ -3292,7 +6247,7 @@
         ]
       },
       "createdAt": 1789449331976,
-      "updatedAt": 1789678250512,
+      "updatedAt": 1789748624381,
       "nameSource": "machine-translation"
     },
     {
@@ -3313,8 +6268,8 @@
       "rating": {
         "score": 8.4,
         "positive": 83,
-        "total": 2783,
         "desc": "Very Positive",
+        "total": 2783,
         "updatedAt": 1789678251917
       },
       "historicalLow": {
@@ -3426,7 +6381,7 @@
         ]
       },
       "createdAt": 1789449324781,
-      "updatedAt": 1789678251917,
+      "updatedAt": 1789748624381,
       "nameSource": null
     },
     {
@@ -3447,8 +6402,8 @@
       "rating": {
         "score": 9.6,
         "positive": 94,
-        "total": 1309,
         "desc": "Very Positive",
+        "total": 1309,
         "updatedAt": 1789678253271
       },
       "historicalLow": {
@@ -3533,7 +6488,7 @@
         "bundleIds": []
       },
       "createdAt": 1789449320427,
-      "updatedAt": 1789678253271,
+      "updatedAt": 1789748624381,
       "nameSource": "machine-translation"
     },
     {
@@ -3554,8 +6509,8 @@
       "rating": {
         "score": 6.5,
         "positive": 63,
-        "total": 1538,
         "desc": "Mixed",
+        "total": 1538,
         "updatedAt": 1789678254820
       },
       "historicalLow": {
@@ -3681,7 +6636,7 @@
         "bundleIds": []
       },
       "createdAt": 1789449313978,
-      "updatedAt": 1789678254820,
+      "updatedAt": 1789748624381,
       "nameSource": null
     },
     {
@@ -3702,8 +6657,8 @@
       "rating": {
         "score": 9.2,
         "positive": 89,
-        "total": 12316,
         "desc": "Very Positive",
+        "total": 12316,
         "updatedAt": 1789678256066
       },
       "historicalLow": {
@@ -3811,7 +6766,7 @@
         ]
       },
       "createdAt": 1789449305158,
-      "updatedAt": 1789678256066,
+      "updatedAt": 1789748624381,
       "nameSource": "machine-translation"
     },
     {
@@ -3832,8 +6787,8 @@
       "rating": {
         "score": 6.5,
         "positive": 68,
-        "total": 287,
         "desc": "Mixed",
+        "total": 287,
         "updatedAt": 1789678257574
       },
       "historicalLow": {
@@ -4000,7 +6955,7 @@
         "bundleIds": []
       },
       "createdAt": 1789449295581,
-      "updatedAt": 1789678257574,
+      "updatedAt": 1789748624381,
       "nameSource": null
     },
     {
@@ -4021,8 +6976,8 @@
       "rating": {
         "score": 9.9,
         "positive": 98,
-        "total": 5757,
         "desc": "Overwhelmingly Positive",
+        "total": 5757,
         "updatedAt": 1789678258894
       },
       "historicalLow": {
@@ -4129,7 +7084,7 @@
         ]
       },
       "createdAt": 1789449277706,
-      "updatedAt": 1789678258894,
+      "updatedAt": 1789748624381,
       "nameSource": null
     },
     {
@@ -4150,8 +7105,8 @@
       "rating": {
         "score": 8.4,
         "positive": 84,
-        "total": 2094,
         "desc": "Very Positive",
+        "total": 2094,
         "updatedAt": 1789678260277
       },
       "historicalLow": {
@@ -4243,7 +7198,7 @@
         ]
       },
       "createdAt": 1789449268597,
-      "updatedAt": 1789678260277,
+      "updatedAt": 1789748624381,
       "nameSource": null
     },
     {
@@ -4264,8 +7219,8 @@
       "rating": {
         "score": 9.6,
         "positive": 93,
-        "total": 36472,
         "desc": "Very Positive",
+        "total": 36472,
         "updatedAt": 1789678261693
       },
       "historicalLow": {
@@ -4404,7 +7359,7 @@
         ]
       },
       "createdAt": 1789449261106,
-      "updatedAt": 1789678261693,
+      "updatedAt": 1789748624381,
       "nameSource": null
     },
     {
@@ -4425,8 +7380,8 @@
       "rating": {
         "score": 7.5,
         "positive": 77,
-        "total": 771,
         "desc": "Mostly Positive",
+        "total": 771,
         "updatedAt": 1789678263098
       },
       "historicalLow": {
@@ -4529,7 +7484,7 @@
         ]
       },
       "createdAt": 1789449248704,
-      "updatedAt": 1789678263098,
+      "updatedAt": 1789748624381,
       "nameSource": "machine-translation"
     },
     {
@@ -4550,8 +7505,8 @@
       "rating": {
         "score": 8.4,
         "positive": 83,
-        "total": 642,
         "desc": "Very Positive",
+        "total": 642,
         "updatedAt": 1789678264491
       },
       "historicalLow": {
@@ -4681,7 +7636,7 @@
         ]
       },
       "createdAt": 1789449241621,
-      "updatedAt": 1789678264491,
+      "updatedAt": 1789748624381,
       "nameSource": null
     },
     {
@@ -4702,8 +7657,8 @@
       "rating": {
         "score": 7.5,
         "positive": 77,
-        "total": 2321,
         "desc": "Mostly Positive",
+        "total": 2321,
         "updatedAt": 1789678265886
       },
       "historicalLow": {
@@ -4795,7 +7750,7 @@
         ]
       },
       "createdAt": 1789449175682,
-      "updatedAt": 1789678265886,
+      "updatedAt": 1789748624381,
       "nameSource": null
     },
     {
@@ -4816,8 +7771,8 @@
       "rating": {
         "score": 8.4,
         "positive": 81,
-        "total": 1458,
         "desc": "Very Positive",
+        "total": 1458,
         "updatedAt": 1789678267335
       },
       "historicalLow": {
@@ -4924,7 +7879,7 @@
         "bundleIds": []
       },
       "createdAt": 1789449171748,
-      "updatedAt": 1789678267335,
+      "updatedAt": 1789748624381,
       "nameSource": null
     },
     {
@@ -4945,8 +7900,8 @@
       "rating": {
         "score": 9.9,
         "positive": 98,
-        "total": 4549,
         "desc": "Overwhelmingly Positive",
+        "total": 4549,
         "updatedAt": 1789678268659
       },
       "historicalLow": {
@@ -5054,7 +8009,7 @@
         "bundleIds": []
       },
       "createdAt": 1789449165319,
-      "updatedAt": 1789678268659,
+      "updatedAt": 1789748624381,
       "nameSource": "machine-translation"
     },
     {
@@ -5075,8 +8030,8 @@
       "rating": {
         "score": 7.5,
         "positive": 75,
-        "total": 1656,
         "desc": "Mostly Positive",
+        "total": 1656,
         "updatedAt": 1789678270047
       },
       "historicalLow": {
@@ -5164,7 +8119,7 @@
         ]
       },
       "createdAt": 1789449158223,
-      "updatedAt": 1789678270047,
+      "updatedAt": 1789748624381,
       "nameSource": "machine-translation"
     },
     {
@@ -5185,8 +8140,8 @@
       "rating": {
         "score": 9.8,
         "positive": 95,
-        "total": 1269,
         "desc": "Overwhelmingly Positive",
+        "total": 1269,
         "updatedAt": 1789678271449
       },
       "historicalLow": {
@@ -5397,7 +8352,7 @@
         ]
       },
       "createdAt": 1789449148047,
-      "updatedAt": 1789678271449,
+      "updatedAt": 1789748624381,
       "nameSource": "machine-translation"
     },
     {
@@ -5418,8 +8373,8 @@
       "rating": {
         "score": 9.9,
         "positive": 97,
-        "total": 19617,
         "desc": "Overwhelmingly Positive",
+        "total": 19617,
         "updatedAt": 1789678273025
       },
       "historicalLow": {
@@ -5522,7 +8477,7 @@
         ]
       },
       "createdAt": 1789449139281,
-      "updatedAt": 1789678273025,
+      "updatedAt": 1789748624381,
       "nameSource": null
     },
     {
@@ -5543,8 +8498,8 @@
       "rating": {
         "score": 8.9,
         "positive": 87,
-        "total": 39261,
         "desc": "Very Positive",
+        "total": 39261,
         "updatedAt": 1789678274397
       },
       "historicalLow": {
@@ -5689,7 +8644,7 @@
         ]
       },
       "createdAt": 1789449123598,
-      "updatedAt": 1789678274397,
+      "updatedAt": 1789748624381,
       "nameSource": null
     },
     {
@@ -5711,8 +8666,8 @@
       "rating": {
         "score": 9.9,
         "positive": 98,
-        "total": 60124,
         "desc": "Overwhelmingly Positive",
+        "total": 60124,
         "updatedAt": 1789678275639
       },
       "historicalLow": {
@@ -5827,7 +8782,7 @@
         ]
       },
       "createdAt": 1789449116702,
-      "updatedAt": 1789678275639,
+      "updatedAt": 1789748624381,
       "nameSource": null
     },
     {
@@ -5848,8 +8803,8 @@
       "rating": {
         "score": 9.6,
         "positive": 94,
-        "total": 19017,
         "desc": "Very Positive",
+        "total": 19017,
         "updatedAt": 1789678277215
       },
       "historicalLow": {
@@ -5980,7 +8935,7 @@
         ]
       },
       "createdAt": 1789449076133,
-      "updatedAt": 1789678277215,
+      "updatedAt": 1789748624381,
       "nameSource": null
     },
     {
@@ -6001,8 +8956,8 @@
       "rating": {
         "score": 7.5,
         "positive": 75,
-        "total": 8731,
         "desc": "Mostly Positive",
+        "total": 8731,
         "updatedAt": 1789678278500
       },
       "historicalLow": {
@@ -6132,7 +9087,7 @@
         ]
       },
       "createdAt": 1789449065652,
-      "updatedAt": 1789678278500,
+      "updatedAt": 1789748624381,
       "nameSource": null
     },
     {
@@ -6153,8 +9108,8 @@
       "rating": {
         "score": 8.4,
         "positive": 84,
-        "total": 47051,
         "desc": "Very Positive",
+        "total": 47051,
         "updatedAt": 1789678279941
       },
       "historicalLow": {
@@ -6427,7 +9382,7 @@
         ]
       },
       "createdAt": 1789449054846,
-      "updatedAt": 1789678279941,
+      "updatedAt": 1789748624381,
       "nameSource": "machine-translation"
     },
     {
@@ -6448,8 +9403,8 @@
       "rating": {
         "score": 9.6,
         "positive": 93,
-        "total": 5104,
         "desc": "Very Positive",
+        "total": 5104,
         "updatedAt": 1789678281296
       },
       "historicalLow": {
@@ -6551,7 +9506,7 @@
         ]
       },
       "createdAt": 1789393237087,
-      "updatedAt": 1789678281296,
+      "updatedAt": 1789748624381,
       "nameSource": null
     },
     {
@@ -6572,8 +9527,8 @@
       "rating": {
         "score": 8.4,
         "positive": 80,
-        "total": 88,
         "desc": "Mostly Positive",
+        "total": 88,
         "updatedAt": 1789678282635
       },
       "historicalLow": {
@@ -6678,7 +9633,7 @@
         ]
       },
       "createdAt": 1789393214949,
-      "updatedAt": 1789678282635,
+      "updatedAt": 1789748624381,
       "nameSource": "machine-translation"
     },
     {
@@ -6699,8 +9654,8 @@
       "rating": {
         "score": 9.6,
         "positive": 92,
-        "total": 2615,
         "desc": "Very Positive",
+        "total": 2615,
         "updatedAt": 1789678284036
       },
       "historicalLow": {
@@ -6828,7 +9783,7 @@
         ]
       },
       "createdAt": 1789393174094,
-      "updatedAt": 1789678284036,
+      "updatedAt": 1789748624381,
       "nameSource": "machine-translation"
     },
     {
@@ -6849,8 +9804,8 @@
       "rating": {
         "score": 9.2,
         "positive": 88,
-        "total": 1598,
         "desc": "Very Positive",
+        "total": 1598,
         "updatedAt": 1789678285490
       },
       "historicalLow": {
@@ -6959,7 +9914,7 @@
         ]
       },
       "createdAt": 1789393166062,
-      "updatedAt": 1789678285490,
+      "updatedAt": 1789748624381,
       "nameSource": "machine-translation"
     },
     {
@@ -6980,8 +9935,8 @@
       "rating": {
         "score": 9.9,
         "positive": 98,
-        "total": 2124,
         "desc": "Overwhelmingly Positive",
+        "total": 2124,
         "updatedAt": 1789678286872
       },
       "historicalLow": {
@@ -7084,7 +10039,7 @@
         ]
       },
       "createdAt": 1789393151629,
-      "updatedAt": 1789678286872,
+      "updatedAt": 1789748624381,
       "nameSource": null
     },
     {
@@ -7105,8 +10060,8 @@
       "rating": {
         "score": 6.5,
         "positive": 65,
-        "total": 359,
         "desc": "Mixed",
+        "total": 359,
         "updatedAt": 1789678288316
       },
       "historicalLow": {
@@ -7206,7 +10161,7 @@
         ]
       },
       "createdAt": 1789393144482,
-      "updatedAt": 1789678288316,
+      "updatedAt": 1789748624381,
       "nameSource": null
     },
     {
@@ -7227,8 +10182,8 @@
       "rating": {
         "score": 9.8,
         "positive": 95,
-        "total": 10299,
         "desc": "Very Positive",
+        "total": 10299,
         "updatedAt": 1789678289695
       },
       "historicalLow": {
@@ -7310,7 +10265,7 @@
         "bundleIds": []
       },
       "createdAt": 1789393042116,
-      "updatedAt": 1789678289695,
+      "updatedAt": 1789748624381,
       "nameSource": null
     },
     {
@@ -7331,8 +10286,8 @@
       "rating": {
         "score": 7.5,
         "positive": 72,
-        "total": 4175,
         "desc": "Mostly Positive",
+        "total": 4175,
         "updatedAt": 1789678291093
       },
       "historicalLow": {
@@ -7623,7 +10578,7 @@
         ]
       },
       "createdAt": 1789393018475,
-      "updatedAt": 1789678291093,
+      "updatedAt": 1789748624381,
       "nameSource": null
     },
     {
@@ -7644,8 +10599,8 @@
       "rating": {
         "score": 9.6,
         "positive": 93,
-        "total": 29611,
         "desc": "Very Positive",
+        "total": 29611,
         "updatedAt": 1789678292431
       },
       "historicalLow": {
@@ -7853,7 +10808,7 @@
         ]
       },
       "createdAt": 1789393002188,
-      "updatedAt": 1789678292431,
+      "updatedAt": 1789748624381,
       "nameSource": null
     },
     {
@@ -7874,8 +10829,8 @@
       "rating": {
         "score": 6.5,
         "positive": 69,
-        "total": 1667,
         "desc": "Mixed",
+        "total": 1667,
         "updatedAt": 1789678293837
       },
       "historicalLow": {
@@ -7998,7 +10953,7 @@
         ]
       },
       "createdAt": 1789392991099,
-      "updatedAt": 1789678293837,
+      "updatedAt": 1789748624381,
       "nameSource": "machine-translation"
     },
     {
@@ -8019,8 +10974,8 @@
       "rating": {
         "score": 7.5,
         "positive": 77,
-        "total": 3244,
         "desc": "Mostly Positive",
+        "total": 3244,
         "updatedAt": 1789678295253
       },
       "historicalLow": {
@@ -8130,7 +11085,7 @@
         ]
       },
       "createdAt": 1789392974172,
-      "updatedAt": 1789678295253,
+      "updatedAt": 1789748624381,
       "nameSource": "machine-translation"
     },
     {
@@ -8151,8 +11106,8 @@
       "rating": {
         "score": 9.6,
         "positive": 93,
-        "total": 4559,
         "desc": "Very Positive",
+        "total": 4559,
         "updatedAt": 1789678296637
       },
       "historicalLow": {
@@ -8241,7 +11196,7 @@
         ]
       },
       "createdAt": 1789392915340,
-      "updatedAt": 1789678296637,
+      "updatedAt": 1789748624381,
       "nameSource": "machine-translation"
     },
     {
@@ -8262,8 +11217,8 @@
       "rating": {
         "score": 8.4,
         "positive": 84,
-        "total": 3247,
         "desc": "Very Positive",
+        "total": 3247,
         "updatedAt": 1789678298090
       },
       "historicalLow": {
@@ -8368,7 +11323,7 @@
         ]
       },
       "createdAt": 1789392905832,
-      "updatedAt": 1789678298090,
+      "updatedAt": 1789748624381,
       "nameSource": null
     },
     {
@@ -8389,8 +11344,8 @@
       "rating": {
         "score": 9.2,
         "positive": 90,
-        "total": 7634,
         "desc": "Very Positive",
+        "total": 7634,
         "updatedAt": 1789678299540
       },
       "historicalLow": {
@@ -8491,7 +11446,7 @@
         "bundleIds": []
       },
       "createdAt": 1789392897440,
-      "updatedAt": 1789678299540,
+      "updatedAt": 1789748624381,
       "nameSource": null
     },
     {
@@ -8512,8 +11467,8 @@
       "rating": {
         "score": 6.5,
         "positive": 64,
-        "total": 1436,
         "desc": "Mixed",
+        "total": 1436,
         "updatedAt": 1789678300854
       },
       "historicalLow": {
@@ -8662,7 +11617,7 @@
         ]
       },
       "createdAt": 1789392887672,
-      "updatedAt": 1789678300854,
+      "updatedAt": 1789748624381,
       "nameSource": "machine-translation"
     },
     {
@@ -8683,8 +11638,8 @@
       "rating": {
         "score": 6.5,
         "positive": 66,
-        "total": 1961,
         "desc": "Mixed",
+        "total": 1961,
         "updatedAt": 1789678302351
       },
       "historicalLow": {
@@ -8859,7 +11814,7 @@
         ]
       },
       "createdAt": 1789392876650,
-      "updatedAt": 1789678302351,
+      "updatedAt": 1789748624381,
       "nameSource": "machine-translation"
     },
     {
@@ -8880,8 +11835,8 @@
       "rating": {
         "score": 9.6,
         "positive": 94,
-        "total": 9669,
         "desc": "Very Positive",
+        "total": 9669,
         "updatedAt": 1789678303681
       },
       "historicalLow": {
@@ -8986,7 +11941,7 @@
         "bundleIds": []
       },
       "createdAt": 1789391936262,
-      "updatedAt": 1789678303681,
+      "updatedAt": 1789748624381,
       "nameSource": "machine-translation"
     },
     {
@@ -9007,8 +11962,8 @@
       "rating": {
         "score": 6.5,
         "positive": 68,
-        "total": 123,
         "desc": "Mixed",
+        "total": 123,
         "updatedAt": 1789678305079
       },
       "historicalLow": {
@@ -9090,7 +12045,7 @@
         ]
       },
       "createdAt": 1789289423724,
-      "updatedAt": 1789678305079,
+      "updatedAt": 1789748624381,
       "nameSource": null
     },
     {
@@ -9111,8 +12066,8 @@
       "rating": {
         "score": 7.5,
         "positive": 74,
-        "total": 1463,
         "desc": "Mostly Positive",
+        "total": 1463,
         "updatedAt": 1789678306466
       },
       "historicalLow": {
@@ -9235,7 +12190,7 @@
         ]
       },
       "createdAt": 1789289416953,
-      "updatedAt": 1789678306466,
+      "updatedAt": 1789748624381,
       "nameSource": "machine-translation"
     },
     {
@@ -9256,8 +12211,8 @@
       "rating": {
         "score": 9.2,
         "positive": 90,
-        "total": 3254,
         "desc": "Very Positive",
+        "total": 3254,
         "updatedAt": 1789678307867
       },
       "historicalLow": {
@@ -9531,7 +12486,7 @@
         "bundleIds": []
       },
       "createdAt": 1789289393679,
-      "updatedAt": 1789678307867,
+      "updatedAt": 1789748624381,
       "nameSource": "machine-translation"
     },
     {
@@ -9552,8 +12507,8 @@
       "rating": {
         "score": 8.4,
         "positive": 84,
-        "total": 897,
         "desc": "Very Positive",
+        "total": 897,
         "updatedAt": 1789678309295
       },
       "historicalLow": {
@@ -9665,7 +12620,7 @@
         ]
       },
       "createdAt": 1789289357467,
-      "updatedAt": 1789678309295,
+      "updatedAt": 1789748624381,
       "nameSource": null
     },
     {
@@ -9686,8 +12641,8 @@
       "rating": {
         "score": 6.5,
         "positive": 63,
-        "total": 334,
         "desc": "Mixed",
+        "total": 334,
         "updatedAt": 1789678310663
       },
       "historicalLow": {
@@ -9809,7 +12764,7 @@
         "bundleIds": []
       },
       "createdAt": 1789289347989,
-      "updatedAt": 1789678310663,
+      "updatedAt": 1789748624381,
       "nameSource": "machine-translation"
     },
     {
@@ -9830,8 +12785,8 @@
       "rating": {
         "score": 7.5,
         "positive": 78,
-        "total": 1078,
         "desc": "Mostly Positive",
+        "total": 1078,
         "updatedAt": 1789678312060
       },
       "historicalLow": {
@@ -9936,7 +12891,7 @@
         ]
       },
       "createdAt": 1789289330600,
-      "updatedAt": 1789678312060,
+      "updatedAt": 1789748624381,
       "nameSource": null
     },
     {
@@ -9957,8 +12912,8 @@
       "rating": {
         "score": 7.5,
         "positive": 79,
-        "total": 854,
         "desc": "Mostly Positive",
+        "total": 854,
         "updatedAt": 1789678313462
       },
       "historicalLow": {
@@ -10151,7 +13106,7 @@
         ]
       },
       "createdAt": 1789289322471,
-      "updatedAt": 1789678313462,
+      "updatedAt": 1789748624381,
       "nameSource": null
     },
     {
@@ -10172,8 +13127,8 @@
       "rating": {
         "score": 8.4,
         "positive": 82,
-        "total": 860,
         "desc": "Very Positive",
+        "total": 860,
         "updatedAt": 1789678314880
       },
       "historicalLow": {
@@ -10296,7 +13251,7 @@
         ]
       },
       "createdAt": 1789289296723,
-      "updatedAt": 1789678314880,
+      "updatedAt": 1789748624381,
       "nameSource": "machine-translation"
     },
     {
@@ -10317,8 +13272,8 @@
       "rating": {
         "score": 9.6,
         "positive": 94,
-        "total": 1965,
         "desc": "Very Positive",
+        "total": 1965,
         "updatedAt": 1789678316283
       },
       "historicalLow": {
@@ -10420,7 +13375,7 @@
         ]
       },
       "createdAt": 1789289279165,
-      "updatedAt": 1789678316283,
+      "updatedAt": 1789748624381,
       "nameSource": null
     },
     {
@@ -10441,8 +13396,8 @@
       "rating": {
         "score": 9.8,
         "positive": 96,
-        "total": 2004,
         "desc": "Overwhelmingly Positive",
+        "total": 2004,
         "updatedAt": 1789678317681
       },
       "historicalLow": {
@@ -10544,7 +13499,7 @@
         ]
       },
       "createdAt": 1789289272898,
-      "updatedAt": 1789678317681,
+      "updatedAt": 1789748624381,
       "nameSource": "machine-translation"
     },
     {
@@ -10565,8 +13520,8 @@
       "rating": {
         "score": 7.5,
         "positive": 76,
-        "total": 1043,
         "desc": "Mostly Positive",
+        "total": 1043,
         "updatedAt": 1789678319044
       },
       "historicalLow": {
@@ -10673,7 +13628,7 @@
         ]
       },
       "createdAt": 1789289231546,
-      "updatedAt": 1789678319044,
+      "updatedAt": 1789748624381,
       "nameSource": "machine-translation"
     },
     {
@@ -10694,8 +13649,8 @@
       "rating": {
         "score": 8.9,
         "positive": 86,
-        "total": 1076,
         "desc": "Very Positive",
+        "total": 1076,
         "updatedAt": 1789678320466
       },
       "historicalLow": {
@@ -10783,7 +13738,7 @@
         ]
       },
       "createdAt": 1789289193248,
-      "updatedAt": 1789678320466,
+      "updatedAt": 1789748624381,
       "nameSource": null
     },
     {
@@ -10804,8 +13759,8 @@
       "rating": {
         "score": 7.5,
         "positive": 79,
-        "total": 1339,
         "desc": "Mostly Positive",
+        "total": 1339,
         "updatedAt": 1789678321852
       },
       "historicalLow": {
@@ -10985,7 +13940,7 @@
         ]
       },
       "createdAt": 1789289175348,
-      "updatedAt": 1789678321852,
+      "updatedAt": 1789748624381,
       "nameSource": null
     },
     {
@@ -11006,8 +13961,8 @@
       "rating": {
         "score": 6.5,
         "positive": 61,
-        "total": 351,
         "desc": "Mixed",
+        "total": 351,
         "updatedAt": 1789678323265
       },
       "historicalLow": {
@@ -11125,7 +14080,7 @@
         ]
       },
       "createdAt": 1789289162929,
-      "updatedAt": 1789678323265,
+      "updatedAt": 1789748624381,
       "nameSource": null
     },
     {
@@ -11146,8 +14101,8 @@
       "rating": {
         "score": 9.2,
         "positive": 88,
-        "total": 576,
         "desc": "Very Positive",
+        "total": 576,
         "updatedAt": 1789678324630
       },
       "historicalLow": {
@@ -11235,7 +14190,7 @@
         "bundleIds": []
       },
       "createdAt": 1789289157480,
-      "updatedAt": 1789678324630,
+      "updatedAt": 1789748624381,
       "nameSource": "machine-translation"
     },
     {
@@ -11256,8 +14211,8 @@
       "rating": {
         "score": 9.8,
         "positive": 95,
-        "total": 329,
         "desc": "Very Positive",
+        "total": 329,
         "updatedAt": 1789678326037
       },
       "historicalLow": {
@@ -11422,7 +14377,7 @@
         "bundleIds": []
       },
       "createdAt": 1789289149519,
-      "updatedAt": 1789678326037,
+      "updatedAt": 1789748624381,
       "nameSource": null
     },
     {
@@ -11443,8 +14398,8 @@
       "rating": {
         "score": 8.4,
         "positive": 82,
-        "total": 776,
         "desc": "Very Positive",
+        "total": 776,
         "updatedAt": 1789678327462
       },
       "historicalLow": {
@@ -11530,7 +14485,7 @@
         ]
       },
       "createdAt": 1789289142782,
-      "updatedAt": 1789678327462,
+      "updatedAt": 1789748624381,
       "nameSource": "machine-translation"
     },
     {
@@ -11551,8 +14506,8 @@
       "rating": {
         "score": 8.4,
         "positive": 81,
-        "total": 11968,
         "desc": "Very Positive",
+        "total": 11968,
         "updatedAt": 1789678328845
       },
       "historicalLow": {
@@ -11637,7 +14592,7 @@
         ]
       },
       "createdAt": 1789289137494,
-      "updatedAt": 1789678328845,
+      "updatedAt": 1789748624381,
       "nameSource": null
     },
     {
@@ -11658,8 +14613,8 @@
       "rating": {
         "score": 9.2,
         "positive": 89,
-        "total": 600,
         "desc": "Very Positive",
+        "total": 600,
         "updatedAt": 1789678330282
       },
       "historicalLow": {
@@ -11803,7 +14758,7 @@
         ]
       },
       "createdAt": 1789289131662,
-      "updatedAt": 1789678330282,
+      "updatedAt": 1789748624381,
       "nameSource": "machine-translation"
     },
     {
@@ -11824,8 +14779,8 @@
       "rating": {
         "score": 9.6,
         "positive": 93,
-        "total": 118,
         "desc": "Very Positive",
+        "total": 118,
         "updatedAt": 1789678331655
       },
       "historicalLow": {
@@ -11907,7 +14862,7 @@
         ]
       },
       "createdAt": 1789289123766,
-      "updatedAt": 1789678331655,
+      "updatedAt": 1789748624381,
       "nameSource": null
     },
     {
@@ -11928,8 +14883,8 @@
       "rating": {
         "score": 7.5,
         "positive": 74,
-        "total": 1372,
         "desc": "Mostly Positive",
+        "total": 1372,
         "updatedAt": 1789678333014
       },
       "historicalLow": {
@@ -12177,7 +15132,7 @@
         "bundleIds": []
       },
       "createdAt": 1789289117479,
-      "updatedAt": 1789678333014,
+      "updatedAt": 1789748624381,
       "nameSource": "machine-translation"
     },
     {
@@ -12198,8 +15153,8 @@
       "rating": {
         "score": 9.8,
         "positive": 95,
-        "total": 605,
         "desc": "Very Positive",
+        "total": 605,
         "updatedAt": 1789678334414
       },
       "historicalLow": {
@@ -12312,7 +15267,7 @@
         ]
       },
       "createdAt": 1789289111324,
-      "updatedAt": 1789678334414,
+      "updatedAt": 1789748624381,
       "nameSource": "machine-translation"
     },
     {
@@ -12333,8 +15288,8 @@
       "rating": {
         "score": 7.5,
         "positive": 75,
-        "total": 14654,
         "desc": "Mostly Positive",
+        "total": 14654,
         "updatedAt": 1789678335826
       },
       "historicalLow": {
@@ -12542,7 +15497,7 @@
         ]
       },
       "createdAt": 1789288866643,
-      "updatedAt": 1789678335826,
+      "updatedAt": 1789748624381,
       "nameSource": null
     },
     {
@@ -12563,8 +15518,8 @@
       "rating": {
         "score": 9.8,
         "positive": 95,
-        "total": 1212,
         "desc": "Very Positive",
+        "total": 1212,
         "updatedAt": 1789678337298
       },
       "historicalLow": {
@@ -12648,7 +15603,7 @@
         ]
       },
       "createdAt": 1789288713492,
-      "updatedAt": 1789678337298,
+      "updatedAt": 1789748624381,
       "nameSource": null
     },
     {
@@ -12669,8 +15624,8 @@
       "rating": {
         "score": 9.8,
         "positive": 95,
-        "total": 2696,
         "desc": "Very Positive",
+        "total": 2696,
         "updatedAt": 1789678338628
       },
       "historicalLow": {
@@ -12780,7 +15735,7 @@
         ]
       },
       "createdAt": 1789288699206,
-      "updatedAt": 1789678338628,
+      "updatedAt": 1789748624381,
       "nameSource": "machine-translation"
     },
     {
@@ -12801,8 +15756,8 @@
       "rating": {
         "score": 7.5,
         "positive": 79,
-        "total": 19840,
         "desc": "Mostly Positive",
+        "total": 19840,
         "updatedAt": 1789678340022
       },
       "historicalLow": {
@@ -12919,7 +15874,7 @@
         ]
       },
       "createdAt": 1789288687871,
-      "updatedAt": 1789678340022,
+      "updatedAt": 1789748624381,
       "nameSource": null
     },
     {
@@ -12940,8 +15895,8 @@
       "rating": {
         "score": 9.2,
         "positive": 89,
-        "total": 4267,
         "desc": "Very Positive",
+        "total": 4267,
         "updatedAt": 1789678341427
       },
       "historicalLow": {
@@ -13056,7 +16011,7 @@
         "bundleIds": []
       },
       "createdAt": 1789288670962,
-      "updatedAt": 1789678341427,
+      "updatedAt": 1789748624381,
       "nameSource": "machine-translation"
     },
     {
@@ -13077,8 +16032,8 @@
       "rating": {
         "score": 7.5,
         "positive": 74,
-        "total": 3130,
         "desc": "Mostly Positive",
+        "total": 3130,
         "updatedAt": 1789678342884
       },
       "historicalLow": {
@@ -13171,7 +16126,7 @@
         ]
       },
       "createdAt": 1789288651138,
-      "updatedAt": 1789678342884,
+      "updatedAt": 1789748624381,
       "nameSource": "machine-translation"
     },
     {
@@ -13192,8 +16147,8 @@
       "rating": {
         "score": 6.5,
         "positive": 60,
-        "total": 965,
         "desc": "Mixed",
+        "total": 965,
         "updatedAt": 1789678344241
       },
       "historicalLow": {
@@ -13284,7 +16239,7 @@
         ]
       },
       "createdAt": 1789288633473,
-      "updatedAt": 1789678344241,
+      "updatedAt": 1789748624381,
       "nameSource": "machine-translation"
     },
     {
@@ -13305,8 +16260,8 @@
       "rating": {
         "score": 9.8,
         "positive": 95,
-        "total": 2591,
         "desc": "Overwhelmingly Positive",
+        "total": 2591,
         "updatedAt": 1789678345724
       },
       "historicalLow": {
@@ -13431,7 +16386,7 @@
         ]
       },
       "createdAt": 1789288621819,
-      "updatedAt": 1789678345724,
+      "updatedAt": 1789748624381,
       "nameSource": null
     },
     {
@@ -13452,8 +16407,8 @@
       "rating": {
         "score": 9.8,
         "positive": 95,
-        "total": 1735,
         "desc": "Overwhelmingly Positive",
+        "total": 1735,
         "updatedAt": 1789678347012
       },
       "historicalLow": {
@@ -13583,7 +16538,7 @@
         ]
       },
       "createdAt": 1789288498969,
-      "updatedAt": 1789678347012,
+      "updatedAt": 1789748624381,
       "nameSource": null
     },
     {
@@ -13604,8 +16559,8 @@
       "rating": {
         "score": 8.4,
         "positive": 81,
-        "total": 17273,
         "desc": "Very Positive",
+        "total": 17273,
         "updatedAt": 1789678348466
       },
       "historicalLow": {
@@ -13878,7 +16833,7 @@
         ]
       },
       "createdAt": 1789288476867,
-      "updatedAt": 1789678348466,
+      "updatedAt": 1789748624381,
       "nameSource": "machine-translation"
     },
     {
@@ -13899,8 +16854,8 @@
       "rating": {
         "score": 7.5,
         "positive": 78,
-        "total": 3097,
         "desc": "Mostly Positive",
+        "total": 3097,
         "updatedAt": 1789678349879
       },
       "historicalLow": {
@@ -14185,7 +17140,7 @@
         ]
       },
       "createdAt": 1789288431803,
-      "updatedAt": 1789678349879,
+      "updatedAt": 1789748624381,
       "nameSource": null
     },
     {
@@ -14206,8 +17161,8 @@
       "rating": {
         "score": 7.5,
         "positive": 79,
-        "total": 3948,
         "desc": "Mostly Positive",
+        "total": 3948,
         "updatedAt": 1789678351321
       },
       "historicalLow": {
@@ -14381,7 +17336,7 @@
         ]
       },
       "createdAt": 1789288422502,
-      "updatedAt": 1789678351321,
+      "updatedAt": 1789748624381,
       "nameSource": null
     },
     {
@@ -14402,8 +17357,8 @@
       "rating": {
         "score": 9.6,
         "positive": 92,
-        "total": 27219,
         "desc": "Very Positive",
+        "total": 27219,
         "updatedAt": 1789678352619
       },
       "historicalLow": {
@@ -14577,7 +17532,7 @@
         ]
       },
       "createdAt": 1789288315262,
-      "updatedAt": 1789678352619,
+      "updatedAt": 1789748624381,
       "nameSource": null
     },
     {
@@ -14598,8 +17553,8 @@
       "rating": {
         "score": 8.4,
         "positive": 81,
-        "total": 5174,
         "desc": "Very Positive",
+        "total": 5174,
         "updatedAt": 1789678354105
       },
       "historicalLow": {
@@ -14755,7 +17710,7 @@
         ]
       },
       "createdAt": 1789288295688,
-      "updatedAt": 1789678354105,
+      "updatedAt": 1789748624381,
       "nameSource": "machine-translation"
     },
     {
@@ -14776,8 +17731,8 @@
       "rating": {
         "score": 9.2,
         "positive": 90,
-        "total": 17901,
         "desc": "Very Positive",
+        "total": 17901,
         "updatedAt": 1789678355442
       },
       "historicalLow": {
@@ -15027,7 +17982,7 @@
         ]
       },
       "createdAt": 1789288267285,
-      "updatedAt": 1789678355442,
+      "updatedAt": 1789748624381,
       "nameSource": "machine-translation"
     },
     {
@@ -15048,8 +18003,8 @@
       "rating": {
         "score": 8.4,
         "positive": 83,
-        "total": 4479,
         "desc": "Very Positive",
+        "total": 4479,
         "updatedAt": 1789678356829
       },
       "historicalLow": {
@@ -15158,7 +18113,7 @@
         ]
       },
       "createdAt": 1789288255996,
-      "updatedAt": 1789678356829,
+      "updatedAt": 1789748624381,
       "nameSource": "machine-translation"
     },
     {
@@ -15179,8 +18134,8 @@
       "rating": {
         "score": 7.5,
         "positive": 70,
-        "total": 428,
         "desc": "Mostly Positive",
+        "total": 428,
         "updatedAt": 1789678358313
       },
       "historicalLow": {
@@ -15293,7 +18248,7 @@
         ]
       },
       "createdAt": 1789288227339,
-      "updatedAt": 1789678358313,
+      "updatedAt": 1789748624381,
       "nameSource": "machine-translation"
     },
     {
@@ -15314,8 +18269,8 @@
       "rating": {
         "score": 9.6,
         "positive": 93,
-        "total": 743,
         "desc": "Very Positive",
+        "total": 743,
         "updatedAt": 1789678359733
       },
       "historicalLow": {
@@ -15405,7 +18360,7 @@
         ]
       },
       "createdAt": 1789288190456,
-      "updatedAt": 1789678359733,
+      "updatedAt": 1789748624381,
       "nameSource": null
     },
     {
@@ -15426,8 +18381,8 @@
       "rating": {
         "score": 6.5,
         "positive": 67,
-        "total": 544,
         "desc": "Mixed",
+        "total": 544,
         "updatedAt": 1789678361161
       },
       "historicalLow": {
@@ -15517,7 +18472,7 @@
         "bundleIds": []
       },
       "createdAt": 1789287675940,
-      "updatedAt": 1789678361161,
+      "updatedAt": 1789748624381,
       "nameSource": "machine-translation"
     },
     {
@@ -15538,8 +18493,8 @@
       "rating": {
         "score": 7.5,
         "positive": 75,
-        "total": 775,
         "desc": "Mostly Positive",
+        "total": 775,
         "updatedAt": 1789678362419
       },
       "historicalLow": {
@@ -15664,7 +18619,7 @@
         ]
       },
       "createdAt": 1789200620526,
-      "updatedAt": 1789678362419,
+      "updatedAt": 1789748624381,
       "nameSource": "machine-translation"
     },
     {
@@ -15685,8 +18640,8 @@
       "rating": {
         "score": 8.4,
         "positive": 82,
-        "total": 1442,
         "desc": "Very Positive",
+        "total": 1442,
         "updatedAt": 1789678363862
       },
       "historicalLow": {
@@ -15789,7 +18744,7 @@
         ]
       },
       "createdAt": 1789200615859,
-      "updatedAt": 1789678363862,
+      "updatedAt": 1789748624381,
       "nameSource": "machine-translation"
     },
     {
@@ -15810,8 +18765,8 @@
       "rating": {
         "score": 8.4,
         "positive": 84,
-        "total": 1750,
         "desc": "Very Positive",
+        "total": 1750,
         "updatedAt": 1789678365250
       },
       "historicalLow": {
@@ -15961,7 +18916,7 @@
         ]
       },
       "createdAt": 1789200611013,
-      "updatedAt": 1789678365250,
+      "updatedAt": 1789748624381,
       "nameSource": null
     },
     {
@@ -15982,8 +18937,8 @@
       "rating": {
         "score": 9.9,
         "positive": 98,
-        "total": 11999,
         "desc": "Overwhelmingly Positive",
+        "total": 11999,
         "updatedAt": 1789678366756
       },
       "historicalLow": {
@@ -16092,7 +19047,7 @@
         ]
       },
       "createdAt": 1789200607370,
-      "updatedAt": 1789678366756,
+      "updatedAt": 1789748624381,
       "nameSource": null
     },
     {
@@ -16113,8 +19068,8 @@
       "rating": {
         "score": 9.6,
         "positive": 94,
-        "total": 105363,
         "desc": "Very Positive",
+        "total": 105363,
         "updatedAt": 1789678368052
       },
       "historicalLow": {
@@ -16244,7 +19199,7 @@
         "bundleIds": []
       },
       "createdAt": 1789200602339,
-      "updatedAt": 1789678368052,
+      "updatedAt": 1789748624381,
       "nameSource": "machine-translation"
     },
     {
@@ -16265,8 +19220,8 @@
       "rating": {
         "score": 9.2,
         "positive": 88,
-        "total": 16327,
         "desc": "Very Positive",
+        "total": 16327,
         "updatedAt": 1789678369543
       },
       "historicalLow": {
@@ -16410,7 +19365,7 @@
         ]
       },
       "createdAt": 1789200598138,
-      "updatedAt": 1789678369543,
+      "updatedAt": 1789748624381,
       "nameSource": "machine-translation"
     },
     {
@@ -16431,8 +19386,8 @@
       "rating": {
         "score": 6.5,
         "positive": 66,
-        "total": 352,
         "desc": "Mixed",
+        "total": 352,
         "updatedAt": 1789678370872
       },
       "historicalLow": {
@@ -16529,7 +19484,7 @@
         "bundleIds": []
       },
       "createdAt": 1789200593716,
-      "updatedAt": 1789678370872,
+      "updatedAt": 1789748624381,
       "nameSource": "machine-translation"
     },
     {
@@ -16550,8 +19505,8 @@
       "rating": {
         "score": 9.6,
         "positive": 93,
-        "total": 4984,
         "desc": "Very Positive",
+        "total": 4984,
         "updatedAt": 1789678372292
       },
       "historicalLow": {
@@ -16672,7 +19627,7 @@
         ]
       },
       "createdAt": 1789200589512,
-      "updatedAt": 1789678372292,
+      "updatedAt": 1789748624381,
       "nameSource": null
     },
     {
@@ -16693,8 +19648,8 @@
       "rating": {
         "score": 9.6,
         "positive": 93,
-        "total": 17726,
         "desc": "Very Positive",
+        "total": 17726,
         "updatedAt": 1789678373644
       },
       "historicalLow": {
@@ -16783,7 +19738,7 @@
         "bundleIds": []
       },
       "createdAt": 1789200421989,
-      "updatedAt": 1789678373644,
+      "updatedAt": 1789748624381,
       "nameSource": "machine-translation"
     },
     {
@@ -16884,7 +19839,7 @@
         "bundleIds": []
       },
       "createdAt": 1789200412254,
-      "updatedAt": 1789678375012,
+      "updatedAt": 1789748624381,
       "nameSource": "machine-translation"
     },
     {
@@ -16994,7 +19949,7 @@
         "bundleIds": []
       },
       "createdAt": 1789200411045,
-      "updatedAt": 1789678376486,
+      "updatedAt": 1789748624381,
       "nameSource": "machine-translation"
     },
     {
@@ -17015,8 +19970,8 @@
       "rating": {
         "score": 6.5,
         "positive": 68,
-        "total": 727,
         "desc": "Mixed",
+        "total": 727,
         "updatedAt": 1789678377904
       },
       "historicalLow": {
@@ -17149,7 +20104,7 @@
         ]
       },
       "createdAt": 1789200409294,
-      "updatedAt": 1789678377904,
+      "updatedAt": 1789748624381,
       "nameSource": null
     },
     {
@@ -17170,8 +20125,8 @@
       "rating": {
         "score": 9.2,
         "positive": 90,
-        "total": 2711,
         "desc": "Very Positive",
+        "total": 2711,
         "updatedAt": 1789678379224
       },
       "historicalLow": {
@@ -17275,7 +20230,7 @@
         ]
       },
       "createdAt": 1789200407468,
-      "updatedAt": 1789678379224,
+      "updatedAt": 1789748624381,
       "nameSource": null
     },
     {
@@ -17296,8 +20251,8 @@
       "rating": {
         "score": 8.9,
         "positive": 87,
-        "total": 6819,
         "desc": "Very Positive",
+        "total": 6819,
         "updatedAt": 1789678380652
       },
       "historicalLow": {
@@ -17569,7 +20524,7 @@
         ]
       },
       "createdAt": 1789200405077,
-      "updatedAt": 1789678380652,
+      "updatedAt": 1789748624381,
       "nameSource": null
     },
     {
@@ -17590,8 +20545,8 @@
       "rating": {
         "score": 9.6,
         "positive": 94,
-        "total": 3869,
         "desc": "Very Positive",
+        "total": 3869,
         "updatedAt": 1789678382008
       },
       "historicalLow": {
@@ -17759,7 +20714,7 @@
         ]
       },
       "createdAt": 1789200402590,
-      "updatedAt": 1789678382008,
+      "updatedAt": 1789748624381,
       "nameSource": null
     },
     {
@@ -17780,8 +20735,8 @@
       "rating": {
         "score": 9.2,
         "positive": 88,
-        "total": 9510,
         "desc": "Very Positive",
+        "total": 9510,
         "updatedAt": 1789678383462
       },
       "historicalLow": {
@@ -17902,7 +20857,7 @@
         "bundleIds": []
       },
       "createdAt": 1789200398979,
-      "updatedAt": 1789678383462,
+      "updatedAt": 1789748624381,
       "nameSource": null
     },
     {
@@ -17923,8 +20878,8 @@
       "rating": {
         "score": 9.9,
         "positive": 99,
-        "total": 3612,
         "desc": "Overwhelmingly Positive",
+        "total": 3612,
         "updatedAt": 1789678384819
       },
       "historicalLow": {
@@ -18010,7 +20965,7 @@
         ]
       },
       "createdAt": 1789200396557,
-      "updatedAt": 1789678384819,
+      "updatedAt": 1789748624381,
       "nameSource": "machine-translation"
     },
     {
@@ -18031,8 +20986,8 @@
       "rating": {
         "score": 8.4,
         "positive": 80,
-        "total": 7318,
         "desc": "Mostly Positive",
+        "total": 7318,
         "updatedAt": 1789678386222
       },
       "historicalLow": {
@@ -18131,7 +21086,7 @@
         "bundleIds": []
       },
       "createdAt": 1789200394758,
-      "updatedAt": 1789678386222,
+      "updatedAt": 1789748624381,
       "nameSource": "machine-translation"
     },
     {
@@ -18152,8 +21107,8 @@
       "rating": {
         "score": 9.9,
         "positive": 100,
-        "total": 2962,
         "desc": "Overwhelmingly Positive",
+        "total": 2962,
         "updatedAt": 1789678387643
       },
       "historicalLow": {
@@ -18257,7 +21212,7 @@
         ]
       },
       "createdAt": 1789200389919,
-      "updatedAt": 1789678387643,
+      "updatedAt": 1789748624381,
       "nameSource": "machine-translation"
     },
     {
@@ -18278,8 +21233,8 @@
       "rating": {
         "score": 4,
         "positive": 32,
-        "total": 99111,
         "desc": "Mostly Negative",
+        "total": 99111,
         "updatedAt": 1789678389015
       },
       "historicalLow": {
@@ -18380,7 +21335,7 @@
         ]
       },
       "createdAt": 1789200385710,
-      "updatedAt": 1789678389015,
+      "updatedAt": 1789748624381,
       "nameSource": "machine-translation"
     },
     {
@@ -18401,8 +21356,8 @@
       "rating": {
         "score": 9.6,
         "positive": 93,
-        "total": 15277,
         "desc": "Very Positive",
+        "total": 15277,
         "updatedAt": 1789678390460
       },
       "historicalLow": {
@@ -18504,7 +21459,7 @@
         ]
       },
       "createdAt": 1789200382652,
-      "updatedAt": 1789678390460,
+      "updatedAt": 1789748624381,
       "nameSource": "machine-translation"
     },
     {
@@ -18525,8 +21480,8 @@
       "rating": {
         "score": 9.6,
         "positive": 92,
-        "total": 5812,
         "desc": "Very Positive",
+        "total": 5812,
         "updatedAt": 1789678391797
       },
       "historicalLow": {
@@ -18644,7 +21599,7 @@
         ]
       },
       "createdAt": 1789200377845,
-      "updatedAt": 1789678391797,
+      "updatedAt": 1789748624381,
       "nameSource": null
     },
     {
@@ -18665,8 +21620,8 @@
       "rating": {
         "score": 9.9,
         "positive": 98,
-        "total": 56393,
         "desc": "Overwhelmingly Positive",
+        "total": 56393,
         "updatedAt": 1789678393276
       },
       "historicalLow": {
@@ -18777,7 +21732,7 @@
         ]
       },
       "createdAt": 1789200373586,
-      "updatedAt": 1789678393276,
+      "updatedAt": 1789748624381,
       "nameSource": null
     },
     {
@@ -18798,8 +21753,8 @@
       "rating": {
         "score": 9.6,
         "positive": 92,
-        "total": 17148,
         "desc": "Very Positive",
+        "total": 17148,
         "updatedAt": 1789678394613
       },
       "historicalLow": {
@@ -18902,7 +21857,7 @@
         "bundleIds": []
       },
       "createdAt": 1789200371171,
-      "updatedAt": 1789678394613,
+      "updatedAt": 1789748624381,
       "nameSource": "machine-translation"
     },
     {
@@ -18923,8 +21878,8 @@
       "rating": {
         "score": 9.8,
         "positive": 96,
-        "total": 67009,
         "desc": "Overwhelmingly Positive",
+        "total": 67009,
         "updatedAt": 1789678395987
       },
       "historicalLow": {
@@ -19009,7 +21964,7 @@
         ]
       },
       "createdAt": 1789200367552,
-      "updatedAt": 1789678395987,
+      "updatedAt": 1789748624381,
       "nameSource": null
     },
     {
@@ -19030,8 +21985,8 @@
       "rating": {
         "score": 8.4,
         "positive": 80,
-        "total": 14425,
         "desc": "Very Positive",
+        "total": 14425,
         "updatedAt": 1789678397714
       },
       "historicalLow": {
@@ -19134,7 +22089,7 @@
         ]
       },
       "createdAt": 1789200363318,
-      "updatedAt": 1789678397714,
+      "updatedAt": 1789748624381,
       "nameSource": "machine-translation"
     },
     {
@@ -19155,8 +22110,8 @@
       "rating": {
         "score": 7.5,
         "positive": 77,
-        "total": 425,
         "desc": "Mostly Positive",
+        "total": 425,
         "updatedAt": 1789678398849
       },
       "historicalLow": {
@@ -19243,7 +22198,7 @@
         ]
       },
       "createdAt": 1789200357301,
-      "updatedAt": 1789678398849,
+      "updatedAt": 1789748624381,
       "nameSource": "machine-translation"
     },
     {
@@ -19264,8 +22219,8 @@
       "rating": {
         "score": 7.5,
         "positive": 79,
-        "total": 9172,
         "desc": "Mostly Positive",
+        "total": 9172,
         "updatedAt": 1789678400321
       },
       "historicalLow": {
@@ -19478,7 +22433,7 @@
         ]
       },
       "createdAt": 1789200354279,
-      "updatedAt": 1789678400321,
+      "updatedAt": 1789748624381,
       "nameSource": "machine-translation"
     },
     {
@@ -19500,8 +22455,8 @@
       "rating": {
         "score": 9.8,
         "positive": 96,
-        "total": 101299,
         "desc": "Overwhelmingly Positive",
+        "total": 101299,
         "updatedAt": 1789678401697
       },
       "historicalLow": {
@@ -19635,7 +22590,7 @@
         "bundleIds": []
       },
       "createdAt": 1789200350053,
-      "updatedAt": 1789678401697,
+      "updatedAt": 1789748624381,
       "nameSource": null
     },
     {
@@ -19656,8 +22611,8 @@
       "rating": {
         "score": 4,
         "positive": 32,
-        "total": 3717,
         "desc": "Mostly Negative",
+        "total": 3717,
         "updatedAt": 1789678402983
       },
       "historicalLow": {
@@ -19766,7 +22721,7 @@
         "bundleIds": []
       },
       "createdAt": 1789200345183,
-      "updatedAt": 1789678402983,
+      "updatedAt": 1789748624381,
       "nameSource": "machine-translation"
     },
     {
@@ -19787,8 +22742,8 @@
       "rating": {
         "score": 9.2,
         "positive": 89,
-        "total": 16087,
         "desc": "Very Positive",
+        "total": 16087,
         "updatedAt": 1789678404418
       },
       "historicalLow": {
@@ -19894,7 +22849,7 @@
         ]
       },
       "createdAt": 1789200336641,
-      "updatedAt": 1789678404418,
+      "updatedAt": 1789748624381,
       "nameSource": "machine-translation"
     },
     {
@@ -19915,8 +22870,8 @@
       "rating": {
         "score": 9.2,
         "positive": 89,
-        "total": 22851,
         "desc": "Very Positive",
+        "total": 22851,
         "updatedAt": 1789678405809
       },
       "historicalLow": {
@@ -20201,7 +23156,7 @@
         ]
       },
       "createdAt": 1789200309480,
-      "updatedAt": 1789678405809,
+      "updatedAt": 1789748624381,
       "nameSource": "machine-translation"
     },
     {
@@ -20222,8 +23177,8 @@
       "rating": {
         "score": 9.9,
         "positive": 100,
-        "total": 2080,
         "desc": "Overwhelmingly Positive",
+        "total": 2080,
         "updatedAt": 1789678407198
       },
       "historicalLow": {
@@ -20324,7 +23279,7 @@
         ]
       },
       "createdAt": 1789200306373,
-      "updatedAt": 1789678407198,
+      "updatedAt": 1789748624381,
       "nameSource": "machine-translation"
     },
     {
@@ -20345,8 +23300,8 @@
       "rating": {
         "score": 8.9,
         "positive": 85,
-        "total": 3901,
         "desc": "Very Positive",
+        "total": 3901,
         "updatedAt": 1789678408687
       },
       "historicalLow": {
@@ -20473,7 +23428,7 @@
         ]
       },
       "createdAt": 1789200303362,
-      "updatedAt": 1789678408687,
+      "updatedAt": 1789748624381,
       "nameSource": null
     },
     {
@@ -20494,8 +23449,8 @@
       "rating": {
         "score": 9.9,
         "positive": 98,
-        "total": 3234,
         "desc": "Overwhelmingly Positive",
+        "total": 3234,
         "updatedAt": 1789678410035
       },
       "historicalLow": {
@@ -20572,7 +23527,7 @@
         ]
       },
       "createdAt": 1789200296684,
-      "updatedAt": 1789678410035,
+      "updatedAt": 1789748624381,
       "nameSource": "machine-translation"
     },
     {
@@ -20593,8 +23548,8 @@
       "rating": {
         "score": 9.2,
         "positive": 91,
-        "total": 18276,
         "desc": "Very Positive",
+        "total": 18276,
         "updatedAt": 1789678411453
       },
       "historicalLow": {
@@ -20884,7 +23839,7 @@
         ]
       },
       "createdAt": 1789200291860,
-      "updatedAt": 1789678411453,
+      "updatedAt": 1789748624381,
       "nameSource": null
     },
     {
@@ -20905,8 +23860,8 @@
       "rating": {
         "score": 9.9,
         "positive": 98,
-        "total": 4390,
         "desc": "Overwhelmingly Positive",
+        "total": 4390,
         "updatedAt": 1789678412903
       },
       "historicalLow": {
@@ -21055,7 +24010,7 @@
         ]
       },
       "createdAt": 1789200286347,
-      "updatedAt": 1789678412903,
+      "updatedAt": 1789748624381,
       "nameSource": "machine-translation"
     },
     {
@@ -21076,8 +24031,8 @@
       "rating": {
         "score": 9.2,
         "positive": 89,
-        "total": 37780,
         "desc": "Very Positive",
+        "total": 37780,
         "updatedAt": 1789678414208
       },
       "historicalLow": {
@@ -21265,7 +24220,7 @@
         ]
       },
       "createdAt": 1789200283975,
-      "updatedAt": 1789678414208,
+      "updatedAt": 1789748624381,
       "nameSource": null
     },
     {
@@ -21286,8 +24241,8 @@
       "rating": {
         "score": 8.4,
         "positive": 82,
-        "total": 3286,
         "desc": "Very Positive",
+        "total": 3286,
         "updatedAt": 1789678415589
       },
       "historicalLow": {
@@ -21561,7 +24516,7 @@
         ]
       },
       "createdAt": 1789200280943,
-      "updatedAt": 1789678415589,
+      "updatedAt": 1789748624381,
       "nameSource": "machine-translation"
     },
     {
@@ -21582,8 +24537,8 @@
       "rating": {
         "score": 8.9,
         "positive": 87,
-        "total": 13111,
         "desc": "Very Positive",
+        "total": 13111,
         "updatedAt": 1789678417156
       },
       "historicalLow": {
@@ -21854,7 +24809,7 @@
         ]
       },
       "createdAt": 1789200275496,
-      "updatedAt": 1789678417156,
+      "updatedAt": 1789748624381,
       "nameSource": null
     },
     {
@@ -21875,8 +24830,8 @@
       "rating": {
         "score": 9.9,
         "positive": 97,
-        "total": 17368,
         "desc": "Overwhelmingly Positive",
+        "total": 17368,
         "updatedAt": 1789678418400
       },
       "historicalLow": {
@@ -22005,7 +24960,7 @@
         ]
       },
       "createdAt": 1789200270711,
-      "updatedAt": 1789678418400,
+      "updatedAt": 1789748624381,
       "nameSource": "machine-translation"
     },
     {
@@ -22026,8 +24981,8 @@
       "rating": {
         "score": 9.6,
         "positive": 94,
-        "total": 1497,
         "desc": "Very Positive",
+        "total": 1497,
         "updatedAt": 1789678419802
       },
       "historicalLow": {
@@ -22129,7 +25084,7 @@
         ]
       },
       "createdAt": 1789200267638,
-      "updatedAt": 1789678419802,
+      "updatedAt": 1789748624381,
       "nameSource": "machine-translation"
     },
     {
@@ -22150,8 +25105,8 @@
       "rating": {
         "score": 9.6,
         "positive": 92,
-        "total": 23748,
         "desc": "Very Positive",
+        "total": 23748,
         "updatedAt": 1789678421184
       },
       "historicalLow": {
@@ -22444,7 +25399,7 @@
         ]
       },
       "createdAt": 1789200254926,
-      "updatedAt": 1789678421184,
+      "updatedAt": 1789748624381,
       "nameSource": "machine-translation"
     },
     {
@@ -22465,8 +25420,8 @@
       "rating": {
         "score": 9.8,
         "positive": 96,
-        "total": 171006,
         "desc": "Overwhelmingly Positive",
+        "total": 171006,
         "updatedAt": 1789678422705
       },
       "historicalLow": {
@@ -22535,7 +25490,7 @@
         "bundleIds": []
       },
       "createdAt": 1789200248257,
-      "updatedAt": 1789678422705,
+      "updatedAt": 1789748624381,
       "nameSource": "machine-translation"
     },
     {
@@ -22556,8 +25511,8 @@
       "rating": {
         "score": 8.4,
         "positive": 84,
-        "total": 3555,
         "desc": "Very Positive",
+        "total": 3555,
         "updatedAt": 1789678423984
       },
       "historicalLow": {
@@ -22832,7 +25787,7 @@
         ]
       },
       "createdAt": 1789200245276,
-      "updatedAt": 1789678423984,
+      "updatedAt": 1789748624381,
       "nameSource": "machine-translation"
     },
     {
@@ -22853,8 +25808,8 @@
       "rating": {
         "score": 9.8,
         "positive": 96,
-        "total": 16792,
         "desc": "Overwhelmingly Positive",
+        "total": 16792,
         "updatedAt": 1789678425380
       },
       "historicalLow": {
@@ -22944,7 +25899,7 @@
         ]
       },
       "createdAt": 1789200242244,
-      "updatedAt": 1789678425380,
+      "updatedAt": 1789748624381,
       "nameSource": "machine-translation"
     },
     {
@@ -22965,8 +25920,8 @@
       "rating": {
         "score": 9.6,
         "positive": 92,
-        "total": 3433,
         "desc": "Very Positive",
+        "total": 3433,
         "updatedAt": 1789678426782
       },
       "historicalLow": {
@@ -23080,7 +26035,7 @@
         ]
       },
       "createdAt": 1789200239151,
-      "updatedAt": 1789678426782,
+      "updatedAt": 1789748624381,
       "nameSource": null
     },
     {
@@ -23101,8 +26056,8 @@
       "rating": {
         "score": 9.9,
         "positive": 98,
-        "total": 4416,
         "desc": "Overwhelmingly Positive",
+        "total": 4416,
         "updatedAt": 1789678428207
       },
       "historicalLow": {
@@ -23186,7 +26141,7 @@
         ]
       },
       "createdAt": 1789200235552,
-      "updatedAt": 1789678428207,
+      "updatedAt": 1789748624381,
       "nameSource": "machine-translation"
     },
     {
@@ -23207,8 +26162,8 @@
       "rating": {
         "score": 9.9,
         "positive": 99,
-        "total": 7331,
         "desc": "Overwhelmingly Positive",
+        "total": 7331,
         "updatedAt": 1789678429584
       },
       "historicalLow": {
@@ -23314,7 +26269,7 @@
         "bundleIds": []
       },
       "createdAt": 1789200231926,
-      "updatedAt": 1789678429584,
+      "updatedAt": 1789748624381,
       "nameSource": "machine-translation"
     },
     {
@@ -23335,8 +26290,8 @@
       "rating": {
         "score": 9.6,
         "positive": 94,
-        "total": 36620,
         "desc": "Very Positive",
+        "total": 36620,
         "updatedAt": 1789678430974
       },
       "historicalLow": {
@@ -23605,7 +26560,7 @@
         ]
       },
       "createdAt": 1789200209151,
-      "updatedAt": 1789678430974,
+      "updatedAt": 1789748624381,
       "nameSource": null
     },
     {
@@ -23626,8 +26581,8 @@
       "rating": {
         "score": 9.9,
         "positive": 98,
-        "total": 10923,
         "desc": "Overwhelmingly Positive",
+        "total": 10923,
         "updatedAt": 1789678432401
       },
       "historicalLow": {
@@ -23729,7 +26684,7 @@
         ]
       },
       "createdAt": 1789200194326,
-      "updatedAt": 1789678432401,
+      "updatedAt": 1789748624381,
       "nameSource": "machine-translation"
     },
     {
@@ -23750,8 +26705,8 @@
       "rating": {
         "score": 9.2,
         "positive": 89,
-        "total": 20582,
         "desc": "Very Positive",
+        "total": 20582,
         "updatedAt": 1789678433799
       },
       "historicalLow": {
@@ -23835,7 +26790,7 @@
         "bundleIds": []
       },
       "createdAt": 1789199792368,
-      "updatedAt": 1789678433799,
+      "updatedAt": 1789748624381,
       "nameSource": "machine-translation"
     },
     {
@@ -23856,8 +26811,8 @@
       "rating": {
         "score": 9.9,
         "positive": 97,
-        "total": 65842,
         "desc": "Overwhelmingly Positive",
+        "total": 65842,
         "updatedAt": 1789678435183
       },
       "historicalLow": {
@@ -24050,7 +27005,7 @@
         ]
       },
       "createdAt": 1789199783608,
-      "updatedAt": 1789678435183,
+      "updatedAt": 1789748624381,
       "nameSource": "machine-translation"
     },
     {
@@ -24071,8 +27026,8 @@
       "rating": {
         "score": 7.5,
         "positive": 77,
-        "total": 7174,
         "desc": "Mostly Positive",
+        "total": 7174,
         "updatedAt": 1789678436699
       },
       "historicalLow": {
@@ -24156,7 +27111,7 @@
         ]
       },
       "createdAt": 1789199777249,
-      "updatedAt": 1789678436699,
+      "updatedAt": 1789748624381,
       "nameSource": "machine-translation"
     },
     {
@@ -24177,8 +27132,8 @@
       "rating": {
         "score": 4,
         "positive": 46,
-        "total": 5638,
         "desc": "Mixed",
+        "total": 5638,
         "updatedAt": 1789678437987
       },
       "historicalLow": {
@@ -24334,7 +27289,7 @@
         ]
       },
       "createdAt": 1789199750962,
-      "updatedAt": 1789678437987,
+      "updatedAt": 1789748624381,
       "nameSource": "machine-translation"
     },
     {
@@ -24355,8 +27310,8 @@
       "rating": {
         "score": 7.5,
         "positive": 79,
-        "total": 18767,
         "desc": "Mostly Positive",
+        "total": 18767,
         "updatedAt": 1789678439378
       },
       "historicalLow": {
@@ -24443,7 +27398,7 @@
         "bundleIds": []
       },
       "createdAt": 1789199716591,
-      "updatedAt": 1789678439378,
+      "updatedAt": 1789748624381,
       "nameSource": "machine-translation"
     },
     {
@@ -24464,8 +27419,8 @@
       "rating": {
         "score": 8.9,
         "positive": 85,
-        "total": 1701,
         "desc": "Very Positive",
+        "total": 1701,
         "updatedAt": 1789678440799
       },
       "historicalLow": {
@@ -24601,7 +27556,7 @@
         "bundleIds": []
       },
       "createdAt": 1789199704429,
-      "updatedAt": 1789678440799,
+      "updatedAt": 1789748624381,
       "nameSource": "machine-translation"
     },
     {
@@ -24622,8 +27577,8 @@
       "rating": {
         "score": 4,
         "positive": 48,
-        "total": 13993,
         "desc": "Mixed",
+        "total": 13993,
         "updatedAt": 1789678442228
       },
       "historicalLow": {
@@ -24887,7 +27842,7 @@
         ]
       },
       "createdAt": 1789199688864,
-      "updatedAt": 1789678442228,
+      "updatedAt": 1789748624381,
       "nameSource": null
     },
     {
@@ -24908,8 +27863,8 @@
       "rating": {
         "score": 9.2,
         "positive": 91,
-        "total": 60751,
         "desc": "Very Positive",
+        "total": 60751,
         "updatedAt": 1789678443686
       },
       "historicalLow": {
@@ -25182,7 +28137,7 @@
         ]
       },
       "createdAt": 1789199682401,
-      "updatedAt": 1789678443686,
+      "updatedAt": 1789748624381,
       "nameSource": "machine-translation"
     },
     {
@@ -25203,8 +28158,8 @@
       "rating": {
         "score": 9.8,
         "positive": 96,
-        "total": 4926,
         "desc": "Overwhelmingly Positive",
+        "total": 4926,
         "updatedAt": 1789678444971
       },
       "historicalLow": {
@@ -25284,7 +28239,7 @@
         ]
       },
       "createdAt": 1789199671365,
-      "updatedAt": 1789678444971,
+      "updatedAt": 1789748624381,
       "nameSource": "machine-translation"
     },
     {
@@ -25305,8 +28260,8 @@
       "rating": {
         "score": 8.9,
         "positive": 87,
-        "total": 8560,
         "desc": "Very Positive",
+        "total": 8560,
         "updatedAt": 1789678446457
       },
       "historicalLow": {
@@ -25408,7 +28363,7 @@
         ]
       },
       "createdAt": 1789199656265,
-      "updatedAt": 1789678446457,
+      "updatedAt": 1789748624381,
       "nameSource": null
     },
     {
@@ -25429,8 +28384,8 @@
       "rating": {
         "score": 9.9,
         "positive": 97,
-        "total": 34387,
         "desc": "Overwhelmingly Positive",
+        "total": 34387,
         "updatedAt": 1789678447791
       },
       "historicalLow": {
@@ -25535,7 +28490,7 @@
         ]
       },
       "createdAt": 1789199650264,
-      "updatedAt": 1789678447791,
+      "updatedAt": 1789748624381,
       "nameSource": null
     },
     {
@@ -25556,8 +28511,8 @@
       "rating": {
         "score": 7.5,
         "positive": 70,
-        "total": 8743,
         "desc": "Mostly Positive",
+        "total": 8743,
         "updatedAt": 1789678449184
       },
       "historicalLow": {
@@ -25671,7 +28626,7 @@
         ]
       },
       "createdAt": 1789199644423,
-      "updatedAt": 1789678449184,
+      "updatedAt": 1789748624381,
       "nameSource": null
     },
     {
@@ -25692,8 +28647,8 @@
       "rating": {
         "score": 7.5,
         "positive": 77,
-        "total": 12985,
         "desc": "Mostly Positive",
+        "total": 12985,
         "updatedAt": 1789678450695
       },
       "historicalLow": {
@@ -25858,7 +28813,7 @@
         ]
       },
       "createdAt": 1789199632217,
-      "updatedAt": 1789678450695,
+      "updatedAt": 1789748624381,
       "nameSource": "machine-translation"
     },
     {
@@ -25880,8 +28835,8 @@
       "rating": {
         "score": 9.2,
         "positive": 88,
-        "total": 67055,
         "desc": "Very Positive",
+        "total": 67055,
         "updatedAt": 1789678452008
       },
       "historicalLow": {
@@ -26011,7 +28966,7 @@
         ]
       },
       "createdAt": 1789199623232,
-      "updatedAt": 1789678452008,
+      "updatedAt": 1789748624381,
       "nameSource": null
     },
     {
@@ -26032,8 +28987,8 @@
       "rating": {
         "score": 9.9,
         "positive": 97,
-        "total": 2521,
         "desc": "Overwhelmingly Positive",
+        "total": 2521,
         "updatedAt": 1789678453419
       },
       "historicalLow": {
@@ -26265,7 +29220,7 @@
         "bundleIds": []
       },
       "createdAt": 1789199605783,
-      "updatedAt": 1789678453419,
+      "updatedAt": 1789748624381,
       "nameSource": "machine-translation"
     },
     {
@@ -26286,8 +29241,8 @@
       "rating": {
         "score": 9.6,
         "positive": 93,
-        "total": 8798,
         "desc": "Very Positive",
+        "total": 8798,
         "updatedAt": 1789678454821
       },
       "historicalLow": {
@@ -26364,7 +29319,7 @@
         "bundleIds": []
       },
       "createdAt": 1789199580443,
-      "updatedAt": 1789678454821,
+      "updatedAt": 1789748624381,
       "nameSource": "machine-translation"
     },
     {
@@ -26385,8 +29340,8 @@
       "rating": {
         "score": 9.2,
         "positive": 91,
-        "total": 1262,
         "desc": "Very Positive",
+        "total": 1262,
         "updatedAt": 1789678456167
       },
       "historicalLow": {
@@ -26447,7 +29402,7 @@
         "bundleIds": []
       },
       "createdAt": 1789199571448,
-      "updatedAt": 1789678456167,
+      "updatedAt": 1789748624381,
       "nameSource": "machine-translation"
     },
     {
@@ -26468,8 +29423,8 @@
       "rating": {
         "score": 9.6,
         "positive": 93,
-        "total": 19789,
         "desc": "Very Positive",
+        "total": 19789,
         "updatedAt": 1789678457690
       },
       "historicalLow": {
@@ -26597,7 +29552,7 @@
         "bundleIds": []
       },
       "createdAt": 1789199564670,
-      "updatedAt": 1789678457690,
+      "updatedAt": 1789748624381,
       "nameSource": null
     },
     {
@@ -26618,8 +29573,8 @@
       "rating": {
         "score": 9.6,
         "positive": 92,
-        "total": 330,
         "desc": "Very Positive",
+        "total": 330,
         "updatedAt": 1789678459009
       },
       "historicalLow": {
@@ -26675,7 +29630,7 @@
         "bundleIds": []
       },
       "createdAt": 1789199555039,
-      "updatedAt": 1789678459009,
+      "updatedAt": 1789748624381,
       "nameSource": "machine-translation"
     },
     {
@@ -26696,8 +29651,8 @@
       "rating": {
         "score": 9.9,
         "positive": 98,
-        "total": 24620,
         "desc": "Overwhelmingly Positive",
+        "total": 24620,
         "updatedAt": 1789678460504
       },
       "historicalLow": {
@@ -26811,7 +29766,7 @@
         ]
       },
       "createdAt": 1789199542539,
-      "updatedAt": 1789678460504,
+      "updatedAt": 1789748624381,
       "nameSource": "machine-translation"
     },
     {
@@ -26832,8 +29787,8 @@
       "rating": {
         "score": 9.2,
         "positive": 88,
-        "total": 26582,
         "desc": "Very Positive",
+        "total": 26582,
         "updatedAt": 1789678461775
       },
       "historicalLow": {
@@ -26946,7 +29901,7 @@
         ]
       },
       "createdAt": 1789199532499,
-      "updatedAt": 1789678461775,
+      "updatedAt": 1789748624381,
       "nameSource": "machine-translation"
     },
     {
@@ -26967,8 +29922,8 @@
       "rating": {
         "score": 8.4,
         "positive": 82,
-        "total": 2186,
         "desc": "Very Positive",
+        "total": 2186,
         "updatedAt": 1789678463219
       },
       "historicalLow": {
@@ -27045,7 +30000,7 @@
         "bundleIds": []
       },
       "createdAt": 1789199524386,
-      "updatedAt": 1789678463219,
+      "updatedAt": 1789748624381,
       "nameSource": "machine-translation"
     },
     {
@@ -27066,8 +30021,8 @@
       "rating": {
         "score": 9.8,
         "positive": 95,
-        "total": 2802,
         "desc": "Overwhelmingly Positive",
+        "total": 2802,
         "updatedAt": 1789678464704
       },
       "historicalLow": {
@@ -27162,7 +30117,7 @@
         ]
       },
       "createdAt": 1789199516272,
-      "updatedAt": 1789678464704,
+      "updatedAt": 1789748624381,
       "nameSource": "machine-translation"
     },
     {
@@ -27183,8 +30138,8 @@
       "rating": {
         "score": 6.5,
         "positive": 64,
-        "total": 11,
         "desc": "Mixed",
+        "total": 11,
         "updatedAt": 1789678465958
       },
       "historicalLow": {
@@ -27266,7 +30221,7 @@
         "bundleIds": []
       },
       "createdAt": 1789199506479,
-      "updatedAt": 1789678465958,
+      "updatedAt": 1789748624381,
       "nameSource": "machine-translation"
     },
     {
@@ -27287,8 +30242,8 @@
       "rating": {
         "score": 5.5,
         "positive": 59,
-        "total": 34,
         "desc": "Mixed",
+        "total": 34,
         "updatedAt": 1789678467384
       },
       "historicalLow": {
@@ -27404,7 +30359,7 @@
         ]
       },
       "createdAt": 1789199455916,
-      "updatedAt": 1789678467384,
+      "updatedAt": 1789748624381,
       "nameSource": null
     },
     {
@@ -27425,8 +30380,8 @@
       "rating": {
         "score": 6.5,
         "positive": 64,
-        "total": 77,
         "desc": "Mixed",
+        "total": 77,
         "updatedAt": 1789678468840
       },
       "historicalLow": {
@@ -27505,7 +30460,7 @@
         "bundleIds": []
       },
       "createdAt": 1789199334456,
-      "updatedAt": 1789678468840,
+      "updatedAt": 1789748624381,
       "nameSource": "machine-translation"
     },
     {
@@ -27526,8 +30481,8 @@
       "rating": {
         "score": 8.4,
         "positive": 83,
-        "total": 7956,
         "desc": "Very Positive",
+        "total": 7956,
         "updatedAt": 1789678470183
       },
       "historicalLow": {
@@ -27782,7 +30737,7 @@
         ]
       },
       "createdAt": 1789199221077,
-      "updatedAt": 1789678470183,
+      "updatedAt": 1789748624381,
       "nameSource": "machine-translation"
     },
     {
@@ -27803,8 +30758,8 @@
       "rating": {
         "score": 9.6,
         "positive": 93,
-        "total": 41080,
         "desc": "Very Positive",
+        "total": 41080,
         "updatedAt": 1789678471557
       },
       "historicalLow": {
@@ -28020,7 +30975,7 @@
         ]
       },
       "createdAt": 1789199208155,
-      "updatedAt": 1789678471557,
+      "updatedAt": 1789748624381,
       "nameSource": null
     },
     {
@@ -28041,8 +30996,8 @@
       "rating": {
         "score": 9.9,
         "positive": 97,
-        "total": 26602,
         "desc": "Overwhelmingly Positive",
+        "total": 26602,
         "updatedAt": 1789678472982
       },
       "historicalLow": {
@@ -28249,7 +31204,7 @@
         ]
       },
       "createdAt": 1789199195781,
-      "updatedAt": 1789678472982,
+      "updatedAt": 1789748624381,
       "nameSource": null
     },
     {
@@ -28270,8 +31225,8 @@
       "rating": {
         "score": 9.6,
         "positive": 92,
-        "total": 678,
         "desc": "Very Positive",
+        "total": 678,
         "updatedAt": 1789678474451
       },
       "historicalLow": {
@@ -28359,7 +31314,7 @@
         ]
       },
       "createdAt": 1789199164496,
-      "updatedAt": 1789678474451,
+      "updatedAt": 1789748624381,
       "nameSource": null
     },
     {
@@ -28380,8 +31335,8 @@
       "rating": {
         "score": 9.2,
         "positive": 88,
-        "total": 3635,
         "desc": "Very Positive",
+        "total": 3635,
         "updatedAt": 1789678475839
       },
       "historicalLow": {
@@ -28500,7 +31455,7 @@
         ]
       },
       "createdAt": 1789194107390,
-      "updatedAt": 1789678475839,
+      "updatedAt": 1789748624381,
       "nameSource": null
     },
     {
@@ -28521,8 +31476,8 @@
       "rating": {
         "score": 9.9,
         "positive": 97,
-        "total": 10925,
         "desc": "Overwhelmingly Positive",
+        "total": 10925,
         "updatedAt": 1789678477191
       },
       "historicalLow": {
@@ -28671,7 +31626,7 @@
         ]
       },
       "createdAt": 1789194100122,
-      "updatedAt": 1789678477191,
+      "updatedAt": 1789748624381,
       "nameSource": null
     },
     {
@@ -28692,8 +31647,8 @@
       "rating": {
         "score": 9.6,
         "positive": 92,
-        "total": 1233,
         "desc": "Very Positive",
+        "total": 1233,
         "updatedAt": 1789678478562
       },
       "historicalLow": {
@@ -28800,7 +31755,7 @@
         ]
       },
       "createdAt": 1789194090965,
-      "updatedAt": 1789678478562,
+      "updatedAt": 1789748624381,
       "nameSource": null
     },
     {
@@ -28821,8 +31776,8 @@
       "rating": {
         "score": 9.2,
         "positive": 88,
-        "total": 5379,
         "desc": "Very Positive",
+        "total": 5379,
         "updatedAt": 1789678480018
       },
       "historicalLow": {
@@ -28933,7 +31888,7 @@
         ]
       },
       "createdAt": 1789194075102,
-      "updatedAt": 1789678480018,
+      "updatedAt": 1789748624381,
       "nameSource": "machine-translation"
     },
     {
@@ -28954,8 +31909,8 @@
       "rating": {
         "score": 8.4,
         "positive": 83,
-        "total": 3965,
         "desc": "Very Positive",
+        "total": 3965,
         "updatedAt": 1789678481464
       },
       "historicalLow": {
@@ -29044,7 +31999,7 @@
         ]
       },
       "createdAt": 1789193285256,
-      "updatedAt": 1789678481464,
+      "updatedAt": 1789748624381,
       "nameSource": "machine-translation"
     },
     {
@@ -29065,8 +32020,8 @@
       "rating": {
         "score": 8.9,
         "positive": 85,
-        "total": 107,
         "desc": "Very Positive",
+        "total": 107,
         "updatedAt": 1789678482786
       },
       "historicalLow": {
@@ -29148,7 +32103,7 @@
         ]
       },
       "createdAt": 1789193256380,
-      "updatedAt": 1789678482786,
+      "updatedAt": 1789748624381,
       "nameSource": "machine-translation"
     },
     {
@@ -29169,8 +32124,8 @@
       "rating": {
         "score": 9.6,
         "positive": 92,
-        "total": 140695,
         "desc": "Very Positive",
+        "total": 140695,
         "updatedAt": 1789678484183
       },
       "historicalLow": {
@@ -29286,7 +32241,7 @@
         ]
       },
       "createdAt": 1789193138200,
-      "updatedAt": 1789678484183,
+      "updatedAt": 1789748624381,
       "nameSource": null
     },
     {
@@ -29307,8 +32262,8 @@
       "rating": {
         "score": 9.6,
         "positive": 92,
-        "total": 2017,
         "desc": "Very Positive",
+        "total": 2017,
         "updatedAt": 1789678485570
       },
       "historicalLow": {
@@ -29431,7 +32386,7 @@
         ]
       },
       "createdAt": 1789193126410,
-      "updatedAt": 1789678485570,
+      "updatedAt": 1789748624381,
       "nameSource": null
     },
     {
@@ -29452,8 +32407,8 @@
       "rating": {
         "score": 9.6,
         "positive": 94,
-        "total": 31585,
         "desc": "Very Positive",
+        "total": 31585,
         "updatedAt": 1789678486988
       },
       "historicalLow": {
@@ -29580,7 +32535,7 @@
         ]
       },
       "createdAt": 1789193117365,
-      "updatedAt": 1789678486988,
+      "updatedAt": 1789748624381,
       "nameSource": null
     },
     {
@@ -29601,8 +32556,8 @@
       "rating": {
         "score": 9.9,
         "positive": 98,
-        "total": 4021,
         "desc": "Overwhelmingly Positive",
+        "total": 4021,
         "updatedAt": 1789678488381
       },
       "historicalLow": {
@@ -29677,7 +32632,7 @@
         ]
       },
       "createdAt": 1789193108997,
-      "updatedAt": 1789678488381,
+      "updatedAt": 1789748624381,
       "nameSource": "machine-translation"
     },
     {
@@ -29698,8 +32653,8 @@
       "rating": {
         "score": 9.9,
         "positive": 97,
-        "total": 3180,
         "desc": "Overwhelmingly Positive",
+        "total": 3180,
         "updatedAt": 1789678489821
       },
       "historicalLow": {
@@ -29781,7 +32736,7 @@
         ]
       },
       "createdAt": 1789193099884,
-      "updatedAt": 1789678489821,
+      "updatedAt": 1789748624381,
       "nameSource": "machine-translation"
     },
     {
@@ -29802,8 +32757,8 @@
       "rating": {
         "score": 9.9,
         "positive": 98,
-        "total": 2799,
         "desc": "Overwhelmingly Positive",
+        "total": 2799,
         "updatedAt": 1789678491205
       },
       "historicalLow": {
@@ -29885,7 +32840,7 @@
         ]
       },
       "createdAt": 1789193087637,
-      "updatedAt": 1789678491205,
+      "updatedAt": 1789748624381,
       "nameSource": "machine-translation"
     },
     {
@@ -29906,8 +32861,8 @@
       "rating": {
         "score": 8.4,
         "positive": 82,
-        "total": 471,
         "desc": "Very Positive",
+        "total": 471,
         "updatedAt": 1789678492603
       },
       "historicalLow": {
@@ -29991,7 +32946,7 @@
         "bundleIds": []
       },
       "createdAt": 1789192967910,
-      "updatedAt": 1789678492603,
+      "updatedAt": 1789748624381,
       "nameSource": "machine-translation"
     },
     {
@@ -30012,8 +32967,8 @@
       "rating": {
         "score": 9.2,
         "positive": 89,
-        "total": 7495,
         "desc": "Very Positive",
+        "total": 7495,
         "updatedAt": 1789678493988
       },
       "historicalLow": {
@@ -30171,7 +33126,7 @@
         ]
       },
       "createdAt": 1789192956054,
-      "updatedAt": 1789678493988,
+      "updatedAt": 1789748624381,
       "nameSource": null
     },
     {
@@ -30192,8 +33147,8 @@
       "rating": {
         "score": 8.4,
         "positive": 84,
-        "total": 281,
         "desc": "Very Positive",
+        "total": 281,
         "updatedAt": 1789678495364
       },
       "historicalLow": {
@@ -30326,8 +33281,13 @@
         ]
       },
       "createdAt": 1789192947581,
-      "updatedAt": 1789678495364,
+      "updatedAt": 1789748624381,
       "nameSource": null
     }
-  ]
+  ],
+  "source": "manual-sync",
+  "syncedAt": 1789748642057,
+  "gameCount": 219,
+  "fingerprint": "1f8cae986a67a700",
+  "syncedFrom": "https://ticianli.github.io"
 }
