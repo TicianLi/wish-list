@@ -27,7 +27,8 @@ const SUITES = {
   cloud409:  'tools/_test_cloud409.cjs',
   mergef:    'tools/_test_mergefields.cjs',
   starve:    'tools/_test_queuestarve.mjs',
-  limits:    'tools/_test_limits.cjs'
+  limits:    'tools/_test_limits.cjs',
+  sentinel:  'tools/_test_sentinel.cjs'
 };
 
 const args = process.argv.slice(2);
