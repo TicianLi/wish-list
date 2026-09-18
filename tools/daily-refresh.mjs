@@ -715,6 +715,20 @@ async function enrichStoreData(games) {
       }
       const tags = parseUserTags(html);
       const bundles = parseBundleIds(html);
+      /* 【上限哨兵】数一数页面上「原始 app_tag 节点」到底有多少个，
+         和解析出来的标签数比对。若原始数 > 解析数，说明又出现了静默截断
+         （历史上就是 `if (tags.length >= 20) break;` 造成的）。
+         不报警不代表页面标签就多 —— 是 Steam 商店页 app_tag 区本身只列
+         约 20 个（其余同标签仍在，但不在此区块）。哨兵只负责"别丢东西"。 */
+      stat.rawTagNodes = (stat.rawTagNodes || 0) + (html.match(/class="[^"]*\bapp_tag\b/g) || []).length;
+      stat.maxRawTags = Math.max(stat.maxRawTags || 0, (html.match(/class="[^"]*\bapp_tag\b/g) || []).length);
+      if ((html.match(/class="[^"]*\bapp_tag\b/g) || []).length > tags.length) {
+        stat.tagTruncated = (stat.tagTruncated || 0) + 1;
+        if (!stat.diagTagTrunc) {
+          stat.diagTagTrunc = (g.name || g.appid) + '：原始 app_tag 节点 ' +
+            (html.match(/class="[^"]*\bapp_tag\b/g) || []).length + ' 个，解析出 ' + tags.length + ' 个';
+        }
+      }
       /* 诊断样本只在「真的解析出东西」时留一份，
          否则样本会取自恰好没有标签的那一款，看起来像解析坏了 */
       if (!stat.diagTagHtml && tags.length) {
@@ -1119,6 +1133,13 @@ async function main() {
     printStoreDiag(st);
     log(`用户标签：本次抓取 ${st.ok}/${st.tried} 款成功，共 ${st.tags} 个标签` +
         (st.failed ? `，失败 ${st.failed} 款（下次运行会重试）` : ''));
+    /* 【上限哨兵】明确报告"页面原始节点数 vs 解析数"，让任何新的静默截断
+       在日志里一眼可见，而不是等用户发现"怎么只有 20 个标签"。 */
+    log(`[上限哨兵] app_tag 原始节点：单页最多 ${st.maxRawTags || 0} 个、合计 ${st.rawTagNodes || 0} 个；` +
+        `解析出 ${st.tags} 个标签；` +
+        (st.tagTruncated
+          ? `⚠ 有 ${st.tagTruncated} 款原始节点多于解析结果，疑似截断！样例：${st.diagTagTrunc}`
+          : `无截断（两者一致）。`));
   } catch (e) {
     warn('商店页标签处理异常（不影响其它数据）：' + e.message);
   }
