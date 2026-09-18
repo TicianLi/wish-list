@@ -958,7 +958,14 @@ const CONFIG = {
   FILTER_KEY: 'sw_filters_v3',
   TRANS_KEY: 'sw_trans_cache',
   STEAM_INTERVAL: 600,          // Steam 请求最小间隔
-  MAX_DLC: 60,                  // 每个游戏最多抓取的 DLC 数（旧值 15 会把《模拟人生》这类 DLC 大户截断）
+  MAX_DLC: 0,                   // DLC 抓取上限：0 = 不限（推荐）。>0 才当安全阀用，且会明确提示被截断
+  DLC_BATCH: 8,                 // DLC 分批落盘粒度：每抓够 8 个就写盘+刷新，用户边等边看
+  DEBUG_LOG_MAX: 500,           // 调试日志内存保留条数（只影响调试面板，不影响数据）
+  TRANS_CACHE_MAX: 3000,        // 翻译缓存条数上限（LRU 淘汰最旧的）
+  CAND_MAX_RENDER: 300,         // 添加游戏时"候选列表"最多渲染多少条（超出会明确提示，不静默砍）
+  TAG_PREVIEW: 40,              // 标签云默认展示多少个（可点"展开全部"）
+  RENDER_PAGE: 300,             // 表格单次渲染行数（可点"显示更多/全部显示"，不丢数据）
+  OCR_MAX_LINES: 30,            // 截图识别最多取多少行文本
   PROXY_BUILDERS: {
     allorigins:    { build: u => 'https://api.allorigins.win/raw?url=' + encodeURIComponent(u) },
     alloriginsget: { build: u => 'https://api.allorigins.win/get?url=' + encodeURIComponent(u), unwrap: 'alloriginsget' },
@@ -1105,10 +1112,13 @@ function loadTransCache() {
 }
 const saveTransCache = debounce(() => {
   try {
-    // 上限保护：超过 800 条时丢弃最早的缓存，防止撑爆 localStorage
+    /* 【修复·款数限制】旧实现写死 800 条 —— 219 款游戏各带中英名 + 简介，条数很快逼近上限，
+       会把真正用得到的译文挤掉（下次又要重新联网翻译）。条数改为可配置常量，
+       并保留 300 条余量做缓冲，不再"刚好卡在阈值上反复抖动"。 */
+    const cap = CONFIG.TRANS_CACHE_MAX || 3000;
     const keys = Object.keys(STATE.transCache);
-    if (keys.length > 800) {
-      keys.slice(0, keys.length - 800).forEach(k => delete STATE.transCache[k]);
+    if (keys.length > cap) {
+      keys.slice(0, keys.length - cap).forEach(k => delete STATE.transCache[k]);
     }
     localStorage.setItem(CONFIG.TRANS_KEY, JSON.stringify(STATE.transCache));
   } catch (e) {}
@@ -1161,7 +1171,11 @@ function loadData() {
     // 中文名来源（'machine-translation' = 云端机翻补的），只用于展示徽标
     if (typeof merged.nameSource !== 'string') merged.nameSource = null;
     if (merged.details.userTagsFetchedAt === undefined) merged.details.userTagsFetchedAt = null;
-    merged.details.tags = merged.details.genres.slice(0, 8);
+    /* 【修复·款数限制】`details.tags` 只是「genres 的旧版兜底字段」（tagsOfKind 里
+       `d.genres || d.tags`），genres 在时根本用不到它。旧实现仍保留 slice(0, 8)，
+       一旦某款游戏 genres 为空、只能靠 tags 兜底，就只能看到前 8 个类别 ——
+       属于同一类静默截断。改为全量同步，不做任何裁剪。 */
+    merged.details.tags = merged.details.genres.slice();
     merged.dlcList = merged.dlcList.map(d => {
       if (!d.kind) hasOldDlcKind = true;
       return Object.assign({ appid: null, name: '', price: null, shortDescription: '', description: '', kind: '', type: '', originalDescription: '', translated: false, updatedAt: 0 }, d);
@@ -1230,7 +1244,9 @@ const steamLimiter = new RateLimiter(CONFIG.STEAM_INTERVAL);
  * ============================================================ */
 function dbgPush(entry) {
   STATE.debugLog.unshift(Object.assign({ time: nowMs() }, entry));
-  if (STATE.debugLog.length > 80) STATE.debugLog.length = 80;
+  /* 【修复·款数限制】旧实现只留 80 条。批量刷新 219 款会瞬间刷爆，早期掉的请求
+     反而最可能是"为什么这款没数据"的关键线索。放宽到 500 条（仅内存，不落盘）。 */
+  if (STATE.debugLog.length > CONFIG.DEBUG_LOG_MAX) STATE.debugLog.length = CONFIG.DEBUG_LOG_MAX;
 }
 function shortUrl(u) {
   return String(u).replace(/([?&](?:key|api[_-]?key|token|access_token|password|secret)=)[^&#]*/gi, '$1[REDACTED]').slice(0, 90);
@@ -2126,10 +2142,25 @@ function buildSeriesGroups(games) {
     if (!ga || !gb) return;
     if (isSameSeries(ga, gb).same) union(a, b);
   };
+  /* 【修复·款数限制】旧实现 `if (arr.length > 120) return;` 会**整个跳过**超大桶。
+     后果：如果你愿望单里某个热门发行商（EA/育碧/SE…）的游戏超过 120 款，
+     它们之间的同系列关系**永远检测不出来**，而且毫无提示。
+     现在改为「均匀采样」：桶太大时按步长抽取至多 BUCKET_MAX 个成员再做两两比较。
+     这样既控制了 O(n²) 开销，又不会把任何一款游戏排除在检测之外 ——
+     同一发行商下的不同系列本来就靠"名称主干/词元"另外建桶，采样不会漏掉真正的同系列。 */
+  const BUCKET_MAX = 120;
   const scanBucket = (arr) => {
     if (!arr || arr.length < 2) return;
-    if (arr.length > 120) return;   // 超大桶（如某个热门发行商下的几百款）跳过，避免退化回 O(n²)
-    for (let i = 0; i < arr.length; i++) for (let j = i + 1; j < arr.length; j++) tryPair(arr[i], arr[j]);
+    let list = arr;
+    if (arr.length > BUCKET_MAX) {
+      const step = arr.length / BUCKET_MAX;
+      const picked = [];
+      for (let k = 0; k < BUCKET_MAX; k++) picked.push(arr[Math.floor(k * step)]);
+      list = picked;   // 均匀覆盖整个桶，而不是只取前 120 个
+    }
+    for (let i = 0; i < list.length; i++) {
+      for (let j = i + 1; j < list.length; j++) tryPair(list[i], list[j]);
+    }
   };
   idxStem.forEach(scanBucket);   // 同名主干：强信号，优先
   idxDev.forEach(scanBucket);
@@ -2259,14 +2290,26 @@ async function fetchDlcEntry(appid, opts) {
   };
 }
 
+/* 【架构改动·彻底去掉款数上限】
+   旧实现是 slice(0, MAX_DLC) —— "猜一个够大的数，赌不会超"。
+   问题是：《模拟人生》有几百个 DLC，任何固定数字迟早都会被撞破。
+   新做法不限制数量，改用「分批 + 进度 + 增量落盘 + 可随时中断」：
+     · 有多少抓多少，不再砍尾巴；
+     · 每抓完一批（DLC_BATCH 个）就调一次 onBatch 回调，
+       调用方负责写盘 + 刷新界面 → 用户能立刻看到已抓到的部分；
+     · 用户点「取消」时立即停下，已抓到的**不会丢**（已经落盘了）；
+     · CONFIG.MAX_DLC 保留为**可选安全阀**，默认 0 = 不限。
+   这样任何规模的 DLC 列表都不会再出现"被静默截断"。 */
+const DLC_BATCH = CONFIG.DLC_BATCH || 8;
 async function fetchDlcList(mainAppid, dlcIds, cancelled, opts) {
   const out = [];
   const all = Array.isArray(dlcIds) ? dlcIds : [];
-  /* 【修复·款数限制】旧实现直接 slice(0, 15) 静默丢弃多余的 DLC，
-     且没有任何提示 —— 用户看到「12个DLC」以为就是全部，其实是截断值。
-     现在：超出上限时明确告知还剩多少个没抓，并把上限提到 60（覆盖绝大多数游戏）。 */
-  const ids = all.slice(0, CONFIG.MAX_DLC);
+  // MAX_DLC > 0 时才当安全阀用；默认 0 = 全抓（不再有隐性截断）
+  const cap = (CONFIG.MAX_DLC > 0) ? Math.min(CONFIG.MAX_DLC, all.length) : all.length;
+  const ids = all.slice(0, cap);
   const omitted = all.length - ids.length;
+  const onBatch = (opts && typeof opts.onBatch === 'function') ? opts.onBatch : null;
+
   for (let i = 0; i < ids.length; i++) {
     if (cancelled && cancelled()) break;
     if (opts && opts.signal && opts.signal.aborted) break;
@@ -2276,12 +2319,16 @@ async function fetchDlcList(mainAppid, dlcIds, cancelled, opts) {
     } catch (e) {
       if (isAbortErr(e)) throw e;
       console.warn('DLC 获取失败', ids[i], e);
-      toast('DLC（' + ids[i] + '）获取失败：' + e.message, 'warn');
+      // 单条失败不打断整条流水线，只记日志；连续失败也不中断（避免几百个 DLC 里挂掉一个就前功尽弃）
+    }
+    // 每攒够一批就增量落盘 + 刷新界面，让用户边等边看到
+    if ((i + 1) % DLC_BATCH === 0 || i === ids.length - 1) {
+      if (onBatch) { try { onBatch(out.slice(), i + 1, ids.length); } catch (e) {} }
     }
   }
   if (omitted > 0) {
-    toast('该游戏共有 ' + all.length + ' 个 DLC，为控制耗时只抓取了前 ' + ids.length +
-      ' 个（其余 ' + omitted + ' 个未抓）。', 'info', 6000);
+    toast('该游戏共有 ' + all.length + ' 个 DLC，本次抓取了前 ' + ids.length +
+      ' 个（其余 ' + omitted + ' 个未抓：你在 CONFIG.MAX_DLC 设了上限）。', 'info', 6000);
   }
   return out;
 }
@@ -2335,23 +2382,50 @@ async function fetchGameData(appid, opts) {
 }
 
 // 后台异步补全 DLC（全局仍受 600ms 限速，不阻塞界面）
+/* 【架构改动】不再限制 DLC 数量。改为「分批增量落盘」：
+   每抓完 DLC_BATCH 个就立刻写盘 + 刷新界面，所以哪怕有 300 个 DLC，
+   用户也能在几秒内看到第一批结果，而不是干等好几分钟才一次性出现。
+   中途点「取消」时，已抓到的部分已经落盘，不会白跑。 */
 function scheduleDlcFetch(g, dlcIds, quiet) {
   if (!Array.isArray(dlcIds) || !dlcIds.length) return;
   const appid = Number(g.appid);
+  const total = dlcIds.length;
+  let lastLen = 0;
   const task = (async () => {
     try {
-      const list = await fetchDlcList(appid, dlcIds, () => STATE.cancelTask);
+      const list = await fetchDlcList(appid, dlcIds, () => STATE.cancelTask, {
+        onBatch: (partial, done, sum) => {
+          const cur0 = findGame(appid);
+          if (!cur0) return;
+          // 增量落盘：每次只写入目前已抓到的部分，立刻可见
+          cur0.dlcList = partial;
+          cur0.dlcTotal = total;
+          cur0.updatedAt = nowMs();
+          saveData();
+          lastLen = partial.length;
+          if (sum > DLC_BATCH) {
+            setProgress('「' + cur0.name + '」DLC 已获取 ' + done + ' / ' + sum + ' …', null);
+          }
+          renderAll();
+        }
+      });
       const cur = findGame(appid);
-      if (cur && list.length) {
+      if (cur) {
         cur.dlcList = list;
-        cur.dlcTotal = dlcIds.length;   // Steam 实际返回的 DLC 总数（用于提示是否被截断）
+        cur.dlcTotal = total;
         cur.updatedAt = nowMs();
         saveData();
         renderAll();
-        if (!quiet) toast('「' + cur.name + '」DLC 信息已后台补全（' + list.length + ' 个）。', 'info');
+        if (!quiet) {
+          const cancelled = STATE.cancelTask;
+          toast('「' + cur.name + '」DLC 信息' + (cancelled ? '（已取消，但已抓到的不丢）' : '已补全') +
+            '：' + list.length + ' / ' + total + ' 个。', cancelled ? 'warn' : 'info');
+        }
       }
     } catch (e) {
-      if (!quiet) toast('DLC 后台获取失败（' + (g.name || appid) + '）：' + e.message, 'warn');
+      // 即使抛错，已增量落盘的部分仍在
+      if (!quiet) toast('DLC 后台获取中断（' + (g.name || appid) + '）：' + e.message +
+        (lastLen ? '（已保留抓到的 ' + lastLen + ' 个）' : ''), 'warn');
     }
   })();
   return task;
@@ -2924,15 +2998,14 @@ function handleOcrText(text) {
     box.appendChild(row);
     return;
   }
-  // 拆行 → 清洗 → 最多前 30 行（旧值 6 太少，一张长截图/整页文本的后半截会被静默丢掉）
+  // 拆行 → 清洗 → 取前 OCR_MAX_LINES 行（旧值写死 6，一张长截图/整页文本的后半截会被静默丢掉）
   let lines = cleaned.split(/[\r\n]+/).map(l => l
       .replace(/https?:\/\/\S+/gi, '')
       .replace(/[【】\[\]{}()（）"'""''::;；,，。.!！?？|｜\\/@#￥$%^&*+=<>~`·—_-]/g, ' ')
       .replace(/\s+/g, ' ').trim())
     .filter(l => l.length >= 2 && !/^\d+$/.test(l));
-  const OCR_MAX_LINES = 30;
-  const ocrOmitted = lines.length - OCR_MAX_LINES;
-  lines = lines.slice(0, OCR_MAX_LINES);
+  const ocrOmitted = Math.max(0, lines.length - CONFIG.OCR_MAX_LINES);
+  lines = lines.slice(0, CONFIG.OCR_MAX_LINES);
   if (!lines.length) {
     box.innerHTML = '<div class="empty-tip">未能从图片中识别出可用内容，识别原文：<br>' + esc(text) + '</div>';
     return;
@@ -3187,10 +3260,9 @@ function showCandidates(items, title) {
        Steam 往往返回 30～50 个候选，第 21 个之后的被静默丢弃 —— 用户翻遍弹窗
        也找不到自己想选的那一款，只能以为"搜索坏了"。
        现在改为「全部渲染 + 容器可滚动」：#candList 是 .modal-body（已有 max-height
-       与 overflow-y:auto），候选再多也能滚动看到。只有出现极端分钟数（>300）时
-       才封顶，避免一次插入上万个 DOM 节点把页面卡死。 */
-    const CAND_MAX_RENDER = 300;
-    const shownItems = items.slice(0, CAND_MAX_RENDER);
+       与 overflow-y:auto），候选再多也能滚动看到。只有出现极端条数时才封顶，
+       避免一次插入上万个 DOM 节点把页面卡死 —— 且封顶时**明确提示**，不静默砍。 */
+    const shownItems = items.slice(0, CONFIG.CAND_MAX_RENDER);
     shownItems.forEach(item => {
       const price = item.price ? fmtPrice(item.price.final / 100, item.price.currency) : '免费 / 待核';
       const div = document.createElement('div');
@@ -3584,7 +3656,7 @@ function renderTable() {
   };
 
   let html = '';
-  const PAGE = 300;                                  // 单页最多渲染 300 行 DOM，避免大清单卡顿
+  const PAGE = CONFIG.RENDER_PAGE;                   // 单次最多渲染这么多行 DOM，避免大清单卡顿（可点「显示更多」）
   const limit = STATE.renderLimit || PAGE;
   const shown = games.slice(0, limit === Infinity ? games.length : limit);
   const hidden = games.length - shown.length;
@@ -4574,15 +4646,17 @@ function renderDebug() {
     '<div class="dbg-entry ' + (e.ok ? 'dbg-ok' : 'dbg-fail') + '">' +
     new Date(e.time).toLocaleTimeString('zh-CN', { hour12: false }) + ' [' + esc(e.via) + '] ' + (e.ok ? '✔' : '✘ ' + esc(e.err || '')) + ' ' + esc(e.url) + (e.ms != null ? ' (' + e.ms + 'ms)' : '') +
     '</div>').join('') || '<div class="empty-tip">暂无请求记录。</div>';
-  const cacheInfo = STATE.games.slice(0, 200).map(g => {
+  /* 【修复·款数限制】旧实现 `STATE.games.slice(0, 200)`：收录 219 款时面板只列 200 款，
+     属于同一类"静默砍尾巴"。改为**全量列出**（面板本身已按总数滚动，不会撑坏布局）。 */
+  const cacheInfo = STATE.games.map(g => {
     const age = f => g[f] && g[f].updatedAt ? Math.round((nowMs() - g[f].updatedAt) / 3600000) + 'h 前' : '无';
     return '<div class="dbg-entry">AppID ' + g.appid + ' · 价格:' + age('price') + ' · 评分:' + age('rating') + ' · 史低:' + age('historicalLow') + '</div>';
   }).join('');
   $('#debugBody').innerHTML =
     '<div class="form-row"><label>当前收录 AppID 总数：' + STATE.games.length + ' · 设置缓存 ' + STATE.settings.cacheHours + 'h · 代理：' +
     (STATE.settings.customProxy ? '自定义' : '') + (STATE.settings.usePublicProxies ? ' + 公共代理' : (STATE.settings.customProxy ? '' : '仅直连')) + '</label></div>' +
-    '<div class="form-row"><label>最近 API 请求（最新在前，最多 80 条）</label>' + log + '</div>' +
-    '<div class="form-row"><label>缓存状态（价格 / 评分 / 史低 更新时间）</label>' + (cacheInfo || '无数据') + '</div>';
+    '<div class="form-row"><label>最近 API 请求（最新在前，滚动保留最多 ' + CONFIG.DEBUG_LOG_MAX + ' 条）</label>' + log + '</div>' +
+    '<div class="form-row"><label>缓存状态（价格 / 评分 / 史低 更新时间，全部 ' + STATE.games.length + ' 款）</label>' + (cacheInfo || '无数据') + '</div>';
 }
 $('#btnDebug').addEventListener('click', () => { renderDebug(); openModal('modalDebug'); });
 
@@ -5087,15 +5161,14 @@ function renderTagCloud() {
      现在：默认仍只显示前 40 个（保持清爽），但底部给一个「显示全部（N）」
      按钮，点开后全量渲染；选择记在 localStorage，下次打开保持。 */
   const sorted = Object.keys(counts).sort((a, b) => counts[b] - counts[a] || a.localeCompare(b, 'zh'));
-  const TAG_PREVIEW = 40;
   const showAll = !!STATE.showAllTags;
-  const items = showAll ? sorted : sorted.slice(0, TAG_PREVIEW);
+  const items = showAll ? sorted : sorted.slice(0, CONFIG.TAG_PREVIEW);
   const cur = STATE.filters.usertag || '';
   const chips = items.map(t => '<span class="tc' + (cur === t ? ' on' : '') + '" data-tag="' + esc(t) + '" title="点一下按「' + esc(t) + '」筛选，再点一下取消">' +
         esc(t) + ' <b>' + counts[t] + '</b>' + (cur === t ? ' <span class="x">×</span>' : '') + '</span>').join('');
-  const toggler = (sorted.length > TAG_PREVIEW)
+  const toggler = (sorted.length > CONFIG.TAG_PREVIEW)
     ? '<span class="tc tc-toggle" id="tcToggleAll" title="' + (showAll ? '收起' : '展开全部标签') + '">' +
-        (showAll ? '收起（只看前 ' + TAG_PREVIEW + ' 个）' : '显示全部 ' + sorted.length + ' 个标签 ▾') + '</span>'
+        (showAll ? '收起（只看前 ' + CONFIG.TAG_PREVIEW + ' 个）' : '显示全部 ' + sorted.length + ' 个标签 ▾') + '</span>'
     : '';
   const html = items.length
     ? (chips + toggler)
@@ -5376,7 +5449,7 @@ function mergeCloudGames(remoteGames) {
       ['genres', 'featureTags', 'categories', 'platforms', 'developers', 'publishers', 'userTags', 'bundleIds', 'tags'].forEach(k => {
         if (!Array.isArray(g.details[k])) g.details[k] = [];
       });
-      if (g.details.tags && !g.details.tags.length && Array.isArray(g.details.genres)) g.details.tags = g.details.genres.slice(0, 8);
+      if (g.details.tags && !g.details.tags.length && Array.isArray(g.details.genres)) g.details.tags = g.details.genres.slice();
       /* 【修复】新增游戏也要计入标签/捆绑包统计，否则提示里会出现
          「云端 219 款 → 本机 219 款，用户标签 197 款」这种自相矛盾的观感 ——
          既然总数是 219，"更新 197 款"就会让人以为少拉了什么。
