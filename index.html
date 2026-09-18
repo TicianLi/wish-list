@@ -2476,8 +2476,16 @@ async function pumpQueue() {
   try {
     while (true) {
       // 候选弹窗必须逐个处理；处理完当前选择后再继续下一条任务。
-      const waiting = STATE.taskQueue.find(x => x.status === 'needpick' && !x.pickOpened);
+      // 注意：用「弹窗是否真的在显示」兜底 —— 标记与真实 UI 不一致时不算被占用，
+      // 否则残留标记会让整个队列永久停摆（用户看到的是「后面的任务一直排队」）。
+      const modalShown = $('#modalCandidates').classList.contains('show');
+      let waiting = STATE.taskQueue.find(x => x.status === 'needpick' && !x.pickOpened);
+      if (!waiting && !modalShown) {
+        // 有 needpick 但全部被标记占用、而弹窗其实没显示 → 残留，挑一个重开
+        waiting = STATE.taskQueue.find(x => x.status === 'needpick');
+      }
       if (waiting) { openTaskPick(waiting); break; }
+      if (modalShown) break;          // 弹窗正开着：等用户选择，本轮到此为止
       const t = STATE.taskQueue.find(x => x.status === 'pending');
       if (!t) break;
       await runTask(t);
@@ -2530,6 +2538,12 @@ async function runTask(t) {
 /* 用户在候选弹窗里选定后，继续完成这个任务 */
 async function finishPick(t, picked) {
   if (!t) return;
+  /* 【修复】无论走哪条分支，都必须先把「弹窗占用」标记清掉。
+     旧实现只在"重试"分支里清 pickOpened，一旦自动流程把任务置为 failed
+     却没清标记，任务就会带着 pickOpened=true 停在列表里 —— 点「选择」会被
+     守卫拦截，表现为「任务在，但点不动」。这里统一收口。 */
+  t.pickOpened = false;
+  if (pendingPicks[t.id]) delete pendingPicks[t.id];
   if (!picked) {
     t.status = 'failed'; t.msg = '未选择候选（可点重试）';
     renderQueue();
@@ -2561,8 +2575,24 @@ async function finishPick(t, picked) {
 
 const pendingPicks = {};
 function openTaskPick(t) {
-  if (!t || t.status !== 'needpick' || t.pickOpened) return;
-  if (pendingPicks[t.id]) return;
+  if (!t || t.status !== 'needpick') return;
+  /* 【修复·自救】pickOpened / pendingPicks 是「这个任务的弹窗正在显示」的占用标记。
+     若标记还在、但候选弹窗其实已经不在显示（被别处的弹窗顶掉、被关闭、
+     或页面状态被打断），说明是残留僵尸标记 —— 继续用它会把这个任务永久锁死
+     （点「选择」被守卫拦下、pumpQueue 也永远找不到它）。
+     所以这里以「弹窗是否真的在显示」为准，而不是只信标记。 */
+  const modalShown = $('#modalCandidates').classList.contains('show');
+  if (t.pickOpened && !modalShown) {
+    // 标记残留：清掉，允许重新打开
+    t.pickOpened = false;
+    if (pendingPicks[t.id]) delete pendingPicks[t.id];
+  }
+  if (t.pickOpened) return;
+  if (pendingPicks[t.id]) {
+    // 同类残留：只要弹窗没在显示，就一并清掉
+    if (!modalShown) delete pendingPicks[t.id];
+    else return;
+  }
   pendingPicks[t.id] = true;
   t.pickOpened = true;
   showCandidates(t.candidates, '任务「' + t.term + '」请选择正确的游戏：').then(picked => {
@@ -2570,6 +2600,7 @@ function openTaskPick(t) {
     return finishPick(t, picked);
   }).catch(e => {
     delete pendingPicks[t.id];
+    t.pickOpened = false;
     t.status = 'failed'; t.msg = '候选选择失败：' + (e && e.message); renderQueue();
   });
 }
@@ -2607,6 +2638,7 @@ $('#taskList').addEventListener('click', e => {
     if (t.candidates && t.candidates.length) {
       t.status = 'needpick'; t.msg = '等待选择候选游戏';
       t.pickOpened = false;
+      delete pendingPicks[t.id];      // 清掉可能残留的占用标记，否则重开会被拦
       STATE.cancelTask = false;
       renderQueue(); openTaskPick(t);
     } else {
@@ -2619,9 +2651,15 @@ $('#taskList').addEventListener('click', e => {
   else if (btn.dataset.tact === 'remove') {
     // 移除任务只取消它自己，绝不影响其他任务
     t.cancelled = true;
+    t.pickOpened = false;
     if (t.ctrl) { try { t.ctrl.abort(); } catch (e) {} }
-    if (t.resolvePick) { const r = t.resolvePick; t.resolvePick = null; r(null); }
-    delete pendingPicks[t.id];
+    /* 若这个任务正占着候选弹窗，必须把它关掉：
+       否则弹窗会一直挂着，用户点它选的其实是已删除的任务，
+       而且全局 candResolve 也被它占住（别的入口再开候选会互相打架）。 */
+    if (pendingPicks[t.id]) {
+      delete pendingPicks[t.id];
+      if ($('#modalCandidates').classList.contains('show')) closeModal('modalCandidates');
+    }
     STATE.taskQueue = STATE.taskQueue.filter(x => x.id !== t.id);
     renderQueue();
     pumpQueue();
@@ -3061,6 +3099,7 @@ function closeAllModals() {
   if (candResolve) { const r = candResolve; candResolve = null; r(null); }
 }
 let candResolve = null;   // 候选选择器挂起的 Promise resolve
+let candGen = 0;          // 候选弹窗「代次」：每次打开 +1，用于识别过期的异步回调
 $$('[data-close]').forEach(btn => btn.addEventListener('click', () => closeModal(btn.dataset.close)));
 $('#overlay').addEventListener('click', closeAllModals);
 
@@ -3099,9 +3138,19 @@ $('#btnConfirmOk').addEventListener('click', () => {
  * ============================================================ */
 function showCandidates(items, title) {
   return new Promise(resolve => {
+    /* 【修复】候选弹窗是「全局单例」（只有一个 #modalCandidates 和一个 candResolve）。
+       当任务队列的候选弹窗还没被回答时，如果又从别的入口（OCR 识别、直接搜索）
+       调一次 showCandidates，旧实现会把 candResolve 直接覆盖掉 —— 前一个
+       promise 从此永久挂起，对应的任务就卡在 needpick + pickOpened=true，
+       「选择」按钮再也点不动（用户报的「任务待选择但点不动」就是这么来的）。
+       现在：开新弹窗前，先把上一个挂起的 promise 用 null 结清，
+       保证任何时刻最多只有一个候选项在等，绝不产生孤儿 promise。 */
+    if (candResolve) { const prev = candResolve; candResolve = null; try { prev(null); } catch (e) {} }
     $('#candTitle').textContent = title || '选择候选游戏';
     const box = $('#candList');
     box.innerHTML = '';
+    /* 记住本次弹窗的编号，回调时校验是否已被新弹窗接管（防止过期的循环继续改 DOM） */
+    const myGen = ++candGen;
     candResolve = resolve;
     openModal('modalCandidates');
     items.slice(0, 20).forEach(item => {
@@ -3117,6 +3166,8 @@ function showCandidates(items, title) {
         '</div>' +
         '<div class="cand-price">' + esc(price) + '</div>';
       div.addEventListener('click', () => {
+        /* 只认「当前这一代」弹窗的点击；过期的旧弹窗 DOM（若还没被清掉）不得再 resolve */
+        if (myGen !== candGen) return;
         if (candResolve) { const r = candResolve; candResolve = null; r(item); }
         closeModal('modalCandidates');
       });
@@ -3129,12 +3180,13 @@ function showCandidates(items, title) {
        appdetails 取官方中文名，有则显示为"中文名（英文名）"。 */
     (async () => {
       for (const item of items.slice(0, 20)) {
-        if (!$('#modalCandidates').classList.contains('show') || !candResolve) return;
+        /* 弹窗被关、被新一代接管、或已作出选择 → 立即停止，避免往过期 DOM 里写 */
+        if (myGen !== candGen || !$('#modalCandidates').classList.contains('show') || !candResolve) return;
         const span = box.querySelector('[data-rel="' + item.id + '"]');
         if (!span) continue;
         try {
           const d = await steamAppDetails(item.id);
-          if (!$('#modalCandidates').classList.contains('show')) return;
+          if (myGen !== candGen || !$('#modalCandidates').classList.contains('show')) return;
           if (span.isConnected) span.textContent = (d && d.release_date && d.release_date.date) || '暂无数据';
           if (!d) continue;
           const cnEl = span.isConnected ? span.closest('.cand-info').querySelector('.cn') : null;
@@ -4101,8 +4153,6 @@ async function cloudSync(opts) {
     return { ok: false, reason: 'no-token' };
   }
 
-  const payload = withProvenance({ version: CONFIG.SCHEMA_VERSION, updatedAt: nowMs(), games: STATE.games });
-  const content = utf8ToBase64(JSON.stringify(payload, null, 2));
   const api = 'https://api.github.com/repos/' + owner + '/' + repo + '/contents/' + filePath;
   const repoFull = owner + '/' + repo;
 
@@ -4112,14 +4162,42 @@ async function cloudSync(opts) {
     // 先取当前 sha（文件已存在时必须提供，才允许更新）。
     // 注意：文件不存在时 GitHub 返回 404 —— 这是"首次同步"的正常场景，
     // 要静默忽略（当做新建），不能当成错误抛出去。
-    let sha = null;
+    let sha = null, remoteDoc = null;
     try {
       const r = await ghFetch(api + '?ref=' + encodeURIComponent(branch), token, { __cfg: cfg });
-      if (r.ok) { const j = await r.json(); sha = j.sha || null; }
+      if (r.ok) {
+        const j = await r.json();
+        sha = j.sha || null;
+        /* 【修复】顺带把云端现有内容读下来：上传前先把「云端已抓到的折扣截止」合并进本机，
+           否则本机（浏览器侧拿不到折扣截止）会把云端辛苦抓来的截止时间覆盖成 null ——
+           这正是"上传一次同步，云端促销截止覆盖率就从 100% 掉到 70%"的原因。 */
+        try { if (j.content) remoteDoc = JSON.parse(decodeBase64Utf8(j.content)); } catch (e2) {}
+      }
     } catch (e) {
       if (e.status === 404) { sha = null; }        // 远端还没有这个文件 → 新建
       else throw e;
     }
+    let keptDeadlines = 0;
+    if (remoteDoc && Array.isArray(remoteDoc.games)) {
+      const rmap = new Map();
+      remoteDoc.games.forEach(rg => { if (rg && rg.appid) rmap.set(Number(rg.appid), rg); });
+      STATE.games.forEach(g => {
+        const rg = rmap.get(Number(g.appid));
+        if (!rg || !rg.price || !g.price) return;
+        /* 折扣截止 / 促销归属：本机有就用本机的，本机没有就沿用云端已抓到的 */
+        const had = !!g.price.discountExpiration;
+        if (!g.price.discountExpiration && rg.price.discountExpiration) {
+          g.price.discountExpiration = rg.price.discountExpiration;
+          if (!g.price.expirationSource) g.price.expirationSource = rg.price.expirationSource || null;
+          if (!g.price.saleEvent) g.price.saleEvent = rg.price.saleEvent || null;
+          keptDeadlines++;
+        }
+        /* 促销标记同理：本机说是促销但没截止，而云端标记过 → 保留云端 */
+        if (!had && g.price.discountExpiration) g.updatedAt = nowMs();
+      });
+    }
+    const payload = withProvenance({ version: CONFIG.SCHEMA_VERSION, updatedAt: nowMs(), games: STATE.games });
+    const content = utf8ToBase64(JSON.stringify(payload, null, 2));
     const body = {
       message: 'chore: 从页面同步愿望单数据 ' + todayStr(),
       content: content,
@@ -4130,12 +4208,15 @@ async function cloudSync(opts) {
     // 把"本次到底传了什么"明确回显出来，让用户能自己核对，而不是只能相信提示
     toast('✅ 已同步到云端（' + repoFull + '/' + filePath + '）\n' +
       '本次上传 ' + STATE.games.length + ' 款 · 时间 ' + new Date(payload.syncedAt).toLocaleString() + '\n' +
+      (keptDeadlines ? '已保留云端折扣截止 ' + keptDeadlines + ' 款\n' : '') +
       '数据指纹 ' + payload.fingerprint + '\n' +
       '每天凌晨 2 点会自动刷新并发邮件。', 'success', 11000);
+    saveData();
+    renderAll();
     dbgPush({ ok: true, via: 'cloud-sync', url: shortUrl(api), ms: 0, size: content.length,
-              games: STATE.games.length, fp: payload.fingerprint });
+              games: STATE.games.length, fp: payload.fingerprint, keptDeadlines });
     updateCloudHint();
-    return { ok: true };
+    return { ok: true, keptDeadlines };
   } catch (e) {
     // 网络层失败和权限失败，给的建议完全不同，提示必须分开
     const netFail = e.network || isNetworkError(e);
@@ -5084,7 +5165,8 @@ function mergePriceKeepCloud(oldP, newP) {
 function mergeCloudGames(remoteGames) {
   const byId = new Map();
   (remoteGames || []).forEach(rg => { if (rg && rg.appid) byId.set(Number(rg.appid), rg); });
-  let updated = 0, tags = 0, bundles = 0, translated = 0, unmatched = 0;
+  let updated = 0, tags = 0, bundles = 0, translated = 0, unmatched = 0, added = 0;
+  const localIds = new Set(STATE.games.map(g => Number(g.appid)));
   STATE.games.forEach(g => {
     const rg = byId.get(Number(g.appid));
     if (!rg) { unmatched++; return; }
@@ -5128,7 +5210,39 @@ function mergeCloudGames(remoteGames) {
     if (changed) { g.updatedAt = nowMs(); updated++; }
     recordPriceObs(g);
   });
-  return { updated, tags, bundles, translated, unmatched, remoteCount: byId.size, localCount: STATE.games.length };
+  /* 【修复】把「云端有、本机没有」的游戏补进来。
+     旧实现只遍历本机列表做字段合并，云端多出来的游戏被完全忽略 ——
+     于是出现「上传 219 款到云端，换台设备/清缓存后拉取，本机还是旧的 197 款」，
+     新增的那批永远进不来（用户报的「拉回来数量不对」就是这个）。
+     这里按「云端为准」补入缺失项；用户私有字段（目标价/备注/手动史低）云端本来也带着，
+     所以直接沿用云端值即可。 */
+  (remoteGames || []).forEach(rg => {
+    if (!rg || !rg.appid) return;
+    const id = Number(rg.appid);
+    if (!isFinite(id) || id <= 0 || localIds.has(id)) return;
+    const g = newGame(id, rg.name || ('AppID ' + id), rg.originalName || rg.name || '');
+    if (rg.price && typeof rg.price === 'object') g.price = mergePriceKeepCloud(g.price, rg.price);
+    if (rg.rating && typeof rg.rating === 'object') g.rating = Object.assign({}, g.rating, rg.rating);
+    if (rg.historicalLow && typeof rg.historicalLow === 'object') g.historicalLow = Object.assign({}, g.historicalLow, rg.historicalLow);
+    if (rg.details && typeof rg.details === 'object') {
+      g.details = Object.assign({}, g.details, rg.details);
+      ['genres', 'featureTags', 'categories', 'platforms', 'developers', 'publishers', 'userTags', 'bundleIds', 'tags'].forEach(k => {
+        if (!Array.isArray(g.details[k])) g.details[k] = [];
+      });
+      if (g.details.tags && !g.details.tags.length && Array.isArray(g.details.genres)) g.details.tags = g.details.genres.slice(0, 8);
+    }
+    if (rg.targetPrice !== undefined) g.targetPrice = rg.targetPrice;
+    if (rg.note !== undefined) g.note = rg.note;
+    if (Array.isArray(rg.dlcList)) g.dlcList = rg.dlcList;
+    if (rg.nameSource) g.nameSource = rg.nameSource;
+    if (rg.createdAt) g.createdAt = rg.createdAt;
+    g.updatedAt = nowMs();
+    STATE.games.push(g);
+    localIds.add(id);
+    added++;
+    recordPriceObs(g);
+  });
+  return { updated, tags, bundles, translated, unmatched, added, remoteCount: byId.size, localCount: STATE.games.length };
 }
 /* 拉取通道：优先同源（GitHub Pages 上的 data/wishlist.json，无需 Token），失败再走 GitHub API */
 async function fetchCloudJSON() {
@@ -5159,7 +5273,10 @@ async function pullFromCloud(opts) {
     const got = await fetchCloudJSON();
     const data = got.data;
     if (!data || !Array.isArray(data.games)) throw new Error('云端文件格式不对：缺少 games 数组。');
-    if (!STATE.games.length) throw new Error('本机愿望单为空。请先添加游戏并「☁️ 同步到云端」，再拉取云端刷新结果。');
+    /* 【修复】旧实现在「本机愿望单为空」时直接报错拒绝拉取。
+       但本机为空恰恰是最需要从云端恢复的场景（换了电脑/清了浏览器缓存/重装浏览器）。
+       现在允许空本机拉取 —— 合并逻辑会把云端全部游戏补进来。 */
+    if (!STATE.games.length && !data.games.length) throw new Error('本机与云端的愿望单都是空的，没有可拉取的数据。');
     const meta = {
       source: data.source || null,
       syncedAt: data.syncedAt || null,
@@ -5176,14 +5293,21 @@ async function pullFromCloud(opts) {
     savePullMeta(meta);
     renderAll();
     updateCloudPullHint(meta);
-    const bits = ['✅ 已从云端更新 ' + stat.updated + ' / ' + stat.localCount + ' 款'];
+    /* 提示语改成「云端→本机」的对照口径：
+       以前只写「已从云端更新 X / Y 款」，Y 是本机总数，容易被理解成"云端只有 Y 款"，
+       从而产生"云端明明有 219，拉回来却只有 197"的疑问。现在把云端数、本机数、
+       新增数分别写清楚。 */
+    const remoteN = stat.remoteCount;
+    const bits = ['✅ 云端 ' + remoteN + ' 款 → 本机 ' + stat.localCount + ' 款'];
+    if (stat.added) bits.push('新增本机缺少的 ' + stat.added + ' 款');
+    if (stat.updated) bits.push('更新 ' + stat.updated + ' 款的公共字段');
     if (stat.tags) bits.push('用户标签 ' + stat.tags + ' 款');
     if (stat.bundles) bits.push('捆绑包 ' + stat.bundles + ' 款');
     if (stat.translated) bits.push('补中文名 ' + stat.translated + ' 款');
     if (stat.unmatched) bits.push('云端尚无 ' + stat.unmatched + ' 款（本机新加、还没上传）');
     bits.push('来源：' + got.via);
     toast(bits.join('\n'), 'success', 13000);
-    dbgPush({ ok: true, via: 'cloud-pull', url: shortUrl(got.via), games: stat.updated });
+    dbgPush({ ok: true, via: 'cloud-pull', url: shortUrl(got.via), games: stat.updated, added: stat.added });
     return { ok: true, stat, meta };
   } catch (e) {
     const netFail = e.network || isNetworkError(e);
