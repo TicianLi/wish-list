@@ -3146,6 +3146,12 @@ function showCandidates(items, title) {
        现在：开新弹窗前，先把上一个挂起的 promise 用 null 结清，
        保证任何时刻最多只有一个候选项在等，绝不产生孤儿 promise。 */
     if (candResolve) { const prev = candResolve; candResolve = null; try { prev(null); } catch (e) {} }
+    /* 【修复】候选弹窗要「独占」显示：把它打开之前，先关掉其它还开着的弹窗
+       （导入愿望单 / OCR / 确认框）。旧实现两者可以同时显示、互相叠在一起，
+       用户分不清自己点的是哪个，而且遮罩层点一下就 closeAllModals 把所有弹窗
+       连同候选一起关掉 —— 表现为"任务一直等待选择，弹窗没了也点不动"。
+       注意：先关旧的再开新的，不能用 closeAllModals（那会把刚建的候选也关掉）。 */
+    $$('.modal.show').forEach(m => { if (m.id !== 'modalCandidates') m.classList.remove('show'); });
     $('#candTitle').textContent = title || '选择候选游戏';
     const box = $('#candList');
     box.innerHTML = '';
@@ -4490,8 +4496,20 @@ $('#btnCancelTask').addEventListener('click', () => {
   if (STATE.currentTaskAbort) { try { STATE.currentTaskAbort.abort(); } catch (e) {} }
   // 同时标记队列里所有未完成任务为取消，避免它们继续被当作"待处理"而卡住
   STATE.taskQueue.forEach(t => {
-    if (t.status === 'pending' || t.status === 'needpick') { t.cancelled = true; t.status = 'failed'; t.msg = '已取消'; }
+    if (t.status === 'pending' || t.status === 'needpick') {
+      t.cancelled = true; t.status = 'failed'; t.msg = '已取消';
+      /* 【修复】连同「弹窗占用」标记一起清掉。
+         否则任务已经变成 failed，pickOpened 却还是 true：
+         用户点「重试」时会被 openTaskPick 的守卫拦下，看起来像"点了没反应"。 */
+      t.pickOpened = false;
+      if (pendingPicks[t.id]) delete pendingPicks[t.id];
+    }
   });
+  /* 【修复】候选弹窗正开着时必须关掉它。
+     旧实现只改任务状态，弹窗留在屏幕上 —— 用户接着点候选，选中的却是一个
+     已经被取消的任务，还会把全局 candResolve 白白用掉（其它入口从此拿不到候选）。
+     统一走 closeModal：它会顺带把挂起的 promise 用 null 结清。 */
+  if ($('#modalCandidates').classList.contains('show')) closeModal('modalCandidates');
   renderQueue();
   // 关键修复（#5）：取消完成后立刻复位总闸。
   // 否则之后新加入的任务会在 runTask 第一行就命中 cancelTask 而被秒判"已取消"。
