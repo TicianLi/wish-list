@@ -185,14 +185,18 @@ function check(n, c, x) { if (c) { pass++; console.log('  PASS  ' + n); } else {
   /* I-3：配额为 0 时不得被 slice 切成空数组（否则"不限"变成"一款都不抓"） */
   check('I-3 配额切片有 maxTagFetch > 0 前置判断',
     /if \(CFG\.maxTagFetch > 0 && todo\.length > CFG\.maxTagFetch\)/.test(CI));
-  /* I-4：上限哨兵 —— 把"页面原始 app_tag 节点数 vs 解析数"打进日志，
+  /* I-4：上限哨兵 —— 把"页面真实 app_tag 节点数 vs 解析数"打进日志，
      任何新的静默截断都会立刻在 CI 日志里显形。 */
-  check('I-4 有 app_tag 原始节点计数（上限哨兵）',
-    /stat\.rawTagNodes = \(stat\.rawTagNodes \|\| 0\) \+/.test(CI) && /stat\.maxRawTags = Math\.max/.test(CI));
+  check('I-4 有 app_tag 真实节点计数（上限哨兵）',
+    /stat\.rawTagNodes = \(stat\.rawTagNodes \|\| 0\) \+ rawN/.test(CI) && /stat\.maxRawTags = Math\.max/.test(CI));
   check('I-5 哨兵会把"原始多于解析"标为疑似截断',
     /stat\.tagTruncated = \(stat\.tagTruncated \|\| 0\) \+ 1;/.test(CI));
   check('I-6 哨兵结论写进日志（无截断时也明确说明）',
-    /\[上限哨兵\] app_tag 原始节点/.test(CI) && /无截断（两者一致）。/.test(CI));
+    /\[上限哨兵\] 真实 app_tag 节点/.test(CI) && /无截断（两者一致/.test(CI));
+  /* I-7：计数必须排除 Steam 自带的 `+` 占位符，否则每天误报截断
+     （实测单页 21 个节点 = 20 个真实标签 + 1 个 `+`）。 */
+  check('I-7 哨兵计数走 countRealTagNodes（已排除 + 占位符）',
+    /const rawN = countRealTagNodes\(html\);/.test(CI) && /function countRealTagNodes/.test(CI));
 
   /* ============ J. 硬编码数字收敛到 CONFIG ============ */
   console.log('\n=== J. CONFIG 常量收敛（可自查 / 可调）===');
