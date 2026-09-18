@@ -4146,8 +4146,25 @@ async function cloudTest(cfg, token) {
     branchMatch: info.default_branch === cfg.branch
   };
 }
+/* 云端同步的并发锁：同一时刻只允许一个同步在跑。
+   没有它时用户连点两次「同步到云端」→ 两个请求各自 GET 到同一个 sha →
+   第一个 PUT 成功后第二个必然 409（自己和自己抢），表现为「同步失败」。
+   这里用一个模块级布尔做互斥，晚到的那个直接复用正在进行的那次结果。 */
+let cloudSyncing = null;
+
 async function cloudSync(opts) {
   opts = opts || {};
+  /* 已经在同步中 → 不重复发起，避免自撞 409 */
+  if (cloudSyncing) {
+    if (!opts.silentDup) toast('同步正在进行中，请不要重复点击。', 'warn', 4000);
+    return cloudSyncing;
+  }
+  const run = cloudSyncInner(opts);
+  cloudSyncing = run;
+  try { return await run; } finally { cloudSyncing = null; }
+}
+
+async function cloudSyncInner(opts) {
   const cfg = loadCloudCfg();
   const { owner, repo, branch, path: filePath } = cfg;
   let token = (opts.token != null ? opts.token : cfg.token) || '';
@@ -4165,72 +4182,118 @@ async function cloudSync(opts) {
   holdProgress();
   try {
     setProgress('正在同步到云端…', null);
-    // 先取当前 sha（文件已存在时必须提供，才允许更新）。
-    // 注意：文件不存在时 GitHub 返回 404 —— 这是"首次同步"的正常场景，
-    // 要静默忽略（当做新建），不能当成错误抛出去。
-    let sha = null, remoteDoc = null;
-    try {
-      const r = await ghFetch(api + '?ref=' + encodeURIComponent(branch), token, { __cfg: cfg });
-      if (r.ok) {
-        const j = await r.json();
-        sha = j.sha || null;
-        /* 【修复】顺带把云端现有内容读下来：上传前先把「云端已抓到的折扣截止」合并进本机，
-           否则本机（浏览器侧拿不到折扣截止）会把云端辛苦抓来的截止时间覆盖成 null ——
-           这正是"上传一次同步，云端促销截止覆盖率就从 100% 掉到 70%"的原因。 */
-        try { if (j.content) remoteDoc = JSON.parse(decodeBase64Utf8(j.content)); } catch (e2) {}
-      }
-    } catch (e) {
-      if (e.status === 404) { sha = null; }        // 远端还没有这个文件 → 新建
-      else throw e;
-    }
-    let keptDeadlines = 0;
-    if (remoteDoc && Array.isArray(remoteDoc.games)) {
-      const rmap = new Map();
-      remoteDoc.games.forEach(rg => { if (rg && rg.appid) rmap.set(Number(rg.appid), rg); });
-      STATE.games.forEach(g => {
-        const rg = rmap.get(Number(g.appid));
-        if (!rg || !rg.price || !g.price) return;
-        /* 折扣截止 / 促销归属：本机有就用本机的，本机没有就沿用云端已抓到的 */
-        const had = !!g.price.discountExpiration;
-        if (!g.price.discountExpiration && rg.price.discountExpiration) {
-          g.price.discountExpiration = rg.price.discountExpiration;
-          if (!g.price.expirationSource) g.price.expirationSource = rg.price.expirationSource || null;
-          if (!g.price.saleEvent) g.price.saleEvent = rg.price.saleEvent || null;
-          keptDeadlines++;
+    /* ------------------------------------------------------------
+     * 「取 sha → PUT」这个两步操作存在竞态：只要在我们 GET 之后、PUT 之前
+     * 远端又变了（CI 每日刷新提交、或另一台设备同步），PUT 就会 409。
+     * 旧实现遇到 409 直接放弃并提示"稍后重试"——用户只能手动再点，
+     * 而 CI 若刚好在跑就永远撞不上（用户看到的现象就是"同步老是失败"）。
+     * 现在：最多重试 4 次，每次都用「全新取到的 sha」重新 PUT，
+     * 并且每次都重新读云端内容做一次截止时间保留合并（否则会丢掉这期间
+     * 云端新抓到的截止时间）。指数退避等待，避免和 CI 卡在同一秒。
+     * ------------------------------------------------------------ */
+    const MAX_TRIES = 4;
+    let keptDeadlines = 0, payload = null, content = '', tries = 0, lastErr = null;
+    for (let attempt = 0; attempt < MAX_TRIES; attempt++) {
+      tries = attempt + 1;
+      // 1) 取当前 sha（文件不存在返回 404 —— 首次同步的正常场景，当作新建）
+      let sha = null, remoteDoc = null;
+      try {
+        const r = await ghFetch(api + '?ref=' + encodeURIComponent(branch) + '&t=' + nowMs(), token, { __cfg: cfg });
+        if (r.ok) {
+          const j = await r.json();
+          sha = j.sha || null;
+          /* 顺带把云端现有内容读下来：上传前先把「云端已抓到的折扣截止」合并进本机，
+             否则本机（浏览器侧拿不到折扣截止）会把云端辛苦抓来的截止时间覆盖成 null。
+             注意：>1MB 的文件 GitHub 不返回 content 字段，此时改用 raw 取一遍。 */
+          if (j.content) {
+            try { remoteDoc = JSON.parse(decodeBase64Utf8(j.content)); } catch (e2) {}
+          }
+          if (!remoteDoc) {
+            try {
+              const rr = await ghFetch(api + '?ref=' + encodeURIComponent(branch) + '&t=' + nowMs(), token,
+                { __cfg: cfg, headers: { 'Accept': 'application/vnd.github.raw' } });
+              if (rr.ok) { try { remoteDoc = JSON.parse(await rr.text()); } catch (e3) {} }
+            } catch (e3) { /* raw 取不到不影响上传，只是少了"保留云端截止"这一步 */ }
+          }
         }
-        /* 促销标记同理：本机说是促销但没截止，而云端标记过 → 保留云端 */
-        if (!had && g.price.discountExpiration) g.updatedAt = nowMs();
-      });
+      } catch (e) {
+        if (e.status === 404) { sha = null; }        // 远端还没有这个文件 → 新建
+        else throw e;
+      }
+      // 2) 每轮都重新做一次「保留云端折扣截止」合并
+      keptDeadlines = 0;
+      if (remoteDoc && Array.isArray(remoteDoc.games)) {
+        const rmap = new Map();
+        remoteDoc.games.forEach(rg => { if (rg && rg.appid) rmap.set(Number(rg.appid), rg); });
+        STATE.games.forEach(g => {
+          const rg = rmap.get(Number(g.appid));
+          if (!rg || !rg.price || !g.price) return;
+          const had = !!g.price.discountExpiration;
+          if (!g.price.discountExpiration && rg.price.discountExpiration) {
+            g.price.discountExpiration = rg.price.discountExpiration;
+            if (!g.price.expirationSource) g.price.expirationSource = rg.price.expirationSource || null;
+            if (!g.price.saleEvent) g.price.saleEvent = rg.price.saleEvent || null;
+            keptDeadlines++;
+          }
+          if (!had && g.price.discountExpiration) g.updatedAt = nowMs();
+        });
+      }
+      // 3) 组 payload 并 PUT
+      payload = withProvenance({ version: CONFIG.SCHEMA_VERSION, updatedAt: nowMs(), games: STATE.games });
+      content = utf8ToBase64(JSON.stringify(payload, null, 2));
+      const body = {
+        message: 'chore: 从页面同步愿望单数据 ' + todayStr(),
+        content: content,
+        branch: branch,
+        ...(sha ? { sha } : {})
+      };
+      try {
+        await ghFetch(api + '?t=' + nowMs(), token,
+          { method: 'PUT', body: JSON.stringify(body), __cfg: cfg });
+        lastErr = null;
+        break;                                   // 成功 → 跳出
+      } catch (e) {
+        lastErr = e;
+        /* 只有 409（sha 过期/并发写）才值得换一个 sha 重试；
+           其它错误（401/403/404/422/网络）立刻抛，重试没意义。 */
+        if (e.status !== 409) throw e;
+        if (attempt < MAX_TRIES - 1) {
+          setProgress('云端刚被更新过，正在用最新版本重试（' + (attempt + 2) + '/' + MAX_TRIES + '）…', null);
+          await sleep(400 * Math.pow(2, attempt));   // 400 / 800 / 1600 ms 退避
+        }
+      }
     }
-    const payload = withProvenance({ version: CONFIG.SCHEMA_VERSION, updatedAt: nowMs(), games: STATE.games });
-    const content = utf8ToBase64(JSON.stringify(payload, null, 2));
-    const body = {
-      message: 'chore: 从页面同步愿望单数据 ' + todayStr(),
-      content: content,
-      branch: branch,
-      ...(sha ? { sha } : {})
-    };
-    await ghFetch(api, token, { method: 'PUT', body: JSON.stringify(body), __cfg: cfg });
+    if (lastErr) throw lastErr;                  // 重试次数用尽仍是 409
+
     // 把"本次到底传了什么"明确回显出来，让用户能自己核对，而不是只能相信提示
     toast('✅ 已同步到云端（' + repoFull + '/' + filePath + '）\n' +
       '本次上传 ' + STATE.games.length + ' 款 · 时间 ' + new Date(payload.syncedAt).toLocaleString() + '\n' +
       (keptDeadlines ? '已保留云端折扣截止 ' + keptDeadlines + ' 款\n' : '') +
+      (tries > 1 ? '（云端同时被更新，已自动重试 ' + (tries - 1) + ' 次后成功）\n' : '') +
       '数据指纹 ' + payload.fingerprint + '\n' +
       '每天凌晨 2 点会自动刷新并发邮件。', 'success', 11000);
     saveData();
     renderAll();
     dbgPush({ ok: true, via: 'cloud-sync', url: shortUrl(api), ms: 0, size: content.length,
-              games: STATE.games.length, fp: payload.fingerprint, keptDeadlines });
+              games: STATE.games.length, fp: payload.fingerprint, keptDeadlines, tries });
     updateCloudHint();
-    return { ok: true, keptDeadlines };
+    return { ok: true, keptDeadlines, tries };
   } catch (e) {
     // 网络层失败和权限失败，给的建议完全不同，提示必须分开
     const netFail = e.network || isNetworkError(e);
+    /* 409 重试用尽：说明云端一直有人在写（多半是 CI 正在跑）。
+       给出可操作的建议，而不是干巴巴的"稍后重试"。 */
+    let msg = e.message;
+    if (e.status === 409) {
+      msg = '云端数据正在被其它任务写入（HTTP 409 冲突），已自动重试 4 次仍未成功。\n' +
+        '最常见的原因：GitHub Actions 的每日刷新正在跑（每天凌晨 2 点，约 5～8 分钟）。\n' +
+        '建议：等几分钟再点一次；或到仓库 Actions 页面看有没有正在运行的「每日自动刷新」。';
+    }
     const tail = netFail
       ? '\n（这是网络问题，不是 Token 权限问题。Token 已保存，换网络后可直接重试。）'
       : '\n（可到「设置 → 云端同步」点「测试连接」定位问题。）';
-    toast('云端同步失败：' + e.message + tail, 'error', 15000);
-    dbgPush({ ok: false, via: 'cloud-sync', url: shortUrl(api), err: String(e.message) });
+    toast('云端同步失败：' + msg + tail, 'error', 15000);
+    dbgPush({ ok: false, via: 'cloud-sync', url: shortUrl(api), err: String(e.message), status: e.status });
     return { ok: false, reason: netFail ? 'network' : 'http', error: e };
   } finally {
     releaseProgress();
@@ -5248,19 +5311,35 @@ function mergeCloudGames(remoteGames) {
         if (!Array.isArray(g.details[k])) g.details[k] = [];
       });
       if (g.details.tags && !g.details.tags.length && Array.isArray(g.details.genres)) g.details.tags = g.details.genres.slice(0, 8);
+      /* 【修复】新增游戏也要计入标签/捆绑包统计，否则提示里会出现
+         「云端 219 款 → 本机 219 款，用户标签 197 款」这种自相矛盾的观感 ——
+         既然总数是 219，"更新 197 款"就会让人以为少拉了什么。
+         实际是：云端那批新游戏本来就还没被抓过标签（等 CI 刷新才会补）。
+         这里如实计入统计，让数字能自洽。 */
+      if (Array.isArray(g.details.userTags) && g.details.userTags.length) tags++;
+      if (Array.isArray(g.details.bundleIds) && g.details.bundleIds.length) bundles++;
     }
+    /* userTagsFetchedAt 必须一并带上：它是「这款的标签已经抓过了」的标记。
+       漏了它，下次拉取会被当成"还没抓过"而重复抓取，白白消耗限速配额。 */
+    if (rg.details && rg.details.userTagsFetchedAt) g.details.userTagsFetchedAt = rg.details.userTagsFetchedAt;
+    if (rg.nameSource) g.nameSource = rg.nameSource;
+    if (rg.createdAt) g.createdAt = rg.createdAt;
+    /* 用户私有字段：目标价 / 备注（云端也带着，换设备拉取时不能丢） */
     if (rg.targetPrice !== undefined) g.targetPrice = rg.targetPrice;
     if (rg.note !== undefined) g.note = rg.note;
     if (Array.isArray(rg.dlcList)) g.dlcList = rg.dlcList;
-    if (rg.nameSource) g.nameSource = rg.nameSource;
-    if (rg.createdAt) g.createdAt = rg.createdAt;
     g.updatedAt = nowMs();
     STATE.games.push(g);
     localIds.add(id);
     added++;
     recordPriceObs(g);
   });
-  return { updated, tags, bundles, translated, unmatched, added, remoteCount: byId.size, localCount: STATE.games.length };
+  /* 新增的那些游戏，字段是整块照搬云端的，没有走"逐字段比对"，
+     所以它们不会进 updated 计数 —— 但确实发生了更新，这里补记一次，
+     让「本机 N 款」和「更新 M 款」在语义上不冲突。 */
+  if (added) updated += added;
+  return { updated, tags, bundles, translated, unmatched, added,
+           attributed: updated, remoteCount: byId.size, localCount: STATE.games.length };
 }
 /* 拉取通道：优先同源（GitHub Pages 上的 data/wishlist.json，无需 Token），失败再走 GitHub API */
 async function fetchCloudJSON() {
@@ -5314,15 +5393,23 @@ async function pullFromCloud(opts) {
     /* 提示语改成「云端→本机」的对照口径：
        以前只写「已从云端更新 X / Y 款」，Y 是本机总数，容易被理解成"云端只有 Y 款"，
        从而产生"云端明明有 219，拉回来却只有 197"的疑问。现在把云端数、本机数、
-       新增数分别写清楚。 */
+       新增数分别写清楚。
+       另外：标签/捆绑包的数字只统计"云端确实有这些数据的款数"，
+       并明确说明剩余的是"云端也还没抓到"（等每天凌晨 CI 刷新会自动补），
+       避免用户看到 197/219 以为拉取失败了。 */
     const remoteN = stat.remoteCount;
     const bits = ['✅ 云端 ' + remoteN + ' 款 → 本机 ' + stat.localCount + ' 款'];
     if (stat.added) bits.push('新增本机缺少的 ' + stat.added + ' 款');
-    if (stat.updated) bits.push('更新 ' + stat.updated + ' 款的公共字段');
+    if (stat.updated) bits.push('合计写入 ' + stat.updated + ' 款');
     if (stat.tags) bits.push('用户标签 ' + stat.tags + ' 款');
     if (stat.bundles) bits.push('捆绑包 ' + stat.bundles + ' 款');
     if (stat.translated) bits.push('补中文名 ' + stat.translated + ' 款');
     if (stat.unmatched) bits.push('云端尚无 ' + stat.unmatched + ' 款（本机新加、还没上传）');
+    /* 明确告知「为什么标签数少于总款数」—— 这是数据源进度，不是拉取失败 */
+    const tagGap = stat.localCount - stat.tags - stat.unmatched;
+    if (tagGap > 0) {
+      bits.push('（其中 ' + tagGap + ' 款云端也还没抓到标签：新加的游戏要等云端每天凌晨自动刷新后才会补上）');
+    }
     bits.push('来源：' + got.via);
     toast(bits.join('\n'), 'success', 13000);
     dbgPush({ ok: true, via: 'cloud-pull', url: shortUrl(got.via), games: stat.updated, added: stat.added });
