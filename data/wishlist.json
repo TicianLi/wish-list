@@ -1,6 +1,6 @@
 {
   "version": 3,
-  "updatedAt": 1789748797451,
+  "updatedAt": 1789753531408,
   "games": [
     {
       "appid": 2187290,
@@ -45,7 +45,7 @@
           "type": "dlc",
           "originalDescription": "跨越大裂隙，探索机械蜘蛛未曾踏足过的墙体！与全新的敌人战斗，面对前所未见的威胁。开拓无人勘察的生态群系，解锁新技术。揭晓过去的秘密，查明事情的真相！",
           "translated": false,
-          "updatedAt": 1789748727281
+          "updatedAt": 1789748870004
         },
         {
           "appid": 2337040,
@@ -57,7 +57,7 @@
           "type": "music",
           "originalDescription": "The official soundtrack for Wall World.",
           "translated": false,
-          "updatedAt": 1789748729681
+          "updatedAt": 1789748872207
         }
       ],
       "details": {
@@ -117,7 +117,7 @@
         "bundleIds": []
       },
       "createdAt": 1789748600432,
-      "updatedAt": 1789748729681,
+      "updatedAt": 1789748872207,
       "nameSource": null
     },
     {
@@ -3126,7 +3126,7 @@
         ]
       },
       "createdAt": 1789449629221,
-      "updatedAt": 1789748792236,
+      "updatedAt": 1789748890799,
       "nameSource": "machine-translation"
     },
     {
@@ -3287,7 +3287,7 @@
         "bundleIds": []
       },
       "createdAt": 1789449608499,
-      "updatedAt": 1789748792236,
+      "updatedAt": 1789748890799,
       "nameSource": "machine-translation"
     },
     {
@@ -3450,7 +3450,7 @@
         ]
       },
       "createdAt": 1789449572950,
-      "updatedAt": 1789748792236,
+      "updatedAt": 1789748890799,
       "nameSource": "machine-translation"
     },
     {
@@ -3601,7 +3601,7 @@
         "bundleIds": []
       },
       "createdAt": 1789449564829,
-      "updatedAt": 1789748792236,
+      "updatedAt": 1789748890799,
       "nameSource": null
     },
     {
@@ -3725,7 +3725,7 @@
         "bundleIds": []
       },
       "createdAt": 1789449553098,
-      "updatedAt": 1789748792236,
+      "updatedAt": 1789748890799,
       "nameSource": null
     },
     {
@@ -3886,7 +3886,7 @@
         ]
       },
       "createdAt": 1789449497299,
-      "updatedAt": 1789748792236,
+      "updatedAt": 1789748890799,
       "nameSource": "machine-translation"
     },
     {
@@ -4004,7 +4004,7 @@
         "bundleIds": []
       },
       "createdAt": 1789449490176,
-      "updatedAt": 1789748792236,
+      "updatedAt": 1789748890799,
       "nameSource": "machine-translation"
     },
     {
@@ -4116,7 +4116,7 @@
         "bundleIds": []
       },
       "createdAt": 1789449482564,
-      "updatedAt": 1789748792236,
+      "updatedAt": 1789748890799,
       "nameSource": null
     },
     {
@@ -4239,7 +4239,7 @@
         ]
       },
       "createdAt": 1789449469765,
-      "updatedAt": 1789748792236,
+      "updatedAt": 1789748890799,
       "nameSource": "machine-translation"
     },
     {
@@ -4357,7 +4357,7 @@
         ]
       },
       "createdAt": 1789449462518,
-      "updatedAt": 1789748792236,
+      "updatedAt": 1789748890799,
       "nameSource": "machine-translation"
     },
     {
@@ -4667,7 +4667,7 @@
         ]
       },
       "createdAt": 1789449449836,
-      "updatedAt": 1789748792236,
+      "updatedAt": 1789748890799,
       "nameSource": "machine-translation"
     },
     {
@@ -4821,7 +4821,7 @@
         ]
       },
       "createdAt": 1789449439707,
-      "updatedAt": 1789748792236,
+      "updatedAt": 1789748890799,
       "nameSource": "machine-translation"
     },
     {
@@ -4972,7 +4972,7 @@
         ]
       },
       "createdAt": 1789449429594,
-      "updatedAt": 1789748792236,
+      "updatedAt": 1789748890799,
       "nameSource": null
     },
     {
@@ -5098,7 +5098,7 @@
         ]
       },
       "createdAt": 1789449418480,
-      "updatedAt": 1789748792236,
+      "updatedAt": 1789748890799,
       "nameSource": null
     },
     {
@@ -5257,7 +5257,7 @@
         ]
       },
       "createdAt": 1789449410717,
-      "updatedAt": 1789748792236,
+      "updatedAt": 1789748890799,
       "nameSource": null
     },
     {
@@ -5371,7 +5371,7 @@
         ]
       },
       "createdAt": 1789449403972,
-      "updatedAt": 1789748792236,
+      "updatedAt": 1789748890799,
       "nameSource": "machine-translation"
     },
     {
@@ -5507,7 +5507,7 @@
         ]
       },
       "createdAt": 1789449397087,
-      "updatedAt": 1789748792236,
+      "updatedAt": 1789748890799,
       "nameSource": null
     },
     {
@@ -5664,7 +5664,7 @@
         ]
       },
       "createdAt": 1789449385735,
-      "updatedAt": 1789748792236,
+      "updatedAt": 1789748890799,
       "nameSource": null
     },
     {
@@ -5779,7 +5779,7 @@
         ]
       },
       "createdAt": 1789449379519,
-      "updatedAt": 1789748792236,
+      "updatedAt": 1789748890799,
       "nameSource": null
     },
     {
@@ -5933,7 +5933,7 @@
         ]
       },
       "createdAt": 1789449370423,
-      "updatedAt": 1789748792236,
+      "updatedAt": 1789748890799,
       "nameSource": null
     },
     {
@@ -6128,7 +6128,7 @@
         "bundleIds": []
       },
       "createdAt": 1789449339704,
-      "updatedAt": 1789748792236,
+      "updatedAt": 1789748890799,
       "nameSource": null
     },
     {
@@ -6269,7 +6269,7 @@
         ]
       },
       "createdAt": 1789449331976,
-      "updatedAt": 1789748792236,
+      "updatedAt": 1789748890799,
       "nameSource": "machine-translation"
     },
     {
@@ -6403,7 +6403,7 @@
         ]
       },
       "createdAt": 1789449324781,
-      "updatedAt": 1789748792236,
+      "updatedAt": 1789748890799,
       "nameSource": null
     },
     {
@@ -6510,7 +6510,7 @@
         "bundleIds": []
       },
       "createdAt": 1789449320427,
-      "updatedAt": 1789748792236,
+      "updatedAt": 1789748890799,
       "nameSource": "machine-translation"
     },
     {
@@ -6658,7 +6658,7 @@
         "bundleIds": []
       },
       "createdAt": 1789449313978,
-      "updatedAt": 1789748792236,
+      "updatedAt": 1789748890799,
       "nameSource": null
     },
     {
@@ -6788,7 +6788,7 @@
         ]
       },
       "createdAt": 1789449305158,
-      "updatedAt": 1789748792236,
+      "updatedAt": 1789748890799,
       "nameSource": "machine-translation"
     },
     {
@@ -6977,7 +6977,7 @@
         "bundleIds": []
       },
       "createdAt": 1789449295581,
-      "updatedAt": 1789748792236,
+      "updatedAt": 1789748890799,
       "nameSource": null
     },
     {
@@ -7106,7 +7106,7 @@
         ]
       },
       "createdAt": 1789449277706,
-      "updatedAt": 1789748792236,
+      "updatedAt": 1789748890799,
       "nameSource": null
     },
     {
@@ -7220,7 +7220,7 @@
         ]
       },
       "createdAt": 1789449268597,
-      "updatedAt": 1789748792236,
+      "updatedAt": 1789748890799,
       "nameSource": null
     },
     {
@@ -7381,7 +7381,7 @@
         ]
       },
       "createdAt": 1789449261106,
-      "updatedAt": 1789748792236,
+      "updatedAt": 1789748890799,
       "nameSource": null
     },
     {
@@ -7506,7 +7506,7 @@
         ]
       },
       "createdAt": 1789449248704,
-      "updatedAt": 1789748792236,
+      "updatedAt": 1789748890799,
       "nameSource": "machine-translation"
     },
     {
@@ -7658,7 +7658,7 @@
         ]
       },
       "createdAt": 1789449241621,
-      "updatedAt": 1789748792236,
+      "updatedAt": 1789748890799,
       "nameSource": null
     },
     {
@@ -7772,7 +7772,7 @@
         ]
       },
       "createdAt": 1789449175682,
-      "updatedAt": 1789748792236,
+      "updatedAt": 1789748890799,
       "nameSource": null
     },
     {
@@ -7901,7 +7901,7 @@
         "bundleIds": []
       },
       "createdAt": 1789449171748,
-      "updatedAt": 1789748792236,
+      "updatedAt": 1789748890799,
       "nameSource": null
     },
     {
@@ -8031,7 +8031,7 @@
         "bundleIds": []
       },
       "createdAt": 1789449165319,
-      "updatedAt": 1789748792236,
+      "updatedAt": 1789748890799,
       "nameSource": "machine-translation"
     },
     {
@@ -8141,7 +8141,7 @@
         ]
       },
       "createdAt": 1789449158223,
-      "updatedAt": 1789748792236,
+      "updatedAt": 1789748890799,
       "nameSource": "machine-translation"
     },
     {
@@ -8374,7 +8374,7 @@
         ]
       },
       "createdAt": 1789449148047,
-      "updatedAt": 1789748792236,
+      "updatedAt": 1789748890799,
       "nameSource": "machine-translation"
     },
     {
@@ -8499,7 +8499,7 @@
         ]
       },
       "createdAt": 1789449139281,
-      "updatedAt": 1789748792236,
+      "updatedAt": 1789748890799,
       "nameSource": null
     },
     {
@@ -8666,7 +8666,7 @@
         ]
       },
       "createdAt": 1789449123598,
-      "updatedAt": 1789748792236,
+      "updatedAt": 1789748890799,
       "nameSource": null
     },
     {
@@ -8804,7 +8804,7 @@
         ]
       },
       "createdAt": 1789449116702,
-      "updatedAt": 1789748792236,
+      "updatedAt": 1789748890799,
       "nameSource": null
     },
     {
@@ -8957,7 +8957,7 @@
         ]
       },
       "createdAt": 1789449076133,
-      "updatedAt": 1789748792236,
+      "updatedAt": 1789748890799,
       "nameSource": null
     },
     {
@@ -9109,7 +9109,7 @@
         ]
       },
       "createdAt": 1789449065652,
-      "updatedAt": 1789748792236,
+      "updatedAt": 1789748890799,
       "nameSource": null
     },
     {
@@ -9404,7 +9404,7 @@
         ]
       },
       "createdAt": 1789449054846,
-      "updatedAt": 1789748792236,
+      "updatedAt": 1789748890799,
       "nameSource": "machine-translation"
     },
     {
@@ -9528,7 +9528,7 @@
         ]
       },
       "createdAt": 1789393237087,
-      "updatedAt": 1789748792236,
+      "updatedAt": 1789748890799,
       "nameSource": null
     },
     {
@@ -9655,7 +9655,7 @@
         ]
       },
       "createdAt": 1789393214949,
-      "updatedAt": 1789748792236,
+      "updatedAt": 1789748890799,
       "nameSource": "machine-translation"
     },
     {
@@ -9805,7 +9805,7 @@
         ]
       },
       "createdAt": 1789393174094,
-      "updatedAt": 1789748792236,
+      "updatedAt": 1789748890799,
       "nameSource": "machine-translation"
     },
     {
@@ -9936,7 +9936,7 @@
         ]
       },
       "createdAt": 1789393166062,
-      "updatedAt": 1789748792236,
+      "updatedAt": 1789748890799,
       "nameSource": "machine-translation"
     },
     {
@@ -10061,7 +10061,7 @@
         ]
       },
       "createdAt": 1789393151629,
-      "updatedAt": 1789748792236,
+      "updatedAt": 1789748890799,
       "nameSource": null
     },
     {
@@ -10183,7 +10183,7 @@
         ]
       },
       "createdAt": 1789393144482,
-      "updatedAt": 1789748792236,
+      "updatedAt": 1789748890799,
       "nameSource": null
     },
     {
@@ -10287,7 +10287,7 @@
         "bundleIds": []
       },
       "createdAt": 1789393042116,
-      "updatedAt": 1789748792236,
+      "updatedAt": 1789748890799,
       "nameSource": null
     },
     {
@@ -10600,7 +10600,7 @@
         ]
       },
       "createdAt": 1789393018475,
-      "updatedAt": 1789748792236,
+      "updatedAt": 1789748890799,
       "nameSource": null
     },
     {
@@ -10830,7 +10830,7 @@
         ]
       },
       "createdAt": 1789393002188,
-      "updatedAt": 1789748792236,
+      "updatedAt": 1789748890799,
       "nameSource": null
     },
     {
@@ -10975,7 +10975,7 @@
         ]
       },
       "createdAt": 1789392991099,
-      "updatedAt": 1789748792236,
+      "updatedAt": 1789748890799,
       "nameSource": "machine-translation"
     },
     {
@@ -11107,7 +11107,7 @@
         ]
       },
       "createdAt": 1789392974172,
-      "updatedAt": 1789748792236,
+      "updatedAt": 1789748890799,
       "nameSource": "machine-translation"
     },
     {
@@ -11218,7 +11218,7 @@
         ]
       },
       "createdAt": 1789392915340,
-      "updatedAt": 1789748792236,
+      "updatedAt": 1789748890799,
       "nameSource": "machine-translation"
     },
     {
@@ -11345,7 +11345,7 @@
         ]
       },
       "createdAt": 1789392905832,
-      "updatedAt": 1789748792236,
+      "updatedAt": 1789748890799,
       "nameSource": null
     },
     {
@@ -11468,7 +11468,7 @@
         "bundleIds": []
       },
       "createdAt": 1789392897440,
-      "updatedAt": 1789748792236,
+      "updatedAt": 1789748890799,
       "nameSource": null
     },
     {
@@ -11639,7 +11639,7 @@
         ]
       },
       "createdAt": 1789392887672,
-      "updatedAt": 1789748792236,
+      "updatedAt": 1789748890799,
       "nameSource": "machine-translation"
     },
     {
@@ -11836,7 +11836,7 @@
         ]
       },
       "createdAt": 1789392876650,
-      "updatedAt": 1789748792236,
+      "updatedAt": 1789748890799,
       "nameSource": "machine-translation"
     },
     {
@@ -11963,7 +11963,7 @@
         "bundleIds": []
       },
       "createdAt": 1789391936262,
-      "updatedAt": 1789748792236,
+      "updatedAt": 1789748890799,
       "nameSource": "machine-translation"
     },
     {
@@ -12067,7 +12067,7 @@
         ]
       },
       "createdAt": 1789289423724,
-      "updatedAt": 1789748792236,
+      "updatedAt": 1789748890799,
       "nameSource": null
     },
     {
@@ -12212,7 +12212,7 @@
         ]
       },
       "createdAt": 1789289416953,
-      "updatedAt": 1789748792236,
+      "updatedAt": 1789748890799,
       "nameSource": "machine-translation"
     },
     {
@@ -12508,7 +12508,7 @@
         "bundleIds": []
       },
       "createdAt": 1789289393679,
-      "updatedAt": 1789748792236,
+      "updatedAt": 1789748890799,
       "nameSource": "machine-translation"
     },
     {
@@ -12642,7 +12642,7 @@
         ]
       },
       "createdAt": 1789289357467,
-      "updatedAt": 1789748792236,
+      "updatedAt": 1789748890799,
       "nameSource": null
     },
     {
@@ -12786,7 +12786,7 @@
         "bundleIds": []
       },
       "createdAt": 1789289347989,
-      "updatedAt": 1789748792236,
+      "updatedAt": 1789748890799,
       "nameSource": "machine-translation"
     },
     {
@@ -12913,7 +12913,7 @@
         ]
       },
       "createdAt": 1789289330600,
-      "updatedAt": 1789748792236,
+      "updatedAt": 1789748890799,
       "nameSource": null
     },
     {
@@ -13128,7 +13128,7 @@
         ]
       },
       "createdAt": 1789289322471,
-      "updatedAt": 1789748792236,
+      "updatedAt": 1789748890799,
       "nameSource": null
     },
     {
@@ -13273,7 +13273,7 @@
         ]
       },
       "createdAt": 1789289296723,
-      "updatedAt": 1789748792236,
+      "updatedAt": 1789748890799,
       "nameSource": "machine-translation"
     },
     {
@@ -13397,7 +13397,7 @@
         ]
       },
       "createdAt": 1789289279165,
-      "updatedAt": 1789748792237,
+      "updatedAt": 1789748890799,
       "nameSource": null
     },
     {
@@ -13521,7 +13521,7 @@
         ]
       },
       "createdAt": 1789289272898,
-      "updatedAt": 1789748792237,
+      "updatedAt": 1789748890799,
       "nameSource": "machine-translation"
     },
     {
@@ -13650,7 +13650,7 @@
         ]
       },
       "createdAt": 1789289231546,
-      "updatedAt": 1789748792237,
+      "updatedAt": 1789748890799,
       "nameSource": "machine-translation"
     },
     {
@@ -13760,7 +13760,7 @@
         ]
       },
       "createdAt": 1789289193248,
-      "updatedAt": 1789748792237,
+      "updatedAt": 1789748890799,
       "nameSource": null
     },
     {
@@ -13962,7 +13962,7 @@
         ]
       },
       "createdAt": 1789289175348,
-      "updatedAt": 1789748792237,
+      "updatedAt": 1789748890799,
       "nameSource": null
     },
     {
@@ -14102,7 +14102,7 @@
         ]
       },
       "createdAt": 1789289162929,
-      "updatedAt": 1789748792237,
+      "updatedAt": 1789748890799,
       "nameSource": null
     },
     {
@@ -14212,7 +14212,7 @@
         "bundleIds": []
       },
       "createdAt": 1789289157480,
-      "updatedAt": 1789748792237,
+      "updatedAt": 1789748890799,
       "nameSource": "machine-translation"
     },
     {
@@ -14399,7 +14399,7 @@
         "bundleIds": []
       },
       "createdAt": 1789289149519,
-      "updatedAt": 1789748792237,
+      "updatedAt": 1789748890799,
       "nameSource": null
     },
     {
@@ -14507,7 +14507,7 @@
         ]
       },
       "createdAt": 1789289142782,
-      "updatedAt": 1789748792237,
+      "updatedAt": 1789748890799,
       "nameSource": "machine-translation"
     },
     {
@@ -14614,7 +14614,7 @@
         ]
       },
       "createdAt": 1789289137494,
-      "updatedAt": 1789748792237,
+      "updatedAt": 1789748890799,
       "nameSource": null
     },
     {
@@ -14780,7 +14780,7 @@
         ]
       },
       "createdAt": 1789289131662,
-      "updatedAt": 1789748792237,
+      "updatedAt": 1789748890799,
       "nameSource": "machine-translation"
     },
     {
@@ -14884,7 +14884,7 @@
         ]
       },
       "createdAt": 1789289123766,
-      "updatedAt": 1789748792237,
+      "updatedAt": 1789748890799,
       "nameSource": null
     },
     {
@@ -15154,7 +15154,7 @@
         "bundleIds": []
       },
       "createdAt": 1789289117479,
-      "updatedAt": 1789748792237,
+      "updatedAt": 1789748890799,
       "nameSource": "machine-translation"
     },
     {
@@ -15289,7 +15289,7 @@
         ]
       },
       "createdAt": 1789289111324,
-      "updatedAt": 1789748792237,
+      "updatedAt": 1789748890799,
       "nameSource": "machine-translation"
     },
     {
@@ -15519,7 +15519,7 @@
         ]
       },
       "createdAt": 1789288866643,
-      "updatedAt": 1789748792237,
+      "updatedAt": 1789748890799,
       "nameSource": null
     },
     {
@@ -15625,7 +15625,7 @@
         ]
       },
       "createdAt": 1789288713492,
-      "updatedAt": 1789748792237,
+      "updatedAt": 1789748890799,
       "nameSource": null
     },
     {
@@ -15757,7 +15757,7 @@
         ]
       },
       "createdAt": 1789288699206,
-      "updatedAt": 1789748792237,
+      "updatedAt": 1789748890799,
       "nameSource": "machine-translation"
     },
     {
@@ -15896,7 +15896,7 @@
         ]
       },
       "createdAt": 1789288687871,
-      "updatedAt": 1789748792237,
+      "updatedAt": 1789748890799,
       "nameSource": null
     },
     {
@@ -16033,7 +16033,7 @@
         "bundleIds": []
       },
       "createdAt": 1789288670962,
-      "updatedAt": 1789748792237,
+      "updatedAt": 1789748890799,
       "nameSource": "machine-translation"
     },
     {
@@ -16148,7 +16148,7 @@
         ]
       },
       "createdAt": 1789288651138,
-      "updatedAt": 1789748792237,
+      "updatedAt": 1789748890799,
       "nameSource": "machine-translation"
     },
     {
@@ -16261,7 +16261,7 @@
         ]
       },
       "createdAt": 1789288633473,
-      "updatedAt": 1789748792237,
+      "updatedAt": 1789748890799,
       "nameSource": "machine-translation"
     },
     {
@@ -16408,7 +16408,7 @@
         ]
       },
       "createdAt": 1789288621819,
-      "updatedAt": 1789748792237,
+      "updatedAt": 1789748890799,
       "nameSource": null
     },
     {
@@ -16560,7 +16560,7 @@
         ]
       },
       "createdAt": 1789288498969,
-      "updatedAt": 1789748792237,
+      "updatedAt": 1789748890799,
       "nameSource": null
     },
     {
@@ -16855,7 +16855,7 @@
         ]
       },
       "createdAt": 1789288476867,
-      "updatedAt": 1789748792237,
+      "updatedAt": 1789748890799,
       "nameSource": "machine-translation"
     },
     {
@@ -17162,7 +17162,7 @@
         ]
       },
       "createdAt": 1789288431803,
-      "updatedAt": 1789748792237,
+      "updatedAt": 1789748890799,
       "nameSource": null
     },
     {
@@ -17358,7 +17358,7 @@
         ]
       },
       "createdAt": 1789288422502,
-      "updatedAt": 1789748792237,
+      "updatedAt": 1789748890799,
       "nameSource": null
     },
     {
@@ -17554,7 +17554,7 @@
         ]
       },
       "createdAt": 1789288315262,
-      "updatedAt": 1789748792237,
+      "updatedAt": 1789748890799,
       "nameSource": null
     },
     {
@@ -17732,7 +17732,7 @@
         ]
       },
       "createdAt": 1789288295688,
-      "updatedAt": 1789748792237,
+      "updatedAt": 1789748890799,
       "nameSource": "machine-translation"
     },
     {
@@ -18004,7 +18004,7 @@
         ]
       },
       "createdAt": 1789288267285,
-      "updatedAt": 1789748792237,
+      "updatedAt": 1789748890799,
       "nameSource": "machine-translation"
     },
     {
@@ -18135,7 +18135,7 @@
         ]
       },
       "createdAt": 1789288255996,
-      "updatedAt": 1789748792237,
+      "updatedAt": 1789748890799,
       "nameSource": "machine-translation"
     },
     {
@@ -18270,7 +18270,7 @@
         ]
       },
       "createdAt": 1789288227339,
-      "updatedAt": 1789748792237,
+      "updatedAt": 1789748890799,
       "nameSource": "machine-translation"
     },
     {
@@ -18382,7 +18382,7 @@
         ]
       },
       "createdAt": 1789288190456,
-      "updatedAt": 1789748792237,
+      "updatedAt": 1789748890799,
       "nameSource": null
     },
     {
@@ -18494,7 +18494,7 @@
         "bundleIds": []
       },
       "createdAt": 1789287675940,
-      "updatedAt": 1789748792237,
+      "updatedAt": 1789748890799,
       "nameSource": "machine-translation"
     },
     {
@@ -18641,7 +18641,7 @@
         ]
       },
       "createdAt": 1789200620526,
-      "updatedAt": 1789748792237,
+      "updatedAt": 1789748890799,
       "nameSource": "machine-translation"
     },
     {
@@ -18766,7 +18766,7 @@
         ]
       },
       "createdAt": 1789200615859,
-      "updatedAt": 1789748792237,
+      "updatedAt": 1789748890799,
       "nameSource": "machine-translation"
     },
     {
@@ -18938,7 +18938,7 @@
         ]
       },
       "createdAt": 1789200611013,
-      "updatedAt": 1789748792237,
+      "updatedAt": 1789748890799,
       "nameSource": null
     },
     {
@@ -19069,7 +19069,7 @@
         ]
       },
       "createdAt": 1789200607370,
-      "updatedAt": 1789748792237,
+      "updatedAt": 1789748890799,
       "nameSource": null
     },
     {
@@ -19221,7 +19221,7 @@
         "bundleIds": []
       },
       "createdAt": 1789200602339,
-      "updatedAt": 1789748792237,
+      "updatedAt": 1789748890799,
       "nameSource": "machine-translation"
     },
     {
@@ -19387,7 +19387,7 @@
         ]
       },
       "createdAt": 1789200598138,
-      "updatedAt": 1789748792237,
+      "updatedAt": 1789748890799,
       "nameSource": "machine-translation"
     },
     {
@@ -19506,7 +19506,7 @@
         "bundleIds": []
       },
       "createdAt": 1789200593716,
-      "updatedAt": 1789748792237,
+      "updatedAt": 1789748890799,
       "nameSource": "machine-translation"
     },
     {
@@ -19649,7 +19649,7 @@
         ]
       },
       "createdAt": 1789200589512,
-      "updatedAt": 1789748792237,
+      "updatedAt": 1789748890799,
       "nameSource": null
     },
     {
@@ -19760,7 +19760,7 @@
         "bundleIds": []
       },
       "createdAt": 1789200421989,
-      "updatedAt": 1789748792237,
+      "updatedAt": 1789748890799,
       "nameSource": "machine-translation"
     },
     {
@@ -19861,7 +19861,7 @@
         "bundleIds": []
       },
       "createdAt": 1789200412254,
-      "updatedAt": 1789748792237,
+      "updatedAt": 1789748890799,
       "nameSource": "machine-translation"
     },
     {
@@ -19971,7 +19971,7 @@
         "bundleIds": []
       },
       "createdAt": 1789200411045,
-      "updatedAt": 1789748792237,
+      "updatedAt": 1789748890799,
       "nameSource": "machine-translation"
     },
     {
@@ -20126,7 +20126,7 @@
         ]
       },
       "createdAt": 1789200409294,
-      "updatedAt": 1789748792237,
+      "updatedAt": 1789748890799,
       "nameSource": null
     },
     {
@@ -20252,7 +20252,7 @@
         ]
       },
       "createdAt": 1789200407468,
-      "updatedAt": 1789748792237,
+      "updatedAt": 1789748890799,
       "nameSource": null
     },
     {
@@ -20546,7 +20546,7 @@
         ]
       },
       "createdAt": 1789200405077,
-      "updatedAt": 1789748792237,
+      "updatedAt": 1789748890799,
       "nameSource": null
     },
     {
@@ -20736,7 +20736,7 @@
         ]
       },
       "createdAt": 1789200402590,
-      "updatedAt": 1789748792237,
+      "updatedAt": 1789748890799,
       "nameSource": null
     },
     {
@@ -20879,7 +20879,7 @@
         "bundleIds": []
       },
       "createdAt": 1789200398979,
-      "updatedAt": 1789748792237,
+      "updatedAt": 1789748890799,
       "nameSource": null
     },
     {
@@ -20987,7 +20987,7 @@
         ]
       },
       "createdAt": 1789200396557,
-      "updatedAt": 1789748792237,
+      "updatedAt": 1789748890799,
       "nameSource": "machine-translation"
     },
     {
@@ -21108,7 +21108,7 @@
         "bundleIds": []
       },
       "createdAt": 1789200394758,
-      "updatedAt": 1789748792237,
+      "updatedAt": 1789748890799,
       "nameSource": "machine-translation"
     },
     {
@@ -21234,7 +21234,7 @@
         ]
       },
       "createdAt": 1789200389919,
-      "updatedAt": 1789748792237,
+      "updatedAt": 1789748890799,
       "nameSource": "machine-translation"
     },
     {
@@ -21357,7 +21357,7 @@
         ]
       },
       "createdAt": 1789200385710,
-      "updatedAt": 1789748792237,
+      "updatedAt": 1789748890799,
       "nameSource": "machine-translation"
     },
     {
@@ -21481,7 +21481,7 @@
         ]
       },
       "createdAt": 1789200382652,
-      "updatedAt": 1789748792237,
+      "updatedAt": 1789748890799,
       "nameSource": "machine-translation"
     },
     {
@@ -21621,7 +21621,7 @@
         ]
       },
       "createdAt": 1789200377845,
-      "updatedAt": 1789748792237,
+      "updatedAt": 1789748890799,
       "nameSource": null
     },
     {
@@ -21754,7 +21754,7 @@
         ]
       },
       "createdAt": 1789200373586,
-      "updatedAt": 1789748792237,
+      "updatedAt": 1789748890799,
       "nameSource": null
     },
     {
@@ -21879,7 +21879,7 @@
         "bundleIds": []
       },
       "createdAt": 1789200371171,
-      "updatedAt": 1789748792237,
+      "updatedAt": 1789748890799,
       "nameSource": "machine-translation"
     },
     {
@@ -21986,7 +21986,7 @@
         ]
       },
       "createdAt": 1789200367552,
-      "updatedAt": 1789748792237,
+      "updatedAt": 1789748890799,
       "nameSource": null
     },
     {
@@ -22111,7 +22111,7 @@
         ]
       },
       "createdAt": 1789200363318,
-      "updatedAt": 1789748792237,
+      "updatedAt": 1789748890799,
       "nameSource": "machine-translation"
     },
     {
@@ -22220,7 +22220,7 @@
         ]
       },
       "createdAt": 1789200357301,
-      "updatedAt": 1789748792237,
+      "updatedAt": 1789748890799,
       "nameSource": "machine-translation"
     },
     {
@@ -22455,7 +22455,7 @@
         ]
       },
       "createdAt": 1789200354279,
-      "updatedAt": 1789748792237,
+      "updatedAt": 1789748890799,
       "nameSource": "machine-translation"
     },
     {
@@ -22612,7 +22612,7 @@
         "bundleIds": []
       },
       "createdAt": 1789200350053,
-      "updatedAt": 1789748792237,
+      "updatedAt": 1789748890799,
       "nameSource": null
     },
     {
@@ -22743,7 +22743,7 @@
         "bundleIds": []
       },
       "createdAt": 1789200345183,
-      "updatedAt": 1789748792237,
+      "updatedAt": 1789748890799,
       "nameSource": "machine-translation"
     },
     {
@@ -22871,7 +22871,7 @@
         ]
       },
       "createdAt": 1789200336641,
-      "updatedAt": 1789748792237,
+      "updatedAt": 1789748890799,
       "nameSource": "machine-translation"
     },
     {
@@ -23178,7 +23178,7 @@
         ]
       },
       "createdAt": 1789200309480,
-      "updatedAt": 1789748792237,
+      "updatedAt": 1789748890799,
       "nameSource": "machine-translation"
     },
     {
@@ -23301,7 +23301,7 @@
         ]
       },
       "createdAt": 1789200306373,
-      "updatedAt": 1789748792237,
+      "updatedAt": 1789748890799,
       "nameSource": "machine-translation"
     },
     {
@@ -23450,7 +23450,7 @@
         ]
       },
       "createdAt": 1789200303362,
-      "updatedAt": 1789748792237,
+      "updatedAt": 1789748890799,
       "nameSource": null
     },
     {
@@ -23549,7 +23549,7 @@
         ]
       },
       "createdAt": 1789200296684,
-      "updatedAt": 1789748792237,
+      "updatedAt": 1789748890799,
       "nameSource": "machine-translation"
     },
     {
@@ -23861,7 +23861,7 @@
         ]
       },
       "createdAt": 1789200291860,
-      "updatedAt": 1789748792237,
+      "updatedAt": 1789748890799,
       "nameSource": null
     },
     {
@@ -24032,7 +24032,7 @@
         ]
       },
       "createdAt": 1789200286347,
-      "updatedAt": 1789748792237,
+      "updatedAt": 1789748890799,
       "nameSource": "machine-translation"
     },
     {
@@ -24242,7 +24242,7 @@
         ]
       },
       "createdAt": 1789200283975,
-      "updatedAt": 1789748792237,
+      "updatedAt": 1789748890799,
       "nameSource": null
     },
     {
@@ -24538,7 +24538,7 @@
         ]
       },
       "createdAt": 1789200280943,
-      "updatedAt": 1789748792237,
+      "updatedAt": 1789748890799,
       "nameSource": "machine-translation"
     },
     {
@@ -24831,7 +24831,7 @@
         ]
       },
       "createdAt": 1789200275496,
-      "updatedAt": 1789748792237,
+      "updatedAt": 1789748890799,
       "nameSource": null
     },
     {
@@ -24982,7 +24982,7 @@
         ]
       },
       "createdAt": 1789200270711,
-      "updatedAt": 1789748792237,
+      "updatedAt": 1789748890799,
       "nameSource": "machine-translation"
     },
     {
@@ -25106,7 +25106,7 @@
         ]
       },
       "createdAt": 1789200267638,
-      "updatedAt": 1789748792237,
+      "updatedAt": 1789748890799,
       "nameSource": "machine-translation"
     },
     {
@@ -25421,7 +25421,7 @@
         ]
       },
       "createdAt": 1789200254926,
-      "updatedAt": 1789748792237,
+      "updatedAt": 1789748890799,
       "nameSource": "machine-translation"
     },
     {
@@ -25512,7 +25512,7 @@
         "bundleIds": []
       },
       "createdAt": 1789200248257,
-      "updatedAt": 1789748792237,
+      "updatedAt": 1789748890799,
       "nameSource": "machine-translation"
     },
     {
@@ -25809,7 +25809,7 @@
         ]
       },
       "createdAt": 1789200245276,
-      "updatedAt": 1789748792237,
+      "updatedAt": 1789748890799,
       "nameSource": "machine-translation"
     },
     {
@@ -25921,7 +25921,7 @@
         ]
       },
       "createdAt": 1789200242244,
-      "updatedAt": 1789748792237,
+      "updatedAt": 1789748890799,
       "nameSource": "machine-translation"
     },
     {
@@ -26057,7 +26057,7 @@
         ]
       },
       "createdAt": 1789200239151,
-      "updatedAt": 1789748792237,
+      "updatedAt": 1789748890799,
       "nameSource": null
     },
     {
@@ -26163,7 +26163,7 @@
         ]
       },
       "createdAt": 1789200235552,
-      "updatedAt": 1789748792237,
+      "updatedAt": 1789748890799,
       "nameSource": "machine-translation"
     },
     {
@@ -26291,7 +26291,7 @@
         "bundleIds": []
       },
       "createdAt": 1789200231926,
-      "updatedAt": 1789748792237,
+      "updatedAt": 1789748890799,
       "nameSource": "machine-translation"
     },
     {
@@ -26582,7 +26582,7 @@
         ]
       },
       "createdAt": 1789200209151,
-      "updatedAt": 1789748792237,
+      "updatedAt": 1789748890799,
       "nameSource": null
     },
     {
@@ -26706,7 +26706,7 @@
         ]
       },
       "createdAt": 1789200194326,
-      "updatedAt": 1789748792237,
+      "updatedAt": 1789748890799,
       "nameSource": "machine-translation"
     },
     {
@@ -26812,7 +26812,7 @@
         "bundleIds": []
       },
       "createdAt": 1789199792368,
-      "updatedAt": 1789748792237,
+      "updatedAt": 1789748890799,
       "nameSource": "machine-translation"
     },
     {
@@ -27027,7 +27027,7 @@
         ]
       },
       "createdAt": 1789199783608,
-      "updatedAt": 1789748792237,
+      "updatedAt": 1789748890799,
       "nameSource": "machine-translation"
     },
     {
@@ -27133,7 +27133,7 @@
         ]
       },
       "createdAt": 1789199777249,
-      "updatedAt": 1789748792237,
+      "updatedAt": 1789748890799,
       "nameSource": "machine-translation"
     },
     {
@@ -27311,7 +27311,7 @@
         ]
       },
       "createdAt": 1789199750962,
-      "updatedAt": 1789748792237,
+      "updatedAt": 1789748890799,
       "nameSource": "machine-translation"
     },
     {
@@ -27420,7 +27420,7 @@
         "bundleIds": []
       },
       "createdAt": 1789199716591,
-      "updatedAt": 1789748792237,
+      "updatedAt": 1789748890799,
       "nameSource": "machine-translation"
     },
     {
@@ -27578,7 +27578,7 @@
         "bundleIds": []
       },
       "createdAt": 1789199704429,
-      "updatedAt": 1789748792237,
+      "updatedAt": 1789748890799,
       "nameSource": "machine-translation"
     },
     {
@@ -27864,7 +27864,7 @@
         ]
       },
       "createdAt": 1789199688864,
-      "updatedAt": 1789748792237,
+      "updatedAt": 1789748890799,
       "nameSource": null
     },
     {
@@ -28159,7 +28159,7 @@
         ]
       },
       "createdAt": 1789199682401,
-      "updatedAt": 1789748792237,
+      "updatedAt": 1789748890799,
       "nameSource": "machine-translation"
     },
     {
@@ -28261,7 +28261,7 @@
         ]
       },
       "createdAt": 1789199671365,
-      "updatedAt": 1789748792237,
+      "updatedAt": 1789748890799,
       "nameSource": "machine-translation"
     },
     {
@@ -28385,7 +28385,7 @@
         ]
       },
       "createdAt": 1789199656265,
-      "updatedAt": 1789748792237,
+      "updatedAt": 1789748890799,
       "nameSource": null
     },
     {
@@ -28512,7 +28512,7 @@
         ]
       },
       "createdAt": 1789199650264,
-      "updatedAt": 1789748792237,
+      "updatedAt": 1789748890799,
       "nameSource": null
     },
     {
@@ -28648,7 +28648,7 @@
         ]
       },
       "createdAt": 1789199644423,
-      "updatedAt": 1789748792237,
+      "updatedAt": 1789748890799,
       "nameSource": null
     },
     {
@@ -28835,7 +28835,7 @@
         ]
       },
       "createdAt": 1789199632217,
-      "updatedAt": 1789748792237,
+      "updatedAt": 1789748890799,
       "nameSource": "machine-translation"
     },
     {
@@ -28988,7 +28988,7 @@
         ]
       },
       "createdAt": 1789199623232,
-      "updatedAt": 1789748792237,
+      "updatedAt": 1789748890799,
       "nameSource": null
     },
     {
@@ -29242,7 +29242,7 @@
         "bundleIds": []
       },
       "createdAt": 1789199605783,
-      "updatedAt": 1789748792237,
+      "updatedAt": 1789748890799,
       "nameSource": "machine-translation"
     },
     {
@@ -29341,7 +29341,7 @@
         "bundleIds": []
       },
       "createdAt": 1789199580443,
-      "updatedAt": 1789748792237,
+      "updatedAt": 1789748890799,
       "nameSource": "machine-translation"
     },
     {
@@ -29424,7 +29424,7 @@
         "bundleIds": []
       },
       "createdAt": 1789199571448,
-      "updatedAt": 1789748792237,
+      "updatedAt": 1789748890799,
       "nameSource": "machine-translation"
     },
     {
@@ -29574,7 +29574,7 @@
         "bundleIds": []
       },
       "createdAt": 1789199564670,
-      "updatedAt": 1789748792237,
+      "updatedAt": 1789748890799,
       "nameSource": null
     },
     {
@@ -29652,7 +29652,7 @@
         "bundleIds": []
       },
       "createdAt": 1789199555039,
-      "updatedAt": 1789748792237,
+      "updatedAt": 1789748890799,
       "nameSource": "machine-translation"
     },
     {
@@ -29788,7 +29788,7 @@
         ]
       },
       "createdAt": 1789199542539,
-      "updatedAt": 1789748792237,
+      "updatedAt": 1789748890799,
       "nameSource": "machine-translation"
     },
     {
@@ -29923,7 +29923,7 @@
         ]
       },
       "createdAt": 1789199532499,
-      "updatedAt": 1789748792237,
+      "updatedAt": 1789748890799,
       "nameSource": "machine-translation"
     },
     {
@@ -30022,7 +30022,7 @@
         "bundleIds": []
       },
       "createdAt": 1789199524386,
-      "updatedAt": 1789748792237,
+      "updatedAt": 1789748890799,
       "nameSource": "machine-translation"
     },
     {
@@ -30139,7 +30139,7 @@
         ]
       },
       "createdAt": 1789199516272,
-      "updatedAt": 1789748792237,
+      "updatedAt": 1789748890799,
       "nameSource": "machine-translation"
     },
     {
@@ -30243,7 +30243,7 @@
         "bundleIds": []
       },
       "createdAt": 1789199506479,
-      "updatedAt": 1789748792237,
+      "updatedAt": 1789748890799,
       "nameSource": "machine-translation"
     },
     {
@@ -30381,7 +30381,7 @@
         ]
       },
       "createdAt": 1789199455916,
-      "updatedAt": 1789748792237,
+      "updatedAt": 1789748890799,
       "nameSource": null
     },
     {
@@ -30482,7 +30482,7 @@
         "bundleIds": []
       },
       "createdAt": 1789199334456,
-      "updatedAt": 1789748792237,
+      "updatedAt": 1789748890799,
       "nameSource": "machine-translation"
     },
     {
@@ -30759,7 +30759,7 @@
         ]
       },
       "createdAt": 1789199221077,
-      "updatedAt": 1789748792237,
+      "updatedAt": 1789748890799,
       "nameSource": "machine-translation"
     },
     {
@@ -30997,7 +30997,7 @@
         ]
       },
       "createdAt": 1789199208155,
-      "updatedAt": 1789748792237,
+      "updatedAt": 1789748890799,
       "nameSource": null
     },
     {
@@ -31226,7 +31226,7 @@
         ]
       },
       "createdAt": 1789199195781,
-      "updatedAt": 1789748792237,
+      "updatedAt": 1789748890799,
       "nameSource": null
     },
     {
@@ -31336,7 +31336,7 @@
         ]
       },
       "createdAt": 1789199164496,
-      "updatedAt": 1789748792237,
+      "updatedAt": 1789748890799,
       "nameSource": null
     },
     {
@@ -31477,7 +31477,7 @@
         ]
       },
       "createdAt": 1789194107390,
-      "updatedAt": 1789748792237,
+      "updatedAt": 1789748890799,
       "nameSource": null
     },
     {
@@ -31648,7 +31648,7 @@
         ]
       },
       "createdAt": 1789194100122,
-      "updatedAt": 1789748792237,
+      "updatedAt": 1789748890799,
       "nameSource": null
     },
     {
@@ -31777,7 +31777,7 @@
         ]
       },
       "createdAt": 1789194090965,
-      "updatedAt": 1789748792237,
+      "updatedAt": 1789748890799,
       "nameSource": null
     },
     {
@@ -31910,7 +31910,7 @@
         ]
       },
       "createdAt": 1789194075102,
-      "updatedAt": 1789748792237,
+      "updatedAt": 1789748890799,
       "nameSource": "machine-translation"
     },
     {
@@ -32021,7 +32021,7 @@
         ]
       },
       "createdAt": 1789193285256,
-      "updatedAt": 1789748792237,
+      "updatedAt": 1789748890799,
       "nameSource": "machine-translation"
     },
     {
@@ -32125,7 +32125,7 @@
         ]
       },
       "createdAt": 1789193256380,
-      "updatedAt": 1789748792237,
+      "updatedAt": 1789748890799,
       "nameSource": "machine-translation"
     },
     {
@@ -32263,7 +32263,7 @@
         ]
       },
       "createdAt": 1789193138200,
-      "updatedAt": 1789748792237,
+      "updatedAt": 1789748890799,
       "nameSource": null
     },
     {
@@ -32408,7 +32408,7 @@
         ]
       },
       "createdAt": 1789193126410,
-      "updatedAt": 1789748792237,
+      "updatedAt": 1789748890799,
       "nameSource": null
     },
     {
@@ -32557,7 +32557,7 @@
         ]
       },
       "createdAt": 1789193117365,
-      "updatedAt": 1789748792237,
+      "updatedAt": 1789748890799,
       "nameSource": null
     },
     {
@@ -32654,7 +32654,7 @@
         ]
       },
       "createdAt": 1789193108997,
-      "updatedAt": 1789748792237,
+      "updatedAt": 1789748890799,
       "nameSource": "machine-translation"
     },
     {
@@ -32758,7 +32758,7 @@
         ]
       },
       "createdAt": 1789193099884,
-      "updatedAt": 1789748792237,
+      "updatedAt": 1789748890799,
       "nameSource": "machine-translation"
     },
     {
@@ -32862,7 +32862,7 @@
         ]
       },
       "createdAt": 1789193087637,
-      "updatedAt": 1789748792237,
+      "updatedAt": 1789748890799,
       "nameSource": "machine-translation"
     },
     {
@@ -32968,7 +32968,7 @@
         "bundleIds": []
       },
       "createdAt": 1789192967910,
-      "updatedAt": 1789748792237,
+      "updatedAt": 1789748890799,
       "nameSource": "machine-translation"
     },
     {
@@ -33148,7 +33148,7 @@
         ]
       },
       "createdAt": 1789192956054,
-      "updatedAt": 1789748792237,
+      "updatedAt": 1789748890799,
       "nameSource": null
     },
     {
@@ -33303,12 +33303,12 @@
         ]
       },
       "createdAt": 1789192947581,
-      "updatedAt": 1789748792237,
+      "updatedAt": 1789748890799,
       "nameSource": null
     }
   ],
   "source": "manual-sync",
-  "syncedAt": 1789748797451,
+  "syncedAt": 1789753531408,
   "gameCount": 219,
   "fingerprint": "1f8cae986a67a700",
   "syncedFrom": "https://ticianli.github.io"
