@@ -435,6 +435,11 @@ const TAG_BLOCK_RE = /<a\b[^>]*class="[^"]*\bapp_tag\b[^"]*"[^>]*>([\s\S]*?)<\/a
 const BUNDLE_ID_RE = /data-ds-bundleid="(\d+)"|data-bundleid="(\d+)"|bundleid="(\d+)"/gi;
 
 function parseUserTags(html) {
+  /* 【架构改动·彻底去掉款数上限】
+     旧实现 `if (tags.length >= 20) break;` —— 又是一次"猜个够大的数"。
+     实际上商店页的 app_tag 区块本身就是有限的（Steam 自己决定显示多少），
+     index 到"页面没有更多 app_tag"自然就停了。
+     所以直接去掉数量上限：**页面有多少就解析多少**，不再人为砍掉尾巴。 */
   const tags = [], seen = new Set();
   let m;
   TAG_BLOCK_RE.lastIndex = 0;
@@ -443,10 +448,6 @@ function parseUserTags(html) {
     if (!t || t === '+' || seen.has(t)) continue;
     seen.add(t);
     tags.push(t);
-    /* 【修复·款数限制】旧上限 20 会把商店页第 21 个之后的用户标签静默丢掉。
-       Steam 商店页通常展示 20～25 个 app_tag，热门大作甚至更多。
-       提到 60 基本可覆盖整页；真要再多也没有数据源了。 */
-    if (tags.length >= 60) break;
   }
   return tags;
 }
@@ -703,7 +704,15 @@ async function enrichStoreData(games) {
     stat.tried++;
     try {
       const html = await fetchStorePage(g.appid);
-      if (!g.details) g.details = defaultDetails();
+      /* 【修复】原来这里调用了未定义的 defaultDetails()，一旦某款游戏缺 details
+         就会 ReferenceError 直接崩掉整个刷新。改成内联的完整默认结构。 */
+      if (!g.details || typeof g.details !== 'object') {
+        g.details = {
+          genres: [], categories: [], featureTags: [], platforms: [],
+          developers: [], publishers: [], tags: [],
+          userTags: [], userTagsFetchedAt: null, bundleIds: []
+        };
+      }
       const tags = parseUserTags(html);
       const bundles = parseBundleIds(html);
       /* 诊断样本只在「真的解析出东西」时留一份，
