@@ -182,6 +182,17 @@ function check(n, c, x) { if (c) { pass++; console.log('  PASS  ' + n); } else {
   check('H-2 不再有硬编码 20000 切片', !/Math\.min\(rest\.length, 20000\)/.test(CI_CODE));
   check('I-1 maxTagFetch 默认 0（不限）', /maxTagFetch:\s*Number\(process\.env\.MAX_TAG_FETCH \|\| 0\)/.test(CI));
   check('I-2 maxGames 仍默认 0（不限）', /maxGames:\s*Number\(process\.env\.MAX_GAMES \|\| 0\)/.test(CI));
+  /* I-3：配额为 0 时不得被 slice 切成空数组（否则"不限"变成"一款都不抓"） */
+  check('I-3 配额切片有 maxTagFetch > 0 前置判断',
+    /if \(CFG\.maxTagFetch > 0 && todo\.length > CFG\.maxTagFetch\)/.test(CI));
+  /* I-4：上限哨兵 —— 把"页面原始 app_tag 节点数 vs 解析数"打进日志，
+     任何新的静默截断都会立刻在 CI 日志里显形。 */
+  check('I-4 有 app_tag 原始节点计数（上限哨兵）',
+    /stat\.rawTagNodes = \(stat\.rawTagNodes \|\| 0\) \+/.test(CI) && /stat\.maxRawTags = Math\.max/.test(CI));
+  check('I-5 哨兵会把"原始多于解析"标为疑似截断',
+    /stat\.tagTruncated = \(stat\.tagTruncated \|\| 0\) \+ 1;/.test(CI));
+  check('I-6 哨兵结论写进日志（无截断时也明确说明）',
+    /\[上限哨兵\] app_tag 原始节点/.test(CI) && /无截断（两者一致）。/.test(CI));
 
   /* ============ J. 硬编码数字收敛到 CONFIG ============ */
   console.log('\n=== J. CONFIG 常量收敛（可自查 / 可调）===');
