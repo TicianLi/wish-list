@@ -87,7 +87,9 @@ const CFG = {
   // 商店页（抓用户标签 / 捆绑包）的间隔更保守
   tagIntervalMs: Number(process.env.TAG_INTERVAL_MS || 1100),
   // 单次运行最多抓几款游戏的标签（0 = 不限）；标签变化很慢，靠缓存分摊到多天
-  maxTagFetch: Number(process.env.MAX_TAG_FETCH || 150),
+  // 【防饿死】默认值必须 ≥ 清单规模，否则排在配额外的游戏要等到下一轮才轮到。
+  // 取 0 = 不限：由 TAG_TTL_DAYS(30 天) 缓存自然分摊日常开销，新游戏永远当轮就抓。
+  maxTagFetch: Number(process.env.MAX_TAG_FETCH || 0),
   // 标签缓存有效期（天）
   tagTtlDays: Number(process.env.TAG_TTL_DAYS || 30),
   // 是否用 CI 机翻补齐缺失的中文名（CI 网络可达翻译接口，浏览器侧常常不可达）
@@ -441,7 +443,10 @@ function parseUserTags(html) {
     if (!t || t === '+' || seen.has(t)) continue;
     seen.add(t);
     tags.push(t);
-    if (tags.length >= 20) break;
+    /* 【修复·款数限制】旧上限 20 会把商店页第 21 个之后的用户标签静默丢掉。
+       Steam 商店页通常展示 20～25 个 app_tag，热门大作甚至更多。
+       提到 60 基本可覆盖整页；真要再多也没有数据源了。 */
+    if (tags.length >= 60) break;
   }
   return tags;
 }
@@ -488,7 +493,11 @@ function purchaseZoneOf(html) {
   if (pi === -1) return null;
   const rest = html.slice(pi);
   const b = rest.search(/id="game_meta_data"|id="game_area_description"|class="app_tag"/);
-  const end = b === -1 ? Math.min(rest.length, 20000) : Math.min(b, 20000);
+  /* 【修复·款数限制】旧上限 20000 字符：购买区里若列了较多版本 / 套餐 /
+     DLC 组合，倒计时节点可能被切到窗口外，表现为"促销中却读不到截止时间"。
+     提到 60000 基本覆盖整段购买区，同时仍防止把整页塞进正则。 */
+  const CAP = 60000;
+  const end = b === -1 ? Math.min(rest.length, CAP) : Math.min(b, CAP);
   return rest.slice(0, end);
 }
 /* 变体 B：本地化「文字日期」。
@@ -631,26 +640,61 @@ function storePageNeedRefresh(g) {
   }
   return false;
 }
-/* 「促销中且缺截止时间」的排最前，保证单次配额花在用户看得见的改进上 */
+/* 商店页抓取的排队优先级（数字越小越先抓）。
+   必须保证「每次运行都会推进」，不能有游戏永远排不到 —— 这是用户明确要求
+   「以后再有新游戏都能正常获取数据」的核心。
+
+   优先级从高到低：
+     0. 正在促销但没有折扣截止时间 —— 用户直接看得见的空缺
+     1. 从未抓过标签的新游戏（userTagsFetchedAt 为空）
+        ★ 必须排在「标签过期」之前：新游戏是用户刚加进来的，
+          如果被几十上百款"标签过期"的旧游戏挤在后面，可能连着好几天轮不到。
+     2. 标签已过期需要重抓的旧游戏
+        ★ 再过期时间升序：越久没抓的越先抓，天然形成轮转（round-robin），
+          不会出现"每次都是同一批排前面"的饥饿现象。
+*/
 function storePagePriority(g) {
-  return (g.price && g.price.isOnSale && toMs(g.price.discountExpiration) == null) ? 0 : 1;
+  const saleNoDeadline = (g.price && g.price.isOnSale && toMs(g.price.discountExpiration) == null) ? 0 : 1;
+  return saleNoDeadline * 100 + tagQueueTier(g);
+}
+function tagQueueTier(g) {
+  const d = g.details || {};
+  if (!Array.isArray(d.userTags) || !d.userTags.length) return 0;   // 新游戏 / 从没抓到过
+  if (!d.userTagsFetchedAt) return 0;                               // 同上（标记缺失）
+  return 1;                                                          // 抓过但已过期
+}
+/* 同档位内部按「上次抓取时间」升序 —— 最久没抓的排最前，形成轮转 */
+function storePageOrder(a, b) {
+  const p = storePagePriority(a) - storePagePriority(b);
+  if (p !== 0) return p;
+  const ta = (a.details && a.details.userTagsFetchedAt) || 0;
+  const tb = (b.details && b.details.userTagsFetchedAt) || 0;
+  return ta - tb;
 }
 
 async function enrichStoreData(games) {
   const stat = {
     tried: 0, ok: 0, failed: 0, tags: 0, withTags: 0, bundles: 0, deadlines: 0, needDeadline: 0,
-    byText: 0, byKeyword: 0,
+    byText: 0, byKeyword: 0, newGames: 0, deferred: 0,
     diagTagHtml: null, diagBundleHtml: null, diagDeadline: null, diagDeadlineNoMatch: null,
     diagNoMatchGame: null, diagNoMatchCountdown: null
   };
   const all = games.filter(g => g && g.appid);
   stat.needDeadline = all.filter(g => g.price && g.price.isOnSale && toMs(g.price.discountExpiration) == null).length;
   let todo = all.filter(g => storePageNeedRefresh(g));
-  todo.sort((a, b) => storePagePriority(a) - storePagePriority(b));
+  stat.newGames = todo.filter(g => tagQueueTier(g) === 0).length;
+  todo.sort(storePageOrder);
   if (CFG.maxTagFetch > 0 && todo.length > CFG.maxTagFetch) {
-    log(`商店页待补 ${todo.length} 款（其中促销中却缺折扣截止时间的 ${stat.needDeadline} 款），` +
-        `本次按 MAX_TAG_FETCH 只处理 ${CFG.maxTagFetch} 款（缺截止时间的已排到最前）。`);
+    stat.deferred = todo.length - CFG.maxTagFetch;
+    log(`商店页待补 ${todo.length} 款（促销中缺折扣截止 ${stat.needDeadline} 款、` +
+        `从未抓过标签的新游戏 ${stat.newGames} 款），本次配额 ${CFG.maxTagFetch} 款；` +
+        `剩余 ${stat.deferred} 款排到下次（新游戏已优先，且按最久未抓排序，不会饿死）。`);
     todo = todo.slice(0, CFG.maxTagFetch);
+    /* 兜底提醒：如果配额已经连"新游戏"都装不下，说明该调大 MAX_TAG_FETCH 了 */
+    if (stat.newGames > CFG.maxTagFetch) {
+      warn(`⚠ 本次有 ${stat.newGames} 款新游戏从未抓过标签，但配额只有 ${CFG.maxTagFetch} 款。` +
+           `建议把 MAX_TAG_FETCH 调大到 ${stat.newGames + 50} 左右（仓库 Settings → Variables）。`);
+    }
   }
   if (!todo.length) return stat;
 
@@ -719,6 +763,9 @@ function printStoreDiag(stat) {
       `其中 ${stat.withTags} 款解析出用户标签（共 ${stat.tags} 个）、捆绑包标记 ${stat.bundles} 个、` +
       `补上折扣截止时间 ${stat.deadlines} 款（其中倒计时文字日期 ${stat.byText} 款、` +
       `购买区关键词日期 ${stat.byKeyword} 款；清单里促销却缺截止时间的共 ${stat.needDeadline} 款）`);
+  /* 队列健康度：让「新游戏有没有被照顾到」一眼可见 */
+  log(`[诊断·商店页] 队列：从未抓过标签的新游戏 ${stat.newGames} 款` +
+      (stat.deferred ? `，本次配额用尽，剩余 ${stat.deferred} 款顺延到下次运行` : '，本次全部处理完'));
   if (stat.diagTagHtml) log('[诊断·商店页] 标签区首段 HTML：' + stat.diagTagHtml);
   if (stat.diagBundleHtml) log('[诊断·商店页] 捆绑包标记首段 HTML：' + stat.diagBundleHtml);
   if (stat.diagDeadline) log('[诊断·商店页] 折扣倒计时命中：' + stat.diagDeadline);
