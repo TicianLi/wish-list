@@ -472,6 +472,7 @@ body.gate-locked .modal{visibility:hidden !important;}
 .tagcloud .tc b{font-weight:600;color:var(--accent);font-size:11px;}
 .tagcloud .tc .x{color:var(--muted);font-size:10px;}
 .tagcloud .tc-empty{font-size:11.5px;color:var(--muted);}
+.tagcloud .tc-toggle{background:transparent;border:1px dashed var(--accent-dim);color:var(--accent);cursor:pointer;font-size:11.5px;}
 .budget-out{margin-top:9px;border-top:1px dashed #22334a;padding-top:9px;}
 .budget-out:empty{display:none;}
 .budget-sum{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:8px;}
@@ -957,7 +958,7 @@ const CONFIG = {
   FILTER_KEY: 'sw_filters_v3',
   TRANS_KEY: 'sw_trans_cache',
   STEAM_INTERVAL: 600,          // Steam 请求最小间隔
-  MAX_DLC: 15,                  // 每个游戏最多抓取的 DLC 数
+  MAX_DLC: 60,                  // 每个游戏最多抓取的 DLC 数（旧值 15 会把《模拟人生》这类 DLC 大户截断）
   PROXY_BUILDERS: {
     allorigins:    { build: u => 'https://api.allorigins.win/raw?url=' + encodeURIComponent(u) },
     alloriginsget: { build: u => 'https://api.allorigins.win/get?url=' + encodeURIComponent(u), unwrap: 'alloriginsget' },
@@ -998,6 +999,7 @@ const STATE = {
   transCache: {},
   tagKind: 'genre',               // 「类别」列当前展示的标签类别（需求 #1）
   groupBySeries: false,           // 是否按系列分组显示（问题 #2：默认关闭，只认用户显式选择）
+  showAllTags: false,             // 标签云是否展开全部（默认只显示前 40 个高频标签）
   renderLimit: 300                // 表格单页渲染上限（大清单分页，避免卡顿）
 };
 
@@ -1771,8 +1773,8 @@ function extractDetails(data) {
   d.reviewTotal = (data.recommendations && Number(data.recommendations.total)) || null;
   const langs = String(data.supported_languages || '');
   d.chineseSupport = langs.indexOf('简体中文') !== -1 || langs.indexOf('Simplified Chinese') !== -1;
-  // 简介原文优先短简介，再退到 about_the_game
-  d.descriptionOriginal = stripHtml(data.short_description || '') || clampText(stripHtml(data.about_the_game || ''), 300);
+  // 简介原文优先短简介，再退到 about_the_game（旧实现退路只留 300 字，长简介被截掉一多半）
+  d.descriptionOriginal = stripHtml(data.short_description || '') || clampText(stripHtml(data.about_the_game || ''), 1200);
   d.description = d.descriptionOriginal;
   d.descriptionTranslated = false;
   return d;
@@ -2245,7 +2247,10 @@ async function fetchDlcEntry(appid, opts) {
     name: data.name || ('DLC ' + appid),
     price,
     shortDescription: stripHtml(data.short_description || ''),
-    description: clampText(description, 160),
+    /* 【修复·款数限制】旧实现把 DLC 简介 clamp 到 160 字就存下来，
+       超出的部分直接丢失（连原文都没留）。现在：description 保留完整正文，
+       表格里显示时再截断；originalDescription 也留全，详情页可看全貌。 */
+    description: description,
     kind: classifyDLC((data.name || '') + ' ' + (data.short_description || '') + ' ' + (data.genres || []).map(g => g.description).join(' ')),
     type: data.type || 'dlc',
     originalDescription: orig,
@@ -2256,7 +2261,12 @@ async function fetchDlcEntry(appid, opts) {
 
 async function fetchDlcList(mainAppid, dlcIds, cancelled, opts) {
   const out = [];
-  const ids = (Array.isArray(dlcIds) ? dlcIds : []).slice(0, CONFIG.MAX_DLC);
+  const all = Array.isArray(dlcIds) ? dlcIds : [];
+  /* 【修复·款数限制】旧实现直接 slice(0, 15) 静默丢弃多余的 DLC，
+     且没有任何提示 —— 用户看到「12个DLC」以为就是全部，其实是截断值。
+     现在：超出上限时明确告知还剩多少个没抓，并把上限提到 60（覆盖绝大多数游戏）。 */
+  const ids = all.slice(0, CONFIG.MAX_DLC);
+  const omitted = all.length - ids.length;
   for (let i = 0; i < ids.length; i++) {
     if (cancelled && cancelled()) break;
     if (opts && opts.signal && opts.signal.aborted) break;
@@ -2268,6 +2278,10 @@ async function fetchDlcList(mainAppid, dlcIds, cancelled, opts) {
       console.warn('DLC 获取失败', ids[i], e);
       toast('DLC（' + ids[i] + '）获取失败：' + e.message, 'warn');
     }
+  }
+  if (omitted > 0) {
+    toast('该游戏共有 ' + all.length + ' 个 DLC，为控制耗时只抓取了前 ' + ids.length +
+      ' 个（其余 ' + omitted + ' 个未抓）。', 'info', 6000);
   }
   return out;
 }
@@ -2330,6 +2344,7 @@ function scheduleDlcFetch(g, dlcIds, quiet) {
       const cur = findGame(appid);
       if (cur && list.length) {
         cur.dlcList = list;
+        cur.dlcTotal = dlcIds.length;   // Steam 实际返回的 DLC 总数（用于提示是否被截断）
         cur.updatedAt = nowMs();
         saveData();
         renderAll();
@@ -2909,13 +2924,15 @@ function handleOcrText(text) {
     box.appendChild(row);
     return;
   }
-  // 拆行 → 清洗 → 最多前 6 行
+  // 拆行 → 清洗 → 最多前 30 行（旧值 6 太少，一张长截图/整页文本的后半截会被静默丢掉）
   let lines = cleaned.split(/[\r\n]+/).map(l => l
       .replace(/https?:\/\/\S+/gi, '')
       .replace(/[【】\[\]{}()（）"'""''::;；,，。.!！?？|｜\\/@#￥$%^&*+=<>~`·—_-]/g, ' ')
       .replace(/\s+/g, ' ').trim())
     .filter(l => l.length >= 2 && !/^\d+$/.test(l));
-  lines = lines.slice(0, 6);
+  const OCR_MAX_LINES = 30;
+  const ocrOmitted = lines.length - OCR_MAX_LINES;
+  lines = lines.slice(0, OCR_MAX_LINES);
   if (!lines.length) {
     box.innerHTML = '<div class="empty-tip">未能从图片中识别出可用内容，识别原文：<br>' + esc(text) + '</div>';
     return;
@@ -2944,6 +2961,13 @@ function handleOcrText(text) {
     row.appendChild(span); row.appendChild(btn);
     box.appendChild(row);
   });
+  if (ocrOmitted > 0) {
+    const tip = document.createElement('div');
+    tip.className = 'empty-tip';
+    tip.textContent = '识别到 ' + (lines.length + ocrOmitted) + ' 行，已显示前 ' + lines.length +
+      ' 行（过长的文本请分次截图识别）。';
+    box.appendChild(tip);
+  }
 }
 
 /* ------------------------------------------------------------
@@ -3159,7 +3183,15 @@ function showCandidates(items, title) {
     const myGen = ++candGen;
     candResolve = resolve;
     openModal('modalCandidates');
-    items.slice(0, 20).forEach(item => {
+    /* 【修复·款数限制】旧实现写死 items.slice(0, 20)：用「巫师」这类热门词搜索时
+       Steam 往往返回 30～50 个候选，第 21 个之后的被静默丢弃 —— 用户翻遍弹窗
+       也找不到自己想选的那一款，只能以为"搜索坏了"。
+       现在改为「全部渲染 + 容器可滚动」：#candList 是 .modal-body（已有 max-height
+       与 overflow-y:auto），候选再多也能滚动看到。只有出现极端分钟数（>300）时
+       才封顶，避免一次插入上万个 DOM 节点把页面卡死。 */
+    const CAND_MAX_RENDER = 300;
+    const shownItems = items.slice(0, CAND_MAX_RENDER);
+    shownItems.forEach(item => {
       const price = item.price ? fmtPrice(item.price.final / 100, item.price.currency) : '免费 / 待核';
       const div = document.createElement('div');
       div.className = 'cand-item';
@@ -3179,13 +3211,22 @@ function showCandidates(items, title) {
       });
       box.appendChild(div);
     });
+    /* 候选过多时给出明确提示（而不是无声丢弃），并说明可以缩小关键词 */
+    if (items.length > shownItems.length) {
+      const tip = document.createElement('div');
+      tip.className = 'empty-tip';
+      tip.style.marginTop = '8px';
+      tip.textContent = '共搜索到 ' + items.length + ' 个候选，已显示前 ' + shownItems.length +
+        ' 个。没找到目标请换更准确的关键词（或直接粘贴 AppID）。';
+      box.appendChild(tip);
+    }
     /* 异步补全发行日期与实际中文名（修复 #3）：
        旧实现只在"搜索结果本身没有中文"时才去查中文名 —— 但用英文词
        搜索时，Steam 返回的候选名本来就是英文，所以它永远只做机翻，
        真正的中文官方名始终不显示。现在改为：候选一律回查
        appdetails 取官方中文名，有则显示为"中文名（英文名）"。 */
     (async () => {
-      for (const item of items.slice(0, 20)) {
+      for (const item of shownItems) {
         /* 弹窗被关、被新一代接管、或已作出选择 → 立即停止，避免往过期 DOM 里写 */
         if (myGen !== candGen || !$('#modalCandidates').classList.contains('show') || !candResolve) return;
         const span = box.querySelector('[data-rel="' + item.id + '"]');
@@ -3584,8 +3625,8 @@ function renderTable() {
   STATE.__filteredGames = games;
   if (hidden > 0) {
     const more = $('#btnShowMore'), all = $('#btnShowAll');
-    if (more) more.addEventListener('click', () => { STATE.renderLimit = (STATE.renderLimit || PAGE) + PAGE; renderTable(); });
-    if (all) all.addEventListener('click', () => { STATE.renderLimit = Infinity; renderTable(); });
+    if (more) more.addEventListener('click', () => { STATE.renderLimit = (STATE.renderLimit || PAGE) + PAGE; STATE.__showAllPinned = false; renderTable(); });
+    if (all) all.addEventListener('click', () => { STATE.renderLimit = Infinity; STATE.__showAllPinned = true; renderTable(); });
   }
   const sel = STATE.selection.size;
   $('#btnDeleteSel').style.display = sel ? 'inline-block' : 'none';
@@ -3693,9 +3734,9 @@ function openDetail(appid) {
           '<span class="dlc-kind">' + esc(d2.kind || '其他') + ' · ' + dlcAdvice(d2.kind) + '</span></div>' +
           '<div>' + (d2.price != null ? fmtPrice(d2.price, p.currency) : '<span class="low-pending">价格待核</span>') + '</div>' +
           '<div class="dlc-desc" title="' + esc(d2.originalDescription || d2.description) + '">' +
-            esc(d2.description || '暂无简介') + (d2.translated ? ' <i style="color:var(--yellow);font-size:11px;">（机翻自官方英文介绍）</i>' : '') +
+            esc(clampText(d2.description || '暂无简介', 300)) + (d2.translated ? ' <i style="color:var(--yellow);font-size:11px;">（机翻自官方英文介绍）</i>' : '') +
           '</div>' +
-          (d2.translated && d2.originalDescription ? '<div class="dlc-orig">原文：' + esc(clampText(d2.originalDescription, 200)) + '</div>' : '') +
+          (d2.translated && d2.originalDescription ? '<div class="dlc-orig">原文：' + esc(clampText(d2.originalDescription, 400)) + '</div>' : '') +
         '</div>').join('')
     : '<div style="color:var(--muted)">暂无 DLC 数据（可点击行内 ♻️ 刷新获取）。</div>';
 
@@ -3742,9 +3783,11 @@ function openDetail(appid) {
       /* 新增：捆绑包洞察（同一个包里有几款你的愿望单游戏） */
       '<div class="d-item full"><div class="d-label">捆绑包洞察</div><div class="d-val">' + bundleInsightHtml(g) + '</div></div>' +
       '<div class="d-item full"><div class="d-label">简介' + (d.descriptionTranslated ? '（机翻自官方原文）' : '') + '</div><div class="desc-box">' + esc(d.description || '暂无数据') + '</div>' +
-        (d.descriptionTranslated && d.descriptionOriginal ? '<div class="dlc-orig">原文：' + esc(clampText(d.descriptionOriginal, 260)) + '</div>' : '') + '</div>' +
+        (d.descriptionTranslated && d.descriptionOriginal ? '<div class="dlc-orig">原文：' + esc(clampText(d.descriptionOriginal, 600)) + '</div>' : '') + '</div>' +
       '<div class="d-item full"><div class="d-label">备注</div><div class="d-val">' + (g.note ? esc(g.note) : '<span style="color:var(--muted)">无（表格内 📝 可添加）</span>') + '</div></div>' +
-      '<div class="d-item full"><div class="d-label">DLC（' + (g.dlcList ? g.dlcList.length : 0) + ' 个）</div><div>' + dlcHtml + '</div></div>' +
+      '<div class="d-item full"><div class="d-label">DLC（' + (g.dlcList ? g.dlcList.length : 0) + ' 个' +
+        (g.dlcTotal && g.dlcTotal > (g.dlcList ? g.dlcList.length : 0)
+          ? ' / 共 ' + g.dlcTotal + ' 个，已截断' : '') + '）</div><div>' + dlcHtml + '</div></div>' +
       '<div class="d-item full"><div class="d-label">DLC 汇总建议</div><div class="d-val">' + esc(dlcSummary(g)) + '</div></div>' +
       '<div class="d-item full"><div class="d-label">史低查证链接</div><div class="link-row">' +
         verifyLinks(g.appid).map(l => '<a href="' + l.u + '" target="_blank" rel="noopener noreferrer">' + l.t + ' ↗</a>').join('') +
@@ -4408,7 +4451,8 @@ async function importJSONFile(file) {
             rating: Object.assign(defaultRating(), g.rating || {}),
             historicalLow: Object.assign(defaultLow(), g.historicalLow || {}),
             details: Object.assign(defaultDetails(), g.details || {}),
-            dlcList: Array.isArray(g.dlcList) ? g.dlcList : []
+            dlcList: Array.isArray(g.dlcList) ? g.dlcList : [],
+            dlcTotal: Number(g.dlcTotal) || (Array.isArray(g.dlcList) ? g.dlcList.length : 0)
           }));
           added++;
         } else {
@@ -4606,8 +4650,10 @@ $$('.sortable').forEach(th => th.addEventListener('click', () => {
   const key = th.dataset.sort;
   if (STATE.sort.key === key) STATE.sort.dir = -STATE.sort.dir;
   else { STATE.sort.key = key; STATE.sort.dir = 1; }
-  STATE.renderLimit = 300;   // 换排序回到第一页
-  renderTable(); renderSortArrows();
+  // 换排序回到第一页；但用户如果显式点过「全部显示」，则保持全部显示（不悄悄收回）
+  if (!STATE.__showAllPinned) STATE.renderLimit = 300;
+  renderTable();
+  renderSortArrows();
 }));
 
 // 筛选
@@ -4615,7 +4661,8 @@ $$('.sortable').forEach(th => th.addEventListener('click', () => {
 // 否则用户每次改筛选，下拉里的数量都还是上一轮的旧值。
 const applyFilterUi = () => {
   saveFilters();
-  STATE.renderLimit = 300;
+  // 改筛选也回到第一页；同样尊重用户显式选择的「全部显示」
+  if (!STATE.__showAllPinned) STATE.renderLimit = 300;
   refreshTagFilterOptions();
   renderTable();
   renderStats();
@@ -5034,13 +5081,32 @@ function renderTagCloud() {
   const box = $('#tagCloud');
   if (!box) return;
   const counts = userTagCounts();
-  const items = Object.keys(counts).sort((a, b) => counts[b] - counts[a] || a.localeCompare(b, 'zh')).slice(0, 40);
+  /* 【修复·款数限制】旧实现写死只显示前 40 个标签。一个 200+ 款的愿望单
+     常见标签数在 150～400 个之间，第 41 名之后完全看不到，也没法点着筛选
+     —— 表现为"我明明有这个小众标签却找不到"。
+     现在：默认仍只显示前 40 个（保持清爽），但底部给一个「显示全部（N）」
+     按钮，点开后全量渲染；选择记在 localStorage，下次打开保持。 */
+  const sorted = Object.keys(counts).sort((a, b) => counts[b] - counts[a] || a.localeCompare(b, 'zh'));
+  const TAG_PREVIEW = 40;
+  const showAll = !!STATE.showAllTags;
+  const items = showAll ? sorted : sorted.slice(0, TAG_PREVIEW);
   const cur = STATE.filters.usertag || '';
+  const chips = items.map(t => '<span class="tc' + (cur === t ? ' on' : '') + '" data-tag="' + esc(t) + '" title="点一下按「' + esc(t) + '」筛选，再点一下取消">' +
+        esc(t) + ' <b>' + counts[t] + '</b>' + (cur === t ? ' <span class="x">×</span>' : '') + '</span>').join('');
+  const toggler = (sorted.length > TAG_PREVIEW)
+    ? '<span class="tc tc-toggle" id="tcToggleAll" title="' + (showAll ? '收起' : '展开全部标签') + '">' +
+        (showAll ? '收起（只看前 ' + TAG_PREVIEW + ' 个）' : '显示全部 ' + sorted.length + ' 个标签 ▾') + '</span>'
+    : '';
   const html = items.length
-    ? items.map(t => '<span class="tc' + (cur === t ? ' on' : '') + '" data-tag="' + esc(t) + '" title="点一下按「' + esc(t) + '」筛选，再点一下取消">' +
-        esc(t) + ' <b>' + counts[t] + '</b>' + (cur === t ? ' <span class="x">×</span>' : '') + '</span>').join('')
+    ? (chips + toggler)
     : '<span class="tc-empty">还没有用户标签数据。点上方「⬇️ 拉取云端刷新结果」后即可看到（标签由云端每天自动从 Steam 商店页抓取，中文）。</span>';
   if (box.__lastHtml !== html) { box.innerHTML = html; box.__lastHtml = html; }
+  const tg = $('#tcToggleAll');
+  if (tg) tg.addEventListener('click', () => {
+    STATE.showAllTags = !STATE.showAllTags;
+    try { localStorage.setItem('sw_tagcloud_all_v1', STATE.showAllTags ? '1' : '0'); } catch (e) {}
+    renderTagCloud();
+  });
 }
 function setTagCloudOpen(open) {
   const box = $('#tagCloud'), btn = $('#btnTagCloudToggle');
@@ -5479,6 +5545,7 @@ function triggerCloudPull() {
 
     let cloudOpen = true;
     try { cloudOpen = localStorage.getItem('sw_tagcloud_v1') !== '0'; } catch (e) {}
+    try { STATE.showAllTags = localStorage.getItem('sw_tagcloud_all_v1') === '1'; } catch (e) {}
     setTagCloudOpen(cloudOpen);
     updateCloudPullHint();
     const $btnTC = $('#btnTagCloudToggle');
