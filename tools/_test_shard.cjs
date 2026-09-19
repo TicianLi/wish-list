@@ -127,7 +127,7 @@ check('U-10 workflow 限制了同时运行的分数（max-parallel，避免拉�
  * ================================================================== */
 console.log('=== V. 合并：无损 + 自检 ===');
 const TMP = path.join(ROOT, 'data', '.shard_test_' + process.pid);
-const SDIR = path.join(ROOT, 'data', '.shard');
+const SDIR = path.join(ROOT, 'data', '_shards');
 const DATA = path.join(ROOT, 'data', 'wishlist.json');
 const BACKUP = path.join(ROOT, 'data', '.wishlist.test-backup.json');
 let hadData = false;
@@ -276,8 +276,10 @@ check('X-10 判据实现：SHARD_TOTAL 非 undefined 且非空字符串',
 check('X-11 isSharded 由 shardEnvSet 决定', /const isSharded = !!CFG\.shardEnvSet/.test(CI));
 check('X-12 shardTotal 下限为 1（单片不会导致 slice 出错或除以 0）',
   /const shardTotal = Math\.max\(1, Number\(CFG\.shardTotal\) \|\| 1\)/.test(CI));
-check('X-13 分片收尾会写出 data/.shard 文件（upload-artifact 依赖它）',
-  /path\.join\(ROOT, 'data', '\.shard'\)/.test(CI) && /fs\.writeFileSync\(outPath/.test(CI));
+check('X-13 分片收尾会写出 data/_shards 文件（upload-artifact 依赖它）',
+  /path\.join\(ROOT, 'data', '_shards'\)/.test(CI) && /fs\.writeFileSync\(outPath/.test(CI));
+check('X-13b 分片目录名不以 "." 开头（upload-artifact 默认跳过隐藏文件）',
+  !/'\.shards?'/.test(CI), '目录名不能是隐藏目录');
 check('X-14 分片收尾在「特惠日历/商店页/发信」之前 return（单片也不重复发信）',
   CI.indexOf('if (isSharded) {') < CI.indexOf('特惠日历（补折扣截止时间）'),
   'isSharded 块必须在全局收尾之前');
@@ -303,6 +305,21 @@ check('X-14b 分片模式强制关掉发信（双保险，避免 N 片各发一�
     check('X-18 SHARD_TOTAL 为空串时为 false', evalWith('') === false);
   }
 }
+
+/* ------------------------------------------------------------------
+ * X-19 ~ X-22：run #34 事故的防回归（2026-09-19 再补）
+ * 事故：判据修对了、分片文件也真写出来了（日志有「已写出 data/.shard/0.json」），
+ *       但 upload-artifact@v4 报 No files were found —— 因为 `.shard` 是**隐藏目录**，
+ *       而 v4 默认 `include-hidden-files: false`，隐藏文件被**静默跳过**。
+ * 修法：目录改名 data/_shards（下划线前缀，非隐藏），不依赖"记得打开开关"。
+ * ------------------------------------------------------------------ */
+check('X-19 源码里的分片目录 = data/_shards', /path\.join\(ROOT, 'data', '_shards'\)/.test(CI));
+check('X-20 合并脚本读的是同一个目录（不能两边不一致）',
+  /path\.join\(ROOT, 'data', '_shards'\)/.test(fs.readFileSync(path.join(ROOT, 'tools', 'merge-shards.mjs'), 'utf8')));
+check('X-21 workflow 的 artifact path 与源码目录一致（data/_shards/）',
+  /path:\s*data\/_shards\//.test(WF) && !/path:\s*data\/\.shard/.test(WF));
+check('X-22 源码与 workflow 里都不再残留隐藏目录 `.shard`',
+  !/data[\/'",\s]*\.shard/.test(CI) && !/data\/\.shard/.test(WF));
 
 console.log('\n============================');
 console.log('SHARD PASS ' + pass + '  FAIL ' + fail);

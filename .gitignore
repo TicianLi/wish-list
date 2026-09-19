@@ -1,0 +1,17 @@
+# 依赖
+node_modules/
+
+# 分片并行的工作目录（各分片 job 的中间产物；由 finalize 合并后即删除）
+# 绝不入库：它不是数据，是临时中转。
+data/_shards/
+
+# 分片相关测试的临时目录
+data/.shard_test_*/
+
+# 测试备份
+data/.wishlist.test-backup.json
+
+# 系统 / 编辑器
+.DS_Store
+Thumbs.db
+*.log

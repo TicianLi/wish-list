@@ -107,12 +107,16 @@ const CFG = {
    * 环境变量：
    *   SHARD_TOTAL  总分片数（≥1 即进入分片执行模式；未设置 = 老的单 job 模式）
    *   SHARD_INDEX  本 job 的分片序号（0-based）
-   *   SHARD_OUT    本分片的输出文件（默认 data/.shard/<index>.json）
+   *   SHARD_OUT    本分片的输出文件（默认 data/_shards/<index>.json）
    *
    * ⚠️ 判据是「SHARD_TOTAL 有没有被设置」，**不是「分片数是否 > 1」**。
    *    这一点踩过坑（run #33）：219 款只分 1 片 → 若判据写成 >1，则
    *    refresh job 会退化成"完整单 job 模式"——自己发一封邮件、且不写分片文件，
-   *    结果 upload-artifact 找不到 data/.shard/ 直接失败，finalize 被 skip。
+   *    结果 upload-artifact 找不到 data/_shards/ 直接失败，finalize 被 skip。
+   *    ※ 目录名用 _shards 而**不是 .shard**：run #34 实测 actions/upload-artifact@v4
+   *      默认 `include-hidden-files: false`，`.` 开头的隐藏目录会被**静默跳过**
+   *      （日志里明晃晃写着 include-hidden-files: false，然后 No files were found）。
+   *      改用下划线前缀彻底绕开这个隐式行为，不依赖"记得打开开关"。
    *    正确语义：**只要 workflow 调了 refresh job，它就只负责"刷自己那片"**，
    *    哪怕那片就是全部（1 片），全局收尾也必须留给 finalize。
    * ------------------------------------------------------------------ */
@@ -1469,7 +1473,7 @@ async function main() {
    *   ② 让它们只在**汇总 job** 里跑一次，既省时间也不会互相干扰。
    * ------------------------------------------------------------------ */
   if (isSharded) {
-    const outDir = path.join(ROOT, 'data', '.shard');
+    const outDir = path.join(ROOT, 'data', '_shards');
     fs.mkdirSync(outDir, { recursive: true });
     const outPath = CFG.shardOut
       ? path.resolve(ROOT, CFG.shardOut)

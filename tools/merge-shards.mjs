@@ -1,7 +1,7 @@
 /* 分片汇总合并（2026-09-19）
    ------------------------------------------------------------------
    背景：为了扛住"一千款一万款"，刷新被拆成 N 个并行 job，各自把
-        自己那片的结果写到 data/.shard/<i>.json。本脚本负责：
+        自己那片的结果写到 data/_shards/<i>.json。本脚本负责：
           1. 读回全量 data/wishlist.json（作为权威基底）
           2. 读所有分片文件
           3. **按 appid 精确合并**：分片里的款覆盖基底里同 appid 的款，
@@ -11,7 +11,7 @@
           5. 写回 data/wishlist.json
 
    用法： node tools/merge-shards.mjs
-   环境： SHARD_TOTAL 期望的分片数（0/未设 = 自动发现 .shard 目录）
+   环境： SHARD_TOTAL 期望的分片数（0/未设 = 自动发现 _shards 目录）
 
    ⚠ 这是"去上限"原则在分片上的落地：分片只是并行化手段，
      绝不能因为分片而让任何一款游戏被漏掉。
@@ -23,7 +23,7 @@ import { fileURLToPath } from 'node:url';
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(__dirname, '..');
 const DATA_FILE = path.join(ROOT, 'data', 'wishlist.json');
-const SHARD_DIR = path.join(ROOT, 'data', '.shard');
+const SHARD_DIR = path.join(ROOT, 'data', '_shards');
 
 const log = (...a) => console.log('[merge]', ...a);
 const die = (msg) => { console.error('[merge] ✘ ' + msg); process.exit(1); };
@@ -33,7 +33,7 @@ const base = JSON.parse(fs.readFileSync(DATA_FILE, 'utf8'));
 if (!base || !Array.isArray(base.games)) die('data/wishlist.json 缺少 games 数组');
 
 if (!fs.existsSync(SHARD_DIR)) {
-  log('没有分片目录 data/.shard/ —— 说明本次是单 job 模式，无需合并。');
+  log('没有分片目录 data/_shards/ —— 说明本次是单 job 模式，无需合并。');
   process.exit(0);
 }
 

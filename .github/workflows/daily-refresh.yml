@@ -143,7 +143,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: shard-${{ matrix.shard }}
-          path: data/.shard/
+          path: data/_shards/
           retention-days: 2
           if-no-files-found: error
 
@@ -172,10 +172,10 @@ jobs:
         with:
           pattern: shard-*
           merge-multiple: true
-          path: data/.shard/
+          path: data/_shards/
 
       - name: 列出分片文件（便于排错）
-        run: ls -la data/.shard/ || true
+        run: ls -la data/_shards/ || true
 
       - name: 合并分片（无损，校验全覆盖）
         env:
