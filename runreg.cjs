@@ -29,7 +29,8 @@ const SUITES = {
   starve:    'tools/_test_queuestarve.mjs',
   limits:    'tools/_test_limits.cjs',
   sentinel:  'tools/_test_sentinel.cjs',
-  retry:     'tools/_test_retry.cjs'
+  retry:     'tools/_test_retry.cjs',
+  shard:     'tools/_test_shard.cjs'
 };
 
 const args = process.argv.slice(2);
