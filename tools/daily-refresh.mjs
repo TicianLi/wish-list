@@ -105,10 +105,18 @@ const CFG = {
    *       各分片天然错开时间，也不会互相抢配额。
    *
    * 环境变量：
-   *   SHARD_TOTAL  总分片数（0/1 = 不分片，等价于原来的单趟模式）
+   *   SHARD_TOTAL  总分片数（≥1 即进入分片执行模式；未设置 = 老的单 job 模式）
    *   SHARD_INDEX  本 job 的分片序号（0-based）
    *   SHARD_OUT    本分片的输出文件（默认 data/.shard/<index>.json）
+   *
+   * ⚠️ 判据是「SHARD_TOTAL 有没有被设置」，**不是「分片数是否 > 1」**。
+   *    这一点踩过坑（run #33）：219 款只分 1 片 → 若判据写成 >1，则
+   *    refresh job 会退化成"完整单 job 模式"——自己发一封邮件、且不写分片文件，
+   *    结果 upload-artifact 找不到 data/.shard/ 直接失败，finalize 被 skip。
+   *    正确语义：**只要 workflow 调了 refresh job，它就只负责"刷自己那片"**，
+   *    哪怕那片就是全部（1 片），全局收尾也必须留给 finalize。
    * ------------------------------------------------------------------ */
+  shardEnvSet: process.env.SHARD_TOTAL !== undefined && process.env.SHARD_TOTAL !== '',
   shardTotal: Number(process.env.SHARD_TOTAL || 0),
   shardIndex: Number(process.env.SHARD_INDEX || 0),
   shardOut: process.env.SHARD_OUT || '',
@@ -1350,14 +1358,19 @@ async function main() {
   let games = data.games.filter(g => g && g.appid);
   log('读取到 ' + games.length + ' 款游戏' + (CFG.itadKey ? '（ITAD 史低已启用）' : '（未配置 ITAD_API_KEY，跳过史低查询）'));
 
-  /* ---------------- 分片模式：只处理本分片 ---------------- */
-  const shardTotal = Math.max(0, Number(CFG.shardTotal) || 0);
-  const isSharded = shardTotal > 1;
+  /* ---------------- 分片模式：只处理本分片 ----------------
+   * 判据 = SHARD_TOTAL 是否被设置（见 CFG.shardEnvSet 的说明）。
+   * 1 片也要走这条路：只刷新、只写分片文件，全局收尾交给 finalize。 */
+  const shardTotal = Math.max(1, Number(CFG.shardTotal) || 1);
+  const isSharded = !!CFG.shardEnvSet;
   let shardIndex = 0;
   if (isSharded) {
     shardIndex = Math.min(Math.max(0, Number(CFG.shardIndex) || 0), shardTotal - 1);
     const all = games;
     games = shardSlice(all, shardIndex, shardTotal);
+    /* 双保险：分片 job 只刷数据、绝不发信（发信统一由 finalize 做）。
+       这样即使将来有人把分片提前 return 挪走，也不会误发 N 封重复邮件。 */
+    CFG.mailMode = 'never';
     log(`【分片模式】本 job 处理第 ${shardIndex + 1}/${shardTotal} 片：` +
         `${games.length} 款（全量 ${all.length} 款；各片并行、互不重叠、并集为全量）。`);
   }
