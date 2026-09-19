@@ -82,6 +82,21 @@ const CFG = {
   intervalMs: Number(process.env.REQ_INTERVAL_MS || 700),
   // 单个请求超时
   timeoutMs: Number(process.env.REQ_TIMEOUT_MS || 20000),
+  /* ---- 网络重试（2026-09-19 新增，针对 Steam 429 限流）----
+     实测：219 款跑到第 201 款时 Steam 连续返回 429，剩下 19 款全灭。
+     必须重试，否则**清单越大、靠后的游戏越必然失败**。
+     重试次数：单次请求最多尝试几次（含首次）
+     退避：base * 2^(n-1) + 0~25% 抖动，封顶 maxMs；服务端 Retry-After 优先 */
+  retryMax: Number(process.env.RETRY_MAX || 6),
+  retryBaseMs: Number(process.env.RETRY_BASE_MS || 2000),
+  retryMaxMs: Number(process.env.RETRY_MAX_MS || 120000),
+  /* 自适应限速：被 429 后间隔最多可涨到 ceilingMs；连续干净 rateRecoverAfter 次后逐步回落 */
+  rateCeilingMs: Number(process.env.RATE_CEILING_MS || 60000),
+  rateRecoverAfter: Number(process.env.RATE_RECOVER_AFTER || 30),
+  /* 收尾补跑：整轮跑完后，对"仍未刷新成功"的款再跑几轮（每轮之间等配额恢复）。
+     这是"加一万款也不能有失败"的最终保障。0 = 不补跑。 */
+  refreshSweeps: Number(process.env.REFRESH_SWEEPS || 3),
+  sweepGapMs: Number(process.env.SWEEP_GAP_MS || 30000),
   // 每次运行最多刷新多少个（防止清单过大跑超时；0 = 不限）
   maxGames: Number(process.env.MAX_GAMES || 0),
   // 商店页（抓用户标签 / 捆绑包）的间隔更保守
@@ -145,7 +160,23 @@ function stripHtml(s) {
 }
 function hasChinese(s) { return /[\u4e00-\u9fff]/.test(s || ''); }
 
-/* 带超时的 fetch（Node 18+ 自带 fetch） */
+/* ==================================================================
+ * 带超时 + 重试 + 指数退避的 fetch
+ * ------------------------------------------------------------------
+ * 背景（2026-09-19 run #30 实测）：219 款刷新到第 201 款时，Steam 开始
+ * 连续返回 HTTP 429，剩下 19 款**全部**失败。原因不是游戏的问题，而是
+ * 单位时间请求配额耗尽后我们没有退避、也没有重试，一次 429 就直接认输。
+ *
+ * 结论：**清单越大，靠后的游戏越必然被 429 打死**。用户明确要求
+ * 「以后加一千款一万款也不能再出现这种问题」→ 必须在传输层做重试。
+ *
+ * 策略：
+ *   - 可重试的状态码：429（限流）、408（超时）、5xx（服务端抖动）
+ *   - 可重试的网络异常：fetch failed / ECONNRESET / ETIMEDOUT / AbortError…
+ *   - 退避：base * 2^(n-1) + 抖动，上限 maxMs；识别 Retry-After 头优先遵守
+ *   - 不可重试的（4xx 非 429/408、非 JSON、业务性错误）立刻抛出，不浪费时间
+ * 参数全部收敛进 CFG，源码里不留裸魔法数。
+ * ================================================================== */
 const UA = 'Mozilla/5.0 (compatible; wishlist-daily-refresh/1.1)';
 
 function withTimeout(init, timeoutMs) {
@@ -154,42 +185,113 @@ function withTimeout(init, timeoutMs) {
   return { init: Object.assign({}, init || {}, { signal: ctrl.signal }), done: () => clearTimeout(t) };
 }
 
-async function fetchJSON(url, opts = {}) {
-  const w = withTimeout({
-    headers: {
-      'User-Agent': UA,
-      'Accept': 'application/json,text/plain,*/*',
-      ...(opts.headers || {})
-    }
-  }, opts.timeoutMs);
+/* 这个错误可不可以重试？(纯函数，方便测试) */
+function isRetryableStatus(status) {
+  return status === 429 || status === 408 || (status >= 500 && status <= 599);
+}
+function isRetryableError(err) {
+  if (!err) return false;
+  if (typeof err.status === 'number' && isRetryableStatus(err.status)) return true;
+  const m = String(err.message || err);
+  /* 网络层异常：undici 的 'fetch failed'、socket 重置、超时、以及我们自己的 abort */
+  if (/fetch failed|ECONNRESET|ECONNREFUSED|ETIMEDOUT|EAI_AGAIN|socket hang up/i.test(m)) return true;
+  // AbortError 就是我们自己的超时（withTimeout 触发的）
+  if (err && err.name === 'AbortError') return true;
+  if (/AbortError|TimeoutError|timed out/i.test(m)) return true;
+  /* 我们包装出来的可重试 HTTP 错误 */
+  if (/HTTP (429|408|5\d\d)\b/.test(m)) return true;
+  return false;
+}
+/* 退避时长：指数增长 + 抖动，并且尊重服务端给的 Retry-After（纯函数，方便测试） */
+function backoffDelayMs(attempt, retryAfterSec, cfg) {
+  const c = cfg || CFG;
+  let d = c.retryBaseMs * Math.pow(2, Math.max(0, attempt - 1));
+  d = Math.min(d, c.retryMaxMs);
+  if (retryAfterSec != null && isFinite(retryAfterSec) && retryAfterSec >= 0) {
+    d = Math.max(d, retryAfterSec * 1000);
+    d = Math.min(d, c.retryMaxMs);
+  }
+  // 抖动 0~25%，避免多请求同时苏醒再次撞上限流
+  const jitter = d * 0.25 * Math.random();
+  return Math.round(d + jitter);
+}
+/* 把 Retry-After 头解析成秒（支持秒数与 HTTP 日期两种写法） */
+function parseRetryAfter(headers) {
+  try {
+    const raw = headers && (headers.get ? headers.get('retry-after') : headers['retry-after']);
+    if (!raw) return null;
+    const s = String(raw).trim();
+    if (/^\d+$/.test(s)) return Number(s);
+    const dt = Date.parse(s);
+    if (!isNaN(dt)) return Math.max(0, Math.round((dt - nowMs()) / 1000));
+  } catch (e) { /* 忽略 */ }
+  return null;
+}
+
+/* 统一的"发一次请求"原语：返回 { ok, status, retryAfter, text, err }，不抛异常 */
+async function fetchOnce(url, init, timeoutMs) {
+  const w = withTimeout(init, timeoutMs);
   try {
     const resp = await fetch(url, w.init);
-    if (!resp.ok) throw new Error('HTTP ' + resp.status);
-    const text = await resp.text();
-    try { return JSON.parse(text); }
-    catch (e) { throw new Error('返回非 JSON：' + text.slice(0, 80)); }
+    const retryAfter = parseRetryAfter(resp.headers);
+    if (!resp.ok) {
+      const err = new Error('HTTP ' + resp.status);
+      err.status = resp.status;
+      // 429/5xx 的响应体常常有解释，留着方便诊断
+      let body = '';
+      try { body = (await resp.text()).slice(0, 200); } catch (e) { /* 忽略 */ }
+      if (body) err.body = body;
+      return { ok: false, status: resp.status, retryAfter, err };
+    }
+    return { ok: true, status: resp.status, retryAfter, text: await resp.text() };
+  } catch (e) {
+    return { ok: false, status: null, retryAfter: null, err: e };
   } finally {
     w.done();
   }
 }
 
+/* 带重试的文本抓取：返回字符串，失败抛最后一次的错误 */
+async function fetchTextRetry(url, init, opts = {}) {
+  const tries = Math.max(1, Number(opts.retries != null ? opts.retries : CFG.retryMax));
+  let last = null;
+  for (let attempt = 1; attempt <= tries; attempt++) {
+    const r = await fetchOnce(url, init, opts.timeoutMs);
+    if (r.ok) { rlReport(false); return r.text; }
+    last = r.err || new Error('请求失败');
+    const retryable = isRetryableError(last) && attempt < tries;
+    /* 反馈给自适应限速器：可重试的（429/5xx 等）说明压力过大 → 全局降速 */
+    if (rlReport) rlReport(isRetryableError(last));
+    if (!retryable) break;
+    const delay = backoffDelayMs(attempt, r.retryAfter);
+    log(`  ↻ 第 ${attempt}/${tries} 次失败（${last.message}），${(delay / 1000).toFixed(1)}s 后重试：${url.slice(0, 90)}`);
+    await sleep(delay);
+  }
+  throw last || new Error('请求失败');
+}
+
+async function fetchJSON(url, opts = {}) {
+  const text = await fetchTextRetry(url, {
+    headers: {
+      'User-Agent': UA,
+      'Accept': 'application/json,text/plain,*/*',
+      ...(opts.headers || {})
+    }
+  }, opts);
+  try { return JSON.parse(text); }
+  catch (e) { throw new Error('返回非 JSON：' + String(text).slice(0, 80)); }
+}
+
 /* 抓 HTML（商店页标签 / 捆绑包用） */
 async function fetchHTML(url, opts = {}) {
-  const w = withTimeout({
+  return await fetchTextRetry(url, {
     headers: {
       'User-Agent': UA,
       'Accept': 'text/html,application/xhtml+xml,*/*',
       'Accept-Language': 'zh-CN,zh;q=0.9,en;q=0.8',
       ...(opts.headers || {})
     }
-  }, opts.timeoutMs);
-  try {
-    const resp = await fetch(url, w.init);
-    if (!resp.ok) throw new Error('HTTP ' + resp.status);
-    return await resp.text();
-  } finally {
-    w.done();
-  }
+  }, opts);
 }
 
 /* ============================ 默认结构 ============================ */
@@ -237,9 +339,56 @@ function saleRemainMs(g) {
 }
 
 /* ============================ Steam / ITAD ============================ */
+/* ==================================================================
+ * 自适应限速（2026-09-19 新增）
+ * ------------------------------------------------------------------
+ * 实测事故：219 款匀速 700ms 猛冲，跑到第 201 款时 Steam 开始连续 429。
+ * 固定间隔 = 拿"清单大小"赌"配额够不够"，正是用户点名要禁止的"猜数字"。
+ *
+ * 改成自适应：**一被限流就主动降速，一段时间不再被限流就缓慢恢复**。
+ *   - 命中 429 → 间隔 ×2（逐次累加，封顶 ceilingMs）
+ *   - 连续干净请求够多 → 间隔逐步回落（×0.5 一档，降到基准为止）
+ * 这样无论清单是 219 还是 10000 款，节奏都会自己找到 Steam 能接受的水平。
+ * ================================================================== */
+const rl = { currentMs: 0, cleanStreak: 0 };
+function rlReset() { rl.currentMs = Number(CFG.intervalMs); rl.cleanStreak = 0; }
+function rlBase() {
+  if (!rl.currentMs) rl.currentMs = Number(CFG.intervalMs);
+  return rl.currentMs;
+}
+/* 被限流：立刻降速 */
+function rlSlowdown() {
+  const base = Number(CFG.intervalMs);
+  const cur = rlBase();
+  const next = Math.min(Math.max(cur * 2, base * 2), Number(CFG.rateCeilingMs));
+  rl.currentMs = next;
+  rl.cleanStreak = 0;
+  if (next !== cur) {
+    warn(`  ↓ 检测到限流，自动放慢请求节奏：${cur}ms → ${next}ms（上限 ${CFG.rateCeilingMs}ms）`);
+  }
+  return next;
+}
+/* 一段时间干净了：逐步恢复 */
+function rlSpeedup() {
+  rl.cleanStreak++;
+  if (rl.cleanStreak < Number(CFG.rateRecoverAfter)) return rlBase();
+  rl.cleanStreak = 0;
+  const base = Number(CFG.intervalMs);
+  const cur = rlBase();
+  if (cur <= base) { rl.currentMs = base; return base; }
+  const next = Math.max(base, Math.floor(cur / 2));
+  rl.currentMs = next;
+  log(`  ↑ 限流已缓解，请求节奏回升：${cur}ms → ${next}ms`);
+  return next;
+}
+/* 记录一次请求结果，驱动自适应（供 fetchTextRetry 调用） */
+function rlReport(retryable) { if (retryable) rlSlowdown(); else rlSpeedup(); }
+
 let lastReq = 0;
 async function rateLimit(overrideMs) {
-  const gap = (Number(overrideMs) > 0) ? Number(overrideMs) : CFG.intervalMs;
+  /* 显式指定间隔（翻译/商店页等有各自更保守的节奏）时，不参与自适应 */
+  const explicit = Number(overrideMs) > 0;
+  const gap = explicit ? Number(overrideMs) : rlBase();
   const delta = nowMs() - lastReq;
   if (delta < gap) await sleep(gap - delta);
   lastReq = nowMs();
@@ -1104,19 +1253,64 @@ async function main() {
     games = games.slice(0, CFG.maxGames);
   }
 
+  /* ------------------------------------------------------------------
+   * 刷新主循环 + 收尾补跑（2026-09-19 重构）
+   * ------------------------------------------------------------------
+   * 旧版：单趟 for 循环，catch 到就 failed++ 完事。
+   *   → 实测事故：219 款跑到第 201 款开始被 Steam 连续 429，剩下 19 款全灭。
+   *   → 病根：单趟、无补跑，"一次失败即永久放弃"，且**清单越大越严重**
+   *     （靠后的游戏天然处在配额耗尽的时间段）。
+   *
+   * 新版：跑完一趟后，把所有"未成功"的款收集起来再跑第 2、第 3 趟……
+   *   每趟之间等一会儿让配额恢复。配合 fetchTextRetry 的单请求级重试，
+   *   形成"请求级退避 + 轮次级补跑"双层防线。
+   *   ⚠ 补跑同样受"总量不限"原则约束：轮数上限收敛进 CFG，
+   *      若补跑到上限仍有余款，**必须打印明确告警**，绝不静默丢弃。
+   * ------------------------------------------------------------------ */
   const results = [];
   let failed = 0;
-  for (let i = 0; i < games.length; i++) {
-    const g = games[i];
-    try {
-      const r = await refreshOne(g);
-      results.push(r);
-      log(`  ${i + 1}/${games.length} ✓ ${g.name} ${fmtPrice(g.price && g.price.current, g.price && g.price.currency)}` +
-        (g.price && g.price.discountPercent ? ' -' + g.price.discountPercent + '%' : ''));
-    } catch (e) {
-      failed++;
-      warn(`  ${i + 1}/${games.length} ✗ ${g.name || g.appid}：${e.message}`);
+  const failedReasons = new Map();   // name/appid -> 错误信息（收尾时报告 + 邮件可见）
+  const MAX_SWEEPS = Math.max(0, Number(CFG.refreshSweeps) || 0);
+
+  const targetName = g => g.name || g.appid;
+
+  /* 跑一趟：只处理 pending 里的款，返回仍未成功的 */
+  const runSweep = async (pending, label) => {
+    const stillBad = [];
+    for (let i = 0; i < pending.length; i++) {
+      const g = pending[i];
+      try {
+        const r = await refreshOne(g);
+        /* refreshOne 返回 null = Steam 明确说"这款没有可展示数据"
+           （如免费试玩/demo/已下架），这是**正常结果**，不算失败，也不再补跑。 */
+        results.push(r);
+        log(`  ${label}${i + 1}/${pending.length} ✓ ${targetName(g)} ${fmtPrice(g.price && g.price.current, g.price && g.price.currency)}` +
+          (g.price && g.price.discountPercent ? ' -' + g.price.discountPercent + '%' : ''));
+      } catch (e) {
+        stillBad.push(g);
+        failedReasons.set(targetName(g), e.message);
+        warn(`  ${label}${i + 1}/${pending.length} ✗ ${targetName(g)}：${e.message}`);
+      }
     }
+    return stillBad;
+  };
+
+  let pending = games.slice();
+  let sweep = 0;
+  let leftover = await runSweep(pending, '');
+  while (leftover.length && sweep < MAX_SWEEPS) {
+    sweep++;
+    log(`— 补跑第 ${sweep} 轮：${leftover.length} 款未成功，等 ${(CFG.sweepGapMs / 1000).toFixed(0)}s 让配额恢复后重试…`);
+    await sleep(CFG.sweepGapMs);
+    leftover = await runSweep(leftover, `[补${sweep}] `);
+  }
+  failed = leftover.length;
+
+  if (failed) {
+    warn(`⚠ 共 ${failed} 款在 ${MAX_SWEEPS} 轮补跑后仍未刷新成功（已保留其原有数据，不影响清单完整性）：`);
+    leftover.slice(0, 20).forEach(g => warn(`    · ${targetName(g)}：${failedReasons.get(targetName(g)) || '未知'}`));
+    if (leftover.length > 20) warn(`    …另有 ${leftover.length - 20} 款，详见上方逐条日志。`);
+    warn(`  这些款会在明天的自动刷新里自动重试；若长期失败，通常是该 appid 在国区已不可用。`);
   }
 
   /* ---------------- 新增：特惠日历（补折扣截止时间） ---------------- */
