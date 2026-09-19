@@ -320,6 +320,11 @@ check('X-21 workflow 的 artifact path 与源码目录一致（data/_shards/）'
   /path:\s*data\/_shards\//.test(WF) && !/path:\s*data\/\.shard/.test(WF));
 check('X-22 源码与 workflow 里都不再残留隐藏目录 `.shard`',
   !/data[\/'",\s]*\.shard/.test(CI) && !/data\/\.shard/.test(WF));
+check('X-23 快照轮转链正确：_prevSnapshot 取自上一轮的 _snapshot',
+  /payload\._prevSnapshot = data\._snapshot \|\| data\._prevSnapshot \|\| null/.test(CI));
+check('X-24 merge 时保留基底的 _snapshot（否则 finalize 轮转会丢快照）',
+  /for \(const k of Object\.keys\(base\)\) payload\[k\] = base\[k\]/.test(
+    fs.readFileSync(path.join(ROOT, 'tools', 'merge-shards.mjs'), 'utf8')));
 
 console.log('\n============================');
 console.log('SHARD PASS ' + pass + '  FAIL ' + fail);
