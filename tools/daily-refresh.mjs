@@ -93,6 +93,28 @@ const CFG = {
   /* 自适应限速：被 429 后间隔最多可涨到 ceilingMs；连续干净 rateRecoverAfter 次后逐步回落 */
   rateCeilingMs: Number(process.env.RATE_CEILING_MS || 60000),
   rateRecoverAfter: Number(process.env.RATE_RECOVER_AFTER || 30),
+  /* ------------------------------------------------------------------
+   * 分片并行（2026-09-19，为"加一万款也不能出问题"而加）
+   * ------------------------------------------------------------------
+   * 实测：219 款耗时 11.2 分钟，平均每款 3.07 秒（含退避）。
+   * 线性外推：1000 款 ≈ 51 分钟 → **超 GitHub Actions 45 分钟上限被强杀**。
+   * 所以只修 429 不够，规模本身也是一道墙。
+   *
+   * 方案：CI 里用 matrix 起 N 个并行 job，每个 job 只刷 1/N 的清单，
+   *       各自写自己的分片文件；最后由汇总 job 无损合并。
+   *       各分片天然错开时间，也不会互相抢配额。
+   *
+   * 环境变量：
+   *   SHARD_TOTAL  总分片数（0/1 = 不分片，等价于原来的单趟模式）
+   *   SHARD_INDEX  本 job 的分片序号（0-based）
+   *   SHARD_OUT    本分片的输出文件（默认 data/.shard/<index>.json）
+   * ------------------------------------------------------------------ */
+  shardTotal: Number(process.env.SHARD_TOTAL || 0),
+  shardIndex: Number(process.env.SHARD_INDEX || 0),
+  shardOut: process.env.SHARD_OUT || '',
+  /* 汇总阶段用：分片已经把价格/评分刷过了，这里跳过这一轮，
+     只做"全清单级"的补充（特惠日历 / 标签 / 翻译），避免重复请求。 */
+  skipPriceRefresh: String(process.env.SKIP_PRICE_REFRESH ?? 'false') === 'true',
   /* 收尾补跑：整轮跑完后，对"仍未刷新成功"的款再跑几轮（每轮之间等配额恢复）。
      这是"加一万款也不能有失败"的最终保障。0 = 不补跑。 */
   refreshSweeps: Number(process.env.REFRESH_SWEEPS || 3),
@@ -1033,6 +1055,41 @@ async function enrichChineseNames(games) {
   return stat;
 }
 
+/* ==================================================================
+ * 分片工具（2026-09-19）
+ * ------------------------------------------------------------------
+ * 目标：把"大清单"拆成 N 个互不重叠、并集为全量的分片，
+ *       让 CI 能并行处理，绕开单 job 的时长上限。
+ *
+ * 硬要求（对应"去上限"原则）：
+ *   1. 分片是**并行化**，不是**砍数量** —— 所有款都必须被某个分片覆盖到。
+ *   2. 分片之间**绝不重叠**（否则同一款被两个 job 同时写，浪费且易冲突）。
+ *   3. 分片要**均衡**（按数量均分，不要有的分片 10 款、有的 300 款）。
+ * ================================================================== */
+/* 纯函数：把数组切成 total 片，返回第 index 片。可测试。 */
+function shardSlice(arr, index, total) {
+  const n = Array.isArray(arr) ? arr.length : 0;
+  const t = Math.max(1, Number(total) || 1);
+  const i = Math.min(Math.max(0, Number(index) || 0), t - 1);
+  if (t === 1) return arr.slice();
+  /* 用「余数分摊」而不是固定长度切片：n=10,t=3 → 4/3/3，
+     保证各片长度最多差 1，且并集恰好等于原数组 */
+  const base = Math.floor(n / t);
+  const extra = n % t;
+  const start = i * base + Math.min(i, extra);
+  const len = base + (i < extra ? 1 : 0);
+  return arr.slice(start, start + len);
+}
+/* 按清单规模自动决定分片数：让每片不超过 perShard 款，
+   并夹在 [1, maxShards] 之间。这样 219 款仍是 1 片（保持现状），
+   1000 款自动变 3 片，10000 款自动变上限片数。 */
+function autoShardCount(totalGames, perShard, maxShards) {
+  const n = Math.max(0, Number(totalGames) || 0);
+  const per = Math.max(1, Number(perShard) || 1);
+  const cap = Math.max(1, Number(maxShards) || 1);
+  return Math.min(cap, Math.max(1, Math.ceil(n / per)));
+}
+
 /* ============================ 主流程 ============================ */
 function loadDataFile() {
   if (!fs.existsSync(DATA_FILE)) {
@@ -1062,6 +1119,11 @@ function saveDataFile(data) {
   payload.refreshedAt = nowMs();
   payload.refreshedBy = 'github-actions';
   payload.refreshCount = (Number(data.refreshCount) || 0) + 1;
+  /* _prevSnapshot：本轮刷新**之前**的 价格/史低/评分 快照，
+     供下一轮（尤其是分片模式的汇总阶段）比对出"变化"。
+     只存最小字段，避免数据文件膨胀到不可读。 */
+  payload._prevSnapshot = data._snapshot || data._prevSnapshot || null;
+  payload._snapshot = buildSnapshot(data.games);
   payload.games = data.games;
   fs.writeFileSync(DATA_FILE, JSON.stringify(payload, null, 2), 'utf8');
   return payload;
@@ -1125,6 +1187,44 @@ function diffChanges(results, games) {
     if (ms != null && ms > 0 && ms <= 24 * 3600 * 1000) endingSoon.push(g);
   });
   return { newLow, reached, bigDrop, endingSoon, priceDrop };
+}
+
+/* 用「上一轮快照」对比出变化（分片模式用；单 job 模式走 diffChanges） */
+function diffAgainstSnapshot(games, snap) {
+  const newLow = [], reached = [], bigDrop = [], endingSoon = [], priceDrop = [];
+  for (const g of games) {
+    const prev = snap[String(g.appid)];
+    if (!prev) continue;
+    const curPrice = g.price && g.price.current;
+    const curLow = g.historicalLow && g.historicalLow.price;
+    /* 史低被刷新（变便宜了） */
+    if (prev.low != null && curLow != null && curLow < prev.low) {
+      newLow.push({ g, from: prev.low, to: curLow });
+    }
+    /* 达到目标价 */
+    if (isTargetReached(g)) reached.push(g);
+    /* 价格下降 */
+    if (prev.price != null && curPrice != null && curPrice < prev.price) {
+      priceDrop.push({ g, from: prev.price, to: curPrice });
+    }
+    /* 折扣 24h 内结束 */
+    const ms = saleRemainMs(g);
+    if (ms != null && ms > 0 && ms <= 24 * 3600 * 1000) endingSoon.push(g);
+  }
+  return { newLow, reached, bigDrop, endingSoon, priceDrop };
+}
+/* 为下一轮准备快照：只留"用于比对的最小字段"，避免文件膨胀 */
+function buildSnapshot(games) {
+  const snap = {};
+  for (const g of games) {
+    if (!g || g.appid == null) continue;
+    snap[String(g.appid)] = {
+      price: g.price ? g.price.current : null,
+      low: g.historicalLow ? g.historicalLow.price : null,
+      score: g.rating ? g.rating.score : null
+    };
+  }
+  return snap;
 }
 
 /* ============================ 邮件 ============================ */
@@ -1250,6 +1350,18 @@ async function main() {
   let games = data.games.filter(g => g && g.appid);
   log('读取到 ' + games.length + ' 款游戏' + (CFG.itadKey ? '（ITAD 史低已启用）' : '（未配置 ITAD_API_KEY，跳过史低查询）'));
 
+  /* ---------------- 分片模式：只处理本分片 ---------------- */
+  const shardTotal = Math.max(0, Number(CFG.shardTotal) || 0);
+  const isSharded = shardTotal > 1;
+  let shardIndex = 0;
+  if (isSharded) {
+    shardIndex = Math.min(Math.max(0, Number(CFG.shardIndex) || 0), shardTotal - 1);
+    const all = games;
+    games = shardSlice(all, shardIndex, shardTotal);
+    log(`【分片模式】本 job 处理第 ${shardIndex + 1}/${shardTotal} 片：` +
+        `${games.length} 款（全量 ${all.length} 款；各片并行、互不重叠、并集为全量）。`);
+  }
+
   if (CFG.maxGames > 0 && games.length > CFG.maxGames) {
     log('本次只刷新前 ' + CFG.maxGames + ' 款（MAX_GAMES 限制）。');
     games = games.slice(0, CFG.maxGames);
@@ -1299,21 +1411,28 @@ async function main() {
 
   let pending = games.slice();
   let sweep = 0;
-  let leftover = await runSweep(pending, '');
-  while (leftover.length && sweep < MAX_SWEEPS) {
-    sweep++;
-    /* 补跑等待时间随"剩余规模"自适应（而不是固定 30s 猜一个数）：
-       剩余越多，说明限流压力越大，等得越久 —— 但封顶在 sweepGapMaxMs。
-       这样 219 款时等 ~30s，10000 款时最多等到 sweepGapMaxMs。 */
-    const gapRatio = leftover.length / Math.max(1, games.length);
-    const gap = Math.min(
-      Math.round(CFG.sweepGapMs * (1 + gapRatio * 4)),
-      Number(CFG.sweepGapMaxMs)
-    );
-    log(`— 补跑第 ${sweep}/${MAX_SWEEPS} 轮：${leftover.length}/${games.length} 款未成功` +
-        `（占 ${(gapRatio * 100).toFixed(1)}%），等 ${(gap / 1000).toFixed(0)}s 让配额恢复后重试…`);
-    await sleep(gap);
-    leftover = await runSweep(leftover, `[补${sweep}] `);
+  let leftover = [];
+  if (CFG.skipPriceRefresh) {
+    /* 汇总阶段（SKIP_PRICE_REFRESH=true）：价格/评分已由各分片刷过并合并，
+       这里不再重复请求 —— 只做全清单级的补充（日历/标签/翻译）。 */
+    log('已跳过价格刷新（SKIP_PRICE_REFRESH=true，分片阶段已完成；本阶段只补全局数据）。');
+  } else {
+    leftover = await runSweep(pending, '');
+    while (leftover.length && sweep < MAX_SWEEPS) {
+      sweep++;
+      /* 补跑等待时间随"剩余规模"自适应（而不是固定 30s 猜一个数）：
+         剩余越多，说明限流压力越大，等得越久 —— 但封顶在 sweepGapMaxMs。
+         这样 219 款时等 ~30s，10000 款时最多等到 sweepGapMaxMs。 */
+      const gapRatio = leftover.length / Math.max(1, games.length);
+      const gap = Math.min(
+        Math.round(CFG.sweepGapMs * (1 + gapRatio * 4)),
+        Number(CFG.sweepGapMaxMs)
+      );
+      log(`— 补跑第 ${sweep}/${MAX_SWEEPS} 轮：${leftover.length}/${games.length} 款未成功` +
+          `（占 ${(gapRatio * 100).toFixed(1)}%），等 ${(gap / 1000).toFixed(0)}s 让配额恢复后重试…`);
+      await sleep(gap);
+      leftover = await runSweep(leftover, `[补${sweep}] `);
+    }
   }
   failed = leftover.length;
 
@@ -1326,6 +1445,37 @@ async function main() {
       warn(`  ⚠ 失败比例已超 10%，判断为 Steam 限流压力过大。可到仓库 Settings → Variables 调大` +
            ` SWEEP_GAP_MS / RATE_CEILING_MS（当前 ${CFG.sweepGapMs}/${CFG.rateCeilingMs}ms），或把每轮间隔调大。`);
     }
+  }
+
+  /* ------------------------------------------------------------------
+   * 分片模式：到此为止，把本分片的结果写出去，交给汇总 job 合并。
+   * 为什么不再往下做日历/翻译/商店页：
+   *   ① 这些数据源是**全清单级**的（特惠日历一次覆盖全站促销；
+   *      商店页标签已有 TTL 队列在管），放在每个分片里做会重复请求、
+   *      徒增被限流的概率。
+   *   ② 让它们只在**汇总 job** 里跑一次，既省时间也不会互相干扰。
+   * ------------------------------------------------------------------ */
+  if (isSharded) {
+    const outDir = path.join(ROOT, 'data', '.shard');
+    fs.mkdirSync(outDir, { recursive: true });
+    const outPath = CFG.shardOut
+      ? path.resolve(ROOT, CFG.shardOut)
+      : path.join(outDir, `${shardIndex}.json`);
+    fs.mkdirSync(path.dirname(outPath), { recursive: true });
+    const shardPayload = {
+      version: data.version || 3,
+      shardIndex, shardTotal,
+      shardGameCount: games.length,
+      refreshedAt: nowMs(),
+      refreshedBy: 'github-actions-shard',
+      failed,
+      games                                  // 只有本分片的款，且已带新数据
+    };
+    fs.writeFileSync(outPath, JSON.stringify(shardPayload, null, 2), 'utf8');
+    log(`【分片模式】本片完成：刷新成功 ${results.filter(Boolean).length}｜失败 ${failed}｜` +
+        `已写出 ${path.relative(ROOT, outPath)}`);
+    log(`【分片模式】汇总由后续 job 统一完成（合并 + 特惠日历 + 标签 + 发信）。`);
+    return;
   }
 
   /* ---------------- 新增：特惠日历（补折扣截止时间） ---------------- */
@@ -1374,12 +1524,34 @@ async function main() {
   const jsonPath = path.join(ROOT, 'data', `steam-wishlist-${todayStr()}.json`);
   fs.writeFileSync(jsonPath, JSON.stringify(payload, null, 2), 'utf8');
   log('已导出 JSON：' + path.relative(ROOT, jsonPath));
-  const changes = diffChanges(results, data.games);
+
+  /* ------------------------------------------------------------------
+   * 变化比对（2026-09-19 分片模式适配）
+   * ------------------------------------------------------------------
+   * 单 job 模式下，results 本身就是"刷新前/后"的对比依据。
+   * 但分片模式下，价格是在**各分片 job**里刷新的，汇总 job 里 results 为空
+   * → diffChanges([]) 会得出"什么都没变"，邮件就丢了所有价格下降/史低提醒。
+   *
+   * 修法：合并完成后，用**上一轮快照**与当前数据对比。
+   *   快照来自 data/wishlist.json 里 CI 自己写入的 _prevSnapshot（见 saveDataFile）。
+   *   没有快照时（首次/单 job 模式）就退回用 results。
+   * ------------------------------------------------------------------ */
+  let changes;
+  const prevSnap = data._prevSnapshot;
+  if (CFG.skipPriceRefresh && prevSnap && typeof prevSnap === 'object') {
+    changes = diffAgainstSnapshot(data.games, prevSnap);
+    log(`变化比对：使用上一轮快照（${Object.keys(prevSnap).length} 款）作基线。`);
+  } else {
+    changes = diffChanges(results, data.games);
+  }
+
   const known = g => g.price && g.price.current != null;
   const lowKnown = g => g.historicalLow && g.historicalLow.price != null;
   const stats = {
     total: data.games.length,
-    refreshed: results.filter(Boolean).length,
+    /* 分片模式下 results 为空，但"成功刷新"的真实值是全体款数
+       （合并脚本已保证每款都被某个分片刷过） */
+    refreshed: CFG.skipPriceRefresh ? data.games.length : results.filter(Boolean).length,
     failed,
     onSale: data.games.filter(g => g.price && g.price.isOnSale).length,
     atLow: data.games.filter(isAtHistoricalLow).length,
