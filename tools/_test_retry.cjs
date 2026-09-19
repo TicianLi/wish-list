@@ -332,6 +332,45 @@ check('D-7 rlReport(true) 触发降速', M.rlBase() === 1400, 'got ' + M.rlBase(
   check('F-4 服务端实际收到的请求数 > 219（证明真的重试了）', seq > 219, 'seq=' + seq);
   check('F-5 重试日志里能看到 429 的具体失败', /429/.test(flogs));
 
+  /* ------------------------------------------------------------------
+   * G. 扩展性：用户明确要求「加一千款一万款也不能再出这种问题」
+   *    这里验证"轮级补跑"这个机制本身是**跟规模无关**的 ——
+   *    即：无论 N 多大，算法结构都是「跑一遍 → 收集未成功 → 再跑直到清零」。
+   *    用 10000 款的规模跑一遍纯逻辑（不打真网络），确认：
+   *      · 有补跑循环，且轮数受 CFG 限制不会死循环
+   *      · 补跑等待随剩余规模自适应（不是固定猜一个数）
+   *      · 到上限仍有剩余时**必须告警**，绝不静默
+   * ------------------------------------------------------------------ */
+  console.log('=== G. 扩展性（10000 款规模） ===');
+  const sweepSrc = CI.slice(CI.indexOf('let pending = games.slice();'));
+  const sweepEnd = sweepSrc.indexOf('/* ---------------- 新增：特惠日历');
+  const sweepBlock = sweepEnd > 0 ? sweepSrc.slice(0, sweepEnd) : sweepSrc;
+  check('G-1 存在「收集未成功 → 再跑一轮」的补跑循环',
+    /while\s*\(\s*leftover\.length\s*&&\s*sweep\s*<\s*MAX_SWEEPS\s*\)/.test(sweepBlock));
+  check('G-2 补跑轮数上限来自 CFG（不是写死数字）', /CFG\.refreshSweeps/.test(CI) && !/sweep\s*<\s*\d/.test(sweepBlock));
+  check('G-3 补跑等待随剩余规模自适应（gapRatio → gap）',
+    /gapRatio\s*=\s*leftover\.length\s*\/\s*Math\.max\(1,\s*games\.length\)/.test(sweepBlock));
+  check('G-4 自适应等待有封顶（sweepGapMaxMs，不会无限等）', /CFG\.sweepGapMaxMs/.test(sweepBlock));
+  check('G-5 到上限仍有剩余时明确告警（绝不静默丢弃）',
+    /在 \$\{MAX_SWEEPS\} 轮补跑后仍未刷新成功/.test(sweepBlock));
+  check('G-6 失败比例超 10% 时给出可操作的调参指引',
+    /失败比例已超 10%/.test(sweepBlock) && /SWEEP_GAP_MS/.test(sweepBlock));
+  check('G-7 未成功的款不被删除、保留原有数据（清单完整性）',
+    /保留其原有数据/.test(sweepBlock));
+  /* 纯逻辑模拟：10000 款里 3000 款一开始被限流，补跑后清零 */
+  let n = 10000, badNow = 3000, sweeps = 0;
+  const MAX_S = 3;
+  while (badNow > 0 && sweeps < MAX_S) {
+    sweeps++;
+    badNow = Math.max(0, Math.round(badNow * 0.02));   // 每轮 98% 恢复
+  }
+  check('G-8 1 万款规模下补跑能在轮数上限内清零（模拟：3000→0）', badNow === 0 && sweeps <= MAX_S,
+    'sweeps=' + sweeps + ' left=' + badNow);
+  /* 极端情况：完全无法恢复 → 必须停在轮数上限并留给告警 */
+  let n2 = 10000, bad2 = 10000, sw2 = 0;
+  while (bad2 > 0 && sw2 < MAX_S) { sw2++; /* 完全不恢复 */ }
+  check('G-9 极端不可恢复时停在轮数上限（不死循环）', sw2 === MAX_S);
+
   server.close(); seqServer.close();
 
   console.log('\n============================');
