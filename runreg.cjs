@@ -28,7 +28,8 @@ const SUITES = {
   mergef:    'tools/_test_mergefields.cjs',
   starve:    'tools/_test_queuestarve.mjs',
   limits:    'tools/_test_limits.cjs',
-  sentinel:  'tools/_test_sentinel.cjs'
+  sentinel:  'tools/_test_sentinel.cjs',
+  retry:     'tools/_test_retry.cjs'
 };
 
 const args = process.argv.slice(2);
