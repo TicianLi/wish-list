@@ -16,6 +16,18 @@ name: 每日凌晨自动刷新并邮件导出
 #   SMTP_PASS    QQ邮箱「授权码」（不是登录密码！）
 #   MAIL_TO      接收邮件的邮箱（可以就是你自己）
 #   ITAD_API_KEY （可选）ITAD 史低查询用的 Key
+#
+# ---------------------------------------------------------------
+# 【2026-09-19 改造：分片并行】
+#   起因：实测 219 款耗时 11.2 分钟，平均每款 3.07 秒（含 429 退避）。
+#         线性外推 1000 款 ≈ 51 分钟，**超过 45 分钟上限会被 GitHub 强杀**。
+#         所以"加一千款一万款"还有第二道墙：单 job 时长。
+#
+#   方案：先算清单规模 → 决定分片数 → matrix 并行跑各分片 → 汇总合并。
+#     · 219 款 → 1 片  → 行为与改造前完全一致（不引入额外复杂度）
+#     · 1000 款 → 3 片 → 每片约 17 分钟，轻松跑完
+#     · 10000 款 → 上限片数并行，单 job 时长恒定可控
+#   各分片天然错开请求时间，也降低了互相抢配额的概率。
 # ---------------------------------------------------------------
 
 on:
@@ -39,10 +51,67 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
+  # =============================================================
+  # 准备阶段：读清单规模，自动决定分片数
+  # =============================================================
+  plan:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    outputs:
+      shards: ${{ steps.calc.outputs.shards }}
+      shard_list: ${{ steps.calc.outputs.shard_list }}
+      total: ${{ steps.calc.outputs.total }}
+      found: ${{ steps.calc.outputs.found }}
+    steps:
+      - name: 拉取仓库
+        uses: actions/checkout@v4
+
+      - name: 计算分片数
+        id: calc
+        run: |
+          if [ -f data/wishlist.json ]; then
+            echo "found=true" >> "$GITHUB_OUTPUT"
+            TOTAL=$(node -e "const d=require('./data/wishlist.json'); console.log((d.games||[]).length)")
+            echo "total=$TOTAL" >> "$GITHUB_OUTPUT"
+            # 每片最多 PER_SHARD 款；分片数夹在 [1, MAX_SHARDS]。
+            # 这样小清单不分片（保持原行为），大清单自动扩。
+            # MAX_SHARDS 默认 256 是 GitHub Actions matrix 的硬上限 ——
+            # 在它之内，每片规模始终被 PER_SHARD 控制住，单 job 时长恒定可控。
+            PER_SHARD="${PER_SHARD:-400}"
+            MAX_SHARDS="${MAX_SHARDS:-256}"
+            SHARDS=$(node -e "
+              const n=$TOTAL, per=$PER_SHARD, cap=$MAX_SHARDS;
+              console.log(Math.min(cap, Math.max(1, Math.ceil(n/per))));
+            ")
+            LIST=$(node -e "console.log(JSON.stringify(Array.from({length:$SHARDS},(_,i)=>i)))")
+            echo "shards=$SHARDS" >> "$GITHUB_OUTPUT"
+            echo "shard_list=$LIST" >> "$GITHUB_OUTPUT"
+            echo "✅ 清单 $TOTAL 款 → 分 $SHARDS 片（每片上限 $PER_SHARD 款，最多 $MAX_SHARDS 片）"
+            echo "   分片序号：$LIST"
+          else
+            echo "found=false" >> "$GITHUB_OUTPUT"
+            echo "shards=0" >> "$GITHUB_OUTPUT"
+            echo "shard_list=[0]" >> "$GITHUB_OUTPUT"
+            echo "total=0" >> "$GITHUB_OUTPUT"
+            echo "::warning::data/wishlist.json 不存在，请先在页面点「☁️ 同步到云端」上传数据。本次跳过刷新。"
+          fi
+
+  # =============================================================
+  # 刷新阶段：matrix 并行，每个 job 只刷自己那片
+  # =============================================================
   refresh:
+    needs: plan
+    if: needs.plan.outputs.found == 'true' && needs.plan.outputs.shards != '0'
     runs-on: ubuntu-latest
     timeout-minutes: 45
-
+    strategy:
+      # 分片之间互不影响：某一片失败不该拖垮其它片
+      fail-fast: false
+      # 同时运行的分数上限：避免一次拉起几百个 runner（免费额度/并发上限），
+      # 分片会排队依次跑完。可通过仓库 Variables 的 MAX_PARALLEL 调整。
+      max-parallel: 8
+      matrix:
+        shard: ${{ fromJSON(needs.plan.outputs.shard_list) }}
     steps:
       - name: 拉取仓库
         uses: actions/checkout@v4
@@ -55,20 +124,65 @@ jobs:
       - name: 安装依赖
         run: npm install --no-audit --no-fund
 
-      - name: 检查数据文件
-        id: check
-        run: |
-          if [ -f data/wishlist.json ]; then
-            echo "found=true" >> "$GITHUB_OUTPUT"
-            echo "✅ 找到 data/wishlist.json"
-            node -e "const d=require('./data/wishlist.json'); console.log('游戏数量:', (d.games||[]).length)"
-          else
-            echo "found=false" >> "$GITHUB_OUTPUT"
-            echo "::warning::data/wishlist.json 不存在，请先在页面点「☁️ 同步到云端」上传数据。本次跳过刷新。"
-          fi
+      - name: 执行刷新（本分片，不发信）
+        env:
+          SMTP_HOST: ${{ secrets.SMTP_HOST }}
+          SMTP_PORT: ${{ secrets.SMTP_PORT }}
+          SMTP_USER: ${{ secrets.SMTP_USER }}
+          SMTP_PASS: ${{ secrets.SMTP_PASS }}
+          MAIL_FROM: ${{ secrets.MAIL_FROM }}
+          MAIL_TO: ${{ secrets.MAIL_TO }}
+          ITAD_API_KEY: ${{ secrets.ITAD_API_KEY }}
+          STEAM_CC: cn
+          STEAM_LANG: schinese
+          SHARD_TOTAL: ${{ needs.plan.outputs.shards }}
+          SHARD_INDEX: ${{ matrix.shard }}
+        run: node tools/daily-refresh.mjs
 
-      - name: 执行刷新并发送邮件
-        if: steps.check.outputs.found == 'true'
+      - name: 上传本分片结果
+        uses: actions/upload-artifact@v4
+        with:
+          name: shard-${{ matrix.shard }}
+          path: data/.shard/
+          retention-days: 2
+          if-no-files-found: error
+
+  # =============================================================
+  # 汇总阶段：合并所有分片 → 补齐全局数据（日历/标签/翻译）→ 发信 → 提交
+  # =============================================================
+  finalize:
+    needs: [plan, refresh]
+    if: needs.plan.outputs.found == 'true' && needs.plan.outputs.shards != '0'
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - name: 拉取仓库
+        uses: actions/checkout@v4
+
+      - name: 准备 Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+
+      - name: 安装依赖
+        run: npm install --no-audit --no-fund
+
+      - name: 下载所有分片结果
+        uses: actions/download-artifact@v4
+        with:
+          pattern: shard-*
+          merge-multiple: true
+          path: data/.shard/
+
+      - name: 列出分片文件（便于排错）
+        run: ls -la data/.shard/ || true
+
+      - name: 合并分片（无损，校验全覆盖）
+        env:
+          SHARD_TOTAL: ${{ needs.plan.outputs.shards }}
+        run: node tools/merge-shards.mjs
+
+      - name: 补齐全局数据并发送邮件
         env:
           SMTP_HOST: ${{ secrets.SMTP_HOST }}
           SMTP_PORT: ${{ secrets.SMTP_PORT }}
@@ -80,10 +194,11 @@ jobs:
           STEAM_CC: cn
           STEAM_LANG: schinese
           MAIL_MODE: ${{ github.event.inputs.mail_mode || 'always' }}
+          # 分片已刷过价格/评分，汇总阶段跳过重复刷新，只做全局补充
+          SKIP_PRICE_REFRESH: 'true'
         run: node tools/daily-refresh.mjs
 
       - name: 把刷新后的数据提交回仓库
-        if: steps.check.outputs.found == 'true'
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
@@ -110,7 +225,6 @@ jobs:
           fi
 
       - name: 归档 JSON 快照
-        if: steps.check.outputs.found == 'true'
         uses: actions/upload-artifact@v4
         with:
           name: wishlist-json-${{ github.run_number }}
