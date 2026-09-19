@@ -97,6 +97,8 @@ const CFG = {
      这是"加一万款也不能有失败"的最终保障。0 = 不补跑。 */
   refreshSweeps: Number(process.env.REFRESH_SWEEPS || 3),
   sweepGapMs: Number(process.env.SWEEP_GAP_MS || 30000),
+  /* 补跑等待的自适应上限：剩余款越多等越久，但不超过这个值 */
+  sweepGapMaxMs: Number(process.env.SWEEP_GAP_MAX_MS || 300000),
   // 每次运行最多刷新多少个（防止清单过大跑超时；0 = 不限）
   maxGames: Number(process.env.MAX_GAMES || 0),
   // 商店页（抓用户标签 / 捆绑包）的间隔更保守
@@ -1300,8 +1302,17 @@ async function main() {
   let leftover = await runSweep(pending, '');
   while (leftover.length && sweep < MAX_SWEEPS) {
     sweep++;
-    log(`— 补跑第 ${sweep} 轮：${leftover.length} 款未成功，等 ${(CFG.sweepGapMs / 1000).toFixed(0)}s 让配额恢复后重试…`);
-    await sleep(CFG.sweepGapMs);
+    /* 补跑等待时间随"剩余规模"自适应（而不是固定 30s 猜一个数）：
+       剩余越多，说明限流压力越大，等得越久 —— 但封顶在 sweepGapMaxMs。
+       这样 219 款时等 ~30s，10000 款时最多等到 sweepGapMaxMs。 */
+    const gapRatio = leftover.length / Math.max(1, games.length);
+    const gap = Math.min(
+      Math.round(CFG.sweepGapMs * (1 + gapRatio * 4)),
+      Number(CFG.sweepGapMaxMs)
+    );
+    log(`— 补跑第 ${sweep}/${MAX_SWEEPS} 轮：${leftover.length}/${games.length} 款未成功` +
+        `（占 ${(gapRatio * 100).toFixed(1)}%），等 ${(gap / 1000).toFixed(0)}s 让配额恢复后重试…`);
+    await sleep(gap);
     leftover = await runSweep(leftover, `[补${sweep}] `);
   }
   failed = leftover.length;
@@ -1311,6 +1322,10 @@ async function main() {
     leftover.slice(0, 20).forEach(g => warn(`    · ${targetName(g)}：${failedReasons.get(targetName(g)) || '未知'}`));
     if (leftover.length > 20) warn(`    …另有 ${leftover.length - 20} 款，详见上方逐条日志。`);
     warn(`  这些款会在明天的自动刷新里自动重试；若长期失败，通常是该 appid 在国区已不可用。`);
+    if (leftover.length > games.length * 0.1) {
+      warn(`  ⚠ 失败比例已超 10%，判断为 Steam 限流压力过大。可到仓库 Settings → Variables 调大` +
+           ` SWEEP_GAP_MS / RATE_CEILING_MS（当前 ${CFG.sweepGapMs}/${CFG.rateCeilingMs}ms），或把每轮间隔调大。`);
+    }
   }
 
   /* ---------------- 新增：特惠日历（补折扣截止时间） ---------------- */
