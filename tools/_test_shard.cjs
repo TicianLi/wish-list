@@ -27,6 +27,7 @@
 */
 const fs = require('fs');
 const path = require('path');
+const os = require('os');
 const vm = require('vm');
 const { spawnSync } = require('child_process');
 
@@ -260,6 +261,48 @@ check('X-7 跳过价格刷新时，统计里的"成功刷新"用全体款数（�
   /refreshed:\s*CFG\.skipPriceRefresh \? data\.games\.length/.test(CI));
 check('X-8 无快照时退回 results 比对（单 job 模式不受影响）',
   /changes = diffChanges\(results, data\.games\)/.test(CI));
+
+/* ------------------------------------------------------------------
+ * X-9 ~ X-13：run #33 事故的防回归（2026-09-19 补）
+ * 事故：判据写成 `shardTotal > 1`，219 款只分 1 片 → isSharded=false
+ *       → refresh job 退化成完整单 job 模式：自己发了邮件、且不写 .shard/
+ *       → upload-artifact 报 "No files were found" → job 失败 → finalize skip。
+ * 正确判据：**SHARD_TOTAL 是否被设置**，与总片数无关（1 片也要走分片路径）。
+ * ------------------------------------------------------------------ */
+check('X-9 分片判据用 SHARD_TOTAL 是否被设置，而不是「分片数 > 1」',
+  /shardEnvSet/.test(CI) && !/const isSharded = shardTotal > 1/.test(CI));
+check('X-10 判据实现：SHARD_TOTAL 非 undefined 且非空字符串',
+  /shardEnvSet:\s*process\.env\.SHARD_TOTAL !== undefined\s*&&\s*process\.env\.SHARD_TOTAL !== ''/.test(CI));
+check('X-11 isSharded 由 shardEnvSet 决定', /const isSharded = !!CFG\.shardEnvSet/.test(CI));
+check('X-12 shardTotal 下限为 1（单片不会导致 slice 出错或除以 0）',
+  /const shardTotal = Math\.max\(1, Number\(CFG\.shardTotal\) \|\| 1\)/.test(CI));
+check('X-13 分片收尾会写出 data/.shard 文件（upload-artifact 依赖它）',
+  /path\.join\(ROOT, 'data', '\.shard'\)/.test(CI) && /fs\.writeFileSync\(outPath/.test(CI));
+check('X-14 分片收尾在「特惠日历/商店页/发信」之前 return（单片也不重复发信）',
+  CI.indexOf('if (isSharded) {') < CI.indexOf('特惠日历（补折扣截止时间）'),
+  'isSharded 块必须在全局收尾之前');
+check('X-14b 分片模式强制关掉发信（双保险，避免 N 片各发一封）',
+  /CFG\.mailMode = 'never'/.test(CI));
+
+/* X-15：复现 #33 的判据计算 —— SHARD_TOTAL=1 时 isSharded 必须为 true。
+   注意：不能真跑 daily-refresh.mjs（它要连 Steam，本机/CI 单测都不该发网络请求）。
+   这里从源码抠出 CFG 的判定表达式，在本地按不同 SHARD_TOTAL 求值。 */
+{
+  const m = CI.match(/shardEnvSet:\s*(process\.env\.SHARD_TOTAL[^,\n]*)/);
+  if (!m) { check('X-15 能从源码抠出 shardEnvSet 的判定表达式', false, '未匹配到'); }
+  else {
+    const expr = m[1].replace(/,$/, '');
+    const evalWith = (shardTotal) => {
+      const env = {};
+      if (shardTotal !== undefined) env.SHARD_TOTAL = shardTotal;
+      return vm.runInNewContext('(' + expr.replace(/process\.env\.SHARD_TOTAL/g, 'env.SHARD_TOTAL') + ')', { env });
+    };
+    check('X-15 SHARD_TOTAL=1 时判据为 true（#33 的正确行为）', evalWith('1') === true);
+    check('X-16 SHARD_TOTAL=3 时判据为 true', evalWith('3') === true);
+    check('X-17 SHARD_TOTAL 未设置时为 false（保持老的单 job 模式）', evalWith(undefined) === false);
+    check('X-18 SHARD_TOTAL 为空串时为 false', evalWith('') === false);
+  }
+}
 
 console.log('\n============================');
 console.log('SHARD PASS ' + pass + '  FAIL ' + fail);
