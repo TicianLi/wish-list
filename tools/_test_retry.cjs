@@ -345,8 +345,12 @@ check('D-7 rlReport(true) 触发降速', M.rlBase() === 1400, 'got ' + M.rlBase(
   const sweepSrc = CI.slice(CI.indexOf('let pending = games.slice();'));
   const sweepEnd = sweepSrc.indexOf('/* ---------------- 新增：特惠日历');
   const sweepBlock = sweepEnd > 0 ? sweepSrc.slice(0, sweepEnd) : sweepSrc;
+  /* 2026-09-25：补跑循环多了一个「时间预算」守卫（&& !budgetHit）。
+     语义没变（仍是"有剩余就再跑一轮、轮数受 CFG 限制"），所以这里放宽成
+     只匹配前缀 —— 不许它因为多一个守卫就报"循环不存在"。
+     守卫本身由 _test_shard.cjs 的 X-28 精确钉住（那条才是它的契约）。 */
   check('G-1 存在「收集未成功 → 再跑一轮」的补跑循环',
-    /while\s*\(\s*leftover\.length\s*&&\s*sweep\s*<\s*MAX_SWEEPS\s*\)/.test(sweepBlock));
+    /while\s*\(\s*leftover\.length\s*&&\s*sweep\s*<\s*MAX_SWEEPS\b/.test(sweepBlock));
   check('G-2 补跑轮数上限来自 CFG（不是写死数字）', /CFG\.refreshSweeps/.test(CI) && !/sweep\s*<\s*\d/.test(sweepBlock));
   check('G-3 补跑等待随剩余规模自适应（gapRatio → gap）',
     /gapRatio\s*=\s*leftover\.length\s*\/\s*Math\.max\(1,\s*games\.length\)/.test(sweepBlock));
@@ -370,6 +374,21 @@ check('D-7 rlReport(true) 触发降速', M.rlBase() === 1400, 'got ' + M.rlBase(
   let n2 = 10000, bad2 = 10000, sw2 = 0;
   while (bad2 > 0 && sw2 < MAX_S) { sw2++; /* 完全不恢复 */ }
   check('G-9 极端不可恢复时停在轮数上限（不死循环）', sw2 === MAX_S);
+
+  /* ------------------------------------------------------------------
+   * H. 静默限流自愈（2026-09-25 run #43 事故）
+   *    Steam 不报 429，而是 HTTP 200 返回空对象 {} —— 旧代码把空响应当普通
+   *    错误、不退避，7 片并行时 261 款只有 53 款（20%）拿到数据。
+   *    这里验证：空响应被识别为限流 → 自适应降速 + 有界重试 + 明确报错。
+   * ------------------------------------------------------------------ */
+  console.log('=== H. 静默限流自愈 ===');
+  const appD = CI.slice(CI.indexOf('async function steamAppDetails'), CI.indexOf('async function steamReviews'));
+  check('H-1 空响应被当作限流 → 调 rlSlowdown() 降速', /rlSlowdown\(\)/.test(appD));
+  check('H-2 有界重试（SILENT_RETRIES=3，不死循环）',
+    /SILENT_RETRIES\s*=\s*3/.test(CI) && /attempt\s*<=\s*SILENT_RETRIES/.test(appD));
+  check('H-3 重试之间用指数退避 backoffDelayMs', /backoffDelayMs\(attempt\)/.test(appD));
+  check('H-4 重试仍失败时明确报「静默限流」（可诊断、不静默丢弃）',
+    /Steam 静默限流/.test(appD) && /多次未返回 AppID/.test(appD));
 
   server.close(); seqServer.close();
 
