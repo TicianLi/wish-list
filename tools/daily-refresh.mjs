@@ -444,14 +444,32 @@ async function rateLimit(overrideMs) {
   lastReq = nowMs();
 }
 
+/* appdetails 的「静默限流」：HTTP 200 但 body 是空对象 {}（不是 429）。
+   2026-09-25 实测（run #43）：7 片并行时 Steam 不报 429，而是直接返回 {}，
+   旧代码把它当普通错误、不退避 → 一路猛冲，261 款只有 53 款拿到数据（20%）。
+   这里把它当成和 429 一样的限流信号：①反馈给自适应限速器降速 ②有界重试几次。
+   若重试后仍拿不到，才抛错交给轮级补跑 —— 全程自愈，不需要人插手。 */
+const SILENT_RETRIES = 3;
 async function steamAppDetails(appid) {
-  await rateLimit();
   const url = `https://store.steampowered.com/api/appdetails/?appids=${appid}&cc=${CFG.cc}&l=${CFG.lang}`;
-  const data = await fetchJSON(url);
-  const node = data && data[String(appid)];
-  if (!node) throw new Error('Steam 未返回 AppID ' + appid);
-  if (!node.success) throw new Error('Steam 查询失败（AppID ' + appid + '）');
-  return node.data || null;
+  for (let attempt = 1; attempt <= SILENT_RETRIES; attempt++) {
+    await rateLimit();
+    const data = await fetchJSON(url);
+    const node = data && data[String(appid)];
+    if (node) {
+      if (!node.success) throw new Error('Steam 查询失败（AppID ' + appid + '）');
+      return node.data || null;
+    }
+    /* 空响应 = 静默限流：立刻让自适应限速器降速，别再用原节奏猛冲 */
+    rlSlowdown();
+    if (attempt >= SILENT_RETRIES) {
+      throw new Error('Steam 静默限流（多次未返回 AppID ' + appid + '）');
+    }
+    const delay = backoffDelayMs(attempt);
+    log(`  ↻ Steam 静默限流（未返回 AppID ${appid}），${(delay / 1000).toFixed(1)}s 后重试（第 ${attempt}/${SILENT_RETRIES} 次）`);
+    await sleep(delay);
+  }
+  throw new Error('Steam 静默限流（未返回 AppID ' + appid + '）');
 }
 
 async function steamReviews(appid) {
