@@ -97,30 +97,71 @@ check('T-9 空数组不崩', shardSlice([], 0, 3).length === 0);
  * U. 分片数自动伸缩
  * ================================================================== */
 console.log('=== U. 分片数自动伸缩 ===');
-const PER = 400, MAXS = 256;      // 与 workflow 默认值一致
-check('U-1 219 款（当前规模）→ 1 片（行为与改造前一致）', autoShardCount(219, PER, MAXS) === 1, 'got ' + autoShardCount(219, PER, MAXS));
-check('U-2 400 款 → 1 片', autoShardCount(400, PER, MAXS) === 1);
-check('U-3 401 款 → 2 片', autoShardCount(401, PER, MAXS) === 2);
-check('U-4 1000 款 → 3 片（1000/400=2.5→3）', autoShardCount(1000, PER, MAXS) === 3);
-check('U-5 10000 款 → 25 片（每片 400，规模线性可控）', autoShardCount(10000, PER, MAXS) === 25, 'got ' + autoShardCount(10000, PER, MAXS));
+/* ⚠️ PER 必须与 workflow 的 PER_SHARD 默认值一致 —— U-11 会自动校验，
+   防止"改了一边忘了另一边"（这类不同步正是 2026-09-25 事故的同类风险）。
+
+   取值 40 的推导（不是拍脑袋）：
+     最坏单款耗时 = 自适应限速上限 rateCeilingMs = 60s
+     每片 40 款 ⇒ 最坏单片 40 × 60s = 40 分钟 < job 的 45 分钟上限。
+   于是"单片时长"被硬性钉死，与清单规模彻底解耦。
+   历史：原为 400 —— 那个值让 261 款只算出 1 片，等于根本没分片，
+        run #42 撞上 Steam 持续限流就得全线（见下方 U-7b）。 */
+const PER = 40, MAXS = 256;
+const CEIL_S = 60;                  // CFG.rateCeilingMs = 60000ms
+const BUDGET_MS = 2400000;          // CFG.refreshBudgetMs = 40 分钟
+check('U-1 261 款（当前规模）→ 7 片（请求分散到 7 个 runner / 7 个 IP）',
+  autoShardCount(261, PER, MAXS) === 7, 'got ' + autoShardCount(261, PER, MAXS));
+check('U-2 40 款 → 1 片（清单很小时不分片）', autoShardCount(40, PER, MAXS) === 1);
+check('U-3 41 款 → 2 片', autoShardCount(41, PER, MAXS) === 2);
+check('U-4 219 款 → 6 片（旧值 400 时是 1 片，等于没分片）', autoShardCount(219, PER, MAXS) === 6, 'got ' + autoShardCount(219, PER, MAXS));
+check('U-5 1000 款 → 25 片', autoShardCount(1000, PER, MAXS) === 25, 'got ' + autoShardCount(1000, PER, MAXS));
 check('U-6 0 款 → 仍返回 1（不会 0 片导致不跑）', autoShardCount(0, PER, MAXS) === 1);
-/* 核心设计目标：**每片规模恒定**（≈PER_SHARD），所以单 job 时长与总规模解耦。
+/* 核心设计目标：**每片规模恒定**（≤PER_SHARD），所以单 job 时长与总规模解耦。
    只要每片 < 45 分钟，无论清单多大都能跑完（分片排队即可）。 */
-for (const n of [219, 500, 1000, 5000, 10000, 50000, 200000]) {
+for (const n of [261, 500, 1000, 5000, 10000, 50000, 200000]) {
   const s = autoShardCount(n, PER, MAXS);
   const per = Math.ceil(n / s);
   const mins = per * 3.07 / 60;
-  check('U-7 ' + n + ' 款 → ' + s + ' 片，每片约 ' + per + ' 款 ≈ ' + mins.toFixed(1) + ' 分钟（必须 < 45）',
+  check('U-7 ' + n + ' 款 → ' + s + ' 片，每片约 ' + per + ' 款 ≈ ' + mins.toFixed(1) + ' 分钟（正常情况，实测 3.07s/款）',
     mins < 45, mins.toFixed(1) + ' 分钟');
 }
+/* U-7b 最坏情况：每款都撞 429 并退避到上限（run #42 实测真会走到 60s/款）。
+   这是"去架构"的关键判据 —— 单片时长必须从最坏值反推，而不是拿正常值赌。 */
+for (const n of [261, 1000, 10000]) {
+  const s = autoShardCount(n, PER, MAXS);
+  const batches = Math.ceil(s / 8);              // max-parallel: 8
+  const per = Math.ceil(n / s);
+  const worstOne = per * CEIL_S / 60;            // 单批最坏分钟
+  const worstAll = worstOne * batches;
+  check('U-7b ' + n + ' 款最坏情况（每款 ' + CEIL_S + 's）：' + s + ' 片 → ' + batches +
+        ' 批，单片 ' + worstOne.toFixed(0) + ' 分钟，整体 ' + worstAll.toFixed(0) + ' 分钟' +
+        (worstAll < 45 ? '（全部在 45 分钟内）' : '（超 45 分钟 → 由时间预算兜底，不会静默全丢）'),
+    worstOne < 45, '单片 ' + worstOne.toFixed(0) + ' 分钟');
+}
+/* 只要单片最坏 < 45 分钟，就不会出现"被强杀后颗粒无收" */
+check('U-7c 每片最坏时长（' + PER + '×' + CEIL_S + 's = ' + (PER * CEIL_S / 60) + ' 分钟）< job 上限 45 分钟',
+  PER * CEIL_S / 60 < 45, (PER * CEIL_S / 60) + ' 分钟');
 /* 只有超过「PER_SHARD × MAX_SHARDS」这个物理上限，每片才会变大 */
 const PHYS_LIMIT = PER * MAXS;
-check('U-8 物理上限 = ' + PHYS_LIMIT + ' 款（400×256）；该规模内单 job 时长恒定',
+check('U-8 物理上限 = ' + PHYS_LIMIT + ' 款（' + PER + '×' + MAXS + '）；该规模内单 job 时长恒定',
   autoShardCount(PHYS_LIMIT - 1, PER, MAXS) <= MAXS);
 check('U-9 workflow 的 MAX_SHARDS 默认值 == 本测试假设的 ' + MAXS,
   new RegExp('MAX_SHARDS:-' + MAXS).test(WF), 'workflow 里没找到 MAX_SHARDS:-' + MAXS);
 check('U-10 workflow 限制了同时运行的分数（max-parallel，避免拉爆并发）',
   /max-parallel:\s*\d+/.test(WF));
+/* —— 以下两条是"防不同步"的契约：源码/workflow/测试三处必须一致 —— */
+check('U-11 workflow 的 PER_SHARD 默认值 == 本测试假设的 ' + PER,
+  new RegExp('PER_SHARD:-' + PER + '\\}').test(WF),
+  'workflow 里没找到 PER_SHARD:-' + PER + '}（测试与 workflow 不同步了）');
+check('U-12 CFG.refreshBudgetMs 默认值 == ' + BUDGET_MS + 'ms（40 分钟 = 每片最坏时长）',
+  new RegExp('REFRESH_BUDGET_MS\\s*\\|\\|\\s*' + BUDGET_MS).test(CI),
+  '源码里没找到 REFRESH_BUDGET_MS || ' + BUDGET_MS);
+check('U-13 workflow 传的 REFRESH_BUDGET_MS 默认值 == ' + BUDGET_MS + 'ms（与源码一致）',
+  new RegExp("vars\\.REFRESH_BUDGET_MS\\s*\\|\\|\\s*'" + BUDGET_MS + "'").test(WF),
+  'workflow 里没找到 vars.REFRESH_BUDGET_MS || \'' + BUDGET_MS + '\'');
+check('U-14 预算 ≥ 每片最坏时长（否则极端情况会被截断）',
+  BUDGET_MS / 60000 >= PER * CEIL_S / 60,
+  '预算 ' + (BUDGET_MS / 60000) + ' 分钟 < 最坏 ' + (PER * CEIL_S / 60) + ' 分钟');
 
 /* ==================================================================
  * V. 合并无损性（真跑 merge-shards.mjs）
@@ -152,7 +193,8 @@ function runMerge(shardTotal) {
     encoding: 'utf8', cwd: ROOT,
     env: Object.assign({}, process.env, shardTotal != null ? { SHARD_TOTAL: String(shardTotal) } : {})
   });
-  return { code: r.status, out: (r.stdout || '') + (r.stderr || '') };
+  const errInfo = r.error ? ' ERR=' + r.error.message : (r.signal ? ' SIGNAL=' + r.signal : '');
+  return { code: r.status, out: (r.stdout || '') + (r.stderr || '') + errInfo };
 }
 function readData() { return JSON.parse(fs.readFileSync(DATA, 'utf8')); }
 
@@ -325,6 +367,31 @@ check('X-23 快照轮转链正确：_prevSnapshot 取自上一轮的 _snapshot',
 check('X-24 merge 时保留基底的 _snapshot（否则 finalize 轮转会丢快照）',
   /for \(const k of Object\.keys\(base\)\) payload\[k\] = base\[k\]/.test(
     fs.readFileSync(path.join(ROOT, 'tools', 'merge-shards.mjs'), 'utf8')));
+
+/* ------------------------------------------------------------------
+ * X-25 ~ X-31：2026-09-25 事故（run #42）的防回归
+ * 事故：261 款只分 1 片（PER_SHARD=400），那台 runner 的 IP 被 Steam 持续限流
+ *       ~30 分钟，自适应限速把间隔推到 60s/款上限 → 跑满 45 分钟只刷到 244/261
+ *       就被 GitHub 强杀 → finalize（合并+发信）被 skip →
+ *       当天**没邮件、数据也没更新**。
+ * 修法：① PER_SHARD 400→40（分片真正分散到多 IP；单片最坏 40 分钟 < 45 分钟上限）
+ *       ② 新增时间预算：到点主动收尾并 exit 0，保住"写盘 + finalize + 发信"
+ * 核心语义：**宁可发一封部分数据的邮件，也不要静默全丢。**
+ * ------------------------------------------------------------------ */
+check('X-25 CFG 有 refreshBudgetMs（时间预算）', /refreshBudgetMs:/.test(CI));
+check('X-26 runSweep 取每款前检查预算',
+  /budgetMs > 0 && !budgetHit && nowMs\(\) - refreshStart >= budgetMs/.test(CI));
+check('X-27 预算触发用 break 而非抛错（必须正常 exit 0，否则 finalize 照样被 skip）',
+  /budgetHit = true;[\s\S]{0,500}?break;/.test(CI) && !/if \(budgetHit\) throw/.test(CI));
+check('X-28 补跑循环受预算约束（没时间就不补跑）',
+  /while \(leftover\.length && sweep < MAX_SWEEPS && !budgetHit\)/.test(CI));
+check('X-29 补跑等待也守预算（wait = min(gap, remain)）',
+  /const remain = budgetMs > 0[\s\S]{0,120}const wait = Math\.min\(gap, remain\)/.test(CI));
+check('X-30 预算触发后仍会写分片文件（写盘路径不受 budgetHit 影响）',
+  /if \(isSharded\) \{[\s\S]*?fs\.writeFileSync\(outPath/.test(CI) &&
+  !/if \(isSharded && !budgetHit\)/.test(CI));
+check('X-31 预算触发有明确告警，不静默（"已用满时间预算" + "时间预算已用尽"）',
+  /已用满时间预算/.test(CI) && /时间预算已用尽/.test(CI));
 
 console.log('\n============================');
 console.log('SHARD PASS ' + pass + '  FAIL ' + fail);

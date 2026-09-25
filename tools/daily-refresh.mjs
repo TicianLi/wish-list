@@ -133,6 +133,20 @@ const CFG = {
   sweepGapMs: Number(process.env.SWEEP_GAP_MS || 30000),
   /* 补跑等待的自适应上限：剩余款越多等越久，但不超过这个值 */
   sweepGapMaxMs: Number(process.env.SWEEP_GAP_MAX_MS || 300000),
+  /* 时间预算（毫秒）：刷新跑到这个时长就**主动收尾**，不再硬扛到 job 超时被强杀。
+     2026-09-25 事故（run #42）：261 款只分 1 片（PER_SHARD=400），那台 runner 的 IP
+     被 Steam 持续限流近 30 分钟，自适应限速把间隔一路推到 60s/款的上限 →
+     跑满 45 分钟只刷到 244/261 就被 GitHub 强杀，finalize（合并 + 发信）整个被 skip，
+     当天**颗粒无收**：没邮件、数据也没更新。
+     有了预算：到点正常退出、把已刷到的写盘 → 至少 finalize 能跑完、邮件能发出。
+
+     取值依据（不是拍脑袋，是从两个上限反推的）：
+       · 最坏单款耗时 = rateCeilingMs = 60s（自适应限速的上限，实测真会走到）
+       · 每片款数上限 = PER_SHARD = 40（见 workflow 里的推导）
+       ⇒ 最坏单片时长 = 40 × 60s = 40 分钟
+     预算取 40 分钟 = 最坏单片时长，好处是"连极端情况也不会被截断"；
+     再加上 setup（~0.5 分钟）和上传 artifact（~0.5 分钟），仍 < 45 分钟 job 上限。 */
+  refreshBudgetMs: Number(process.env.REFRESH_BUDGET_MS || 2400000),
   // 每次运行最多刷新多少个（防止清单过大跑超时；0 = 不限）
   maxGames: Number(process.env.MAX_GAMES || 0),
   // 商店页（抓用户标签 / 捆绑包）的间隔更保守
@@ -1403,12 +1417,30 @@ async function main() {
   const failedReasons = new Map();   // name/appid -> 错误信息（收尾时报告 + 邮件可见）
   const MAX_SWEEPS = Math.max(0, Number(CFG.refreshSweeps) || 0);
 
+  /* ---- 时间预算（见 CFG.refreshBudgetMs 的说明）----
+     到点就停止取新任务，但**不抛错**：已刷到的照样写盘、照常交给汇总阶段，
+     保证进程以 exit 0 结束 —— 这样 finalize 才不会被 skip，邮件才发得出去。 */
+  const budgetMs = Math.max(0, Number(CFG.refreshBudgetMs) || 0);
+  const refreshStart = nowMs();
+  let budgetHit = false;
+
   const targetName = g => g.name || g.appid;
 
   /* 跑一趟：只处理 pending 里的款，返回仍未成功的 */
   const runSweep = async (pending, label) => {
     const stillBad = [];
     for (let i = 0; i < pending.length; i++) {
+      /* 预算已用满：把剩下的（含当前这款）原样记成"本轮没轮到"——
+         它们不算失败、数据也不丢（下次运行会继续重试），
+         关键是不让 job 被强杀，把"已刷到的部分 + 邮件"保住。 */
+      if (budgetMs > 0 && !budgetHit && nowMs() - refreshStart >= budgetMs) {
+        budgetHit = true;
+        for (let j = i; j < pending.length; j++) stillBad.push(pending[j]);
+        warn(`⏱ 已用满时间预算 ${(budgetMs / 60000).toFixed(0)} 分钟，主动停止刷新：` +
+             `本片剩余 ${pending.length - i} 款本轮未刷到（已刷到的照常写盘，不会被丢弃）。`);
+        warn(`   为什么不等它跑完：硬扛到 job 超时会被 GitHub 强杀，连"已刷到的部分 + 邮件"都保不住。`);
+        break;
+      }
       const g = pending[i];
       try {
         const r = await refreshOne(g);
@@ -1435,7 +1467,7 @@ async function main() {
     log('已跳过价格刷新（SKIP_PRICE_REFRESH=true，分片阶段已完成；本阶段只补全局数据）。');
   } else {
     leftover = await runSweep(pending, '');
-    while (leftover.length && sweep < MAX_SWEEPS) {
+    while (leftover.length && sweep < MAX_SWEEPS && !budgetHit) {
       sweep++;
       /* 补跑等待时间随"剩余规模"自适应（而不是固定 30s 猜一个数）：
          剩余越多，说明限流压力越大，等得越久 —— 但封顶在 sweepGapMaxMs。
@@ -1445,15 +1477,28 @@ async function main() {
         Math.round(CFG.sweepGapMs * (1 + gapRatio * 4)),
         Number(CFG.sweepGapMaxMs)
       );
+      /* 等待同样要守预算：补跑是"锦上添花"，不能把时间耗光而挤掉写盘/汇总/发信。 */
+      const remain = budgetMs > 0 ? Math.max(0, budgetMs - (nowMs() - refreshStart)) : Infinity;
+      const wait = Math.min(gap, remain);
+      if (wait <= 0) {
+        budgetHit = true;
+        warn(`⏱ 时间预算已用尽，跳过第 ${sweep}/${MAX_SWEEPS} 轮补跑（还有 ${leftover.length} 款未刷新）。`);
+        break;
+      }
       log(`— 补跑第 ${sweep}/${MAX_SWEEPS} 轮：${leftover.length}/${games.length} 款未成功` +
-          `（占 ${(gapRatio * 100).toFixed(1)}%），等 ${(gap / 1000).toFixed(0)}s 让配额恢复后重试…`);
-      await sleep(gap);
+          `（占 ${(gapRatio * 100).toFixed(1)}%），等 ${(wait / 1000).toFixed(0)}s 让配额恢复后重试…`);
+      await sleep(wait);
       leftover = await runSweep(leftover, `[补${sweep}] `);
     }
   }
   failed = leftover.length;
 
   if (failed) {
+    if (budgetHit) {
+      warn(`⏱ 时间预算已用尽：本次有 ${failed}/${games.length} 款未刷到。` +
+           `它们的原数据原样保留（清单不会缺款），下一次运行会自动重试。` +
+           `若经常触顶，可调大 REFRESH_BUDGET_MS 或调小每片款数（PER_SHARD）。`);
+    }
     warn(`⚠ 共 ${failed} 款在 ${MAX_SWEEPS} 轮补跑后仍未刷新成功（已保留其原有数据，不影响清单完整性）：`);
     leftover.slice(0, 20).forEach(g => warn(`    · ${targetName(g)}：${failedReasons.get(targetName(g)) || '未知'}`));
     if (leftover.length > 20) warn(`    …另有 ${leftover.length - 20} 款，详见上方逐条日志。`);

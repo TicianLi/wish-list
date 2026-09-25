@@ -24,10 +24,20 @@ name: 每日凌晨自动刷新并邮件导出
 #         所以"加一千款一万款"还有第二道墙：单 job 时长。
 #
 #   方案：先算清单规模 → 决定分片数 → matrix 并行跑各分片 → 汇总合并。
-#     · 219 款 → 1 片  → 行为与改造前完全一致（不引入额外复杂度）
-#     · 1000 款 → 3 片 → 每片约 17 分钟，轻松跑完
-#     · 10000 款 → 上限片数并行，单 job 时长恒定可控
-#   各分片天然错开请求时间，也降低了互相抢配额的概率。
+#
+# 【2026-09-25 修正：PER_SHARD 400 → 40，并新增时间预算】
+#   上面那个方案当时把 PER_SHARD 定成 400，是个错误的保守：261 款只算出 1 片，
+#   等于**根本没分片**。run #42 就是这么挂的 —— 那台 runner 的 IP 被 Steam
+#   持续限流近 30 分钟，自适应限速把间隔推到 60s/款上限，跑满 45 分钟只刷到
+#   244/261 就被 GitHub 强杀 → finalize（合并+发信）被 skip →
+#   **当天没邮件、数据也没更新**。
+#   修正两点：
+#     ① PER_SHARD=40：让分片真正起到"分散到多个 runner（各自 IP）+ 压低单 IP
+#        请求量"的作用，而不是名义上的分片。
+#     ② REFRESH_BUDGET_MS=40 分钟：跑到点就主动收尾并以 exit 0 结束，
+#        保证"写盘 + finalize + 发信"一定能执行 —— 宁可发一封部分数据的邮件，
+#        也不要静默全丢（见 tools/daily-refresh.mjs 的 CFG.refreshBudgetMs）。
+#   规模参考（正常约 3.6 秒/款）：261 款 → 7 片，每片 ~2.3 分钟。
 # ---------------------------------------------------------------
 
 on:
@@ -74,10 +84,19 @@ jobs:
             TOTAL=$(node -e "const d=require('./data/wishlist.json'); console.log((d.games||[]).length)")
             echo "total=$TOTAL" >> "$GITHUB_OUTPUT"
             # 每片最多 PER_SHARD 款；分片数夹在 [1, MAX_SHARDS]。
-            # 这样小清单不分片（保持原行为），大清单自动扩。
-            # MAX_SHARDS 默认 256 是 GitHub Actions matrix 的硬上限 ——
-            # 在它之内，每片规模始终被 PER_SHARD 控制住，单 job 时长恒定可控。
-            PER_SHARD="${PER_SHARD:-400}"
+            # MAX_SHARDS 默认 256 是 GitHub Actions matrix 的硬上限。
+            #
+            # PER_SHARD 的取值（2026-09-25 由 400 下调到 40）：
+            #   原来 400 太大 —— 261 款只算出 1 片，等于**根本没分片**。
+            #   run #42 就是这么挂的：那台 runner 的 IP 被 Steam 持续限流近 30 分钟，
+            #   自适应限速把间隔推到 60s/款上限，跑满 45 分钟只刷到 244/261 就被强杀，
+            #   finalize（合并+发信）整个被 skip —— 当天没邮件、数据也没更新。
+            #   每片 40 款的依据（从两个上限反推，不是拍脑袋）：
+            #     ① 请求分散到更多 runner（各自独立 IP），单 IP 压力降一个量级，不易触发限流；
+            #     ② 最坏单款耗时 = 自适应限速上限 60s ⇒ 每片最坏 40×60s = 40 分钟，
+            #        正好等于 REFRESH_BUDGET_MS，且 < job 的 45 分钟上限 ——
+            #        也就是说**连极端限流都在预算内**，不会走到截断。
+            PER_SHARD="${PER_SHARD:-40}"
             MAX_SHARDS="${MAX_SHARDS:-256}"
             SHARDS=$(node -e "
               const n=$TOTAL, per=$PER_SHARD, cap=$MAX_SHARDS;
@@ -137,6 +156,11 @@ jobs:
           STEAM_LANG: schinese
           SHARD_TOTAL: ${{ needs.plan.outputs.shards }}
           SHARD_INDEX: ${{ matrix.shard }}
+          # 时间预算：跑到 40 分钟主动收尾（正常 exit 0），避免被 job 超时强杀
+          # 导致 finalize 被 skip、当天颗粒无收。40 分钟 = 每片最坏时长
+          # （PER_SHARD 40 款 × 退避上限 60s），见 tools/daily-refresh.mjs 的
+          # CFG.refreshBudgetMs。可在仓库 Variables 覆盖。
+          REFRESH_BUDGET_MS: ${{ vars.REFRESH_BUDGET_MS || '2400000' }}
         run: node tools/daily-refresh.mjs
 
       - name: 上传本分片结果
