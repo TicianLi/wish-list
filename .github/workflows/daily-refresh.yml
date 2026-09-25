@@ -126,9 +126,16 @@ jobs:
     strategy:
       # 分片之间互不影响：某一片失败不该拖垮其它片
       fail-fast: false
-      # 同时运行的分数上限：避免一次拉起几百个 runner（免费额度/并发上限），
-      # 分片会排队依次跑完。可通过仓库 Variables 的 MAX_PARALLEL 调整。
-      max-parallel: 8
+      # ⚠️ 同时运行的分数上限 —— 必须保持 1（2026-09-25 实测封板）
+      #   7 片并行时，7 个 runner 同时对 Steam 发请求，把**总请求速率放大 7 倍**，
+      #   Steam 用「HTTP 200 但返回空 JSON」的方式静默限流（不是 429！）。
+      #   run #43 实测：7 片并行 → 各片只有 5~10/38 款拿到数据，合计 53/261（20.3%）；
+      #   而 run #39/#40/#41（单片、同一份代码）都是「刷新成功 261｜失败 0」。
+      #   → Steam 的容忍度按**总速率**算，分片并行不能提速，只会把自己打死。
+      #     所以分片只保留「把单个 job 的时长压到有界」这一个作用：串行跑
+      #     （max-parallel: 1），总速率 = 单片水平（实测 100%），且每个 job
+      #     都远小于 45 分钟上限。真被限流了还有 steamAppDetails 的静默限流自愈兜底。
+      max-parallel: 1
       matrix:
         shard: ${{ fromJSON(needs.plan.outputs.shard_list) }}
     steps:
