@@ -1,6 +1,6 @@
 {
   "version": 3,
-  "updatedAt": 1790658107210,
+  "updatedAt": 1790658146710,
   "games": [
     {
       "appid": 3178350,
@@ -33262,6 +33262,198 @@
           "originalDescription": "《Crusader Kings III》的这款外观扩展包为东北亚文化增添了新服饰与建筑美术，包括阿伊努、虾夷以及太平洋西伯利亚社群。",
           "translated": false,
           "updatedAt": 1790658093530
+        },
+        {
+          "appid": 3315570,
+          "name": "Crusader Kings III Creator Pack: Holy Buildings",
+          "price": 26,
+          "shortDescription": "通过由《Crusader Kings III》模组制作者 Kefir úr 打造的全新内容创作者包《Holy Buildings》为你的地图增添更多样化的风貌与历史细节，包含十多种宗教建筑图像。 从礼拜堂到名胜建物，《Holy Buildings》将为你的游戏体验增添更多地域与宗教特色。",
+          "description": "通过由《Crusader Kings III》模组制作者 Kefir úr 打造的全新内容创作者包《Holy Buildings》为你的地图增添更多样化的风貌与历史细节，包含十多种宗教建筑图像。 从礼拜堂到名胜建物，《Holy Buildings》将为你的游戏体验增添更多地域与宗教特色。",
+          "kind": "其他",
+          "type": "dlc",
+          "originalDescription": "通过由《Crusader Kings III》模组制作者 Kefir úr 打造的全新内容创作者包《Holy Buildings》为你的地图增添更多样化的风貌与历史细节，包含十多种宗教建筑图像。 从礼拜堂到名胜建物，《Holy Buildings》将为你的游戏体验增添更多地域与宗教特色。",
+          "translated": false,
+          "updatedAt": 1790658095988
+        },
+        {
+          "appid": 3315560,
+          "name": "Crusader Kings III Creator Pack: High Medieval Warfare Attire",
+          "price": 26,
+          "shortDescription": "通过《High Medieval Warfare Attire》内容创作者包，以全新华丽的装备迎接战斗。 由知名服装模组作者 JedNick 打造，包含中世纪盛期（约13至14世纪）的一系列头盔、头饰与盔甲。",
+          "description": "通过《High Medieval Warfare Attire》内容创作者包，以全新华丽的装备迎接战斗。 由知名服装模组作者 JedNick 打造，包含中世纪盛期（约13至14世纪）的一系列头盔、头饰与盔甲。",
+          "kind": "其他",
+          "type": "dlc",
+          "originalDescription": "通过《High Medieval Warfare Attire》内容创作者包，以全新华丽的装备迎接战斗。 由知名服装模组作者 JedNick 打造，包含中世纪盛期（约13至14世纪）的一系列头盔、头饰与盔甲。",
+          "translated": false,
+          "updatedAt": 1790658097205
+        },
+        {
+          "appid": 3315530,
+          "name": "Crusader Kings III: All Under Heaven",
+          "price": 128,
+          "shortDescription": "在“All Under Heaven”扩展包中，亚洲广阔且充满活力的历史得以生动再现。这款扩展为《Crusader Kings III》带来海量全新内容，让你克承天命，团结臣民，塑造帝国未来。",
+          "description": "在“All Under Heaven”扩展包中，亚洲广阔且充满活力的历史得以生动再现。这款扩展为《Crusader Kings III》带来海量全新内容，让你克承天命，团结臣民，塑造帝国未来。",
+          "kind": "资料片",
+          "type": "dlc",
+          "originalDescription": "在“All Under Heaven”扩展包中，亚洲广阔且充满活力的历史得以生动再现。这款扩展为《Crusader Kings III》带来海量全新内容，让你克承天命，团结臣民，塑造帝国未来。",
+          "translated": false,
+          "updatedAt": 1790658100118
+        },
+        {
+          "appid": 3315520,
+          "name": "Crusader Kings III: Coronations",
+          "price": 26,
+          "shortDescription": "举行盛大的“Coronations”，让你的臣民和邻国对你肃然起敬。这荣耀时刻将如何定义你未来的统治之路？",
+          "description": "举行盛大的“Coronations”，让你的臣民和邻国对你肃然起敬。这荣耀时刻将如何定义你未来的统治之路？",
+          "kind": "其他",
+          "type": "dlc",
+          "originalDescription": "举行盛大的“Coronations”，让你的臣民和邻国对你肃然起敬。这荣耀时刻将如何定义你未来的统治之路？",
+          "translated": false,
+          "updatedAt": 1790658101347
+        },
+        {
+          "appid": 3315510,
+          "name": "Crusader Kings III: Khans of the Steppe",
+          "price": 88,
+          "shortDescription": "在“Khans of the Steppe”中，只有实力最强大的部落才能抵御草原上严苛的现实环境生存下来。你能崛起成就伟业，谱写一段载入史册的征服传奇，还是让你的子民消失在历史的长河之中？一切都由你决定。",
+          "description": "在“Khans of the Steppe”中，只有实力最强大的部落才能抵御草原上严苛的现实环境生存下来。你能崛起成就伟业，谱写一段载入史册的征服传奇，还是让你的子民消失在历史的长河之中？一切都由你决定。",
+          "kind": "其他",
+          "type": "dlc",
+          "originalDescription": "在“Khans of the Steppe”中，只有实力最强大的部落才能抵御草原上严苛的现实环境生存下来。你能崛起成就伟业，谱写一段载入史册的征服传奇，还是让你的子民消失在历史的长河之中？一切都由你决定。",
+          "translated": false,
+          "updatedAt": 1790658102470
+        },
+        {
+          "appid": 3315500,
+          "name": "Crusader Kings III: Crowns of the World",
+          "price": null,
+          "shortDescription": "在“Crowns of the World”中踏上历史的舞台，体验一系列全新的皇冠、发型和胡须，让你成为万众瞩目的历史人物。你的帝王形象将如何闪耀？",
+          "description": "在“Crowns of the World”中踏上历史的舞台，体验一系列全新的皇冠、发型和胡须，让你成为万众瞩目的历史人物。你的帝王形象将如何闪耀？",
+          "kind": "其他",
+          "type": "dlc",
+          "originalDescription": "在“Crowns of the World”中踏上历史的舞台，体验一系列全新的皇冠、发型和胡须，让你成为万众瞩目的历史人物。你的帝王形象将如何闪耀？",
+          "translated": false,
+          "updatedAt": 1790658103664
+        },
+        {
+          "appid": 3315540,
+          "name": "Crusader Kings III Creator Pack: Medieval Monuments",
+          "price": 26,
+          "shortDescription": "使用 Medieval Monuments 创作者包探索中世纪伟大的建筑成就。与知名的《Crusader Kings III》模组作者 PiGu 合作打造，Medieval Monuments 为游戏带来 20 种全新、多元，且具有文化意义的名胜建物。",
+          "description": "使用 Medieval Monuments 创作者包探索中世纪伟大的建筑成就。与知名的《Crusader Kings III》模组作者 PiGu 合作打造，Medieval Monuments 为游戏带来 20 种全新、多元，且具有文化意义的名胜建物。",
+          "kind": "其他",
+          "type": "dlc",
+          "originalDescription": "使用 Medieval Monuments 创作者包探索中世纪伟大的建筑成就。与知名的《Crusader Kings III》模组作者 PiGu 合作打造，Medieval Monuments 为游戏带来 20 种全新、多元，且具有文化意义的名胜建物。",
+          "translated": false,
+          "updatedAt": 1790658105473
+        },
+        {
+          "appid": 3315550,
+          "name": "Crusader Kings III Creator Pack: Arctic Attire",
+          "price": 26,
+          "shortDescription": "通过 Arctic Attire 内容创作者包帅气地勇闯寒冷的遥远北方，此包与知名的《Crusader Kings III》模组作者 Aj 合作打造。",
+          "description": "通过 Arctic Attire 内容创作者包帅气地勇闯寒冷的遥远北方，此包与知名的《Crusader Kings III》模组作者 Aj 合作打造。",
+          "kind": "其他",
+          "type": "dlc",
+          "originalDescription": "通过 Arctic Attire 内容创作者包帅气地勇闯寒冷的遥远北方，此包与知名的《Crusader Kings III》模组作者 Aj 合作打造。",
+          "translated": false,
+          "updatedAt": 1790658107359
+        },
+        {
+          "appid": 3275760,
+          "name": "Crusader Kings III Creator Pack: West Slavic Attire",
+          "price": 26,
+          "shortDescription": "这个外观添加内容将为 Paradox Interactive 获奖肯定的中世纪战略角色扮演游戏带来西斯拉夫全阶级角色的新装备。",
+          "description": "这个外观添加内容将为 Paradox Interactive 获奖肯定的中世纪战略角色扮演游戏带来西斯拉夫全阶级角色的新装备。",
+          "kind": "外观道具",
+          "type": "dlc",
+          "originalDescription": "这个外观添加内容将为 Paradox Interactive 获奖肯定的中世纪战略角色扮演游戏带来西斯拉夫全阶级角色的新装备。",
+          "translated": false,
+          "updatedAt": 1790658110346
+        },
+        {
+          "appid": 2671080,
+          "name": "Crusader Kings III: Wandering Nobles",
+          "price": 26,
+          "shortDescription": "这个《Crusader Kings III》的事件包增添以旅行为主的新生活方式、大量新事件，以及三个与旅行系统相关的活动。",
+          "description": "这个《Crusader Kings III》的事件包增添以旅行为主的新生活方式、大量新事件，以及三个与旅行系统相关的活动。",
+          "kind": "其他",
+          "type": "dlc",
+          "originalDescription": "这个《Crusader Kings III》的事件包增添以旅行为主的新生活方式、大量新事件，以及三个与旅行系统相关的活动。",
+          "translated": false,
+          "updatedAt": 1790658113436
+        },
+        {
+          "appid": 2671070,
+          "name": "Crusader Kings III: Roads to Power",
+          "price": 128,
+          "shortDescription": "在 Roads to Power 这个《Crusader Kings III》的大型扩展包中，您将一手掌握拜占庭帝国的荣耀与力量。探索帝国独有的政治、文化和统治系统，跻身社会阶层的顶端，或作为没有领地的冒险者踏上追求名声与荣耀的旅途。",
+          "description": "在 Roads to Power 这个《Crusader Kings III》的大型扩展包中，您将一手掌握拜占庭帝国的荣耀与力量。探索帝国独有的政治、文化和统治系统，跻身社会阶层的顶端，或作为没有领地的冒险者踏上追求名声与荣耀的旅途。",
+          "kind": "资料片",
+          "type": "dlc",
+          "originalDescription": "在 Roads to Power 这个《Crusader Kings III》的大型扩展包中，您将一手掌握拜占庭帝国的荣耀与力量。探索帝国独有的政治、文化和统治系统，跻身社会阶层的顶端，或作为没有领地的冒险者踏上追求名声与荣耀的旅途。",
+          "translated": false,
+          "updatedAt": 1790658115828
+        },
+        {
+          "appid": 2671040,
+          "name": "Crusader Kings III: Couture of the Capets",
+          "price": null,
+          "shortDescription": "《Couture of the Capets》装饰包受到中世纪盛期法国王庭时尚的启迪，为服装和发型增添新造型和图案。",
+          "description": "《Couture of the Capets》装饰包受到中世纪盛期法国王庭时尚的启迪，为服装和发型增添新造型和图案。",
+          "kind": "其他",
+          "type": "dlc",
+          "originalDescription": "《Couture of the Capets》装饰包受到中世纪盛期法国王庭时尚的启迪，为服装和发型增添新造型和图案。",
+          "translated": false,
+          "updatedAt": 1790658118890
+        },
+        {
+          "appid": 2671060,
+          "name": "Crusader Kings III: Legends of the Dead",
+          "price": 88,
+          "shortDescription": "若是在您离世之后，没有人为您的丰功伟业和英雄事迹歌功颂德，那么这些功业还有什么意义呢？毕竟，王室传承必须能为您的继任者带来保护和正统性才有用。在《Legends of the Dead》中，长存于您臣民与政敌的记忆中吧。",
+          "description": "若是在您离世之后，没有人为您的丰功伟业和英雄事迹歌功颂德，那么这些功业还有什么意义呢？毕竟，王室传承必须能为您的继任者带来保护和正统性才有用。在《Legends of the Dead》中，长存于您臣民与政敌的记忆中吧。",
+          "kind": "其他",
+          "type": "dlc",
+          "originalDescription": "若是在您离世之后，没有人为您的丰功伟业和英雄事迹歌功颂德，那么这些功业还有什么意义呢？毕竟，王室传承必须能为您的继任者带来保护和正统性才有用。在《Legends of the Dead》中，长存于您臣民与政敌的记忆中吧。",
+          "translated": false,
+          "updatedAt": 1790658123152
+        },
+        {
+          "appid": 3077630,
+          "name": "Crusader Kings III: Many Roads to Power - Comic Book",
+          "price": 0,
+          "shortDescription": "观看“Many Roads to Power”免费数字漫画以全方位感受Crusader Kings III所描绘的恢宏世界。一本由Dead Good Comics和Paradox Interactive联合发行的10页数字漫画。了解马其顿巴西尔一世为人津津乐道的故事，以及他是怎样夺取大权跻身拜占庭历史上最伟大的帝王之列。",
+          "description": "观看“Many Roads to Power”免费数字漫画以全方位感受Crusader Kings III所描绘的恢宏世界。一本由Dead Good Comics和Paradox Interactive联合发行的10页数字漫画。了解马其顿巴西尔一世为人津津乐道的故事，以及他是怎样夺取大权跻身拜占庭历史上最伟大的帝王之列。",
+          "kind": "其他",
+          "type": "dlc",
+          "originalDescription": "观看“Many Roads to Power”免费数字漫画以全方位感受Crusader Kings III所描绘的恢宏世界。一本由Dead Good Comics和Paradox Interactive联合发行的10页数字漫画。了解马其顿巴西尔一世为人津津乐道的故事，以及他是怎样夺取大权跻身拜占庭历史上最伟大的帝王之列。",
+          "translated": false,
+          "updatedAt": 1790658126481
+        },
+        {
+          "appid": 2671030,
+          "name": "Crusader Kings III Creator Pack: North African Attire",
+          "price": 26,
+          "shortDescription": "“North African Attire”的灵感源自中世纪时的北非时尚和写实呈现的柏柏尔人风格，将为游戏带来新的服装、头部装备和设计图案。",
+          "description": "“North African Attire”的灵感源自中世纪时的北非时尚和写实呈现的柏柏尔人风格，将为游戏带来新的服装、头部装备和设计图案。",
+          "kind": "其他",
+          "type": "dlc",
+          "originalDescription": "“North African Attire”的灵感源自中世纪时的北非时尚和写实呈现的柏柏尔人风格，将为游戏带来新的服装、头部装备和设计图案。",
+          "translated": false,
+          "updatedAt": 1790658129851
+        },
+        {
+          "appid": 2313540,
+          "name": "Crusader Kings III: Legacy of Persia",
+          "price": 62,
+          "shortDescription": "波斯地区的人口繁盛，资源丰富，常常是帝国的重要十字路口。购买《Crusader Kings III》全新特色包《Legacy of Persia》，回到风情万种的历史战略重地波斯，参与中世纪的权力斗争。",
+          "description": "波斯地区的人口繁盛，资源丰富，常常是帝国的重要十字路口。购买《Crusader Kings III》全新特色包《Legacy of Persia》，回到风情万种的历史战略重地波斯，参与中世纪的权力斗争。",
+          "kind": "其他",
+          "type": "dlc",
+          "originalDescription": "波斯地区的人口繁盛，资源丰富，常常是帝国的重要十字路口。购买《Crusader Kings III》全新特色包《Legacy of Persia》，回到风情万种的历史战略重地波斯，参与中世纪的权力斗争。",
+          "translated": false,
+          "updatedAt": 1790658132921
         }
       ],
       "details": {
@@ -33355,7 +33547,7 @@
         ]
       },
       "createdAt": 1789200309480,
-      "updatedAt": 1790658093530,
+      "updatedAt": 1790658132921,
       "nameSource": "machine-translation",
       "dlcTotal": 33
     },
@@ -33774,23 +33966,23 @@
           "type": "music",
           "originalDescription": "感受《Total War: WARHAMMER II》原声带的恢弘乐章。这张史诗级专辑囊括百余首考究曲目，将这部传奇策略游戏中鲜活灵动的世界化作奔涌的音符，以焕然一新的方式铺陈开来。",
           "translated": false,
-          "updatedAt": 1789282043403
+          "updatedAt": 1790658103042
         },
         {
           "appid": 1556110,
-          "name": "Total War: WARHAMMER II - The Silence & The Fury",
+          "name": "全面战争：战锤2 - 沉默与狂怒",
           "price": 51,
           "shortDescription": "This Lords Pack for Total War: WARHAMMER II introduces two new Legendary Lords for the Lizardmen and the Beastmen, bringing new features, units, unique gameplay mechanics and narrative objectives.",
-          "description": "This Lords Pack for Total War: WARHAMMER II introduces two new Legendary Lords for the Lizardmen and the Beastmen, bringing new features, units, unique gameplay…",
+          "description": "This Lords Pack for Total War: WARHAMMER II introduces two new Legendary Lords for the Lizardmen and the Beastmen, bringing new features, units, unique gameplay mechanics and narrative objectives.",
           "kind": "其他",
           "type": "dlc",
           "originalDescription": "This Lords Pack for Total War: WARHAMMER II introduces two new Legendary Lords for the Lizardmen and the Beastmen, bringing new features, units, unique gameplay mechanics and narrative objectives.",
           "translated": false,
-          "updatedAt": 1789282046111
+          "updatedAt": 1790658105886
         },
         {
           "appid": 1315750,
-          "name": "Total War: WARHAMMER II - The Twisted & The Twilight",
+          "name": "全面战争：战锤2 - 扭曲与暮光",
           "price": 51,
           "shortDescription": "此款《Total War: WARHAMMER II》领主包为游戏添加了来自斯卡文鼠人与木精灵的两位全新传奇领主。每位领主都统领着自己的派系，并拥有全新的人物、部队、特有机制与剧情目标。",
           "description": "此款《Total War: WARHAMMER II》领主包为游戏添加了来自斯卡文鼠人与木精灵的两位全新传奇领主。每位领主都统领着自己的派系，并拥有全新的人物、部队、特有机制与剧情目标。",
@@ -33798,7 +33990,7 @@
           "type": "dlc",
           "originalDescription": "此款《Total War: WARHAMMER II》领主包为游戏添加了来自斯卡文鼠人与木精灵的两位全新传奇领主。每位领主都统领着自己的派系，并拥有全新的人物、部队、特有机制与剧情目标。",
           "translated": false,
-          "updatedAt": 1789282047036
+          "updatedAt": 1790658108618
         },
         {
           "appid": 1315751,
@@ -33810,19 +34002,19 @@
           "type": "dlc",
           "originalDescription": "斯卡文族长是个才华高超的战士，他一步步爬上了指挥位。这家伙浑身重甲，手持破甲长戟，骑乘碎骨者，是对抗重甲骑兵的利器。",
           "translated": false,
-          "updatedAt": 1789282048262
+          "updatedAt": 1790658111777
         },
         {
           "appid": 1209120,
-          "name": "Total War: WARHAMMER II - The Warden & The Paunch",
+          "name": "全面战争：战锤2 - 典狱官与大肚王",
           "price": 51,
           "shortDescription": "The Warden & the Paunch is the latest Lords Pack for Total War: WARHAMMER II. Introducing two rival Legendary Lords from the world of Warhammer Fantasy Battles, each with their own factions, objectives, mechanics, units and playstyle.",
-          "description": "The Warden & the Paunch is the latest Lords Pack for Total War: WARHAMMER II. Introducing two rival Legendary Lords from the world of Warhammer Fantasy Battles,…",
+          "description": "The Warden & the Paunch is the latest Lords Pack for Total War: WARHAMMER II. Introducing two rival Legendary Lords from the world of Warhammer Fantasy Battles, each with their own factions, objectives, mechanics, units and playstyle.",
           "kind": "其他",
           "type": "dlc",
           "originalDescription": "The Warden & the Paunch is the latest Lords Pack for Total War: WARHAMMER II. Introducing two rival Legendary Lords from the world of Warhammer Fantasy Battles, each with their own factions, objectives, mechanics, units and playstyle.",
           "translated": false,
-          "updatedAt": 1789282050887
+          "updatedAt": 1790658115052
         },
         {
           "appid": 1209121,
@@ -33834,19 +34026,19 @@
           "type": "dlc",
           "originalDescription": "A direct descendant of Caledor the Phoenix King, Imrik is widely known as the greatest living Dragon Prince and shares a unique bond with Dragonkind.",
           "translated": false,
-          "updatedAt": 1789282053311
+          "updatedAt": 1790658117756
         },
         {
           "appid": 1158180,
-          "name": "Total War: WARHAMMER II - The Shadow & The Blade",
+          "name": "全面战争：战锤2 - 暗影与利刃",
           "price": 51,
           "shortDescription": "The Shadow & The Blade is the latest Legendary Lords Pack for Total War: WARHAMMER II. Introducing Malus Darkblade and Deathmaster Snikch both with their own objectives, mechanics, units and playstyle,",
-          "description": "The Shadow & The Blade is the latest Legendary Lords Pack for Total War: WARHAMMER II. Introducing Malus Darkblade and Deathmaster Snikch both with their own ob…",
+          "description": "The Shadow & The Blade is the latest Legendary Lords Pack for Total War: WARHAMMER II. Introducing Malus Darkblade and Deathmaster Snikch both with their own objectives, mechanics, units and playstyle,",
           "kind": "其他",
           "type": "dlc",
           "originalDescription": "The Shadow & The Blade is the latest Legendary Lords Pack for Total War: WARHAMMER II. Introducing Malus Darkblade and Deathmaster Snikch both with their own objectives, mechanics, units and playstyle,",
           "translated": false,
-          "updatedAt": 1789282056705
+          "updatedAt": 1790658120985
         },
         {
           "appid": 1158181,
@@ -33858,91 +34050,7 @@
           "type": "dlc",
           "originalDescription": "Repanse de Lyonesse, or the ‘Damoiselle de Guerre’ as she is known throughout Bretonnia, is a revered knight of the Chevaliers de Lyonesse.",
           "translated": false,
-          "updatedAt": 1789282060541
-        },
-        {
-          "appid": 1074320,
-          "name": "Total War: WARHAMMER II - The Hunter & The Beast",
-          "price": 51,
-          "shortDescription": "The Hunter & The Beast is the latest Lords Pack for Total War: WARHAMMER II. Introducing two rival Legendary Lords from the world of Warhammer Fantasy Battles, each with their own objectives, mechanics, units and playstyle, for use in both the Eye of the Vortex and Mortal Empires campaigns, and custom/multiplayer battles.",
-          "description": "The Hunter & The Beast is the latest Lords Pack for Total War: WARHAMMER II. Introducing two rival Legendary Lords from the world of Warhammer Fantasy Battles, …",
-          "kind": "战役",
-          "type": "dlc",
-          "originalDescription": "The Hunter & The Beast is the latest Lords Pack for Total War: WARHAMMER II. Introducing two rival Legendary Lords from the world of Warhammer Fantasy Battles, each with their own objectives, mechanics, units and playstyle, for use in both the Eye of the Vortex and Mortal Empires campaigns, and custom/multiplayer battles.",
-          "translated": false,
-          "updatedAt": 1789282064395
-        },
-        {
-          "appid": 1074321,
-          "name": "Total War: WARHAMMER II - Gor-Rok",
-          "price": 0,
-          "shortDescription": "Gor-Rok, or the Great White Lizard as he is known, is a veteran Saurus Warrior with the scars to prove it.",
-          "description": "Gor-Rok, or the Great White Lizard as he is known, is a veteran Saurus Warrior with the scars to prove it.",
-          "kind": "其他",
-          "type": "dlc",
-          "originalDescription": "Gor-Rok, or the Great White Lizard as he is known, is a veteran Saurus Warrior with the scars to prove it.",
-          "translated": false,
-          "updatedAt": 1789282068409
-        },
-        {
-          "appid": 965220,
-          "name": "Total War: WARHAMMER II - The Prophet & The Warlock",
-          "price": 51,
-          "shortDescription": "The Prophet & The Warlock is the latest Lords Pack for Total War: WARHAMMER II. Introducing two rival Legendary Lords from the world of Warhammer Fantasy Battles, each with their own objectives, mechanics, units and playstyle.",
-          "description": "The Prophet & The Warlock is the latest Lords Pack for Total War: WARHAMMER II. Introducing two rival Legendary Lords from the world of Warhammer Fantasy Battle…",
-          "kind": "其他",
-          "type": "dlc",
-          "originalDescription": "The Prophet & The Warlock is the latest Lords Pack for Total War: WARHAMMER II. Introducing two rival Legendary Lords from the world of Warhammer Fantasy Battles, each with their own objectives, mechanics, units and playstyle.",
-          "translated": false,
-          "updatedAt": 1789282073312
-        },
-        {
-          "appid": 1003160,
-          "name": "Total War: WARHAMMER II - Tiktaq'to",
-          "price": 0,
-          "shortDescription": "提克塔托是神庙城市赫斯欧塔的诸天之主，是最为伟大的翼龙骑手。 他骑乘着凶猛的翼龙兹瓦普在天空中巡逻，带领他的中队穿过最狭窄的峡谷和最陡峭的山谷，从意想不到的方向出现，用致命的岩石冰雹袭击敌人，让他们大吃一惊。",
-          "description": "提克塔托是神庙城市赫斯欧塔的诸天之主，是最为伟大的翼龙骑手。 他骑乘着凶猛的翼龙兹瓦普在天空中巡逻，带领他的中队穿过最狭窄的峡谷和最陡峭的山谷，从意想不到的方向出现，用致命的岩石冰雹袭击敌人，让他们大吃一惊。",
-          "kind": "其他",
-          "type": "dlc",
-          "originalDescription": "提克塔托是神庙城市赫斯欧塔的诸天之主，是最为伟大的翼龙骑手。 他骑乘着凶猛的翼龙兹瓦普在天空中巡逻，带领他的中队穿过最狭窄的峡谷和最陡峭的山谷，从意想不到的方向出现，用致命的岩石冰雹袭击敌人，让他们大吃一惊。",
-          "translated": false,
-          "updatedAt": 1789282076431
-        },
-        {
-          "appid": 835670,
-          "name": "Total War: WARHAMMER II - Curse of the Vampire Coast",
-          "price": 85,
-          "shortDescription": "在阴森的寒风中，吸血鬼海岸的笨重腐朽的船只正迎风而来！快跑，快跑！因为这是你能做到的一切。",
-          "description": "在阴森的寒风中，吸血鬼海岸的笨重腐朽的船只正迎风而来！快跑，快跑！因为这是你能做到的一切。",
-          "kind": "其他",
-          "type": "dlc",
-          "originalDescription": "在阴森的寒风中，吸血鬼海岸的笨重腐朽的船只正迎风而来！快跑，快跑！因为这是你能做到的一切。",
-          "translated": false,
-          "updatedAt": 1789282081457
-        },
-        {
-          "appid": 835671,
-          "name": "Total War: WARHAMMER II - Lokhir Fellheart",
-          "price": 0,
-          "shortDescription": "洛克西亚·堕落之心，卡隆德·卡尔的克拉肯领主，已经降世了！作为家族中最年轻，也是最臭名昭著的一员，他横越世界的海岸线和航道，掠夺港口和城镇的财富，并奴役着它们的居民。",
-          "description": "洛克西亚·堕落之心，卡隆德·卡尔的克拉肯领主，已经降世了！作为家族中最年轻，也是最臭名昭著的一员，他横越世界的海岸线和航道，掠夺港口和城镇的财富，并奴役着它们的居民。",
-          "kind": "其他",
-          "type": "dlc",
-          "originalDescription": "洛克西亚·堕落之心，卡隆德·卡尔的克拉肯领主，已经降世了！作为家族中最年轻，也是最臭名昭著的一员，他横越世界的海岸线和航道，掠夺港口和城镇的财富，并奴役着它们的居民。",
-          "translated": false,
-          "updatedAt": 1789282086442
-        },
-        {
-          "appid": 779880,
-          "name": "Total War: WARHAMMER II - The Queen & The Crone",
-          "price": 51,
-          "shortDescription": "The Queen & The Crone是Total War: WARHAMMER II的首个领主包。这个拓展包会强化高等精灵与黑暗精灵的军队，并将一对著名的宿敌与新的精英部队从Warhamer的奇幻世界引进你的战役与战斗。此拓展包的内容可在漩涡之眼与凡世帝国中使用。",
-          "description": "The Queen & The Crone是Total War: WARHAMMER II的首个领主包。这个拓展包会强化高等精灵与黑暗精灵的军队，并将一对著名的宿敌与新的精英部队从Warhamer的奇幻世界引进你的战役与战斗。此拓展包的内容可在漩涡之眼与凡世帝国中使用。",
-          "kind": "战役",
-          "type": "dlc",
-          "originalDescription": "The Queen & The Crone是Total War: WARHAMMER II的首个领主包。这个拓展包会强化高等精灵与黑暗精灵的军队，并将一对著名的宿敌与新的精英部队从Warhamer的奇幻世界引进你的战役与战斗。此拓展包的内容可在漩涡之眼与凡世帝国中使用。",
-          "translated": false,
-          "updatedAt": 1789282090476
+          "updatedAt": 1790658125706
         }
       ],
       "details": {
@@ -34041,8 +34149,9 @@
         ]
       },
       "createdAt": 1789200291860,
-      "updatedAt": 1790658101875,
-      "nameSource": null
+      "updatedAt": 1790658125707,
+      "nameSource": null,
+      "dlcTotal": 23
     },
     {
       "appid": 610370,
@@ -34079,62 +34188,62 @@
         {
           "appid": 1308850,
           "name": "Desperados III Season Pass",
-          "price": 67,
+          "price": 16.75,
           "shortDescription": "只需要支付优惠的捆绑价格，就可以进入一个不断扩展的《Desperados III》世界。",
           "description": "只需要支付优惠的捆绑价格，就可以进入一个不断扩展的《Desperados III》世界。",
           "kind": "季票",
           "type": "dlc",
           "originalDescription": "只需要支付优惠的捆绑价格，就可以进入一个不断扩展的《Desperados III》世界。",
           "translated": false,
-          "updatedAt": 1789282047669
+          "updatedAt": 1790658109125
         },
         {
           "appid": 1279740,
           "name": "Desperados III Soundtrack",
-          "price": 52,
+          "price": 13,
           "shortDescription": "深入《Desperados III》的世界，享受超过3个小时的游戏原创音乐、3个DLC任务，以及8个额外的未插电器乐版本的“Banda del Baron”!",
           "description": "深入《Desperados III》的世界，享受超过3个小时的游戏原创音乐、3个DLC任务，以及8个额外的未插电器乐版本的“Banda del Baron”!",
           "kind": "原声",
           "type": "music",
           "originalDescription": "深入《Desperados III》的世界，享受超过3个小时的游戏原创音乐、3个DLC任务，以及8个额外的未插电器乐版本的“Banda del Baron”!",
           "translated": false,
-          "updatedAt": 1789282049435
+          "updatedAt": 1790658112206
         },
         {
           "appid": 1287600,
           "name": "Desperados III: Money for the Vultures - Part 1: Late to the Party",
-          "price": 28,
+          "price": 7,
           "shortDescription": "Money for the Vultures Part 1: Late To The PartyIn the first part of &quot;Money for the Vultures&quot;, the gang reunites once again to hunt down Vincent DeVitt's hidden riches.",
-          "description": "Money for the Vultures Part 1: Late To The PartyIn the first part of &quot;Money for the Vultures&quot;, the gang reunites once again to hunt down Vincent DeVit…",
+          "description": "Money for the Vultures Part 1: Late To The PartyIn the first part of &quot;Money for the Vultures&quot;, the gang reunites once again to hunt down Vincent DeVitt's hidden riches.",
           "kind": "其他",
           "type": "dlc",
           "originalDescription": "Money for the Vultures Part 1: Late To The PartyIn the first part of &quot;Money for the Vultures&quot;, the gang reunites once again to hunt down Vincent DeVitt's hidden riches.",
           "translated": false,
-          "updatedAt": 1789282052346
+          "updatedAt": 1790658115620
         },
         {
           "appid": 1287601,
           "name": "Desperados III: Money for the Vultures - Part 2: Five Steps Ahead",
-          "price": 28,
+          "price": 7,
           "shortDescription": "在“财富迷人眼”的第二部分，团队成员回到了路易斯安那州挑战德维特家族的一名新成员。 探索河口州的一个全新位置，与伊莎贝尔会合，获得更多的巫毒术法的协助，直面一个需要你们全力对付的幕后主脑。",
           "description": "在“财富迷人眼”的第二部分，团队成员回到了路易斯安那州挑战德维特家族的一名新成员。 探索河口州的一个全新位置，与伊莎贝尔会合，获得更多的巫毒术法的协助，直面一个需要你们全力对付的幕后主脑。",
           "kind": "其他",
           "type": "dlc",
           "originalDescription": "在“财富迷人眼”的第二部分，团队成员回到了路易斯安那州挑战德维特家族的一名新成员。 探索河口州的一个全新位置，与伊莎贝尔会合，获得更多的巫毒术法的协助，直面一个需要你们全力对付的幕后主脑。",
           "translated": false,
-          "updatedAt": 1789282055219
+          "updatedAt": 1790658118421
         },
         {
           "appid": 1287602,
           "name": "Desperados III: Money for the Vultures - Part 3: Once More With Feeling",
-          "price": 28,
+          "price": 7,
           "shortDescription": "在“财富迷人眼”的第三部分也即最后一部分，旅程在玩家最喜欢的一个地点——臭名昭著的强盗堡垒“鹰巢”结束。 用智谋攻破鹰巢的围墙，执行赫克托的计划，实现疯狂的荣耀，探明罗西是会信守诺言还是留有后招。",
           "description": "在“财富迷人眼”的第三部分也即最后一部分，旅程在玩家最喜欢的一个地点——臭名昭著的强盗堡垒“鹰巢”结束。 用智谋攻破鹰巢的围墙，执行赫克托的计划，实现疯狂的荣耀，探明罗西是会信守诺言还是留有后招。",
           "kind": "其他",
           "type": "dlc",
           "originalDescription": "在“财富迷人眼”的第三部分也即最后一部分，旅程在玩家最喜欢的一个地点——臭名昭著的强盗堡垒“鹰巢”结束。 用智谋攻破鹰巢的围墙，执行赫克托的计划，实现疯狂的荣耀，探明罗西是会信守诺言还是留有后招。",
           "translated": false,
-          "updatedAt": 1789282056995
+          "updatedAt": 1790658121393
         }
       ],
       "details": {
@@ -34212,8 +34321,9 @@
         ]
       },
       "createdAt": 1789200286347,
-      "updatedAt": 1790658106130,
-      "nameSource": "machine-translation"
+      "updatedAt": 1790658121986,
+      "nameSource": "machine-translation",
+      "dlcTotal": 5
     },
     {
       "appid": 632360,
@@ -34228,14 +34338,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1790636176650
+        "updatedAt": 1790658109778
       },
       "rating": {
         "score": 9.2,
         "positive": 89,
-        "desc": "Very Positive",
         "total": 37802,
-        "updatedAt": 1790636177290
+        "desc": "Very Positive",
+        "updatedAt": 1790658112862
       },
       "historicalLow": {
         "price": 26.4,
@@ -34257,7 +34367,7 @@
           "type": "dlc",
           "originalDescription": "他们曾被诱惑，被奴役，最后被丢弃锈蚀。如今，合金意念从陨落的盟友残骸中苏醒。他们只有一个目标：重返家园。操控两位全新幸存者，深入琼泥V，迎击合金意念的终极造物。",
           "translated": false,
-          "updatedAt": 1789282051898
+          "updatedAt": 1790658115247
         },
         {
           "appid": 3055670,
@@ -34269,7 +34379,7 @@
           "type": "dlc",
           "originalDescription": "死亡终将降临到我们每一个人头上。操控两位全新幸存者，战胜强大的诅咒、陌生的新敌人，以及致命的试炼。但无论何时都不要忘记……她正注视着你。",
           "translated": false,
-          "updatedAt": 1789282054428
+          "updatedAt": 1790658117640
         },
         {
           "appid": 2306620,
@@ -34281,7 +34391,7 @@
           "type": "dlc",
           "originalDescription": "来自远古的威胁已经在琼泥V苏醒。掌握全新幸存者与道具，披荆斩棘穿越从未被探索过的区域。争分夺秒攀爬巨像以对抗伪嗣。击败他以解锁藏在他灵魂深处的真正力量！",
           "translated": false,
-          "updatedAt": 1789282056363
+          "updatedAt": 1790658119656
         },
         {
           "appid": 1607890,
@@ -34293,7 +34403,7 @@
           "type": "dlc",
           "originalDescription": "体验雨中冒险 2 有史以来第一份扩展内容，前往琼泥ｖ拥抱吞噬一切的虚空！新的幸存者、怪物、关卡和全新类型的物品，能够帮助你将那些丑恶螃蟹们赶回老家。",
           "translated": false,
-          "updatedAt": 1789282058208
+          "updatedAt": 1790658123759
         },
         {
           "appid": 1236890,
@@ -34305,7 +34415,7 @@
           "type": "music",
           "originalDescription": "电子游戏Risk of Rain 2官方原声带，由Chris Christodoulou作曲。",
           "translated": false,
-          "updatedAt": 1789282061441
+          "updatedAt": 1790658126887
         },
         {
           "appid": 1905390,
@@ -34317,7 +34427,7 @@
           "type": "music",
           "originalDescription": "This is the original soundtrack for Risk of Rain 2’s expansion - Survivors of the Void. Composed by Chris Christodoulou.",
           "translated": false,
-          "updatedAt": 1789282065626
+          "updatedAt": 1790658131407
         },
         {
           "appid": 3055680,
@@ -34329,7 +34439,7 @@
           "type": "music",
           "originalDescription": "这是《雨中冒险 2》扩展包《风暴探寻者》的原声带",
           "translated": false,
-          "updatedAt": 1789282068444
+          "updatedAt": 1790658135312
         }
       ],
       "details": {
@@ -34389,7 +34499,7 @@
         ],
         "metacritic": 85,
         "chineseSupport": true,
-        "reviewTotal": 239906,
+        "reviewTotal": 240283,
         "description": "浴血奋战杀出暴戾的怪物重围，在混乱的外星球上逃过劫难。可孤军奋战，也可与好友并肩作战。 以出人意料的方式合成战利品，同时精通每个角色，直至您自己成为初次迫降时曾颇为惧怕的恐怖威胁。",
         "descriptionOriginal": "浴血奋战杀出暴戾的怪物重围，在混乱的外星球上逃过劫难。可孤军奋战，也可与好友并肩作战。 以出人意料的方式合成战利品，同时精通每个角色，直至您自己成为初次迫降时曾颇为惧怕的恐怖威胁。",
         "descriptionTranslated": false,
@@ -34422,12 +34532,13 @@
         ]
       },
       "createdAt": 1789200283975,
-      "updatedAt": 1790657430566,
-      "nameSource": null
+      "updatedAt": 1790658135833,
+      "nameSource": null,
+      "dlcTotal": 7
     },
     {
       "appid": 694280,
-      "name": "僵尸军团4：死亡之战",
+      "name": "Zombie Army 4: Dead War",
       "originalName": "Zombie Army 4: Dead War",
       "price": {
         "current": 168,
@@ -34438,14 +34549,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1790636177978
+        "updatedAt": 1790658116444
       },
       "rating": {
         "score": 8.4,
         "positive": 82,
-        "desc": "Very Positive",
         "total": 3308,
-        "updatedAt": 1790636178702
+        "desc": "Very Positive",
+        "updatedAt": 1790658120743
       },
       "historicalLow": {
         "price": 8.4,
@@ -34685,7 +34796,7 @@
         ],
         "metacritic": 74,
         "chineseSupport": true,
-        "reviewTotal": 9991,
+        "reviewTotal": 10112,
         "description": "Hitler’s hordes are back for more in this spine-chilling shooter from the makers of Sniper Elite 4! Abominable occult enemies, epic weapons and a harrowing new campaign for 1-4 players await in 1940s Europe, as you fight to save humankind from undead Armageddon!",
         "descriptionOriginal": "Hitler’s hordes are back for more in this spine-chilling shooter from the makers of Sniper Elite 4! Abominable occult enemies, epic weapons and a harrowing new campaign for 1-4 players await in 1940s Europe, as you fight to save humankind from undead Armageddon!",
         "descriptionTranslated": false,
@@ -34718,7 +34829,7 @@
         ]
       },
       "createdAt": 1789200280943,
-      "updatedAt": 1790657430566,
+      "updatedAt": 1790658120743,
       "nameSource": "machine-translation"
     },
     {
@@ -34734,14 +34845,14 @@
         "discountExpiration": 1790870399000,
         "expirationSource": "storepage",
         "saleEvent": null,
-        "updatedAt": 1790636179360
+        "updatedAt": 1790658125662
       },
       "rating": {
         "score": 8.9,
         "positive": 87,
-        "desc": "Very Positive",
         "total": 13132,
-        "updatedAt": 1790636180083
+        "desc": "Very Positive",
+        "updatedAt": 1790658128157
       },
       "historicalLow": {
         "price": 9,
@@ -34978,7 +35089,7 @@
         ],
         "metacritic": 81,
         "chineseSupport": true,
-        "reviewTotal": 81157,
+        "reviewTotal": 81306,
         "description": "在《动物园之星》中打造一个野生动物世界。由《过山车之星》(Planet Coaster) 和《动物园大亨》(Zoo Tycoon) 的开发者团队制作，将为你带来极致的动物园模拟游戏体验。建造精细的动物栖息地、管理动物园，并见识栩栩如生、能够思考且富有感情的动物探索你打造的世界。",
         "descriptionOriginal": "在《动物园之星》中打造一个野生动物世界。由《过山车之星》(Planet Coaster) 和《动物园大亨》(Zoo Tycoon) 的开发者团队制作，将为你带来极致的动物园模拟游戏体验。建造精细的动物栖息地、管理动物园，并见识栩栩如生、能够思考且富有感情的动物探索你打造的世界。",
         "descriptionTranslated": false,
@@ -35011,12 +35122,12 @@
         ]
       },
       "createdAt": 1789200275496,
-      "updatedAt": 1790657430566,
+      "updatedAt": 1790658128157,
       "nameSource": null
     },
     {
       "appid": 753640,
-      "name": "星际拓荒",
+      "name": "Outer Wilds",
       "originalName": "Outer Wilds",
       "price": {
         "current": 95,
@@ -35027,14 +35138,14 @@
         "discountExpiration": null,
         "expirationSource": null,
         "saleEvent": null,
-        "updatedAt": 1790636180763
+        "updatedAt": 1790658132307
       },
       "rating": {
         "score": 9.9,
         "positive": 97,
+        "total": 17468,
         "desc": "Overwhelmingly Positive",
-        "total": 17467,
-        "updatedAt": 1790636181504
+        "updatedAt": 1790658138306
       },
       "historicalLow": {
         "price": 47.5,
@@ -35056,7 +35167,7 @@
           "type": "music",
           "originalDescription": "Official Soundtrack for Outer Wilds. Composed by Andrew Prahlow.",
           "translated": false,
-          "updatedAt": 1789282080567
+          "updatedAt": 1790658142136
         },
         {
           "appid": 1622100,
@@ -35068,7 +35179,7 @@
           "type": "dlc",
           "originalDescription": "一张无法解释的离奇卫星照片，一场新开的博物馆展览，引发了最后一次蛮荒旅程。面对太阳系埋藏最深的秘密，你是选择抽丝剥茧，层层揭谜，还是选择将某些宇宙的奥妙留在黑暗的深空里？",
           "translated": false,
-          "updatedAt": 1789282084435
+          "updatedAt": 1790658145466
         }
       ],
       "details": {
@@ -35128,7 +35239,7 @@
         ],
         "metacritic": 85,
         "chineseSupport": true,
-        "reviewTotal": 89372,
+        "reviewTotal": 89888,
         "description": "Outer Wilds再添一项大奖，被Giant Bomb、Polygon、Eurogamer和The Guardian评为“2019年度游戏”！备受赞誉、屡获大奖的Outer Wilds是一款开放世界冒险类游戏，游戏背景是一个困在无尽的时间循环之中的太阳系。",
         "descriptionOriginal": "Outer Wilds再添一项大奖，被Giant Bomb、Polygon、Eurogamer和The Guardian评为“2019年度游戏”！备受赞誉、屡获大奖的Outer Wilds是一款开放世界冒险类游戏，游戏背景是一个困在无尽的时间循环之中的太阳系。",
         "descriptionTranslated": false,
@@ -35162,8 +35273,9 @@
         ]
       },
       "createdAt": 1789200270711,
-      "updatedAt": 1790657430566,
-      "nameSource": "machine-translation"
+      "updatedAt": 1790658145993,
+      "nameSource": "machine-translation",
+      "dlcTotal": 2
     },
     {
       "appid": 813630,
@@ -43488,8 +43600,8 @@
     }
   ],
   "source": "manual-sync",
-  "syncedAt": 1790658107210,
+  "syncedAt": 1790658146710,
   "gameCount": 278,
-  "fingerprint": "beccabf224d61000",
+  "fingerprint": "54d5c05e96c17400",
   "syncedFrom": "https://ticianli.github.io"
 }
