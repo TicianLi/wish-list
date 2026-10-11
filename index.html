@@ -5,97 +5,169 @@
 <meta name="viewport" content="width=device-width,initial-scale=1" data-page-node-id="Sx8Xqgr3mDhvtoWBc8tsU0">
 <title>Steam 愿望单 · 史低清单</title>
 <style>
+/* ====================================================================
+   【2026-10-11 设计 token 层】
+   改造前的问题：全站散落 80+ 种硬编码色（var(--green-lite)、var(--red-lite)、var(--blue-lite)…），
+   JS 里也内联了一堆。改配色要同时改 CSS 和 JS 十几个地方，极易漏。
+   现在统一收进 :root，JS 侧用 cssVar() 读取 —— 换主题只改这一处。
+   视觉方向：对齐 Steam 客户端（深蓝墨黑底 + 官方青蓝为唯一强调色）。
+   ==================================================================== */
 :root{
-  --bg:#0e1622; --bg2:#16202e; --bg3:#1b2838; --panel:#16202e;
-  --accent:#66c0f4; --accent-dim:#3d7cab;
-  --text:#dfe8f1; --muted:#8fa3b5; --border:#24354a;
-  --green:#3ba55d; --green-bg:#12301d; --red:#e05a5a; --orange:#e0a34a; --yellow:#e0c34a;
+  /* —— 底色阶（越靠前越深，制造"下沉"的背景感） —— */
+  --bg:#0b111a;            /* 页面底 */
+  --bg2:#131c28;           /* 面板 / 模态框 */
+  --bg3:#1a2635;           /* 卡片 / 输入框 / 抬升面 */
+  --bg4:#22303f;           /* hover 面 */
+  --panel:#131c28;
+  /* —— 强调色：只用 Steam 官方青蓝，其余色都往冷蓝调 —— */
+  --accent:#66c0f4;
+  --accent-dim:#3d7cab;
+  --accent-deep:#1b2838;
+  --accent-wash:rgba(102,192,244,.10);
+  --accent-wash2:rgba(102,192,244,.18);
+  /* —— 文本阶 —— */
+  --text:#e6eef6;
+  --text-2:#b9cadb;         /* 次要正文 */
+  --muted:#7f94a8;          /* 弱化 / 说明文字 */
+  --faint:#5b6f84;          /* 最弱，装饰用 */
+  /* —— 语义色 —— */
+  --green:#4ea96e; --green-lite:#7fd8a0; --green-bg:#13291d; --green-line:#204a33;
+  --red:#d9534f;   --red-lite:#ff9c9c;   --red-bg:#2a1618;   --red-line:#4d2626;
+  --orange:#d99a4a; --orange-lite:#f0c07a; --orange-bg:#2a2013;
+  --yellow:#d8bb4a; --yellow-lite:#f0d888; --yellow-bg:#2a2013;
+  --blue-lite:#9fd0f0;
+  --purple:#8b7bc8; --purple-lite:#b9aef0; --purple-bg:#221a33;
+  /* —— 线条 —— */
+  --border:#20303f;
+  --border-2:#2a3d50;       /* 强调边界 */
+  --border-soft:rgba(255,255,255,.055);
+  /* —— 圆角（收敛：容器 8 / 控件 6 / 徽章 4，深层更小） —— */
+  --r-lg:8px; --r-md:6px; --r-sm:4px;
+  /* —— 阴影（只有 3 档，越浮越高） —— */
+  --sh-1:0 1px 3px rgba(0,0,0,.35);
+  --sh-2:0 6px 22px rgba(0,0,0,.45);
+  --sh-3:0 14px 44px rgba(0,0,0,.55);
+  /* —— 间距阶梯 —— */
+  --sp-1:4px; --sp-2:6px; --sp-3:8px; --sp-4:12px; --sp-5:16px; --sp-6:24px;
+  /* —— 字号阶梯 —— */
+  --fs-xs:11px; --fs-sm:12px; --fs-md:13px; --fs-lg:14px; --fs-xl:16px; --fs-2xl:20px;
+}
+/* 保留旧变量名的兼容别名（老 CSS/JS 里还有引用，避免一次性改动过大导致漏改白屏） */
+:root{
+  --bg-legacy:#0b111a;
 }
 *{box-sizing:border-box;}
 html,body{margin:0;padding:0;}
-body{background:var(--bg);color:var(--text);font-family:"Microsoft YaHei","PingFang SC","Segoe UI",system-ui,sans-serif;font-size:14px;line-height:1.5;}
+body{background:var(--bg);color:var(--text);font-family:"Microsoft YaHei","PingFang SC","Segoe UI",system-ui,sans-serif;font-size:var(--fs-lg);line-height:1.5;-webkit-font-smoothing:antialiased;}
 a{color:var(--accent);text-decoration:none;} a:hover{text-decoration:underline;}
 button{font-family:inherit;}
 ::-webkit-scrollbar{width:10px;height:10px;}
-::-webkit-scrollbar-thumb{background:#2b3d52;border-radius:6px;}
+::-webkit-scrollbar-thumb{background:var(--border-2);border-radius:var(--r-md);}
 ::-webkit-scrollbar-track{background:transparent;}
+/* 数字统一等宽，表格里的价格/折扣列才不会跳 */
+table,.price-current,.badge-disc,.stat-card .s-value,td,th{font-variant-numeric:tabular-nums;}
 
 .wrap{max-width:1500px;margin:0 auto;padding:14px 16px 60px;}
 header.topbar{display:flex;flex-wrap:wrap;align-items:center;gap:10px;padding:10px 0;}
 header.topbar h1{font-size:20px;margin:0;color:var(--accent);letter-spacing:1px;flex:1;min-width:220px;}
 header.topbar h1 small{color:var(--muted);font-size:12px;font-weight:normal;margin-left:8px;}
 
+/* ---- 【2026-10-11】今日概览条 ----
+   Steam 商店首屏是一条横向数字带；这里照搬那个观感：一行、等宽数字、
+   数字比标签重要得多。整条只有 26px 高，绝不侵占列表的行数预算
+   （「一屏至少 10 行」是硬红线，加这条时专门回测过）。 */
+.today{
+  display:flex;flex-wrap:wrap;align-items:center;gap:0 20px;
+  padding:6px 12px;margin:-4px 0 10px;
+  background:var(--bg2);border:1px solid var(--border);border-radius:var(--r-md);
+  font-size:12px;color:var(--muted);min-height:26px;
+}
+.today .t-i{display:inline-flex;align-items:baseline;gap:5px;white-space:nowrap;}
+.today .t-i b{color:var(--text);font-size:14px;font-weight:600;font-variant-numeric:tabular-nums;letter-spacing:.2px;}
+.today .t-i.t-hot b{color:var(--accent);}
+.today .t-i.t-red b{color:var(--red-lite);}
+.today .t-i.t-green b{color:var(--green-lite);}
+.today .t-i.t-warn b{color:var(--yellow-lite);}
+.today .t-sep{width:1px;height:14px;background:var(--border);}
+/* 数据为空/未加载时不要显示一排 0 —— 那比不显示更误导 */
+.today:empty{display:none;}
+@media (max-width:720px){
+  .today{gap:0 12px;font-size:11.5px;padding:6px 10px;}
+  .today .t-i b{font-size:13px;}
+  .today .t-sep{display:none;}
+}
+
 /* 统计卡 */
 .stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;margin:10px 0 14px;}
-.stat-card{background:var(--bg2);border:1px solid var(--border);border-radius:10px;padding:10px 12px;box-shadow:0 2px 6px rgba(0,0,0,.3);}
+.stat-card{background:var(--bg2);border:1px solid var(--border);border-radius:var(--r-lg);padding:10px 12px;box-shadow:0 2px 6px rgba(0,0,0,.3);}
 .stat-card .s-label{color:var(--muted);font-size:12px;}
 .stat-card .s-value{font-size:20px;font-weight:bold;color:var(--text);margin-top:2px;}
 .stat-card .s-value.accent{color:var(--accent);}
-.stat-card .s-value.green{color:#6fd88f;}
+.stat-card .s-value.green{color:var(--green-lite);}
 .stat-card .s-value.orange{color:var(--orange);}
-.stat-card .s-value.red{color:#ff8a8a;}
+.stat-card .s-value.red{color:var(--red-lite);}
 
 /* ---- 问题 #3：顶部统计卡折叠 ----
    与工具栏分区同一套视觉语言：标题行常驻可点，卡片区可折叠。
    折叠时标题行右侧显示一行摘要，保证关键数字不丢。 */
-.stats-sec{background:var(--bg2);border:1px solid var(--border);border-radius:10px;margin:10px 0 14px;overflow:hidden;}
-.stats-sec > .tb-head{background:linear-gradient(180deg,#18232f,#16202e);}
+.stats-sec{background:var(--bg2);border:1px solid var(--border);border-radius:var(--r-lg);margin:10px 0 14px;overflow:hidden;}
+.stats-sec > .tb-head{background:linear-gradient(180deg,var(--bg2),#16202e);}
 .stats-sec.closed > .stats{display:none;}
 .stats-sec > .stats{margin:0;padding:10px 12px;}
 .stats-sum{font-size:11.5px;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;flex:1;min-width:0;text-align:right;}
 .stats-sum b{color:var(--accent);font-weight:600;}
 .stats-sum .s-hot{color:var(--orange);}
-.stats-sum .s-green{color:#6fd88f;}
+.stats-sum .s-green{color:var(--green-lite);}
 
 /* ---- 问题 #1：工具栏分区折叠（美化布局，元素一个不少） ---- */
 /* 每个分区是一张卡片：标题行常驻可点，内容区可折叠 */
-.tb-sec{background:var(--bg2);border:1px solid var(--border);border-radius:10px;margin-bottom:10px;overflow:hidden;}
+.tb-sec{background:var(--bg2);border:1px solid var(--border);border-radius:var(--r-lg);margin-bottom:10px;overflow:hidden;}
 .tb-sec:last-child{margin-bottom:12px;}
 .tb-head{
   display:flex;align-items:center;gap:8px;padding:9px 12px;cursor:pointer;
-  user-select:none;background:linear-gradient(180deg,#18232f,#16202e);
+  user-select:none;background:linear-gradient(180deg,var(--bg2),#16202e);
   transition:background .15s;
 }
-.tb-head:hover{background:linear-gradient(180deg,#1d2a38,#18232f);}
+.tb-head:hover{background:linear-gradient(180deg,#1d2a38,var(--bg2));}
 .tb-head:focus-visible{outline:2px solid var(--accent-dim);outline-offset:-2px;}
 .tb-caret{color:var(--accent);font-size:11px;width:12px;flex-shrink:0;transition:transform .18s;display:inline-block;}
 .tb-sec.open > .tb-head .tb-caret{transform:rotate(90deg);}
 .tb-title{font-size:13px;font-weight:600;color:var(--accent);letter-spacing:.5px;flex-shrink:0;}
 .tb-sub{font-size:11.5px;color:var(--muted);overflow:hidden;text-overflow:ellipsis;white-space:nowrap;flex:1;min-width:0;}
 .tb-badge{
-  font-size:11px;color:#9fd0f0;background:#24405c;border-radius:9px;
+  font-size:11px;color:var(--blue-lite);background:var(--accent-deep);border-radius:var(--r-md);
   padding:1px 8px;flex-shrink:0;white-space:nowrap;
 }
 .tb-body{display:none;padding:10px 12px 12px;border-top:1px solid var(--border);}
 .tb-sec.open > .tb-body{display:block;}
 /* 分区内的行：主操作行 + 细分的高级筛选行 */
 .tb-row{display:flex;flex-wrap:wrap;gap:8px;align-items:center;}
-.tb-row + .tb-row{margin-top:9px;padding-top:9px;border-top:1px dashed #22334a;}
+.tb-row + .tb-row{margin-top:9px;padding-top:9px;border-top:1px dashed var(--border-2);}
 .tb-label{font-size:11.5px;color:var(--muted);flex-shrink:0;min-width:auto;}
 /* 折叠后仍能一眼看到当前生效的筛选条件（可单独点击 × 清除某一条） */
 .tb-active{display:none;flex-wrap:wrap;gap:6px;padding:0 12px 10px;}
 .tb-sec.closed.has-active > .tb-active{display:flex;}
 .active-chip{
-  font-size:11.5px;background:#22344a;color:#bcd8f0;border:1px solid #2c4763;
-  border-radius:12px;padding:2px 4px 2px 9px;display:inline-flex;align-items:center;gap:5px;white-space:nowrap;
+  font-size:11.5px;background:var(--border-2);color:var(--blue-lite);border:1px solid #2c4763;
+  border-radius:var(--r-lg);padding:2px 4px 2px 9px;display:inline-flex;align-items:center;gap:5px;white-space:nowrap;
 }
 .active-chip b{color:#e6f2fb;font-weight:600;}
 .active-chip .chip-x{
   background:transparent;border:none;color:#8fa3b5;cursor:pointer;font-size:13px;
-  line-height:1;padding:0 3px;border-radius:8px;
+  line-height:1;padding:0 3px;border-radius:var(--r-md);
 }
-.active-chip .chip-x:hover{color:var(--red);background:#3a2020;}
-.toolbar{display:flex;flex-wrap:wrap;gap:8px;align-items:center;background:var(--bg2);border:1px solid var(--border);border-radius:10px;padding:10px;margin-bottom:12px;}
+.active-chip .chip-x:hover{color:var(--red);background:var(--red-bg);}
+.toolbar{display:flex;flex-wrap:wrap;gap:8px;align-items:center;background:var(--bg2);border:1px solid var(--border);border-radius:var(--r-lg);padding:10px;margin-bottom:12px;}
 .toolbar .spacer{flex:1;}
 input[type=text],input[type=password],input[type=number],select,textarea{
-  background:var(--bg3);border:1px solid var(--border);color:var(--text);border-radius:6px;padding:7px 9px;font-size:13px;outline:none;
+  background:var(--bg3);border:1px solid var(--border);color:var(--text);border-radius:var(--r-md);padding:7px 9px;font-size:13px;outline:none;
 }
 input:focus,select:focus,textarea:focus{border-color:var(--accent-dim);}
 .btn{
-  background:var(--bg3);border:1px solid var(--border);color:var(--text);border-radius:6px;padding:7px 12px;font-size:13px;cursor:pointer;
+  background:var(--bg3);border:1px solid var(--border);color:var(--text);border-radius:var(--r-md);padding:7px 12px;font-size:13px;cursor:pointer;
   transition:background .15s,border-color .15s;white-space:nowrap;
 }
-.btn:hover{background:#24354a;border-color:var(--accent-dim);}
+.btn:hover{background:var(--border);border-color:var(--accent-dim);}
 .btn.primary{background:#1b4a6b;border-color:var(--accent-dim);color:#cfe9fb;}
 .btn.primary:hover{background:#1f5a80;}
 .btn.danger{background:#4a1f22;border-color:#6e2f34;color:#ffb3b3;}
@@ -105,14 +177,14 @@ input:focus,select:focus,textarea:focus{border-color:var(--accent-dim);}
 .btn:disabled{opacity:.45;cursor:not-allowed;}
 
 /* 进度条 */
-#progressWrap{display:none;background:var(--bg2);border:1px solid var(--border);border-radius:10px;padding:10px 12px;margin-bottom:12px;align-items:center;gap:12px;}
+#progressWrap{display:none;background:var(--bg2);border:1px solid var(--border);border-radius:var(--r-lg);padding:10px 12px;margin-bottom:12px;align-items:center;gap:12px;}
 #progressWrap.show{display:flex;}
 /* 吸附模式：滚动时进度条固定在视口顶部，不会随内容滚走 */
 #progressWrap.show{position:sticky;top:0;z-index:45;}
 #progressWrap .progress-inner{display:flex;align-items:center;gap:12px;width:100%;max-width:1500px;margin:0 auto;}
 #progressLabel{font-size:13px;color:var(--accent);min-width:200px;}
 .progress-track{flex:1;height:8px;background:var(--bg3);border-radius:4px;overflow:hidden;position:relative;}
-#progressBar{height:100%;width:0;background:linear-gradient(90deg,#2c6ea5,var(--accent));border-radius:4px;transition:width .3s;}
+#progressBar{height:100%;width:0;background:linear-gradient(90deg,var(--accent-dim),var(--accent));border-radius:4px;transition:width .3s;}
 /* 不确定进度：用 transform 动画（不影响布局），避免旧的 margin-left 动画溢出 */
 #progressBar.indet{
   width:34% !important;transition:none;
@@ -145,7 +217,7 @@ input:focus,select:focus,textarea:focus{border-color:var(--accent-dim);}
    宁可整页滚动，也不让清单被压成两三条缝。 */
 .table-wrap.has-xscroll{position:relative;}
 /* 表格 */
-.table-wrap{background:var(--bg2);border:1px solid var(--border);border-radius:10px;overflow-x:auto;}
+.table-wrap{background:var(--bg2);border:1px solid var(--border);border-radius:var(--r-lg);overflow-x:auto;}
 /* 16 列 + 全部 nowrap，内容本身就宽。这里给列设定合理的最小宽度，
    保证在常见视口下确实需要横向滚动，从而让「常驻横向滚动条」有实际意义；
    同时不再让表格被强行压缩到 100%，避免列挤在一起看不清。 */
@@ -176,8 +248,27 @@ thead th:nth-child(16){min-width:112px;}  /* 操作 */
 thead th.sortable{cursor:pointer;}
 thead th.sortable:hover{color:#a8d8f5;}
 thead th .arrow{font-size:10px;margin-left:3px;}
-tbody td{padding:5px 8px;border-bottom:1px solid #1a2736;font-size:13px;vertical-align:middle;white-space:nowrap;line-height:1.35;}
-tbody tr:hover{background:#1a2736;}
+/* ---- 【2026-10-11 Steam 风格】数字列一律右对齐 + 等宽数字 ----
+   16 列里有一半是数字（价格/折扣/评分/次数）。左对齐的纵向数字列根本没法竖着比大小，
+   等宽数字（tabular-nums）又保证 ¥69.75 和 ¥8.00 的小数点能对齐成一条竖线。
+   这两条是「能不能一眼扫完」的差别，不是装饰。
+   注意：只处理 nth-child ≥3 的数值列，游戏名列（1）和勾选列保持左对齐。 */
+thead th:nth-child(n+3),tbody td:nth-child(n+3){text-align:right;font-variant-numeric:tabular-nums;}
+/* AppID / 类别 / 文本类列即使在右侧也左对齐更好读 */
+thead th:nth-child(3),tbody td:nth-child(3),
+thead th:nth-child(14),tbody td:nth-child(14),
+thead th:nth-child(15),tbody td:nth-child(15),
+thead th:nth-child(16),tbody td:nth-child(16){text-align:left;font-variant-numeric:normal;}
+/* 徽章类内容右对齐会显得歪，单独拉回居中 */
+thead th:nth-child(7),tbody td:nth-child(7),
+thead th:nth-child(12),tbody td:nth-child(12),
+thead th:nth-child(13),tbody td:nth-child(13){text-align:center;font-variant-numeric:normal;}
+tbody td{padding:5px 8px;border-bottom:1px solid var(--bg3);font-size:13px;vertical-align:middle;white-space:nowrap;line-height:1.35;}
+/* 斑马纹：极低对比（--bg2 / --bg3 只差一档），远看是整齐的横条，
+   近看不会觉得脏。配合 hover 的 --bg3，行不会在鼠标下「变亮一格」导致误读。 */
+#tbody tr:nth-child(even){background:rgba(255,255,255,.012);}
+#tbody tr:nth-child(even):hover{background:var(--bg3);}
+tbody tr:hover{background:var(--bg3);}
 tbody tr.reached{background:var(--green-bg);box-shadow:inset 4px 0 0 var(--green);}
 tbody tr.reached:hover{background:#174027;}
 tbody tr.selected{outline:1px solid var(--accent-dim);}
@@ -187,55 +278,55 @@ tbody tr.selected{outline:1px solid var(--accent-dim);}
 .gname:hover{color:var(--accent);}
 .gname .en{display:block;color:var(--muted);font-size:11px;line-height:1.25;}
 .price-current{font-weight:600;}
-.badge-disc{display:inline-block;background:#7a2f2f;color:#ffc9c9;font-size:11px;padding:1px 5px;border-radius:4px;margin-left:4px;font-weight:bold;}
+.badge-disc{display:inline-block;background:var(--red-bg);color:var(--red-lite);font-size:11px;padding:1px 5px;border-radius:4px;margin-left:4px;font-weight:bold;}
 .low-pending{color:var(--yellow);font-style:italic;}
-.low-ok{color:#6fd88f;font-weight:600;}
-.conf-badge{display:inline-block;font-size:11px;padding:1px 6px;border-radius:4px;background:#24405c;color:#9fd0f0;}
-.rec-badge{display:inline-block;font-size:12px;padding:2px 8px;border-radius:5px;white-space:nowrap;}
-.rec-buy{background:#3d1a1c;color:#ff9c9c;}
+.low-ok{color:var(--green-lite);font-weight:600;}
+.conf-badge{display:inline-block;font-size:11px;padding:1px 6px;border-radius:4px;background:var(--accent-deep);color:var(--blue-lite);}
+.rec-badge{display:inline-block;font-size:12px;padding:2px 8px;border-radius:var(--r-sm);white-space:nowrap;}
+.rec-buy{background:#3d1a1c;color:var(--red-lite);}
 .rec-waitpromo{background:#42301a;color:#ffce8a;}
-.rec-cheap{background:#1d3a26;color:#9ce0b4;}
-.rec-ok{background:#3a3418;color:#e8d98a;}
+.rec-cheap{background:var(--green-bg);color:var(--green-lite);}
+.rec-ok{background:var(--yellow-bg);color:var(--yellow-lite);}
 .rec-wait{background:#2a3240;color:#aebccb;}
-.rec-free{background:#1d3a26;color:#9ce0b4;}
+.rec-free{background:var(--green-bg);color:var(--green-lite);}
 
 /* ---- 需求 #2：折扣截止 / 倒计时 ---- */
-.sale-ok{color:#9fd0f0;font-weight:600;}
+.sale-ok{color:var(--blue-lite);font-weight:600;}
 .sale-soon{color:#ffb454;font-weight:700;}
 tr.at-low td.gname{box-shadow:inset 3px 0 0 #3ba55d;}
-.at-low-badge{display:inline-block;background:#12301d;color:#7fe0a0;font-size:10px;padding:1px 5px;border-radius:4px;margin-left:3px;font-weight:700;}
+.at-low-badge{display:inline-block;background:#12301d;color:var(--green-lite);font-size:10px;padding:1px 5px;border-radius:4px;margin-left:3px;font-weight:700;}
 
 /* ---- 需求 #3：综合性价比徽章 ---- */
-.val-badge{display:inline-block;font-size:12px;font-weight:700;padding:2px 7px;border-radius:5px;white-space:nowrap;cursor:help;}
+.val-badge{display:inline-block;font-size:12px;font-weight:700;padding:2px 7px;border-radius:var(--r-sm);white-space:nowrap;cursor:help;}
 .val-badge small{font-weight:400;opacity:.85;font-size:10px;}
-.val-s{background:#1d3a26;color:#8ee0a8;}
-.val-a{background:#1c3850;color:#9fd0f0;}
-.val-b{background:#3a3418;color:#e8d98a;}
+.val-s{background:var(--green-bg);color:#8ee0a8;}
+.val-a{background:#1c3850;color:var(--blue-lite);}
+.val-b{background:var(--yellow-bg);color:var(--yellow-lite);}
 .val-c{background:#3d2f1a;color:#e0b878;}
-.val-d{background:#3a2020;color:#e8a0a0;}
+.val-d{background:var(--red-bg);color:#e8a0a0;}
 
 /* ---- 需求 #4：系列分组 ---- */
 tr.series-head td{background:linear-gradient(90deg,#1b2b40,#16202e);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:7px 10px;}
-.series-title{font-weight:700;color:#9fd0f0;margin-right:12px;}
+.series-title{font-weight:700;color:var(--blue-lite);margin-right:12px;}
 .series-stat{font-size:12px;color:var(--muted);}
 tr.series-head + tr td{padding-left:14px;}
-.series-chip{display:inline-block;background:#243a58;color:#a8cdf0;font-size:10px;padding:1px 6px;border-radius:8px;margin-top:3px;}
+.series-chip{display:inline-block;background:var(--accent-deep);color:var(--blue-lite);font-size:10px;padding:1px 6px;border-radius:var(--r-md);margin-top:3px;}
 .mini-sel{background:var(--bg3);color:var(--text);border:1px solid var(--border);border-radius:4px;font-size:11px;padding:1px 3px;margin-left:4px;max-width:74px;}
 #btnGroupToggle.off{opacity:.6;}
 
 /* ---- 需求 #1：详情页标签分类 ---- */
 .tag-block{margin-bottom:8px;}
 .tag-block-title{font-size:12px;color:var(--muted);margin-bottom:4px;}
-.tag{display:inline-block;background:#22344a;color:#bcd8f0;font-size:11px;padding:2px 8px;border-radius:10px;margin:0 4px 4px 0;}
-.tag.k-feature{background:#1d3a2e;color:#a8e0c0;}
+.tag{display:inline-block;background:var(--border-2);color:var(--blue-lite);font-size:11px;padding:2px 8px;border-radius:var(--r-lg);margin:0 4px 4px 0;}
+.tag.k-feature{background:var(--green-bg);color:var(--green-lite);}
 .tag.k-category{background:#332a44;color:#cdbcf0;}
 .tag.k-platform{background:#3a3222;color:#e8d8a8;}
 .tag.k-user{background:#2a3348;color:#c8d4ea;}
 .vs-box{display:grid;grid-template-columns:1fr;gap:4px;margin-top:6px;}
 .vs-row{display:grid;grid-template-columns:76px 1fr 56px;align-items:center;gap:8px;font-size:12px;}
 .vs-name{color:var(--muted);}
-.vs-bar{display:block;height:8px;background:#1b2838;border-radius:5px;overflow:hidden;}
-.vs-bar i{display:block;height:100%;background:linear-gradient(90deg,#3d7cab,#66c0f4);border-radius:5px;}
+.vs-bar{display:block;height:8px;background:#1b2838;border-radius:var(--r-sm);overflow:hidden;}
+.vs-bar i{display:block;height:100%;background:linear-gradient(90deg,#3d7cab,#66c0f4);border-radius:var(--r-sm);}
 .vs-pct{text-align:right;color:var(--muted);font-variant-numeric:tabular-nums;}
 .vs-note{margin-top:6px;font-size:11px;color:var(--muted);line-height:1.6;}
 tr.more-row td{background:#14202e;border-top:1px solid var(--border);padding:10px;}
@@ -244,7 +335,7 @@ tr.more-row td{background:#14202e;border-top:1px solid var(--border);padding:10p
 .td-note:hover{color:var(--accent);}
 .td-target,.td-low,.td-count{cursor:pointer;}
 .td-target:hover,.td-low:hover,.td-count:hover{background:#20304a;}
-.cell-edit{width:90px;background:var(--bg3);border:1px solid var(--accent);color:var(--text);border-radius:5px;padding:3px 6px;font-size:13px;outline:none;}
+.cell-edit{width:90px;background:var(--bg3);border:1px solid var(--accent);color:var(--text);border-radius:var(--r-sm);padding:3px 6px;font-size:13px;outline:none;}
 button,.btn,.td-low,.td-count,.td-target,.gname{touch-action:manipulation;-webkit-tap-highlight-color:rgba(102,192,244,.25);}
 .empty-tip{padding:40px;text-align:center;color:var(--muted);}
 
@@ -253,7 +344,7 @@ button,.btn,.td-low,.td-count,.td-target,.gname{touch-action:manipulation;-webki
 .overlay.show{display:block;}
 .modal{
   position:fixed;z-index:60;top:50%;left:50%;transform:translate(-50%,-50%);
-  background:var(--bg2);border:1px solid var(--border);border-radius:12px;box-shadow:0 10px 40px rgba(0,0,0,.6);
+  background:var(--bg2);border:1px solid var(--border);border-radius:var(--r-lg);box-shadow:0 10px 40px rgba(0,0,0,.6);
   width:min(680px,94vw);max-height:88vh;display:none;flex-direction:column;
 }
 .modal.show{display:flex;}
@@ -267,7 +358,7 @@ button,.btn,.td-low,.td-count,.td-target,.gname{touch-action:manipulation;-webki
 .form-row{margin-bottom:12px;}
 .form-row label{display:block;font-size:13px;color:var(--muted);margin-bottom:4px;}
 .form-row input[type=text],.form-row input[type=password],.form-row input[type=number],.form-row select{width:100%;}
-.form-row .hint{font-size:12px;color:#5f7b95;margin-top:3px;}
+.form-row .hint{font-size:12px;color:var(--faint);margin-top:3px;}
 /* 云端同步：仓库/分支/路径 四宫格 */
 .cloud-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px 10px;margin-top:10px;}
 .cloud-grid > div{min-width:0;}
@@ -279,60 +370,60 @@ button,.btn,.td-low,.td-count,.td-target,.gname{touch-action:manipulation;-webki
 .input-wrap .input-acts{position:absolute;right:4px;top:50%;transform:translateY(-50%);display:flex;gap:2px;}
 .input-wrap .input-act{
   background:transparent;border:none;color:var(--muted);cursor:pointer;
-  width:26px;height:26px;padding:0;border-radius:5px;font-size:13px;
+  width:26px;height:26px;padding:0;border-radius:var(--r-sm);font-size:13px;
   display:inline-flex;align-items:center;justify-content:center;
   transition:background .15s,color .15s;
 }
-.input-wrap .input-act:hover{background:#24354a;color:var(--text);}
+.input-wrap .input-act:hover{background:var(--border);color:var(--text);}
 .input-wrap .input-act.danger-act:hover{color:var(--red);}
 .input-wrap .input-act:disabled{opacity:.35;cursor:not-allowed;}
 .check-row{display:flex;align-items:center;gap:8px;margin-bottom:10px;font-size:13px;}
 
 /* 候选选择器 */
-.cand-item{display:flex;gap:12px;align-items:center;padding:10px;border:1px solid var(--border);border-radius:8px;margin-bottom:8px;cursor:pointer;transition:border-color .15s,background .15s;}
+.cand-item{display:flex;gap:12px;align-items:center;padding:10px;border:1px solid var(--border);border-radius:var(--r-md);margin-bottom:8px;cursor:pointer;transition:border-color .15s,background .15s;}
 .cand-item:hover{border-color:var(--accent-dim);background:#1c2a3a;}
 .cand-item img{width:184px;height:69px;border-radius:4px;object-fit:cover;background:#0d1420;flex-shrink:0;}
 .cand-info{flex:1;min-width:0;}
 .cand-info .cn{font-weight:600;font-size:14px;}
 .cand-info .en{color:var(--muted);font-size:12px;}
 .cand-meta{color:var(--muted);font-size:12px;margin-top:2px;}
-.cand-price{color:#9ce0b4;font-weight:600;white-space:nowrap;}
+.cand-price{color:var(--green-lite);font-weight:600;white-space:nowrap;}
 
 /* 详情面板 */
 .detail-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px 18px;}
 .detail-grid .full{grid-column:1/-1;}
 .d-item .d-label{font-size:12px;color:var(--muted);}
 .d-item .d-val{font-size:13.5px;}
-.d-hero{width:100%;border-radius:8px;display:block;background:#0d1420;}
-.tag{display:inline-block;background:#23384f;color:#9fc6e4;font-size:11.5px;padding:2px 8px;border-radius:10px;margin:2px 4px 2px 0;}
-.desc-box{background:var(--bg3);border-radius:8px;padding:10px;font-size:13px;max-height:180px;overflow-y:auto;white-space:pre-wrap;}
-.dlc-box{border:1px solid var(--border);border-radius:8px;padding:8px 10px;margin-bottom:8px;background:var(--bg3);}
+.d-hero{width:100%;border-radius:var(--r-md);display:block;background:#0d1420;}
+.tag{display:inline-block;background:var(--border-2);color:var(--blue-lite);font-size:11.5px;padding:2px 8px;border-radius:var(--r-lg);margin:2px 4px 2px 0;}
+.desc-box{background:var(--bg3);border-radius:var(--r-md);padding:10px;font-size:13px;max-height:180px;overflow-y:auto;white-space:pre-wrap;}
+.dlc-box{border:1px solid var(--border);border-radius:var(--r-md);padding:8px 10px;margin-bottom:8px;background:var(--bg3);}
 .dlc-box .dlc-head{display:flex;justify-content:space-between;gap:8px;align-items:baseline;flex-wrap:wrap;}
 .dlc-box .dlc-name{font-weight:600;}
 .dlc-box .dlc-kind{font-size:11.5px;color:var(--accent);}
 .dlc-box .dlc-desc{font-size:12.5px;color:var(--muted);margin-top:4px;white-space:normal;}
-.dlc-orig{color:#5f7b95;font-size:11.5px;margin-top:3px;font-style:italic;}
+.dlc-orig{color:var(--faint);font-size:11.5px;margin-top:3px;font-style:italic;}
 .link-row{display:flex;flex-wrap:wrap;gap:10px;margin-top:6px;}
 
 /* OCR */
-#ocrDrop{border:2px dashed var(--border);border-radius:10px;padding:28px;text-align:center;color:var(--muted);cursor:pointer;transition:border-color .15s;}
+#ocrDrop{border:2px dashed var(--border);border-radius:var(--r-lg);padding:28px;text-align:center;color:var(--muted);cursor:pointer;transition:border-color .15s;}
 #ocrDrop:hover,#ocrDrop.drag{border-color:var(--accent);}
 #ocrProgressTrack{height:8px;background:var(--bg3);border-radius:4px;overflow:hidden;margin-top:8px;display:none;}
 #ocrProgressBar{height:100%;width:0;background:var(--accent);}
-.ocr-line{display:flex;gap:8px;align-items:center;padding:6px 4px;border-bottom:1px solid #1a2736;}
+.ocr-line{display:flex;gap:8px;align-items:center;padding:6px 4px;border-bottom:1px solid var(--bg3);}
 .ocr-line .txt{flex:1;word-break:break-all;white-space:normal;}
 
 /* 任务队列浮动面板 */
-#taskPanel{position:fixed;right:16px;bottom:16px;z-index:120;width:min(400px,94vw);background:var(--bg2);border:1px solid var(--border);border-radius:12px;box-shadow:0 8px 30px rgba(0,0,0,.55);display:none;flex-direction:column;max-height:52vh;}
+#taskPanel{position:fixed;right:16px;bottom:16px;z-index:120;width:min(400px,94vw);background:var(--bg2);border:1px solid var(--border);border-radius:var(--r-lg);box-shadow:0 8px 30px rgba(0,0,0,.55);display:none;flex-direction:column;max-height:52vh;}
 #taskPanel.show{display:flex;}
 .task-head{display:flex;align-items:center;gap:8px;padding:8px 12px;border-bottom:1px solid var(--border);font-size:13px;color:var(--accent);}
 .task-head .spacer{flex:1;}
 #taskList{overflow-y:auto;padding:4px 10px 8px;}
-.task-item{display:flex;align-items:center;gap:8px;padding:6px 2px;border-bottom:1px solid #1a2736;font-size:12.5px;}
+.task-item{display:flex;align-items:center;gap:8px;padding:6px 2px;border-bottom:1px solid var(--bg3);font-size:12.5px;}
 .task-item:last-child{border-bottom:none;}
 .task-item .t-term{flex-shrink:0;max-width:38%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-weight:600;}
 .task-item .t-msg{flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--muted);font-size:11.5px;}
-.t-st-pending{color:var(--muted);} .t-st-running{color:var(--accent);} .t-st-needpick{color:var(--yellow);} .t-st-done{color:#6fd88f;} .t-st-failed{color:#ff9c9c;}
+.t-st-pending{color:var(--muted);} .t-st-running{color:var(--accent);} .t-st-needpick{color:var(--yellow);} .t-st-done{color:var(--green-lite);} .t-st-failed{color:var(--red-lite);}
 #taskReopen{position:fixed;right:16px;bottom:16px;z-index:119;display:none;}
 
 /* toast */
@@ -341,18 +432,11 @@ button,.btn,.td-low,.td-count,.td-target,.gname{touch-action:manipulation;-webki
    现在下移到顶栏下方，并且把容器本身设为不接收点击，
    只有 toast 卡片自身可交互 —— 按钮永远不会被挡住。 */
 #toasts{position:fixed;top:78px;right:16px;z-index:200;display:flex;flex-direction:column;gap:8px;max-width:min(360px,90vw);pointer-events:none;}
-.toast{background:var(--bg3);border:1px solid var(--border);border-left:4px solid var(--accent);border-radius:8px;padding:10px 14px;font-size:13px;box-shadow:0 4px 16px rgba(0,0,0,.5);animation:tin .25s ease;word-break:break-all;pointer-events:auto;}
+.toast{background:var(--bg3);border:1px solid var(--border);border-left:4px solid var(--accent);border-radius:var(--r-md);padding:10px 14px;font-size:13px;box-shadow:0 4px 16px rgba(0,0,0,.5);animation:tin .25s ease;word-break:break-all;pointer-events:auto;}
 .toast.success{border-left-color:var(--green);}
 .toast.error{border-left-color:var(--red);}
 .toast.warn{border-left-color:var(--yellow);}
 @keyframes tin{from{opacity:0;transform:translateX(20px);}to{opacity:1;transform:none;}}
-
-/* 调试面板 */
-.dbg-entry{font-size:12px;padding:4px 6px;border-bottom:1px solid #1a2736;font-family:Consolas,monospace;}
-.dbg-ok{color:#9ce0b4;} .dbg-fail{color:#ff9c9c;}
-
-/* ---- 隐私访问门（密码锁） ---- */
-/* 初始状态整页遮住，未通过验证前看不到任何数据；脚本可用时才由 JS 决定是否解锁 */
 #gate{
   position:fixed;inset:0;z-index:9999;overflow:auto;
   display:flex;align-items:center;justify-content:center;padding:24px 20px;
@@ -436,7 +520,7 @@ button,.btn,.td-low,.td-count,.td-target,.gname{touch-action:manipulation;-webki
 .gate-card #gateBtn:active{transform:translateY(1px);}
 .gate-card #gateBtn:disabled{opacity:.55;cursor:not-allowed;filter:grayscale(.3);}
 .gate-msg{font-size:12.5px;color:var(--red);min-height:17px;margin-top:10px;line-height:1.4;}
-.gate-msg.ok{color:#6fd88f;}
+.gate-msg.ok{color:var(--green-lite);}
 .g-remember{
   display:flex;align-items:center;justify-content:center;gap:7px;
   margin:14px 0 4px;font-size:12.5px;color:var(--muted);cursor:pointer;user-select:none;
@@ -456,16 +540,21 @@ body.gate-locked #toasts,
 body.gate-locked #taskPanel,
 body.gate-locked #taskReopen,
 body.gate-locked .overlay,
+/* 【2026-10-11 新增】新模态框必须一并纳入门锁隐藏，
+   否则未输密钥就能通过 visibility:hidden 的父级看到内容 —— 隐私门就形同虚设。
+   （这里用 .modal 兜底已覆盖所有模态框；下面两行是为将来可能的非 .modal 容器预留。） */
+body.gate-locked #radarGrid,
+body.gate-locked #ownedStatus,
 body.gate-locked .modal{visibility:hidden !important;}
 
 /* ---- 新增功能样式：云端拉取 / 标签云 / 预算规划 / 捆绑包 / 价格解读 ----
    全部为追加样式，不改动任何既有类名与布局规则。 */
 .tb-hint{font-size:11.5px;color:var(--muted);min-width:0;overflow:hidden;text-overflow:ellipsis;}
-.tb-hint.ok{color:#6fd88f;}
+.tb-hint.ok{color:var(--green-lite);}
 .tb-hint.warn{color:var(--yellow);}
-.tb-hint.err{color:#ff8a8a;}
+.tb-hint.err{color:var(--red-lite);}
 .tagcloud{display:flex;flex-wrap:wrap;gap:6px;flex:1 1 260px;min-width:0;max-height:132px;overflow-y:auto;padding:2px 0;}
-.tagcloud .tc{display:inline-flex;align-items:center;gap:4px;background:#22344a;color:#bcd8f0;border:1px solid transparent;
+.tagcloud .tc{display:inline-flex;align-items:center;gap:4px;background:var(--border-2);color:var(--blue-lite);border:1px solid transparent;
   font-size:12px;padding:2px 9px;border-radius:11px;cursor:pointer;transition:background .14s,border-color .14s;}
 .tagcloud .tc:hover{background:#2b425e;border-color:var(--accent-dim);}
 .tagcloud .tc.on{background:#1d3a58;border-color:var(--accent);color:#dff0ff;}
@@ -473,7 +562,86 @@ body.gate-locked .modal{visibility:hidden !important;}
 .tagcloud .tc .x{color:var(--muted);font-size:10px;}
 .tagcloud .tc-empty{font-size:11.5px;color:var(--muted);}
 .tagcloud .tc-toggle{background:transparent;border:1px dashed var(--accent-dim);color:var(--accent);cursor:pointer;font-size:11.5px;}
-.budget-out{margin-top:9px;border-top:1px dashed #22334a;padding-top:9px;}
+
+/* ====================================================================
+   【新增 2026-10-11】今日特价雷达 / 我的 Steam 库
+   ==================================================================== */
+/* 确认框正文：pre-wrap 让提示里的换行真正生效。
+   （原先漏了这条，showConfirm 传的多行文案全被压成一行 —— 本次顺带修掉，
+     因为"删除前确认"这种提示必须分行才说得清。） */
+#confirmText{white-space:pre-wrap;line-height:1.75;color:var(--text-2);font-size:var(--fs-md);}
+/* 顶部筛选条 */
+.radar-bar,.owned-bar{display:flex;flex-wrap:wrap;align-items:center;gap:10px;
+  padding:9px 11px;background:var(--bg3);border:1px solid var(--border);
+  border-radius:var(--r-lg);margin-bottom:10px;}
+.radar-spacer{flex:1 1 auto;}
+.radar-meta,.owned-meta{font-size:var(--fs-sm);color:var(--muted);}
+.radar-field{display:inline-flex;align-items:center;gap:5px;font-size:var(--fs-sm);color:var(--muted);}
+.radar-field select{background:var(--bg2);color:var(--text);border:1px solid var(--border);
+  border-radius:var(--r-md);padding:5px 8px;font-size:var(--fs-sm);outline:none;cursor:pointer;}
+.radar-field select:focus{border-color:var(--accent);}
+/* 状态行（加载中 / 出错） */
+.radar-status{font-size:var(--fs-sm);color:var(--muted);padding:6px 2px;min-height:22px;}
+.radar-status.err{color:var(--red-lite);}
+.radar-status.ok{color:var(--green-lite);}
+/* ---- 卡片网格 ---- */
+.radar-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:10px;}
+.radar-card{background:var(--bg3);border:1px solid var(--border);border-radius:var(--r-lg);
+  overflow:hidden;display:flex;flex-direction:column;transition:border-color .15s,transform .15s;}
+.radar-card:hover{border-color:var(--accent-dim);transform:translateY(-1px);}
+.radar-card.in-list{opacity:.62;}
+.radar-thumb{width:100%;aspect-ratio:460/215;object-fit:cover;background:var(--bg2);display:block;}
+.radar-thumb-fallback{width:100%;aspect-ratio:460/215;background:var(--bg2);
+  display:flex;align-items:center;justify-content:center;color:var(--faint);font-size:var(--fs-sm);}
+.radar-body{padding:9px 10px;display:flex;flex-direction:column;gap:5px;flex:1 1 auto;}
+.radar-name{font-size:var(--fs-md);font-weight:600;color:var(--text);line-height:1.35;
+  display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;min-height:2.7em;}
+.radar-prices{display:flex;align-items:baseline;gap:7px;flex-wrap:wrap;}
+.radar-now{font-size:var(--fs-lg);font-weight:700;color:var(--accent);}
+.radar-was{font-size:var(--fs-xs);color:var(--faint);text-decoration:line-through;}
+.radar-disc{font-size:var(--fs-sm);font-weight:700;color:var(--red-lite);
+  background:var(--red-bg);border:1px solid var(--red-line);border-radius:var(--r-sm);padding:0 5px;}
+.radar-meta-line{font-size:var(--fs-xs);color:var(--muted);display:flex;gap:9px;flex-wrap:wrap;}
+.radar-tier{position:absolute;top:6px;left:6px;font-size:var(--fs-xs);font-weight:700;
+  padding:1px 7px;border-radius:var(--r-sm);letter-spacing:.5px;}
+.radar-tier.S{background:var(--red-bg);color:var(--red-lite);border:1px solid var(--red-line);}
+.radar-tier.A{background:var(--orange-bg);color:var(--orange-lite);border:1px solid rgba(217,154,74,.4);}
+.radar-thumb-wrap{position:relative;}
+.radar-foot{margin-top:auto;padding-top:6px;}
+.radar-foot .btn{width:100%;}
+.radar-inlist{font-size:var(--fs-sm);color:var(--faint);text-align:center;padding:6px 0;}
+.radar-empty{grid-column:1/-1;text-align:center;color:var(--muted);padding:36px 12px;font-size:var(--fs-md);}
+/* ---- 已购清理 ---- */
+.owned-warn{background:var(--orange-bg);border:1px solid rgba(217,154,74,.4);
+  border-radius:var(--r-lg);padding:10px 12px;font-size:var(--fs-sm);
+  color:var(--orange-lite);line-height:1.7;margin-bottom:10px;}
+.owned-warn strong{color:var(--orange-lite);}
+.owned-h{font-size:var(--fs-md);font-weight:600;color:var(--text-2);margin:14px 0 7px;}
+.owned-table-wrap{background:var(--bg3);border:1px solid var(--border);
+  border-radius:var(--r-lg);overflow-x:auto;}
+.owned-table{width:100%;border-collapse:collapse;font-size:var(--fs-md);}
+.owned-table th{background:var(--bg2);color:var(--muted);font-weight:600;font-size:var(--fs-sm);
+  text-align:left;padding:7px 9px;border-bottom:1px solid var(--border);white-space:nowrap;}
+.owned-table td{padding:7px 9px;border-bottom:1px solid var(--border-soft);vertical-align:middle;}
+.owned-table tbody tr:hover{background:var(--bg4);}
+.owned-table tbody tr:last-child td{border-bottom:0;}
+.owned-table .gname{color:var(--accent);cursor:pointer;}
+.owned-pt{color:var(--muted);font-size:var(--fs-sm);}
+.owned-verdict{font-size:var(--fs-xs);}
+.owned-verdict.likely{color:var(--green-lite);}
+.owned-verdict.uncertain{color:var(--yellow-lite);}
+.owned-empty{color:var(--faint);font-size:var(--fs-sm);padding:14px;text-align:center;}
+.radar-foot-hint{font-size:var(--fs-xs);color:var(--muted);flex:1 1 auto;line-height:1.6;}
+/* 移动端：雷达网格压到单列，筛选条独占行 */
+@media (max-width:720px){
+  .radar-grid{grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:8px;}
+  .radar-bar,.owned-bar{gap:7px;padding:8px 9px;}
+  .radar-field{flex:1 1 44%;}
+  .radar-field select{flex:1 1 auto;min-width:0;}
+  .radar-spacer{display:none;}
+  .owned-table-wrap{border-radius:var(--r-md);}
+}
+.budget-out{margin-top:9px;border-top:1px dashed var(--border-2);padding-top:9px;}
 .budget-out:empty{display:none;}
 .budget-sum{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:8px;}
 .budget-sum .bs{background:var(--bg3);border:1px solid var(--border);border-radius:8px;padding:5px 10px;font-size:11.5px;color:var(--muted);}
@@ -483,7 +651,7 @@ body.gate-locked .modal{visibility:hidden !important;}
   background:var(--bg3);border:1px solid var(--border);border-radius:7px;padding:5px 9px;cursor:pointer;}
 .budget-item:hover{border-color:var(--accent-dim);}
 .budget-item .bi-name{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
-.budget-item .bi-price{color:#6fd88f;font-weight:600;}
+.budget-item .bi-price{color:var(--green-lite);font-weight:600;}
 .budget-item .bi-disc{color:var(--orange);font-size:11px;}
 .bundle-card{border:1px solid var(--border);border-radius:8px;padding:8px 10px;margin-bottom:7px;background:var(--bg3);}
 .bundle-card .bc-head{display:flex;flex-wrap:wrap;gap:8px;align-items:baseline;justify-content:space-between;font-size:12.5px;}
@@ -491,12 +659,12 @@ body.gate-locked .modal{visibility:hidden !important;}
 .insight-cell{background:var(--bg3);border:1px solid var(--border);border-radius:8px;padding:6px 9px;}
 .insight-cell .ic-l{font-size:11px;color:var(--muted);}
 .insight-cell .ic-v{font-size:14px;font-weight:600;}
-.ic-v.g{color:#6fd88f;} .ic-v.o{color:var(--orange);} .ic-v.r{color:#ff8a8a;} .ic-v.a{color:var(--accent);}
+.ic-v.g{color:var(--green-lite);} .ic-v.o{color:var(--orange);} .ic-v.r{color:var(--red-lite);} .ic-v.a{color:var(--accent);}
 .tier-badge{display:inline-block;font-size:11px;padding:1px 7px;border-radius:9px;font-weight:600;}
 .tier-legend{background:#5a1f1f;color:#ffd0d0;}
 .tier-bone{background:#5a3a1a;color:#ffdca8;}
-.tier-good{background:#1d3a2e;color:#a8e0c0;}
-.tier-mild{background:#22344a;color:#bcd8f0;}
+.tier-good{background:var(--green-bg);color:var(--green-lite);}
+.tier-mild{background:var(--border-2);color:var(--blue-lite);}
 .tier-none{background:#2b2b2b;color:#a8a8a8;}
 .tr-chip{display:inline-block;background:#3a2f1a;color:#e0c34a;font-size:10px;padding:0 5px;border-radius:7px;margin-left:5px;vertical-align:middle;cursor:help;}
 .sale-ev{display:inline-block;background:#33234a;color:#d3b8f0;font-size:10px;padding:0 6px;border-radius:8px;margin-top:3px;}
@@ -526,6 +694,13 @@ body.gate-locked .modal{visibility:hidden !important;}
   .active-chip{font-size:11px;}
   .gate-card{padding:22px 18px;}
 }
+
+/* 调试面板 */
+.dbg-entry{font-size:12px;padding:4px 6px;border-bottom:1px solid var(--bg3);font-family:Consolas,monospace;}
+.dbg-ok{color:var(--green-lite);} .dbg-fail{color:var(--red-lite);}
+
+/* ---- 隐私访问门（密码锁） ---- */
+/* 初始状态整页遮住，未通过验证前看不到任何数据；脚本可用时才由 JS 决定是否解锁 */
 </style>
 </head>
 <body class="gate-locked" data-page-node-id="GxQGEbvAxU5LER3caJ9kRP">
@@ -556,7 +731,7 @@ body.gate-locked .modal{visibility:hidden !important;}
     <div class="g-sep"></div>
     <div class="gate-foot">
       🔐 密钥仅在本机校验，不会上传到任何服务器<br>
-      需要<b style="color:#9fc6e0;font-weight:600;">本机免密钥</b>？点下面按钮并验证一次密钥
+      需要<b style="color:var(--blue-lite);font-weight:600;">本机免密钥</b>？点下面按钮并验证一次密钥
       <br>
       <a href="#" class="g-owner" id="gateOwnerLink">我是站主，申请本机免密钥</a>
     </div>
@@ -571,6 +746,14 @@ body.gate-locked .modal{visibility:hidden !important;}
     <button class="btn" id="btnDebug" data-page-node-id="zSQf4T4jgKuEIrbFv7rLo8">🔧 调试信息</button>
     <button class="btn" id="btnSettings" data-page-node-id="E5i3uRA7AQPaYEojgUUG2v">⚙️ 设置</button>
   </header>
+
+  <!-- ===== 【2026-10-11 Steam 风格】今日概览条 =====
+       为什么加这一行：Steam 商店首屏是一条横向数字带（ specials 有多少在打折 /
+       最低到几折 / 多少个 wishlist 里），不点任何东西就知道今天值不值得逛。
+       本站的 12 张统计卡藏在可折叠区里，要点开才看得到 —— 对「每天扫一眼」这个
+       主要使用场景来说多了一步。所以这里在顶栏下补一条常驻数字带。
+       数字全部来自已有 STATE，不新增数据源，也不动那 12 张卡。 -->
+  <div class="today" id="todayBar" aria-label="今日概览"></div>
 
   <!-- ===== 统计卡（问题 #3）：可折叠，默认收起，摘要常驻标题行 ===== -->
   <section class="stats-sec closed" id="secStats">
@@ -671,12 +854,19 @@ body.gate-locked .modal{visibility:hidden !important;}
         <button class="btn danger" id="btnDeleteSel" style="display:none;" data-page-node-id="EKcRIC3uFwbB9aq5ILiRIm">🗑 删除已选</button>
         <button class="btn danger" id="btnClearAll" data-page-node-id="mzYCikNPD8J0zSKFImhYOB">🗑 一键清空</button>
       </div>
-      <!-- ===== 新增：云端刷新结果回拉（折扣截止 / 用户标签 / 捆绑包 / 机翻中文名 靠它进入页面） ===== -->
+      <!-- ===== 新增 2026-10-11：云端刷新 ===== -->
       <div class="tb-row">
         <span class="tb-label">云端刷新</span>
         <button class="btn" id="btnCloudPull" title="从云端（GitHub Pages 上的 data/wishlist.json）拉取每天凌晨自动刷新得到的最新数据：折扣截止时间、用户标签、捆绑包、机翻中文名。只更新这些「公共数据」，你自己的目标价 / 备注 / 手动史低不会被改动。">⬇️ 拉取云端刷新结果</button>
         <button class="btn" id="btnCloudPullInfo" title="查看云端数据的时间与数据指纹">🔍 云端信息</button>
         <span class="tb-hint" id="cloudPullHint">未拉取</span>
+      </div>
+      <!-- ===== 新增 2026-10-11：发现与清理（两个新功能的入口）===== -->
+      <div class="tb-row">
+        <span class="tb-label">发现与清理</span>
+        <button class="btn" id="btnRadar" title="每天自动从 Steam 抓「正在打折、但还不在你清单里」的游戏，你点一下就能加进清单。数据由每天凌晨的自动任务预先抓好。">🔥 今日特价雷达<span class="tb-hint" id="radarBtnHint" style="margin-left:5px;"></span></button>
+        <button class="btn" id="btnOwned" title="检测你清单里的哪些游戏其实已经在 Steam 库里买过了。列出来给你确认，你勾选后才删 —— 绝不自动删。">🎮 已购入检测<span class="tb-hint" id="ownedBtnHint" style="margin-left:5px;"></span></button>
+        <span class="tb-hint" id="discoverHint">数据每天凌晨自动更新；点按钮读取。</span>
       </div>
       <!-- ===== 新增：Steam 用户标签（标签云 + 按标签筛选） ===== -->
       <div class="tb-row">
@@ -905,6 +1095,86 @@ body.gate-locked .modal{visibility:hidden !important;}
   <div class="modal-body" id="debugBody" data-page-node-id="FSrqcllygSfIWgE5hUNbLf"></div>
 </div>
 
+<!-- 【新增】今日特价雷达 -->
+<div class="modal wide" id="modalRadar">
+  <div class="modal-head">
+    <h3>🔥 今日特价雷达</h3>
+    <button class="modal-close" data-close="modalRadar">×</button>
+  </div>
+  <div class="modal-body">
+    <div class="radar-bar">
+      <span class="radar-meta" id="radarMeta">加载中…</span>
+      <span class="radar-spacer"></span>
+      <label class="radar-field">最低折扣
+        <select id="radarMinDisc">
+          <option value="0">全部</option>
+          <option value="50">≥ 5 折</option>
+          <option value="70" selected>≥ 7 折</option>
+          <option value="80">≥ 8 折</option>
+          <option value="90">≥ 9 折</option>
+        </select>
+      </label>
+      <label class="radar-field">好评率
+        <select id="radarMinReview">
+          <option value="0">不限</option>
+          <option value="70">≥ 70%</option>
+          <option value="80" selected>≥ 80%</option>
+          <option value="90">≥ 90%</option>
+        </select>
+      </label>
+      <label class="check-row" style="margin:0;">
+        <input type="checkbox" id="radarHideOwned"><span>隐藏已在清单的</span>
+      </label>
+      <button class="btn small" id="btnRadarReload">↻ 重新读取</button>
+    </div>
+    <div id="radarStatus" class="radar-status"></div>
+    <div id="radarGrid" class="radar-grid"></div>
+  </div>
+  <div class="modal-foot">
+    <span class="radar-foot-hint">看到的都是 Steam 全站在打折、但还不在你清单里的游戏。点「加入清单」后它会进任务队列自动抓数据。</span>
+    <button class="btn" data-close="modalRadar">关闭</button>
+  </div>
+</div>
+
+<!-- 【新增】已购待清理 -->
+<div class="modal wide" id="modalOwned">
+  <div class="modal-head">
+    <h3>🎮 我的 Steam 库 · 已购入检测</h3>
+    <button class="modal-close" data-close="modalOwned">×</button>
+  </div>
+  <div class="modal-body">
+    <div class="owned-warn">
+      <strong>这里的判断依据只有一条：这个 AppID 出现在你的 Steam 库里。</strong><br>
+      它<strong>无法区分</strong>你是真买了，还是拿了评测密钥 / 家庭共享 / 捆绑包赠送 / 免费领取
+      —— 所以下面每一项<strong>默认都不勾选</strong>，必须你自己确认后再删。删错了可以从备份里恢复。
+    </div>
+    <div class="owned-bar">
+      <span class="owned-meta" id="ownedMeta">尚未检测</span>
+      <span class="radar-spacer"></span>
+      <button class="btn small" id="btnOwnedReload">↻ 重新检测</button>
+      <button class="btn small" id="btnOwnedUndo" style="display:none;">↩ 撤销上次删除</button>
+    </div>
+    <div id="ownedStatus" class="radar-status"></div>
+
+    <h4 class="owned-h" id="ownedMainHead">✅ 清单本体游戏 · Steam 库里也有</h4>
+    <div class="owned-table-wrap"><table class="owned-table"><thead><tr>
+      <th style="width:34px;"><input type="checkbox" id="ownedCheckAllMain"></th>
+      <th>游戏</th><th style="width:92px;">游玩时长</th><th style="width:150px;">判断</th><th style="width:70px;">操作</th>
+    </tr></thead><tbody id="ownedMainBody"></tbody></table></div>
+
+    <h4 class="owned-h" id="ownedDlcHead">❓ 只匹配到 DLC / 衍生作</h4>
+    <div class="owned-table-wrap"><table class="owned-table"><thead><tr>
+      <th style="width:34px;"><input type="checkbox" id="ownedCheckAllDlc"></th>
+      <th>游戏</th><th style="width:92px;">游玩时长</th><th style="width:150px;">判断</th><th style="width:70px;">操作</th>
+    </tr></thead><tbody id="ownedDlcBody"></tbody></table></div>
+  </div>
+  <div class="modal-foot">
+    <span class="radar-foot-hint" id="ownedFootHint">删除前会自动把当前清单存一份备份，可以撤销。</span>
+    <button class="btn" data-close="modalOwned">关闭</button>
+    <button class="btn danger" id="btnOwnedDelete" disabled>删除所选</button>
+  </div>
+</div>
+
 <div id="taskReopen" style="display:none;"><button class="btn" id="btnTaskReopen">📋 任务队列</button></div>
 <div id="taskPanel">
   <div class="task-head"><b>📋 任务队列</b><span id="taskCount"></span><span class="spacer"></span><button class="btn small" id="btnRetryFailed">重试全部失败</button><button class="btn small" id="btnClearDone">清除完成</button><button class="btn small" id="btnHideTasks">收起</button></div>
@@ -966,6 +1236,15 @@ const CONFIG = {
   TAG_PREVIEW: 40,              // 标签云默认展示多少个（可点"展开全部"）
   RENDER_PAGE: 300,             // 表格单次渲染行数（可点"显示更多/全部显示"，不丢数据）
   OCR_MAX_LINES: 30,            // 截图识别最多取多少行文本
+  /* 【2026-10-11 新增】每日特价雷达的容量上限。
+     0 = 不限。设成 0 是刻意的：雷达是"给你挑"的，宁可全列出来让你翻，
+     也不静默砍掉一半让你以为"就这些了"。真要限就限这个数，
+     并且超限时会在界面上明说砍了多少。 */
+  RADAR_RENDER_MAX: 0,
+  OWNED_RENDER_MAX: 0,
+  /* 新增数据文件的云端路径（与 CLOUD_DEFAULTS.path 同仓库不同文件） */
+  SPECIALS_PATH: 'data/specials.json',
+  OWNED_PATH: 'data/owned.json',
   PROXY_BUILDERS: {
     allorigins:    { build: u => 'https://api.allorigins.win/raw?url=' + encodeURIComponent(u) },
     alloriginsget: { build: u => 'https://api.allorigins.win/get?url=' + encodeURIComponent(u), unwrap: 'alloriginsget' },
@@ -1198,6 +1477,22 @@ const saveData = debounce(() => {
     toast('数据保存失败（可能超出 localStorage 容量）：' + e.message, 'error', 8000);
   }
 }, 400);
+
+/* 【新增 2026-10-11】立即落盘版。
+   saveData 是 400ms debounce 的，拖动排序之类无所谓；
+   但「删除清单里的游戏」是破坏性操作 —— 万一用户删完立刻关标签页，
+   debounce 没来得及写就丢数据，那就成了不可撤销的损失。
+   所以破坏性操作一律走这个同步版本。 */
+function saveDataNow() {
+  try {
+    const payload = { version: CONFIG.SCHEMA_VERSION, updatedAt: nowMs(), games: STATE.games };
+    localStorage.setItem(CONFIG.STORE_KEY, JSON.stringify(payload));
+    return true;
+  } catch (e) {
+    toast('数据保存失败（可能超出 localStorage 容量）：' + e.message, 'error', 8000);
+    return false;
+  }
+}
 
 function loadFilters() {
   try {
@@ -3220,6 +3515,9 @@ function showConfirm(msg, onOk, opts) {
   $('#confirmExtraWrap').style.display = opts.extraText ? 'flex' : 'none';
   if (opts.extraText) $('#confirmExtraText').textContent = opts.extraText;
   $('#btnConfirmOk').className = opts.danger ? 'btn danger' : 'btn primary';
+  /* okText：让按钮说清这一步到底在干什么。
+     「确定」太含糊 —— 在"删东西"的场景里，用户需要看到明确的动词。 */
+  $('#btnConfirmOk').textContent = opts.okText || '确定';
   openModal('modalConfirm');
 }
 $('#btnConfirmOk').addEventListener('click', () => {
@@ -3570,6 +3868,37 @@ function renderStats() {
     ].filter(Boolean);
     sum.innerHTML = parts.join(' · ');
   }
+
+  /* ---- 【2026-10-11】今日概览条 ----
+     刻意写在这里而不是另开一个函数：上面刚算出的 onSale / atLow / endingSoon /
+     bestDisc / radarWait 等变量直接复用，保证概览条和 12 张卡的数字**永远不会打架**。
+     两套算法各算一遍是这类「摘要条」最常见的 bug 来源。 */
+  const bar = $('#todayBar');
+  if (bar) {
+    // 全站最低折扣（本机清单内），用来回答「今天最低到几折」
+    let bestDisc = 0, soonestEnd = null;
+    for (const g of gs) {
+      const d = g.price && g.price.discount != null ? Math.abs(Number(g.price.discount)) : 0;
+      if (d > bestDisc) bestDisc = d;
+      const ms = saleRemainMs(g);
+      if (ms != null && ms > 0 && (soonestEnd == null || ms < soonestEnd)) soonestEnd = ms;
+    }
+    const items = [
+      { l: '款', v: gs.length, c: '' },
+      onSale ? { l: '促销中', v: onSale, c: 't-hot' } : null,
+      bestDisc ? { l: '最低到', v: bestDisc + '% OFF', c: 't-red' } : null,
+      atLow ? { l: '正在史低', v: atLow, c: 't-green' } : null,
+      reached ? { l: '已达目标', v: reached, c: 't-green' } : null,
+      endingSoon ? { l: '24h 内结束', v: endingSoon, c: 't-warn' } : null,
+      RADAR.loadedAt ? { l: '今日好价', v: RADAR.items.filter(x => !x.alreadyOwned).length, c: 't-hot' } : null,
+      OWNED.games.length ? { l: '待清理', v: classifyOwned(OWNED.games, gs).main.length, c: 't-warn' } : null
+    ].filter(Boolean);
+    // 清单为空时不渲染：显示一排 0 只会让人以为「一款都没打折」
+    bar.innerHTML = gs.length
+      ? items.map((x, i) => (i ? '<span class="t-sep"></span>' : '') +
+          '<span class="t-i ' + x.c + '"><b>' + esc(String(x.v)) + '</b>' + esc(x.l) + '</span>').join('')
+      : '';
+  }
 }
 
 function lowCellHtml(g) {
@@ -3590,7 +3919,7 @@ function confCellHtml(g) {
 function targetCellHtml(g) {
   if (g.targetPrice == null) return '<span style="color:var(--muted)">未设</span>';
   const ok = isTargetReached(g);
-  return (ok ? '<span style="color:#6fd88f">✔ ' : '<span>') + fmtPrice(g.targetPrice, (g.price && g.price.currency) || 'CNY') + '</span>';
+  return (ok ? '<span style="color:var(--green-lite)">✔ ' : '<span>') + fmtPrice(g.targetPrice, (g.price && g.price.currency) || 'CNY') + '</span>';
 }
 
 function renderTable() {
@@ -4439,9 +4768,9 @@ function updateCloudHint() {
   const has = !!cfg.token;
   const masked = has ? (cfg.token.slice(0, 11) + '…' + cfg.token.slice(-4)) : '';
   hint.innerHTML = has
-    ? '当前：<b style="color:#6fd88f;">已配置</b> · ' + esc(cfg.owner + '/' + cfg.repo) +
+    ? '当前：<b style="color:var(--green-lite);">已配置</b> · ' + esc(cfg.owner + '/' + cfg.repo) +
       ' · 分支 ' + esc(cfg.branch) + ' · Token ' + esc(masked)
-    : '<b style="color:#e0c34a;">未配置</b>：还没有 Token，无法同步到云端。';
+    : '<b style="color:var(--yellow-lite);">未配置</b>：还没有 Token，无法同步到云端。';
 }
 function fillCloudForm() {
   const cfg = loadCloudCfg();
@@ -4467,7 +4796,7 @@ async function cloudTestConnection() {
   const cfg = readCloudForm();
   const msg = $('#cloudTestMsg');
   const say = (text, color) => { if (msg) { msg.style.color = color || ''; msg.textContent = text; } };
-  if (!cfg.token) { say('请先填写 GitHub Token。', '#e0c34a'); return; }
+  if (!cfg.token) { say('请先填写 GitHub Token。', 'var(--yellow-lite)'); return; }
   say('正在测试…', '');
   try {
     const info = await cloudTest(cfg, cfg.token);
@@ -4476,9 +4805,9 @@ async function cloudTestConnection() {
     bits.push('默认分支：' + info.defaultBranch);
     if (info.canPush === false) bits.push('⚠️ 但 Token 没有写入权限，同步会失败');
     if (!info.branchMatch) bits.push('⚠️ 你填的分支「' + cfg.branch + '」不是默认分支，请确认它存在');
-    say(bits.join('\n'), '#6fd88f');
+    say(bits.join('\n'), 'var(--green-lite)');
   } catch (e) {
-    say('❌ ' + e.message, '#ff8a8a');
+    say('❌ ' + e.message, 'var(--red-lite)');
   }
 }
 $('#btnCloudTest').addEventListener('click', cloudTestConnection);
@@ -5481,6 +5810,408 @@ function mergeCloudGames(remoteGames) {
            attributed: updated, remoteCount: byId.size, localCount: STATE.games.length };
 }
 /* 拉取通道：优先同源（GitHub Pages 上的 data/wishlist.json，无需 Token），失败再走 GitHub API */
+/* ====================================================================
+ * 【新增 2026-10-11】每日特价雷达 + 我的 Steam 库
+ * --------------------------------------------------------------------
+ * 这两块是"读云端产物 → 展示 → 用户自己决定"的辅助功能，
+ * 不碰任何既有渲染链路、不改表格、不改筛选、不改云端同步三道防护。
+ * ==================================================================== */
+
+/* ---- 通用：从云端读一个 data/xxx.json ----
+   与 fetchCloudJSON 同一套思路（先同源、再 GitHub API 兜底），
+   但不共用函数体 —— 那个函数的报错文案是"愿望单"专属的，
+   这里要能说清"是哪个文件、可能是什么原因"。 */
+async function fetchCloudSidecar(pathInRepo, friendlyName) {
+  const cfg = loadCloudCfg();
+  let sameErr = null;
+  // ① 同源（GitHub Pages 直接就挂着 data/xxx.json，最快）
+  try {
+    const r = await fetchWithTimeout(pathInRepo + '?t=' + Date.now(), { cache: 'no-store' }, 20000);
+    if (r && r.ok) return { data: await r.json(), via: '同源 ' + pathInRepo };
+    sameErr = 'HTTP ' + (r && r.status);
+  } catch (e) { sameErr = (e && e.message) || '网络错误'; }
+
+  // ② GitHub Contents API 兜底（需要 Token）
+  if (cfg.token) {
+    const api = 'https://api.github.com/repos/' + cfg.owner + '/' + cfg.repo + '/contents/' + pathInRepo +
+      '?ref=' + encodeURIComponent(cfg.branch);
+    try {
+      const r = await ghFetch(api, cfg.token, { __cfg: cfg });
+      const j = await r.json();
+      if (j && j.content) {
+        return { data: JSON.parse(decodeBase64Utf8(j.content)), via: 'GitHub API' };
+      }
+      /* 大文件（>1MB）GitHub 不返回 content，只返回 download_url —— 但
+         specials.json / owned.json 都远小于 1MB，走不到这里。
+         仍留一句明确报错，免得将来数据涨大时变成"内容为空"这种糊涂提示。 */
+      throw new Error('GitHub 返回的内容为空。如果 ' + friendlyName + ' 的文件很大（>1MB），' +
+        'GitHub 不会返回内容字段 —— 需要改用 raw 方式读取。');
+    } catch (e) {
+      sameErr = (e && e.message) || sameErr;
+    }
+  }
+
+  throw new Error('读不到 ' + friendlyName + '（' + pathInRepo + '）：' + sameErr +
+    '\n可能原因：① 今天的自动任务还没跑（它在北京时间凌晨 2 点跑，GitHub 高峰期可能晚几小时）；' +
+    '② 页面是用 file:// 双击打开的，同源读取不可用 → 请改用 https://ticianli.github.io/wish-list/；' +
+    '③ 本机没配 GitHub Token，没有兜底通道。');
+}
+
+function fmtHours(h) {
+  h = Number(h) || 0;
+  if (h <= 0) return '0 小时';
+  if (h < 24) return h + ' 小时';
+  const d = Math.round(h / 24);
+  if (d < 365) return d + ' 天';
+  return (Math.round(d / 365 * 10) / 10) + ' 年';
+}
+
+/* ====================================================================
+ * 一、每日特价雷达
+ * ==================================================================== */
+const RADAR = { items: [], loading: false, loadedAt: 0, error: null, added: new Set() };
+
+function radarFilterList() {
+  const minD = Number(($('#radarMinDisc') || {}).value) || 0;
+  const minR = Number(($('#radarMinReview') || {}).value) || 0;
+  const hideOwned = !!($('#radarHideOwned') || {}).checked;
+  let list = RADAR.items.filter(x => !hideOwned || !x.alreadyOwned);
+  if (minD > 0) list = list.filter(x => (Number(x.discountPercent) || 0) >= minD);
+  if (minR > 0) list = list.filter(x => (Number(x.reviewPct) || 0) >= minR);
+  return list;
+}
+
+function radarCardHtml(x) {
+  const inList = RADAR.added.has(x.appid);
+  const tierCls = 'radar-tier ' + (x.tier || 'C');
+  const thumb = x.tinyImage
+    ? '<div class="radar-thumb-wrap"><img class="radar-thumb" src="' + esc(x.tinyImage) +
+      '" alt="" loading="lazy" referrerpolicy="no-referrer">' +
+      (x.tier ? '<span class="' + tierCls + '">' + (x.tier === 'S' ? 'S 级' : x.tier + ' 级') + '</span>' : '') + '</div>'
+    : '<div class="radar-thumb-wrap"><div class="radar-thumb-fallback">无预览图</div>' +
+      (x.tier ? '<span class="' + tierCls + '">' + (x.tier === 'S' ? 'S 级' : x.tier + ' 级') + '</span>' : '') + '</div>';
+  const review = x.reviewPct != null
+    ? '<span>好评 ' + x.reviewPct + '%</span>' + (x.reviewCount ? '<span>' + fmtCount2(x.reviewCount) + ' 评测</span>' : '')
+    : '<span style="color:var(--faint)">暂无评价</span>';
+  const deadline = x.discountExpiration
+    ? '<span style="color:var(--orange-lite)">⏰ ' + fmtDeadlineShort(x.discountExpiration) + ' 结束</span>'
+    : '';
+  // alreadyOwned = 已在本机清单里（后端读 wishlist.json 打的标记）。
+  // 这种条目**绝不能再给「加入清单」按钮**：点了必然被 addGameByAppid 抛
+  // 「该游戏已在愿望单中」，用户看到的是一个必然失败的操作。直接换成灰标。
+  const ownedTag = x.alreadyOwned;
+  const foot = (inList || ownedTag)
+    ? '<div class="radar-inlist">' + (ownedTag ? '已在清单' : '已加入清单') + '</div>'
+    : '<button class="btn small primary" data-radar-add="' + x.appid + '">➕ 加入清单</button>';
+  return '<div class="radar-card' + (x.alreadyOwned ? ' in-list' : '') + '" data-appid="' + x.appid + '">' +
+    thumb +
+    '<div class="radar-body">' +
+      '<div class="radar-name" title="' + esc(x.name) + '">' + esc(x.name) + '</div>' +
+      '<div class="radar-prices">' +
+        '<span class="radar-now">' + fmtPrice(x.finalPrice, x.currency || 'CNY') + '</span>' +
+        (x.originalPrice ? '<span class="radar-was">' + fmtPrice(x.originalPrice, x.currency || 'CNY') + '</span>' : '') +
+        (x.discountPercent ? '<span class="radar-disc">-' + x.discountPercent + '%</span>' : '') +
+      '</div>' +
+      '<div class="radar-meta-line">' + review + deadline + '</div>' +
+      '<div class="radar-foot">' + foot + '</div>' +
+    '</div></div>';
+}
+
+function renderRadar() {
+  const grid = $('#radarGrid'); if (!grid) return;
+  const status = $('#radarStatus');
+  if (RADAR.loading) { status.className = 'radar-status'; status.textContent = '正在读取…'; }
+  else if (RADAR.error) { status.className = 'radar-status err'; status.textContent = '⚠ ' + RADAR.error; }
+
+  const list = radarFilterList();
+  if (!RADAR.loading && !list.length) {
+    const msg = RADAR.items.length
+      ? '当前筛选条件下没有游戏（把折扣或好评率条件放宽试试）'
+      : (RADAR.error ? '' : '今天没有抓到打折信息。可能自动任务还没跑，或 Steam 暂时连不上。');
+    grid.innerHTML = msg ? '<div class="radar-empty">' + esc(msg) + '</div>' : '';
+    return;
+  }
+  /* 去上限：CONFIG.RADAR_RENDER_MAX = 0 时全渲染；
+     万一将来设了上限，超出部分明确告知，不静默砍。 */
+  const cap = CONFIG.RADAR_RENDER_MAX || 0;
+  const shown = cap > 0 ? list.slice(0, cap) : list;
+  let html = shown.map(radarCardHtml).join('');
+  if (cap > 0 && list.length > shown.length) {
+    html += '<div class="radar-empty">共 ' + list.length + ' 条，已显示前 ' + shown.length +
+      ' 条（上限由 CONFIG.RADAR_RENDER_MAX 控制）</div>';
+  }
+  grid.innerHTML = html;
+
+  const meta = $('#radarMeta');
+  if (meta) {
+    if (RADAR.error) meta.textContent = '读取失败';
+    else if (!RADAR.items.length) meta.textContent = '暂无数据';
+    else {
+      const fresh = RADAR.loadedAt ? fmtWhen(RADAR.loadedAt) : '—';
+      meta.textContent = '共 ' + RADAR.items.length + ' 条打折（不在你清单里的 ' +
+        RADAR.items.filter(x => !x.alreadyOwned).length + ' 条）· 数据时间 ' + fresh;
+    }
+  }
+}
+
+function fmtWhen(ms) {
+  if (!ms) return '—';
+  const d = new Date(ms);
+  return d.toLocaleString('zh-CN', { hour12: false });
+}
+function fmtDeadlineShort(ms) {
+  const diff = Number(ms) - Date.now();
+  if (isNaN(diff)) return '—';
+  if (diff <= 0) return '已结束';
+  const h = diff / 3600000;
+  if (h < 24) return Math.max(1, Math.round(h)) + ' 小时后';
+  return Math.round(h / 24) + ' 天后';
+}
+function fmtCount2(n) {
+  n = Number(n) || 0;
+  if (n >= 10000) return (n / 10000).toFixed(1).replace(/\.0$/, '') + ' 万';
+  return String(n);
+}
+
+async function loadRadar(force) {
+  const btn = $('#btnRadar');
+  if (RADAR.loading) return;
+  RADAR.loading = true;
+  if (btn) btn.disabled = true;
+  renderRadar();
+  try {
+    const got = await fetchCloudSidecar(CONFIG.SPECIALS_PATH, '特价雷达数据');
+    const d = got.data;
+    if (!d || !Array.isArray(d.items)) {
+      RADAR.error = '云端文件格式不对（' + CONFIG.SPECIALS_PATH + ' 里没有 items 数组）';
+      RADAR.items = [];
+    } else {
+      RADAR.items = d.items.filter(x => x && x.appid);
+      RADAR.loadedAt = d.generatedAt || Date.now();
+      RADAR.error = d.error
+        ? ({ STEAM_UNREACHABLE: '昨晚没能连上 Steam，数据是空的',
+             NO_ROWS_PARSED: '昨晚一条都没解析出来',
+             EXCEPTION: '昨晚抓取出错：' + String(d.error).slice(0, 80) }[String(d.error).split(':')[0]] || '昨晚抓取出错')
+        : null;
+    }
+  } catch (e) {
+    RADAR.error = (e && e.message) || '读取失败';
+    RADAR.items = [];
+  }
+  RADAR.loading = false;
+  if (btn) btn.disabled = false;
+  renderRadar();
+  updateRadarBtnHint();
+}
+function updateRadarBtnHint() {
+  const el = $('#radarBtnHint'); if (!el) return;
+  if (RADAR.items.length) {
+    el.textContent = RADAR.items.filter(x => !x.alreadyOwned).length + ' 条待选';
+    el.className = 'tb-hint ok';
+  } else el.textContent = '';
+}
+/* 「加入清单」：走现有 addGameByAppid + 任务队列，
+   这样自动抓详情、失败重试、候选弹窗那套机制全部照旧生效，
+   绝不在这里另写一套添加逻辑（那才是重复引入 bug 的开始）。 */
+function radarAdd(appid) {
+  const x = RADAR.items.find(i => i.appid === appid);
+  if (!x) return;
+  if (findGame(appid)) { toast('这本已经在你的清单里了', 'warn'); return; }
+  const t = newTask(String(appid));
+  t.status = 'running';
+  t.msg = '正在加入…';
+  STATE.taskQueue.push(t);
+  RADAR.added.add(appid);
+  renderRadar();
+  renderQueue();
+  addGameByAppid(appid)
+    .then(() => { t.status = 'done'; t.msg = '已加入'; toast('✅ ' + (x.name || appid) + ' 已加入清单', 'success'); })
+    .catch(e => { t.status = 'failed'; t.msg = '加入失败：' + (e && e.message); toast('加入失败：' + (e && e.message), 'error'); })
+    .finally(() => { renderQueue(); saveData(); renderAll(); renderRadar(); });
+}
+
+/* ====================================================================
+ * 二、我的 Steam 库（已购待清理）
+ * ==================================================================== */
+const OWNED_BACKUP_KEY = 'sw_backup_before_owned_cleanup_v1';
+const OWNED = { games: [], loadedAt: 0, error: null, main: [], dlc: [], sel: new Set() };
+
+/* ★ 核心分组逻辑：本体 vs DLC/衍生。
+   details.type === 'game' 才是本体；'dlc'/'demo'/'mod'/'soundtrack' 等都算衍生。
+   —— 这是纯函数，被 _test_owned.cjs 直接断言。 */
+function classifyOwned(ownedGames, myGames) {
+  const ownedMap = new Map();
+  for (const g of (ownedGames || [])) if (g && g.appid) ownedMap.set(Number(g.appid), g);
+  const mine = new Map();
+  for (const g of (myGames || [])) if (g && g.appid) mine.set(Number(g.appid), g);
+  const main = [], dlc = [];
+  /* 只看「两边都有」的：左边 Steam 库，右边我的清单 */
+  for (const [appid, og] of ownedMap) {
+    const my = mine.get(appid);
+    if (!my) continue;                    // 库里有但清单没有 → 不该出现在这里
+    const type = (my.details && my.details.type) || 'game';
+    const verdict = og.playtimeForever > 0 ? 'likely' : 'uncertain';
+    const row = { appid, name: my.name || ('AppID ' + appid), type, verdict,
+                  playtime: og.playtimeForever || 0, game: my };
+    if (type === 'game') main.push(row); else dlc.push(row);
+  }
+  /* 本体里：玩过的排前面（更可能是真买的）；
+     同为不确定的，按折扣/价格高的排前面（更可能是"因为打折才买"的）。 */
+  const byLikely = (a, b) => (a.verdict === b.verdict ? 0 : (a.verdict === 'likely' ? -1 : 1));
+  main.sort((a, b) => byLikely(a, b) ||
+    ((b.game.price && b.game.price.current) || 0) - ((a.game.price && a.game.price.current) || 0));
+  dlc.sort((a, b) => byLikely(a, b));
+  return { main, dlc };
+}
+
+function ownedRowHtml(r) {
+  const uncertain = r.verdict === 'uncertain';
+  const verdict = uncertain
+    ? '<span class="owned-verdict uncertain">⚠ 游玩 0 小时<br><small>可能是评测密钥 / 赠送</small></span>'
+    : '<span class="owned-verdict likely">✔ 玩过 ' + fmtHours(r.playtime) + '</span>';
+  return '<tr data-owned-appid="' + r.appid + '">' +
+    '<td><input type="checkbox" class="owned-pick" data-appid="' + r.appid + '"' + (OWNED.sel.has(r.appid) ? ' checked' : '') + '></td>' +
+    '<td><span class="gname" data-owned-detail="' + r.appid + '">' + esc(r.name) + '</span>' +
+      (r.type !== 'game' ? ' <small style="color:var(--faint)">（' + esc(r.type) + '）</small>' : '') + '</td>' +
+    '<td class="owned-pt">' + fmtHours(r.playtime) + '</td>' +
+    '<td>' + verdict + '</td>' +
+    '<td><button class="btn small" data-owned-del="' + r.appid + '" title="只从清单里删掉这一款，不会影响你 Steam 账号里的任何东西">✕ 删</button></td>' +
+  '</tr>';
+}
+
+function renderOwned() {
+  const meta = $('#ownedMeta');
+  const st = $('#ownedStatus');
+  if (meta) {
+    if (OWNED.error) meta.textContent = '读取失败';
+    else if (!OWNED.games.length) meta.textContent = '尚未检测';
+    else meta.textContent = '库里 ' + OWNED.games.length + ' 款 · 与你清单重合 ' +
+      (OWNED.main.length + OWNED.dlc.length) + ' 款（数据时间 ' + fmtWhen(OWNED.loadedAt) + '）';
+  }
+  if (st) {
+    st.className = 'radar-status' + (OWNED.error ? ' err' : '');
+    if (OWNED.error) st.textContent = '⚠ ' + OWNED.error;
+    else if (!OWNED.games.length) st.textContent = '点「重新检测」读取你 Steam 库里的游戏。';
+    else st.textContent = '';
+  }
+  const cap = CONFIG.OWNED_RENDER_MAX || 0;
+  const renderGroup = (list, bodySel, headSel, emptyMsg) => {
+    const body = $(bodySel); if (!body) return;
+    const head = $(headSel);
+    if (head) head.textContent = (head.textContent.split(' · ')[0]) + ' · ' + list.length + ' 款';
+    if (!list.length) { body.innerHTML = '<tr><td colspan="5" class="owned-empty">' + emptyMsg + '</td></tr>'; return; }
+    const shown = cap > 0 ? list.slice(0, cap) : list;
+    let h = shown.map(ownedRowHtml).join('');
+    if (cap > 0 && list.length > shown.length) {
+      h += '<tr><td colspan="5" class="owned-empty">共 ' + list.length + ' 条，已显示前 ' + shown.length + ' 条</td></tr>';
+    }
+    body.innerHTML = h;
+  };
+  renderGroup(OWNED.main, '#ownedMainBody', '#ownedMainHead', '没有匹配到本体游戏 —— 你的清单里的游戏都还不在库里。');
+  renderGroup(OWNED.dlc, '#ownedDlcBody', '#ownedDlcHead', '没有匹配到 DLC / 衍生作。');
+  syncOwnedDeleteBtn();
+  updateOwnedBtnHint();
+}
+function syncOwnedDeleteBtn() {
+  const b = $('#btnOwnedDelete'); if (!b) return;
+  b.disabled = OWNED.sel.size === 0;
+  b.textContent = OWNED.sel.size ? '删除所选（' + OWNED.sel.size + '）' : '删除所选';
+}
+function updateOwnedBtnHint() {
+  const el = $('#ownedBtnHint'); if (!el) return;
+  const n = OWNED.main.length + OWNED.dlc.length;
+  if (n) { el.textContent = n + ' 款待确认'; el.className = 'tb-hint warn'; } else el.textContent = '';
+}
+
+async function loadOwned(force) {
+  const btn = $('#btnOwned');
+  if (btn) btn.disabled = true;
+  try {
+    const got = await fetchCloudSidecar(CONFIG.OWNED_PATH, 'Steam 库数据');
+    const d = got.data;
+    if (!d || !Array.isArray(d.games)) {
+      OWNED.error = '云端文件格式不对（' + CONFIG.OWNED_PATH + ' 里没有 games 数组）';
+      OWNED.games = [];
+    } else {
+      OWNED.games = d.games;
+      OWNED.loadedAt = d.fetchedAt || Date.now();
+      OWNED.error = d.error
+        ? (d.errorHint || ('昨晚抓取出错：' + String(d.error).slice(0, 80)))
+        : null;
+    }
+  } catch (e) {
+    OWNED.error = (e && e.message) || '读取失败';
+    OWNED.games = [];
+  }
+  if (btn) btn.disabled = false;
+  OWNED.sel = new Set();          /* 重新读取后清空选择 —— 旧选择可能已不适用 */
+  const g = classifyOwned(OWNED.games, STATE.games);
+  OWNED.main = g.main; OWNED.dlc = g.dlc;
+  renderOwned();
+}
+
+/* 删除前先备份 → 再删 → 可撤销。绝不做"不可逆"的事。 */
+function backupBeforeCleanup() {
+  try {
+    const snap = JSON.parse(JSON.stringify(STATE.games));
+    localStorage.setItem(OWNED_BACKUP_KEY, JSON.stringify({
+      at: nowMs(), count: snap.length, games: snap
+    }));
+    return true;
+  } catch (e) { return false; }
+}
+function undoOwnedCleanup() {
+  let b = null;
+  try { b = JSON.parse(localStorage.getItem(OWNED_BACKUP_KEY) || 'null'); } catch (e) { b = null; }
+  if (!b || !Array.isArray(b.games)) { toast('没有可用的备份', 'warn'); return; }
+  showConfirm('把清单恢复到上次删除前的状态？\n\n将恢复 ' + b.count + ' 款（备份时间 ' + fmtWhen(b.at) + '）。', () => {
+    STATE.games = b.games;
+    OWNED.sel = new Set();
+    saveDataNow();
+    renderAll();
+    classifyAndRenderOwned();
+    toast('✅ 已恢复 ' + b.games.length + ' 款', 'success');
+  }, { okText: '恢复' });
+}
+function classifyAndRenderOwned() {
+  const g = classifyOwned(OWNED.games, STATE.games);
+  OWNED.main = g.main; OWNED.dlc = g.dlc;
+  /* 已经从清单里删掉的，自然也不该再被选中 */
+  OWNED.sel = new Set(Array.from(OWNED.sel).filter(id => findGame(id)));
+  renderOwned();
+}
+function deleteOwnedSelected() {
+  const ids = Array.from(OWNED.sel);
+  if (!ids.length) return;
+  const names = ids.map(id => {
+    const g = findGame(id);
+    return g ? g.name : ('AppID ' + id);
+  });
+  showConfirm('从清单里移除这 ' + ids.length + ' 款？\n\n' +
+    names.slice(0, 8).join('\n') + (names.length > 8 ? '\n…还有 ' + (names.length - 8) + ' 款' : '') +
+    '\n\n· 只是从你的清单里移除，不会影响 Steam 账号里的任何东西\n' +
+    '· 删除前会自动存一份备份，删完可以点「撤销上次删除」还原', () => {
+    if (!backupBeforeCleanup()) {
+      showConfirm('备份失败（浏览器存储可能已满或处于隐私模式）。\n\n要继续删除吗？删了就无法撤销了。', () => {
+        doDelete(ids);
+      }, { okText: '仍要删除' });
+      return;
+    }
+    doDelete(ids);
+  }, { okText: '确认移除', danger: true });
+}
+function doDelete(ids) {
+  const set = new Set(ids);
+  const before = STATE.games.length;
+  STATE.games = STATE.games.filter(g => !set.has(Number(g.appid)));
+  OWNED.sel = new Set();
+  saveDataNow();   /* 破坏性操作 → 必须同步落盘，不能等 debounce */
+  renderAll();
+  classifyAndRenderOwned();
+  const after = STATE.games.length;
+  toast('已移除 ' + (before - after) + ' 款（清单 ' + before + ' → ' + after + '），可点「撤销上次删除」还原', 'success', 6000);
+}
+
 async function fetchCloudJSON() {
   const cfg = loadCloudCfg();
   let sameErr = null;
@@ -5652,6 +6383,74 @@ function triggerCloudPull() {
       const a = e.target.closest('[data-open-appid]');
       if (a) { e.preventDefault(); openDetail(Number(a.dataset.openAppid)); }
     });
+
+    /* ========== 【新增 2026-10-11】每日特价雷达 ========== */
+    const $btnRadar = $('#btnRadar');
+    if ($btnRadar) $btnRadar.addEventListener('click', async () => {
+      openModal('modalRadar');
+      renderRadar();
+      if (!RADAR.loadedAt) await loadRadar();     // 首次打开才拉，之后走缓存
+    });
+    const $btnRadarReload = $('#btnRadarReload');
+    if ($btnRadarReload) $btnRadarReload.addEventListener('click', () => loadRadar(true));
+    ['#radarMinDisc', '#radarMinReview', '#radarHideOwned'].forEach(sel => {
+      const el = $(sel);
+      if (el) el.addEventListener('change', renderRadar);
+    });
+    const $radarGrid = $('#radarGrid');
+    if ($radarGrid) $radarGrid.addEventListener('click', e => {
+      const add = e.target.closest('[data-radar-add]');
+      if (add) { radarAdd(Number(add.dataset.radarAdd)); return; }
+    });
+
+    /* ========== 【新增 2026-10-11】我的 Steam 库 ========== */
+    const $btnOwned = $('#btnOwned');
+    if ($btnOwned) $btnOwned.addEventListener('click', async () => {
+      openModal('modalOwned');
+      renderOwned();
+      if (!OWNED.games.length && !OWNED.error) await loadOwned();
+    });
+    const $btnOwnedReload = $('#btnOwnedReload');
+    if ($btnOwnedReload) $btnOwnedReload.addEventListener('click', () => loadOwned(true));
+    const $btnOwnedDel = $('#btnOwnedDelete');
+    if ($btnOwnedDel) $btnOwnedDel.addEventListener('click', deleteOwnedSelected);
+    const $btnOwnedUndo = $('#btnOwnedUndo');
+    if ($btnOwnedUndo) $btnOwnedUndo.addEventListener('click', undoOwnedCleanup);
+    /* 备份存在才显示「撤销」按钮 —— 免得给一个用不了的东西入口 */
+    try { if (localStorage.getItem(OWNED_BACKUP_KEY)) $('#btnOwnedUndo').style.display = ''; } catch (e) {}
+    ['#ownedMainBody', '#ownedDlcBody'].forEach(sel => {
+      const el = $(sel);
+      if (!el) return;
+      el.addEventListener('change', e => {
+        const cb = e.target.closest('.owned-pick');
+        if (!cb) return;
+        const id = Number(cb.dataset.appid);
+        if (cb.checked) OWNED.sel.add(id); else OWNED.sel.delete(id);
+        syncOwnedDeleteBtn();
+      });
+      el.addEventListener('click', e => {
+        const del = e.target.closest('[data-owned-del]');
+        if (del) {
+          const id = Number(del.dataset.ownedDel);
+          OWNED.sel = new Set([id]);
+          deleteOwnedSelected();
+          return;
+        }
+        const det = e.target.closest('[data-owned-detail]');
+        if (det) openDetail(Number(det.dataset.ownedDetail));
+      });
+    });
+    /* 两组表头的全选框：只作用于本组，且保持「默认全不勾选」的语义 ——
+       全选是你主动点的，不是我们替你做的决定。 */
+    ['#ownedCheckAllMain', '#ownedCheckAllDlc'].forEach((sel, i) => {
+      const el = $(sel);
+      if (!el) return;
+      el.addEventListener('change', () => {
+        const list = i === 0 ? OWNED.main : OWNED.dlc;
+        list.forEach(r => { if (el.checked) OWNED.sel.add(r.appid); else OWNED.sel.delete(r.appid); });
+        renderOwned();
+      });
+    });
   } catch (e) { console.warn('新增功能初始化失败（不影响原有功能）', e); }
 })();
 
@@ -5729,7 +6528,7 @@ async function sha256Fallback(ascii) {
 window.__gateMakeHash = async function (plain, salt) {
   const s = salt || GATE_CONFIG.salt;
   const h = await sha256Hex(s + ':' + String(plain));
-  console.log('%c密码哈希已生成', 'color:#6fd88f;font-weight:bold');
+  console.log('%c密码哈希已生成', 'color:var(--green-lite);font-weight:bold');
   console.log('hash = ' + h);
   console.log('salt = ' + s);
   console.log('把上面两行填进 GATE_CONFIG，或用设置面板里的「访问密码」一键设置。');
@@ -5939,7 +6738,7 @@ function openGateSettings() {
     gateResetFail();
     gateUnlock();
     toast('访问密钥已更新（本机生效）。要让所有访客都用新密钥，请把控制台里的 hash/salt 覆盖进 index.html。', 'success', 9000);
-    console.log('%c访问密钥已更新（本机生效）', 'color:#6fd88f;font-weight:bold');
+    console.log('%c访问密钥已更新（本机生效）', 'color:var(--green-lite);font-weight:bold');
     console.log('hash = ' + h);
     console.log('salt = ' + salt);
     console.log('→ 把上面两行覆盖到 index.html 的 GATE_CONFIG，才能对所有访客生效。');
@@ -5983,9 +6782,9 @@ function updateGateHint() {
   const owner = gateIsOwner();
   const src = gateStorageGet('sw_gate_hash') ? '本机覆盖' : '源码默认';
   hint.innerHTML = on
-    ? '当前：<b style="color:#6fd88f;">已锁定</b>（密钥来源：' + src + '）' +
-      (owner ? ' · <b style="color:#6fd88f;">本机已豁免</b>' : ' · 本机需输密钥')
-    : '<b style="color:#ff8a8a;">当前未锁定</b>：任何知道网址的人都能访问。';
+    ? '当前：<b style="color:var(--green-lite);">已锁定</b>（密钥来源：' + src + '）' +
+      (owner ? ' · <b style="color:var(--green-lite);">本机已豁免</b>' : ' · 本机需输密钥')
+    : '<b style="color:var(--red-lite);">当前未锁定</b>：任何知道网址的人都能访问。';
 }
 
 

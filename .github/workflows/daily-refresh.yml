@@ -227,6 +227,15 @@ jobs:
           MAIL_MODE: ${{ github.event.inputs.mail_mode || 'always' }}
           # 分片已刷过价格/评分，汇总阶段跳过重复刷新，只做全局补充
           SKIP_PRICE_REFRESH: 'true'
+          # ---- 新增 2026-10-11：每日特价雷达 + 我的 Steam 库 ----
+          # 两个都只做「附加数据」，各自脚本保证 exit 0，挂掉也不影响上面的主流程。
+          DISCOVER_SPECIALS: 'true'
+          FETCH_OWNED: 'true'
+          SPECIALS_MIN_DISCOUNT: ${{ vars.SPECIALS_MIN_DISCOUNT || '50' }}
+          # ⚠️ 密钥只存在 Actions Secrets 里，绝不写进仓库文件、绝不打印日志。
+          # 没建这两个 Secret 的话，fetch-owned.mjs 会安静跳过（不是错误）。
+          STEAM_API_KEY: ${{ secrets.STEAM_API_KEY }}
+          STEAM_ID64: ${{ secrets.STEAM_ID64 }}
         run: node tools/daily-refresh.mjs
 
       - name: 把刷新后的数据提交回仓库

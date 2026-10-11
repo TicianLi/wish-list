@@ -175,7 +175,14 @@ const CFG = {
     to: process.env.MAIL_TO || ''
   },
   // 只在这些"事件"发生时才发信？默认都发（每天一封日报）
-  mailMode: process.env.MAIL_MODE || 'always'   // always | changes
+  mailMode: process.env.MAIL_MODE || 'always',   // always | changes
+  /* ---- 新增功能开关（2026-10-11）----
+     两个都是"锦上添花"，绝不能影响主流程，所以：
+       · 每个都默认有独立的 try/catch
+       · 各自脚本内部保证 exit 0
+       · 任何一个挂掉，日志只是 warn，邮件照发、数据照写 */
+  discoverSpecials: String(process.env.DISCOVER_SPECIALS ?? 'true') !== 'false',
+  fetchOwned: String(process.env.FETCH_OWNED ?? 'true') !== 'false'
 };
 
 /* ============================ 工具 ============================ */
@@ -1272,9 +1279,29 @@ function buildSnapshot(games) {
 }
 
 /* ============================ 邮件 ============================ */
+
+/* 读 data/specials.json，取「还不在你清单里」的好价 TOP N。
+   文件不存在 / 损坏 / 是带error 的空结果 → 一律返回空数组，
+   绝不让邮件构建失败（日报必须照发）。
+   导出为纯函数是为了能被 _test_specials.cjs 直接断言。 */
+export function readSpecialsForMail(limit = 20) {
+  try {
+    const p = path.join(ROOT, 'data', 'specials.json');
+    if (!fs.existsSync(p)) return [];
+    const d = JSON.parse(fs.readFileSync(p, 'utf8'));
+    if (!d || !Array.isArray(d.items)) return [];
+    return d.items
+      .filter(x => x && x.appid && !x.alreadyOwned && x.name)
+      .slice(0, Math.max(0, limit));
+  } catch (e) {
+    return [];
+  }
+}
+
 function buildMail(data, results, changes, stats) {
   const d = todayStr();
-  const subject = `🎮 Steam 愿望单日报 ${d}｜${stats.total} 款 · 促销 ${stats.onSale} · 史低 ${stats.atLow} · 达标 ${changes.reached.length}`;
+  const subject = `🎮 Steam 愿望单日报 ${d}｜${stats.total} 款 · 促销 ${stats.onSale} · 史低 ${stats.atLow} · 达标 ${changes.reached.length}`
+    + (readSpecialsForMail(1).length ? ' · 全站好价已更新' : '');
 
   const rowsOf = (list, render) => list.map(render).join('');
   const gRow = (g) => `<tr>
@@ -1288,6 +1315,23 @@ function buildMail(data, results, changes, stats) {
   const section = (title, list, render) => list.length
     ? `<h3 style="margin:22px 0 8px;font-size:15px;color:#0b5c8a;">${title} <span style="color:#94a3b3;font-weight:400;">(${list.length})</span></h3>
        <table style="width:100%;border-collapse:collapse;font-size:13px;">${list.map(render).join('')}</table>`
+    : '';
+
+  /* 【新增】全站好价 TOP 20：已排除你清单里已有的，避免重复占位 */
+  const hot = readSpecialsForMail(20);
+  const hotHtml = hot.length
+    ? `<h3 style="margin:22px 0 4px;font-size:15px;color:#0b5c8a;">🔥 今日全站好价 <span style="color:#94a3b3;font-weight:400;">(${hot.length})</span></h3>
+       <div style="font-size:11.5px;color:#93a5b6;margin-bottom:6px;">已排除你清单里的 ${data.games.length} 款；想收进清单就打开网页点「今日特价雷达」。</div>
+       <table style="width:100%;border-collapse:collapse;font-size:13px;">
+         ${hot.map((x, i) => `<tr>
+           <td style="padding:6px 8px;border-bottom:1px solid #eef2f6;color:#94a3b3;width:24px;">${i + 1}</td>
+           <td style="padding:6px 8px;border-bottom:1px solid #eef2f6;">${esc(x.name)}
+             <span style="color:#94a3b3;font-size:11.5px;">${x.reviewPct != null ? '好评 ' + x.reviewPct + '%' : ''}</span></td>
+           <td style="padding:6px 8px;border-bottom:1px solid #eef2f6;text-align:right;color:#c0392b;font-weight:600;white-space:nowrap;">-${x.discountPercent}%</td>
+           <td style="padding:6px 8px;border-bottom:1px solid #eef2f6;text-align:right;white-space:nowrap;">${fmtPrice(x.finalPrice, x.currency)}</td>
+           <td style="padding:6px 8px;border-bottom:1px solid #eef2f6;text-align:right;color:#94a3b3;white-space:nowrap;">${fmtPrice(x.originalPrice, x.currency)}</td>
+         </tr>`).join('')}
+       </table>`
     : '';
 
   const head = `<h3 style="margin:22px 0 8px;font-size:15px;color:#0b5c8a;">概览</h3>
@@ -1310,6 +1354,7 @@ function buildMail(data, results, changes, stats) {
     ${section('📉 史低被刷新（更便宜了）', changes.newLow, x => gRow(x.g))}
     ${section('⬇️ 价格下降', changes.priceDrop, x => gRow(x.g))}
     ${section('⏰ 24 小时内结束促销', changes.endingSoon, gRow)}
+    ${hotHtml}
     <h3 style="margin:22px 0 8px;font-size:15px;color:#0b5c8a;">全部清单 <span style="color:#94a3b3;font-weight:400;">(${data.games.length})</span></h3>
     <table style="width:100%;border-collapse:collapse;font-size:12.5px;">
       <tr style="background:#f2f6f9;">
@@ -1334,6 +1379,14 @@ function buildMail(data, results, changes, stats) {
     '已达目标价 ' + changes.reached.length + ' 款' + (changes.reached.length ? '：' + changes.reached.map(g => g.name).join('、') : ''),
     '史低被刷新 ' + changes.newLow.length + ' 款' + (changes.newLow.length ? '：' + changes.newLow.map(x => x.g.name).join('、') : ''),
     '24h 内结束促销 ' + changes.endingSoon.length + ' 款',
+    ...(hot.length ? [
+      '',
+      '今日全站好价（已排除你清单里的 ' + data.games.length + ' 款）：',
+      ...hot.map((x, i) => '  ' + String(i + 1).padStart(2, ' ') + '. ' + x.name +
+        (x.reviewPct != null ? '（好评 ' + x.reviewPct + '%）' : '') +
+        '  -' + x.discountPercent + '%  ' + fmtPrice(x.finalPrice, x.currency) +
+        '（原价 ' + fmtPrice(x.originalPrice, x.currency) + '）')
+    ] : []),
     '当前合计 ' + fmtPrice(stats.sumCur, 'CNY') + ' / 史低合计 ' + fmtPrice(stats.sumLow, 'CNY'),
     '',
     '全部清单：',
@@ -1600,6 +1653,36 @@ async function main() {
     warn('商店页标签处理异常（不影响其它数据）：' + e.message);
   }
 
+  /* ---------------- 新增：每日特价雷达（2026-10-11）---------------- */
+  /* 抓 Steam 正在打折的游戏（排除已在清单的），产出 data/specials.json。
+     页面「今日特价雷达」区块和邮件「全站好价 TOP 20」都读它。 */
+  if (CFG.discoverSpecials) {
+    try {
+      const mod = await import('./discover-specials.mjs');
+      const r = await mod.main();
+      if (r && r.skipped) log('特价雷达：已按开关跳过');
+      else log(`特价雷达：抓�� ${r.count} 条打折游戏（其中 ${r.notInList} 条还不在你清单里）`);
+    } catch (e) {
+      warn('特价雷达抓取异常（不影响刷新与邮件）：' + (e && e.message));
+    }
+  }
+
+  /* ---------------- 新增：我的 Steam 库（2026-10-11）---------------- */
+  /* 抓 GetOwnedGames，产出 data/owned.json（只存 appid + 游玩时长，不存游戏名）。
+     页面「已购待清理」区块拿它和本机清单求交集，让你确认后手动删。
+     没配 STEAM_API_KEY 就静默跳过 —— 这是正常的，不是错误。 */
+  if (CFG.fetchOwned) {
+    try {
+      const mod = await import('./fetch-owned.mjs');
+      const r = await mod.main();
+      if (r && r.skipped) log('Steam 库：' + (r.reason === 'NO_KEY' ? '未配置 API Key，已跳过（正常）' : '配置有误，已跳过'));
+      else if (r && r.error) warn(`Steam 库抓取未成功（${r.error}）—— 不影响其它功能`);
+      else log(`Steam 库：已抓取 ${r.count} 款（${r.uncertain} 款时长为 0，页面会标出来让你确认）`);
+    } catch (e) {
+      warn('Steam 库抓取异常（不影响刷新与邮件）：' + (e && e.message));
+    }
+  }
+
   const payload = saveDataFile(data);
   const jsonPath = path.join(ROOT, 'data', `steam-wishlist-${todayStr()}.json`);
   fs.writeFileSync(jsonPath, JSON.stringify(payload, null, 2), 'utf8');
@@ -1661,6 +1744,19 @@ async function main() {
 /* 直接 `node tools/daily-refresh.mjs` 运行时才自动执行；
    被 import（如离线自测）时只导出 main，由调用方决定何时跑、何时等。 */
 export { main };
+
+/* 【2026-10-11 新增】把网络层与纯函数也导出，供 tools/discover-specials.mjs 复用。
+   动机：特价雷达同样面对 Steam 限流，如果自己再写一套重试/自适应限速，
+   就会出现「两套限速逻辑各自为政」的问题 —— 一个降速了另一个还在猛冲。
+   复用同一份 rlReport/ fetchTextRetry 才能保证整体速率可控。
+   （导出不会产生副作用：这些函数本来就在本模块里，只是没 expose。） */
+export {
+  fetchJSON, fetchTextRetry, fetchHTML, fetchOnce,
+  isRetryableStatus, isRetryableError, backoffDelayMs, parseRetryAfter,
+  rlReport, rlSlowdown, rlSpeedup, rateLimit,
+  scoreFromPositive, parseSaleDeadline, countRealTagNodes,
+  CFG, DATA_FILE, ROOT
+};
 
 const isDirectRun = (() => {
   if (!process.argv[1]) return false;

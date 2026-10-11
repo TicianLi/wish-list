@@ -30,7 +30,11 @@ const SUITES = {
   limits:    'tools/_test_limits.cjs',
   sentinel:  'tools/_test_sentinel.cjs',
   retry:     'tools/_test_retry.cjs',
-  shard:     'tools/_test_shard.cjs'
+  shard:     'tools/_test_shard.cjs',
+  /* 【2026-10-11 新增】今日特价雷达 + 我的 Steam 库（两个新功能的完整链路） */
+  specials:  'tools/_test_specials.cjs',
+  owned:     'tools/_test_owned.cjs',
+  radar_ui:  'tools/_test_radar_ui.cjs'
 };
 
 const args = process.argv.slice(2);

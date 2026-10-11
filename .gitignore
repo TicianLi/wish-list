@@ -15,3 +15,24 @@ data/.wishlist.test-backup.json
 .DS_Store
 Thumbs.db
 *.log
+
+# 开发期的临时产物（诊断脚本、抓取样本、跑测输出）
+.cache/
+.bak_*
+
+# 测试脚本的临时输出
+_provres.txt
+_sm_res.txt
+
+# 注：data/owned.json **要入库**（Pages 要读它，「已购检测」才能工作），
+# 但采集器已收紧到只写 appid + playtimeForever 两个字段：
+# 游戏名、lastPlayed、playtimeWindows 一律不写 —— 那几个是「指纹级」信息，
+# 对页面毫无用处，却足以让人反查出这是谁的库。
+# 详见 tools/fetch-owned.mjs 里 normalizeResponse 的注释。
+
+# data/specials.json —— 【2026-10-11】绝不入库
+# 它是每天的特价快照，由 CI 重新生成。本机抓不到时写出来的是
+# `{"items":[],"error":"STEAM_UNREACHABLE"}` 这种空壳；
+# 要是把这个空壳提交上去，线上会天天显示「今天没抓到」，
+# 直到下一次 CI 成功覆盖 —— 属于把自己的失败状态固化进仓库。
+data/specials.json
