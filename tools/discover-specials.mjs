@@ -24,9 +24,10 @@
  * 运行：node tools/discover-specials.mjs
  *
  * 可选环境变量（括号内为默认值）：
- *   SPECIALS_MIN_DISCOUNT(50)  最低折扣百分比，低于此值直接丢弃
+ *   SPECIALS_MIN_DISCOUNT(0)   最低折扣百分比，低于此值丢弃。**默认 0 = 不限**（2026-10-11 起）
+ *   SPECIALS_MIN_REVIEWS(300)  质量门槛：有好评等级但评测总数少于它 → 丢弃
  *   SPECIALS_PER_PAGE(50)      每页拉多少条
- *   SPECIALS_MAX_PAGES(4)      最多翻几页（4×50 = 200 条候选）
+ *   SPECIALS_MAX_PAGES(10)     最多翻几页（10×50 = 500 条候选）
  *   SPECIALS_RECENT_DAYS(0)    只保留最近 N 天内发售的（0 = 不限制）
  *   SPECIALS_ENABLED(true)     总开关，false 时只读旧文件不动网络
  *   STEAM_CC(cn) STEAM_LANG(schinese)
@@ -41,13 +42,28 @@ const ROOT = path.resolve(__dirname, '..');
 const SPECIALS_FILE = path.join(ROOT, 'data', 'specials.json');
 const DATA_FILE = path.join(ROOT, 'data', 'wishlist.json');
 
-const CFG = {
+/* Steam 好评等级一共 7 档。前 3 档算好评，后 4 档（mixed / mostly_negative /
+   negative / overwhelmingly_negative）就是「差评或褒贬不一」—— 直接判为烂游戏挡掉。
+   注意 mixed 是「褒贬不一」：销量往往还很高，但用户骂声一片，正是最该挡的一档。 */
+const GOOD_REVIEW_SUMMARIES = new Set(['overwhelmingly_positive', 'very_positive', 'mostly_positive']);
+const BAD_REVIEW_SUMMARIES = new Set(['mixed', 'mostly_negative', 'negative', 'overwhelmingly_negative']);
+
+/* CFG 导出：测试要直接断言默认值（E3-8），别只能靠正则猜源码。 */
+export const CFG = {
   cc: process.env.STEAM_CC || 'cn',
   lang: process.env.STEAM_LANG || 'schinese',
-  /* 低于这个折扣就不好看了，默认只要 5 折及以上 */
-  minDiscount: Number(process.env.SPECIALS_MIN_DISCOUNT || 50),
+  /* ---- 折扣门槛：2026-10-11 起默认 0 = 不限 ----
+     用户原话：「不要限制」「不要什么牛马小游戏烂游戏进来」。
+     注意这两句说的不是同一件事：**折扣力度不设限**（-10% 也照样给你看），
+     **质量另设门槛**（见下面 minReviewCount / judgeQuality）——
+     旧版把「折扣 < 50% 就丢」当成了质量控制，那是偷懒：
+     -95% 的烂游戏照样过 50% 门槛，结果烂游戏照样进来，而 -30% 的好游戏反被砍了。 */
+  minDiscount: Number(process.env.SPECIALS_MIN_DISCOUNT || 0),
+  /* ---- 质量门槛（2026-10-11 新增，判据见 judgeQuality 的注释）---- */
+  minReviewCount: Number(process.env.SPECIALS_MIN_REVIEWS || 300),
   perPage: Number(process.env.SPECIALS_PER_PAGE || 50),
-  maxPages: Number(process.env.SPECIALS_MAX_PAGES || 4),
+  /* 候选页数从 4 → 10：折扣放开后候选变多，得多翻几页才不漏（4×50=200 → 10×50=500） */
+  maxPages: Number(process.env.SPECIALS_MAX_PAGES || 10),
   /* 0 = 不按发售时间过滤（Steam 特价常包含老游戏神作，不该一刀切掉） */
   recentDays: Number(process.env.SPECIALS_RECENT_DAYS || 0),
   enabled: String(process.env.SPECIALS_ENABLED || 'true') !== 'false',
@@ -253,26 +269,51 @@ export function computeScore(it) {
   return Math.round(s * 10) / 10;
 }
 
-/* 过滤：低于折扣门槛的、名字缺失的、appid 不合法的，一律剔除。 */
+/* ★ 质量门槛（2026-10-11 新增）——「不要牛马小游戏烂游戏进来」的落点。
+   判据（按这个顺序，命中即挡）：
+     ① 好评等级落在 mixed / mostly_negative / negative / overwhelmingly_negative
+        → 挡。mixed（褒贬不一）最该挡：这种游戏销量往往很高，但骂声一片。
+     ② 有好评等级、但评测总数 < minReviewCount（默认 300）
+        → 挡。样本太小说明不了质量：可能是刚上架的独立小游戏，也可能是刷出来的分。
+     ③ **评分或评测数根本没抓到** → **放行**。
+        这一条是故意的：我们抓不到数据不等于游戏不好，凭「没数据」把一款好游戏藏起来
+        就是静默砍数据。放行后由 computeScore 降权 -10 排在后面，你自己一眼能看出来它没数据。
+
+   返回 { ok, why }：why 为空串表示通过，非空表示被挡的原因（写进日志，便于排查）。 */
+export function judgeQuality(it, cfg) {
+  const c = cfg || CFG;
+  const sum = String((it && it.reviewSummary) || '');
+  const cnt = Number(it && it.reviewCount) || 0;
+  if (BAD_REVIEW_SUMMARIES.has(sum)) return { ok: false, why: '评分「' + sum + '」' };
+  if (sum && cnt > 0 && cnt < c.minReviewCount) return { ok: false, why: '评测仅 ' + cnt + ' 条（< ' + c.minReviewCount + '）' };
+  return { ok: true, why: '' };
+}
+
+/* 过滤：折扣不再设门槛（默认 0），改由 judgeQuality 控质量；
+   名字缺失、appid 不合法的照旧剔除。 */
 export function filterItems(rows, cfg, ownedIds) {
   const c = cfg || CFG;
   const owned = ownedIds || new Set();
   const now = Date.now();
   const out = [];
+  const rejected = { discount: 0, quality: 0, recent: 0 };
   for (const r of rows) {
     if (!r.appid || r.appid <= 0) continue;
     if (!r.name) continue;
     const d = Number(r.discountPercent) || 0;
-    if (d < c.minDiscount) continue;
+    if (d < c.minDiscount) { rejected.discount++; continue; }
+    const q = judgeQuality(r, c);
+    if (!q.ok) { rejected.quality++; continue; }
     if (c.recentDays > 0) {
-      if (!r.releaseTs) continue;
-      if (now - r.releaseTs > c.recentDays * 86400000) continue;
+      if (!r.releaseTs) { rejected.recent++; continue; }
+      if (now - r.releaseTs > c.recentDays * 86400000) { rejected.recent++; continue; }
     }
     r.tier = discountTier(d);
     r.score = computeScore(r);
     r.alreadyOwned = owned.has(r.appid);
     out.push(r);
   }
+  filterItems.lastRejected = rejected;   // 供调用方写日志（不静默丢弃，要能解释）
   // 去重（同一 appid 可能因分页重叠出现两次）
   const seen = new Set();
   const uniq = [];
@@ -423,7 +464,11 @@ export async function main() {
   const items = filterItems(rows, CFG, owned);
   const notInList = items.filter(x => !x.alreadyOwned);
 
-  log(`候选 ${rows.length} 条 → 折扣 ≥${CFG.minDiscount}% 后剩 ${items.length} 条；其中 ${notInList.length} 条还不在你清单里`);
+  const rej = filterItems.lastRejected || { discount: 0, quality: 0, recent: 0 };
+  log(`候选 ${rows.length} 条 → 质量门槛后剩 ${items.length} 条`
+    + `（折扣不足挡掉 ${rej.discount}、质量不达标挡掉 ${rej.quality}`
+    + `${rej.recent ? '、时间不达标挡掉 ' + rej.recent : ''}）`
+    + `；其中 ${notInList.length} 条还不在你清单里`);
   log(`特惠日历补到 ${merged} 条折扣截止时间`);
 
   writeOut({
@@ -434,6 +479,9 @@ export async function main() {
     total,
     pagesFetched: pagesOk,
     minDiscount: CFG.minDiscount,
+    // 质量门槛也写进产物：页面/日志能看出「今天挡掉的是折扣不够还是质量不行」
+    minReviewCount: CFG.minReviewCount,
+    rejected: filterItems.lastRejected || null,
     currency: 'CNY',
     items,
   });

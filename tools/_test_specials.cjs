@@ -176,6 +176,40 @@ const SAMPLE = row(1145360, 'Hades', 80, 69.75, 348.75, TIP_90, '2020 年 9 月 
   check('E2-1 只留 30 天内', recent.length === 1 && recent[0].name === '刚发售', recent.map(x => x.name));
   check('E2-2 没发售日的不算「新」', !recent.some(x => x.name === '没发售日'));
 
+  /* ------------------------------------------------------------------
+   * E3. 质量门槛（2026-10-11 用户定：「不要限制，但不要牛马小游戏烂游戏进来」）
+   *     折扣不再设门槛，质量另设门槛。这两条必须分别钉死：
+   *       · 折扣低的好游戏要进来（-10% 也收）
+   *       · 评分差 / 评测数太少的要挡掉
+   *       · 数据缺失的必须放行（不因「没抓到」就静默藏起来）
+   * ------------------------------------------------------------------ */
+  console.log('\n=== E3. 质量门槛：不限折扣，但挡烂游戏 ===');
+  const qcfg = { minDiscount: 0, minReviewCount: 300, recentDays: 0 };
+  const good = { reviewSummary: 'mostly_positive', reviewCount: 5000, reviewPct: 90 };
+  const rows3 = [
+    { appid: 10, name: '差评游戏', discountPercent: 80, reviewSummary: 'mixed', reviewCount: 9000 },
+    { appid: 11, name: '多半差评', discountPercent: 80, reviewSummary: 'mostly_negative', reviewCount: 9000 },
+    { appid: 12, name: '好评但样本小', discountPercent: 80, reviewSummary: 'very_positive', reviewCount: 50 },
+    { appid: 13, name: '口碑都好但打折很浅', discountPercent: 10, ...good },
+    { appid: 14, name: '全好评大样本', discountPercent: 95, reviewSummary: 'overwhelmingly_positive', reviewCount: 120000 },
+    { appid: 15, name: '没抓到评分数据', discountPercent: 70 },
+  ];
+  const out3 = M.filterItems(rows3, qcfg, new Set());
+  const ids3 = out3.map(x => x.appid);
+  check('E3-1 评分 mixed（褒贬不一）挡掉', !ids3.includes(10), ids3);
+  check('E3-2 mostly_negative 挡掉', !ids3.includes(11), ids3);
+  check('E3-3 好评但评测仅 50 条挡掉（样本太小＝刷分或小游戏）', !ids3.includes(12), ids3);
+  check('E3-4 ★ 折扣只有 10% 也照样收（折扣不限）', ids3.includes(13), ids3);
+  check('E3-5 全好评大样本收', ids3.includes(14), ids3);
+  check('E3-6 ★ 没抓到评分数据 → 放行（不因缺数据静默砍掉）', ids3.includes(15), ids3);
+  check('E3-7 挡掉的条数有记账（能解释为什么少了）',
+    M.filterItems.lastRejected && M.filterItems.lastRejected.quality === 3, M.filterItems.lastRejected);
+  check('E3-8 默认配置就是「折扣不限 + 评测数 300」',
+    M.CFG && M.CFG.minDiscount === 0 && M.CFG.minReviewCount === 300,
+    M.CFG && { d: M.CFG.minDiscount, r: M.CFG.minReviewCount });
+  check('E3-9 judgeQuality 是导出的纯函数（可直接断言）',
+    typeof M.judgeQuality === 'function' && M.judgeQuality({ reviewSummary: 'mixed' }, qcfg).ok === false);
+
   console.log('\n=== F. 失败语义：抓不到也必须 exit 0 ===');
   check('F-1 复用 daily-refresh 的重试器（不重造轮子）',
     /await import\('\.\/daily-refresh\.mjs'\)/.test(CODE));
@@ -186,8 +220,13 @@ const SAMPLE = row(1145360, 'Hades', 80, 69.75, 348.75, TIP_90, '2020 年 9 月 
   check('F-4 main 不因异常抛出（整体被 try 包住）',
     /catch[\s\S]{0,400}(warn|log)/.test(CODE));
   check('F-5 有开关可关（SPECIALS_ENABLED）', /SPECIALS_ENABLED/.test(CODE));
-  check('F-6 折扣门槛走环境变量且默认 50',
-    /SPECIALS_MIN_DISCOUNT\s*\|\|\s*50/.test(CODE));
+  /* 2026-10-11：默认从 50 改成 0（不限折扣）。用户原话「不要限制」——
+     折扣力度不再是门槛，质量由 E3 组单独把关。
+     契约同步改，别让旧数字留在断言里骗人。 */
+  check('F-6 折扣门槛走环境变量且默认 0（不限）',
+    /SPECIALS_MIN_DISCOUNT\s*\|\|\s*0\b/.test(CODE));
+  check('F-6b 质量门槛走环境变量 SPECIALS_MIN_REVIEWS',
+    /SPECIALS_MIN_REVIEWS/.test(CODE));
 
   console.log('\n=== G. 不泄密 / 不越权 ===');
   check('G-1 绝不引用 STEAM_API_KEY（这个数据源必须免密钥可用）', !/STEAM_API_KEY/.test(SRC));
