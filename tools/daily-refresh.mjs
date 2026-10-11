@@ -1677,7 +1677,7 @@ async function main() {
       const r = await mod.main();
       if (r && r.skipped) log('Steam 库：' + (r.reason === 'NO_KEY' ? '未配置 API Key，已跳过（正常）' : '配置有误，已跳过'));
       else if (r && r.error) warn(`Steam 库抓取未成功（${r.error}）—— 不影响其它功能`);
-      else log(`Steam 库：已抓取 ${r.count} 款（${r.uncertain} 款时长为 0，页面会标出来让你确认）`);
+      else log(`Steam 库：已抓取 ${r.count} 款（其中 ${r.uncertain} 款还没玩过，同样算你已拥有）`);
     } catch (e) {
       warn('Steam 库抓取异常（不影响刷新与邮件）：' + (e && e.message));
     }

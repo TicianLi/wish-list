@@ -261,8 +261,15 @@ console.log('\n=== C2. 「加入清单」走既有任务队列（不能绕过限
   });
   const noCheck = await page.evaluate(() => document.querySelectorAll('#ownedMainBody .owned-pick:checked').length);
   chk('★ 默认全部不勾选', noCheck === 0, noCheck);
-  const uncertainTxt = await page.evaluate(() => (document.querySelector('#ownedMainBody').textContent || '').includes('评测密钥'));
-  chk('0 小时标注「评测密钥/赠送」', uncertainTxt);
+  /* 2026-10-11 用户定：「我只要有的游戏都算」。0 小时只表示没玩过，
+     不再显示成「可能是评测密钥/赠送」的疑似口吻。两条一起钉住：
+     既不许退回旧文案，也不许把「未游玩」写成「可能没有」。 */
+  const uncertainTxt = await page.evaluate(() => {
+    const t = (document.querySelector('#ownedMainBody').textContent || '');
+    return { old: t.includes('评测密钥'), notOwned: t.includes('未游玩'), owned: t.includes('已拥有') };
+  });
+  chk('0 小时显示「已拥有 · 未游玩」（不再暗示可能没有）',
+    uncertainTxt.notOwned && uncertainTxt.owned && !uncertainTxt.old, uncertainTxt);
   const delDisabled = await page.evaluate(() => document.querySelector('#btnOwnedDelete').disabled);
   chk('未勾选时删除按钮禁用', delDisabled === true);
 

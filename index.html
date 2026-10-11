@@ -629,7 +629,9 @@ body.gate-locked .modal{visibility:hidden !important;}
 .owned-pt{color:var(--muted);font-size:var(--fs-sm);}
 .owned-verdict{font-size:var(--fs-xs);}
 .owned-verdict.likely{color:var(--green-lite);}
-.owned-verdict.uncertain{color:var(--yellow-lite);}
+/* 2026-10-11：不再是警示色。0 小时只表示「还没玩过」，不是「可能没有」，
+   用中性色，别让正常状态看起来像出问题了。 */
+.owned-verdict.uncertain{color:var(--faint);}
 .owned-empty{color:var(--faint);font-size:var(--fs-sm);padding:14px;text-align:center;}
 .radar-foot-hint{font-size:var(--fs-xs);color:var(--muted);flex:1 1 auto;line-height:1.6;}
 /* 移动端：雷达网格压到单列，筛选条独占行 */
@@ -1144,9 +1146,10 @@ body.gate-locked .modal{visibility:hidden !important;}
   </div>
   <div class="modal-body">
     <div class="owned-warn">
-      <strong>这里的判断依据只有一条：这个 AppID 出现在你的 Steam 库里。</strong><br>
-      它<strong>无法区分</strong>你是真买了，还是拿了评测密钥 / 家庭共享 / 捆绑包赠送 / 免费领取
-      —— 所以下面每一项<strong>默认都不勾选</strong>，必须你自己确认后再删。删错了可以从备份里恢复。
+      <strong>判断依据只有一条：这个 AppID 出现在你的 Steam 库里 —— 对你来说就是「已经有」。</strong><br>
+      游玩时长只用来告诉你<strong>玩过还是没玩过</strong>（借来没玩过的自然显示 0 小时），
+      <strong>不再作为「可能没有」的怀疑依据</strong>，也不用你逐条确认。
+      为防误删，下面每一项<strong>仍然默认不勾选</strong> —— 由你决定删哪几款，删错了可从备份恢复。
     </div>
     <div class="owned-bar">
       <span class="owned-meta" id="ownedMeta">尚未检测</span>
@@ -1159,13 +1162,13 @@ body.gate-locked .modal{visibility:hidden !important;}
     <h4 class="owned-h" id="ownedMainHead">✅ 清单本体游戏 · Steam 库里也有</h4>
     <div class="owned-table-wrap"><table class="owned-table"><thead><tr>
       <th style="width:34px;"><input type="checkbox" id="ownedCheckAllMain"></th>
-      <th>游戏</th><th style="width:92px;">游玩时长</th><th style="width:150px;">判断</th><th style="width:70px;">操作</th>
+      <th>游戏</th><th style="width:92px;">游玩时长</th><th style="width:150px;">状态</th><th style="width:70px;">操作</th>
     </tr></thead><tbody id="ownedMainBody"></tbody></table></div>
 
     <h4 class="owned-h" id="ownedDlcHead">❓ 只匹配到 DLC / 衍生作</h4>
     <div class="owned-table-wrap"><table class="owned-table"><thead><tr>
       <th style="width:34px;"><input type="checkbox" id="ownedCheckAllDlc"></th>
-      <th>游戏</th><th style="width:92px;">游玩时长</th><th style="width:150px;">判断</th><th style="width:70px;">操作</th>
+      <th>游戏</th><th style="width:92px;">游玩时长</th><th style="width:150px;">状态</th><th style="width:70px;">操作</th>
     </tr></thead><tbody id="ownedDlcBody"></tbody></table></div>
   </div>
   <div class="modal-foot">
@@ -6065,10 +6068,14 @@ function classifyOwned(ownedGames, myGames) {
 }
 
 function ownedRowHtml(r) {
+  /* 【2026-10-11 用户定】只要这个 AppID 在你 Steam 库里，就算「你已经拥有」，
+     不再因为「游玩 0 小时」就暗示「可能只是评测密钥 / 赠送 / 你并没有」——
+     用户的原话：「我有的我买它干什么呢」。时长只作为「玩过 / 没玩过」的事实展示。
+     （verdict 仍由 classifyOwned 计算，played 排前面，纯属排序偏好，不再是可信度分档。） */
   const uncertain = r.verdict === 'uncertain';
   const verdict = uncertain
-    ? '<span class="owned-verdict uncertain">⚠ 游玩 0 小时<br><small>可能是评测密钥 / 赠送</small></span>'
-    : '<span class="owned-verdict likely">✔ 玩过 ' + fmtHours(r.playtime) + '</span>';
+    ? '<span class="owned-verdict uncertain">✔ 已拥有 · 未游玩</span>'
+    : '<span class="owned-verdict likely">✔ 已拥有 · 玩过 ' + fmtHours(r.playtime) + '</span>';
   return '<tr data-owned-appid="' + r.appid + '">' +
     '<td><input type="checkbox" class="owned-pick" data-appid="' + r.appid + '"' + (OWNED.sel.has(r.appid) ? ' checked' : '') + '></td>' +
     '<td><span class="gname" data-owned-detail="' + r.appid + '">' + esc(r.name) + '</span>' +

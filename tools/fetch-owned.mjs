@@ -112,13 +112,21 @@ export function normalizeResponse(json) {
   return { ok: true, error: null, games };
 }
 
-/* ★ 关键的业务判定（纯函数，被测试直接断言）
-   光凭「在库里」绝不能断定「我买过」—— 可能���评测密钥、家庭共享、
-   捆绑包赠送、免费领取。所以每条都要算出一个可信度标签给页面显示。 */
+/* ★ 已拥有 / 是否玩过 的判定（纯函数，被测试直接断言）
+   【2026-10-11 用户定，原语义已废弃】
+   旧注释写的是「光凭在库里绝不能断定我买过」，于是 0 小时被标成 uncertain，
+   页面显示成「⚠ 可能是评测密钥 / 赠送」并要用户逐条确认。
+   用户原话：「我只要有的游戏都算，我有的我买它干什么呢」——
+   **只要这个 AppID 出现在你的 Steam 库里，对你来说就已经是「你有」**。
+   借来的、赠送的、免费领取的照样是「你能玩」，那是你的东西，不是「疑似」。
+
+   所以现在它只回答一件事：**你玩过没有**（纯展示用）。
+   名字沿用 likely/uncertain 是为了不动测试契约与页面数据形状 ——
+   但语义已经变成「玩过 / 没玩过」，**不再是可信度分档，也不会拦着你删**。 */
 export function judgeOwnership(playtimeForever) {
   const h = Number(playtimeForever) || 0;
-  if (h > 0) return 'likely';   // 玩过 → 几乎可以确定是买的（或家庭共享，但极少）
-  return 'uncertain';           // 0 小时 → 可能是评测密钥/赠送/领取，需人工确认
+  if (h > 0) return 'likely';   // 玩过
+  return 'uncertain';           // 没玩过（≠ 可能没有）
 }
 
 function writeOut(payload) {
@@ -166,8 +174,8 @@ export async function main() {
          你会以为功能坏了 —— 实际上是采集面窄了，不是判定逻辑错。
 
          ⚠️ 已知副作用（Steam 行为，不是 bug）：家庭共享游戏的 playtime_forever 基本都是 0
-         （时长归属账号所有者）。因此它们会被 judgeOwnership 归到 uncertain（不确定）桶，
-         需要你在页面上人工确认一次。这是 Steam 的记账方式决定的，我们无法也不该伪造时长。 */
+         （时长归属账号所有者）。因此它们会落进 uncertain（= 没玩过）桶 ——
+         但按用户定的语义，**它们同样是「你已拥有」**，页面会照常列出来，只标注「未游玩」。 */
       + '&include_family_licenses=1'
       + '&count=' + CFG.pageSize;
     let json;
@@ -194,15 +202,31 @@ export async function main() {
       warn('Steam 返回 success=false —— 你的 Steam 隐私设置里「游戏详情」不是公开的。');
       warn('  改法：Steam 客户端 → 设置 → 隐私 → 游戏详情 → 改为「公开」');
     }
+    /* ⚠️ 【2026-10-11 修】失败时**绝不能用空数组覆盖已有数据**。
+       旧实现写的是 count: all.length / games: all —— 请求失败时 all 往往是空的
+       （或只有前几页），于是 CI 网络一抖、Steam 超时、限流退避耗尽，
+       用户的整份已购库就被清空 → 页面把「所有游戏」都当成「库里没有」，
+       已购检测彻底失灵，而且**没有任何报错提示**（error 字段只有内行才看得见）。
+
+       这正是本机实测踩到的：node fetch 对 Steam 直接 fetch failed，
+       第一次跑就把 181 款的 owned.json 写成了空壳。
+
+       正确做法：失败时**读回旧文件、保留原 games**，只更新错误信息与时间戳。
+       采集是"锦上添花"，抓不到就不该破坏已有的好数据。 */
+    let prev = { games: [], count: 0 };
+    try { prev = JSON.parse(fs.readFileSync(OWNED_FILE, 'utf8')) || prev; } catch (e2) { /* 没有旧文件就走空 */ }
+    const keptGames = Array.isArray(prev.games) ? prev.games : [];
     writeOut({
-      version: 1, fetchedAt: now, count: all.length, games: all,
+      version: 1, fetchedAt: now,
+      count: keptGames.length, games: keptGames,   // ← 保留旧数据，不清空
+      uncertainCount: keptGames.filter(g => judgeOwnership(g.playtimeForever) === 'uncertain').length,
       error,
       errorHint: error === 'PRIVATE_PROFILE'
         ? '请到 Steam 设置 → 隐私 → 游戏详情 改成「公开」，然后重新运行。'
-        : '抓取出错，可以点页面上的「重新检测」再试一次。',
+        : '本次抓取失败，已保留上一次的库数据（不受影响）；可点页面上的「重新检测」再试一次。',
     });
     // ★ 退出码保持 0
-    return { count: all.length, error };
+    return { count: keptGames.length, error };
   }
 
   // 去重
@@ -217,7 +241,7 @@ export async function main() {
     uncertainCount: uncertain,
   });
 
-  log(`✅ 已写 data/owned.json：${games.length} 款（其中 ${uncertain} 款游玩时长 0，需你人工确认）`);
+  log(`✅ 已写 data/owned.json：${games.length} 款（其中 ${uncertain} 款还没玩过，同样算你已拥有）`);
   return { count: games.length, uncertain };
 }
 
