@@ -41,6 +41,9 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(__dirname, '..');
 const SPECIALS_FILE = path.join(ROOT, 'data', 'specials.json');
 const DATA_FILE = path.join(ROOT, 'data', 'wishlist.json');
+/* 【2026-10-12 新增】已购库。fetch-owned.mjs 产出，字段极简（appid + playtimeForever）。
+   它和上面 wishlist.json 是**两个完全不同的东西**，别再混用 —— 见 readExclusionSets。 */
+const OWNED_FILE = path.join(ROOT, 'data', 'owned.json');
 
 /* Steam 好评等级一共 7 档。前 3 档算好评，后 4 档（mixed / mostly_negative /
    negative / overwhelmingly_negative）就是「差评或褒贬不一」—— 直接判为烂游戏挡掉。
@@ -290,10 +293,17 @@ export function judgeQuality(it, cfg) {
 }
 
 /* 过滤：折扣不再设门槛（默认 0），改由 judgeQuality 控质量；
-   名字缺失、appid 不合法的照旧剔除。 */
-export function filterItems(rows, cfg, ownedIds) {
+   名字缺失、appid 不合法的照旧剔除。
+
+   【2026-10-12】ex 传 readExclusionSets() 的返回值 { ownedSet, wishSet }。
+   两个标记语义不同、必须分开：
+     r.alreadyOwned = 已在 Steam 库（真买了）
+     r.inWishlist   = 已在愿望单（还没买）
+   老的第三个参数是「愿望单 appid 集合」，现在只当 inWishlist 用。 */
+export function filterItems(rows, cfg, ex) {
   const c = cfg || CFG;
-  const owned = ownedIds || new Set();
+  const ownedSet = (ex && ex.ownedSet) || new Set();
+  const wishSet = (ex && ex.wishSet) || (ex instanceof Set ? ex : new Set());
   const now = Date.now();
   const out = [];
   const rejected = { discount: 0, quality: 0, recent: 0 };
@@ -310,7 +320,8 @@ export function filterItems(rows, cfg, ownedIds) {
     }
     r.tier = discountTier(d);
     r.score = computeScore(r);
-    r.alreadyOwned = owned.has(r.appid);
+    r.alreadyOwned = ownedSet.has(r.appid);
+    r.inWishlist = wishSet.has(r.appid);
     out.push(r);
   }
   filterItems.lastRejected = rejected;   // 供调用方写日志（不静默丢弃，要能解释）
@@ -363,20 +374,56 @@ async function fetchPage(start) {
 /* ==================================================================
  * 四、主流程
  * ================================================================== */
-function readOwnedIds() {
-  // 只取 appid 集合，用于给已在清单里的款打「已在清单」标记。
-  // 文件不存在 / 损坏都只是没有标记，不该让整个雷达失败。
+/* 【2026-10-12 重写】把「已购」和「在清单」拆成两个**语义完全不同**的集合。
+
+   ⚠️ 这一段以前是个隐蔽的 bug，务必读懂再改：
+   旧函数叫 `readOwnedIds()`、日志打「本机清单 N 款」，看起来像在判「买没买过」，
+   但它 DATA_FILE 指向的是 **wishlist.json（愿望单）**，判的其实是「在不在你的愿望单里」。
+   函数注释是准确的，只有函数名和日志在误导 —— 于是「已购但已从愿望单移除的游戏」
+   会被当成好价推给用户，还带「加入清单」按钮。实测漏网 18 款。
+
+   现在两个数据源各管一件事：
+     · owned.json  → alreadyOwned  你**已经买过**（Steam 库里真有）
+     · wishlist.json → inWishlist  你**在清单里**（还没买）
+
+   返回 ok 标志而不是静默降级：owned.json 读不到时把 ownedSet 留空但 ok=false，
+   由 main() 写进产物顶层，页面据此显示警告条。老实说「没读到」，
+   比假装「你什么都没买过」安全得多 —— 后者会让推荐区把 310 条全推出来。 */
+function readExclusionSets() {
+  const res = { ownedSet: new Set(), wishSet: new Set(), ownedOk: false, ownedNote: '' };
+
+  // ① 已购库：读不到是「异常」，必须报出去
   try {
-    if (!fs.existsSync(DATA_FILE)) return new Set();
-    const d = JSON.parse(fs.readFileSync(DATA_FILE, 'utf8'));
-    const gs = Array.isArray(d.games) ? d.games : [];
-    const s = new Set();
-    for (const g of gs) if (g && g.appid) s.add(Number(g.appid));
-    return s;
+    if (!fs.existsSync(OWNED_FILE)) {
+      res.ownedNote = 'owned.json 不存在（CI 还没跑，或 FETCH_OWNED 没开）';
+    } else {
+      const d = JSON.parse(fs.readFileSync(OWNED_FILE, 'utf8'));
+      if (d && d.error) {
+        res.ownedNote = 'owned.json 带错误标记：' + String(d.error);
+      } else if (!Array.isArray(d.games) || !d.games.length) {
+        res.ownedNote = 'owned.json 里一款游戏都没有';
+      } else {
+        for (const g of d.games) if (g && g.appid) res.ownedSet.add(Number(g.appid));
+        res.ownedOk = true;
+      }
+    }
   } catch (e) {
-    warn('读取 wishlist.json 失败（雷达仍会工作，只是不标「已在清单」）：' + (e && e.message));
-    return new Set();
+    res.ownedNote = '读 owned.json 失败：' + (e && e.message);
   }
+  if (!res.ownedOk) warn('⚠ 已购库未就绪（' + res.ownedNote + '）—— 雷达将无法按「已购」过滤，推荐结果可能包含你已买过的游戏');
+
+  // ② 愿望单：读不到只是没法标「已在清单」，不影响推荐本身
+  try {
+    if (fs.existsSync(DATA_FILE)) {
+      const d = JSON.parse(fs.readFileSync(DATA_FILE, 'utf8'));
+      const gs = Array.isArray(d.games) ? d.games : [];
+      for (const g of gs) if (g && g.appid) res.wishSet.add(Number(g.appid));
+    }
+  } catch (e) {
+    warn('读 wishlist.json 失败（雷达仍会工作，只是不标「已在清单」）：' + (e && e.message));
+  }
+
+  return res;
 }
 
 /* 抓 Steam 官方特惠日历，只为了拿 discount_expiration（搜索接口没有这个字段）。 */
@@ -423,8 +470,9 @@ export async function main() {
     return { skipped: true };
   }
 
-  const owned = readOwnedIds();
-  log(`本机清单 ${owned.size} 款（用于标记「已在清单」）`);
+  const ex = readExclusionSets();
+  log(`已购库 ${ex.ownedSet.size} 款（用于标记「已拥有」）`
+    + ` · 你的清单 ${ex.wishSet.size} 款（用于标记「已在清单」）`);
 
   let rows = [];
   let total = 0;
@@ -450,6 +498,7 @@ export async function main() {
       source: 'steam-search-specials', total: 0, items: [],
       error: pagesOk === 0 ? 'STEAM_UNREACHABLE' : 'NO_ROWS_PARSED',
       minDiscount: CFG.minDiscount,
+      ownedOk: ex.ownedOk, ownedNote: ex.ownedNote || null, ownedCount: ex.ownedSet.size,
     });
     return { count: 0, error: true };
   }
@@ -461,14 +510,14 @@ export async function main() {
     if (exp) { r.discountExpiration = exp; merged++; }
   }
 
-  const items = filterItems(rows, CFG, owned);
-  const notInList = items.filter(x => !x.alreadyOwned);
+  const items = filterItems(rows, CFG, ex);
+  const notInList = items.filter(x => !x.inWishlist && !x.alreadyOwned);
 
   const rej = filterItems.lastRejected || { discount: 0, quality: 0, recent: 0 };
   log(`候选 ${rows.length} 条 → 质量门槛后剩 ${items.length} 条`
     + `（折扣不足挡掉 ${rej.discount}、质量不达标挡掉 ${rej.quality}`
     + `${rej.recent ? '、时间不达标挡掉 ' + rej.recent : ''}）`
-    + `；其中 ${notInList.length} 条还不在你清单里`);
+    + `；其中 ${notInList.length} 条既没买过、也不在清单里`);
   log(`特惠日历补到 ${merged} 条折扣截止时间`);
 
   writeOut({
@@ -483,6 +532,13 @@ export async function main() {
     minReviewCount: CFG.minReviewCount,
     rejected: filterItems.lastRejected || null,
     currency: 'CNY',
+    /* 【2026-10-12】已购库状态如实带出来。老实现读不到 owned.json 时
+       静默降级成「什么都没买过」，页面照常显示全部推荐，用户完全看不出异常 ——
+       实测就是这样漏掉了 18 款已购的游戏。现在页面读到 ownedOk:false
+       会显示警告条，明说「推荐未按已购过滤」。 */
+    ownedOk: ex.ownedOk,
+    ownedNote: ex.ownedNote || null,
+    ownedCount: ex.ownedSet.size,
     items,
   });
 

@@ -89,6 +89,17 @@ header.topbar h1 small{color:var(--muted);font-size:12px;font-weight:normal;marg
 .today .t-i.t-green b{color:var(--green-lite);}
 .today .t-i.t-warn b{color:var(--yellow-lite);}
 .today .t-sep{width:1px;height:14px;background:var(--border);}
+/* 【2026-10-12】自动清理横幅。刻意克制：一行、低饱和、可撤销。
+   用黄褐而不是红色 —— 这不是错误，是「系统替你做了个决定」，红得像出了故障。 */
+.oa-banner{display:flex;align-items:center;gap:12px;flex-wrap:wrap;
+  padding:7px 12px;margin:-4px 0 10px;
+  background:rgba(217,164,65,.09);border:1px solid rgba(217,164,65,.30);
+  border-radius:var(--r-md);font-size:12px;color:var(--muted);}
+.oa-banner[hidden]{display:none;}
+.oa-banner b{color:var(--text);font-variant-numeric:tabular-nums;}
+.oa-banner .t-faint{color:var(--faint);}
+.oa-banner .oa-warn{color:var(--yellow-lite);}
+.oa-banner .btn{margin-left:auto;}
 /* 数据为空/未加载时不要显示一排 0 —— 那比不显示更误导 */
 .today:empty{display:none;}
 @media (max-width:720px){
@@ -584,6 +595,16 @@ body.gate-locked .modal{visibility:hidden !important;}
 .radar-status{font-size:var(--fs-sm);color:var(--muted);padding:6px 2px;min-height:22px;}
 .radar-status.err{color:var(--red-lite);}
 .radar-status.ok{color:var(--green-lite);}
+/* 【2026-10-12】已购库未就绪的警告条。刻意做得克制（一行、细字、不遮挡），
+   但绝不能省 —— 静默降级过一次，结果把 18 款已购游戏当好价推给了用户。 */
+.radar-warn{display:flex;align-items:center;gap:10px;flex-wrap:wrap;
+  font-size:var(--fs-sm);color:var(--yellow-lite,#d9a441);
+  background:rgba(217,164,65,.10);border:1px solid rgba(217,164,65,.32);
+  border-radius:3px;padding:7px 10px;margin:6px 0;}
+.radar-warn[hidden]{display:none;}
+.radar-warn b{color:var(--yellow-lite,#d9a441);}
+.radar-warn .btn{margin-left:auto;}
+.radar-inlist.owned{color:var(--green-lite);}
 /* ---- 卡片网格 ---- */
 .radar-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:10px;}
 .radar-card{background:var(--bg3);border:1px solid var(--border);border-radius:var(--r-lg);
@@ -703,6 +724,739 @@ body.gate-locked .modal{visibility:hidden !important;}
 
 /* ---- 隐私访问门（密码锁） ---- */
 /* 初始状态整页遮住，未通过验证前看不到任何数据；脚本可用时才由 JS 决定是否解锁 */
+
+/* ============================================================
+ * 【2026-10-11 全面升级 · 第一批】移动端适配
+ * ------------------------------------------------------------
+ * 现状：断点只有 720 / 520 两档，560~720（平板竖屏、小屏笔记本）
+ *       这段完全没管，16 列表格挤在中间宽度里左右乱撞。
+ * 做法：补 560 / 420 两档，**只追加不改动** —— 追加式写法零冲突，
+ *       出问题删掉整块就回退，不影响任何既有行为。
+ * 纪律：不动行高 JS（rowsH 按 rowH 常量算），表格变紧凑不会
+ *       破坏「一屏至少 10 行」那条硬下限 —— 只会让行更多。
+ * ============================================================ */
+@media (max-width:560px){
+  /* 16 列在手机上必然横向滚动（.xscroll-body 已有 overflow:auto），
+     所以目标不是「塞下」，而是让滚动时的信息密度更高、行更省力。 */
+  thead th{padding:6px 6px;font-size:11.5px;}
+  tbody td{padding:4px 6px;font-size:12px;}
+  thead th:nth-child(2),tbody td:nth-child(2){min-width:118px;}   /* 游戏名 */
+  thead th:nth-child(3),tbody td:nth-child(3){min-width:60px;}    /* AppID */
+  thead th:nth-child(14),tbody td:nth-child(14){min-width:74px;}  /* 类别 */
+  thead th:nth-child(15),tbody td:nth-child(15){min-width:90px;}  /* DLC建议 */
+  thead th:nth-child(16),tbody td:nth-child(16){min-width:82px;}  /* 操作 */
+  .gname .en{font-size:10px;line-height:1.2;}
+  /* 工具区控件在窄屏会挤成豆腐块，改成两列满宽 */
+  .tb-sub{flex-wrap:wrap;}
+  .tb-sub>*{flex:1 1 46%;min-width:0;}
+  /* 统计卡 12 张：窄屏两列，别让它挤成一条 */
+  .stats-grid{grid-template-columns:repeat(2,minmax(0,1fr));}
+}
+@media (max-width:420px){
+  tbody td{padding:3px 5px;font-size:11.5px;}
+  thead th{padding:5px 5px;font-size:11px;}
+  /* 最窄屏隐藏英文名，只留中文名 —— 只影响显示，不动数据、不动列数 */
+  .gname .en{display:none;}
+  .tb-sub>*{flex:1 1 100%;}
+}
+/* ===== 第一批结束 ===== */
+
+/* ============================================================
+ * 【2026-10-12】移动端独立 UI：表格 → 卡片流
+ * ------------------------------------------------------------
+ * 为什么必须是「另一版」而不是缩小版：
+ *   这张表有 16 列。窄屏里塞不下，于是只能横向拖 —— 实测 820px 平板上
+ *   容器 786px、内容 1448px，手机上更甚。在手机上用手指横拖一张 16 列的表，
+ *   既看不清当前在哪一列，也没法比较两行的价格。
+ *   触屏的交互模型和鼠标完全不同：纵向滚动 + 点按，而不是横向平移 + 悬停。
+ *
+ * 所以 720px 以下换成真正的卡片：每个游戏一张卡，价格/折扣用大字号，
+ * 次要字段收成小标签，操作按钮做成整行可点的底部条。
+ * 这不是「响应式缩放」，是换一套信息层级。
+ *
+ * 纪律（必须守住）：
+ *   ① 桌面端一行 CSS 都没动 —— 表格路径、16 列、排序、筛选语义全部照旧。
+ *   ② 纯 CSS 转换，靠 tagCellsWithHeader() 写在 td 上的 data-label 自报家门，
+ *      不新建 DOM、不改事件绑定 —— 点了还是原来那个处理函数。
+ *   ③ thead 隐藏但**数据不丢**：排序仍可用（点卡片头部切），
+ *      列名改一处两版自动同步（data-label 从 thead 现读）。
+ * ============================================================ */
+@media (max-width:720px){
+  /* 卡片容器：不再横向滚动 */
+  .table-wrap.has-xscroll > .xscroll-body{
+    overflow-x:visible;overflow-y:auto;
+    max-height:none;                /* 手机上让整页滚，卡片区不设内滚动 */
+    -webkit-overflow-scrolling:auto;
+  }
+  .table-wrap.has-xscroll{overflow:visible;}
+
+  /* 表格语义在卡片里全部失效：table/thead/tr/td 退化成块级流 */
+  .table-wrap table,
+  .table-wrap tbody,
+  .table-wrap tbody tr,
+  .table-wrap tbody td{display:block;width:auto;}
+  .table-wrap thead{display:none;}     /* 列名改由每格的 data-label 承担 */
+
+  /* ---- 单个游戏 = 一张卡 ---- */
+  #tbody tr{
+    background:var(--bg2);
+    border:1px solid var(--border);
+    border-radius:var(--r-md);
+    margin:0 8px 10px;
+    padding:11px 12px 9px;
+    position:relative;
+  }
+  #tbody tr.sel-row{              /* 勾选态：整卡高亮，不用去找小方框 */
+    border-color:var(--accent);
+    background:var(--bg3);
+  }
+  #tbody tr:hover{background:var(--bg2);}   /* 触摸设备没有 hover，别让闪 */
+
+  /* 触摸目标不小于 44px（移动端可点区域的硬下限） */
+  #tbody td{padding:0;font-size:13px;border:none;text-align:left !important;min-width:0 !important;}
+
+  /* 游戏名：卡片标题 */
+  #tbody td:nth-child(2){
+    font-size:15px;font-weight:700;line-height:1.35;
+    color:var(--text);margin-bottom:2px;padding-right:74px;
+  }
+  #tbody td:nth-child(2) .en{font-size:11px;font-weight:400;color:var(--faint);
+    display:block;line-height:1.3;margin-top:1px;}
+  #tbody td:nth-child(2) .gname{pointer-events:auto;}
+
+  /* 勾选框：挪到右上角，做成整卡可点的大方块 */
+  #tbody td:nth-child(1){position:absolute;top:10px;right:10px;width:auto;padding:0;z-index:3;}
+  #tbody td:nth-child(1) input{width:22px;height:22px;cursor:pointer;}
+
+  /* 当前价 + 折扣：卡片的视觉重心，用大字号右对齐堆在一起 */
+  #tbody td:nth-child(6){
+    font-size:21px;font-weight:700;color:var(--text);
+    font-variant-numeric:tabular-nums;
+    margin:5px 0 1px;
+  }
+  #tbody td:nth-child(6) .price-current{font-size:21px;}
+  #tbody td:nth-child(6) .badge-disc{
+    display:inline-block;margin-left:7px;vertical-align:3px;font-size:12px;
+  }
+  #tbody td:nth-child(6)::before{
+    content:'当前 ' attr(data-label);
+    font-size:10.5px;color:var(--faint);font-weight:600;
+    margin-right:6px;vertical-align:2px;
+  }
+
+  /* 史低：第二重要，紧跟现价 */
+  #tbody td:nth-child(8){
+    font-size:12.5px;color:var(--green-lite);
+    font-variant-numeric:tabular-nums;margin-bottom:4px;
+  }
+  /* 促销 / 截止：重要时高亮 */
+  #tbody td:nth-child(7){font-size:12px;margin-bottom:3px;}
+  #tbody td:nth-child(7) .low-pending{color:var(--faint);}
+
+  /* 次要字段：收成一行「标签：值」的小标签串，不再占一行 */
+  #tbody td:nth-child(3),#tbody td:nth-child(4),#tbody td:nth-child(5),
+  #tbody td:nth-child(9),#tbody td:nth-child(10),#tbody td:nth-child(11),
+  #tbody td:nth-child(12),#tbody td:nth-child(13),#tbody td:nth-child(14),
+  #tbody td:nth-child(15){
+    display:inline-block;width:auto;margin:0 6px 4px 0;
+    padding:2px 7px;border-radius:var(--r-chip);
+    background:var(--bg3);border:1px solid var(--border);
+    font-size:11px;line-height:1.5;color:var(--muted);
+  }
+  /* 标签里用列名前缀，别让 879 悬在那里不知是什么 */
+  #tbody td:nth-child(n+3):nth-child(-n+15)::before{
+    content:attr(data-label) ' ';
+    color:var(--faint);font-size:10px;
+  }
+  /* 数值型的小标签要能横向比较，用等宽数字 */
+  #tbody td:nth-child(4),#tbody td:nth-child(5),#tbody td:nth-child(9),
+  #tbody td:nth-child(10),#tbody td:nth-child(11){
+    font-variant-numeric:tabular-nums;
+  }
+  /* 这几个字段为空时不占位 */
+  #tbody td:nth-child(9):empty, #tbody td:nth-child(10):empty,
+  #tbody td:nth-child(11):empty, #tbody td:nth-child(13):empty,
+  #tbody td:nth-child(14):empty, #tbody td:nth-child(15):empty{display:none;}
+
+  /* 操作列：整行底部一条，按钮铺开，手指好点 */
+  #tbody td:nth-child(16){
+    display:flex;gap:6px;flex-wrap:wrap;
+    margin-top:8px;padding-top:8px;
+    border-top:1px solid var(--border);
+  }
+  #tbody td:nth-child(16) .btn{
+    flex:1 1 auto;min-width:64px;min-height:36px;
+    display:inline-flex;align-items:center;justify-content:center;
+  }
+  /* 操作列不要「列名」前缀 */
+  #tbody td:nth-child(16)::before{content:none;}
+
+  /* 「显示更多」那条不是游戏卡片，给它正常块样式 */
+  #tbody tr.more-row{
+    background:none;border:none;margin:6px 8px;padding:0;
+  }
+  #tbody tr.more-row td{padding:0 !important;}
+  #tbody tr.more-row td::before{content:none !important;}
+  #tbody tr.more-row .btn{min-height:40px;}
+
+  /* 空态提示在卡片流里是全宽的 */
+  #tbody tr td[colspan]{padding:22px 12px !important;text-align:center !important;}
+  #tbody tr td[colspan]::before{content:none !important;}
+
+  /* 分组标题（开启系列归并时）跟着变窄 */
+  .group-row td{font-size:12.5px;padding:6px 8px;margin:4px 8px;}
+}
+
+/* ---- 平板 / 触控大屏：同样不该横拖 16 列 ----
+   断点定在 960px：实测 820px 下容器 786px、内容 1448px，必须横拖。
+   这类设备是「有触摸但屏幕大」，鼠标悬停体验用不上，横拖同样别扭，
+   所以和手机共用卡片流，只是留白更宽一些。 */
+@media (max-width:960px) and (min-width:721px){
+  .table-wrap.has-xscroll > .xscroll-body{overflow-x:visible;overflow-y:auto;max-height:none;}
+  .table-wrap.has-xscroll{overflow:visible;}
+  .table-wrap table,.table-wrap tbody,.table-wrap tbody tr,.table-wrap tbody td{display:block;width:auto;}
+  .table-wrap thead{display:none;}
+  #tbody tr{
+    background:var(--bg2);border:1px solid var(--border);border-radius:var(--r-md);
+    margin:0 14px 11px;padding:12px 14px 10px;position:relative;
+  }
+  #tbody tr:hover{background:var(--bg2);}
+  #tbody tr.sel-row{border-color:var(--accent);background:var(--bg3);}
+  #tbody td{padding:0;font-size:13.5px;border:none;text-align:left !important;min-width:0 !important;}
+  #tbody td:nth-child(2){font-size:16px;font-weight:700;color:var(--text);padding-right:84px;}
+  #tbody td:nth-child(2) .en{display:block;font-size:11.5px;font-weight:400;color:var(--faint);}
+  #tbody td:nth-child(1){position:absolute;top:11px;right:12px;width:auto;z-index:3;}
+  #tbody td:nth-child(1) input{width:22px;height:22px;cursor:pointer;}
+  #tbody td:nth-child(6){font-size:22px;font-weight:700;color:var(--text);
+    font-variant-numeric:tabular-nums;margin:6px 0 2px;}
+  #tbody td:nth-child(6) .price-current{font-size:22px;}
+  #tbody td:nth-child(6)::before{content:'当前 ' attr(data-label);
+    font-size:11px;color:var(--faint);font-weight:600;margin-right:6px;vertical-align:2px;}
+  #tbody td:nth-child(8){font-size:13px;color:var(--green-lite);font-variant-numeric:tabular-nums;margin-bottom:5px;}
+  #tbody td:nth-child(7){font-size:12.5px;margin-bottom:4px;}
+  #tbody td:nth-child(n+3):nth-child(-n+15){
+    display:inline-block;width:auto;margin:0 7px 5px 0;padding:3px 8px;
+    border-radius:var(--r-chip);background:var(--bg3);border:1px solid var(--border);
+    font-size:11.5px;line-height:1.5;color:var(--muted);
+  }
+  #tbody td:nth-child(n+3):nth-child(-n+15)::before{
+    content:attr(data-label) ' ';color:var(--faint);font-size:10.5px;
+  }
+  #tbody td:nth-child(9):empty,#tbody td:nth-child(10):empty,
+  #tbody td:nth-child(11):empty,#tbody td:nth-child(13):empty,
+  #tbody td:nth-child(14):empty,#tbody td:nth-child(15):empty{display:none;}
+  #tbody td:nth-child(16){display:flex;gap:7px;flex-wrap:wrap;
+    margin-top:9px;padding-top:9px;border-top:1px solid var(--border);}
+  #tbody td:nth-child(16) .btn{flex:1 1 auto;min-width:68px;min-height:38px;
+    display:inline-flex;align-items:center;justify-content:center;}
+  #tbody td:nth-child(16)::before{content:none;}
+  #tbody tr.more-row{background:none;border:none;margin:8px 14px;padding:0;}
+  #tbody tr.more-row td{padding:0 !important;}
+  #tbody tr.more-row td::before{content:none !important;}
+  #tbody tr td[colspan]{padding:26px 14px !important;text-align:center !important;}
+  #tbody tr td[colspan]::before{content:none !important;}
+  .group-row td{font-size:13px;padding:7px 12px;margin:5px 14px;}
+}
+
+/* ============================================================
+ * 【2026-10-11 全面升级 · 第二批/第三批】卡片视图 + Backlog 状态
+ * ------------------------------------------------------------
+ * 设计纪律：
+ *  · 表格路径一行未改 —— 16 列、10 行下限、筛选语义全部照旧，
+ *    所以现有 600+ 条断言不受任何影响；卡片是**旁路**，随时可切回。
+ *  · 圆角/颜色一律走既有令牌（--r-md / --border / --accent …），
+ *    不新增硬编码色 —— 这正是第二批要收敛的方向。
+ * ============================================================ */
+
+/* ---- 视图切换 ---- */
+.view-toggle{display:inline-flex;margin-left:8px;vertical-align:middle;}
+.vt-btn{background:var(--bg2);border:1px solid var(--border);color:var(--muted);
+  padding:5px 12px;font-size:12.5px;cursor:pointer;font-family:inherit;}
+.vt-btn:first-child{border-radius:var(--r-sm) 0 0 var(--r-sm);}
+.vt-btn:last-child{border-radius:0 var(--r-sm) var(--r-sm) 0;border-left:none;}
+.vt-btn:hover{color:var(--text);}
+.vt-btn.on{color:var(--text);background:var(--bg3);border-color:var(--accent-dim);}
+
+/* ---- 卡片网格 ---- */
+.card-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(232px,1fr));
+  gap:10px;padding:10px 2px;}
+.card-empty{grid-column:1/-1;padding:40px 10px;text-align:center;color:var(--muted);font-size:13px;}
+.gcard{background:var(--bg2);border:1px solid var(--border);border-radius:var(--r-md);
+  padding:12px 13px 11px;cursor:pointer;position:relative;
+  transition:border-color .12s ease,background .12s ease;}
+.gcard:hover{border-color:var(--accent-dim);background:var(--bg3);}
+.gcard.on-sale{border-left:3px solid var(--accent);padding-left:11px;}
+.gcard.playing{border-left:3px solid var(--green);padding-left:11px;}
+.gcard.done{opacity:.62;}
+.gc-top{display:flex;justify-content:space-between;align-items:center;
+  gap:8px;min-height:21px;margin-bottom:7px;}
+.gc-off{font-size:12px;font-weight:700;color:var(--accent);
+  font-variant-numeric:tabular-nums;flex:0 0 auto;}
+.gc-title{font-size:14px;font-weight:600;color:var(--text);line-height:1.35;margin:0 0 8px;
+  display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;}
+.gc-price{display:flex;align-items:baseline;gap:7px;font-variant-numeric:tabular-nums;}
+.gc-price s{font-size:12px;color:var(--faint);text-decoration:line-through;}
+.gc-price b{font-size:15.5px;color:var(--accent);font-weight:700;}
+.gc-price .gc-none{color:var(--faint);font-size:13px;}
+.gc-meta{margin-top:8px;display:flex;flex-wrap:wrap;gap:4px 10px;font-size:11.5px;color:var(--muted);}
+.gc-meta i{font-style:normal;color:var(--text-2);}
+.gc-end{margin-top:6px;font-size:11.5px;color:var(--muted);display:flex;align-items:center;gap:5px;}
+.gc-end.urgent{color:var(--orange-lite);}
+.gc-target{margin-top:4px;font-size:11px;color:var(--green-lite);}
+.gc-tag{position:absolute;right:10px;bottom:9px;font-size:10.5px;color:var(--faint);}
+
+/* ---- Backlog 状态徽章 ---- */
+.bd-badge{display:inline-block;font-size:11px;line-height:1.5;padding:1px 8px;
+  border-radius:var(--r-sm);cursor:pointer;user-select:none;
+  border:1px solid transparent;font-family:inherit;}
+.bd-badge:hover{filter:brightness(1.18);}
+.bd-want{color:var(--blue-lite);background:var(--accent-wash);border-color:var(--accent-dim);}
+.bd-playing{color:var(--green-lite);background:var(--green-bg);border-color:var(--green-line);}
+.bd-done{color:var(--faint);background:var(--bg3);border-color:var(--border-2);}
+.bd-shelved{color:var(--orange-lite);background:var(--orange-bg);border-color:var(--orange);}
+.bd-badge.bd-want{color:var(--blue-lite);}
+
+/* ---- 窄屏：卡片单列更耐看 ---- */
+@media (max-width:560px){
+  .card-grid{grid-template-columns:1fr;gap:8px;}
+  .view-toggle{margin-left:0;margin-top:6px;}
+  .vt-btn{flex:1 1 auto;text-align:center;}
+}
+
+/* ==== 【2026-10-11 第四批】隐私门：把「免密钥」从角落里的小字提到台面上 ====
+   痛点（用户原话）：「每次启动移动端上那个浮窗太麻烦了，隔着我」。
+   诊断：功能一直都有（gateOwnerLink），但它是页脚一行 11px 的小字链接，
+   夹在三行说明文字中间，视觉上根本不像按钮 —— 于是每次都要重新输密钥。
+   改法：**不删锁屏**（那是安全红线），只把它变显眼 + 说明收紧。
+   ★ id 与标签都没动（仍是 <a id="gateOwnerLink">），JS 行为零风险。 */
+.g-owner-btn{display:block;width:100%;margin-top:10px;padding:11px 14px;
+  text-align:center;font-size:13.5px;font-weight:600;line-height:1.5;
+  color:var(--blue-lite);background:var(--accent-wash);
+  border:1px solid var(--accent-dim);border-radius:var(--r-md);
+  text-decoration:none;cursor:pointer;transition:background .12s,border-color .12s;}
+.g-owner-btn:hover{background:var(--accent-wash2);border-color:var(--accent);color:var(--text);}
+.gate-foot-x{margin-top:10px;font-size:11px;}
+@media (max-width:560px){
+  /* 手机上锁屏卡片瘦身：少一层滚动、按钮更够按 */
+  .gate-card{padding:20px 16px;border-radius:var(--r-md);}
+  .gate-card .g-lock{font-size:34px;}
+  .gate-card h2{font-size:17px;margin:6px 0 4px;}
+  .gate-card .g-tip{font-size:12.5px;margin-bottom:14px;}
+  .g-owner-btn{padding:13px 14px;font-size:14px;}
+  #gateBtn{padding:12px 14px;font-size:15px;}
+}
+
+/* ============================================================
+ * 【2026-10-11 第六批】排版重整 —— 让它看起来像一份文档，不像一堆控件
+ * ------------------------------------------------------------
+ * 诊断（不是凭感觉，是数出来的）：
+ *   · 全站 60 处手写 margin，值散在 10/8/6/4/12/3/14/2 —— **没有节奏系统**，
+ *     每个元素各写各的，所以怎么调都像「堆」出来的。这就是「乱」的真正来源。
+ *   · 三个一级区块（数据概览 / 添加游戏 / 筛选与工具）视觉权重完全相同，
+ *     用户看不出主次，也看不出哪里能展开、哪里能操作。
+ *   · border-radius 散落 61 处，卡片/控件/徽章三种圆角混用。
+ * 手段：**纯 CSS，一行 HTML / 一行 JS 都不动**。
+ *   ① 建立 4 档间距节奏，后续所有间距都走变量
+ *   ② 给区块标题真正的「章节感」：更大、更亮、下边距足、展开态与内容连成一张纸
+ *   ③ 内容块统一成一张纸（统一圆角 / 边框 / 内边距），不再是一堆小方块
+ *   ④ 表格斑马纹压到几乎不可见，悬停才亮 —— 横向扫 16 列时噪音最小
+ * ============================================================ */
+:root{
+  --sp-1:4px;  --sp-2:9px;  --sp-3:16px;  --sp-4:26px;
+  --r-card:9px; --r-ctl:6px;  --r-chip:3px;
+}
+
+/* ① 三个一级区块：统一节奏，之间留出真正的呼吸 */
+.tb-sec, .stats-sec{ margin-bottom:var(--sp-4); }
+
+/* ② 区块标题 = 章节标题。展开态下边框与内容连成一张纸 */
+.tb-sec > .tb-head, .stats-sec > .tb-head{
+  font-size:13.5px; font-weight:700; color:var(--text);
+  letter-spacing:.03em; padding:12px 15px; margin:0;
+  border-radius:var(--r-card) var(--r-card) 0 0;
+  transition:color .12s ease;
+}
+.tb-sec > .tb-head:hover, .stats-sec > .tb-head:hover{ color:var(--accent); }
+.tb-sec.open > .tb-head, .stats-sec.open > .tb-head{
+  border:1px solid var(--border); border-bottom:none;
+  background:var(--bg2);
+}
+
+/* ③ 内容块：一张纸。收起态不露白底 */
+.tb-sec .tb-wrap, .stats-sec .tb-wrap{
+  border:1px solid var(--border); border-top:none;
+  border-radius:0 0 var(--r-card) var(--r-card);
+  background:var(--bg2); padding:var(--sp-3);
+}
+.tb-sec:not(.open) > .tb-wrap{ display:none; }
+.tb-sec:not(.open) > .tb-head{
+  border:1px solid var(--border);
+  border-radius:var(--r-card);
+}
+
+/* 工具区内部：控件槽宽统一，不再东一个宽一个窄 */
+.tb-sub{ gap:var(--sp-2); }
+.tb-sub > *{ min-width:0; }
+
+/* ④ 表格：斑马纹几乎不可见，悬停才亮；表头更像表头 */
+thead th{ background:var(--bg3); color:var(--text-2); font-weight:600; letter-spacing:.02em; }
+tbody tr:nth-child(even){ background:rgba(255,255,255,.014); }
+tbody tr:hover{ background:var(--accent-wash); }
+tbody td{ border-bottom:1px solid rgba(255,255,255,.045); }
+
+/* 卡片网格：与上面的节奏对齐 */
+.card-grid{ gap:var(--sp-2); padding:var(--sp-2) 0; }
+.gcard{ border-radius:var(--r-card); }
+
+/* 徽章 / 小控件收口 */
+.bd-badge{ border-radius:var(--r-chip); }
+
+/* 窄屏：节奏整体收紧一档，不然一屏放不下 */
+@media (max-width:560px){
+  .tb-sec, .stats-sec{ margin-bottom:var(--sp-3); }
+  .tb-sec > .tb-head, .stats-sec > .tb-head{ padding:10px 12px; font-size:13px; }
+  .tb-sec .tb-wrap, .stats-sec .tb-wrap{ padding:var(--sp-2); }
+}
+
+/* ============================================================
+ * 【2026-10-11 · 手机端重构】按「拇指可达」重新设计，不是把桌面页缩窄
+ * ------------------------------------------------------------
+ * 症结（用户原话：「每次用哪个功能都要找半天」）：
+ *   桌面版是「从上到下的长页面」—— 概览 / 添加 / 筛选 / 表格 依次排下来。
+ *   拿到手机上就变成：滚动 → 找区块 → 点开 → 在 17 个控件里翻。
+ *   这是桌面布局硬塞进窄屏的必然结果，调色调圆角救不了。
+ *
+ * 解法（移动端第一原则：拇指够得到的地方放最高频操作）：
+ *   ① 底部固定导航 5 项：清单 / 特价 / 已购 / 筛选 / 添加
+ *   ② 首屏只留：今日概览 + 清单。添加与筛选收进抽屉，按需上滑。
+ *   ③ 手机上默认「卡片视图」—— 16 列表格横滚在窄屏根本没法读。
+ *   ④ 桌面端（>720px）**完全不受影响**：这些规则全在 @media 里。
+ * ============================================================ */
+.mnav, .mdrawer, .mdrawer-backdrop{ display:none; }   /* 桌面永远不显示 */
+
+@media (max-width:720px){
+  .mnav{
+    display:flex; position:fixed; left:0; right:0; bottom:0; z-index:130;
+    background:var(--bg2); border-top:1px solid var(--border);
+    padding-bottom:env(safe-area-inset-bottom,0px);
+    box-shadow:0 -4px 18px rgba(0,0,0,.35);
+  }
+  .mnav-btn{
+    flex:1 1 0; min-width:0; background:none; border:none; cursor:pointer;
+    padding:7px 2px 6px; color:var(--muted); font-family:inherit;
+    display:flex; flex-direction:column; align-items:center; gap:2px;
+    font-size:10.5px; line-height:1.2;
+  }
+  .mnav-btn i{ font-style:normal; font-size:19px; line-height:1; }
+  .mnav-btn.on{ color:var(--accent); }
+  .mnav-btn:active{ opacity:.6; }
+
+  .mdrawer-backdrop{
+    display:block; position:fixed; inset:0; z-index:140;
+    background:rgba(5,10,18,.62); opacity:0; pointer-events:none;
+    transition:opacity .18s ease;
+  }
+  .mdrawer-backdrop.on{ opacity:1; pointer-events:auto; }
+  .mdrawer{
+    display:block; position:fixed; z-index:141; left:0; right:0; bottom:0;
+    max-height:82vh; overflow-y:auto; -webkit-overflow-scrolling:touch;
+    background:var(--bg2); border-top:1px solid var(--border);
+    border-radius:14px 14px 0 0; padding:14px 14px 18px;
+    padding-bottom:calc(18px + env(safe-area-inset-bottom,0px));
+    transform:translateY(102%); transition:transform .2s cubic-bezier(.2,.7,.3,1);
+    box-shadow:0 -8px 30px rgba(0,0,0,.5);
+  }
+  .mdrawer.on{ transform:translateY(0); }
+  .mdrawer-head{
+    display:flex; align-items:center; justify-content:space-between;
+    margin-bottom:12px; font-size:15px; font-weight:700; color:var(--text);
+  }
+  .mdrawer-head button{
+    background:none; border:none; color:var(--muted); font-size:22px;
+    cursor:pointer; line-height:1; padding:0 6px; font-family:inherit;
+  }
+  .mdrawer .tb-sec, .mdrawer .stats-sec{ margin-bottom:0; }
+  .mdrawer .tb-sec > .tb-head{ display:none; }
+  .mdrawer .tb-sec .tb-wrap{ border:none; padding:0; background:none; border-radius:0; }
+
+  body.mnav-on .wrap{ padding-bottom:calc(76px + env(safe-area-inset-bottom,0px)); }
+}
+
+/* ============================================================
+ * 【2026-10-11 · 第七批】封面墙 —— 让它像应用，而不是像表格
+ * ------------------------------------------------------------
+ * 对标对象（真去看了 Backloggd / Letterboxd / IGN Playlist 的界面逻辑）：
+ *   ① **封面主导**：这三家的游戏库打开就是**海报墙**，人靠封面认游戏，
+ *      不是靠一行文字。Steam 的竖版海报是公开 CDN（akamai.steamstatic.com），
+ *      按 appid 拼 URL 即可，不用额外数据源。
+ *   ② **顶部分段**：Backloggd 把整个库切成 Played / Playing / Backlog / Wishlist
+ *      四个 tab，点一下直接筛 —— 比在下拉框里找快一个数量级。
+ *   ③ **列表/网格切换 + 无限滚动**：它们把浏览当成"逛"，不是"查表"。
+ * 这次补 ①②，③的无限滚动留到下一批。
+ * ============================================================ */
+
+/* ---- 顶部状态分段（贴在卡片区上沿，横向可滑，不换行）---- */
+.mseg{
+  display:none;
+}
+@media (max-width:720px){
+  .mseg{
+    display:flex; gap:7px; overflow-x:auto; -webkit-overflow-scrolling:touch;
+    padding:9px 2px 11px; margin:0 0 2px;
+    scrollbar-width:none;
+  }
+  .mseg::-webkit-scrollbar{ display:none; }
+  .mseg button{
+    flex:0 0 auto; white-space:nowrap;
+    background:var(--bg2); border:1px solid var(--border); color:var(--muted);
+    padding:7px 14px; border-radius:999px; font-size:12.5px;
+    cursor:pointer; font-family:inherit; transition:all .12s ease;
+  }
+  .mseg button.on{ background:var(--accent); border-color:var(--accent); color:#08121c; font-weight:600; }
+  .mseg button i{ font-style:normal; opacity:.75; margin-right:4px; }
+}
+
+/* ---- 封面墙：2 列海报，覆盖在上、信息在下 ---- */
+@media (max-width:720px){
+  .card-grid{ grid-template-columns:repeat(2,minmax(0,1fr)); gap:10px; }
+}
+.gcard{ overflow:hidden; padding:0; display:flex; flex-direction:column; }
+.gcover{
+  position:relative; width:100%; aspect-ratio:3/4; background:var(--bg3);
+  overflow:hidden;
+}
+.gcover img{ width:100%; height:100%; object-fit:cover; display:block; }
+.gcover.noart{
+  display:flex; align-items:center; justify-content:center;
+  color:var(--faint); font-size:26px;
+}
+.gcover .gc-off{
+  position:absolute; left:6px; top:6px; padding:2px 7px; border-radius:var(--r-chip);
+  background:var(--accent); color:#08121c; font-size:11.5px; font-weight:700;
+  font-variant-numeric:tabular-nums;
+}
+.gcover .gc-end{
+  position:absolute; left:0; right:0; bottom:0; margin:0;
+  padding:9px 7px 5px; font-size:10.5px; color:#e6eef6;
+  background:linear-gradient(180deg,rgba(0,0,0,0),rgba(0,0,0,.78));
+  display:flex; align-items:center; gap:4px;
+}
+.gcover .gc-end.urgent{ color:#ffd08a; }
+.gcover .bd-badge{ position:absolute; right:6px; top:6px; }
+.gbody{ padding:8px 9px 10px; display:flex; flex-direction:column; gap:4px; flex:1; }
+.gc-title{
+  margin:0; font-size:13px; line-height:1.35; color:var(--text); font-weight:600;
+  display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden;
+}
+.gc-price{ display:flex; align-items:baseline; gap:6px; font-variant-numeric:tabular-nums; }
+.gc-price s{ font-size:11px; color:var(--faint); text-decoration:line-through; }
+.gc-price b{ font-size:14.5px; color:var(--accent); font-weight:700; }
+.gc-price .gc-none{ color:var(--faint); font-size:12px; }
+.gc-meta{ font-size:11px; color:var(--muted); display:flex; gap:9px; flex-wrap:wrap; }
+.gc-meta i{ font-style:normal; color:var(--text-2); }
+.gc-target{ font-size:11px; color:var(--green-lite); }
+/* 桌面端封面卡片同样受益，但保持 4 列、稍大 */
+@media (min-width:721px){
+  .card-grid{ grid-template-columns:repeat(auto-fill,minmax(168px,1fr)); }
+}
+
+/* ============================================================
+ * 【2026-10-12】移动端独立 UI：竖版海报卡 → 横版列表卡
+ * ------------------------------------------------------------
+ * 截图看出来的真问题（不是量出来的）：
+ *   手机上卡片是竖版海报 —— 174px 宽 × 304px 高，一屏只看 2 款，
+ *   标题被挤到「黑神话：…」这样断字，价格反倒不是最醒目的。
+ *   竖版海报适合「浏览」（Steam 首页那种推荐流），不适合「查清单」——
+ *   清单是拿来对比价格和史低的，纵向滚动效率极低。
+ *
+ * 改成横版：小封面在左，信息在右，一屏能看 4～5 款，
+ * 标题一行不折，价格是全卡最大的字。
+ *
+ * 桌面端一行未动（下面全部包在 max-width:720px 里）。
+ * ============================================================ */
+
+/* 折扣徽章：桌面端只显示封面上那个，标题行里的窄屏版要藏起来。
+   漏了这条规则，桌面上每张卡会出现两个「-50%」。 */
+.gc-off-inline{display:none;}
+
+/* 精选区（「今天值得看」）在手机上必须和下面的全部列表同一版式。
+   它复用同一套 cardHtml，只是多一个 .gtag 角标 —— 不加这条的话，
+   手机首屏会出现「上面竖版、下面横版」两套割裂的视觉。 */
+@media (max-width:720px){
+  .worthy-grid{
+    grid-template-columns:1fr !important;   /* 与下面全部卡片同一版式，不能两套视觉 */
+    gap:8px !important;
+    padding:0 10px;
+  }
+  /* 精选区多一个 .gtag（史低/近史低/高性价比），横版下它原来绝对定位会盖住标题 */
+  .worthy-grid .gtag{
+    position:static !important;
+    order:6;margin-top:3px;
+    align-self:flex-start;
+  }
+}
+
+/* ============================================================
+ * 【2026-10-12】移动端独立 UI：竖版海报卡 → 横版列表卡
+ *
+ * 截图看出来的真问题（不是量出来的）：
+ *   手机上卡片是竖版海报 —— 174px 宽 × 304px 高，一屏只看 2 款，
+ *   标题被挤成「黑神话：…」这样断字，价格反倒不是最醒目的。
+ *   竖版海报适合「浏览」（Steam 首页那种推荐流），不适合「查清单」——
+ *   清单是拿来对比价格和史低的，纵向滚动效率极低。
+ *
+ * 改成横版：小封面在左，信息在右，一屏能看 4～5 款，
+ * 标题一行不折，价格是全卡最大的字。
+ *
+ * ⚠️ 这一整块必须完整包在 @media 里。写漏一个括号，浏览器会从那一行起
+ *    静默丢弃后续全部规则（不报错、页面照常显示）——
+ *    更糟的是漏掉的是「闭合括号」时，里面的规则会跑到全局，
+ *    把桌面端的卡片也变成横版。上线前务必核「括号配平 + 桌面端未被污染」。
+ *
+ * 桌面端一行未动。
+ * ============================================================ */
+@media (max-width:720px){
+  /* 单列：横版卡不需要靠列数省空间，列数一多标题就得断字 */
+  .card-grid{grid-template-columns:1fr !important;gap:8px !important;padding:8px 10px !important;}
+
+  /* 卡内改横排：封面固定在左侧，正文占右侧 */
+  .gcard{
+    flex-direction:row !important;
+    align-items:stretch;
+    min-height:86px;
+    overflow:hidden;
+    border-radius:var(--r-md);
+  }
+  /* 竖版海报 → 小方图 */
+  .gcover{
+    width:82px !important;flex:0 0 82px !important;
+    aspect-ratio:auto !important;height:auto !important;align-self:stretch;
+    min-height:86px;
+  }
+  .gcover img{object-position:center;}
+  .gcover .gc-off{left:4px;top:4px;font-size:10.5px;padding:1px 5px;}
+  .gcover .gc-end{
+    padding:5px 4px 3px;font-size:9.5px;line-height:1.25;
+    /* 海报上「X 小时后结束」在 82px 宽里读不清，压成一行省略 */
+    white-space:nowrap;overflow:hidden;text-overflow:ellipsis;display:block;
+  }
+  .gcover .bd-badge{right:4px;top:4px;}
+  .gcover.noart{font-size:19px;}
+
+  /* 正文区：单列铺开，标题不折行 */
+  .gbody{
+    padding:9px 11px 10px !important;
+    gap:3px !important;flex:1 1 auto;min-width:0;
+    display:flex;flex-direction:column;
+  }
+  /* 标题：占一行，溢出省略（两行标题会把卡片撑高，破坏「一屏多款」） */
+  .gbody .gc-title{
+    -webkit-line-clamp:1 !important;
+    white-space:nowrap;overflow:hidden;text-overflow:ellipsis;
+    font-size:14.5px !important;line-height:1.3 !important;margin:0 !important;
+    font-weight:600;
+    display:flex !important;align-items:baseline;gap:5px;
+  }
+  /* 窄屏专用的折扣徽章：跟在标题前，是「这家在打折」的即时信号 */
+  .gbody .gc-off-inline{
+    display:inline-block !important;flex:0 0 auto;
+    padding:1px 5px;border-radius:var(--r-chip);
+    background:var(--accent);color:#08121c;
+    font-size:10.5px;font-weight:700;font-variant-numeric:tabular-nums;
+    letter-spacing:-.2px;
+  }
+  /* 价格是清单里最该被看到的东西：给全卡最大的字号 */
+  .gbody .gc-price{order:2;margin-top:1px !important;}
+  .gbody .gc-price b{font-size:19px !important;font-weight:700;}
+  .gbody .gc-price s{font-size:11.5px;}
+  .gbody .gc-off-inline{display:inline-block;margin-left:2px;}
+
+  /* 折扣徽章不再压在封面上（82px 里太挤），改挂在价格旁边 */
+  .gcover .gc-off{display:none;}
+
+  /* 元信息收成一行小字，溢出省略 */
+  .gbody .gc-meta{
+    order:3;font-size:11px !important;gap:0 8px !important;margin-top:2px !important;
+    flex-wrap:nowrap;overflow:hidden;white-space:nowrap;
+  }
+  .gbody .gc-end{order:4;font-size:11px;margin-top:1px !important;
+    white-space:nowrap;overflow:hidden;text-overflow:ellipsis;display:block;}
+  .gbody .gc-end.urgent{color:var(--orange-lite);}
+  .gbody .gc-target{order:5;font-size:11px;margin-top:1px !important;}
+
+  /* 类型标签原来绝对定位在右下，会压到价格 —— 手机上不绝对定位 */
+  .gc-tag{position:static !important;display:none;}
+
+  /* Backlog 徽章：横版下挪到正文左上，不遮封面 */
+  .gbody .bd-badge{align-self:flex-start;order:1;margin-bottom:1px;}
+}
+
+/* ============================================================
+ * 【2026-10-11 · 第八批】手机端首屏收纳
+ * ------------------------------------------------------------
+ * 截图自查发现的真问题（不是猜的，是看图看出来的）：
+ *   首屏从上到下是 —— 标题 / 数据来源 / 欢迎条 / 手机操作提示 /
+ *   添加输入框 / 筛选工具 / 状态分段 / 封面墙。
+ *   **封面墙只露最底下的一条**。用户看到的是一屏控件，不是一个应用。
+ *
+ * 收敛原则：首屏只留「标题 + 今日概览 + 状态分段 + 封面墙」四样，
+ * 其余（添加 / 筛选）本来就有个入口（底部导航的 ＋ 和 🔍），
+ * 抽屉里会把真区块搬进去 —— 功能一个不少，只是**不再占首屏**。
+ * ============================================================ */
+@media (max-width:720px){
+  /* 首屏之外的区块：只在抽屉里出现 */
+  #secAdd, #secTools{ display:none; }
+  .mdrawer #secAdd, .mdrawer #secTools{ display:block; }
+  /* 抽屉里强制展开内容（外面默认是收起的） */
+  .mdrawer .tb-sec .tb-wrap{ display:block; border:none; padding:0; background:none; border-radius:0; }
+  .mdrawer .tb-sec > .tb-head{ display:none; }
+  /* 顶栏那排小按钮在手机上只留「设置」，其余入口在抽屉里已经有了 */
+  .topbar .btn:not(#btnSettings){ display:none; }
+  /* 概览条在手机上压成一行，别占三行 */
+  .today{ padding:7px 10px; font-size:11.5px; gap:10px; }
+  /* 状态分段紧贴封面墙，中间不要留空 */
+  #mseg{ margin-top:6px; }
+}
+
+/* ==== 【2026-10-11 第九批】手机端 toast 挪到底部，别盖住内容 ==== */
+@media (max-width:720px){
+  #toasts{ top:auto !important; bottom:calc(86px + env(safe-area-inset-bottom,0px));
+           left:10px; right:10px; align-items:stretch; gap:7px; }
+  .toast{ max-width:none !important; width:100%; }
+}
+
+/* ============================================================
+ * 【2026-10-11 第十一批】精选首屏：先给值得看的，再给全部
+ * ------------------------------------------------------------
+ * 问题：346 款全铺开，等于没筛选 —— 用户要的是「该看哪几个」。
+ * 解法：卡片视图顶部先给一屏「值得看」（史低 / 近史低 / 高性价比），
+ *      下面是完整清单（一个不少）。这不是隐藏数据，是排序。
+ * ============================================================ */
+.worthy-head{
+  display:flex; align-items:center; gap:8px; padding:10px 2px 8px;
+}
+.worthy-head b{ font-size:13.5px; color:var(--text); font-weight:700; }
+.worthy-head span{ font-size:11.5px; color:var(--muted); }
+.worthy-head .why{ margin-left:auto; font-size:11px; color:var(--faint); }
+.worthy-grid{
+  display:grid; grid-template-columns:repeat(auto-fill,minmax(168px,1fr));
+  gap:10px; margin-bottom:6px;
+}
+@media (max-width:720px){
+  .worthy-grid{ grid-template-columns:repeat(2,minmax(0,1fr)); gap:10px; }
+}
+.gtag{
+  position:absolute; left:6px; bottom:6px; z-index:2;
+  padding:2px 7px; border-radius:var(--r-chip); font-size:10.5px; font-weight:700;
+  background:rgba(8,16,26,.82); border:1px solid var(--accent-dim); color:var(--accent);
+}
+.gtag.t-low{ border-color:var(--green); color:var(--green-lite); }
+.gtag.t-near{ border-color:var(--orange); color:var(--orange-lite); }
+.gtag.t-value{ border-color:var(--purple); color:var(--purple-lite); }
+.alltip{
+  padding:14px 2px 6px; margin-top:8px; border-top:1px solid var(--border);
+  font-size:12px; color:var(--muted);
+}
 </style>
 </head>
 <body class="gate-locked" data-page-node-id="GxQGEbvAxU5LER3caJ9kRP">
@@ -732,10 +1486,10 @@ body.gate-locked .modal{visibility:hidden !important;}
     </label>
     <div class="g-sep"></div>
     <div class="gate-foot">
-      🔐 密钥仅在本机校验，不会上传到任何服务器<br>
-      需要<b style="color:var(--blue-lite);font-weight:600;">本机免密钥</b>？点下面按钮并验证一次密钥
-      <br>
-      <a href="#" class="g-owner" id="gateOwnerLink">我是站主，申请本机免密钥</a>
+      🔐 密钥只在本机校验，不上传任何服务器
+    </div>
+    <a href="#" class="g-owner g-owner-btn" id="gateOwnerLink">📱 我是站主 · 验证一次，永久免输入</a>
+    <div class="gate-foot gate-foot-x">
     </div>
   </div>
 </div>
@@ -756,6 +1510,11 @@ body.gate-locked .modal{visibility:hidden !important;}
        主要使用场景来说多了一步。所以这里在顶栏下补一条常驻数字带。
        数字全部来自已有 STATE，不新增数据源，也不动那 12 张卡。 -->
   <div class="today" id="todayBar" aria-label="今日概览"></div>
+
+  <!-- 【2026-10-12】自动清理结果横幅。放在概览条下面、统计卡上面：
+       「刚才系统替你做了什么」是当前上下文里最新的事，该紧挨着顶部；
+       但它不能遮挡内容，所以只占一行、且刻意做成低饱和的黄褐而不是红色。 -->
+  <div class="oa-banner" id="ownedAutoBanner" hidden></div>
 
   <!-- ===== 统计卡（问题 #3）：可折叠，默认收起，摘要常驻标题行 ===== -->
   <section class="stats-sec closed" id="secStats">
@@ -866,8 +1625,8 @@ body.gate-locked .modal{visibility:hidden !important;}
       <!-- ===== 新增 2026-10-11：发现与清理（两个新功能的入口）===== -->
       <div class="tb-row">
         <span class="tb-label">发现与清理</span>
-        <button class="btn" id="btnRadar" title="每天自动从 Steam 抓「正在打折、但还不在你清单里」的游戏，你点一下就能加进清单。数据由每天凌晨的自动任务预先抓好。">🔥 今日特价雷达<span class="tb-hint" id="radarBtnHint" style="margin-left:5px;"></span></button>
-        <button class="btn" id="btnOwned" title="检测你清单里的哪些游戏其实已经在 Steam 库里买过了。列出来给你确认，你勾选后才删 —— 绝不自动删。">🎮 已购入检测<span class="tb-hint" id="ownedBtnHint" style="margin-left:5px;"></span></button>
+        <button class="btn" id="btnRadar" title="每天自动从 Steam 抓「正在打折、你还没买过、也不在清单里」的游戏，你点一下就能加进清单。数据由每天凌晨的自动任务预先抓好。">🔥 今日特价雷达<span class="tb-hint" id="radarBtnHint" style="margin-left:5px;"></span></button>
+        <button class="btn" id="btnOwned" title="检测你清单里的哪些游戏其实已经在 Steam 库里买过了。打开时会自动把它们从清单移出（删前必备份，顶部可撤销）。">🎮 已购入检测<span class="tb-hint" id="ownedBtnHint" style="margin-left:5px;"></span></button>
         <span class="tb-hint" id="discoverHint">数据每天凌晨自动更新；点按钮读取。</span>
       </div>
       <!-- ===== 新增：Steam 用户标签（标签云 + 按标签筛选） ===== -->
@@ -1125,15 +1884,25 @@ body.gate-locked .modal{visibility:hidden !important;}
         </select>
       </label>
       <label class="check-row" style="margin:0;">
-        <input type="checkbox" id="radarHideOwned"><span>隐藏已在清单的</span>
+        <input type="checkbox" id="radarHideOwned" checked><span>隐藏已在清单的</span>
+      </label>
+      <!-- 【2026-10-12】默认隐藏「已买过」的。这两件事过去被混成一个 alreadyOwned，
+           读的还是愿望单，于是已购但已移出清单的游戏照样被推给你。现在拆开：
+           已购 → 默认彻底不显示（可勾下面这个开关翻出来看它在打折）；
+           在清单 → 由上面的「隐藏已在清单的」管。 -->
+      <label class="check-row" style="margin:0;">
+        <input type="checkbox" id="radarShowOwned"><span>显示已买过的</span>
       </label>
       <button class="btn small" id="btnRadarReload">↻ 重新读取</button>
     </div>
+    <!-- 已购库没读到时的警告条。老实现读不到就静默当成「你什么都没买过」，
+         页面照常显示 310 条推荐，用户完全看不出异常 —— 实测漏了 18 款。 -->
+    <div id="radarOwnedWarn" class="radar-warn" hidden></div>
     <div id="radarStatus" class="radar-status"></div>
     <div id="radarGrid" class="radar-grid"></div>
   </div>
   <div class="modal-foot">
-    <span class="radar-foot-hint">看到的都是 Steam 全站在打折、但还不在你清单里的游戏。点「加入清单」后它会进任务队列自动抓数据。</span>
+    <span class="radar-foot-hint">看到的都是 Steam 全站在打折、你还没买过、也不在清单里的游戏。点「加入清单」后它会进任务队列自动抓数据。</span>
     <button class="btn" data-close="modalRadar">关闭</button>
   </div>
 </div>
@@ -1145,12 +1914,6 @@ body.gate-locked .modal{visibility:hidden !important;}
     <button class="modal-close" data-close="modalOwned">×</button>
   </div>
   <div class="modal-body">
-    <div class="owned-warn">
-      <strong>判断依据只有一条：这个 AppID 出现在你的 Steam 库里 —— 对你来说就是「已经有」。</strong><br>
-      游玩时长只用来告诉你<strong>玩过还是没玩过</strong>（借来没玩过的自然显示 0 小时），
-      <strong>不再作为「可能没有」的怀疑依据</strong>，也不用你逐条确认。
-      为防误删，下面每一项<strong>仍然默认不勾选</strong> —— 由你决定删哪几款，删错了可从备份恢复。
-    </div>
     <div class="owned-bar">
       <span class="owned-meta" id="ownedMeta">尚未检测</span>
       <span class="radar-spacer"></span>
@@ -1172,7 +1935,7 @@ body.gate-locked .modal{visibility:hidden !important;}
     </tr></thead><tbody id="ownedDlcBody"></tbody></table></div>
   </div>
   <div class="modal-foot">
-    <span class="radar-foot-hint" id="ownedFootHint">删除前会自动把当前清单存一份备份，可以撤销。</span>
+    <span class="radar-foot-hint" id="ownedFootHint">勾选后从清单移除，不影响 Steam 账号；删前自动备份，可撤销。</span>
     <button class="btn" data-close="modalOwned">关闭</button>
     <button class="btn danger" id="btnOwnedDelete" disabled>删除所选</button>
   </div>
@@ -1235,9 +1998,9 @@ const CONFIG = {
   DLC_BATCH: 8,                 // DLC 分批落盘粒度：每抓够 8 个就写盘+刷新，用户边等边看
   DEBUG_LOG_MAX: 500,           // 调试日志内存保留条数（只影响调试面板，不影响数据）
   TRANS_CACHE_MAX: 3000,        // 翻译缓存条数上限（LRU 淘汰最旧的）
-  CAND_MAX_RENDER: 300,         // 添加游戏时"候选列表"最多渲染多少条（超出会明确提示，不静默砍）
+  CAND_MAX_RENDER: 300,          // 0=不限（2026-10-11）         // 添加游戏时"候选列表"最多渲染多少条（超出会明确提示，不静默砍）
   TAG_PREVIEW: 40,              // 标签云默认展示多少个（可点"展开全部"）
-  RENDER_PAGE: 300,             // 表格单次渲染行数（可点"显示更多/全部显示"，不丢数据）
+  RENDER_PAGE: 300,               // 0=不限，全量渲染（2026-10-11 用户铁线）             // 表格单次渲染行数（可点"显示更多/全部显示"，不丢数据）
   OCR_MAX_LINES: 30,            // 截图识别最多取多少行文本
   /* 【2026-10-11 新增】每日特价雷达的容量上限。
      0 = 不限。设成 0 是刻意的：雷达是"给你挑"的，宁可全列出来让你翻，
@@ -1371,6 +2134,7 @@ function newGame(appid, name, originalName) {
     historicalLow: defaultLow(),
     targetPrice: null,
     note: '',
+    backlog: 'want',   // 想玩 / playing 在玩 / done 已玩 / shelved 搁置（2026-10-11 卡片视图新增）
     dlcList: [],
     details: defaultDetails(),
     createdAt: nowMs(),
@@ -3925,6 +4689,27 @@ function targetCellHtml(g) {
   return (ok ? '<span style="color:var(--green-lite)">✔ ' : '<span>') + fmtPrice(g.targetPrice, (g.price && g.price.currency) || 'CNY') + '</span>';
 }
 
+/* 【2026-10-12】把 thead 的列名写到每个 td 的 data-label 上（手机卡片布局用）。
+   纯附加动作：不改结构、不改类名、不改事件绑定，桌面端表格完全不受影响。
+   列名取 textContent（含 select/span 的部分会自动剥掉多余空白）。 */
+function tagCellsWithHeader() {
+  const ths = document.querySelectorAll('table thead th');
+  if (!ths.length) return;
+  const labels = [];
+  ths.forEach(th => {
+    const c = th.cloneNode(true);
+    /* 去掉排序箭头和内嵌下拉 —— 它们不是列名的一部分 */
+    c.querySelectorAll('.arrow, select, .mini-sel').forEach(n => n.remove());
+    labels.push((c.textContent || '').replace(/\s+/g, ' ').trim());
+  });
+  $$('#tbody tr').forEach(tr => {
+    /* 合并行 / 更多提示行只有一个 colspan td，跳过 */
+    const tds = tr.querySelectorAll('td');
+    if (tds.length !== labels.length) return;
+    tds.forEach((td, i) => { td.setAttribute('data-label', labels[i] || ''); });
+  });
+}
+
 function renderTable() {
   const tbody = $('#tbody');
   const games = applySort(applyFilters(STATE.games));
@@ -4027,6 +4812,13 @@ function renderTable() {
   tbody.innerHTML = html;
   STATE.__shownCount = shown.length;
   STATE.__filteredGames = games;
+  /* 【2026-10-12】给每个 td 打上列名（data-label）。
+     手机端卡片布局里，表格语义没了（thead 不显示），每格得自报家门 ——
+     否则「879 / 92% / ¥149」这些数字悬在卡片里，没有任何上下文。
+
+     列名从 thead 现读，不写死：以后给表格加一列或改列名，
+     手机端自动跟着变，不会出现「桌面改了、手机没改」的割裂。 */
+  tagCellsWithHeader();
   if (hidden > 0) {
     const more = $('#btnShowMore'), all = $('#btnShowAll');
     if (more) more.addEventListener('click', () => { STATE.renderLimit = (STATE.renderLimit || PAGE) + PAGE; STATE.__showAllPinned = false; renderTable(); });
@@ -4045,7 +4837,7 @@ function renderTable() {
 function renderAll() {
   refreshTagFilterOptions();
   renderStats();
-  renderTable();
+  applyView();   // 2026-10-11：按当前视图渲染（表格模式下等价 renderTable）
   renderSortArrows();
   syncGroupBtn();
   renderActiveFilters();
@@ -5403,7 +6195,7 @@ function priceInsightHtml(g) {
 
 /* ---------------- ② 本机价格观察历史 ---------------- */
 const PRICE_HIST_KEY = 'sw_price_hist_v1';
-const PRICE_HIST_MAX = 40;                 // 每款最多保留 40 条观察记录
+const PRICE_HIST_MAX = 40;
 let PRICE_HIST_CACHE = null;
 function loadPriceHist() {
   try {
@@ -5767,11 +6559,21 @@ function mergeCloudGames(remoteGames) {
      于是出现「上传 219 款到云端，换台设备/清缓存后拉取，本机还是旧的 197 款」，
      新增的那批永远进不来（用户报的「拉回来数量不对」就是这个）。
      这里按「云端为准」补入缺失项；用户私有字段（目标价/备注/手动史低）云端本来也带着，
-     所以直接沿用云端值即可。 */
+     所以直接沿用云端值即可。
+
+     【2026-10-12 新增豁免】已购的条目**永不补回本地**。
+     为什么必须开这个口子：自动清理把已购移出清单后，云端那份（用户还没点同步时）
+     仍然留着它们。而上面这段会把「云端有、本机没有」的补回来 ——
+     于是形成「自动删掉 → 拉取复活 → 再自动删掉 → 再复活」的死循环，
+     而且复活这件事没有任何提示，只会计入"新增 N 款"里混在正常更新里。
+     用户既然已经买了，补回来就没有任何意义，只会让清单凭空长回一堆僵尸条目。 */
+  const ownedSetNow = ownedIdSet();
+  let skippedOwned = 0;
   (remoteGames || []).forEach(rg => {
     if (!rg || !rg.appid) return;
     const id = Number(rg.appid);
     if (!isFinite(id) || id <= 0 || localIds.has(id)) return;
+    if (ownedSetNow.has(id)) { skippedOwned++; return; }   /* ← 已购，绝不复活 */
     const g = newGame(id, rg.name || ('AppID ' + id), rg.originalName || rg.name || '');
     if (rg.price && typeof rg.price === 'object') g.price = mergePriceKeepCloud(g.price, rg.price);
     if (rg.rating && typeof rg.rating === 'object') g.rating = Object.assign({}, g.rating, rg.rating);
@@ -5809,7 +6611,10 @@ function mergeCloudGames(remoteGames) {
      所以它们不会进 updated 计数 —— 但确实发生了更新，这里补记一次，
      让「本机 N 款」和「更新 M 款」在语义上不冲突。 */
   if (added) updated += added;
-  return { updated, tags, bundles, translated, unmatched, added,
+  /* skippedOwned 一并返回，供调用方如实回显。
+     绝不能静默跳过 —— 用户看到"新增 0 款"却不知道自己删掉的 5 款没回来，
+     会以为拉取没生效。 */
+  return { updated, tags, bundles, translated, unmatched, added, skippedOwned,
            attributed: updated, remoteCount: byId.size, localCount: STATE.games.length };
 }
 /* 拉取通道：优先同源（GitHub Pages 上的 data/wishlist.json，无需 Token），失败再走 GitHub API */
@@ -5872,20 +6677,54 @@ function fmtHours(h) {
 /* ====================================================================
  * 一、每日特价雷达
  * ==================================================================== */
-const RADAR = { items: [], loading: false, loadedAt: 0, error: null, added: new Set() };
+/* 【2026-10-12】ownedOk / ownedNote 是后端如实上报的「已购库读到没有」。
+   三态：true=读到了；false=明确读不到（附原因）；null=字段缺失（旧产物），未知。
+   绝不能把 null 当成 false 用 —— 那等于宣称「你什么都没买过」。 */
+const RADAR = { items: [], loading: false, loadedAt: 0, error: null, added: new Set(),
+                ownedOk: null, ownedNote: null };
+
+/* 【2026-10-12】由 OWNED.games 建已购 appid 集合（DLC 也算，已购就是已购）。
+   用途：雷达兜底过滤 + 自动清理 + 云端补入跳过，三处共用同一份判定，
+   免得各处各写一套、哪天又改歪了。 */
+function ownedIdSet() {
+  const s = new Set();
+  for (const g of (OWNED.games || [])) if (g && g.appid) s.add(Number(g.appid));
+  return s;
+}
+
+/* 已购库是不是「可用的」。
+   🔴 这是自动清理的安全阀：四种情况一律判定为不可用。
+   owned.json 拿不到时如果还照着删，整个愿望单会被清空 —— 那是最坏的结果。
+   「不确定」时唯一安全的做法是什么都不删。 */
+function ownedDataReady() {
+  if (!OWNED.games || !OWNED.games.length) return false;
+  if (OWNED.error) return false;
+  return true;
+}
 
 function radarFilterList() {
   const minD = Number(($('#radarMinDisc') || {}).value) || 0;
   const minR = Number(($('#radarMinReview') || {}).value) || 0;
   const hideOwned = !!($('#radarHideOwned') || {}).checked;
-  let list = RADAR.items.filter(x => !hideOwned || !x.alreadyOwned);
+  const showOwned = !!($('#radarShowOwned') || {}).checked;
+  const ownedSet = ownedIdSet();
+  /* 兜底过滤：不管 specials.json 里的 alreadyOwned/inWishlist 标得对不对，
+     都在本地重新判一次。老实现只信后端标记，而那个标记读错了数据源
+     （读愿望单当已购库），于是已购但已移出清单的游戏被当好价推给用户，还带按钮。
+     后端标记只能用来「显示」状态，绝不能用来决定「是否展示」—— 宁可多滤一次，
+     也不能让你看到已经买过的游戏。 */
+  let list = RADAR.items.filter(x => {
+    const id = Number(x.appid);
+    if (!showOwned && (ownedSet.has(id) || x.alreadyOwned)) return false;
+    if (hideOwned && (findGame(id) || x.inWishlist)) return false;
+    return true;
+  });
   if (minD > 0) list = list.filter(x => (Number(x.discountPercent) || 0) >= minD);
   if (minR > 0) list = list.filter(x => (Number(x.reviewPct) || 0) >= minR);
   return list;
 }
 
 function radarCardHtml(x) {
-  const inList = RADAR.added.has(x.appid);
   const tierCls = 'radar-tier ' + (x.tier || 'C');
   const thumb = x.tinyImage
     ? '<div class="radar-thumb-wrap"><img class="radar-thumb" src="' + esc(x.tinyImage) +
@@ -5899,14 +6738,21 @@ function radarCardHtml(x) {
   const deadline = x.discountExpiration
     ? '<span style="color:var(--orange-lite)">⏰ ' + fmtDeadlineShort(x.discountExpiration) + ' 结束</span>'
     : '';
-  // alreadyOwned = 已在本机清单里（后端读 wishlist.json 打的标记）。
-  // 这种条目**绝不能再给「加入清单」按钮**：点了必然被 addGameByAppid 抛
-  // 「该游戏已在愿望单中」，用户看到的是一个必然失败的操作。直接换成灰标。
-  const ownedTag = x.alreadyOwned;
-  const foot = (inList || ownedTag)
-    ? '<div class="radar-inlist">' + (ownedTag ? '已在清单' : '已加入清单') + '</div>'
-    : '<button class="btn small primary" data-radar-add="' + x.appid + '">➕ 加入清单</button>';
-  return '<div class="radar-card' + (x.alreadyOwned ? ' in-list' : '') + '" data-appid="' + x.appid + '">' +
+  /* 三个状态互斥，含义完全不同，绝不能再混成一个 alreadyOwned：
+       已拥有   —— 你 Steam 库里真有这款，别再买
+       已在清单 —— 在愿望单里但还没买
+       都没     —— 才是真正的「推荐给你」
+     前两种一律不给「加入清单」按钮：点了要么被抛「已在愿望单中」，
+     要么是让你重复买一款你有的游戏 —— 用户看到的是一个必然失败或不该做的操作。 */
+  const id = Number(x.appid);
+  const isOwned = ownedIdSet().has(id) || !!x.alreadyOwned;
+  const inList = RADAR.added.has(x.appid) || !!findGame(id) || !!x.inWishlist;
+  const foot = isOwned
+    ? '<div class="radar-inlist owned">✔ 已拥有</div>'
+    : (inList
+      ? '<div class="radar-inlist">已在清单</div>'
+      : '<button class="btn small primary" data-radar-add="' + x.appid + '">➕ 加入清单</button>');
+  return '<div class="radar-card' + (isOwned ? ' in-list' : inList ? ' in-wish' : '') + '" data-appid="' + x.appid + '">' +
     thumb +
     '<div class="radar-body">' +
       '<div class="radar-name" title="' + esc(x.name) + '">' + esc(x.name) + '</div>' +
@@ -5925,6 +6771,8 @@ function renderRadar() {
   const status = $('#radarStatus');
   if (RADAR.loading) { status.className = 'radar-status'; status.textContent = '正在读取…'; }
   else if (RADAR.error) { status.className = 'radar-status err'; status.textContent = '⚠ ' + RADAR.error; }
+
+  renderRadarOwnedWarn();
 
   const list = radarFilterList();
   if (!RADAR.loading && !list.length) {
@@ -5951,10 +6799,37 @@ function renderRadar() {
     else if (!RADAR.items.length) meta.textContent = '暂无数据';
     else {
       const fresh = RADAR.loadedAt ? fmtWhen(RADAR.loadedAt) : '—';
-      meta.textContent = '共 ' + RADAR.items.length + ' 条打折（不在你清单里的 ' +
-        RADAR.items.filter(x => !x.alreadyOwned).length + ' 条）· 数据时间 ' + fresh;
+      /* 口径跟下面过滤逻辑保持一致：只统计「既没买过、也不在清单里」的那些。
+         旧写法拿 alreadyOwned 统计，而那个标记读的其实是愿望单，
+         于是会报出一个偏大的数字，让人以为里面有自己买过的游戏。 */
+      const inOwned = ownedIdSet();
+      const buyable = RADAR.items.filter(x =>
+        !inOwned.has(Number(x.appid)) && !x.alreadyOwned &&
+        !findGame(Number(x.appid)) && !x.inWishlist).length;
+      meta.textContent = '共 ' + RADAR.items.length + ' 条打折 · 你可加 ' + buyable + ' 条 · 数据时间 ' + fresh;
     }
   }
+}
+
+/* 已购库不可用时的警告条。老实现读不到 owned.json 就静默当成「什么都没买过」，
+   页面照常显示全部推荐 —— 用户完全看不出异常，实测就是这样漏了 18 款已购的游戏。
+   现在把「不知道」明说出来。 */
+function renderRadarOwnedWarn() {
+  const el = $('#radarOwnedWarn');
+  if (!el) return;
+  if (RADAR.loading) { el.hidden = true; return; }
+  const reasons = [];
+  if (RADAR.ownedOk === false) {
+    reasons.push('后端未读到已购库' + (RADAR.ownedNote ? '（' + RADAR.ownedNote + '）' : ''));
+  }
+  if (RADAR.items.length && !ownedDataReady()) {
+    reasons.push('本地已购数据未就绪');
+  }
+  if (!reasons.length) { el.hidden = true; el.innerHTML = ''; return; }
+  el.hidden = false;
+  el.innerHTML = '<span>⚠ ' + esc(reasons.join('；')) +
+    ' —— 下面的推荐<b>可能包含你已买过的游戏</b>，且不会自动清理清单。</span>' +
+    '<button class="btn small" id="btnRadarReloadOwned">↻ 重试读取已购库</button>';
 }
 
 function fmtWhen(ms) {
@@ -5988,9 +6863,15 @@ async function loadRadar(force) {
     if (!d || !Array.isArray(d.items)) {
       RADAR.error = '云端文件格式不对（' + CONFIG.SPECIALS_PATH + ' 里没有 items 数组）';
       RADAR.items = [];
+      RADAR.ownedOk = null; RADAR.ownedNote = null;
     } else {
       RADAR.items = d.items.filter(x => x && x.appid);
       RADAR.loadedAt = d.generatedAt || Date.now();
+      /* 【2026-10-12】后端如实报上来「已购库读到没有」。
+         字段缺失（旧版本产物）按 null 处理——不知道就是不知道，不能当成「没买过」。
+         真正的兜底在 radarFilterList()：那里用本地 OWNED.games 再判一次。 */
+      RADAR.ownedOk = (d.ownedOk === true) ? true : (d.ownedOk === false ? false : null);
+      RADAR.ownedNote = d.ownedNote || null;
       RADAR.error = d.error
         ? ({ STEAM_UNREACHABLE: '昨晚没能连上 Steam，数据是空的',
              NO_ROWS_PARSED: '昨晚一条都没解析出来',
@@ -6000,6 +6881,7 @@ async function loadRadar(force) {
   } catch (e) {
     RADAR.error = (e && e.message) || '读取失败';
     RADAR.items = [];
+    RADAR.ownedOk = null; RADAR.ownedNote = null;
   }
   RADAR.loading = false;
   if (btn) btn.disabled = false;
@@ -6009,7 +6891,13 @@ async function loadRadar(force) {
 function updateRadarBtnHint() {
   const el = $('#radarBtnHint'); if (!el) return;
   if (RADAR.items.length) {
-    el.textContent = RADAR.items.filter(x => !x.alreadyOwned).length + ' 条待选';
+    /* 口径与 radarFilterList() 一致：既没买过、也不在清单里的才算「待选」 */
+    const inOwned = ownedIdSet();
+    const n = RADAR.items.filter(x => {
+      const id = Number(x.appid);
+      return !inOwned.has(id) && !x.alreadyOwned && !findGame(id) && !x.inWishlist;
+    }).length;
+    el.textContent = n + ' 条待选';
     el.className = 'tb-hint ok';
   } else el.textContent = '';
 }
@@ -6020,6 +6908,8 @@ function radarAdd(appid) {
   const x = RADAR.items.find(i => i.appid === appid);
   if (!x) return;
   if (findGame(appid)) { toast('这本已经在你的清单里了', 'warn'); return; }
+  /* 已购就别加了 —— 让用户去用「已购入检测」清理，而不是把买过的游戏重新塞进愿望单。 */
+  if (ownedIdSet().has(Number(appid))) { toast('这款你已经买过了，已跳过（可在「已购入检测」里清理清单）', 'warn', 4000); return; }
   const t = newTask(String(appid));
   t.status = 'running';
   t.msg = '正在加入…';
@@ -6036,7 +6926,9 @@ function radarAdd(appid) {
 /* ====================================================================
  * 二、我的 Steam 库（已购待清理）
  * ==================================================================== */
-const OWNED_BACKUP_KEY = 'sw_backup_before_owned_cleanup_v1';
+/* 【2026-10-12】OWNED_BACKUP_KEY / OWNED_BACKUP_PREFIX 已挪到下面
+   backupBeforeCleanup() 那一块（6702 行附近）—— 新实现要管「历史备份」，
+   三个常量得放在一起。旧版这里单独声明了 OWNED_BACKUP_KEY，与新块重复。 */
 const OWNED = { games: [], loadedAt: 0, error: null, main: [], dlc: [], sel: new Set() };
 
 /* ★ 核心分组逻辑：本体 vs DLC/衍生。
@@ -6152,34 +7044,188 @@ async function loadOwned(force) {
   }
   if (btn) btn.disabled = false;
   OWNED.sel = new Set();          /* 重新读取后清空选择 —— 旧选择可能已不适用 */
+  /* 【2026-10-12】这里**刻意不做**自动清理。
+     loadOwned 是「把已购库读进来」这个纯读取动作，它同时被三处调用：
+     boot（不该动清单）、雷达上的重试按钮（不该动清单）、已购检测的重读按钮。
+     把「读数据」和「改用户清单」分开，调用方才不会在某天忘了判断就删掉东西。
+     自动清理统一走 autoCleanOwned()，入口只有「已购入检测」按钮一处。 */
+
   const g = classifyOwned(OWNED.games, STATE.games);
   OWNED.main = g.main; OWNED.dlc = g.dlc;
   renderOwned();
+  renderOwnedAutoBanner();
+  /* 【2026-10-12】雷达的已购过滤依赖 OWNED.games，这里读到/读失败都会改变结果，
+     所以每次重读已购库都得把雷达重画一遍，否则页面停在一个过时的过滤状态上。 */
+  renderRadar();
 }
 
-/* 删除前先备份 → 再删 → 可撤销。绝不做"不可逆"的事。 */
+/* 自动清理的备份保留策略。
+   老实现只有 OWNED_BACKUP_KEY 一个槽位，每次清理都整体覆盖 ——
+   于是「删 → 撤销 → 再删」会把第一次那份备份冲掉，用户想撤更早的那次就没了。
+   现在改成：一份「当前」槽位 + 若干带时间戳的历史槽（留最近 3 份）。
+   写新的当前槽之前，先把上一份挪到历史里，这样任何一次删除都至少能追回。 */
+const OWNED_BACKUP_PREFIX = 'sw_backup_before_owned_cleanup_';
+const OWNED_BACKUP_KEY = OWNED_BACKUP_PREFIX + 'current';
+const OWNED_BACKUP_HIST_MAX = 3;
+/* 自动清理横幅保留多久。过了这个窗口就不再提示撤销（备份仍在，
+   随时能从「已购入检测」里手动恢复）—— 免得一根黄条在页面上挂几个月。 */
+const OWNED_AUTO_BANNER_DAYS = 7;
+
+/* 备份有效性：只有「读得出、games 是数组、款数 > 0」才算一份可用的备份。
+   自动清理尤其依赖这个 —— 拿一份空备份去「保护」删除等于没保护。 */
+function readOwnedBackup(key) {
+  try {
+    const b = JSON.parse(localStorage.getItem(key || OWNED_BACKUP_KEY) || 'null');
+    if (!b || !Array.isArray(b.games) || !b.games.length) return null;
+    return b;
+  } catch (e) { return null; }
+}
+
+/* 删除前先备份 → 再删 → 可撤销。绝不做"不可逆"的事。
+   返回 true 只代表「这份备份确实存下来了、可以用」。 */
 function backupBeforeCleanup() {
   try {
+    if (!STATE.games || !STATE.games.length) return false;   // 空清单没什么可备份的，也不该删
+    /* 上一份还没被撤销 → 先挪进历史，别直接覆盖掉。 */
+    const prev = readOwnedBackup();
+    if (prev) {
+      const histKey = OWNED_BACKUP_PREFIX + 'h_' + prev.at;
+      try { localStorage.setItem(histKey, JSON.stringify(prev)); } catch (e) {}
+      pruneOwnedBackupHistory();
+    }
     const snap = JSON.parse(JSON.stringify(STATE.games));
     localStorage.setItem(OWNED_BACKUP_KEY, JSON.stringify({
-      at: nowMs(), count: snap.length, games: snap
+      at: nowMs(), count: snap.length, games: snap, auto: !!(arguments[0] && arguments[0].auto)
     }));
     return true;
   } catch (e) { return false; }
 }
+
+/* 历史备份只留最近 OWNED_BACKUP_HIST_MAX 份，其余清掉，防无限膨胀 */
+function pruneOwnedBackupHistory() {
+  let keys = [];
+  try {
+    for (let i = 0; i < localStorage.length; i++) {
+      const k = localStorage.key(i);
+      if (k && k.indexOf(OWNED_BACKUP_PREFIX + 'h_') === 0) keys.push(k);
+    }
+  } catch (e) { return; }
+  if (keys.length <= OWNED_BACKUP_HIST_MAX) return;
+  const withTime = keys.map(k => {
+    let at = 0;
+    try { at = Number(JSON.parse(localStorage.getItem(k) || '{}').at) || 0; } catch (e) {}
+    return { k, at };
+  }).sort((a, b) => b.at - a.at);
+  withTime.slice(OWNED_BACKUP_HIST_MAX).forEach(x => {
+    try { localStorage.removeItem(x.k); } catch (e) {}
+  });
+}
+
 function undoOwnedCleanup() {
-  let b = null;
-  try { b = JSON.parse(localStorage.getItem(OWNED_BACKUP_KEY) || 'null'); } catch (e) { b = null; }
-  if (!b || !Array.isArray(b.games)) { toast('没有可用的备份', 'warn'); return; }
-  showConfirm('把清单恢复到上次删除前的状态？\n\n将恢复 ' + b.count + ' 款（备份时间 ' + fmtWhen(b.at) + '）。', () => {
+  let b = readOwnedBackup();
+  if (!b) {
+    /* 当前槽没有就翻历史，翻到最近一份就算 —— 别让「没有可撤销」来得太容易 */
+    let keys = [];
+    try {
+      for (let i = 0; i < localStorage.length; i++) {
+        const k = localStorage.key(i);
+        if (k && k.indexOf(OWNED_BACKUP_PREFIX + 'h_') === 0) keys.push(k);
+      }
+    } catch (e) {}
+    keys.sort();
+    for (const k of keys) {
+      const h = readOwnedBackup(k);
+      if (h) { b = h; break; }
+    }
+  }
+  if (!b) { toast('没有可用的备份', 'warn'); return; }
+  showConfirm('把清单恢复到上次删除前的状态？\n\n将恢复 ' + b.count + ' 款（备份时间 ' + fmtWhen(b.at) + '）。\n\n' +
+    '注意：恢复之后，这段时间里你自己删掉/改动的内容会一并被覆盖回去。', () => {
     STATE.games = b.games;
     OWNED.sel = new Set();
     saveDataNow();
     renderAll();
     classifyAndRenderOwned();
+    renderOwnedAutoBanner();
     toast('✅ 已恢复 ' + b.games.length + ' 款', 'success');
   }, { okText: '恢复' });
 }
+/* 【2026-10-12】自动清理：把你清单里「其实已经买过」的那批直接移出去。
+
+   用户的原话是「已购的别再让我重复去看是否购买」，所以从「勾选才删」改成自动。
+   自动操作不可逆，这一段的每一个安全阀都必须硬性成立 —— 任何一条不满足就什么都不做。
+
+   安全阀（缺一不可）：
+     ① ownedDataReady() 为假 → 一律不删。
+        这是最要命的一条：owned.json 拿不到时如果照删，整个清单会被清空。
+        「不确定」的时候，唯一安全的动作是什么都不做。
+     ② 备份失败 → 不删。没备份的删除等于不可逆删除，绝不能发生。
+     ③ 备份里款数为 0 或读不出 games 数组 → 不删（备份形同虚设）。
+     ④ 只删「两边都有」的交集，也就是 classifyOwned 算出来的 main + dlc；
+        绝不动 Steam 库里没有的那些（那说明已购数据不完整，宁可留着）。
+
+   DLC 一并处理（已购就是已购），但仍走 doDelete 这条已有链路，备份/撤销机制完全复用。 */
+function autoCleanOwned() {
+  const res = { skipped: false, reason: '', removed: 0, ids: [], backupAt: 0 };
+
+  // ① 安全阀：已购数据不可用 → 绝不删
+  if (!ownedDataReady()) {
+    res.reason = !OWNED.games || !OWNED.games.length
+      ? '已购数据未就绪（还没读到你的 Steam 库）'
+      : ('已购数据读取出错：' + (OWNED.error || '未知原因'));
+    res.skipped = true;
+    return res;
+  }
+  // ② 清单本来就是空的，没什么可清的
+  if (!STATE.games || !STATE.games.length) { res.reason = '清单是空的'; res.skipped = true; return res; }
+
+  // ④ 只处理交集：Steam 库里真有、且你清单里也有
+  const g = classifyOwned(OWNED.games, STATE.games);
+  const ids = g.main.concat(g.dlc).map(r => Number(r.appid)).filter(Boolean);
+  if (!ids.length) { res.reason = '没有需要清理的已购游戏'; res.skipped = true; return res; }
+
+  // ②③ 安全阀：备份必须真的存下来了
+  if (!backupBeforeCleanup({ auto: true })) {
+    res.reason = '备份失败（浏览器存储可能已满或处于隐私模式）—— 为安全起见没有执行自动清理';
+    res.skipped = true;
+    return res;
+  }
+  if (!readOwnedBackup()) {
+    res.reason = '备份写入后读不回来 —— 已放弃自动清理';
+    res.skipped = true;
+    return res;
+  }
+
+  const names = ids.slice(0, 8).map(id => {
+    const gg = findGame(id);
+    return gg ? gg.name : ('AppID ' + id);
+  });
+  doDelete(ids, { auto: true });
+  res.removed = ids.length;
+  res.ids = ids;
+  res.backupAt = (readOwnedBackup() || {}).at || nowMs();
+  res.names = names;
+  return res;
+}
+
+/* 自动清理的结果横幅。
+   刻意做成非 modal 的一行 —— 它要一直挂到你能撤销为止，但绝不能挡住清单。 */
+function renderOwnedAutoBanner() {
+  const el = $('#ownedAutoBanner');
+  if (!el) return;
+  const b = readOwnedBackup();
+  /* 只展示「自动清理」产生的备份；手动删的不用横幅（那边本来就有「撤销上次删除」按钮） */
+  if (!b || !b.auto) { el.hidden = true; el.innerHTML = ''; return; }
+  /* 保留窗口 7 天：超过就不再提示撤销（备份仍在，随时能从已购检测里手动恢复） */
+  const age = nowMs() - (b.at || 0);
+  if (age > OWNED_AUTO_BANNER_DAYS * 86400000) { el.hidden = true; el.innerHTML = ''; return; }
+  el.hidden = false;
+  el.innerHTML = '<span>已自动移除 <b>' + esc(b.count) + '</b> 款你买过的游戏'
+    + ' · <span class="t-faint">' + esc(fmtWhen(b.at)) + '</span></span>'
+    + '<span class="oa-warn">云端那份还是旧的，要彻底生效记得点「同步到云端」</span>'
+    + '<button class="btn small" id="btnOwnedAutoUndo">↩ 撤销这次清理</button>';
+}
+
 function classifyAndRenderOwned() {
   const g = classifyOwned(OWNED.games, STATE.games);
   OWNED.main = g.main; OWNED.dlc = g.dlc;
@@ -6207,7 +7253,11 @@ function deleteOwnedSelected() {
     doDelete(ids);
   }, { okText: '确认移除', danger: true });
 }
-function doDelete(ids) {
+/* 【2026-10-12】加 opts.auto 区分「自动清理」与「手动勾选删除」。
+   自动清理不该再弹一个「已移除 N 款」的成功 toast（用户没点，是系统替他做的），
+   改由顶部横幅承载结果 + 撤销入口。 */
+function doDelete(ids, opts) {
+  const isAuto = !!(opts && opts.auto);
   const set = new Set(ids);
   const before = STATE.games.length;
   STATE.games = STATE.games.filter(g => !set.has(Number(g.appid)));
@@ -6215,8 +7265,14 @@ function doDelete(ids) {
   saveDataNow();   /* 破坏性操作 → 必须同步落盘，不能等 debounce */
   renderAll();
   classifyAndRenderOwned();
+  renderOwnedAutoBanner();
   const after = STATE.games.length;
-  toast('已移除 ' + (before - after) + ' 款（清单 ' + before + ' → ' + after + '），可点「撤销上次删除」还原', 'success', 6000);
+  if (isAuto) {
+    toast('已自动移除 ' + (before - after) + ' 款你已买过的游戏（清单 ' + before + ' → ' + after + '）', 'success', 6000);
+  } else {
+    toast('已移除 ' + (before - after) + ' 款（清单 ' + before + ' → ' + after + '），可点「撤销上次删除」还原', 'success', 6000);
+  }
+  renderRadar();   /* 清单变了，雷达里「已在清单」的状态也跟着变 */
 }
 
 async function fetchCloudJSON() {
@@ -6263,9 +7319,14 @@ async function pullFromCloud(opts) {
       via: got.via
     };
     const stat = mergeCloudGames(data.games);
+    /* 拉取只改清单，不碰 OWNED —— 但 OWNED 已知的情况下，
+       拉进来之后可以再判一次有没有「刚被补进来的已购款」。这里只重算分类，
+       不自动删除：删除是破坏性操作，只该由用户主动点「已购入检测」触发。 */
+    if (OWNED.games.length) classifyAndRenderOwned();
     saveData();
     savePullMeta(meta);
     renderAll();
+    renderRadar();
     updateCloudPullHint(meta);
     /* 提示语改成「云端→本机」的对照口径：
        以前只写「已从云端更新 X / Y 款」，Y 是本机总数，容易被理解成"云端只有 Y 款"，
@@ -6282,6 +7343,10 @@ async function pullFromCloud(opts) {
     if (stat.bundles) bits.push('捆绑包 ' + stat.bundles + ' 款');
     if (stat.translated) bits.push('补中文名 ' + stat.translated + ' 款');
     if (stat.unmatched) bits.push('云端尚无 ' + stat.unmatched + ' 款（本机新加、还没上传）');
+    /* 【2026-10-12】已购被跳过的数量必须说出来。
+       用户会怀疑「我删掉的怎么没回来 / 是不是拉取没生效」——
+       不说的话它会混在"新增 0 款"里消失，而这个解释只存在于代码注释里。 */
+    if (stat.skippedOwned) bits.push('已购跳过 ' + stat.skippedOwned + ' 款（云端还留着，但这些你买过了，不会补回清单）');
     /* 明确告知「为什么标签数少于总款数」—— 这是数据源进度，不是拉取失败 */
     const tagGap = stat.localCount - stat.tags - stat.unmatched;
     if (tagGap > 0) {
@@ -6400,9 +7465,15 @@ function triggerCloudPull() {
     });
     const $btnRadarReload = $('#btnRadarReload');
     if ($btnRadarReload) $btnRadarReload.addEventListener('click', () => loadRadar(true));
-    ['#radarMinDisc', '#radarMinReview', '#radarHideOwned'].forEach(sel => {
+    ['#radarMinDisc', '#radarMinReview', '#radarHideOwned', '#radarShowOwned'].forEach(sel => {
       const el = $(sel);
       if (el) el.addEventListener('change', renderRadar);
+    });
+    /* 警告条上的「重试读取已购库」按钮是 innerHTML 动态生成的，
+       不能上面那样直接绑定 —— 用事件委托挂在容器上。 */
+    const $radarOwnedWarn = $('#radarOwnedWarn');
+    if ($radarOwnedWarn) $radarOwnedWarn.addEventListener('click', e => {
+      if (e.target.closest('#btnRadarReloadOwned')) loadOwned(true);
     });
     const $radarGrid = $('#radarGrid');
     if ($radarGrid) $radarGrid.addEventListener('click', e => {
@@ -6415,7 +7486,21 @@ function triggerCloudPull() {
     if ($btnOwned) $btnOwned.addEventListener('click', async () => {
       openModal('modalOwned');
       renderOwned();
-      if (!OWNED.games.length && !OWNED.error) await loadOwned();
+      /* 已有数据 → 直接跑一次自动清理（这是用户主动点进来的，意图明确）；
+         还没有 → 先读，读完**不**自动清理，避免「一进站点清单就少了一堆」。
+         自动清理在打开「已购入检测」弹窗这个场景下是用户预期的行为，
+         而在页面 boot 时自动跑则不是。 */
+      if (OWNED.games.length && !OWNED.error) {
+        const r = autoCleanOwned();
+        if (r.removed) {
+          toast('已自动移除 ' + r.removed + ' 款你已买过的游戏，顶部可撤销', 'success', 6000);
+        } else if (r.skipped && r.reason && /备份|就绪|出错|放弃/.test(r.reason)) {
+          toast('未执行自动清理：' + r.reason, 'warn', 6000);
+        }
+        renderOwnedAutoBanner();
+      } else {
+        await loadOwned();
+      }
     });
     const $btnOwnedReload = $('#btnOwnedReload');
     if ($btnOwnedReload) $btnOwnedReload.addEventListener('click', () => loadOwned(true));
@@ -6423,8 +7508,14 @@ function triggerCloudPull() {
     if ($btnOwnedDel) $btnOwnedDel.addEventListener('click', deleteOwnedSelected);
     const $btnOwnedUndo = $('#btnOwnedUndo');
     if ($btnOwnedUndo) $btnOwnedUndo.addEventListener('click', undoOwnedCleanup);
-    /* 备份存在才显示「撤销」按钮 —— 免得给一个用不了的东西入口 */
-    try { if (localStorage.getItem(OWNED_BACKUP_KEY)) $('#btnOwnedUndo').style.display = ''; } catch (e) {}
+    /* 备份存在才显示「撤销」按钮 —— 免得给一个用不了的东西入口。
+       用 readOwnedBackup() 而不是直接读 key：当前槽被覆盖过时它还能翻到历史备份。 */
+    try { if (readOwnedBackup()) $('#btnOwnedUndo').style.display = ''; } catch (e) {}
+    /* 顶部横幅里的「撤销这次清理」按钮是 innerHTML 生成的，用委托绑。 */
+    const $oaBanner = $('#ownedAutoBanner');
+    if ($oaBanner) $oaBanner.addEventListener('click', e => {
+      if (e.target.closest('#btnOwnedAutoUndo')) undoOwnedCleanup();
+    });
     ['#ownedMainBody', '#ownedDlcBody'].forEach(sel => {
       const el = $(sel);
       if (!el) return;
@@ -6810,6 +7901,8 @@ function boot() {
   hideProgress(true);
   renderAll();
   renderQueue();
+  renderRadar();                  /* 缓存里的 specials 要先画出来，否则弹窗首次打开是空的 */
+  renderOwnedAutoBanner();        /* 上次自动清理的撤销入口要一直挂着，不能刷新一次就消失 */
   bindWindowScroll();
   setupXScroll();
   setTimeout(setupXScroll, 300);   // 等字体/图片落位后校正一次高度
@@ -6823,7 +7916,22 @@ function boot() {
     toast('欢迎使用 Steam 愿望单 · 史低清单！在上方输入游戏名（如：艾尔登法环）开始添加。配置 ITAD API Key 后可自动查询国区史低。', 'info', 9000);
   }
   if (window.matchMedia && window.matchMedia('(max-width: 720px)').matches) {
-    setTimeout(() => toast('📱 手机操作提示：点「游戏名」看详情；点表格里的 ✎ 史低 / 次数 / 目标价 可直接输入数字；表格可左右滑动。', 'info', 9000), 1200);
+    /* 【2026-10-11 第九批】首访引导：只弹一次，文案跟上卡片视图。
+       旧问题（靠截图看出来的）：① 每次打开都弹、每次 9 秒，两条叠在一起把状态分段整个盖住；
+       ② 文案还在教「点表格里的 ✎」「表格左右滑动」，手机端早换成卡片视图了 —— 教错了。 */
+    (function () {
+      try {
+        var GUIDE_KEY = 'sw_guide_v1';
+        if (localStorage.getItem(GUIDE_KEY)) return;
+        var isPhone = window.matchMedia && window.matchMedia('(max-width:720px)').matches;
+        if (isPhone) { localStorage.setItem(GUIDE_KEY, '1'); return; }
+        toast('欢迎使用 Steam 愿望单 · 史低清单！点上方「＋ 添加」输入游戏名（如：艾尔登法环）。配置 ITAD API Key 后可自动查询国区史低。', 'info', 5500);
+        setTimeout(function () {
+          toast('💡 用法：工具栏可在「▦ 表格 / ▤ 卡片」间切换；点游戏名看详情；点卡片左上角徽章标记想玩 / 在玩 / 已玩 / 搁置。', 'info', 6500);
+        }, 900);
+        localStorage.setItem(GUIDE_KEY, '1');
+      } catch (e) {}
+    })();
   }
   // 运行状态标记：如果标题旁没有出现"✅ 已加载"，说明 JS 没有运行（当前查看方式是静态预览）
   const jsOK = document.createElement('span');
@@ -6860,6 +7968,515 @@ try { boot(); } catch (e) { showFatalError(e); console.error(e); }
 window.__testSearch = t => steamSearch(t);
 window.__testTranslate = t => translateText(t);
 window.__testAppDetails = id => steamAppDetails(id);
+
+/* ============================================================
+ * 【2026-10-11 全面升级 · 第三批】Backlog 状态 + 卡片视图
+ * ------------------------------------------------------------
+ * 为什么加「状态」：Backloggd / Grouvee 这类收藏管理工具的核心从来不是数据多，
+ * 而是给每款游戏一个**位置**（想玩/在玩/已玩/搁置）。我们只有一张平铺表格，
+ * 玩过和想买的混在一起 —— 这是同类工具里最基本、我们也最缺的一维。
+ *
+ * 为什么加「卡片」：16 列表格适合对比数据，不适合浏览。一屏 10 行 × 16 个数字，
+ * 眼睛要横向扫 16 次。卡片把「状态/折扣/价格/评分/截止」压成一屏一卡。
+ *
+ * 关键约束：**表格路径一行未改**，卡片是旁路，切回表格行为完全一致。
+ * ============================================================ */
+var BACKLOG_TYPES = [
+  { k: 'want',    label: '想玩', cls: 'bd-want'    },
+  { k: 'playing', label: '在玩', cls: 'bd-playing' },
+  { k: 'done',    label: '已玩', cls: 'bd-done'    },
+  { k: 'shelved', label: '搁置', cls: 'bd-shelved' },
+];
+const BACKLOG_TIP = {
+  want: '在愿望单里盯着，等打折',
+  playing: '已经买了，正在玩',
+  done: '玩过了 —— 可以考虑从愿望单移出',
+  shelved: '暂时不玩，先搁着',
+};
+
+function backlogOf(g) {
+  const k = g && g.backlog;
+  return BACKLOG_TYPES.some(function (b) { return b.k === k; }) ? k : 'want';
+}
+function backlogInfo(k) {
+  for (let i = 0; i < BACKLOG_TYPES.length; i++) if (BACKLOG_TYPES[i].k === k) return BACKLOG_TYPES[i];
+  return BACKLOG_TYPES[0];
+}
+function backlogBadgeHtml(g) {
+  const b = backlogInfo(backlogOf(g));
+  return '<span class="bd-badge ' + b.cls + '" data-bd-appid="' + g.appid + '"'
+    + ' title="' + esc(BACKLOG_TIP[b.k]) + '（点击切换）">' + b.label + '</span>';
+}
+function backlogCycle(appid) {
+  const id = Number(appid);
+  let hit = null;
+  for (let i = 0; i < STATE.games.length; i++) {
+    if (Number(STATE.games[i].appid) === id) { hit = STATE.games[i]; break; }
+  }
+  if (!hit) return null;
+  const i = BACKLOG_TYPES.findIndex(function (b) { return b.k === backlogOf(hit); });
+  hit.backlog = BACKLOG_TYPES[(i + 1) % BACKLOG_TYPES.length].k;
+  hit.updatedAt = nowMs();
+  saveDataNow();                       // 立刻落盘，不靠 debounce
+  return hit.backlog;
+}
+function backlogCounts() {
+  const c = { want: 0, playing: 0, done: 0, shelved: 0 };
+  for (let i = 0; i < STATE.games.length; i++) c[backlogOf(STATE.games[i])]++;
+  return c;
+}
+
+/* ---------- 视图切换 ---------- */
+var VIEW_KEY = 'sw_view_v1';
+var VIEW = 'table';
+try { VIEW = localStorage.getItem(VIEW_KEY) === 'card' ? 'card' : 'table'; } catch (e) { VIEW = 'table'; }
+
+function ensureViewUI() {
+  let grid = document.getElementById('cardGrid');
+  if (!grid) {
+    grid = document.createElement('div');
+    grid.id = 'cardGrid';
+    grid.className = 'card-grid';
+    grid.hidden = true;
+    const tw = document.getElementById('tableWrap');
+    if (tw && tw.parentNode) tw.parentNode.insertBefore(grid, tw.nextSibling);
+    else document.body.appendChild(grid);
+    grid.addEventListener('click', function (e) {
+      const bd = e.target.closest ? e.target.closest('[data-bd-appid]') : null;
+      if (bd) { e.stopPropagation(); backlogCycle(bd.getAttribute('data-bd-appid')); renderCards(); return; }
+      const card = e.target.closest ? e.target.closest('.gcard') : null;
+      if (card) openDetail(Number(card.getAttribute('data-appid')));
+    });
+  }
+  let tg = document.getElementById('viewToggle');
+  if (!tg) {
+    tg = document.createElement('div');
+    tg.id = 'viewToggle';
+    tg.className = 'view-toggle';
+    tg.innerHTML = '<button class="vt-btn" id="btnViewTable" title="表格视图：适合逐列对比数据">▦ 表格</button>'
+                + '<button class="vt-btn" id="btnViewCard" title="卡片视图：适合一眼扫完">▤ 卡片</button>';
+    const anchor = document.getElementById('btnCloudSync');
+    if (anchor && anchor.parentNode) anchor.parentNode.appendChild(tg);
+    else document.body.appendChild(tg);
+    tg.addEventListener('click', function (e) {
+      const b = e.target.closest('.vt-btn');
+      if (b) setView(b.id === 'btnViewCard' ? 'card' : 'table');
+    });
+  }
+  return grid;
+}
+
+function setView(v) {
+  VIEW = v === 'card' ? 'card' : 'table';
+  try { localStorage.setItem(VIEW_KEY, VIEW); } catch (e) {}
+  applyView();
+}
+
+function applyView() {
+  const grid = ensureViewUI();
+  const tw = document.getElementById('tableWrap');
+  const on = VIEW === 'card';
+  if (tw) tw.hidden = on;
+  grid.hidden = !on;
+  const bt = document.getElementById('btnViewTable'), bc = document.getElementById('btnViewCard');
+  if (bt) bt.classList.toggle('on', !on);
+  if (bc) bc.classList.toggle('on', on);
+  if (on) renderCards();
+  else renderTable();
+}
+
+/* ---------- 卡片渲染 ---------- */
+function gcRemainText(ms) {
+  if (ms == null || ms <= 0) return '';
+  const d = Math.floor(ms / 86400000);
+  const h = Math.floor((ms % 86400000) / 3600000);
+  if (d > 0) return d + ' 天 ' + h + ' 小时后结束';
+  if (h > 0) return h + ' 小时后结束';
+  return Math.max(1, Math.floor(ms / 60000)) + ' 分钟后结束';
+}
+
+function cardHtml(g) {
+  const p = g.price || {};
+  const rt = g.rating || {};
+  const hl = g.historicalLow || {};
+  const bd = backlogOf(g);
+  const off = Number(p.discountPercent) || 0;
+  const onSale = !!p.isOnSale && p.current != null;
+
+  let priceHtml;
+  if (onSale) {
+    priceHtml = '<s>' + fmtPrice(p.original, p.currency) + '</s><b>' + fmtPrice(p.current, p.currency) + '</b>';
+  } else if (p.current != null) {
+    priceHtml = '<b>' + fmtPrice(p.current, p.currency) + '</b>';
+  } else {
+    priceHtml = '<span class="gc-none">价格未知</span>';
+  }
+
+  const meta = [];
+  if (rt.score != null) meta.push('评分 <i>' + rt.score + '</i>');
+  if (hl.price != null) meta.push('史低 <i>' + fmtPrice(hl.price, p.currency) + '</i>');
+  if (g.targetPrice != null) meta.push('目标 <i>' + fmtPrice(g.targetPrice, p.currency) + '</i>');
+
+  const rem = saleRemainMs(g);
+  const endHtml = (onSale && rem != null && rem > 0)
+    ? '<div class="gc-end' + (rem <= 24 * 3600 * 1000 ? ' urgent' : '') + '">⏳ ' + esc(gcRemainText(rem)) + '</div>'
+    : '';
+
+  const targetHit = (g.targetPrice != null && p.current != null && p.current <= g.targetPrice);
+  const tgtHtml = targetHit ? '<div class="gc-target">✓ 已达目标价</div>' : '';
+
+  const cls = 'gcard ' + (onSale ? 'on-sale ' : '') + (bd === 'playing' ? 'playing ' : '') + (bd === 'done' ? 'done' : '');
+  const genre = (g.details && g.details.genres && g.details.genres[0]) || '';
+
+  return '<article class="' + cls + '" data-appid="' + g.appid + '" title="点击查看详情">'
+    + '<div class="gc-top">' + backlogBadgeHtml(g)
+    + (off > 0 ? '<span class="gc-off">-' + off + '%</span>' : '') + '</div>'
+    + '<h4 class="gc-title">' + esc(g.name || ('AppID ' + g.appid)) + '</h4>'
+    + '<div class="gc-price">' + priceHtml + '</div>'
+    + (meta.length ? '<div class="gc-meta">' + meta.join('') + '</div>' : '')
+    + tgtHtml + endHtml
+    + (genre ? '<span class="gc-tag">' + esc(genre) + '</span>' : '')
+    + '</article>';
+}
+
+function renderCards() {
+  const grid = document.getElementById('cardGrid');
+  if (!grid) return;
+  const games = applySort(applyFilters(STATE.games));
+  if (!games.length) {
+    grid.innerHTML = '<div class="card-empty">'
+      + (STATE.games.length ? '没有符合筛选条件的游戏。<br><small>可点上方「重置筛选」清空条件。</small>'
+                           : '愿望单为空。请在上方输入游戏名或 AppID 添加。')
+      + '</div>';
+    return;
+  }
+  let h = '';
+  for (let i = 0; i < games.length; i++) h += cardHtml(games[i]);
+  grid.innerHTML = h;
+}
+
+/* ============================================================
+ * 【2026-10-11 · 试用版专用】演示模式 ?demo=1
+ * 只有 URL 带 ?demo=1 才触发；线上不带这个参数，行为与之前完全一致。 */
+async function __loadDemo() {
+  try {
+    if (!/[?&]demo=1(?:&amp;|&)/.test(location.search)) return;
+    const r = await fetch('data/wishlist.json?t=' + Date.now());
+    if (!r.ok) { console.warn('[demo] HTTP ' + r.status); return; }
+    const doc = await r.json();
+    if (!Array.isArray(doc.games) || !doc.games.length) { console.warn('[demo] 数据为空'); return; }
+    if (localStorage.getItem('__sw_demo_lock')) { console.log('[demo] 已载入过，保留当前数据'); return; }
+    STATE.games = doc.games;
+    localStorage.setItem('__sw_demo_lock', '1');
+    saveDataNow();
+    console.log('[demo] 已载入 ' + doc.games.length + ' 款');
+    toast('演示模式：已载入 ' + doc.games.length + ' 款示例数据（本地试用）', 'info', 4000);
+    renderAll();
+  } catch (e) { console.warn('[demo] 失败：' + e.message); }
+}
+try { setTimeout(__loadDemo, 300); } catch (e) {}
+
+/* ============================================================
+ * 【2026-10-11 · 手机端重构】底部导航 + 抽屉（桌面端完全不启用）
+ * ------------------------------------------------------------
+ * 只在 <=720px 生效。桌面跑 puppeteer 测试时视口 800+，
+ * 这里直接 return，一行都不参与，所以不影响任何现有断言。
+ * ============================================================ */
+function mMobile() { return window.matchMedia('(max-width:720px)').matches; }
+
+function mEnsureNav() {
+  if (document.getElementById('mnav')) return;
+  document.body.classList.add('mnav-on');
+
+  var nav = document.createElement('nav');
+  nav.id = 'mnav'; nav.className = 'mnav';
+  var ITEMS = [
+    { k: 'list',   i: '&#128203;', t: '清单' },
+    { k: 'radar',  i: '&#127752;', t: '特价' },
+    { k: 'owned',  i: '&#9989;',   t: '已购' },
+    { k: 'filter', i: '&#128269;', t: '筛选' },
+    { k: 'add',    i: '&#10133;',  t: '添加' },
+  ];
+  nav.innerHTML = ITEMS.map(function (x) {
+    return '<button class="mnav-btn' + (x.k === 'list' ? ' on' : '') + '" data-mv="' + x.k + '">'
+         + '<i>' + x.i + '</i><span>' + x.t + '</span></button>';
+  }).join('');
+
+  var back = document.createElement('div');
+  back.id = 'mdrawerBackdrop'; back.className = 'mdrawer-backdrop';
+
+  var dr = document.createElement('div');
+  dr.id = 'mdrawer'; dr.className = 'mdrawer';
+  dr.innerHTML = '<div class="mdrawer-head"><span id="mdrawerTitle">筛选</span>'
+               + '<button type="button" id="mdrawerClose" aria-label="关闭">×</button></div>'
+               + '<div id="mdrawerBody"></div>';
+
+  document.body.appendChild(back);
+  document.body.appendChild(dr);
+  document.body.appendChild(nav);
+
+  back.addEventListener('click', mCloseDrawer);
+  document.getElementById('mdrawerClose').addEventListener('click', mCloseDrawer);
+  nav.addEventListener('click', function (e) {
+    var b = e.target.closest ? e.target.closest('[data-mv]') : null;
+    if (b) mGo(b.getAttribute('data-mv'));
+  });
+}
+
+function mGo(k) {
+  if (!mMobile()) return;
+  mEnsureNav();
+  var bars = document.querySelectorAll('#mnav .mnav-btn');
+  for (var i = 0; i < bars.length; i++) {
+    bars[i].classList.toggle('on', bars[i].getAttribute('data-mv') === k);
+  }
+  if (k === 'list') { mCloseDrawer(); return; }
+  if (k === 'radar') { mCloseDrawer(); var r = document.getElementById('btnRadar'); if (r) r.click(); return; }
+  if (k === 'owned') { mCloseDrawer(); var o = document.getElementById('btnOwned'); if (o) o.click(); return; }
+  mOpenDrawer(k === 'add' ? 'add' : 'filter');
+}
+
+function mOpenDrawer(which) {
+  if (!mMobile()) return;
+  mEnsureNav();
+  var body = document.getElementById('mdrawerBody');
+  var title = document.getElementById('mdrawerTitle');
+  var src = document.getElementById(which === 'add' ? 'secAdd' : 'secTools');
+  if (!src) return;
+  title.textContent = which === 'add' ? '添加游戏' : '筛选与工具';
+  body.innerHTML = '';
+  body.appendChild(src);          /* 把真的区块搬进抽屉 —— 功能一个不少 */
+  src.classList.add('open');
+  document.getElementById('mdrawer').classList.add('on');
+  document.getElementById('mdrawerBackdrop').classList.add('on');
+}
+
+function mCloseDrawer() {
+  var d = document.getElementById('mdrawer');
+  var b = document.getElementById('mdrawerBackdrop');
+  if (!d || !d.classList.contains('on')) return;
+  d.classList.remove('on');
+  if (b) b.classList.remove('on');
+  var body = document.getElementById('mdrawerBody');
+  var src = body && body.firstElementChild;
+  if (src) { src.classList.remove('open'); body.parentNode.insertBefore(src, d); }
+}
+
+function mSyncViewport() {
+  if (mMobile()) return;
+  mCloseDrawer();
+  var d = document.getElementById('mdrawer'), b = document.getElementById('mdrawerBackdrop');
+  if (d) d.classList.remove('on');
+  if (b) b.classList.remove('on');
+}
+
+try {
+  setTimeout(function () {
+    if (mMobile()) {
+      mEnsureNav();
+      if (VIEW === 'table') setView('card');   /* 手机默认卡片 */
+    }
+    mSyncViewport();
+  }, 500);
+  window.addEventListener('resize', mSyncViewport);
+} catch (e) {}
+
+/* ============================================================
+ * 【2026-10-11 · 第七批】Steam 封面 + 顶部分段筛选
+ * ============================================================ */
+
+/* Steam 公开封面 CDN：竖版海报，浏览器直接取，不用申请任何 Key。
+   取不到时回落成首字占位 —— 绝不出现裂图。 */
+function gCoverUrl(appid) {
+  return 'https://cdn.akamai.steamstatic.com/steam/apps/' + appid + '/library_600x900.jpg';
+}
+
+function renderCards() {
+  var grid = document.getElementById('cardGrid');
+  if (!grid) return;
+  var games = applySort(applyFilters(STATE.games));
+  if (!games.length) {
+    grid.innerHTML = '<div class="card-empty">'
+      + (STATE.games.length ? '没有符合筛选条件的游戏。<br><small>可以清掉筛选条件再看看。</small>'
+                           : '愿望单为空。点底部「＋添加」加游戏。')
+      + '</div>';
+    return;
+  }
+  var h = '';
+  for (var i = 0; i < games.length; i++) h += cardHtml(games[i]);
+  grid.innerHTML = h;
+  try { if (window.mMobile && mMobile()) mEnsureSeg(); else segRefreshCounts(); } catch (e) {}
+}
+
+/* 顶部分段：想玩 / 在玩 / 已玩 / 搁置 —— Backloggd 的核心交互 */
+var SEG_KEY = 'sw_seg_v1';
+var SEG = 'all';
+function segSet(k) {
+  SEG = k;
+  try { localStorage.setItem(SEG_KEY, k); } catch (e) {}
+  var btns = document.querySelectorAll('#mseg button');
+  for (var i = 0; i < btns.length; i++) btns[i].classList.toggle('on', btns[i].getAttribute('data-seg') === k);
+  renderCards();
+}
+function segCount(k) {
+  var n = 0;
+  for (var i = 0; i < STATE.games.length; i++) {
+    if (k === 'all' || backlogOf(STATE.games[i]) === k) n++;
+  }
+  return n;
+}
+function mEnsureSeg() {
+  if (document.getElementById('mseg')) return;
+  var seg = document.createElement('div');
+  seg.id = 'mseg'; seg.className = 'mseg';
+  var defs = [
+    { k: 'all',     t: '全部' },
+    { k: 'want',    t: '想玩' },
+    { k: 'playing', t: '在玩' },
+    { k: 'done',    t: '已玩' },
+    { k: 'shelved', t: '搁置' },
+  ];
+  seg.innerHTML = defs.map(function (d) {
+    return '<button data-seg="' + d.k + '" class="' + (d.k === 'all' ? 'on' : '') + '">' + d.t + '</button>';
+  }).join('');
+  seg.addEventListener('click', function (e) {
+    var b = e.target.closest ? e.target.closest('[data-seg]') : null;
+    if (b) segSet(b.getAttribute('data-seg'));
+  });
+  var grid = document.getElementById('cardGrid');
+  if (grid && grid.parentNode) grid.parentNode.insertBefore(seg, grid);
+  segSet(SEG);
+}
+
+
+/* 状态切换后要刷新分段计数 */
+var _segTimer = null;
+function segRefreshCounts() {
+  var seg = document.getElementById('mseg');
+  if (!seg) return;
+  var defs = [['all','全部'],['want','想玩'],['playing','在玩'],['done','已玩'],['shelved','搁置']];
+  for (var i = 0; i < defs.length; i++) {
+    var b = seg.querySelector('[data-seg="' + defs[i][0] + '"]');
+    if (b) b.title = defs[i][1] + ' ' + segCount(defs[i][0]) + ' 款';
+  }
+}
+
+/* 卡片：封面在上、信息在下（Backloggd 的形态） */
+function cardHtml(g) {
+  var p = g.price || {}, rt = g.rating || {}, hl = g.historicalLow || {};
+  var bd = backlogOf(g);
+  var off = Number(p.discountPercent) || 0;
+  var onSale = !!p.isOnSale && p.current != null;
+  var nm = esc(g.name || ('AppID ' + g.appid));
+
+  var price;
+  if (onSale) price = '<s>' + fmtPrice(p.original, p.currency) + '</s><b>' + fmtPrice(p.current, p.currency) + '</b>';
+  else if (p.current != null) price = '<b>' + fmtPrice(p.current, p.currency) + '</b>';
+  else price = '<span class="gc-none">—</span>';
+
+  var meta = [];
+  if (rt.score != null) meta.push('★<i>' + rt.score + '</i>');
+  if (hl.price != null) meta.push('史低<i>' + fmtPrice(hl.price, p.currency) + '</i>');
+
+  var rem = saleRemainMs(g);
+  var endH = (onSale && rem != null && rem > 0)
+    ? '<div class="gc-end' + (rem <= 24 * 3600 * 1000 ? ' urgent' : '') + '">⏳ ' + esc(gcRemainText(rem)) + '</div>'
+    : '';
+
+  var tgt = (g.targetPrice != null && p.current != null && p.current <= g.targetPrice)
+    ? '<div class="gc-target">✓ 已达目标价</div>' : '';
+
+  var cls = 'gcard ' + (onSale ? 'on-sale ' : '') + (bd === 'playing' ? 'playing ' : '') + (bd === 'done' ? 'done' : '');
+
+  return '<article class="' + cls + '" data-appid="' + g.appid + '" title="' + nm + '">'
+    + '<div class="gcover">'
+    +   '<img loading="lazy" src="' + gCoverUrl(g.appid) + '" alt="' + nm + '"'
+    +     ' onerror="this.parentNode.classList.add(\'noart\');this.remove();this.parentNode.textContent=\'' + esc((g.name || '?').slice(0, 1)) + '\'">'
+    +   (off > 0 ? '<span class="gc-off">-' + off + '%</span>' : '')
+    +   endH
+    +   backlogBadgeHtml(g)
+    + '</div>'
+    + '<div class="gbody">'
+    /* 【2026-10-12】移动端把封面上的折扣徽章隐藏了（82px 宽里挤不下），
+       所以在标题行再输出一个专供窄屏的版本 —— 两个元素同一份数据，
+       CSS 各挑各的显示，桌面端还是原来的封面徽章，不会重复显示。 */
+    +   (off > 0 ? '<h4 class="gc-title"><span class="gc-off-inline">-' + off + '%</span>' + nm + '</h4>'
+                : '<h4 class="gc-title">' + nm + '</h4>')
+    +   '<div class="gc-price">' + price + '</div>'
+    +   (meta.length ? '<div class="gc-meta">' + meta.join('') + '</div>' : '')
+    +   tgt
+    + '</div>'
+    + '</article>';
+}
+
+/* ============================================================
+ * 【2026-10-11 第十一批】精选：今天值得看
+ * ============================================================ */
+function pickWorthy(list) {
+  var out = [];
+  var src = list || STATE.games || [];
+  for (var i = 0; i < src.length; i++) {
+    var g = src[i];
+    var p = g.price || {}, hl = g.historicalLow || {};
+    var tag = '', cls = '', power = 0;
+    /* 史低系 */
+    if (p.current != null && hl.price != null && p.current > 0 && hl.price > 0) {
+      var ratio = p.current / hl.price;
+      if (ratio <= 1.02)      { tag = '史低';     cls = 't-low';   power = 100; }
+      else if (ratio <= 1.05) { tag = '近史低';   cls = 't-near';  power = 88;  }
+      else if (ratio <= 1.10) { tag = '近期低价'; cls = 't-near';  power = 74;  }
+    }
+    /* 性价比系 */
+    var vs = null;
+    try { vs = computeValueScore(g); } catch (e) {}
+    if (vs && typeof vs.score === 'number' && vs.score >= 75) {
+      if (!tag) { tag = '高性价比'; cls = 't-value'; power = 62; }
+      else power = Math.max(power, 62);
+    }
+    if (tag) out.push({ g: g, tag: tag, cls: cls, power: power + (vs && vs.score ? vs.score / 20 : 0) });
+  }
+  out.sort(function (a, b) { return b.power - a.power; });
+  return out.slice(0, 12);
+}
+
+function renderCards() {
+  var grid = document.getElementById('cardGrid');
+  if (!grid) return;
+  var games = applySort(applyFilters(STATE.games));
+  if (!games.length) {
+    grid.innerHTML = '<div class="card-empty">'
+      + (STATE.games.length ? '没有符合筛选条件的游戏。<br><small>可以清掉筛选条件再看看。</small>'
+                           : '愿望单为空。点底部「＋添加」加游戏。')
+      + '</div>';
+    return;
+  }
+
+  /* 有筛选/分段时不做精选，免得和用户的筛选打架 */
+  var filtering = (SEG && SEG !== 'all') || (STATE.filters && (
+      STATE.filters.search || STATE.filters.rec || STATE.filters.conf ||
+      STATE.filters.target || STATE.filters.sale || STATE.filters.series || STATE.filters.value));
+
+  var h = '';
+  if (!filtering) {
+    var picks = pickWorthy(games);
+    if (picks.length) {
+      h += '<div class="worthy-head"><b>✨ 今天值得看</b><span>' + picks.length + ' 款</span>'
+        + '<span class="why">按史低程度与性价比挑的，不是全部</span></div>';
+      h += '<div class="worthy-grid">';
+      for (var i = 0; i < picks.length; i++) {
+        var w = picks[i];
+        h += cardHtml(w.g).replace('<div class="gbody">',
+          '<span class="gtag ' + w.cls + '">' + w.tag + '</span><div class="gbody">');
+      }
+      h += '</div>';
+      h += '<div class="alltip">下面是全部 ' + games.length + ' 款 · 往下滚</div>';
+    }
+  }
+
+  for (var j = 0; j < games.length; j++) h += cardHtml(games[j]);
+  grid.innerHTML = h;
+  try { if (window.mMobile && mMobile()) mEnsureSeg(); } catch (e) {}
+}
 </script>
 </body>
 </html>

@@ -215,7 +215,17 @@ check('B-9 ★ 只保留 appid + playtimeForever 两个字段（2026-10-11 收�
   }));
   check('G-1 ★ 默认一个都不勾选', gChecks.checkedMain === 0 && gChecks.checkedDlc === 0, gChecks);
   check('G-2 未勾选时删除按钮禁用', gChecks.delDisabled === true, gChecks);
-  check('G-3 有醒目警告（说明这是不可逆操作）', gChecks.warnTxt.length > 0, gChecks.warnTxt);
+  /* 【2026-10-12】原来这里查的是 #modalOwned 里那段 .owned-warn 解释块
+     （「判断依据只有一条…不再作为可能没有的怀疑依据…」）。
+     用户明确要求删掉这类解释设计决策的段落 —— 它是给开发者看的，不是给用户看的。
+     告知责任现在由页脚的 .radar-foot-hint 承担（那句是操作指引，该留）。
+     所以断言改成检查「页脚仍有操作指引」，而不是检查解释块。 */
+  const ownedFoot = await page.evaluate(() => {
+    const el = document.querySelector('#ownedFootHint');
+    return el ? (el.textContent || '').trim() : '';
+  });
+  check('G-3 页脚有操作指引（告知删前备份、可撤销）',
+    /备份/.test(ownedFoot) && /撤销/.test(ownedFoot), ownedFoot);
 
   // 勾选联动
   const linkRes = await page.evaluate(() => {
@@ -238,14 +248,70 @@ check('B-9 ★ 只保留 appid + playtimeForever 两个字段（2026-10-11 收�
   check('G7 删除路径调用的是 saveDataNow（不是 debounce 的 saveData）',
     /function doDelete\(|deleteOwnedSelected\([\s\S]{0,900}saveDataNow/.test(srcHtml),
     (srcHtml.match(/function (doDelete|deleteOwnedSelected)\([\s\S]{0,400}/) || [])[0]);
-  check('G8 删除前会先备份（可撤销）', /function backupBeforeCleanup\(\)/.test(srcHtml));
+  check('G8 删除前会先备份（可撤销）',
+    /function backupBeforeCleanup\(/.test(srcHtml) && /function readOwnedBackup\(/.test(srcHtml));
   check('G9 有撤销入口', /function undoOwnedCleanup\(\)/.test(srcHtml) && /btnOwnedUndo/.test(srcHtml));
   check('G10 备份有独立 key（不会和清单数据混在一起）',
-    /OWNED_BACKUP_KEY\s*=\s*'[^']+'/.test(srcHtml));
+    /OWNED_BACKUP_PREFIX\s*=\s*'[^']+'/.test(srcHtml)
+    && /OWNED_BACKUP_KEY\s*=\s*OWNED_BACKUP_PREFIX/.test(srcHtml),
+    (srcHtml.match(/const OWNED_BACKUP_[A-Z_]+[^\n]*/g) || []).join(' | '));
   check('G11 备份里的清单与主清单不是同一个引用（真快照）',
     /JSON\.parse\(JSON\.stringify\(STATE\.games\)\)/.test(srcHtml));
   check('G12 删除有二次确认（showConfirm）',
     /function deleteOwnedSelected\([\s\S]{0,600}showConfirm/.test(srcHtml));
+
+  /* ==================================================================
+   * G2 组【2026-10-12 新增】自动清理的安全阀
+   *
+   * 背景：用户要求从「勾选才删」改成「自动删」（原话「免得我又要重复去看
+   * 是否购买」）。自动删除是不可逆操作，这里锁死它的每一道安全阀。
+   *
+   * 🔴 头号风险：owned.json 读不到时如果照删，整个愿望单会被清空。
+   *    下面 L1-L4 是防这个的，必须全部成立。
+   * ================================================================== */
+  console.log('\n=== G2. 自动清理的安全阀（不可逆操作，必须全部成立） ===');
+  check('G2-1 有 autoCleanOwned 函数', /function autoCleanOwned\(/.test(srcHtml));
+  const autoBody = (srcHtml.match(/function autoCleanOwned\(\)[\s\S]*?\n\}/) || [])[0] || '';
+  check('G2-2 自动清理第一道就查 ownedDataReady()（已购数据不可用则不删）',
+    /ownedDataReady\(\)/.test(autoBody), autoBody.slice(0, 120));
+  check('G2-3 ★ owned 数据为空时 res.skipped=true 并 return，绝不继续删',
+    /if\s*\(!ownedDataReady\(\)\)\s*\{[\s\S]{0,220}skipped\s*=\s*true[\s\S]{0,80}return\s+res/.test(autoBody));
+  check('G2-4 ★ 备份失败就不删（res.skipped=true）',
+    /if\s*\(!backupBeforeCleanup\(\{[\s\S]{0,120}skip/.test(autoBody)
+    || /backupBeforeCleanup\(\)\)\s*\{\s*\n?\s*res\.reason[\s\S]{0,120}skipped\s*=\s*true/.test(autoBody),
+    autoBody.slice(autoBody.indexOf('backupBeforeCleanup'), autoBody.indexOf('backupBeforeCleanup') + 200));
+  check('G2-5 ★ 备份写入后立刻回读校验，读不回来就放弃',
+    /readOwnedBackup\(\)[\s\S]{0,120}skipped\s*=\s*true/.test(autoBody));
+  check('G2-6 只删「两边都有」的交集（用 classifyOwned，不是拿 owned 直接删）',
+    /classifyOwned\(OWNED\.games,\s*STATE\.games\)/.test(autoBody));
+  check('G2-7 有撤销横幅', /function renderOwnedAutoBanner\(/.test(srcHtml) && /btnOwnedAutoUndo/.test(srcHtml));
+  check('G2-8 横幅只在「自动清理产生的备份」时显示（手动删的不占横幅）',
+    /if\s*\(!b\s*\|\|\s*!b\.auto\)/.test(srcHtml));
+  check('G2-9 横幅有保留窗口常量', /OWNED_AUTO_BANNER_DAYS/.test(srcHtml));
+  check('G2-10 自动清理走 doDelete(..., {auto:true})，复用备份/撤销机制',
+    /doDelete\(ids,\s*\{\s*auto:\s*true\s*\}\)/.test(autoBody));
+  /* 读数据 ≠ 改用户清单。loadOwned 被 boot / 雷达重试 / 已购检测三处调用，
+     若在里面直接删，将来谁加一处调用就会莫名动用户清单。
+     判据要避开注释里出现的那个名字 —— 上面那段注释就写了「统一走 autoCleanOwned()」，
+     所以只认「真的调用了」：autoCleanOwned( 出现在代码里而不是 *\/ 之后。 */
+  const loadOwnedBody = (srcHtml.match(/async function loadOwned\([\s\S]*?\n\}/) || [])[0] || '';
+  const loadOwnedCode = loadOwnedBody.replace(/\/\*[\s\S]*?\*\//g, '').replace(/\/\/.*$/gm, '');
+  check('G2-11 ★ loadOwned 里不做自动清理（读写分离）',
+    !/autoCleanOwned\s*\(/.test(loadOwnedCode), loadOwnedCode.slice(0, 120));
+  check('G2-11b 上面的检查确实是在剥掉注释后做的（避免被注释里的名字骗过）',
+    /autoCleanOwned/.test(loadOwnedBody) && !/autoCleanOwned\s*\(/.test(loadOwnedCode));
+
+  console.log('\n=== G3. 云端复活防护 ===');
+  const mergeBody = (srcHtml.match(/function mergeCloudGames\([\s\S]*?\n\}/) || [])[0] || '';
+  check('G3-1 拉取时已购条目被跳过（不补回本地）',
+    /ownedSetNow\.has\(id\)[\s\S]{0,80}skippedOwned\+\+/.test(mergeBody),
+    (mergeBody.match(/if\s*\(ownedSetNow[^\n]*/) || [])[0]);
+  check('G3-2 skippedOwned 一并返回给调用方',
+    /return\s*\{[^}]*skippedOwned/.test(mergeBody));
+  check('G3-3 跳过数量在提示里如实回显（不静默）',
+    /stat\.skippedOwned/.test(srcHtml));
+  check('G3-4 云端不会「主动」合回来（上传是整份覆盖，不是合并）',
+    /payload\s*=\s*withProvenance\(\{[^}]*games:\s*STATE\.games/.test(srcHtml));
 
   console.log('\n=== H. CI 接线：Key 走 secrets，绝不写死 ===');
   const yml = fs.readFileSync(path.join(ROOT, '.github', 'workflows', 'daily-refresh.yml'), 'utf8');

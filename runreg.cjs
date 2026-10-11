@@ -34,7 +34,12 @@ const SUITES = {
   /* 【2026-10-11 新增】今日特价雷达 + 我的 Steam 库（两个新功能的完整链路） */
   specials:  'tools/_test_specials.cjs',
   owned:     'tools/_test_owned.cjs',
-  radar_ui:  'tools/_test_radar_ui.cjs'
+  radar_ui:  'tools/_test_radar_ui.cjs',
+  /* 【2026-10-12 新增】自动清理的**行为**验证（真跑，不是读源码找字符串）。
+     owned 组的守卫是静态断言，光靠它「函数体整个被删空」也照样 PASS；
+     这一套用 vm 注入假 STATE/OWNED/localStorage 实跑 autoCleanOwned，
+     专门盯「已购数据不可用时绝不删空清单」这个头号风险。 */
+  autoclean: 'tools/_test_autoclean.cjs'
 };
 
 const args = process.argv.slice(2);

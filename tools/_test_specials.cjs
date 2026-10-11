@@ -146,13 +146,39 @@ const SAMPLE = row(1145360, 'Hades', 80, 69.75, 348.75, TIP_90, '2020 年 9 月 
     { appid: 30, name: '正常重复', discountPercent: 85, reviewPct: 96, reviewCount: 5000 },
     { appid: 40, name: '次优', discountPercent: 60, reviewPct: 90, reviewCount: 900 },
     { appid: 50, name: '已在库', discountPercent: 95, reviewPct: 99, reviewCount: 90000 },
+    /* appid 60 = 在愿望单里但还没买。与 50 的区别正是这次要锁死的东西。 */
+    { appid: 60, name: '在清单未买', discountPercent: 88, reviewPct: 92, reviewCount: 3000 },
   ];
-  const out = M.filterItems(raw, cfg, new Set([50]));
+  /* 【2026-10-12 重写 E 组】
+     老断言把第三个参数当成「已购集合」传 —— 那是**这个 bug 的根源**：
+     filterItems 的第三参原本是「愿望单 appid 集合」，却被命名为 alreadyOwned，
+     于是"已购"和"在清单"混成一个概念。现在两个数据源各管一件事，
+     下面用完整对象 { ownedSet, wishSet } 传，把这个区分锁死。 */
+  const ownedSet = new Set([50]);
+  const wishSet = new Set([60]);
+  const ex = { ownedSet, wishSet };
+  const out = M.filterItems(raw, cfg, ex);
   check('E-1 低于门槛被滤', !out.some(x => x.name === '低折扣被滤'), out.map(x => x.name));
   check('E-2 非法 appid 被滤', !out.some(x => x.appid === 0));
-  check('E-3 没名字被滤', out.length === 3, out.map(x => x.name));
+  check('E-3 没名字被滤', out.length === 4, out.map(x => x.name));
   check('E-4 同 appid 去重只留一条', out.filter(x => x.appid === 30).length === 1);
-  check('E-5 已在库的打了 alreadyOwned', out.find(x => x.appid === 50).alreadyOwned === true);
+  check('E-5 已在 Steam 库的打了 alreadyOwned', out.find(x => x.appid === 50).alreadyOwned === true);
+
+  /* 🔴 核心回归守卫：alreadyOwned 与 inWishlist 必须来自**不同**数据源。
+     这次的 bug 就是两者被混成一个（读的是 wishlist.json 却当成已购库），
+     结果 18 款已购游戏被当成好价推给用户。所以这里不只看行为，
+     还要直接断言「已在清单」的那款**没有**被误标成已购。 */
+  const g50 = out.find(x => x.appid === 50);
+  check('E-5b 已在 Steam 库的那款 also 打了 inWishlist=（取决于它在不在清单）',
+    typeof g50.inWishlist === 'boolean');
+  check('E-5c 已购但不在清单的，必须 alreadyOwned=true 且 inWishlist=false',
+    g50.alreadyOwned === true && g50.inWishlist === false,
+    'owned=' + g50.alreadyOwned + ' inWish=' + g50.inWishlist);
+  check('E-5d 在 wishSet 里的那条被打 inWishlist=true，且不该被当成已购',
+    out.find(x => x.appid === 60).inWishlist === true
+    && out.find(x => x.appid === 60).alreadyOwned === false);
+  check('E-5e 两个字段互相独立：把 ownedSet 清空不改变 inWishlist',
+    M.filterItems(raw, cfg, { ownedSet: new Set(), wishSet }).find(x => x.appid === 60).inWishlist === true);
   check('E-6 不在库的 alreadyOwned=false', out.find(x => x.appid === 30).alreadyOwned === false);
   check('E-7 每条都补了 tier 和 score', out.every(x => x.tier && typeof x.score === 'number'));
   check('E-8 按 score 降序', out[0].score >= out[1].score && out[1].score >= out[2].score,
