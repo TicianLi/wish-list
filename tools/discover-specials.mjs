@@ -492,7 +492,28 @@ export async function main() {
 
   if (!rows.length) {
     // 绝不 exit 1：写一个带 error 的空结果，让页面能显示「今天雷达没抓到」而不是空白
-    warn('一条都没抓到 —— 写出带 error 的空结果，退出码保持 0');
+    /* 【2026-10-13】抓不到时**不覆盖**已有的 specials.json。
+       页面读的就是这个文件：被空壳覆盖 = 把「今天没抓到」固化给用户看，
+       还顺手弄丢上一份好数据。改为留住旧文件，只在 last-error 里留痕。 */
+    let keptOld = false;
+    try {
+      if (fs.existsSync(SPECIALS_FILE)) {
+        const oldDoc = JSON.parse(fs.readFileSync(SPECIALS_FILE, 'utf8'));
+        keptOld = Array.isArray(oldDoc.items) && oldDoc.items.length > 0;
+      }
+    } catch (e) {}
+    try {
+      fs.writeFileSync(SPECIALS_ERROR_FILE, JSON.stringify({
+        at: new Date().toISOString(),
+        error: pagesOk === 0 ? 'STEAM_UNREACHABLE' : 'NO_ROWS_PARSED',
+        keptPrevious: keptOld,
+      }, null, 2), 'utf8');
+    } catch (_) {}
+    if (keptOld) {
+      warn('一条都没抓到，但保留上一份 specials.json（页面继续用旧数据，不显示空）');
+      return { count: -1, error: true, keptPrevious: true };
+    }
+    warn('一条都没抓到且没有旧数据可留 —— 写出带 error 的空结果，退出码保持 0');
     writeOut({
       version: 1, generatedAt: now.getTime(), date: isoDate(now),
       source: 'steam-search-specials', total: 0, items: [],
@@ -564,11 +585,18 @@ if (isDirectRun()) {
   main().catch(e => {
     warn('未预期异常（已忽略，不影响主流程）：' + (e && e.stack ? e.stack : e));
     try {
-      writeOut({
-        version: 1, generatedAt: Date.now(), date: isoDate(new Date()),
-        source: 'steam-search-specials', total: 0, items: [],
-        error: 'EXCEPTION: ' + String(e && e.message || e),
-      });
+      /* 同样不覆盖：异常时保住旧数据，只留痕 */
+      try {
+        if (!fs.existsSync(SPECIALS_FILE)) {
+          writeOut({
+            version: 1, generatedAt: Date.now(), date: isoDate(new Date()),
+            source: 'steam-search-specials', total: 0, items: [],
+            error: 'EXCEPTION: ' + String(e && e.message || e),
+          });
+        } else {
+          warn('异常但已有 specials.json，保留不覆盖：' + String(e && e.message || e));
+        }
+      } catch (_) {}
     } catch (_) { /* 连写都失败就算了，绝不抛 */ }
   });
 }
