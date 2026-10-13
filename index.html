@@ -5304,9 +5304,22 @@ $('#tbody').addEventListener('dblclick', e => {
  * ============================================================ */
 function deleteGames(ids) {
   const set = new Set(ids.map(Number));
+  /* 【2026-10-13】删之前先落一份完整备份。
+     实测：删完之后 localStorage 里一个 backup 键都没有 —— 删了就是真没了。
+     同时把 debounce 的 saveData() 换成 saveDataNow()：原来要等 400ms，
+     这期间刷新/关标签页就白删了（用户报过「删不掉」和「导入没用」都是这个机制）。 */
+  try {
+    localStorage.setItem('sw_backup_single_delete', JSON.stringify(
+      { at: new Date().toISOString(), count: STATE.games.length, games: STATE.games }));
+  } catch (e) {
+    toast('备份失败（存储可能已满），已中止删除以免丢数据', 'error', 6000);
+    return;
+  }
   STATE.games = STATE.games.filter(g => !set.has(g.appid));
   ids.forEach(id => STATE.selection.delete(Number(id)));
-  saveData(); renderAll();
+  try { saveDataNow(); } catch (e) { saveData(); }
+  renderAll();
+  toast('已删除 ' + ids.length + ' 款 · 备份在设置 → 从备份恢复', 'success', 5000);
 }
 $('#btnDeleteSel').addEventListener('click', () => {
   const ids = Array.from(STATE.selection);
@@ -5316,7 +5329,15 @@ $('#btnDeleteSel').addEventListener('click', () => {
 });
 $('#btnClearAll').addEventListener('click', () => {
   showConfirm('确定删除全部愿望单数据吗？（建议先导出 JSON 备份）',
-    () => { STATE.games = []; STATE.selection.clear(); saveData(); renderAll(); toast('已清空全部数据。', 'success'); },
+    () => {
+      try {
+        localStorage.setItem('sw_backup_clear_all', JSON.stringify(
+          { at: new Date().toISOString(), count: STATE.games.length, games: STATE.games }));
+      } catch (e) { toast('备份失败，已中止清空', 'error', 5000); return; }
+      STATE.games = []; STATE.selection.clear();
+      try { saveDataNow(); } catch (e) { saveData(); }
+      renderAll(); toast('已清空全部数据（可从备份恢复）', 'success');
+    },
     { danger: true });
 });
 $('#checkAll').addEventListener('change', e => {
