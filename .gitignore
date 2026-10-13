@@ -30,9 +30,11 @@ _sm_res.txt
 # 对页面毫无用处，却足以让人反查出这是谁的库。
 # 详见 tools/fetch-owned.mjs 里 normalizeResponse 的注释。
 
-# data/specials.json —— 【2026-10-11】绝不入库
-# 它是每天的特价快照，由 CI 重新生成。本机抓不到时写出来的是
-# `{"items":[],"error":"STEAM_UNREACHABLE"}` 这种空壳；
-# 要是把这个空壳提交上去，线上会天天显示「今天没抓到」，
-# 直到下一次 CI 成功覆盖 —— 属于把自己的失败状态固化进仓库。
-data/specials.json
+# data/specials.json —— 【2026-10-13 修正】
+# 旧注释把它「绝不入库」，理由是怕把抓取失败的空壳固化进仓库。
+# 实际后果更严重：git add data/ 每次都跳过它，仓库里从来没有过这个文件，
+# 页面读 data/specials.json 永远是 404，CI 每天抓到的几百条全部白抓。
+# 现在改为**入库**，并配套两条保护：
+#   ① discover-specials.mjs 抓取失败时不再覆盖已有文件（保住上一次的好数据）
+#   ② 页面读不到时给明确提示，而不是空白
+# 失败状态由日志和 specials.last-error.json 记录，不再进主文件。
