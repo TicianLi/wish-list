@@ -1641,7 +1641,7 @@ tbody td{ border-bottom:1px solid rgba(255,255,255,.045); }
       <div class="tb-row">
         <span class="tb-label">发现与清理</span>
         <button class="btn" id="btnRadar" title="每天自动从 Steam 抓「正在打折、你还没买过、也不在清单里」的游戏，你点一下就能加进清单。数据由每天凌晨的自动任务预先抓好。">🔥 今日特价雷达<span class="tb-hint" id="radarBtnHint" style="margin-left:5px;"></span></button>
-        <button class="btn" id="btnOwned" title="检测你清单里的哪些游戏其实已经在 Steam 库里买过了。打开时会自动把它们从清单移出（删前必备份，顶部可撤销）。">🎮 已购入检测<span class="tb-hint" id="ownedBtnHint" style="margin-left:5px;"></span></button>
+        <button class="btn" id="btnOwned" title="检测你清单里的哪些游戏其实已经在 Steam 库里买过了。会**先列出来让你确认**，确认后才从清单移出（删前自动备份，顶部可撤销）。">🎮 已购入检测<span class="tb-hint" id="ownedBtnHint" style="margin-left:5px;"></span></button>
         <span class="tb-hint" id="discoverHint">数据每天凌晨自动更新；点按钮读取。</span>
       </div>
       <!-- ===== 新增：Steam 用户标签（标签云 + 按标签筛选） ===== -->
@@ -2090,6 +2090,44 @@ function esc(s) {
     .replace(/"/g, '&quot;').replace(/'/g, '&#39;');
 }
 function hasChinese(s) { return /[\u4e00-\u9fff]/.test(s || ''); }
+
+/* ============================================================
+ * 【2026-10-13】副标题（第二行小字）的统一去重。
+ *
+ * 锐评自己的应用时看到的第一处难堪：
+ *   「全面战争：帝国 - 终极版」
+ *   「全面战争：帝国 - 终极版」   ← 灰色小字，一模一样
+ *
+ * Steam 有一大批游戏的中英文名是同一个串（尤其是机翻补齐中文名之后，
+ * originalName 没跟着换），无条件渲染就成了复制粘贴级别的低级错误。
+ *
+ * 判定「重复」的三种情况（都要挡掉）：
+ *   ① 完全相同：「全面战争：帝国 - 终极版」vs 同串
+ *   ② 去空格/大小写后相同：「GTA 5」vs「gta5」
+ *   ③ 一方包含另一方且长度差很小：「博德之门3」vs「博德之门3 豪华版」
+ *      —— 但这种情况**要显示**，因为它确实多了一个信息（豪华版）。
+ *      所以只在长度差 ≤2 且差的只是标点/空格这类修饰时才挡。
+ *
+ * 返回 HTML 字符串，没有值得显示的副名时返回空串。
+ * ============================================================ */
+function subNameHtml(g) {
+  var en = String((g && g.originalName) || '').trim();
+  var cn = String((g && g.name) || '').trim();
+  if (!en) return '';
+  /* 完全相同 */
+  if (en === cn) return '';
+  /* 忽略大小写、空白、常见分隔符后相同 */
+  const norm = s => s.toLowerCase().replace(/[\s\-_:.·・]/g, '');
+  if (norm(en) === norm(cn)) return '';
+  /* 只差「豪华版/年度版/终极版」这类后缀，长度差 ≤3 时视为同一串 */
+  const SUFFIX = /(豪华|终极|年度|完全|典藏|收藏|加强|导演剪辑|definitive|deluxe|ultimate|complete|goty)\s*(edition)?$/i;
+  if (SUFFIX.test(en) && norm(en.replace(SUFFIX, '')) === norm(cn)) return '';
+  if (SUFFIX.test(cn) && norm(cn.replace(SUFFIX, '')) === norm(en)) return '';
+  /* 括注差异：「Ghostrunner（幽灵行者2）」vs「Ghostrunner」 */
+  const stripParen = s => norm(s.replace(/[（(][^）)]*[）)]/g, ''));
+  if (stripParen(en) && stripParen(en) === stripParen(cn)) return '';
+  return '<span class="en">' + esc(en) + '</span>';
+}
 function stripHtml(s) { return String(s || '').replace(/<[^>]*>/g, ' ').replace(/&nbsp;/g, ' ').replace(/&amp;/g, '&').replace(/\s+/g, ' ').trim(); }
 function clampText(s, n) { s = String(s || '').trim(); return s.length > n ? s.slice(0, n) + '…' : s; }
 function fmtPrice(v, currency) {
@@ -4893,7 +4931,11 @@ function renderTable() {
       '<td><input type="checkbox" class="row-check" data-appid="' + g.appid + '"' + (STATE.selection.has(g.appid) ? ' checked' : '') + '></td>' +
       '<td class="gname" title="点击查看详情">' + esc(g.name) +
         (g.nameSource === 'machine-translation' ? '<span class="tr-chip" title="中文名由云端机器翻译补齐（Steam 无官方中文名）">译</span>' : '') +
-        '<span class="en">' + esc(g.originalName || '') + '</span>' +
+        /* 【2026-10-13】中英文名相同/互含时不重复显示。
+           锐评时看到「全面战争：帝国 - 终极版」下面又一行一模一样的灰字。
+           Steam 对很多游戏的中英文名是同一个串（尤其译名后originalName 没换），
+           这是最基础的显示去重，缺了就像出了bug。 */
+        subNameHtml(g) +
         (mates > 0 ? '<span class="series-chip" title="同系列还有 ' + mates + ' 部作品">📚 系列 ' + (mates + 1) + ' 部</span>' : '') + '</td>' +
       '<td>' + g.appid + '</td>' +
       '<td>' + (g.rating && g.rating.score != null ? g.rating.score.toFixed(1) : '<span class="low-pending">待核</span>') + '</td>' +
@@ -5446,7 +5488,27 @@ function withProvenance(payload) {
   });
 }
 
-/* 检测"看起来不像人工逐条录入"的数据，返回问题描述数组（空数组 = 正常） */
+/* 检测"看起来不像人工逐条录入"的数据，返回问题描述数组（空数组 = 正常）
+ *
+ * 🔴【2026-10-13】这个函数曾经是有害的，实测在你的真实清单上：
+ *   3 款游戏被判定成「像测试数据」——幽灵行者 2（Ghostrunner 2）、
+ *   Ghostrunner - 幽灵行者、Ghost of Tsushima 导演剪辑版。
+ *   原因就一个正则里的 `ghost`：《Ghostrunner》是 IGN 2018 年度十佳，
+ *   《Ghost of Tsushima》是对马岛，都是你自己花钱买的真游戏。
+ *
+ *   然后它弹了个 20 秒的警告，告诉你**「建议先用「清理本机数据.html」清空，
+ *   再录入真实清单——否则会把它们同步到云端」**。
+ *
+ *   这是教用户删掉自己的数据。而且它必然误报：你手动加 Ghostrunner
+ *   一样会命中，改关键词只是把错误从 3 款换成另外 3 款。
+ *
+ * 现在的原则：
+ *   ① **只报无法通过改名消除的异常**（createdAt 全同、无效 AppID）；
+ *   ② **绝不因为名字里有某个词就报警** —— 名字是用户自己键入的；
+ *   ③ 报警文案**不给删除建议**，只陈述事实。
+ * 理由：一个只说「这里有点怪」但不催你动手的提示是安全的；
+ *   一个说「快清空」的错误提示是危险的。
+ */
 function detectSuspiciousData(games) {
   const issues = [];
   if (!games || !games.length) return issues;
@@ -5455,22 +5517,20 @@ function detectSuspiciousData(games) {
   const created = games.map(g => g.createdAt).filter(Boolean);
   if (created.length > 1 && created.every(c => c === created[0])) {
     issues.push('全部 ' + created.length + ' 款游戏的创建时间完全相同（' +
-      new Date(created[0]).toLocaleString() + '），像是被脚本一次性批量写入的，不像逐条手动添加。');
+      new Date(created[0]).toLocaleString() + '）。如果你确实是一次性批量导入的，这没问题。');
   }
 
-  // 特征 2：AppID 明显是占位值
+  // 特征 2：AppID 明显是占位值（真异常，改名消不掉，值得报）
   const bogus = games.filter(g => !g.appid || g.appid <= 0 || g.appid > 5000000);
   if (bogus.length) {
     issues.push('有 ' + bogus.length + ' 款游戏的 AppID 是无效值：' +
-      bogus.map(g => (g.name || '?') + '(' + g.appid + ')').join('、') + '。');
+      bogus.map(g => (g.name || '?') + '(' + g.appid + ')').join('、') +
+      '。这些条目在 Steam 那边不存在。');
   }
 
-  // 特征 3：名字里带"测试/不存在/示例"这类字样
-  const fakeNames = games.filter(g => /测试|不存在|示例|demo|test|sample|ghost/i.test(g.name || ''));
-  if (fakeNames.length) {
-    issues.push('有 ' + fakeNames.length + ' 款游戏名字像测试数据：' +
-      fakeNames.map(g => g.name).join('、') + '。');
-  }
+  /* 【2026-10-13 删掉特征 3：按名字关键词判「测试数据」】
+     理由见函数头注释 —— `ghost` 命中真实游戏，`test`/`sample` 同理。
+     名字是用户自己键入的内容，不能当作「数据有问题」的证据。 */
 
   return issues;
 }
@@ -7721,13 +7781,43 @@ function triggerCloudPull() {
          自动清理在打开「已购入检测」弹窗这个场景下是用户预期的行为，
          而在页面 boot 时自动跑则不是。 */
       if (OWNED.games.length && !OWNED.error) {
-        const r = autoCleanOwned();
-        if (r.removed) {
-          toast('已自动移除 ' + r.removed + ' 款你已买过的游戏，顶部可撤销', 'success', 6000);
-        } else if (r.skipped && r.reason && /备份|就绪|出错|放弃/.test(r.reason)) {
-          toast('未执行自动清理：' + r.reason, 'warn', 6000);
+        /* ========== 【2026-10-13 P0-1】删除前必须问，而且要说清删哪几款 ==========
+           旧行为：点一下「已购入检测」直接 autoCleanOwned() 把游戏移出清单，
+           没有确认框、没有预览 —— 一个听起来像「查询」的按钮，点下去就在删你的数据。
+           tooltip 虽写了「打开时会自动移出」，但那句话要悬停才看得到，
+           而手机上根本没有悬停。
+           新行为：先算交集 → 弹出确认框**列出具体游戏名** → 用户点了「确认移出」才执行。
+           备份逻辑原样保留（autoCleanOwned 内部仍会 backupBeforeCleanup）。 */
+        const ownedCls = classifyOwned(OWNED.games, STATE.games);
+        const ownedIds = ownedCls.main.concat(ownedCls.dlc)
+          .map(r => Number(r.appid)).filter(Boolean);
+        if (!ownedIds.length) {
+          toast('没有需要清理的已购游戏', 'info', 3500);
+          renderOwnedAutoBanner();
+        } else {
+          const ownedNames = ownedIds.slice(0, 10).map(id => {
+            const gg = STATE.games.find(x => Number(x.appid) === id);
+            return '· ' + (gg && gg.name ? gg.name : ('AppID ' + id));
+          });
+          const ownedMore = ownedIds.length > 10
+            ? '\n\n…另有 ' + (ownedIds.length - 10) + ' 款' : '';
+          showConfirm(
+            '将把清单里 ' + ownedIds.length + ' 款「你已买过」的游戏移出：\n\n'
+            + ownedNames.join('\n') + ownedMore
+            + '\n\n只是从**你的清单**里移除，不会动你的 Steam 账号。移出前会自动备份，顶部可撤销。',
+            () => {
+              const r = autoCleanOwned();
+              if (r.removed) {
+                toast('已移出 ' + r.removed + ' 款，顶部可撤销', 'success', 6000);
+              } else if (r.skipped && r.reason) {
+                toast('未执行：' + r.reason, 'warn', 6000);
+              }
+              renderOwnedAutoBanner();
+              renderOwned();
+            },
+            { danger: true, okText: '确认移出这 ' + ownedIds.length + ' 款' }
+          );
         }
-        renderOwnedAutoBanner();
       } else {
         await loadOwned();
       }
@@ -8178,13 +8268,17 @@ function boot() {
   }
   // 数据自检：如果本机清单看起来像被批量写入的（例如测试数据残留），
   // 明确提示用户，避免把脏数据同步到云端。
+  /* ⚠️【2026-10-13】措辞改了。原来是「建议先用『清理本机数据.html』清空，
+     再录入真实清单」—— 这是在教用户删自己的数据，而且当时因为 ghost 误报
+     正在冤枉 3 款真实游戏。
+     现在只陈述事实、不给删除指令：怎么处理是用户的决定，不是工具替他做的。 */
   try {
     const issues = detectSuspiciousData(STATE.games);
     if (issues.length) {
       setTimeout(() => {
-        toast('⚠️ 检测到清单里有可疑数据\n' + issues.join('\n') +
-          '\n\n如果你没手动添加过这些游戏，建议先用「清理本机数据.html」清空，' +
-          '再录入真实清单——否则会把它们同步到云端。', 'warn', 20000);
+        toast('ℹ️ 关于这份清单：\n' + issues.join('\n') +
+          '\n\n（只是提醒，不影响使用。要调整可点底部「🔧 调试信息」查看。',
+          'info', 12000);
       }, 600);
     }
   } catch (e) {}
