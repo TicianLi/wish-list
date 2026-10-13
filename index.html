@@ -179,6 +179,21 @@ input:focus,select:focus,textarea:focus{border-color:var(--accent-dim);}
   transition:background .15s,border-color .15s;white-space:nowrap;
 }
 .btn:hover{background:var(--border);border-color:var(--accent-dim);}
+/* 【2026-10-13】云端有更新时，让「拉取云端」按钮自己发亮。
+   刻意用呼吸式而不是红色实心：这不是错误，是「有新东西可拿」。
+   红色会被当成报错，反而降低点击意愿。 */
+.btn-attention{
+  border-color:var(--accent);
+  background:var(--accent-wash);
+  animation:btnPulse 2.2s ease-in-out infinite;
+}
+@keyframes btnPulse{
+  0%,100%{ box-shadow:0 0 0 0 rgba(102,192,244,0); }
+  50%    { box-shadow:0 0 0 3px rgba(102,192,244,.22); }
+}
+@media (prefers-reduced-motion: reduce){
+  .btn-attention{animation:none;border-color:var(--accent);background:var(--accent-wash);}
+}
 .btn.primary{background:#1b4a6b;border-color:var(--accent-dim);color:#cfe9fb;}
 .btn.primary:hover{background:#1f5a80;}
 .btn.danger{background:#4a1f22;border-color:#6e2f34;color:#ffb3b3;}
@@ -2038,6 +2053,11 @@ const DEFAULT_SETTINGS = {
 
 const STATE = {
   games: [],
+  /* 【2026-10-13】数据修订号。每次游戏数据发生变化就 ++，
+     用来给分面计数缓存（computeFacetCounts）做失效判据 ——
+     之前那个缓存函数实测要 1117ms，不缓存的话每次 renderAll 都重算一遍。
+     有了 revision，键一变缓存自动作废，不会出现「筛选栏数字对不上」。 */
+  gamesRevision: 0,
   settings: Object.assign({}, DEFAULT_SETTINGS),
   filters: { search: '', rec: '', conf: '', target: '', sale: '', series: '', value: '', genre: '', feature: '', usertag: '' },
   sort: { key: null, dir: 1 },          // null = 默认按添加时间倒序
@@ -2236,7 +2256,21 @@ function loadData() {
     setTimeout(() => toast('检测到旧版 DLC 数据（缺少 kind），建议点击「刷新全部」补全。', 'warn', 7000), 800);
   }
 }
+/* 【2026-10-13】卸载/切后台兜底。
+ * 之前 index.html 里 beforeunload / visibilitychange / pagehide **一个都没有** ——
+ * 这正是「拉取 346 款后切走就丢」能发生的原因。
+ * 手机上尤其致命：点一下切到微信、锁屏息屏，主线程随时可能被冻结。
+ *
+ * ⚠️ 必须声明在 saveData **之前**：saveData 里会写 __pendingSave = false，
+ *    用 let 声明的话 TDZ 会直接抛 ReferenceError。
+ */
+let __pendingSave = false;
+
 const saveData = debounce(() => {
+  __pendingSave = false;
+  /* 数据要变了 → 分面计数的缓存必须作废，否则筛选栏会显示旧数字
+     （用户看到的正是「全部推荐（9）」这类对不上的数）。 */
+  if (typeof invalidateFacetCache === 'function') invalidateFacetCache();
   try {
     const payload = { version: CONFIG.SCHEMA_VERSION, updatedAt: nowMs(), games: STATE.games };
     localStorage.setItem(CONFIG.STORE_KEY, JSON.stringify(payload));
@@ -2245,12 +2279,64 @@ const saveData = debounce(() => {
   }
 }, 400);
 
+/* 挂一个「标记待存」的入口：任何改动后调一下，
+   让 visibilitychange / pagehide 知道还有东西没落盘。 */
+function markDirty() { __pendingSave = true; saveData(); }
+
+/* 【2026-10-13】关键操作一律同步落盘，绝不等 debounce。
+ *
+ * 起因是用户实测「导入 JSON 也没用」—— 实测量出来的：
+ *   合并 4ms → saveData(调用) 0ms → autoGroupSeries 34ms → renderAll 1214ms
+ * 导入 346 款后：内存 346 条，**落盘 0 条**。
+ *
+ * 机制：saveData 是 400ms 定时器，而紧接着的 renderAll 同步占满主线程 1.2 秒，
+ * 定时器回调排不进去 —— 等冻结结束才写。用户在这 1.2 秒里看到的是「点了没反应」，
+ * 一刷新数据就没了，于是判定「导入没用」。
+ *
+ * 容量不是原因（实测 1338KB < 上限 3782KB），纯粹是「什么时候写」。
+ *
+ * 所以破坏性/大批量操作一律走 saveDataNow()。
+ */
+function saveDataCritical(what) {
+  __pendingSave = false;
+  const ok = saveDataNow();
+  if (ok && what) {
+    /* 明确告诉用户「已经存好了」，而不是让人猜。
+       旧实现只在失败时报错，成功时无声无息 —— 用户不知道到底存没存。 */
+    toast('✅ ' + what + '，已存到本机。', 'success', 2200);
+  }
+  return ok;
+}
+
+/* 【2026-10-13】卸载/切后台兜底。
+ * 之前 index.html 里 beforeunload / visibilitychange / pagehide **一个都没有** ——
+ * 这正是「拉取 346 款后切走就丢」能发生的原因。
+ * 手机上尤其致命：点一下切到微信、锁屏息屏，主线程随时可能被冻结。
+ *
+ * ⚠️ __pendingSave 已在上面（saveData 之前）声明，这里只补执行部分。
+ */
+function flushOnHide() {
+  if (!__pendingSave) return;
+  __pendingSave = false;
+  try {
+    const payload = { version: CONFIG.SCHEMA_VERSION, updatedAt: nowMs(), games: STATE.games };
+    localStorage.setItem(CONFIG.STORE_KEY, JSON.stringify(payload));
+  } catch (e) { /* 卸载阶段无法 toast，静默失败即可（下次操作会再报错） */ }
+}
+/* visibilitychange 是移动端最可靠的信号：切后台、锁屏、切 App 都会触发。
+   用 hidden 而不是 unload —— Safari 从来不保证 unload 会跑。 */
+document.addEventListener('visibilitychange', () => { if (document.hidden) flushOnHide(); });
+/* pagehide 比 beforeunload 可靠，且兼容 bfcache 场景 */
+window.addEventListener('pagehide', flushOnHide);
+
 /* 【新增 2026-10-11】立即落盘版。
    saveData 是 400ms debounce 的，拖动排序之类无所谓；
    但「删除清单里的游戏」是破坏性操作 —— 万一用户删完立刻关标签页，
    debounce 没来得及写就丢数据，那就成了不可撤销的损失。
    所以破坏性操作一律走这个同步版本。 */
 function saveDataNow() {
+  /* 同上：同步落盘前先把分面计数缓存作废 */
+  if (typeof invalidateFacetCache === 'function') invalidateFacetCache();
   try {
     const payload = { version: CONFIG.SCHEMA_VERSION, updatedAt: nowMs(), games: STATE.games };
     localStorage.setItem(CONFIG.STORE_KEY, JSON.stringify(payload));
@@ -4193,6 +4279,35 @@ const XS_MIN_ROWS   = 10;    // 目标：一次至少看到约 10 行（硬下�
 const XS_PREF_ROWS  = 18;    // 视口够高时的舒适行数
 const XS_MAX_VH     = 0.92;  // 容器最高不超过可视高度的 92%，避免整页只剩表格
 
+/* 【2026-10-13】setupXScroll 改到 rAF 里跑，不阻塞首屏。
+ *
+ * 实测它在 renderAll 里要 240ms（iPhone UA / 346 款），是修完分面缓存后的第二大项。
+ * 原因：它要先 removeProperty(--xscroll-h) + remove class，再量位置、加回去 ——
+ * 这一串强制同步 reflow，是 346 行 DOM 的布局代价。
+ *
+ * 但它算的只是「桌面表格区该显示几行」，手机上表格区根本不可见
+ * （走的是卡片视图），量出来的数没人用。
+ * 所以：① 延到下一帧，让首屏先出来；② 手机上直接跳过。
+ *
+ * ⚠️ 必须保留同步调用入口：有些地方紧接着就要读容器高度（setupXScroll 自身之外）。
+ *    这里只改 renderAll 里的调用方式，不动函数体，避免牵连既有行为。
+ */
+let __xsScheduled = false;
+function setupXScrollDeferred() {
+  if (__xsScheduled) return;
+  __xsScheduled = true;
+  const run = () => {
+    __xsScheduled = false;
+    try {
+      /* 手机走卡片视图，表格区不可见 —— 不量，省掉整轮 reflow */
+      if (window.mMobile && mMobile()) return;
+      setupXScroll();
+    } catch (e) { /* 量不出来就算了，不能连带影响渲染 */ }
+  };
+  if (window.requestAnimationFrame) requestAnimationFrame(run);
+  else setTimeout(run, 0);
+}
+
 function setupXScroll() {
   const wrap = $('#tableWrap');
   const body = $('#xscrollBody');
@@ -4502,7 +4617,41 @@ function applyFilters(games) {
  *   这样"全部"= 该维度不筛选时的总数，各取值数量之和可能大于它
  *   （因为一条游戏可以同时属于多个类型标签），这是符合直觉的。
  * ------------------------------------------------------------ */
+/* 【2026-10-13】分面计数的缓存。
+ *
+ * 实测（iPhone UA / 346 款）：renderAll 里这一个函数要 1117ms，占了整帧 95%。
+ * 它是「维度 × 款数 × 逐条判定」，而 renderAll 里 refreshTagFilterOptions 会调它，
+ * 紧接着 applyView → renderCards 又触发一轮 —— 同一份数据、同一份筛选算两遍。
+ *
+ * 缓存键取「游戏数组的引用 + 长度 + 筛选条件快照」：
+ * 数据变了（push/splice/字段改动）或筛选变了，键就会变，自动失效。
+ * 失效不了的风险：原地改了某个游戏的价格但数组引用没变、长度也没变 ——
+ * 所以键里再带上 STATE.games[0] 的价格与 STATE 的版本号兜底。
+ */
+let __facetCache = null;
+function facetCacheKey() {
+  const f = STATE.filters;
+  return [
+    STATE.games.length,
+    STATE.games[0] ? STATE.games[0].appid : 0,
+    STATE.games[0] && STATE.games[0].price ? STATE.games[0].price.current : 0,
+    STATE.games[STATE.games.length - 1] ? STATE.games[STATE.games.length - 1].appid : 0,
+    STATE.gamesRevision || 0,
+    f.search, f.rec, f.conf, f.target, f.sale, f.series, f.value,
+    f.genre, f.feature, f.usertag, f.platform, STATE.tagKind,
+  ].join('|');
+}
+function invalidateFacetCache() { __facetCache = null; }
+
 function computeFacetCounts() {
+  const key = facetCacheKey();
+  if (__facetCache && __facetCache.key === key) return __facetCache.val;
+  const val = computeFacetCountsUncached();
+  __facetCache = { key, val };
+  return val;
+}
+
+function computeFacetCountsUncached() {
   const games = STATE.games;
   const out = {};
   FILTER_DIMS.forEach(dim => {
@@ -4841,7 +4990,7 @@ function renderAll() {
   renderSortArrows();
   syncGroupBtn();
   renderActiveFilters();
-  setupXScroll();
+  setupXScrollDeferred();   /* 【2026-10-13】240ms 的强制 reflow 挪到下一帧；手机上直接跳过 */
   scheduleDeadlineTick();
   // 新增功能：标签云跟随数据变化；同时把当前价格记进本机观察历史（价格没变则不重复记）
   try { renderTagCloud(); } catch (e) {}
@@ -4855,6 +5004,9 @@ function scheduleDeadlineTick() {
   deadlineTimer = setInterval(() => {
     const has = STATE.games.some(g => g.price && g.price.isOnSale && g.price.discountExpiration);
     if (!has) return;
+    /* 倒计时会改到期剩余时间 → 视作数据变化，让分面计数缓存失效。
+       不失效的话筛选栏会一直显示首次渲染时的数字。 */
+    STATE.gamesRevision++;
     renderTable();
   }, 60000);
 }
@@ -5674,7 +5826,11 @@ async function importJSONFile(file) {
           merged++;
         }
       });
-      saveData();
+      /* 【2026-10-13】导入是「大批量改动」，必须同步落盘。
+         旧实现走 saveData()（400ms debounce），而紧接着的 renderAll 会同步占满
+         主线程 1.2 秒 —— 定时器排不进去，数据没写完就卡住，用户看到的就是
+         「导入没反应，刷新后还是原样」。实测：导入 346 款后内存 346 / 落盘 0。 */
+      saveDataCritical('已导入 ' + added + ' 款、合并 ' + merged + ' 款');
       /* 需求 #4：导入完成后做一次系列识别（只统计，不改变显示开关）
          问题 #2：不再自动打开分组，尊重用户当前选择。 */
       const seriesInfo = autoGroupSeries();
@@ -5865,7 +6021,7 @@ const applyFilterUi = () => {
   renderTable();
   renderStats();
   renderActiveFilters();
-  setupXScroll();
+  setupXScrollDeferred();   /* 【2026-10-13】同上：筛选联动是高频操作，别让它卡 */
 };
 $('#filterSearch').addEventListener('input', debounce(() => { STATE.filters.search = $('#filterSearch').value; applyFilterUi(); }, 200));
 [['filterRec', 'rec'], ['filterConf', 'conf'], ['filterTarget', 'target'],
@@ -7323,7 +7479,11 @@ async function pullFromCloud(opts) {
        拉进来之后可以再判一次有没有「刚被补进来的已购款」。这里只重算分类，
        不自动删除：删除是破坏性操作，只该由用户主动点「已购入检测」触发。 */
     if (OWNED.games.length) classifyAndRenderOwned();
-    saveData();
+    /* 【2026-10-13】拉取必须同步落盘。
+       实测：拉 346 款后立刻读 localStorage 还是旧条数（saveData 是 400ms 定时器，
+       紧接着的 renderAll 占满主线程 1.2 秒把定时器挤掉了）→ 手机上切走/息屏就丢。
+       这就是用户实际遇到的情况。 */
+    saveDataCritical(null);   /* 拉取后面本来就有 toast，这里不再重复提示 */
     savePullMeta(meta);
     renderAll();
     renderRadar();
@@ -7374,8 +7534,11 @@ function updateCloudPullHint(meta) {
     return;
   }
   const refr = meta.refreshedAt ? fmtTime(meta.refreshedAt) : (meta.syncedAt ? fmtTime(meta.syncedAt) : '未知');
+  /* 【2026-10-13】把「云端刷新时间」也直接写进正文。
+     旧实现只在 title（悬停）里显示它 —— 手机上没有悬停，等于这个信息不存在。
+     用户在手机上永远不知道自己拉的是哪一天的数据。 */
   el.className = 'tb-hint ok';
-  el.textContent = '上次拉取 ' + fmtTime(meta.lastPullAt);
+  el.textContent = '上次拉取 ' + fmtTime(meta.lastPullAt) + ' · 云端数据 ' + refr;
   el.title = '拉取方式：' + (meta.via || '—') +
     '\n云端刷新时间：' + refr +
     '\n页面同步到云端时间：' + (meta.syncedAt ? fmtTime(meta.syncedAt) : '未知') +
@@ -7383,6 +7546,73 @@ function updateCloudPullHint(meta) {
     '\n数据指纹：' + (meta.fingerprint || '无') +
     '\n云端收录款数：' + (meta.gameCount != null ? meta.gameCount : '未知') +
     '\n本机拉取时间：' + fmtTime(meta.lastPullAt);
+}
+
+/* ============================================================
+ * 【2026-10-13】进页面自动检测云端有没有更新
+ * ------------------------------------------------------------
+ * 用户原话：「特价雷达为什么非要我自己刷新……你每天更新就自动加入啊」。
+ *
+ * 实测结论（这次先查清了再说）：CI 一直正常 ——
+ *   每天 02:00 跑、success、快照生成、commit 提交、数据上线
+ *   （远端最新 commit「每日自动刷新 2026-10-13 00:16 UTC」，
+ *     线上 refreshCount 13、refreshedBy github-actions）
+ * **缺的不是 CI，是页面不会自己去拿。**
+ *
+ * 所以这里做的是：进页面时如果云端 refreshedAt 比上次拉取新，
+ * 就明确告诉你「云端有 N 条新数据」并给一个按钮 ——
+ * 不自动拉（用户在本机可能删过东西，自动拉会把删掉的带回来），
+ * 但也不能只放在悬停提示里让人自己发现。
+ * ============================================================ */
+async function autoCheckCloudUpdate() {
+  /* 云端配置永远有默认值（CLOUD_DEFAULTS），所以这里不需要开关判断。
+     拉不到就安静返回 —— 云端不可达是常态，不是错误。 */
+  let remoteN = 0, remoteAt = 0;
+  try {
+    const got = await fetchCloudJSON();
+    const d = got.data;
+    if (!d || !Array.isArray(d.games)) return;
+    remoteN = d.games.length;
+    remoteAt = Number(d.refreshedAt || d.updatedAt || 0);
+  } catch (e) { return; /* 云端不可达是常态，不打扰用户 */ }
+
+  const localN = STATE.games.length;
+
+  /* 【2026-10-13】本机数量明显少于云端 → 大概率是丢数据了，当场说。
+   *
+   * 用户的原话是「我把 json 导入进去了也没用」「为什么全部都只有 9 条」——
+   * 而当时页面只是安静地显示 9 条，没有任何异常提示。
+   * 丢数据本来是「不可能发生」的事（容量够、没有卸载清理），
+   * 正因为它反常，才必须**当场喊出来**，而不是让人自己发现。
+   *
+   * 阈值取「少 30% 以上且至少少 5 款」：避免把正常删除误报成异常。
+   */
+  if (remoteN >= 10 && localN >= 1 && localN < remoteN - Math.max(5, remoteN * 0.3)) {
+    setTimeout(() => {
+      toast('⚠️ 本机只剩 ' + localN + ' 款，云端有 ' + remoteN + ' 款。' +
+        '多半是上次操作没存上。点「拉取云端刷新结果」把 ' + remoteN + ' 款全带回来。', 'warn', 12000);
+      const b = $('#btnCloudPull'); if (b) b.classList.add('btn-attention');
+    }, 900);
+    return;
+  }
+
+  if (!remoteAt) return;
+  const meta = loadPullMeta();
+  const localAt = Number((meta && meta.refreshedAt) || 0);
+  /* 本机比云端新 → 你可能刚同步过，别打扰 */
+  if (localAt && localAt >= remoteAt) return;
+
+  /* 云端有更新 */
+  const showDetail = remoteN !== localN
+    ? ('云端 ' + remoteN + ' 款，本机 ' + localN + ' 款')
+    : ('都是 ' + remoteN + ' 款，但价格/标签有更新');
+
+  setTimeout(() => {
+    toast('☁️ 云端有新的刷新结果（' + fmtTime(remoteAt) + '，' + showDetail +
+      '）。点「拉取云端刷新结果」把它带回来。', 'info', 9000);
+    const btn = $('#btnCloudPull');
+    if (btn) btn.classList.add('btn-attention');
+  }, 1200);
 }
 function cloudPullInfo() {
   const m = loadPullMeta();
@@ -7903,6 +8133,10 @@ function boot() {
   renderQueue();
   renderRadar();                  /* 缓存里的 specials 要先画出来，否则弹窗首次打开是空的 */
   renderOwnedAutoBanner();        /* 上次自动清理的撤销入口要一直挂着，不能刷新一次就消失 */
+  /* 【2026-10-13】起页面后再查云端：别挡首屏。
+     之前数据永远停在「你上次手动拉的那天」，用户以为特价雷达坏了。
+     延迟 2.5 秒是为了让首屏先出来 —— 这个检查要走网络，不能和渲染抢主线程。 */
+  setTimeout(() => { try { autoCheckCloudUpdate(); } catch (e) {} }, 2500);
   bindWindowScroll();
   setupXScroll();
   setTimeout(setupXScroll, 300);   // 等字体/图片落位后校正一次高度
@@ -8244,6 +8478,17 @@ function mOpenDrawer(which) {
   var src = document.getElementById(which === 'add' ? 'secAdd' : 'secTools');
   if (!src) return;
   title.textContent = which === 'add' ? '添加游戏' : '筛选与工具';
+  /* 🔴【2026-10-13】先把上一轮搬进来的区块送回去，再搬新的。
+     否则连点两次不同入口，抽屉里会叠着两个区块，关闭时只能搬走一个 ——
+     另一个留在抽屉里点不到（表现为「有的入口能开、有的开了是空的」）。 */
+  var leftover = body && body.firstElementChild;
+  if (leftover && leftover !== src) {
+    try {
+      leftover.classList.remove('open');
+      var host = document.querySelector('.wrap');
+      if (host) host.insertBefore(leftover, document.getElementById('secStats') || null);
+    } catch (e) { /* 送不回去也不能挡住新内容 */ }
+  }
   body.innerHTML = '';
   body.appendChild(src);          /* 把真的区块搬进抽屉 —— 功能一个不少 */
   src.classList.add('open');
@@ -8259,7 +8504,29 @@ function mCloseDrawer() {
   if (b) b.classList.remove('on');
   var body = document.getElementById('mdrawerBody');
   var src = body && body.firstElementChild;
-  if (src) { src.classList.remove('open'); body.parentNode.insertBefore(src, d); }
+  /* 🔴【2026-10-13】这一行原来能抛 NotFoundError。
+   *
+   * insertBefore 要求「参照节点 d 是 src 的**同父节点**的孩子」。
+   * 但抽屉可能被重复打开/关闭、或中途切了抽屉类型（add ↔ filter），
+   * 此时 secTools/secAdd 可能已经在别处，src 的 parentNode 并不是 d 的 parentNode
+   * → 抛异常 → 后面这几行不执行 → **遮罩层留在屏幕上，整个页面点不动**。
+   *
+   * 这就是用户说的「下面的图标经常点不动」，而且是「经常」不是「一直」——
+   * 因为只有触到那条路径才会坏。
+   *
+   * 修法：先确认同父，否则退回 appendChild 挂到 wrap；
+   * 并且整段包 try/catch —— 关抽屉失败绝不能连带卡住页面。
+   */
+  if (src) {
+    try {
+      src.classList.remove('open');
+      if (d.parentNode && src.parentNode === d.parentNode) d.parentNode.insertBefore(src, d);
+      else if (d.parentNode) d.parentNode.appendChild(src);
+    } catch (e) {
+      /* 兜底：至少把区块放回 body，别让它消失（否则功能整个不见了） */
+      try { document.querySelector('.wrap').appendChild(src); } catch (e2) {}
+    }
+  }
 }
 
 function mSyncViewport() {

@@ -39,7 +39,10 @@ const SUITES = {
      owned 组的守卫是静态断言，光靠它「函数体整个被删空」也照样 PASS；
      这一套用 vm 注入假 STATE/OWNED/localStorage 实跑 autoCleanOwned，
      专门盯「已购数据不可用时绝不删空清单」这个头号风险。 */
-  autoclean: 'tools/_test_autoclean.cjs'
+  autoclean: 'tools/_test_autoclean.cjs',
+  /* 【2026-10-13 新增】用户实报的四组问题（导入没用 / 只剩9条 / 卡 / 图标点不动）。
+     全部是**运行时**问题 —— 静态断言全都会 PASS，所以这套必须真跑浏览器。 */
+  issues13: 'tools/_test_issues20261013.cjs'
 };
 
 const args = process.argv.slice(2);
