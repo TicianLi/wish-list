@@ -1,6 +1,6 @@
 {
  "version": 1,
- "fetchedAt": 1793054791054,
+ "fetchedAt": 1793139484372,
  "count": 184,
  "games": [
   {
@@ -40,6 +40,10 @@
    "playtimeForever": 2811
   },
   {
+   "appid": 710920,
+   "playtimeForever": 2280
+  },
+  {
    "appid": 391220,
    "playtimeForever": 2059
   },
@@ -50,10 +54,6 @@
   {
    "appid": 1222140,
    "playtimeForever": 1809
-  },
-  {
-   "appid": 710920,
-   "playtimeForever": 1794
   },
   {
    "appid": 2754380,
