@@ -1,11 +1,11 @@
 {
  "version": 1,
- "fetchedAt": 1793922058148,
+ "fetchedAt": 1794006990676,
  "count": 194,
  "games": [
   {
    "appid": 730,
-   "playtimeForever": 30559
+   "playtimeForever": 30725
   },
   {
    "appid": 582160,
@@ -208,6 +208,10 @@
    "playtimeForever": 80
   },
   {
+   "appid": 1815570,
+   "playtimeForever": 80
+  },
+  {
    "appid": 396750,
    "playtimeForever": 76
   },
@@ -272,6 +276,10 @@
    "playtimeForever": 30
   },
   {
+   "appid": 57300,
+   "playtimeForever": 26
+  },
+  {
    "appid": 674940,
    "playtimeForever": 23
   },
@@ -325,10 +333,6 @@
   },
   {
    "appid": 49520,
-   "playtimeForever": 0
-  },
-  {
-   "appid": 57300,
    "playtimeForever": 0
   },
   {
@@ -696,10 +700,6 @@
    "playtimeForever": 0
   },
   {
-   "appid": 1815570,
-   "playtimeForever": 0
-  },
-  {
    "appid": 1868140,
    "playtimeForever": 0
   },
@@ -781,5 +781,5 @@
   }
  ],
  "error": null,
- "uncertainCount": 116
+ "uncertainCount": 114
 }
