@@ -1,15 +1,15 @@
 {
  "version": 1,
- "generatedAt": 1794088489760,
- "date": "2026-11-08",
+ "generatedAt": 1794175663494,
+ "date": "2026-11-09",
  "source": "steam-search-specials",
- "total": 17546,
+ "total": 17408,
  "pagesFetched": 10,
  "minDiscount": 0,
  "minReviewCount": 300,
  "rejected": {
   "discount": 0,
-  "quality": 182,
+  "quality": 161,
   "recent": 0
  },
  "currency": "CNY",
@@ -26,7 +26,7 @@
    "currency": "CNY",
    "reviewSummary": "positive",
    "reviewPct": 97,
-   "reviewCount": 5649,
+   "reviewCount": 5653,
    "releaseDate": "2021 年 10 月 7 日",
    "releaseTs": 1633564800000,
    "platforms": [
@@ -47,7 +47,7 @@
    "currency": "CNY",
    "reviewSummary": "positive",
    "reviewPct": 95,
-   "reviewCount": 18107,
+   "reviewCount": 18121,
    "releaseDate": "2020 年 8 月 18 日",
    "releaseTs": 1597708800000,
    "platforms": [
@@ -62,6 +62,27 @@
    "inWishlist": true
   },
   {
+   "appid": 1227690,
+   "name": "Severed Steel",
+   "discountPercent": 93,
+   "finalPrice": 5.6,
+   "originalPrice": 80,
+   "currency": "CNY",
+   "reviewSummary": "positive",
+   "reviewPct": 93,
+   "reviewCount": 1079,
+   "releaseDate": "2021 年 9 月 17 日",
+   "releaseTs": 1631836800000,
+   "platforms": [
+    "win"
+   ],
+   "tinyImage": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1227690/capsule_231x87.jpg?t=1723920018",
+   "tier": "S",
+   "score": 91.6,
+   "alreadyOwned": false,
+   "inWishlist": true
+  },
+  {
    "appid": 239140,
    "name": "Dying Light",
    "discountPercent": 90,
@@ -70,7 +91,7 @@
    "currency": "CNY",
    "reviewSummary": "positive",
    "reviewPct": 94,
-   "reviewCount": 90517,
+   "reviewCount": 90553,
    "releaseDate": "2025 年 3 月 12 日",
    "releaseTs": 1741737600000,
    "platforms": [
@@ -93,7 +114,7 @@
    "currency": "CNY",
    "reviewSummary": "positive",
    "reviewPct": 93,
-   "reviewCount": 25595,
+   "reviewCount": 25601,
    "releaseDate": "2014 年 11 月 14 日",
    "releaseTs": 1415923200000,
    "platforms": [
@@ -115,7 +136,7 @@
    "currency": "CNY",
    "reviewSummary": "positive",
    "reviewPct": 91,
-   "reviewCount": 14924,
+   "reviewCount": 14930,
    "releaseDate": "2019 年 5 月 14 日",
    "releaseTs": 1557792000000,
    "platforms": [
@@ -128,27 +149,6 @@
    "inWishlist": false
   },
   {
-   "appid": 992300,
-   "name": "嗜血印 Bloody Spell",
-   "discountPercent": 90,
-   "finalPrice": 7.9,
-   "originalPrice": 79,
-   "currency": "CNY",
-   "reviewSummary": "positive",
-   "reviewPct": 90,
-   "reviewCount": 29214,
-   "releaseDate": "2022 年 1 月 26 日",
-   "releaseTs": 1643155200000,
-   "platforms": [
-    "win"
-   ],
-   "tinyImage": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/992300/capsule_231x87_schinese.jpg?t=1793587797",
-   "tier": "S",
-   "score": 89,
-   "alreadyOwned": false,
-   "inWishlist": false
-  },
-  {
    "appid": 512790,
    "name": "Quern - 不朽之念",
    "discountPercent": 90,
@@ -157,7 +157,7 @@
    "currency": "CNY",
    "reviewSummary": "positive",
    "reviewPct": 90,
-   "reviewCount": 3856,
+   "reviewCount": 3863,
    "releaseDate": "2016 年 11 月 28 日",
    "releaseTs": 1480291200000,
    "platforms": [
@@ -180,7 +180,7 @@
    "currency": "CNY",
    "reviewSummary": "positive",
    "reviewPct": 89,
-   "reviewCount": 31327,
+   "reviewCount": 31343,
    "releaseDate": "2018 年 4 月 24 日",
    "releaseTs": 1524528000000,
    "platforms": [
@@ -244,7 +244,7 @@
    "currency": "CNY",
    "reviewSummary": "positive",
    "reviewPct": 84,
-   "reviewCount": 8546,
+   "reviewCount": 8549,
    "releaseDate": "2018 年 11 月 9 日",
    "releaseTs": 1541721600000,
    "platforms": [
@@ -266,7 +266,7 @@
    "currency": "CNY",
    "reviewSummary": "positive",
    "reviewPct": 87,
-   "reviewCount": 1411,
+   "reviewCount": 1415,
    "releaseDate": "2021 年 9 月 23 日",
    "releaseTs": 1632355200000,
    "platforms": [
@@ -279,27 +279,6 @@
    "inWishlist": false
   },
   {
-   "appid": 837880,
-   "name": "狂野泊车 / You Suck at Parking®",
-   "discountPercent": 90,
-   "finalPrice": 7.6,
-   "originalPrice": 76,
-   "currency": "CNY",
-   "reviewSummary": "positive",
-   "reviewPct": 88,
-   "reviewCount": 509,
-   "releaseDate": "2022 年 9 月 14 日",
-   "releaseTs": 1663113600000,
-   "platforms": [
-    "win"
-   ],
-   "tinyImage": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/837880/capsule_231x87_schinese.jpg?t=1753707913",
-   "tier": "S",
-   "score": 85.8,
-   "alreadyOwned": false,
-   "inWishlist": false
-  },
-  {
    "appid": 621830,
    "name": "WRC 7 FIA World Rally Championship",
    "discountPercent": 90,
@@ -308,7 +287,7 @@
    "currency": "CNY",
    "reviewSummary": "positive",
    "reviewPct": 84,
-   "reviewCount": 7337,
+   "reviewCount": 7342,
    "releaseDate": "2017 年 9 月 15 日",
    "releaseTs": 1505433600000,
    "platforms": [
@@ -374,7 +353,7 @@
    "currency": "CNY",
    "reviewSummary": "positive",
    "reviewPct": 96,
-   "reviewCount": 1157,
+   "reviewCount": 1159,
    "releaseDate": "2017 年 6 月 14 日",
    "releaseTs": 1497398400000,
    "platforms": [
@@ -395,7 +374,7 @@
    "currency": "CNY",
    "reviewSummary": "positive",
    "reviewPct": 82,
-   "reviewCount": 9539,
+   "reviewCount": 9542,
    "releaseDate": "2018 年 4 月 19 日",
    "releaseTs": 1524096000000,
    "platforms": [
@@ -410,23 +389,24 @@
    "inWishlist": false
   },
   {
-   "appid": 1411740,
-   "name": "城市规划大师",
-   "discountPercent": 85,
-   "finalPrice": 10.05,
-   "originalPrice": 67,
+   "appid": 829660,
+   "name": "No Time to Relax",
+   "discountPercent": 80,
+   "finalPrice": 9.4,
+   "originalPrice": 47,
    "currency": "CNY",
    "reviewSummary": "positive",
-   "reviewPct": 89,
-   "reviewCount": 1858,
-   "releaseDate": "2022 年 7 月 13 日",
-   "releaseTs": 1657670400000,
+   "reviewPct": 92,
+   "reviewCount": 2506,
+   "releaseDate": "2019 年 8 月 21 日",
+   "releaseTs": 1566345600000,
    "platforms": [
-    "win"
+    "win",
+    "mac"
    ],
-   "tinyImage": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1411740/8438c9be06d734be1ddb43c0cd000173ba47ad25/capsule_231x87.jpg?t=1770544830",
+   "tinyImage": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/829660/ca3202c8e85fae389d4004a75547351f6275a49a/capsule_231x87.jpg?t=1772735521",
    "tier": "A",
-   "score": 84.1,
+   "score": 82.7,
    "alreadyOwned": false,
    "inWishlist": false
   },
@@ -439,7 +419,7 @@
    "currency": "CNY",
    "reviewSummary": "positive",
    "reviewPct": 82,
-   "reviewCount": 832,
+   "reviewCount": 834,
    "releaseDate": "2021 年 5 月 20 日",
    "releaseTs": 1621468800000,
    "platforms": [
@@ -460,7 +440,7 @@
    "currency": "CNY",
    "reviewSummary": "positive",
    "reviewPct": 87,
-   "reviewCount": 1414,
+   "reviewCount": 1416,
    "releaseDate": "2023 年 5 月 23 日",
    "releaseTs": 1684800000000,
    "platforms": [
@@ -503,7 +483,7 @@
    "currency": "CNY",
    "reviewSummary": "positive",
    "reviewPct": 85,
-   "reviewCount": 39142,
+   "reviewCount": 39148,
    "releaseDate": "2017 年 10 月 26 日",
    "releaseTs": 1508976000000,
    "platforms": [
@@ -516,23 +496,25 @@
    "inWishlist": false
   },
   {
-   "appid": 2017080,
-   "name": "Nickelodeon All-Star Brawl 2",
-   "discountPercent": 90,
-   "finalPrice": 16.8,
-   "originalPrice": 168,
+   "appid": 537800,
+   "name": "轰炸机小队 / Bomber Crew",
+   "discountPercent": 85,
+   "finalPrice": 8.4,
+   "originalPrice": 56,
    "currency": "CNY",
    "reviewSummary": "positive",
-   "reviewPct": 81,
-   "reviewCount": 1019,
-   "releaseDate": "2023 年 11 月 7 日",
-   "releaseTs": 1699315200000,
+   "reviewPct": 87,
+   "reviewCount": 1129,
+   "releaseDate": "2017 年 10 月 19 日",
+   "releaseTs": 1508371200000,
    "platforms": [
-    "win"
+    "win",
+    "mac",
+    "linux"
    ],
-   "tinyImage": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2017080/capsule_231x87.jpg?t=1746026398",
-   "tier": "S",
-   "score": 82.2,
+   "tinyImage": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/537800/capsule_231x87.jpg?t=1768471106",
+   "tier": "A",
+   "score": 82.4,
    "alreadyOwned": false,
    "inWishlist": false
   },
@@ -566,7 +548,7 @@
    "currency": "CNY",
    "reviewSummary": "positive",
    "reviewPct": 75,
-   "reviewCount": 1465,
+   "reviewCount": 1483,
    "releaseDate": "2019 年 8 月 27 日",
    "releaseTs": 1566864000000,
    "platforms": [
@@ -587,7 +569,7 @@
    "currency": "CNY",
    "reviewSummary": "positive",
    "reviewPct": 78,
-   "reviewCount": 38672,
+   "reviewCount": 38681,
    "releaseDate": "2020 年 3 月 13 日",
    "releaseTs": 1584057600000,
    "platforms": [
@@ -608,7 +590,7 @@
    "currency": "CNY",
    "reviewSummary": "positive",
    "reviewPct": 90,
-   "reviewCount": 2048,
+   "reviewCount": 2049,
    "releaseDate": "2009 年 10 月 13 日",
    "releaseTs": 1255392000000,
    "platforms": [
@@ -621,6 +603,29 @@
    "inWishlist": false
   },
   {
+   "appid": 1066780,
+   "name": "Transport Fever 2",
+   "discountPercent": 80,
+   "finalPrice": 27.2,
+   "originalPrice": 136,
+   "currency": "CNY",
+   "reviewSummary": "positive",
+   "reviewPct": 89,
+   "reviewCount": 3807,
+   "releaseDate": "2019 年 12 月 11 日",
+   "releaseTs": 1576022400000,
+   "platforms": [
+    "win",
+    "mac",
+    "linux"
+   ],
+   "tinyImage": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1066780/capsule_231x87.jpg?t=1727104059",
+   "tier": "A",
+   "score": 81.3,
+   "alreadyOwned": false,
+   "inWishlist": true
+  },
+  {
    "appid": 49520,
    "name": "Borderlands 2",
    "discountPercent": 90,
@@ -629,7 +634,7 @@
    "currency": "CNY",
    "reviewSummary": "positive",
    "reviewPct": 77,
-   "reviewCount": 21610,
+   "reviewCount": 21611,
    "releaseDate": "2012 年 9 月 20 日",
    "releaseTs": 1348099200000,
    "platforms": [
@@ -694,7 +699,7 @@
    "currency": "CNY",
    "reviewSummary": "positive",
    "reviewPct": 73,
-   "reviewCount": 891,
+   "reviewCount": 899,
    "releaseDate": "2023 年 5 月 11 日",
    "releaseTs": 1683763200000,
    "platforms": [
@@ -715,7 +720,7 @@
    "currency": "CNY",
    "reviewSummary": "positive",
    "reviewPct": 88,
-   "reviewCount": 4673,
+   "reviewCount": 4674,
    "releaseDate": "2012 年 9 月 20 日",
    "releaseTs": 1348099200000,
    "platforms": [
@@ -738,7 +743,7 @@
    "currency": "CNY",
    "reviewSummary": "positive",
    "reviewPct": 85,
-   "reviewCount": 662,
+   "reviewCount": 663,
    "releaseDate": "2023 年 2 月 23 日",
    "releaseTs": 1677110400000,
    "platforms": [
@@ -759,7 +764,7 @@
    "currency": "CNY",
    "reviewSummary": "positive",
    "reviewPct": 89,
-   "reviewCount": 1791,
+   "reviewCount": 1793,
    "releaseDate": "2022 年 9 月 1 日",
    "releaseTs": 1661990400000,
    "platforms": [
@@ -780,7 +785,7 @@
    "currency": "CNY",
    "reviewSummary": "positive",
    "reviewPct": 93,
-   "reviewCount": 11164,
+   "reviewCount": 11165,
    "releaseDate": "2010 年 9 月 23 日",
    "releaseTs": 1285200000000,
    "platforms": [
@@ -803,7 +808,7 @@
    "currency": "CNY",
    "reviewSummary": "positive",
    "reviewPct": 92,
-   "reviewCount": 3881,
+   "reviewCount": 3882,
    "releaseDate": "2018 年 12 月 4 日",
    "releaseTs": 1543881600000,
    "platforms": [
@@ -838,6 +843,27 @@
    "inWishlist": false
   },
   {
+   "appid": 994730,
+   "name": "圣女战旗",
+   "discountPercent": 80,
+   "finalPrice": 13.6,
+   "originalPrice": 68,
+   "currency": "CNY",
+   "reviewSummary": "positive",
+   "reviewPct": 86,
+   "reviewCount": 5081,
+   "releaseDate": "2019 年 5 月 27 日",
+   "releaseTs": 1558915200000,
+   "platforms": [
+    "win"
+   ],
+   "tinyImage": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/994730/5ae0bb4e0776b70d76cf05f6b58c069e62003023/capsule_231x87_schinese.jpg?t=1789615011",
+   "tier": "A",
+   "score": 79.6,
+   "alreadyOwned": false,
+   "inWishlist": false
+  },
+  {
    "appid": 1332720,
    "name": "Thief Simulator 2",
    "discountPercent": 81,
@@ -846,7 +872,7 @@
    "currency": "CNY",
    "reviewSummary": "positive",
    "reviewPct": 87,
-   "reviewCount": 1058,
+   "reviewCount": 1060,
    "releaseDate": "2023 年 10 月 4 日",
    "releaseTs": 1696377600000,
    "platforms": [
@@ -867,7 +893,7 @@
    "currency": "CNY",
    "reviewSummary": "positive",
    "reviewPct": 86,
-   "reviewCount": 53310,
+   "reviewCount": 53314,
    "releaseDate": "2018 年 10 月 5 日",
    "releaseTs": 1538697600000,
    "platforms": [
@@ -909,7 +935,7 @@
    "currency": "CNY",
    "reviewSummary": "positive",
    "reviewPct": 74,
-   "reviewCount": 2038,
+   "reviewCount": 2040,
    "releaseDate": "2022 年 10 月 14 日",
    "releaseTs": 1665705600000,
    "platforms": [
@@ -930,7 +956,7 @@
    "currency": "CNY",
    "reviewSummary": "positive",
    "reviewPct": 80,
-   "reviewCount": 1566,
+   "reviewCount": 1569,
    "releaseDate": "2018 年 4 月 3 日",
    "releaseTs": 1522713600000,
    "platforms": [
@@ -961,6 +987,29 @@
    "tinyImage": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1184370/capsule_231x87.jpg?t=1793719076",
    "tier": "A",
    "score": 78.4,
+   "alreadyOwned": false,
+   "inWishlist": false
+  },
+  {
+   "appid": 681280,
+   "name": "Descenders",
+   "discountPercent": 75,
+   "finalPrice": 17.25,
+   "originalPrice": 69,
+   "currency": "CNY",
+   "reviewSummary": "positive",
+   "reviewPct": 92,
+   "reviewCount": 1042,
+   "releaseDate": "2019 年 5 月 7 日",
+   "releaseTs": 1557187200000,
+   "platforms": [
+    "win",
+    "mac",
+    "linux"
+   ],
+   "tinyImage": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/681280/capsule_231x87_schinese.jpg?t=1764690930",
+   "tier": "A",
+   "score": 78.3,
    "alreadyOwned": false,
    "inWishlist": false
   },
@@ -1059,7 +1108,7 @@
    "currency": "CNY",
    "reviewSummary": "positive",
    "reviewPct": 78,
-   "reviewCount": 2396,
+   "reviewCount": 2397,
    "releaseDate": "2019 年 9 月 3 日",
    "releaseTs": 1567468800000,
    "platforms": [
@@ -1124,7 +1173,7 @@
    "currency": "CNY",
    "reviewSummary": "positive",
    "reviewPct": 71,
-   "reviewCount": 2629,
+   "reviewCount": 2630,
    "releaseDate": "2018 年 6 月 4 日",
    "releaseTs": 1528070400000,
    "platforms": [
@@ -1145,7 +1194,7 @@
    "currency": "CNY",
    "reviewSummary": "positive",
    "reviewPct": 99,
-   "reviewCount": 6842,
+   "reviewCount": 6846,
    "releaseDate": "2015 年 11 月 23 日",
    "releaseTs": 1448236800000,
    "platforms": [
@@ -1166,7 +1215,7 @@
    "currency": "CNY",
    "reviewSummary": "positive",
    "reviewPct": 93,
-   "reviewCount": 82343,
+   "reviewCount": 82352,
    "releaseDate": "2016 年 7 月 22 日",
    "releaseTs": 1469145600000,
    "platforms": [
@@ -1201,50 +1250,6 @@
    "inWishlist": false
   },
   {
-   "appid": 456670,
-   "name": "Hand of Fate 2",
-   "discountPercent": 80,
-   "finalPrice": 18,
-   "originalPrice": 90,
-   "currency": "CNY",
-   "reviewSummary": "positive",
-   "reviewPct": 82,
-   "reviewCount": 1898,
-   "releaseDate": "2017 年 11 月 7 日",
-   "releaseTs": 1510012800000,
-   "platforms": [
-    "win",
-    "mac",
-    "linux"
-   ],
-   "tinyImage": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/456670/capsule_231x87_schinese.jpg?t=1768889222",
-   "tier": "A",
-   "score": 76.4,
-   "alreadyOwned": false,
-   "inWishlist": true
-  },
-  {
-   "appid": 1927720,
-   "name": "Monument Valley",
-   "discountPercent": 65,
-   "finalPrice": 11.55,
-   "originalPrice": 33,
-   "currency": "CNY",
-   "reviewSummary": "positive",
-   "reviewPct": 98,
-   "reviewCount": 4077,
-   "releaseDate": "2022 年 7 月 12 日",
-   "releaseTs": 1657584000000,
-   "platforms": [
-    "win"
-   ],
-   "tinyImage": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1927720/capsule_231x87.jpg?t=1762967584",
-   "tier": "B",
-   "score": 76.2,
-   "alreadyOwned": false,
-   "inWishlist": false
-  },
-  {
    "appid": 1227890,
    "name": "夏日狂想曲：乡间的难忘回忆",
    "discountPercent": 70,
@@ -1253,7 +1258,7 @@
    "currency": "CNY",
    "reviewSummary": "positive",
    "reviewPct": 92,
-   "reviewCount": 19426,
+   "reviewCount": 19437,
    "releaseDate": "2020 年 6 月 14 日",
    "releaseTs": 1592092800000,
    "platforms": [
@@ -1274,7 +1279,7 @@
    "currency": "CNY",
    "reviewSummary": "positive",
    "reviewPct": 86,
-   "reviewCount": 6760,
+   "reviewCount": 6759,
    "releaseDate": "2015 年 4 月 2 日",
    "releaseTs": 1427932800000,
    "platforms": [
@@ -1374,6 +1379,48 @@
    "inWishlist": false
   },
   {
+   "appid": 1904790,
+   "name": "阿加莎·克里斯蒂：东方快车谋杀案 (Agatha Christie - Murder on the Orient Express)",
+   "discountPercent": 80,
+   "finalPrice": 16,
+   "originalPrice": 80,
+   "currency": "CNY",
+   "reviewSummary": "positive",
+   "reviewPct": 82,
+   "reviewCount": 1106,
+   "releaseDate": "2023 年 10 月 19 日",
+   "releaseTs": 1697673600000,
+   "platforms": [
+    "win"
+   ],
+   "tinyImage": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1904790/capsule_231x87_schinese.jpg?t=1743171940",
+   "tier": "A",
+   "score": 75.9,
+   "alreadyOwned": false,
+   "inWishlist": false
+  },
+  {
+   "appid": 1466640,
+   "name": "九十六号公路",
+   "discountPercent": 75,
+   "finalPrice": 17.49,
+   "originalPrice": 69.96,
+   "currency": "CNY",
+   "reviewSummary": "positive",
+   "reviewPct": 86,
+   "reviewCount": 2744,
+   "releaseDate": "2021 年 8 月 16 日",
+   "releaseTs": 1629072000000,
+   "platforms": [
+    "win"
+   ],
+   "tinyImage": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1466640/capsule_231x87.jpg?t=1784818841",
+   "tier": "A",
+   "score": 75.7,
+   "alreadyOwned": false,
+   "inWishlist": false
+  },
+  {
    "appid": 960170,
    "name": "DJMAX RESPECT V",
    "discountPercent": 80,
@@ -1416,6 +1463,28 @@
    "inWishlist": false
   },
   {
+   "appid": 1509510,
+   "name": "部落幸存者",
+   "discountPercent": 75,
+   "finalPrice": 20.25,
+   "originalPrice": 81,
+   "currency": "CNY",
+   "reviewSummary": "positive",
+   "reviewPct": 85,
+   "reviewCount": 2672,
+   "releaseDate": "2022 年 10 月 24 日",
+   "releaseTs": 1666569600000,
+   "platforms": [
+    "win",
+    "mac"
+   ],
+   "tinyImage": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1509510/capsule_231x87.jpg?t=1790929457",
+   "tier": "A",
+   "score": 75,
+   "alreadyOwned": false,
+   "inWishlist": false
+  },
+  {
    "appid": 1206610,
    "name": "橡胶强盗: Rubber Bandits",
    "discountPercent": 75,
@@ -1424,7 +1493,7 @@
    "currency": "CNY",
    "reviewSummary": "positive",
    "reviewPct": 83,
-   "reviewCount": 3386,
+   "reviewCount": 3387,
    "releaseDate": "2021 年 12 月 2 日",
    "releaseTs": 1638403200000,
    "platforms": [
@@ -1445,7 +1514,7 @@
    "currency": "CNY",
    "reviewSummary": "positive",
    "reviewPct": 82,
-   "reviewCount": 3058,
+   "reviewCount": 3060,
    "releaseDate": "2017 年 4 月 18 日",
    "releaseTs": 1492473600000,
    "platforms": [
@@ -1459,27 +1528,6 @@
    "inWishlist": false
   },
   {
-   "appid": 635260,
-   "name": "CarX漂移赛车在线",
-   "discountPercent": 70,
-   "finalPrice": 14.4,
-   "originalPrice": 48,
-   "currency": "CNY",
-   "reviewSummary": "positive",
-   "reviewPct": 91,
-   "reviewCount": 811,
-   "releaseDate": "2017 年 11 月 17 日",
-   "releaseTs": 1510876800000,
-   "platforms": [
-    "win"
-   ],
-   "tinyImage": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/635260/1a768defbc79ae89c36706e2cd9b6edcc88cfd8b/capsule_231x87_schinese.jpg?t=1787303355",
-   "tier": "B",
-   "score": 74,
-   "alreadyOwned": false,
-   "inWishlist": false
-  },
-  {
    "appid": 1451940,
    "name": "主播女孩重度依赖",
    "discountPercent": 66,
@@ -1488,7 +1536,7 @@
    "currency": "CNY",
    "reviewSummary": "positive",
    "reviewPct": 93,
-   "reviewCount": 21617,
+   "reviewCount": 21623,
    "releaseDate": "2022 年 1 月 21 日",
    "releaseTs": 1642723200000,
    "platforms": [
@@ -1497,6 +1545,27 @@
    ],
    "tinyImage": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1451940/capsule_231x87_schinese.jpg?t=1762834234",
    "tier": "B",
+   "score": 74,
+   "alreadyOwned": false,
+   "inWishlist": false
+  },
+  {
+   "appid": 969990,
+   "name": "SpongeBob SquarePants: Battle for Bikini Bottom - Rehydrated",
+   "discountPercent": 75,
+   "finalPrice": 39.75,
+   "originalPrice": 159,
+   "currency": "CNY",
+   "reviewSummary": "positive",
+   "reviewPct": 85,
+   "reviewCount": 888,
+   "releaseDate": "2020 年 6 月 23 日",
+   "releaseTs": 1592870400000,
+   "platforms": [
+    "win"
+   ],
+   "tinyImage": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/969990/capsule_231x87.jpg?t=1754079607",
+   "tier": "A",
    "score": 74,
    "alreadyOwned": false,
    "inWishlist": false
@@ -1525,6 +1594,27 @@
    "inWishlist": false
   },
   {
+   "appid": 752470,
+   "name": "灰烬之梦 CINERIS SOMNIA",
+   "discountPercent": 70,
+   "finalPrice": 15,
+   "originalPrice": 50,
+   "currency": "CNY",
+   "reviewSummary": "positive",
+   "reviewPct": 90,
+   "reviewCount": 1301,
+   "releaseDate": "2018 年 10 月 9 日",
+   "releaseTs": 1539043200000,
+   "platforms": [
+    "win"
+   ],
+   "tinyImage": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/752470/1525ba2271d8272779a1f728c80b0a46321f9d60/capsule_231x87_schinese.jpg?t=1793065076",
+   "tier": "B",
+   "score": 73.9,
+   "alreadyOwned": false,
+   "inWishlist": false
+  },
+  {
    "appid": 1164940,
    "name": "海参2",
    "discountPercent": 75,
@@ -1533,7 +1623,7 @@
    "currency": "CNY",
    "reviewSummary": "positive",
    "reviewPct": 85,
-   "reviewCount": 772,
+   "reviewCount": 773,
    "releaseDate": "2023 年 6 月 21 日",
    "releaseTs": 1687305600000,
    "platforms": [
@@ -1546,27 +1636,6 @@
    "inWishlist": true
   },
   {
-   "appid": 752470,
-   "name": "灰烬之梦 CINERIS SOMNIA",
-   "discountPercent": 70,
-   "finalPrice": 15,
-   "originalPrice": 50,
-   "currency": "CNY",
-   "reviewSummary": "positive",
-   "reviewPct": 90,
-   "reviewCount": 1294,
-   "releaseDate": "2018 年 10 月 9 日",
-   "releaseTs": 1539043200000,
-   "platforms": [
-    "win"
-   ],
-   "tinyImage": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/752470/1525ba2271d8272779a1f728c80b0a46321f9d60/capsule_231x87_schinese.jpg?t=1793065076",
-   "tier": "B",
-   "score": 73.8,
-   "alreadyOwned": false,
-   "inWishlist": false
-  },
-  {
    "appid": 392160,
    "name": "X4：基石",
    "discountPercent": 80,
@@ -1575,7 +1644,7 @@
    "currency": "CNY",
    "reviewSummary": "positive",
    "reviewPct": 77,
-   "reviewCount": 2727,
+   "reviewCount": 2728,
    "releaseDate": "2018 年 11 月 30 日",
    "releaseTs": 1543536000000,
    "platforms": [
@@ -1619,7 +1688,7 @@
    "currency": "CNY",
    "reviewSummary": "positive",
    "reviewPct": 93,
-   "reviewCount": 13187,
+   "reviewCount": 13188,
    "releaseDate": "2021 年 2 月 2 日",
    "releaseTs": 1612224000000,
    "platforms": [
@@ -1662,7 +1731,7 @@
    "currency": "CNY",
    "reviewSummary": "positive",
    "reviewPct": 75,
-   "reviewCount": 7432,
+   "reviewCount": 7433,
    "releaseDate": "2019 年 8 月 19 日",
    "releaseTs": 1566172800000,
    "platforms": [
@@ -1704,7 +1773,7 @@
    "currency": "CNY",
    "reviewSummary": "positive",
    "reviewPct": 95,
-   "reviewCount": 693,
+   "reviewCount": 694,
    "releaseDate": "2021 年 12 月 17 日",
    "releaseTs": 1639699200000,
    "platforms": [
@@ -1746,7 +1815,7 @@
    "currency": "CNY",
    "reviewSummary": "positive",
    "reviewPct": 81,
-   "reviewCount": 2565,
+   "reviewCount": 2566,
    "releaseDate": "2020 年 4 月 30 日",
    "releaseTs": 1588204800000,
    "platforms": [
@@ -1782,6 +1851,27 @@
    "inWishlist": false
   },
   {
+   "appid": 420110,
+   "name": "NEKOPARA Vol. 2",
+   "discountPercent": 60,
+   "finalPrice": 16.8,
+   "originalPrice": 42,
+   "currency": "CNY",
+   "reviewSummary": "positive",
+   "reviewPct": 97,
+   "reviewCount": 5990,
+   "releaseDate": "2016 年 2 月 19 日",
+   "releaseTs": 1455840000000,
+   "platforms": [
+    "win"
+   ],
+   "tinyImage": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/420110/capsule_231x87.jpg?t=1656892360",
+   "tier": "B",
+   "score": 72.2,
+   "alreadyOwned": false,
+   "inWishlist": false
+  },
+  {
    "appid": 1092790,
    "name": "邪恶冥刻",
    "discountPercent": 60,
@@ -1790,7 +1880,7 @@
    "currency": "CNY",
    "reviewSummary": "positive",
    "reviewPct": 97,
-   "reviewCount": 24196,
+   "reviewCount": 24202,
    "releaseDate": "2021 年 10 月 19 日",
    "releaseTs": 1634601600000,
    "platforms": [
@@ -1813,7 +1903,7 @@
    "currency": "CNY",
    "reviewSummary": "positive",
    "reviewPct": 91,
-   "reviewCount": 21150,
+   "reviewCount": 21160,
    "releaseDate": "2016 年 11 月 17 日",
    "releaseTs": 1479340800000,
    "platforms": [
@@ -1827,27 +1917,6 @@
    "inWishlist": false
   },
   {
-   "appid": 1927740,
-   "name": "Monument Valley 2",
-   "discountPercent": 65,
-   "finalPrice": 11.55,
-   "originalPrice": 33,
-   "currency": "CNY",
-   "reviewSummary": "positive",
-   "reviewPct": 92,
-   "reviewCount": 2031,
-   "releaseDate": "2022 年 7 月 12 日",
-   "releaseTs": 1657584000000,
-   "platforms": [
-    "win"
-   ],
-   "tinyImage": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1927740/capsule_231x87.jpg?t=1762967686",
-   "tier": "B",
-   "score": 72,
-   "alreadyOwned": false,
-   "inWishlist": false
-  },
-  {
    "appid": 788100,
    "name": "霓虹深渊",
    "discountPercent": 70,
@@ -1856,7 +1925,7 @@
    "currency": "CNY",
    "reviewSummary": "positive",
    "reviewPct": 85,
-   "reviewCount": 14283,
+   "reviewCount": 14284,
    "releaseDate": "2020 年 7 月 14 日",
    "releaseTs": 1594684800000,
    "platforms": [
@@ -1940,7 +2009,7 @@
    "currency": "CNY",
    "reviewSummary": "positive",
    "reviewPct": 81,
-   "reviewCount": 1158,
+   "reviewCount": 1160,
    "releaseDate": "2008 年 4 月 9 日",
    "releaseTs": 1207699200000,
    "platforms": [
@@ -1982,7 +2051,7 @@
    "currency": "CNY",
    "reviewSummary": "positive",
    "reviewPct": 96,
-   "reviewCount": 10589,
+   "reviewCount": 10591,
    "releaseDate": "2014 年 12 月 29 日",
    "releaseTs": 1419811200000,
    "platforms": [
@@ -2016,29 +2085,6 @@
    "inWishlist": false
   },
   {
-   "appid": 1556790,
-   "name": "伊松佐河",
-   "discountPercent": 78,
-   "finalPrice": 41.58,
-   "originalPrice": 189,
-   "currency": "CNY",
-   "reviewSummary": "positive",
-   "reviewPct": 77,
-   "reviewCount": 1094,
-   "releaseDate": "2022 年 9 月 13 日",
-   "releaseTs": 1663027200000,
-   "platforms": [
-    "win",
-    "mac",
-    "linux"
-   ],
-   "tinyImage": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1556790/capsule_231x87_schinese.jpg?t=1790860277",
-   "tier": "A",
-   "score": 71.5,
-   "alreadyOwned": false,
-   "inWishlist": false
-  },
-  {
    "appid": 1128920,
    "name": "永恒空间2",
    "discountPercent": 80,
@@ -2047,7 +2093,7 @@
    "currency": "CNY",
    "reviewSummary": "positive",
    "reviewPct": 74,
-   "reviewCount": 1475,
+   "reviewCount": 1476,
    "releaseDate": "2023 年 4 月 6 日",
    "releaseTs": 1680739200000,
    "platforms": [
@@ -2069,7 +2115,7 @@
    "currency": "CNY",
    "reviewSummary": "positive",
    "reviewPct": 78,
-   "reviewCount": 9934,
+   "reviewCount": 9936,
    "releaseDate": "2015 年 11 月 18 日",
    "releaseTs": 1447804800000,
    "platforms": [
@@ -2090,7 +2136,7 @@
    "currency": "CNY",
    "reviewSummary": "positive",
    "reviewPct": 84,
-   "reviewCount": 3283,
+   "reviewCount": 3282,
    "releaseDate": "2011 年 11 月 30 日",
    "releaseTs": 1322611200000,
    "platforms": [
@@ -2111,7 +2157,7 @@
    "currency": "CNY",
    "reviewSummary": "positive",
    "reviewPct": 89,
-   "reviewCount": 2437,
+   "reviewCount": 2438,
    "releaseDate": "2017 年 7 月 20 日",
    "releaseTs": 1500508800000,
    "platforms": [
@@ -2221,7 +2267,7 @@
    "currency": "CNY",
    "reviewSummary": "positive",
    "reviewPct": 77,
-   "reviewCount": 9398,
+   "reviewCount": 9400,
    "releaseDate": "2021 年 7 月 27 日",
    "releaseTs": 1627344000000,
    "platforms": [
@@ -2242,7 +2288,7 @@
    "currency": "CNY",
    "reviewSummary": "positive",
    "reviewPct": 83,
-   "reviewCount": 3682,
+   "reviewCount": 3683,
    "releaseDate": "2022 年 10 月 17 日",
    "releaseTs": 1665964800000,
    "platforms": [
@@ -2284,7 +2330,7 @@
    "currency": "CNY",
    "reviewSummary": "positive",
    "reviewPct": 86,
-   "reviewCount": 28505,
+   "reviewCount": 28509,
    "releaseDate": "2018 年 8 月 7 日",
    "releaseTs": 1533600000000,
    "platforms": [
@@ -2307,7 +2353,7 @@
    "currency": "CNY",
    "reviewSummary": "positive",
    "reviewPct": 94,
-   "reviewCount": 2045,
+   "reviewCount": 2050,
    "releaseDate": "2024 年 5 月 9 日",
    "releaseTs": 1715212800000,
    "platforms": [
@@ -2328,7 +2374,7 @@
    "currency": "CNY",
    "reviewSummary": "positive",
    "reviewPct": 71,
-   "reviewCount": 1461,
+   "reviewCount": 1462,
    "releaseDate": "2015 年 9 月 17 日",
    "releaseTs": 1442448000000,
    "platforms": [
@@ -2349,7 +2395,7 @@
    "currency": "CNY",
    "reviewSummary": "positive",
    "reviewPct": 71,
-   "reviewCount": 1265,
+   "reviewCount": 1268,
    "releaseDate": "2024 年 9 月 11 日",
    "releaseTs": 1726012800000,
    "platforms": [
@@ -2370,7 +2416,7 @@
    "currency": "CNY",
    "reviewSummary": "positive",
    "reviewPct": 91,
-   "reviewCount": 3824,
+   "reviewCount": 3839,
    "releaseDate": "2026 年 5 月 28 日",
    "releaseTs": 1779926400000,
    "platforms": [
@@ -2383,6 +2429,69 @@
    "inWishlist": false
   },
   {
+   "appid": 1951230,
+   "name": "负鼠闹翻天",
+   "discountPercent": 60,
+   "finalPrice": 11.6,
+   "originalPrice": 29,
+   "currency": "CNY",
+   "reviewSummary": "positive",
+   "reviewPct": 93,
+   "reviewCount": 1836,
+   "releaseDate": "2023 年 9 月 28 日",
+   "releaseTs": 1695859200000,
+   "platforms": [
+    "win"
+   ],
+   "tinyImage": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1951230/capsule_231x87_schinese.jpg?t=1784801677",
+   "tier": "B",
+   "score": 69,
+   "alreadyOwned": false,
+   "inWishlist": false
+  },
+  {
+   "appid": 1369630,
+   "name": "ENDER LILIES: Quietus of the Knights",
+   "discountPercent": 60,
+   "finalPrice": 39.2,
+   "originalPrice": 98,
+   "currency": "CNY",
+   "reviewSummary": "positive",
+   "reviewPct": 91,
+   "reviewCount": 16210,
+   "releaseDate": "2021 年 6 月 21 日",
+   "releaseTs": 1624233600000,
+   "platforms": [
+    "win"
+   ],
+   "tinyImage": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1369630/capsule_231x87.jpg?t=1788931074",
+   "tier": "B",
+   "score": 68.6,
+   "alreadyOwned": false,
+   "inWishlist": true
+  },
+  {
+   "appid": 2026000,
+   "name": "我们的冒险者公会",
+   "discountPercent": 60,
+   "finalPrice": 23.2,
+   "originalPrice": 58,
+   "currency": "CNY",
+   "reviewSummary": "positive",
+   "reviewPct": 94,
+   "reviewCount": 615,
+   "releaseDate": "2024 年 4 月 12 日",
+   "releaseTs": 1712880000000,
+   "platforms": [
+    "win"
+   ],
+   "tinyImage": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2026000/capsule_231x87.jpg?t=1760657263",
+   "tier": "B",
+   "score": 68.5,
+   "alreadyOwned": false,
+   "inWishlist": false
+  },
+  {
    "appid": 1422130,
    "name": "SimRail - The Railway Simulator",
    "discountPercent": 65,
@@ -2391,7 +2500,7 @@
    "currency": "CNY",
    "reviewSummary": "positive",
    "reviewPct": 85,
-   "reviewCount": 5400,
+   "reviewCount": 5401,
    "releaseDate": "2024 年 12 月 13 日",
    "releaseTs": 1734048000000,
    "platforms": [
@@ -2412,7 +2521,7 @@
    "currency": "CNY",
    "reviewSummary": "positive",
    "reviewPct": 92,
-   "reviewCount": 1918,
+   "reviewCount": 1920,
    "releaseDate": "2023 年 10 月 23 日",
    "releaseTs": 1698019200000,
    "platforms": [
@@ -2435,7 +2544,7 @@
    "currency": "CNY",
    "reviewSummary": "positive",
    "reviewPct": 79,
-   "reviewCount": 14961,
+   "reviewCount": 14964,
    "releaseDate": "2020 年 3 月 24 日",
    "releaseTs": 1585008000000,
    "platforms": [
@@ -2479,7 +2588,7 @@
    "currency": "CNY",
    "reviewSummary": "positive",
    "reviewPct": 73,
-   "reviewCount": 7080,
+   "reviewCount": 7081,
    "releaseDate": "2023 年 7 月 25 日",
    "releaseTs": 1690243200000,
    "platforms": [
@@ -2492,6 +2601,27 @@
    "inWishlist": true
   },
   {
+   "appid": 2961880,
+   "name": "超市模拟器",
+   "discountPercent": 60,
+   "finalPrice": 23.2,
+   "originalPrice": 58,
+   "currency": "CNY",
+   "reviewSummary": "positive",
+   "reviewPct": 90,
+   "reviewCount": 5364,
+   "releaseDate": "2024 年 11 月 21 日",
+   "releaseTs": 1732147200000,
+   "platforms": [
+    "win"
+   ],
+   "tinyImage": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2961880/1c0175512956fae4baff6717ca1e4654d2543bcf/capsule_231x87.jpg?t=1783883017",
+   "tier": "B",
+   "score": 68,
+   "alreadyOwned": false,
+   "inWishlist": false
+  },
+  {
    "appid": 1372280,
    "name": "MELTY BLOOD: TYPE LUMINA",
    "discountPercent": 70,
@@ -2500,7 +2630,7 @@
    "currency": "CNY",
    "reviewSummary": "positive",
    "reviewPct": 80,
-   "reviewCount": 1524,
+   "reviewCount": 1526,
    "releaseDate": "2021 年 9 月 29 日",
    "releaseTs": 1632873600000,
    "platforms": [
@@ -2521,7 +2651,7 @@
    "currency": "CNY",
    "reviewSummary": "positive",
    "reviewPct": 91,
-   "reviewCount": 1577,
+   "reviewCount": 1578,
    "releaseDate": "2020 年 7 月 29 日",
    "releaseTs": 1595980800000,
    "platforms": [
@@ -2544,7 +2674,7 @@
    "currency": "CNY",
    "reviewSummary": "positive",
    "reviewPct": 76,
-   "reviewCount": 2142,
+   "reviewCount": 2143,
    "releaseDate": "2024 年 8 月 2 日",
    "releaseTs": 1722556800000,
    "platforms": [
@@ -2587,7 +2717,7 @@
    "currency": "CNY",
    "reviewSummary": "positive",
    "reviewPct": 89,
-   "reviewCount": 3145,
+   "reviewCount": 3146,
    "releaseDate": "2022 年 12 月 19 日",
    "releaseTs": 1671408000000,
    "platforms": [
@@ -2609,7 +2739,7 @@
    "currency": "CNY",
    "reviewSummary": "positive",
    "reviewPct": 86,
-   "reviewCount": 2063,
+   "reviewCount": 2064,
    "releaseDate": "2023 年 3 月 8 日",
    "releaseTs": 1678233600000,
    "platforms": [
@@ -2672,7 +2802,7 @@
    "currency": "CNY",
    "reviewSummary": "positive",
    "reviewPct": 88,
-   "reviewCount": 2900,
+   "reviewCount": 2902,
    "releaseDate": "2022 年 11 月 8 日",
    "releaseTs": 1667865600000,
    "platforms": [
@@ -2694,7 +2824,7 @@
    "currency": "CNY",
    "reviewSummary": "positive",
    "reviewPct": 90,
-   "reviewCount": 732,
+   "reviewCount": 733,
    "releaseDate": "2023 年 8 月 31 日",
    "releaseTs": 1693440000000,
    "platforms": [
@@ -2715,7 +2845,7 @@
    "currency": "CNY",
    "reviewSummary": "positive",
    "reviewPct": 87,
-   "reviewCount": 46980,
+   "reviewCount": 46991,
    "releaseDate": "2016 年 8 月 12 日",
    "releaseTs": 1470960000000,
    "platforms": [
@@ -2759,7 +2889,7 @@
    "currency": "CNY",
    "reviewSummary": "positive",
    "reviewPct": 80,
-   "reviewCount": 2668,
+   "reviewCount": 2670,
    "releaseDate": "2023 年 8 月 24 日",
    "releaseTs": 1692835200000,
    "platforms": [
@@ -2823,7 +2953,7 @@
    "currency": "CNY",
    "reviewSummary": "positive",
    "reviewPct": 97,
-   "reviewCount": 4961,
+   "reviewCount": 4962,
    "releaseDate": "2020 年 11 月 26 日",
    "releaseTs": 1606348800000,
    "platforms": [
@@ -2844,7 +2974,7 @@
    "currency": "CNY",
    "reviewSummary": "positive",
    "reviewPct": 74,
-   "reviewCount": 3005,
+   "reviewCount": 3006,
    "releaseDate": "2015 年 3 月 9 日",
    "releaseTs": 1425859200000,
    "platforms": [
@@ -2865,7 +2995,7 @@
    "currency": "CNY",
    "reviewSummary": "positive",
    "reviewPct": 98,
-   "reviewCount": 1980,
+   "reviewCount": 1984,
    "releaseDate": "2019 年 8 月 16 日",
    "releaseTs": 1565913600000,
    "platforms": [
@@ -2886,7 +3016,7 @@
    "currency": "CNY",
    "reviewSummary": "positive",
    "reviewPct": 76,
-   "reviewCount": 870,
+   "reviewCount": 871,
    "releaseDate": "2023 年 6 月 19 日",
    "releaseTs": 1687132800000,
    "platforms": [
@@ -2920,6 +3050,27 @@
    "inWishlist": true
   },
   {
+   "appid": 1858650,
+   "name": "合力逃脱",
+   "discountPercent": 60,
+   "finalPrice": 20.8,
+   "originalPrice": 52,
+   "currency": "CNY",
+   "reviewSummary": "positive",
+   "reviewPct": 86,
+   "reviewCount": 1487,
+   "releaseDate": "2024 年 11 月 12 日",
+   "releaseTs": 1731369600000,
+   "platforms": [
+    "win"
+   ],
+   "tinyImage": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1858650/e90069f27535982cdc2505f4d0ebe5238b267fa6/capsule_231x87_schinese.jpg?t=1754475664",
+   "tier": "B",
+   "score": 64.6,
+   "alreadyOwned": false,
+   "inWishlist": false
+  },
+  {
    "appid": 965680,
    "name": "Boomerang Fu",
    "discountPercent": 50,
@@ -2928,7 +3079,7 @@
    "currency": "CNY",
    "reviewSummary": "positive",
    "reviewPct": 97,
-   "reviewCount": 1843,
+   "reviewCount": 1847,
    "releaseDate": "2020 年 8 月 13 日",
    "releaseTs": 1597276800000,
    "platforms": [
@@ -2949,7 +3100,7 @@
    "currency": "CNY",
    "reviewSummary": "positive",
    "reviewPct": 97,
-   "reviewCount": 1501,
+   "reviewCount": 1502,
    "releaseDate": "2021 年 3 月 19 日",
    "releaseTs": 1616112000000,
    "platforms": [
@@ -3014,7 +3165,7 @@
    "currency": "CNY",
    "reviewSummary": "positive",
    "reviewPct": 95,
-   "reviewCount": 5142,
+   "reviewCount": 5147,
    "releaseDate": "2025 年 9 月 19 日",
    "releaseTs": 1758240000000,
    "platforms": [
@@ -3056,7 +3207,7 @@
    "currency": "CNY",
    "reviewSummary": "positive",
    "reviewPct": 77,
-   "reviewCount": 1191,
+   "reviewCount": 1193,
    "releaseDate": "2024 年 2 月 21 日",
    "releaseTs": 1708473600000,
    "platforms": [
@@ -3090,6 +3241,27 @@
    "inWishlist": false
   },
   {
+   "appid": 1450120,
+   "name": "英雄传说：闪之轨迹I：改 –Thors Military Academy 1204–",
+   "discountPercent": 60,
+   "finalPrice": 92,
+   "originalPrice": 230,
+   "currency": "CNY",
+   "reviewSummary": "positive",
+   "reviewPct": 86,
+   "reviewCount": 623,
+   "releaseDate": "2021 年 2 月 7 日",
+   "releaseTs": 1612656000000,
+   "platforms": [
+    "win"
+   ],
+   "tinyImage": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1450120/capsule_231x87.jpg?t=1701195492",
+   "tier": "B",
+   "score": 63.7,
+   "alreadyOwned": false,
+   "inWishlist": false
+  },
+  {
    "appid": 2060590,
    "name": "Wilmot Works It Out",
    "discountPercent": 50,
@@ -3098,7 +3270,7 @@
    "currency": "CNY",
    "reviewSummary": "positive",
    "reviewPct": 97,
-   "reviewCount": 802,
+   "reviewCount": 803,
    "releaseDate": "2024 年 10 月 23 日",
    "releaseTs": 1729641600000,
    "platforms": [
@@ -3120,7 +3292,7 @@
    "currency": "CNY",
    "reviewSummary": "positive",
    "reviewPct": 80,
-   "reviewCount": 573,
+   "reviewCount": 574,
    "releaseDate": "2024 年 5 月 21 日",
    "releaseTs": 1716249600000,
    "platforms": [
@@ -3141,7 +3313,7 @@
    "currency": "CNY",
    "reviewSummary": "positive",
    "reviewPct": 94,
-   "reviewCount": 40659,
+   "reviewCount": 40702,
    "releaseDate": "2023 年 6 月 23 日",
    "releaseTs": 1687478400000,
    "platforms": [
@@ -3156,6 +3328,27 @@
    "inWishlist": false
   },
   {
+   "appid": 1072040,
+   "name": "Panzer Corps 2",
+   "discountPercent": 60,
+   "finalPrice": 54.4,
+   "originalPrice": 136,
+   "currency": "CNY",
+   "reviewSummary": "positive",
+   "reviewPct": 86,
+   "reviewCount": 420,
+   "releaseDate": "2020 年 3 月 19 日",
+   "releaseTs": 1584576000000,
+   "platforms": [
+    "win"
+   ],
+   "tinyImage": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1072040/5acd00542e2270eb46c214d744aa8c4da25cbcfd/capsule_231x87.jpg?t=1784796671",
+   "tier": "B",
+   "score": 63.4,
+   "alreadyOwned": false,
+   "inWishlist": false
+  },
+  {
    "appid": 1094520,
    "name": "部落与弯刀",
    "discountPercent": 60,
@@ -3164,7 +3357,7 @@
    "currency": "CNY",
    "reviewSummary": "positive",
    "reviewPct": 82,
-   "reviewCount": 18305,
+   "reviewCount": 18306,
    "releaseDate": "2021 年 12 月 15 日",
    "releaseTs": 1639526400000,
    "platforms": [
@@ -3206,7 +3399,7 @@
    "currency": "CNY",
    "reviewSummary": "positive",
    "reviewPct": 96,
-   "reviewCount": 1009,
+   "reviewCount": 1011,
    "releaseDate": "2017 年 12 月 19 日",
    "releaseTs": 1513641600000,
    "platforms": [
@@ -3249,7 +3442,7 @@
    "currency": "CNY",
    "reviewSummary": "positive",
    "reviewPct": 94,
-   "reviewCount": 2686,
+   "reviewCount": 2687,
    "releaseDate": "2023 年 9 月 25 日",
    "releaseTs": 1695600000000,
    "platforms": [
@@ -3325,23 +3518,24 @@
    "inWishlist": false
   },
   {
-   "appid": 1167630,
-   "name": "Teardown",
+   "appid": 1123450,
+   "name": "Chicory: A Colorful Tale",
    "discountPercent": 50,
-   "finalPrice": 59.5,
-   "originalPrice": 119,
+   "finalPrice": 38,
+   "originalPrice": 76,
    "currency": "CNY",
    "reviewSummary": "positive",
-   "reviewPct": 93,
-   "reviewCount": 2575,
-   "releaseDate": "2022 年 4 月 21 日",
-   "releaseTs": 1650499200000,
+   "reviewPct": 96,
+   "reviewCount": 551,
+   "releaseDate": "2021 年 6 月 10 日",
+   "releaseTs": 1623283200000,
    "platforms": [
-    "win"
+    "win",
+    "mac"
    ],
-   "tinyImage": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1167630/592fd402f333d5022f47691dbe49d26c9bae0c6c/capsule_231x87.jpg?t=1791807602",
+   "tinyImage": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1123450/capsule_231x87.jpg?t=1783360001",
    "tier": "C",
-   "score": 62.3,
+   "score": 62.6,
    "alreadyOwned": false,
    "inWishlist": false
   },
@@ -3354,7 +3548,7 @@
    "currency": "CNY",
    "reviewSummary": "positive",
    "reviewPct": 94,
-   "reviewCount": 951,
+   "reviewCount": 955,
    "releaseDate": "2026 年 4 月 30 日",
    "releaseTs": 1777507200000,
    "platforms": [
@@ -3376,7 +3570,7 @@
    "currency": "CNY",
    "reviewSummary": "positive",
    "reviewPct": 91,
-   "reviewCount": 5125,
+   "reviewCount": 5127,
    "releaseDate": "2025 年 11 月 19 日",
    "releaseTs": 1763510400000,
    "platforms": [
@@ -3391,27 +3585,6 @@
    "inWishlist": false
   },
   {
-   "appid": 1592520,
-   "name": "魔女之泉3 Re:Fine －玩偶小魔女艾露迪的故事－",
-   "discountPercent": 50,
-   "finalPrice": 45,
-   "originalPrice": 90,
-   "currency": "CNY",
-   "reviewSummary": "positive",
-   "reviewPct": 93,
-   "reviewCount": 1237,
-   "releaseDate": "2021 年 11 月 1 日",
-   "releaseTs": 1635724800000,
-   "platforms": [
-    "win"
-   ],
-   "tinyImage": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1592520/capsule_231x87_schinese.jpg?t=1686287932",
-   "tier": "C",
-   "score": 61.6,
-   "alreadyOwned": false,
-   "inWishlist": false
-  },
-  {
    "appid": 1601570,
    "name": "多重人生",
    "discountPercent": 55,
@@ -3420,7 +3593,7 @@
    "currency": "CNY",
    "reviewSummary": "positive",
    "reviewPct": 86,
-   "reviewCount": 2532,
+   "reviewCount": 2535,
    "releaseDate": "2025 年 6 月 13 日",
    "releaseTs": 1749772800000,
    "platforms": [
@@ -3441,7 +3614,7 @@
    "currency": "CNY",
    "reviewSummary": "positive",
    "reviewPct": 93,
-   "reviewCount": 1219,
+   "reviewCount": 1223,
    "releaseDate": "2025 年 11 月 18 日",
    "releaseTs": 1763424000000,
    "platforms": [
@@ -3461,8 +3634,8 @@
    "originalPrice": 58,
    "currency": "CNY",
    "reviewSummary": "positive",
-   "reviewPct": 94,
-   "reviewCount": 588,
+   "reviewPct": 93,
+   "reviewCount": 740,
    "releaseDate": "2026 年 11 月 5 日",
    "releaseTs": 1793836800000,
    "platforms": [
@@ -3470,7 +3643,7 @@
    ],
    "tinyImage": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2448570/ba16eeb1746726f003fe0a756a96875354b75664/capsule_231x87.jpg?t=1793986604",
    "tier": "C",
-   "score": 61.5,
+   "score": 61.1,
    "alreadyOwned": false,
    "inWishlist": false
   },
@@ -3483,7 +3656,7 @@
    "currency": "CNY",
    "reviewSummary": "positive",
    "reviewPct": 91,
-   "reviewCount": 1417,
+   "reviewCount": 1424,
    "releaseDate": "2026 年 3 月 16 日",
    "releaseTs": 1773619200000,
    "platforms": [
@@ -3517,6 +3690,27 @@
    "inWishlist": false
   },
   {
+   "appid": 1450090,
+   "name": "英雄传说：闪之轨迹II：改 –The Erebonian Civil War-",
+   "discountPercent": 60,
+   "finalPrice": 92,
+   "originalPrice": 230,
+   "currency": "CNY",
+   "reviewSummary": "positive",
+   "reviewPct": 81,
+   "reviewCount": 405,
+   "releaseDate": "2021 年 2 月 24 日",
+   "releaseTs": 1614124800000,
+   "platforms": [
+    "win"
+   ],
+   "tinyImage": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1450090/capsule_231x87.jpg?t=1701195503",
+   "tier": "B",
+   "score": 60.3,
+   "alreadyOwned": false,
+   "inWishlist": false
+  },
+  {
    "appid": 1142830,
    "name": "9-nine-春色春恋春熙风",
    "discountPercent": 50,
@@ -3546,7 +3740,7 @@
    "currency": "CNY",
    "reviewSummary": "positive",
    "reviewPct": 98,
-   "reviewCount": 9371,
+   "reviewCount": 9380,
    "releaseDate": "2023 年 7 月 21 日",
    "releaseTs": 1689897600000,
    "platforms": [
@@ -3567,7 +3761,7 @@
    "currency": "CNY",
    "reviewSummary": "positive",
    "reviewPct": 89,
-   "reviewCount": 3232,
+   "reviewCount": 3234,
    "releaseDate": "2023 年 3 月 30 日",
    "releaseTs": 1680134400000,
    "platforms": [
@@ -3589,7 +3783,7 @@
    "currency": "CNY",
    "reviewSummary": "positive",
    "reviewPct": 98,
-   "reviewCount": 5847,
+   "reviewCount": 5849,
    "releaseDate": "2016 年 12 月 8 日",
    "releaseTs": 1481155200000,
    "platforms": [
@@ -3601,6 +3795,27 @@
    "tier": "C",
    "score": 58.8,
    "alreadyOwned": false,
+   "inWishlist": false
+  },
+  {
+   "appid": 2725260,
+   "name": "ENDER MAGNOLIA: Bloom in the Mist",
+   "discountPercent": 45,
+   "finalPrice": 53.9,
+   "originalPrice": 98,
+   "currency": "CNY",
+   "reviewSummary": "positive",
+   "reviewPct": 92,
+   "reviewCount": 6579,
+   "releaseDate": "2025 年 1 月 22 日",
+   "releaseTs": 1737504000000,
+   "platforms": [
+    "win"
+   ],
+   "tinyImage": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2725260/capsule_231x87.jpg?t=1740447961",
+   "tier": "C",
+   "score": 58.7,
+   "alreadyOwned": true,
    "inWishlist": false
   },
   {
@@ -3649,6 +3864,28 @@
    "inWishlist": false
   },
   {
+   "appid": 2346410,
+   "name": "边境开拓者",
+   "discountPercent": 50,
+   "finalPrice": 19,
+   "originalPrice": 38,
+   "currency": "CNY",
+   "reviewSummary": "positive",
+   "reviewPct": 86,
+   "reviewCount": 1699,
+   "releaseDate": "2025 年 2 月 6 日",
+   "releaseTs": 1738800000000,
+   "platforms": [
+    "win",
+    "mac"
+   ],
+   "tinyImage": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2346410/366687c1e5b81e57012e39ae1da07bf1f3902a8a/capsule_231x87_schinese.jpg?t=1793809139",
+   "tier": "C",
+   "score": 57.7,
+   "alreadyOwned": false,
+   "inWishlist": false
+  },
+  {
    "appid": 1746030,
    "name": "山河旅探 - Murders on the Yangtze River",
    "discountPercent": 40,
@@ -3657,7 +3894,7 @@
    "currency": "CNY",
    "reviewSummary": "positive",
    "reviewPct": 96,
-   "reviewCount": 14458,
+   "reviewCount": 14461,
    "releaseDate": "2024 年 1 月 30 日",
    "releaseTs": 1706572800000,
    "platforms": [
@@ -3671,6 +3908,48 @@
    "inWishlist": true
   },
   {
+   "appid": 851100,
+   "name": "Touhou Luna Nights",
+   "discountPercent": 40,
+   "finalPrice": 37.2,
+   "originalPrice": 62,
+   "currency": "CNY",
+   "reviewSummary": "positive",
+   "reviewPct": 96,
+   "reviewCount": 4959,
+   "releaseDate": "2019 年 2 月 25 日",
+   "releaseTs": 1551052800000,
+   "platforms": [
+    "win"
+   ],
+   "tinyImage": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/851100/capsule_231x87.jpg?t=1787630377",
+   "tier": "C",
+   "score": 57.6,
+   "alreadyOwned": false,
+   "inWishlist": false
+  },
+  {
+   "appid": 1477590,
+   "name": "EZ2ON REBOOT : R",
+   "discountPercent": 50,
+   "finalPrice": 69,
+   "originalPrice": 138,
+   "currency": "CNY",
+   "reviewSummary": "positive",
+   "reviewPct": 88,
+   "reviewCount": 444,
+   "releaseDate": "2022 年 4 月 14 日",
+   "releaseTs": 1649894400000,
+   "platforms": [
+    "win"
+   ],
+   "tinyImage": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1477590/capsule_231x87.jpg?t=1793356000",
+   "tier": "C",
+   "score": 57.6,
+   "alreadyOwned": false,
+   "inWishlist": false
+  },
+  {
    "appid": 1669000,
    "name": "Age of Wonders 4",
    "discountPercent": 60,
@@ -3679,7 +3958,7 @@
    "currency": "CNY",
    "reviewSummary": "positive",
    "reviewPct": 74,
-   "reviewCount": 1540,
+   "reviewCount": 1542,
    "releaseDate": "2023 年 5 月 2 日",
    "releaseTs": 1682985600000,
    "platforms": [
@@ -3700,7 +3979,7 @@
    "currency": "CNY",
    "reviewSummary": "positive",
    "reviewPct": 85,
-   "reviewCount": 1731,
+   "reviewCount": 1733,
    "releaseDate": "2022 年 3 月 16 日",
    "releaseTs": 1647388800000,
    "platforms": [
@@ -3714,23 +3993,45 @@
    "inWishlist": false
   },
   {
-   "appid": 4740930,
-   "name": "守城英雄传",
-   "discountPercent": 55,
-   "finalPrice": 37.8,
-   "originalPrice": 82,
+   "appid": 4298880,
+   "name": "Timber Rush",
+   "discountPercent": 50,
+   "finalPrice": 11,
+   "originalPrice": 22,
    "currency": "CNY",
    "reviewSummary": "positive",
-   "reviewPct": 81,
-   "reviewCount": 429,
-   "releaseDate": "2026 年 11 月 2 日",
-   "releaseTs": 1793577600000,
+   "reviewPct": 85,
+   "reviewCount": 1556,
+   "releaseDate": "2026 年 3 月 17 日",
+   "releaseTs": 1773705600000,
+   "platforms": [
+    "win",
+    "mac"
+   ],
+   "tinyImage": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4298880/a4b4bd3099801146a4b4a71bbb78a402899c974e/capsule_231x87.jpg?t=1786882264",
+   "tier": "C",
+   "score": 57,
+   "alreadyOwned": false,
+   "inWishlist": false
+  },
+  {
+   "appid": 3966190,
+   "name": "DJMAX RESPECT V - Arcaea PACK",
+   "discountPercent": 45,
+   "finalPrice": 41.8,
+   "originalPrice": 76,
+   "currency": "CNY",
+   "reviewSummary": "positive",
+   "reviewPct": 93,
+   "reviewCount": 311,
+   "releaseDate": "2025 年 9 月 10 日",
+   "releaseTs": 1757462400000,
    "platforms": [
     "win"
    ],
-   "tinyImage": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4740930/3b4dff5e970ac108ae4a061671d8290bfaf3b5a8/capsule_231x87_alt_assets_1_schinese.jpg?t=1793778203",
+   "tinyImage": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3966190/b29830fc067eb7140ce4e3772efb08b22be2d980/capsule_231x87.jpg?t=1757560565",
    "tier": "C",
-   "score": 56.9,
+   "score": 56.8,
    "alreadyOwned": false,
    "inWishlist": false
   },
@@ -3764,7 +4065,7 @@
    "currency": "CNY",
    "reviewSummary": "positive",
    "reviewPct": 89,
-   "reviewCount": 2988,
+   "reviewCount": 3001,
    "releaseDate": "2025 年 11 月 12 日",
    "releaseTs": 1762905600000,
    "platforms": [
@@ -3772,7 +4073,28 @@
    ],
    "tinyImage": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3008740/47369ff27bd4a5f6069a407f40ea51f3a3427206/capsule_231x87_schinese.jpg?t=1793619678",
    "tier": "C",
-   "score": 56.5,
+   "score": 56.6,
+   "alreadyOwned": false,
+   "inWishlist": false
+  },
+  {
+   "appid": 4740930,
+   "name": "守城英雄传",
+   "discountPercent": 55,
+   "finalPrice": 37.8,
+   "originalPrice": 82,
+   "currency": "CNY",
+   "reviewSummary": "positive",
+   "reviewPct": 80,
+   "reviewCount": 464,
+   "releaseDate": "2026 年 11 月 2 日",
+   "releaseTs": 1793577600000,
+   "platforms": [
+    "win"
+   ],
+   "tinyImage": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4740930/3b4dff5e970ac108ae4a061671d8290bfaf3b5a8/capsule_231x87_alt_assets_1_schinese.jpg?t=1793778203",
+   "tier": "C",
+   "score": 56.4,
    "alreadyOwned": false,
    "inWishlist": false
   },
@@ -3822,6 +4144,27 @@
    "inWishlist": true
   },
   {
+   "appid": 2161440,
+   "name": "风帆纪元 Sailing Era",
+   "discountPercent": 55,
+   "finalPrice": 39.6,
+   "originalPrice": 88,
+   "currency": "CNY",
+   "reviewSummary": "positive",
+   "reviewPct": 76,
+   "reviewCount": 3321,
+   "releaseDate": "2023 年 1 月 11 日",
+   "releaseTs": 1673395200000,
+   "platforms": [
+    "win"
+   ],
+   "tinyImage": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2161440/capsule_231x87_schinese.jpg?t=1727606618",
+   "tier": "C",
+   "score": 55.8,
+   "alreadyOwned": false,
+   "inWishlist": false
+  },
+  {
    "appid": 2542120,
    "name": "NINJA GAIDEN: Ragebound（忍者外传：怒之羁绊）",
    "discountPercent": 50,
@@ -3830,7 +4173,7 @@
    "currency": "CNY",
    "reviewSummary": "positive",
    "reviewPct": 85,
-   "reviewCount": 389,
+   "reviewCount": 388,
    "releaseDate": "2025 年 7 月 31 日",
    "releaseTs": 1753920000000,
    "platforms": [
@@ -3839,6 +4182,27 @@
    "tinyImage": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2542120/f3ea00793bea7b34b72ccd80b033547e22fd186c/capsule_231x87.jpg?t=1790235883",
    "tier": "C",
    "score": 55.7,
+   "alreadyOwned": false,
+   "inWishlist": false
+  },
+  {
+   "appid": 1078350,
+   "name": "仙肴圣餐",
+   "discountPercent": 40,
+   "finalPrice": 29.4,
+   "originalPrice": 49,
+   "currency": "CNY",
+   "reviewSummary": "positive",
+   "reviewPct": 93,
+   "reviewCount": 2224,
+   "releaseDate": "2021 年 1 月 29 日",
+   "releaseTs": 1611878400000,
+   "platforms": [
+    "win"
+   ],
+   "tinyImage": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1078350/capsule_231x87_schinese.jpg?t=1749021727",
+   "tier": "C",
+   "score": 55.2,
    "alreadyOwned": false,
    "inWishlist": false
   },
@@ -3872,13 +4236,34 @@
    "currency": "CNY",
    "reviewSummary": "positive",
    "reviewPct": 84,
-   "reviewCount": 303,
+   "reviewCount": 307,
    "releaseDate": "2025 年 10 月 30 日",
    "releaseTs": 1761782400000,
    "platforms": [
     "win"
    ],
    "tinyImage": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3981100/fb691f2a9e10b3b86b606c4e68a8d05dbda5c5bc/capsule_231x87_alt_assets_0.jpg?t=1793379850",
+   "tier": "C",
+   "score": 54.9,
+   "alreadyOwned": false,
+   "inWishlist": false
+  },
+  {
+   "appid": 2055050,
+   "name": "铁骑少女",
+   "discountPercent": 45,
+   "finalPrice": 31.9,
+   "originalPrice": 58,
+   "currency": "CNY",
+   "reviewSummary": "positive",
+   "reviewPct": 87,
+   "reviewCount": 1929,
+   "releaseDate": "2023 年 10 月 20 日",
+   "releaseTs": 1697760000000,
+   "platforms": [
+    "win"
+   ],
+   "tinyImage": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2055050/capsule_231x87_schinese.jpg?t=1790240367",
    "tier": "C",
    "score": 54.9,
    "alreadyOwned": false,
@@ -3893,7 +4278,7 @@
    "currency": "CNY",
    "reviewSummary": "positive",
    "reviewPct": 97,
-   "reviewCount": 38985,
+   "reviewCount": 38993,
    "releaseDate": "2023 年 4 月 20 日",
    "releaseTs": 1681948800000,
    "platforms": [
@@ -3906,27 +4291,6 @@
    "inWishlist": false
   },
   {
-   "appid": 411950,
-   "name": "DCS: F/A-18C",
-   "discountPercent": 40,
-   "finalPrice": 336,
-   "originalPrice": 560,
-   "currency": "CNY",
-   "reviewSummary": "positive",
-   "reviewPct": 93,
-   "reviewCount": 998,
-   "releaseDate": "2018 年 6 月 1 日",
-   "releaseTs": 1527811200000,
-   "platforms": [
-    "win"
-   ],
-   "tinyImage": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/411950/capsule_231x87.jpg?t=1727211549",
-   "tier": "C",
-   "score": 54.4,
-   "alreadyOwned": false,
-   "inWishlist": false
-  },
-  {
    "appid": 2615540,
    "name": "虚空破坏者",
    "discountPercent": 40,
@@ -3935,7 +4299,7 @@
    "currency": "CNY",
    "reviewSummary": "positive",
    "reviewPct": 91,
-   "reviewCount": 2759,
+   "reviewCount": 2821,
    "releaseDate": "2026 年 11 月 4 日",
    "releaseTs": 1793750400000,
    "platforms": [
@@ -3948,6 +4312,27 @@
    "inWishlist": false
   },
   {
+   "appid": 2394650,
+   "name": "冥界清道夫(Crypt Custodian)",
+   "discountPercent": 40,
+   "finalPrice": 45.6,
+   "originalPrice": 76,
+   "currency": "CNY",
+   "reviewSummary": "positive",
+   "reviewPct": 94,
+   "reviewCount": 334,
+   "releaseDate": "2024 年 8 月 27 日",
+   "releaseTs": 1724716800000,
+   "platforms": [
+    "win"
+   ],
+   "tinyImage": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2394650/capsule_231x87.jpg?t=1777417867",
+   "tier": "C",
+   "score": 54,
+   "alreadyOwned": false,
+   "inWishlist": false
+  },
+  {
    "appid": 3636770,
    "name": "Servant of the Lake",
    "discountPercent": 33,
@@ -3956,7 +4341,7 @@
    "currency": "CNY",
    "reviewSummary": "positive",
    "reviewPct": 98,
-   "reviewCount": 4243,
+   "reviewCount": 4247,
    "releaseDate": "2026 年 8 月 13 日",
    "releaseTs": 1786579200000,
    "platforms": [
@@ -3978,7 +4363,7 @@
    "currency": "CNY",
    "reviewSummary": "positive",
    "reviewPct": 98,
-   "reviewCount": 3548,
+   "reviewCount": 3549,
    "releaseDate": "2023 年 9 月 27 日",
    "releaseTs": 1695772800000,
    "platforms": [
@@ -4000,7 +4385,7 @@
    "currency": "CNY",
    "reviewSummary": "positive",
    "reviewPct": 96,
-   "reviewCount": 2517,
+   "reviewCount": 2518,
    "releaseDate": "2022 年 5 月 6 日",
    "releaseTs": 1651795200000,
    "platforms": [
@@ -4013,23 +4398,44 @@
    "inWishlist": false
   },
   {
-   "appid": 2394650,
-   "name": "冥界清道夫(Crypt Custodian)",
-   "discountPercent": 40,
-   "finalPrice": 45.6,
-   "originalPrice": 76,
+   "appid": 1562700,
+   "name": "闪避刺客",
+   "discountPercent": 35,
+   "finalPrice": 27.95,
+   "originalPrice": 43,
    "currency": "CNY",
    "reviewSummary": "positive",
-   "reviewPct": 93,
-   "reviewCount": 333,
-   "releaseDate": "2024 年 8 月 27 日",
-   "releaseTs": 1724716800000,
+   "reviewPct": 95,
+   "reviewCount": 6454,
+   "releaseDate": "2023 年 11 月 8 日",
+   "releaseTs": 1699401600000,
    "platforms": [
     "win"
    ],
-   "tinyImage": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2394650/capsule_231x87.jpg?t=1777417867",
+   "tinyImage": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1562700/capsule_231x87.jpg?t=1764564242",
    "tier": "C",
-   "score": 53.4,
+   "score": 53.5,
+   "alreadyOwned": false,
+   "inWishlist": false
+  },
+  {
+   "appid": 3259600,
+   "name": "红色的炼金术士和白色的守护者 ～蕾斯莱莉娅娜的炼金工房～",
+   "discountPercent": 43,
+   "finalPrice": 169.86,
+   "originalPrice": 298,
+   "currency": "CNY",
+   "reviewSummary": "positive",
+   "reviewPct": 88,
+   "reviewCount": 728,
+   "releaseDate": "2025 年 9 月 25 日",
+   "releaseTs": 1758758400000,
+   "platforms": [
+    "win"
+   ],
+   "tinyImage": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3259600/dc31912a5da2af254e0f7ef9c0771883e7780ea3/capsule_231x87_schinese.jpg?t=1793770595",
+   "tier": "C",
+   "score": 53.2,
    "alreadyOwned": false,
    "inWishlist": false
   },
@@ -4042,7 +4448,7 @@
    "currency": "CNY",
    "reviewSummary": "positive",
    "reviewPct": 88,
-   "reviewCount": 4555,
+   "reviewCount": 4565,
    "releaseDate": "2026 年 5 月 26 日",
    "releaseTs": 1779753600000,
    "platforms": [
@@ -4063,7 +4469,7 @@
    "currency": "CNY",
    "reviewSummary": "positive",
    "reviewPct": 70,
-   "reviewCount": 3943,
+   "reviewCount": 3948,
    "releaseDate": "2025 年 2 月 27 日",
    "releaseTs": 1740614400000,
    "platforms": [
@@ -4084,7 +4490,7 @@
    "currency": "CNY",
    "reviewSummary": "positive",
    "reviewPct": 90,
-   "reviewCount": 767,
+   "reviewCount": 768,
    "releaseDate": "2024 年 5 月 16 日",
    "releaseTs": 1715817600000,
    "platforms": [
@@ -4106,7 +4512,7 @@
    "currency": "CNY",
    "reviewSummary": "positive",
    "reviewPct": 75,
-   "reviewCount": 20459,
+   "reviewCount": 20466,
    "releaseDate": "2018 年 2 月 8 日",
    "releaseTs": 1518048000000,
    "platforms": [
@@ -4128,7 +4534,7 @@
    "currency": "CNY",
    "reviewSummary": "positive",
    "reviewPct": 75,
-   "reviewCount": 7498,
+   "reviewCount": 7506,
    "releaseDate": "2025 年 9 月 18 日",
    "releaseTs": 1758153600000,
    "platforms": [
@@ -4141,27 +4547,6 @@
    "inWishlist": false
   },
   {
-   "appid": 1876930,
-   "name": "烈酒荒野",
-   "discountPercent": 40,
-   "finalPrice": 43.2,
-   "originalPrice": 72,
-   "currency": "CNY",
-   "reviewSummary": "positive",
-   "reviewPct": 89,
-   "reviewCount": 888,
-   "releaseDate": "2026 年 11 月 6 日",
-   "releaseTs": 1793923200000,
-   "platforms": [
-    "win"
-   ],
-   "tinyImage": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1876930/6d0232ce82082b732b281596efeb1f7f148233cc/capsule_231x87.jpg?t=1793987815",
-   "tier": "C",
-   "score": 51.9,
-   "alreadyOwned": false,
-   "inWishlist": false
-  },
-  {
    "appid": 230290,
    "name": "Universe Sandbox",
    "discountPercent": 33,
@@ -4170,7 +4555,7 @@
    "currency": "CNY",
    "reviewSummary": "positive",
    "reviewPct": 96,
-   "reviewCount": 1685,
+   "reviewCount": 1686,
    "releaseDate": "2015 年 8 月 24 日",
    "releaseTs": 1440374400000,
    "platforms": [
@@ -4192,7 +4577,7 @@
    "currency": "CNY",
    "reviewSummary": "positive",
    "reviewPct": 92,
-   "reviewCount": 15388,
+   "reviewCount": 15402,
    "releaseDate": "2025 年 2 月 26 日",
    "releaseTs": 1740528000000,
    "platforms": [
@@ -4234,13 +4619,34 @@
    "currency": "CNY",
    "reviewSummary": "positive",
    "reviewPct": 75,
-   "reviewCount": 2910,
+   "reviewCount": 2914,
    "releaseDate": "2024 年 10 月 23 日",
    "releaseTs": 1729641600000,
    "platforms": [
     "win"
    ],
    "tinyImage": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3263320/d5d830323a81934324aca8fc8cd43815f48ebb03/capsule_231x87_alt_assets_0.jpg?t=1793815849",
+   "tier": "C",
+   "score": 51.6,
+   "alreadyOwned": false,
+   "inWishlist": false
+  },
+  {
+   "appid": 994280,
+   "name": "古剑奇谭三(Gujian3)",
+   "discountPercent": 40,
+   "finalPrice": 59.4,
+   "originalPrice": 99,
+   "currency": "CNY",
+   "reviewSummary": "positive",
+   "reviewPct": 86,
+   "reviewCount": 37401,
+   "releaseDate": "2018 年 12 月 14 日",
+   "releaseTs": 1544745600000,
+   "platforms": [
+    "win"
+   ],
+   "tinyImage": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/994280/capsule_231x87_schinese.jpg?t=1726190820",
    "tier": "C",
    "score": 51.6,
    "alreadyOwned": false,
@@ -4255,7 +4661,7 @@
    "currency": "CNY",
    "reviewSummary": "positive",
    "reviewPct": 94,
-   "reviewCount": 1013,
+   "reviewCount": 1014,
    "releaseDate": "2025 年 10 月 22 日",
    "releaseTs": 1761091200000,
    "platforms": [
@@ -4276,7 +4682,7 @@
    "currency": "CNY",
    "reviewSummary": "positive",
    "reviewPct": 99,
-   "reviewCount": 1389,
+   "reviewCount": 1390,
    "releaseDate": "2022 年 4 月 11 日",
    "releaseTs": 1649635200000,
    "platforms": [
@@ -4289,44 +4695,44 @@
    "inWishlist": false
   },
   {
-   "appid": 1090850,
-   "name": "DCS: F-16C",
+   "appid": 1876930,
+   "name": "烈酒荒野",
    "discountPercent": 40,
-   "finalPrice": 336,
-   "originalPrice": 560,
+   "finalPrice": 43.2,
+   "originalPrice": 72,
    "currency": "CNY",
    "reviewSummary": "positive",
    "reviewPct": 88,
-   "reviewCount": 790,
-   "releaseDate": "2019 年 10 月 3 日",
-   "releaseTs": 1570060800000,
+   "reviewCount": 902,
+   "releaseDate": "2026 年 11 月 6 日",
+   "releaseTs": 1793923200000,
    "platforms": [
     "win"
    ],
-   "tinyImage": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1090850/capsule_231x87.jpg?t=1766159706",
+   "tinyImage": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1876930/6d0232ce82082b732b281596efeb1f7f148233cc/capsule_231x87.jpg?t=1793987815",
    "tier": "C",
-   "score": 51.2,
+   "score": 51.3,
    "alreadyOwned": false,
    "inWishlist": false
   },
   {
-   "appid": 606160,
-   "name": "月球任务",
-   "discountPercent": 35,
-   "finalPrice": 59.8,
-   "originalPrice": 92,
+   "appid": 3024130,
+   "name": "泡泡镇餐厅物语",
+   "discountPercent": 40,
+   "finalPrice": 28.8,
+   "originalPrice": 48,
    "currency": "CNY",
    "reviewSummary": "positive",
-   "reviewPct": 91,
-   "reviewCount": 7790,
-   "releaseDate": "2025 年 12 月 4 日",
-   "releaseTs": 1764806400000,
+   "reviewPct": 88,
+   "reviewCount": 656,
+   "releaseDate": "2026 年 10 月 26 日",
+   "releaseTs": 1792972800000,
    "platforms": [
     "win"
    ],
-   "tinyImage": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/606160/b08241e24c0ae7bfded3b48dfa384a127ea4b32a/capsule_231x87_schinese.jpg?t=1785827823",
+   "tinyImage": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3024130/4fe5a59d98736b30d250dac11bec424240aaf814/capsule_231x87_schinese.jpg?t=1793607167",
    "tier": "C",
-   "score": 51.1,
+   "score": 51,
    "alreadyOwned": false,
    "inWishlist": false
   },
@@ -4352,27 +4758,6 @@
    "inWishlist": true
   },
   {
-   "appid": 3024130,
-   "name": "泡泡镇餐厅物语",
-   "discountPercent": 40,
-   "finalPrice": 28.8,
-   "originalPrice": 48,
-   "currency": "CNY",
-   "reviewSummary": "positive",
-   "reviewPct": 88,
-   "reviewCount": 620,
-   "releaseDate": "2026 年 10 月 26 日",
-   "releaseTs": 1792972800000,
-   "platforms": [
-    "win"
-   ],
-   "tinyImage": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3024130/4fe5a59d98736b30d250dac11bec424240aaf814/capsule_231x87_schinese.jpg?t=1793607167",
-   "tier": "C",
-   "score": 50.9,
-   "alreadyOwned": false,
-   "inWishlist": false
-  },
-  {
    "appid": 813230,
    "name": "ANIMAL WELL",
    "discountPercent": 30,
@@ -4381,7 +4766,7 @@
    "currency": "CNY",
    "reviewSummary": "positive",
    "reviewPct": 96,
-   "reviewCount": 7036,
+   "reviewCount": 7038,
    "releaseDate": "2024 年 5 月 9 日",
    "releaseTs": 1715212800000,
    "platforms": [
@@ -4402,7 +4787,7 @@
    "currency": "CNY",
    "reviewSummary": "positive",
    "reviewPct": 90,
-   "reviewCount": 4819,
+   "reviewCount": 4828,
    "releaseDate": "2022 年 1 月 6 日",
    "releaseTs": 1641427200000,
    "platforms": [
@@ -4438,29 +4823,6 @@
    "inWishlist": false
   },
   {
-   "appid": 1114150,
-   "name": "CarX Street",
-   "discountPercent": 50,
-   "finalPrice": 70,
-   "originalPrice": 140,
-   "currency": "CNY",
-   "reviewSummary": "positive",
-   "reviewPct": 72,
-   "reviewCount": 17955,
-   "releaseDate": "2024 年 8 月 29 日",
-   "releaseTs": 1724889600000,
-   "platforms": [
-    "win",
-    "mac",
-    "linux"
-   ],
-   "tinyImage": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1114150/4f5b553a6bac0c536a7ce8c1266f1ce30751531c/capsule_231x87.jpg?t=1791979645",
-   "tier": "C",
-   "score": 50.2,
-   "alreadyOwned": false,
-   "inWishlist": false
-  },
-  {
    "appid": 1211020,
    "name": "晃晃人生 / Wobbly Life",
    "discountPercent": 35,
@@ -4469,7 +4831,7 @@
    "currency": "CNY",
    "reviewSummary": "positive",
    "reviewPct": 92,
-   "reviewCount": 823,
+   "reviewCount": 824,
    "releaseDate": "2025 年 9 月 18 日",
    "releaseTs": 1758153600000,
    "platforms": [
@@ -4490,7 +4852,7 @@
    "currency": "CNY",
    "reviewSummary": "positive",
    "reviewPct": 95,
-   "reviewCount": 10803,
+   "reviewCount": 10867,
    "releaseDate": "2026 年 3 月 17 日",
    "releaseTs": 1773705600000,
    "platforms": [
@@ -4511,7 +4873,7 @@
    "currency": "CNY",
    "reviewSummary": "positive",
    "reviewPct": 94,
-   "reviewCount": 47234,
+   "reviewCount": 47238,
    "releaseDate": "2024 年 4 月 22 日",
    "releaseTs": 1713744000000,
    "platforms": [
@@ -4532,7 +4894,7 @@
    "currency": "CNY",
    "reviewSummary": "positive",
    "reviewPct": 88,
-   "reviewCount": 5677,
+   "reviewCount": 5681,
    "releaseDate": "2025 年 1 月 20 日",
    "releaseTs": 1737331200000,
    "platforms": [
@@ -4599,7 +4961,7 @@
    "currency": "CNY",
    "reviewSummary": "positive",
    "reviewPct": 94,
-   "reviewCount": 2267,
+   "reviewCount": 2269,
    "releaseDate": "2022 年 9 月 30 日",
    "releaseTs": 1664496000000,
    "platforms": [
@@ -4612,6 +4974,27 @@
    "inWishlist": false
   },
   {
+   "appid": 2717010,
+   "name": "KALPA: Cosmic Symphony",
+   "discountPercent": 40,
+   "finalPrice": 45.6,
+   "originalPrice": 76,
+   "currency": "CNY",
+   "reviewSummary": "positive",
+   "reviewPct": 84,
+   "reviewCount": 660,
+   "releaseDate": "2025 年 10 月 1 日",
+   "releaseTs": 1759276800000,
+   "platforms": [
+    "win"
+   ],
+   "tinyImage": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2717010/64acb46a46d74dc46f772ba5cdbacefedb78df0b/capsule_231x87.jpg?t=1792836627",
+   "tier": "C",
+   "score": 48.6,
+   "alreadyOwned": false,
+   "inWishlist": false
+  },
+  {
    "appid": 3681010,
    "name": "仁王３",
    "discountPercent": 46,
@@ -4620,7 +5003,7 @@
    "currency": "CNY",
    "reviewSummary": "positive",
    "reviewPct": 74,
-   "reviewCount": 4163,
+   "reviewCount": 4164,
    "releaseDate": "2026 年 2 月 5 日",
    "releaseTs": 1770249600000,
    "platforms": [
@@ -4641,7 +5024,7 @@
    "currency": "CNY",
    "reviewSummary": "positive",
    "reviewPct": 83,
-   "reviewCount": 18092,
+   "reviewCount": 18111,
    "releaseDate": "2025 年 6 月 16 日",
    "releaseTs": 1750032000000,
    "platforms": [
@@ -4654,42 +5037,21 @@
    "inWishlist": false
   },
   {
-   "appid": 1343070,
-   "name": "Call to Arms: Panzer Elite",
-   "discountPercent": 50,
-   "finalPrice": 54,
-   "originalPrice": 108,
-   "currency": "CNY",
-   "reviewSummary": "positive",
-   "reviewPct": 70,
-   "reviewCount": 2144,
-   "releaseDate": "2025 年 9 月 19 日",
-   "releaseTs": 1758240000000,
-   "platforms": [
-    "win"
-   ],
-   "tinyImage": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1343070/09d12e4cf1c4593287ff239af49236bd20fdf820/capsule_231x87.jpg?t=1766086757",
-   "tier": "C",
-   "score": 48.3,
-   "alreadyOwned": false,
-   "inWishlist": false
-  },
-  {
-   "appid": 1296830,
-   "name": "暖雪 Warm Snow",
+   "appid": 2384580,
+   "name": "真・三国无双 起源",
    "discountPercent": 30,
-   "finalPrice": 40.6,
-   "originalPrice": 58,
+   "finalPrice": 244.3,
+   "originalPrice": 349,
    "currency": "CNY",
    "reviewSummary": "positive",
    "reviewPct": 92,
-   "reviewCount": 32874,
-   "releaseDate": "2022 年 1 月 18 日",
-   "releaseTs": 1642464000000,
+   "reviewCount": 10290,
+   "releaseDate": "2025 年 1 月 16 日",
+   "releaseTs": 1736985600000,
    "platforms": [
     "win"
    ],
-   "tinyImage": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1296830/capsule_231x87_schinese.jpg?t=1789107220",
+   "tinyImage": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2384580/8d38943b06bb8c840c54fb14e31d42ea636d08b5/capsule_231x87_schinese.jpg?t=1790733210",
    "tier": "C",
    "score": 48.2,
    "alreadyOwned": false,
@@ -4704,13 +5066,36 @@
    "currency": "CNY",
    "reviewSummary": "positive",
    "reviewPct": 81,
-   "reviewCount": 2441,
+   "reviewCount": 2507,
    "releaseDate": "2026 年 11 月 5 日",
    "releaseTs": 1793836800000,
    "platforms": [
     "win"
    ],
    "tinyImage": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1211600/ffdd81ee1c922f9e6d04116d4ec42be692c42c26/capsule_231x87_alt_assets_2_schinese.jpg?t=1794035207",
+   "tier": "C",
+   "score": 48.1,
+   "alreadyOwned": false,
+   "inWishlist": false
+  },
+  {
+   "appid": 3499520,
+   "name": "Piano Glow",
+   "discountPercent": 30,
+   "finalPrice": 64.4,
+   "originalPrice": 92,
+   "currency": "CNY",
+   "reviewSummary": "positive",
+   "reviewPct": 96,
+   "reviewCount": 322,
+   "releaseDate": "2026 年 11 月 6 日",
+   "releaseTs": 1793923200000,
+   "platforms": [
+    "win",
+    "mac",
+    "linux"
+   ],
+   "tinyImage": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3499520/42c72437328d52a24a25d44e3da15952fcf64ea2/capsule_231x87.jpg?t=1794165057",
    "tier": "C",
    "score": 48.1,
    "alreadyOwned": false,
@@ -4725,7 +5110,7 @@
    "currency": "CNY",
    "reviewSummary": "positive",
    "reviewPct": 93,
-   "reviewCount": 1433,
+   "reviewCount": 1434,
    "releaseDate": "2025 年 5 月 13 日",
    "releaseTs": 1747094400000,
    "platforms": [
@@ -4747,7 +5132,7 @@
    "currency": "CNY",
    "reviewSummary": "positive",
    "reviewPct": 93,
-   "reviewCount": 1308,
+   "reviewCount": 1311,
    "releaseDate": "2025 年 10 月 10 日",
    "releaseTs": 1760054400000,
    "platforms": [
@@ -4769,7 +5154,7 @@
    "currency": "CNY",
    "reviewSummary": "positive",
    "reviewPct": 94,
-   "reviewCount": 711,
+   "reviewCount": 713,
    "releaseDate": "2025 年 8 月 7 日",
    "releaseTs": 1754524800000,
    "platforms": [
@@ -4792,7 +5177,7 @@
    "currency": "CNY",
    "reviewSummary": "positive",
    "reviewPct": 98,
-   "reviewCount": 1758,
+   "reviewCount": 1761,
    "releaseDate": "2026 年 8 月 6 日",
    "releaseTs": 1785974400000,
    "platforms": [
@@ -4813,7 +5198,7 @@
    "currency": "CNY",
    "reviewSummary": "positive",
    "reviewPct": 98,
-   "reviewCount": 1398,
+   "reviewCount": 1411,
    "releaseDate": "2026 年 9 月 16 日",
    "releaseTs": 1789516800000,
    "platforms": [
@@ -4835,7 +5220,7 @@
    "currency": "CNY",
    "reviewSummary": "positive",
    "reviewPct": 95,
-   "reviewCount": 2880,
+   "reviewCount": 2882,
    "releaseDate": "2025 年 7 月 15 日",
    "releaseTs": 1752537600000,
    "platforms": [
@@ -4857,7 +5242,7 @@
    "currency": "CNY",
    "reviewSummary": "positive",
    "reviewPct": 95,
-   "reviewCount": 2326,
+   "reviewCount": 2330,
    "releaseDate": "2021 年 9 月 1 日",
    "releaseTs": 1630454400000,
    "platforms": [
@@ -4879,7 +5264,7 @@
    "currency": "CNY",
    "reviewSummary": "positive",
    "reviewPct": 78,
-   "reviewCount": 1537,
+   "reviewCount": 1538,
    "releaseDate": "2026 年 8 月 19 日",
    "releaseTs": 1787097600000,
    "platforms": [
@@ -4891,49 +5276,6 @@
    "score": 45.8,
    "alreadyOwned": false,
    "inWishlist": false
-  },
-  {
-   "appid": 3453910,
-   "name": "Happy's Humble Burger Cult",
-   "discountPercent": 35,
-   "finalPrice": 27.3,
-   "originalPrice": 42,
-   "currency": "CNY",
-   "reviewSummary": "positive",
-   "reviewPct": 85,
-   "reviewCount": 579,
-   "releaseDate": "2026 年 7 月 16 日",
-   "releaseTs": 1784160000000,
-   "platforms": [
-    "win"
-   ],
-   "tinyImage": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3453910/82f49306f782189b4ee78fc69ac219774f75b67f/capsule_231x87.jpg?t=1793358449",
-   "tier": "C",
-   "score": 45.6,
-   "alreadyOwned": false,
-   "inWishlist": false
-  },
-  {
-   "appid": 346110,
-   "name": "ARK: Survival Evolved",
-   "discountPercent": 34,
-   "finalPrice": 38.28,
-   "originalPrice": 58,
-   "currency": "CNY",
-   "reviewSummary": "positive",
-   "reviewPct": 83,
-   "reviewCount": 75728,
-   "releaseDate": "2017 年 8 月 27 日",
-   "releaseTs": 1503792000000,
-   "platforms": [
-    "win",
-    "mac"
-   ],
-   "tinyImage": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/346110/capsule_231x87.jpg?t=1793226330",
-   "tier": "C",
-   "score": 45.6,
-   "alreadyOwned": false,
-   "inWishlist": true
   },
   {
    "appid": 3115220,
@@ -4957,22 +5299,22 @@
    "inWishlist": false
   },
   {
-   "appid": 774171,
-   "name": "Muse Dash",
-   "discountPercent": 30,
-   "finalPrice": 12.6,
-   "originalPrice": 18,
+   "appid": 3672720,
+   "name": "Prison Escape Simulator: Dig Out",
+   "discountPercent": 43,
+   "finalPrice": 18.81,
+   "originalPrice": 33,
    "currency": "CNY",
    "reviewSummary": "positive",
-   "reviewPct": 87,
-   "reviewCount": 51775,
-   "releaseDate": "2019 年 6 月 19 日",
-   "releaseTs": 1560902400000,
+   "reviewPct": 76,
+   "reviewCount": 314,
+   "releaseDate": "2025 年 7 月 25 日",
+   "releaseTs": 1753401600000,
    "platforms": [
     "win",
     "mac"
    ],
-   "tinyImage": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/774171/capsule_231x87.jpg?t=1793183311",
+   "tinyImage": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3672720/77d19f4f055fdda1307d85d4f5780bc0d6e18816/capsule_231x87.jpg?t=1791782793",
    "tier": "C",
    "score": 45.2,
    "alreadyOwned": false,
@@ -4987,7 +5329,7 @@
    "currency": "CNY",
    "reviewSummary": "positive",
    "reviewPct": 98,
-   "reviewCount": 7946,
+   "reviewCount": 7947,
    "releaseDate": "2020 年 8 月 6 日",
    "releaseTs": 1596672000000,
    "platforms": [
@@ -5009,7 +5351,7 @@
    "currency": "CNY",
    "reviewSummary": "positive",
    "reviewPct": 96,
-   "reviewCount": 362,
+   "reviewCount": 364,
    "releaseDate": "2026 年 5 月 21 日",
    "releaseTs": 1779321600000,
    "platforms": [
@@ -5030,7 +5372,7 @@
    "currency": "CNY",
    "reviewSummary": "positive",
    "reviewPct": 97,
-   "reviewCount": 8273,
+   "reviewCount": 8277,
    "releaseDate": "2024 年 1 月 5 日",
    "releaseTs": 1704412800000,
    "platforms": [
@@ -5051,7 +5393,7 @@
    "currency": "CNY",
    "reviewSummary": "positive",
    "reviewPct": 82,
-   "reviewCount": 744,
+   "reviewCount": 746,
    "releaseDate": "2025 年 7 月 18 日",
    "releaseTs": 1752796800000,
    "platforms": [
@@ -5072,7 +5414,7 @@
    "currency": "CNY",
    "reviewSummary": "positive",
    "reviewPct": 93,
-   "reviewCount": 1150,
+   "reviewCount": 1157,
    "releaseDate": "2026 年 8 月 6 日",
    "releaseTs": 1785974400000,
    "platforms": [
@@ -5085,27 +5427,6 @@
    "inWishlist": false
   },
   {
-   "appid": 3132930,
-   "name": "纪念碑谷 3",
-   "discountPercent": 25,
-   "finalPrice": 39.75,
-   "originalPrice": 53,
-   "currency": "CNY",
-   "reviewSummary": "positive",
-   "reviewPct": 92,
-   "reviewCount": 1485,
-   "releaseDate": "2025 年 7 月 22 日",
-   "releaseTs": 1753142400000,
-   "platforms": [
-    "win"
-   ],
-   "tinyImage": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3132930/2769089a7fa8a8bbf08724fe344400c77169a08f/capsule_231x87_schinese.jpg?t=1775663813",
-   "tier": "C",
-   "score": 43.7,
-   "alreadyOwned": false,
-   "inWishlist": false
-  },
-  {
    "appid": 1904480,
    "name": "绝对魔权",
    "discountPercent": 40,
@@ -5114,7 +5435,7 @@
    "currency": "CNY",
    "reviewSummary": "positive",
    "reviewPct": 75,
-   "reviewCount": 957,
+   "reviewCount": 958,
    "releaseDate": "2025 年 10 月 9 日",
    "releaseTs": 1759968000000,
    "platforms": [
@@ -5135,7 +5456,7 @@
    "currency": "CNY",
    "reviewSummary": "positive",
    "reviewPct": 87,
-   "reviewCount": 737,
+   "reviewCount": 739,
    "releaseDate": "2025 年 10 月 27 日",
    "releaseTs": 1761523200000,
    "platforms": [
@@ -5157,7 +5478,7 @@
    "currency": "CNY",
    "reviewSummary": "positive",
    "reviewPct": 90,
-   "reviewCount": 9104,
+   "reviewCount": 9106,
    "releaseDate": "2020 年 1 月 16 日",
    "releaseTs": 1579132800000,
    "platforms": [
@@ -5168,6 +5489,27 @@
    "score": 43.5,
    "alreadyOwned": false,
    "inWishlist": true
+  },
+  {
+   "appid": 5475960,
+   "name": "Incremental Traffic",
+   "discountPercent": 30,
+   "finalPrice": 24.5,
+   "originalPrice": 35,
+   "currency": "CNY",
+   "reviewSummary": "positive",
+   "reviewPct": 88,
+   "reviewCount": 316,
+   "releaseDate": "2026 年 11 月 1 日",
+   "releaseTs": 1793491200000,
+   "platforms": [
+    "win"
+   ],
+   "tinyImage": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5475960/01788d764385c77247da026d7cfc007ca38e5486/capsule_231x87_schinese.jpg?t=1793908197",
+   "tier": "C",
+   "score": 43.3,
+   "alreadyOwned": false,
+   "inWishlist": false
   },
   {
    "appid": 4077430,
@@ -5199,7 +5541,7 @@
    "currency": "CNY",
    "reviewSummary": "positive",
    "reviewPct": 74,
-   "reviewCount": 1091,
+   "reviewCount": 1094,
    "releaseDate": "2024 年 10 月 10 日",
    "releaseTs": 1728518400000,
    "platforms": [
@@ -5212,6 +5554,27 @@
    "inWishlist": true
   },
   {
+   "appid": 2786680,
+   "name": "美女，请别影响我学习",
+   "discountPercent": 20,
+   "finalPrice": 28.8,
+   "originalPrice": 36,
+   "currency": "CNY",
+   "reviewSummary": "positive",
+   "reviewPct": 95,
+   "reviewCount": 6326,
+   "releaseDate": "2024 年 3 月 28 日",
+   "releaseTs": 1711584000000,
+   "platforms": [
+    "win"
+   ],
+   "tinyImage": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2786680/capsule_231x87_schinese.jpg?t=1757668350",
+   "tier": "C",
+   "score": 43,
+   "alreadyOwned": false,
+   "inWishlist": false
+  },
+  {
    "appid": 3450550,
    "name": "PAYDAY 3: Jacket Character Pack",
    "discountPercent": 30,
@@ -5220,7 +5583,7 @@
    "currency": "CNY",
    "reviewSummary": "positive",
    "reviewPct": 86,
-   "reviewCount": 624,
+   "reviewCount": 627,
    "releaseDate": "2025 年 2 月 3 日",
    "releaseTs": 1738540800000,
    "platforms": [
@@ -5233,49 +5596,6 @@
    "inWishlist": false
   },
   {
-   "appid": 2956680,
-   "name": "落逃之地 LORT",
-   "discountPercent": 35,
-   "finalPrice": 31.2,
-   "originalPrice": 48,
-   "currency": "CNY",
-   "reviewSummary": "positive",
-   "reviewPct": 77,
-   "reviewCount": 4122,
-   "releaseDate": "2026 年 1 月 21 日",
-   "releaseTs": 1768953600000,
-   "platforms": [
-    "win"
-   ],
-   "tinyImage": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2956680/aefec41de2259046e48ccf825bf109a04bb94cb8/capsule_231x87_alt_assets_5_schinese.jpg?t=1793656664",
-   "tier": "C",
-   "score": 42.7,
-   "alreadyOwned": false,
-   "inWishlist": false
-  },
-  {
-   "appid": 3948120,
-   "name": "刮个爽",
-   "discountPercent": 35,
-   "finalPrice": 16.56,
-   "originalPrice": 25.49,
-   "currency": "CNY",
-   "reviewSummary": "positive",
-   "reviewPct": 78,
-   "reviewCount": 1453,
-   "releaseDate": "2026 年 3 月 18 日",
-   "releaseTs": 1773792000000,
-   "platforms": [
-    "win",
-    "mac"
-   ],
-   "tinyImage": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3948120/3d9dad2f02502bbe5c3d4b1566e5ee250d4a327f/capsule_231x87_alt_assets_0.jpg?t=1793711427",
-   "tier": "C",
-   "score": 42.3,
-   "alreadyOwned": false,
-   "inWishlist": false
-  },
-  {
    "appid": 5037510,
    "name": "Playrooms",
    "discountPercent": 20,
@@ -5284,7 +5604,7 @@
    "currency": "CNY",
    "reviewSummary": "positive",
    "reviewPct": 97,
-   "reviewCount": 443,
+   "reviewCount": 634,
    "releaseDate": "2026 年 11 月 4 日",
    "releaseTs": 1793750400000,
    "platforms": [
@@ -5292,7 +5612,7 @@
    ],
    "tinyImage": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5037510/742349f15f98b68e4333995b7c101a515aa07454/capsule_231x87.jpg?t=1793970736",
    "tier": "C",
-   "score": 42,
+   "score": 42.4,
    "alreadyOwned": false,
    "inWishlist": false
   },
@@ -5305,7 +5625,7 @@
    "currency": "CNY",
    "reviewSummary": "positive",
    "reviewPct": 92,
-   "reviewCount": 525,
+   "reviewCount": 528,
    "releaseDate": "2026 年 9 月 23 日",
    "releaseTs": 1790121600000,
    "platforms": [
@@ -5327,7 +5647,7 @@
    "currency": "CNY",
    "reviewSummary": "positive",
    "reviewPct": 96,
-   "reviewCount": 689,
+   "reviewCount": 692,
    "releaseDate": "2026 年 9 月 17 日",
    "releaseTs": 1789603200000,
    "platforms": [
@@ -5348,7 +5668,7 @@
    "currency": "CNY",
    "reviewSummary": "positive",
    "reviewPct": 93,
-   "reviewCount": 21939,
+   "reviewCount": 21940,
    "releaseDate": "2025 年 3 月 30 日",
    "releaseTs": 1743292800000,
    "platforms": [
@@ -5363,6 +5683,50 @@
    "inWishlist": true
   },
   {
+   "appid": 3948120,
+   "name": "刮个爽",
+   "discountPercent": 35,
+   "finalPrice": 16.56,
+   "originalPrice": 25.49,
+   "currency": "CNY",
+   "reviewSummary": "positive",
+   "reviewPct": 77,
+   "reviewCount": 1454,
+   "releaseDate": "2026 年 3 月 18 日",
+   "releaseTs": 1773792000000,
+   "platforms": [
+    "win",
+    "mac"
+   ],
+   "tinyImage": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3948120/3d9dad2f02502bbe5c3d4b1566e5ee250d4a327f/capsule_231x87_alt_assets_0.jpg?t=1793711427",
+   "tier": "C",
+   "score": 41.7,
+   "alreadyOwned": false,
+   "inWishlist": false
+  },
+  {
+   "appid": 3036350,
+   "name": "诈欺谜案（A Case of Fraud）",
+   "discountPercent": 20,
+   "finalPrice": 28.8,
+   "originalPrice": 36,
+   "currency": "CNY",
+   "reviewSummary": "positive",
+   "reviewPct": 96,
+   "reviewCount": 614,
+   "releaseDate": "2025 年 11 月 10 日",
+   "releaseTs": 1762732800000,
+   "platforms": [
+    "win",
+    "mac"
+   ],
+   "tinyImage": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3036350/5883cf79f6e4419619ce89889035e63953c14392/capsule_231x87_schinese.jpg?t=1791781645",
+   "tier": "C",
+   "score": 41.7,
+   "alreadyOwned": false,
+   "inWishlist": false
+  },
+  {
    "appid": 3655150,
    "name": "NEKOPARA After",
    "discountPercent": 25,
@@ -5371,7 +5735,7 @@
    "currency": "CNY",
    "reviewSummary": "positive",
    "reviewPct": 89,
-   "reviewCount": 1226,
+   "reviewCount": 1227,
    "releaseDate": "2025 年 6 月 30 日",
    "releaseTs": 1751241600000,
    "platforms": [
@@ -5392,7 +5756,7 @@
    "currency": "CNY",
    "reviewSummary": "positive",
    "reviewPct": 78,
-   "reviewCount": 851,
+   "reviewCount": 852,
    "releaseDate": "2026 年 10 月 29 日",
    "releaseTs": 1793232000000,
    "platforms": [
@@ -5401,6 +5765,51 @@
    "tinyImage": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3026450/9cb6f710877f5ef7f1c7772bcbd0285f0393f7c6/capsule_231x87_alt_assets_6_schinese.jpg?t=1793282351",
    "tier": "C",
    "score": 41.7,
+   "alreadyOwned": false,
+   "inWishlist": false
+  },
+  {
+   "appid": 2753970,
+   "name": "漫威宇宙入侵",
+   "discountPercent": 25,
+   "finalPrice": 81,
+   "originalPrice": 108,
+   "currency": "CNY",
+   "reviewSummary": "positive",
+   "reviewPct": 88,
+   "reviewCount": 2375,
+   "releaseDate": "2025 年 12 月 1 日",
+   "releaseTs": 1764547200000,
+   "platforms": [
+    "win",
+    "linux"
+   ],
+   "tinyImage": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2753970/8333dd98c41249bea1131ea8b8cb9cf3248d95ca/capsule_231x87_schinese.jpg?t=1791555582",
+   "tier": "C",
+   "score": 41.7,
+   "alreadyOwned": false,
+   "inWishlist": false
+  },
+  {
+   "appid": 3731020,
+   "name": "阿西, 美女室友竟然...？2",
+   "discountPercent": 25,
+   "finalPrice": 66,
+   "originalPrice": 88,
+   "currency": "CNY",
+   "reviewSummary": "positive",
+   "reviewPct": 91,
+   "reviewCount": 331,
+   "releaseDate": "2025 年 11 月 18 日",
+   "releaseTs": 1763424000000,
+   "platforms": [
+    "win",
+    "mac",
+    "linux"
+   ],
+   "tinyImage": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3731020/59f44a86abdb213c9c0a4edd4411888bc3eda258/capsule_231x87_schinese.jpg?t=1792973318",
+   "tier": "C",
+   "score": 41.6,
    "alreadyOwned": false,
    "inWishlist": false
   },
@@ -5424,6 +5833,27 @@
    "tinyImage": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3499380/ada2af606d6db7e523c02823a5c6410adaac0510/capsule_231x87.jpg?t=1793014632",
    "tier": "C",
    "score": 41.5,
+   "alreadyOwned": false,
+   "inWishlist": false
+  },
+  {
+   "appid": 3545990,
+   "name": "美女，请别影响我成仙",
+   "discountPercent": 20,
+   "finalPrice": 36,
+   "originalPrice": 45,
+   "currency": "CNY",
+   "reviewSummary": "positive",
+   "reviewPct": 93,
+   "reviewCount": 2549,
+   "releaseDate": "2025 年 6 月 19 日",
+   "releaseTs": 1750291200000,
+   "platforms": [
+    "win"
+   ],
+   "tinyImage": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3545990/0d4794e72bdf270489c17adee21727d64404ce22/capsule_231x87_schinese.jpg?t=1767694774",
+   "tier": "C",
+   "score": 41.3,
    "alreadyOwned": false,
    "inWishlist": false
   },
@@ -5457,7 +5887,7 @@
    "currency": "CNY",
    "reviewSummary": "positive",
    "reviewPct": 88,
-   "reviewCount": 1225,
+   "reviewCount": 1251,
    "releaseDate": "2026 年 9 月 23 日",
    "releaseTs": 1790121600000,
    "platforms": [
@@ -5478,7 +5908,7 @@
    "currency": "CNY",
    "reviewSummary": "positive",
    "reviewPct": 93,
-   "reviewCount": 2095,
+   "reviewCount": 2096,
    "releaseDate": "2026 年 8 月 5 日",
    "releaseTs": 1785888000000,
    "platforms": [
@@ -5491,6 +5921,27 @@
    "inWishlist": false
   },
   {
+   "appid": 2440760,
+   "name": "GRAVHOUNDS",
+   "discountPercent": 25,
+   "finalPrice": 51,
+   "originalPrice": 68,
+   "currency": "CNY",
+   "reviewSummary": "positive",
+   "reviewPct": 90,
+   "reviewCount": 325,
+   "releaseDate": "2026 年 11 月 2 日",
+   "releaseTs": 1793577600000,
+   "platforms": [
+    "win"
+   ],
+   "tinyImage": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2440760/45bf181cc256585288c15fcdc16b82959677f8b2/capsule_231x87.jpg?t=1793732699",
+   "tier": "C",
+   "score": 41,
+   "alreadyOwned": false,
+   "inWishlist": false
+  },
+  {
    "appid": 1366800,
    "name": "Crosshair X",
    "discountPercent": 30,
@@ -5499,7 +5950,7 @@
    "currency": "CNY",
    "reviewSummary": "positive",
    "reviewPct": 81,
-   "reviewCount": 1548,
+   "reviewCount": 1549,
    "releaseDate": "2020 年 8 月 17 日",
    "releaseTs": 1597622400000,
    "platforms": [
@@ -5520,7 +5971,7 @@
    "currency": "CNY",
    "reviewSummary": "positive",
    "reviewPct": 91,
-   "reviewCount": 31757,
+   "reviewCount": 31791,
    "releaseDate": "2025 年 10 月 23 日",
    "releaseTs": 1761177600000,
    "platforms": [
@@ -5541,7 +5992,7 @@
    "currency": "CNY",
    "reviewSummary": "positive",
    "reviewPct": 92,
-   "reviewCount": 700,
+   "reviewCount": 702,
    "releaseDate": "2026 年 9 月 2 日",
    "releaseTs": 1788307200000,
    "platforms": [
@@ -5554,27 +6005,6 @@
    "inWishlist": false
   },
   {
-   "appid": 4992070,
-   "name": "Sort Them Ducks",
-   "discountPercent": 20,
-   "finalPrice": 20.8,
-   "originalPrice": 26,
-   "currency": "CNY",
-   "reviewSummary": "positive",
-   "reviewPct": 91,
-   "reviewCount": 2133,
-   "releaseDate": "2026 年 8 月 13 日",
-   "releaseTs": 1786579200000,
-   "platforms": [
-    "win"
-   ],
-   "tinyImage": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4992070/9de1fa9f8255e9c6160cb68e29972e938dbac6dc/capsule_231x87.jpg?t=1793916391",
-   "tier": "C",
-   "score": 39.9,
-   "alreadyOwned": false,
-   "inWishlist": false
-  },
-  {
    "appid": 3727090,
    "name": "Horses of Hoofprint Bay",
    "discountPercent": 15,
@@ -5583,7 +6013,7 @@
    "currency": "CNY",
    "reviewSummary": "positive",
    "reviewPct": 98,
-   "reviewCount": 1046,
+   "reviewCount": 1143,
    "releaseDate": "2026 年 11 月 4 日",
    "releaseTs": 1793750400000,
    "platforms": [
@@ -5591,6 +6021,27 @@
     "linux"
    ],
    "tinyImage": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3727090/e98a2adf934bee4921ac2b5c7ea6a5a80a69de01/capsule_231x87_schinese.jpg?t=1793830906",
+   "tier": "C",
+   "score": 40,
+   "alreadyOwned": false,
+   "inWishlist": false
+  },
+  {
+   "appid": 4992070,
+   "name": "Sort Them Ducks",
+   "discountPercent": 20,
+   "finalPrice": 20.8,
+   "originalPrice": 26,
+   "currency": "CNY",
+   "reviewSummary": "positive",
+   "reviewPct": 91,
+   "reviewCount": 2144,
+   "releaseDate": "2026 年 8 月 13 日",
+   "releaseTs": 1786579200000,
+   "platforms": [
+    "win"
+   ],
+   "tinyImage": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4992070/9de1fa9f8255e9c6160cb68e29972e938dbac6dc/capsule_231x87.jpg?t=1793916391",
    "tier": "C",
    "score": 39.9,
    "alreadyOwned": false,
@@ -5605,7 +6056,7 @@
    "currency": "CNY",
    "reviewSummary": "positive",
    "reviewPct": 80,
-   "reviewCount": 1014,
+   "reviewCount": 1015,
    "releaseDate": "2026 年 6 月 19 日",
    "releaseTs": 1781827200000,
    "platforms": [
@@ -5627,7 +6078,7 @@
    "currency": "CNY",
    "reviewSummary": "positive",
    "reviewPct": 92,
-   "reviewCount": 794,
+   "reviewCount": 797,
    "releaseDate": "2026 年 3 月 5 日",
    "releaseTs": 1772668800000,
    "platforms": [
@@ -5641,6 +6092,27 @@
    "inWishlist": false
   },
   {
+   "appid": 3337380,
+   "name": "桌上谈兵",
+   "discountPercent": 20,
+   "finalPrice": 46.4,
+   "originalPrice": 58,
+   "currency": "CNY",
+   "reviewSummary": "positive",
+   "reviewPct": 90,
+   "reviewCount": 2254,
+   "releaseDate": "2026 年 6 月 11 日",
+   "releaseTs": 1781136000000,
+   "platforms": [
+    "win"
+   ],
+   "tinyImage": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3337380/b255708d9034ef1b91ca0ace2176f684a0772097/capsule_231x87_alt_assets_0.jpg?t=1793204542",
+   "tier": "C",
+   "score": 39.4,
+   "alreadyOwned": false,
+   "inWishlist": false
+  },
+  {
    "appid": 2973120,
    "name": "Dusk City",
    "discountPercent": 25,
@@ -5649,7 +6121,7 @@
    "currency": "CNY",
    "reviewSummary": "positive",
    "reviewPct": 87,
-   "reviewCount": 404,
+   "reviewCount": 406,
    "releaseDate": "2024 年 7 月 25 日",
    "releaseTs": 1721865600000,
    "platforms": [
@@ -5670,7 +6142,7 @@
    "currency": "CNY",
    "reviewSummary": "positive",
    "reviewPct": 92,
-   "reviewCount": 475,
+   "reviewCount": 476,
    "releaseDate": "2026 年 9 月 22 日",
    "releaseTs": 1790035200000,
    "platforms": [
@@ -5704,48 +6176,6 @@
    "inWishlist": false
   },
   {
-   "appid": 3884860,
-   "name": "The Wolf Among Us Remastered",
-   "discountPercent": 20,
-   "finalPrice": 74.4,
-   "originalPrice": 93,
-   "currency": "CNY",
-   "reviewSummary": "positive",
-   "reviewPct": 91,
-   "reviewCount": 706,
-   "releaseDate": "2026 年 10 月 29 日",
-   "releaseTs": 1793232000000,
-   "platforms": [
-    "win"
-   ],
-   "tinyImage": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3884860/b71a00c202bbb6fa131df9c71cc3693e7b774092/capsule_231x87.jpg?t=1793636108",
-   "tier": "C",
-   "score": 38.9,
-   "alreadyOwned": false,
-   "inWishlist": false
-  },
-  {
-   "appid": 3858650,
-   "name": "时空迷踪",
-   "discountPercent": 20,
-   "finalPrice": 74.4,
-   "originalPrice": 93,
-   "currency": "CNY",
-   "reviewSummary": "positive",
-   "reviewPct": 90,
-   "reviewCount": 1380,
-   "releaseDate": "2026 年 6 月 10 日",
-   "releaseTs": 1781049600000,
-   "platforms": [
-    "win"
-   ],
-   "tinyImage": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3858650/9aa7138a91439e4e2435a08cf29436153a7a2338/capsule_231x87_schinese.jpg?t=1793624145",
-   "tier": "C",
-   "score": 38.9,
-   "alreadyOwned": false,
-   "inWishlist": false
-  },
-  {
    "appid": 1189490,
    "name": "觅长生",
    "discountPercent": 15,
@@ -5754,7 +6184,7 @@
    "currency": "CNY",
    "reviewSummary": "positive",
    "reviewPct": 93,
-   "reviewCount": 26006,
+   "reviewCount": 26007,
    "releaseDate": "2023 年 1 月 12 日",
    "releaseTs": 1673481600000,
    "platforms": [
@@ -5767,6 +6197,48 @@
    "inWishlist": false
   },
   {
+   "appid": 3884860,
+   "name": "The Wolf Among Us Remastered",
+   "discountPercent": 20,
+   "finalPrice": 74.4,
+   "originalPrice": 93,
+   "currency": "CNY",
+   "reviewSummary": "positive",
+   "reviewPct": 90,
+   "reviewCount": 750,
+   "releaseDate": "2026 年 10 月 29 日",
+   "releaseTs": 1793232000000,
+   "platforms": [
+    "win"
+   ],
+   "tinyImage": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3884860/b71a00c202bbb6fa131df9c71cc3693e7b774092/capsule_231x87.jpg?t=1793636108",
+   "tier": "C",
+   "score": 38.3,
+   "alreadyOwned": false,
+   "inWishlist": false
+  },
+  {
+   "appid": 4450620,
+   "name": "GRAIN ROT",
+   "discountPercent": 20,
+   "finalPrice": 31.2,
+   "originalPrice": 39,
+   "currency": "CNY",
+   "reviewSummary": "positive",
+   "reviewPct": 87,
+   "reviewCount": 2193,
+   "releaseDate": "2026 年 8 月 7 日",
+   "releaseTs": 1786060800000,
+   "platforms": [
+    "win"
+   ],
+   "tinyImage": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4450620/4cbcd93991fb6ca72c0fdc637c6f7580453c55c3/capsule_231x87.jpg?t=1793646224",
+   "tier": "C",
+   "score": 37.6,
+   "alreadyOwned": false,
+   "inWishlist": false
+  },
+  {
    "appid": 3282390,
    "name": "完蛋！我被美女包围了！2",
    "discountPercent": 25,
@@ -5775,7 +6247,7 @@
    "currency": "CNY",
    "reviewSummary": "positive",
    "reviewPct": 80,
-   "reviewCount": 3155,
+   "reviewCount": 3158,
    "releaseDate": "2025 年 7 月 16 日",
    "releaseTs": 1752624000000,
    "platforms": [
@@ -5797,7 +6269,7 @@
    "currency": "CNY",
    "reviewSummary": "positive",
    "reviewPct": 85,
-   "reviewCount": 23772,
+   "reviewCount": 23774,
    "releaseDate": "2025 年 4 月 24 日",
    "releaseTs": 1745452800000,
    "platforms": [
@@ -5818,7 +6290,7 @@
    "currency": "CNY",
    "reviewSummary": "positive",
    "reviewPct": 89,
-   "reviewCount": 317,
+   "reviewCount": 318,
    "releaseDate": "2026 年 6 月 29 日",
    "releaseTs": 1782691200000,
    "platforms": [
@@ -5839,7 +6311,7 @@
    "currency": "CNY",
    "reviewSummary": "positive",
    "reviewPct": 79,
-   "reviewCount": 8307,
+   "reviewCount": 8313,
    "releaseDate": "2026 年 2 月 18 日",
    "releaseTs": 1771372800000,
    "platforms": [
@@ -5873,27 +6345,6 @@
    "inWishlist": false
   },
   {
-   "appid": 4348910,
-   "name": "深空当铺：可能是偷的",
-   "discountPercent": 10,
-   "finalPrice": 49.5,
-   "originalPrice": 55,
-   "currency": "CNY",
-   "reviewSummary": "positive",
-   "reviewPct": 96,
-   "reviewCount": 6215,
-   "releaseDate": "2026 年 10 月 28 日",
-   "releaseTs": 1793145600000,
-   "platforms": [
-    "win"
-   ],
-   "tinyImage": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4348910/fa8d94817dd60c2f7c019d996c2615059081cc90/capsule_231x87_schinese.jpg?t=1793942460",
-   "tier": "C",
-   "score": 36.6,
-   "alreadyOwned": false,
-   "inWishlist": false
-  },
-  {
    "appid": 5189500,
    "name": "A Place for Every Potion",
    "discountPercent": 15,
@@ -5902,7 +6353,7 @@
    "currency": "CNY",
    "reviewSummary": "positive",
    "reviewPct": 94,
-   "reviewCount": 338,
+   "reviewCount": 359,
    "releaseDate": "2026 年 10 月 28 日",
    "releaseTs": 1793145600000,
    "platforms": [
@@ -5924,7 +6375,7 @@
    "currency": "CNY",
    "reviewSummary": "positive",
    "reviewPct": 94,
-   "reviewCount": 319,
+   "reviewCount": 338,
    "releaseDate": "2026 年 10 月 29 日",
    "releaseTs": 1793232000000,
    "platforms": [
@@ -5932,29 +6383,7 @@
    ],
    "tinyImage": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4096830/a50faa8601609def4f51ed352f1c4d686be3ff71/capsule_231x87_schinese.jpg?t=1793468792",
    "tier": "C",
-   "score": 36.4,
-   "alreadyOwned": false,
-   "inWishlist": false
-  },
-  {
-   "appid": 3686580,
-   "name": "裂隙防线 Repel The Rifts",
-   "discountPercent": 25,
-   "finalPrice": 39,
-   "originalPrice": 52,
-   "currency": "CNY",
-   "reviewSummary": "positive",
-   "reviewPct": 82,
-   "reviewCount": 392,
-   "releaseDate": "2026 年 11 月 2 日",
-   "releaseTs": 1793577600000,
-   "platforms": [
-    "win",
-    "linux"
-   ],
-   "tinyImage": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3686580/cff5341a6c408fc20da6d89330e4a33c3467b5e4/capsule_231x87_schinese.jpg?t=1793680176",
-   "tier": "C",
-   "score": 36.4,
+   "score": 36.5,
    "alreadyOwned": false,
    "inWishlist": false
   },
@@ -6010,7 +6439,7 @@
    "currency": "CNY",
    "reviewSummary": "positive",
    "reviewPct": 87,
-   "reviewCount": 574,
+   "reviewCount": 576,
    "releaseDate": "2026 年 8 月 27 日",
    "releaseTs": 1787788800000,
    "platforms": [
@@ -6031,7 +6460,7 @@
    "currency": "CNY",
    "reviewSummary": "positive",
    "reviewPct": 78,
-   "reviewCount": 3722,
+   "reviewCount": 3727,
    "releaseDate": "2026 年 2 月 4 日",
    "releaseTs": 1770163200000,
    "platforms": [
@@ -6040,27 +6469,6 @@
    "tinyImage": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3501070/55aa0cb014b15d3d535320cef20264f346fc8588/capsule_231x87_schinese.jpg?t=1793882468",
    "tier": "C",
    "score": 36.2,
-   "alreadyOwned": false,
-   "inWishlist": false
-  },
-  {
-   "appid": 2411200,
-   "name": "Underkeep",
-   "discountPercent": 15,
-   "finalPrice": 76.45,
-   "originalPrice": 89.95,
-   "currency": "CNY",
-   "reviewSummary": "positive",
-   "reviewPct": 93,
-   "reviewCount": 429,
-   "releaseDate": "2026 年 11 月 5 日",
-   "releaseTs": 1793836800000,
-   "platforms": [
-    "win"
-   ],
-   "tinyImage": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2411200/524c031adf3a6c4044f9648d828576c54a08aba5/capsule_231x87.jpg?t=1794008212",
-   "tier": "C",
-   "score": 36.1,
    "alreadyOwned": false,
    "inWishlist": false
   },
@@ -6088,23 +6496,23 @@
    "inWishlist": false
   },
   {
-   "appid": 5181520,
-   "name": "Mycelarium",
-   "discountPercent": 20,
-   "finalPrice": 15.2,
-   "originalPrice": 19,
+   "appid": 2411200,
+   "name": "Underkeep",
+   "discountPercent": 15,
+   "finalPrice": 76.45,
+   "originalPrice": 89.95,
    "currency": "CNY",
    "reviewSummary": "positive",
-   "reviewPct": 86,
-   "reviewCount": 566,
-   "releaseDate": "2026 年 11 月 3 日",
-   "releaseTs": 1793664000000,
+   "reviewPct": 92,
+   "reviewCount": 592,
+   "releaseDate": "2026 年 11 月 5 日",
+   "releaseTs": 1793836800000,
    "platforms": [
     "win"
    ],
-   "tinyImage": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5181520/0261f64ac040dfdb6cdf6ad425280f352b181f27/capsule_231x87.jpg?t=1793964125",
+   "tinyImage": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2411200/524c031adf3a6c4044f9648d828576c54a08aba5/capsule_231x87.jpg?t=1794141969",
    "tier": "C",
-   "score": 35.7,
+   "score": 35.8,
    "alreadyOwned": false,
    "inWishlist": false
   },
@@ -6117,7 +6525,7 @@
    "currency": "CNY",
    "reviewSummary": "positive",
    "reviewPct": 84,
-   "reviewCount": 1554,
+   "reviewCount": 1558,
    "releaseDate": "2026 年 6 月 4 日",
    "releaseTs": 1780531200000,
    "platforms": [
@@ -6139,7 +6547,7 @@
    "currency": "CNY",
    "reviewSummary": "positive",
    "reviewPct": 82,
-   "reviewCount": 4448,
+   "reviewCount": 4477,
    "releaseDate": "2026 年 11 月 4 日",
    "releaseTs": 1793750400000,
    "platforms": [
@@ -6160,7 +6568,7 @@
    "currency": "CNY",
    "reviewSummary": "positive",
    "reviewPct": 83,
-   "reviewCount": 1485,
+   "reviewCount": 1492,
    "releaseDate": "2026 年 9 月 24 日",
    "releaseTs": 1790208000000,
    "platforms": [
@@ -6173,6 +6581,27 @@
    "inWishlist": false
   },
   {
+   "appid": 5181520,
+   "name": "Mycelarium",
+   "discountPercent": 20,
+   "finalPrice": 15.2,
+   "originalPrice": 19,
+   "currency": "CNY",
+   "reviewSummary": "positive",
+   "reviewPct": 84,
+   "reviewCount": 663,
+   "releaseDate": "2026 年 11 月 3 日",
+   "releaseTs": 1793664000000,
+   "platforms": [
+    "win"
+   ],
+   "tinyImage": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5181520/0261f64ac040dfdb6cdf6ad425280f352b181f27/capsule_231x87.jpg?t=1793964125",
+   "tier": "C",
+   "score": 34.6,
+   "alreadyOwned": false,
+   "inWishlist": false
+  },
+  {
    "appid": 2794590,
    "name": "Scam Line",
    "discountPercent": 20,
@@ -6181,7 +6610,7 @@
    "currency": "CNY",
    "reviewSummary": "positive",
    "reviewPct": 83,
-   "reviewCount": 1171,
+   "reviewCount": 1175,
    "releaseDate": "2026 年 11 月 3 日",
    "releaseTs": 1793664000000,
    "platforms": [
@@ -6202,7 +6631,7 @@
    "currency": "CNY",
    "reviewSummary": "positive",
    "reviewPct": 79,
-   "reviewCount": 368,
+   "reviewCount": 371,
    "releaseDate": "2025 年 12 月 16 日",
    "releaseTs": 1765843200000,
    "platforms": [
@@ -6212,7 +6641,7 @@
    ],
    "tinyImage": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2591310/f7e26b7c431f06974061a3f9a744d2c667b4ec1d/capsule_231x87_alt_assets_0.jpg?t=1793360866",
    "tier": "C",
-   "score": 34.5,
+   "score": 34.6,
    "alreadyOwned": false,
    "inWishlist": false
   },
@@ -6225,7 +6654,7 @@
    "currency": "CNY",
    "reviewSummary": "positive",
    "reviewPct": 70,
-   "reviewCount": 1168,
+   "reviewCount": 1171,
    "releaseDate": "2026 年 9 月 15 日",
    "releaseTs": 1789430400000,
    "platforms": [
@@ -6233,7 +6662,7 @@
    ],
    "tinyImage": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3985950/4b01a094a56fa6a3b8dcddcbc77881df31a9ecd1/capsule_231x87_alt_assets_6_schinese.jpg?t=1793699685",
    "tier": "C",
-   "score": 33.7,
+   "score": 33.8,
    "alreadyOwned": false,
    "inWishlist": false
   },
@@ -6246,7 +6675,7 @@
    "currency": "CNY",
    "reviewSummary": "positive",
    "reviewPct": 83,
-   "reviewCount": 377,
+   "reviewCount": 381,
    "releaseDate": "2026 年 5 月 13 日",
    "releaseTs": 1778630400000,
    "platforms": [
@@ -6282,6 +6711,50 @@
    "inWishlist": false
   },
   {
+   "appid": 2320980,
+   "name": "乐浮岛",
+   "discountPercent": 17,
+   "finalPrice": 89.64,
+   "originalPrice": 108,
+   "currency": "CNY",
+   "reviewSummary": "positive",
+   "reviewPct": 85,
+   "reviewCount": 738,
+   "releaseDate": "2026 年 11 月 3 日",
+   "releaseTs": 1793664000000,
+   "platforms": [
+    "win",
+    "mac"
+   ],
+   "tinyImage": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2320980/15667cc22153cd32b9e19a7d0a3c7b168897bb78/capsule_231x87_schinese.jpg?t=1794115632",
+   "tier": "C",
+   "score": 33.2,
+   "alreadyOwned": false,
+   "inWishlist": false
+  },
+  {
+   "appid": 3837350,
+   "name": "Staffer Retro - 异能追忆",
+   "discountPercent": 13,
+   "finalPrice": 108.75,
+   "originalPrice": 125,
+   "currency": "CNY",
+   "reviewSummary": "positive",
+   "reviewPct": 89,
+   "reviewCount": 1050,
+   "releaseDate": "2026 年 7 月 22 日",
+   "releaseTs": 1784678400000,
+   "platforms": [
+    "win",
+    "mac"
+   ],
+   "tinyImage": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3837350/deca05b94f893d88276264e7b8ff69ee87a4bbd5/capsule_231x87_schinese.jpg?t=1793932421",
+   "tier": "C",
+   "score": 33.1,
+   "alreadyOwned": false,
+   "inWishlist": false
+  },
+  {
    "appid": 4563790,
    "name": "Easy Red 2: Blood on the Danube",
    "discountPercent": 20,
@@ -6305,68 +6778,87 @@
    "inWishlist": false
   },
   {
-   "appid": 2320980,
-   "name": "乐浮岛",
-   "discountPercent": 17,
-   "finalPrice": 89.64,
-   "originalPrice": 108,
+   "appid": 3546610,
+   "name": "Wielders of the Essence",
+   "discountPercent": 10,
+   "finalPrice": 17.1,
+   "originalPrice": 19,
    "currency": "CNY",
    "reviewSummary": "positive",
-   "reviewPct": 84,
-   "reviewCount": 659,
-   "releaseDate": "2026 年 11 月 3 日",
-   "releaseTs": 1793664000000,
+   "reviewPct": 93,
+   "reviewCount": 316,
+   "releaseDate": "2026 年 11 月 5 日",
+   "releaseTs": 1793836800000,
    "platforms": [
     "win",
     "mac"
    ],
-   "tinyImage": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2320980/15667cc22153cd32b9e19a7d0a3c7b168897bb78/capsule_231x87_schinese.jpg?t=1793732506",
-   "tier": "C",
-   "score": 32.5,
-   "alreadyOwned": false,
-   "inWishlist": false
-  },
-  {
-   "appid": 1446900,
-   "name": "陨世之泪:涅槃",
-   "discountPercent": 25,
-   "finalPrice": 66,
-   "originalPrice": 88,
-   "currency": "CNY",
-   "reviewSummary": "positive",
-   "reviewPct": 75,
-   "reviewCount": 432,
-   "releaseDate": "2026 年 9 月 23 日",
-   "releaseTs": 1790121600000,
-   "platforms": [
-    "win"
-   ],
-   "tinyImage": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1446900/ba5515333f09982a3091ca0b07321942041633ba/capsule_231x87.jpg?t=1793190960",
+   "tinyImage": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3546610/aa5590f18741138984542564adf9bf052075d8c2/capsule_231x87_schinese.jpg?t=1793900780",
    "tier": "C",
    "score": 32.3,
    "alreadyOwned": false,
    "inWishlist": false
   },
   {
-   "appid": 512540,
-   "name": "ARK: Scorched Earth - Expansion Pack",
-   "discountPercent": 20,
-   "finalPrice": 0,
-   "originalPrice": 66,
+   "appid": 247970,
+   "name": "Korea. IL-2 Series",
+   "discountPercent": 25,
+   "finalPrice": 254.25,
+   "originalPrice": 339,
    "currency": "CNY",
    "reviewSummary": "positive",
-   "reviewPct": 78,
-   "reviewCount": 469,
-   "releaseDate": "2016 年 9 月 1 日",
-   "releaseTs": 1472688000000,
+   "reviewPct": 74,
+   "reviewCount": 507,
+   "releaseDate": "2026 年 8 月 4 日",
+   "releaseTs": 1785801600000,
    "platforms": [
-    "win",
-    "mac",
-    "linux"
+    "win"
    ],
-   "tinyImage": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/512540/capsule_231x87.jpg?t=1594677550",
+   "tinyImage": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/247970/c45ce398ae7e29d9ac94a22586ad224085f84733/capsule_231x87.jpg?t=1787344656",
    "tier": "C",
-   "score": 30.7,
+   "score": 31.9,
+   "alreadyOwned": false,
+   "inWishlist": false
+  },
+  {
+   "appid": 5266240,
+   "name": "Potato Please",
+   "discountPercent": 10,
+   "finalPrice": 31.5,
+   "originalPrice": 35,
+   "currency": "CNY",
+   "reviewSummary": "positive",
+   "reviewPct": 89,
+   "reviewCount": 1531,
+   "releaseDate": "2026 年 11 月 3 日",
+   "releaseTs": 1793664000000,
+   "platforms": [
+    "win"
+   ],
+   "tinyImage": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5266240/b01dc513eb9df69b0944e4a2f2d9e628ec53ac0d/capsule_231x87.jpg?t=1794167289",
+   "tier": "C",
+   "score": 31.4,
+   "alreadyOwned": false,
+   "inWishlist": false
+  },
+  {
+   "appid": 3432860,
+   "name": "异病侦探",
+   "discountPercent": 10,
+   "finalPrice": 58.5,
+   "originalPrice": 65,
+   "currency": "CNY",
+   "reviewSummary": "positive",
+   "reviewPct": 91,
+   "reviewCount": 445,
+   "releaseDate": "2026 年 11 月 4 日",
+   "releaseTs": 1793750400000,
+   "platforms": [
+    "win"
+   ],
+   "tinyImage": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3432860/5e66b799947f1175152ce77c5c1bdbf23a96f870/capsule_231x87_schinese.jpg?t=1793883448",
+   "tier": "C",
+   "score": 31.4,
    "alreadyOwned": false,
    "inWishlist": false
   },
@@ -6392,27 +6884,6 @@
    "inWishlist": false
   },
   {
-   "appid": 5266240,
-   "name": "Potato Please",
-   "discountPercent": 10,
-   "finalPrice": 31.5,
-   "originalPrice": 35,
-   "currency": "CNY",
-   "reviewSummary": "positive",
-   "reviewPct": 88,
-   "reviewCount": 1254,
-   "releaseDate": "2026 年 11 月 3 日",
-   "releaseTs": 1793664000000,
-   "platforms": [
-    "win"
-   ],
-   "tinyImage": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5266240/b01dc513eb9df69b0944e4a2f2d9e628ec53ac0d/capsule_231x87.jpg?t=1793891257",
-   "tier": "C",
-   "score": 30.6,
-   "alreadyOwned": false,
-   "inWishlist": false
-  },
-  {
    "appid": 3863760,
    "name": "侠影录",
    "discountPercent": 20,
@@ -6421,7 +6892,7 @@
    "currency": "CNY",
    "reviewSummary": "positive",
    "reviewPct": 75,
-   "reviewCount": 1104,
+   "reviewCount": 1108,
    "releaseDate": "2026 年 7 月 23 日",
    "releaseTs": 1784764800000,
    "platforms": [
@@ -6442,7 +6913,7 @@
    "currency": "CNY",
    "reviewSummary": "positive",
    "reviewPct": 75,
-   "reviewCount": 1025,
+   "reviewCount": 1030,
    "releaseDate": "2026 年 9 月 11 日",
    "releaseTs": 1789084800000,
    "platforms": [
@@ -6455,29 +6926,6 @@
    "inWishlist": false
   },
   {
-   "appid": 887380,
-   "name": "ARK: Extinction - Expansion Pack",
-   "discountPercent": 20,
-   "finalPrice": 0,
-   "originalPrice": 66,
-   "currency": "CNY",
-   "reviewSummary": "positive",
-   "reviewPct": 76,
-   "reviewCount": 384,
-   "releaseDate": "2018 年 11 月 6 日",
-   "releaseTs": 1541462400000,
-   "platforms": [
-    "win",
-    "mac",
-    "linux"
-   ],
-   "tinyImage": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/887380/capsule_231x87.jpg?t=1594677636",
-   "tier": "C",
-   "score": 29.3,
-   "alreadyOwned": false,
-   "inWishlist": false
-  },
-  {
    "appid": 3091340,
    "name": "金属雷霆 (Metal Thunder)",
    "discountPercent": 20,
@@ -6486,7 +6934,7 @@
    "currency": "CNY",
    "reviewSummary": "positive",
    "reviewPct": 75,
-   "reviewCount": 673,
+   "reviewCount": 678,
    "releaseDate": "2026 年 10 月 29 日",
    "releaseTs": 1793232000000,
    "platforms": [
@@ -6500,27 +6948,6 @@
    "inWishlist": false
   },
   {
-   "appid": 2808550,
-   "name": "Sudden Strike 5",
-   "discountPercent": 20,
-   "finalPrice": 199.2,
-   "originalPrice": 249,
-   "currency": "CNY",
-   "reviewSummary": "positive",
-   "reviewPct": 74,
-   "reviewCount": 695,
-   "releaseDate": "2026 年 4 月 23 日",
-   "releaseTs": 1776902400000,
-   "platforms": [
-    "win"
-   ],
-   "tinyImage": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2808550/b5cb2ffa14cb80c59764619511b6eb52aff35377/capsule_231x87.jpg?t=1790060517",
-   "tier": "C",
-   "score": 28.7,
-   "alreadyOwned": false,
-   "inWishlist": false
-  },
-  {
    "appid": 3804370,
    "name": "黎明门前的吹笛人",
    "discountPercent": 10,
@@ -6529,7 +6956,7 @@
    "currency": "CNY",
    "reviewSummary": "positive",
    "reviewPct": 85,
-   "reviewCount": 767,
+   "reviewCount": 770,
    "releaseDate": "2026 年 9 月 22 日",
    "releaseTs": 1790035200000,
    "platforms": [
@@ -6537,51 +6964,49 @@
    ],
    "tinyImage": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3804370/d9d78cbe21e258e3003e8741f3efb495774f1c03/capsule_231x87_alt_assets_0_schinese.jpg?t=1793864313",
    "tier": "C",
-   "score": 28.3,
+   "score": 28.4,
    "alreadyOwned": false,
    "inWishlist": false
   },
   {
-   "appid": 708770,
-   "name": "ARK: Aberration - Expansion Pack",
+   "appid": 3285500,
+   "name": "猛将三国",
    "discountPercent": 20,
-   "finalPrice": 0,
-   "originalPrice": 66,
+   "finalPrice": 63.2,
+   "originalPrice": 79,
    "currency": "CNY",
    "reviewSummary": "positive",
-   "reviewPct": 73,
-   "reviewCount": 473,
-   "releaseDate": "2017 年 12 月 12 日",
-   "releaseTs": 1513036800000,
-   "platforms": [
-    "win",
-    "mac",
-    "linux"
-   ],
-   "tinyImage": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/708770/capsule_231x87.jpg?t=1620974912",
-   "tier": "C",
-   "score": 27.7,
-   "alreadyOwned": false,
-   "inWishlist": false
-  },
-  {
-   "appid": 5088440,
-   "name": "再拆亿包！",
-   "discountPercent": 10,
-   "finalPrice": 22.5,
-   "originalPrice": 25,
-   "currency": "CNY",
-   "reviewSummary": "positive",
-   "reviewPct": 82,
-   "reviewCount": 871,
-   "releaseDate": "2026 年 10 月 30 日",
-   "releaseTs": 1793318400000,
+   "reviewPct": 72,
+   "reviewCount": 1896,
+   "releaseDate": "2025 年 6 月 16 日",
+   "releaseTs": 1750032000000,
    "platforms": [
     "win"
    ],
-   "tinyImage": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5088440/c9da3b682563facd0f880352cdb08f678bd6e648/capsule_231x87_alt_assets_1_schinese.jpg?t=1793726040",
+   "tinyImage": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3285500/c15b7228d50bc4e5624ab53ad1c48970e09e1e8e/capsule_231x87_schinese.jpg?t=1766667910",
    "tier": "C",
-   "score": 26.7,
+   "score": 28.4,
+   "alreadyOwned": false,
+   "inWishlist": false
+  },
+  {
+   "appid": 4348910,
+   "name": "深空当铺：可能是偷的",
+   "discountPercent": 10,
+   "finalPrice": 49.5,
+   "originalPrice": 55,
+   "currency": "CNY",
+   "reviewSummary": "positive",
+   "reviewPct": 81,
+   "reviewCount": 7996,
+   "releaseDate": "2026 年 10 月 28 日",
+   "releaseTs": 1793145600000,
+   "platforms": [
+    "win"
+   ],
+   "tinyImage": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4348910/fa8d94817dd60c2f7c019d996c2615059081cc90/capsule_231x87_schinese.jpg?t=1794162078",
+   "tier": "C",
+   "score": 27.6,
    "alreadyOwned": false,
    "inWishlist": false
   },
@@ -6594,7 +7019,7 @@
    "currency": "CNY",
    "reviewSummary": "positive",
    "reviewPct": 81,
-   "reviewCount": 1121,
+   "reviewCount": 1216,
    "releaseDate": "2026 年 10 月 27 日",
    "releaseTs": 1793059200000,
    "platforms": [
@@ -6602,7 +7027,29 @@
    ],
    "tinyImage": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2223980/04914cfd8e7f5a07e474acdf42ca9b5762fac7af/capsule_231x87.jpg?t=1793667805",
    "tier": "C",
-   "score": 26.3,
+   "score": 26.4,
+   "alreadyOwned": false,
+   "inWishlist": false
+  },
+  {
+   "appid": 3758950,
+   "name": "弗莱明庄园命案",
+   "discountPercent": 10,
+   "finalPrice": 55.8,
+   "originalPrice": 62,
+   "currency": "CNY",
+   "reviewSummary": "positive",
+   "reviewPct": 83,
+   "reviewCount": 352,
+   "releaseDate": "2026 年 11 月 3 日",
+   "releaseTs": 1793664000000,
+   "platforms": [
+    "win",
+    "mac"
+   ],
+   "tinyImage": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3758950/f024c4cfd256d35cc26350632227a7e499fd88a6/capsule_231x87_schinese.jpg?t=1793692815",
+   "tier": "C",
+   "score": 26.4,
    "alreadyOwned": false,
    "inWishlist": false
   },
@@ -6628,6 +7075,27 @@
    "inWishlist": false
   },
   {
+   "appid": 5088440,
+   "name": "再拆亿包！",
+   "discountPercent": 10,
+   "finalPrice": 22.5,
+   "originalPrice": 25,
+   "currency": "CNY",
+   "reviewSummary": "positive",
+   "reviewPct": 81,
+   "reviewCount": 905,
+   "releaseDate": "2026 年 10 月 30 日",
+   "releaseTs": 1793318400000,
+   "platforms": [
+    "win"
+   ],
+   "tinyImage": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5088440/c9da3b682563facd0f880352cdb08f678bd6e648/capsule_231x87_alt_assets_1_schinese.jpg?t=1793726040",
+   "tier": "C",
+   "score": 26.1,
+   "alreadyOwned": false,
+   "inWishlist": false
+  },
+  {
    "appid": 2116120,
    "name": "Incursion Red River",
    "discountPercent": 20,
@@ -6636,7 +7104,7 @@
    "currency": "CNY",
    "reviewSummary": "positive",
    "reviewPct": 70,
-   "reviewCount": 443,
+   "reviewCount": 453,
    "releaseDate": "2024 年 4 月 10 日",
    "releaseTs": 1712707200000,
    "platforms": [
@@ -6649,23 +7117,44 @@
    "inWishlist": false
   },
   {
-   "appid": 2612950,
-   "name": "暖雪 Warm Snow - 终业",
-   "discountPercent": 10,
-   "finalPrice": 25.2,
-   "originalPrice": 28,
+   "appid": 5160800,
+   "name": "Find The Needle",
+   "discountPercent": 15,
+   "finalPrice": 45.9,
+   "originalPrice": 54,
    "currency": "CNY",
    "reviewSummary": "positive",
-   "reviewPct": 70,
-   "reviewCount": 1353,
-   "releaseDate": "2023 年 12 月 4 日",
-   "releaseTs": 1701648000000,
+   "reviewPct": 73,
+   "reviewCount": 343,
+   "releaseDate": "2026 年 11 月 6 日",
+   "releaseTs": 1793923200000,
    "platforms": [
     "win"
    ],
-   "tinyImage": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2612950/capsule_231x87_schinese.jpg?t=1702642988",
+   "tinyImage": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5160800/3dec380fa3c66a40ffc1d36be2ac518cf9dcda05/capsule_231x87.jpg?t=1793980111",
    "tier": "C",
-   "score": 19.9,
+   "score": 23.9,
+   "alreadyOwned": false,
+   "inWishlist": false
+  },
+  {
+   "appid": 4017880,
+   "name": "异界揭踪／ANOMALITH",
+   "discountPercent": 10,
+   "finalPrice": 291.6,
+   "originalPrice": 324,
+   "currency": "CNY",
+   "reviewSummary": "positive",
+   "reviewPct": 76,
+   "reviewCount": 389,
+   "releaseDate": "2026 年 10 月 28 日",
+   "releaseTs": 1793145600000,
+   "platforms": [
+    "win"
+   ],
+   "tinyImage": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4017880/dd185eac71d89ad84a5731a1e3471701337afc1f/capsule_231x87_schinese.jpg?t=1793353788",
+   "tier": "C",
+   "score": 22.3,
    "alreadyOwned": false,
    "inWishlist": false
   },
@@ -6708,27 +7197,6 @@
    "tinyImage": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5199100/b795e316e6039fcb6188c487798aedf85a5027ea/capsule_231x87.jpg?t=1793236671",
    "tier": "C",
    "score": -22,
-   "alreadyOwned": false,
-   "inWishlist": false
-  },
-  {
-   "appid": 4163660,
-   "name": "Gun a Rat",
-   "discountPercent": 15,
-   "finalPrice": 18.7,
-   "originalPrice": 22,
-   "currency": "CNY",
-   "reviewSummary": null,
-   "reviewPct": null,
-   "reviewCount": null,
-   "releaseDate": "2026 年 11 月 5 日",
-   "releaseTs": 1793836800000,
-   "platforms": [
-    "win"
-   ],
-   "tinyImage": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4163660/035f002fa7efa063bf1f9f5f039432546f5de2d9/capsule_231x87.jpg?t=1793901585",
-   "tier": "C",
-   "score": -25.5,
    "alreadyOwned": false,
    "inWishlist": false
   },
